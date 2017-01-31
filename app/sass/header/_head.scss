@@ -1,0 +1,123 @@
+.header{
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #fbfafa;
+  box-shadow: 1.6px 1.2px 1.8px 0.2px rgba(0, 0, 0, 0.18);
+}
+
+.header-logo{
+  size: 67px;
+  float: left;
+  display: block;
+  overflow: hidden;
+  img{
+    size: 100%;
+    object-fit: contain;
+  }
+}
+
+.header-menu{
+  float: left;
+  width: calc(100% - 80px);
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-top: 43px;
+  margin-left: 8px;
+  li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 30px;
+    a{
+      width: 100%;
+      float: left;
+      text-transform: uppercase;
+      font-family: $or;
+      font-size: 16px;
+      color: #242424;
+      line-height: 20px;
+    }
+    &:first-of-type{
+      a{
+        font-family: $ob;
+        font-size: 20px;
+        color: #f34942;
+        line-height: 20px;
+      }
+    }
+  }
+}
+.header-ipanel{
+  width: 80%;
+  right: 0;
+  height: 34px;
+  position: absolute;
+  // background-color: #0c242e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/header/line.png");
+  z-index: 10;
+}
+
+
+.weather{
+  width: 10%;
+  display: inline-block;
+  float: left;
+  position: relative;
+}
+
+.weather-pic{
+  width: 16px;
+  height: 22px;
+  display: block;
+  position: relative;
+  margin-right: 10px;
+  float: left;
+  overflow: hidden;
+  img{
+    size: 100%;
+    object-fit: contain;
+  }
+}
+
+.weather-temp{
+  width: auto;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 12px;
+  padding-top: 5px;
+  box-sizing: border-box;
+  font-family: $or;
+  display: inline-block;
+}
+
+.currency-panel{
+  width: 40%;
+  float: left;
+  position: relative;
+  padding: 5px 0;
+  box-sizing: border-box;
+  .item{
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    &:last-of-type{
+      margin-right: 0;
+    }
+    .currency{
+      color: #fff;
+      font-family: $or;
+      font-size: 15px;
+      line-height: 12px;
+    }
+    .currency-pic{
+      color: #fff;
+      font-size: 15px;
+      margin-right: 2px;
+    }
+  }
+}
