@@ -47,7 +47,13 @@ Temporary Items
 .apdisk
 
 .idea
+<<<<<<< HEAD
 
 /node_modules
 
 gulpfile.js
+=======
+gulpfile.js
+node_modules
+package.json
+>>>>>>> 4c20f2da847ba46bc42b28372ff3465bd59da29c
