@@ -135,6 +135,64 @@
     }
   }
 }
+
+.home-content__wrap_enterprises{
+  width: 100%;
+  float: left;
+  margin-top: 30px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid rgba(185, 196, 213, 0.48);
+  box-sizing: border-box;
+  .title{
+    width: 100%;
+    float: left;
+    position: relative;
+    background-color: #ee2e24;
+    padding: 10px;
+    box-sizing: border-box;
+    h2{
+      width: 50%;
+      float: left;
+      margin: 0;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 20px;
+      font-family: $ob;
+    }
+    a{
+      width: 50%;
+      float: right;
+      font-size: 13px;
+      font-family: $or;
+      color: #fff;
+      display: inline-block;
+      line-height: 12px;
+      text-align: right;
+      top: -2px;
+      position: relative;
+      .add-icon{
+        size: 18px;
+        display: inline-block;
+        float: none;
+        margin-right: 10px;
+        position: relative;
+        background-image: url("../img/home-content/add-icon.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 4px;
+      }
+    }
+  }
+}
+
+.enterprises__wrap{
+  width: 100%;
+  float: left;
+  padding: 5px;
+  box-sizing: border-box;
+  
+}
 //home-content__wrap
 .home-content__tape{
   width: 21.7%;
