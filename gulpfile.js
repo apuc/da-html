@@ -62,7 +62,7 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
  spriteData.css.pipe(gulp.dest('app/sass/base/')); // путь, куда сохраняем стили
  });*/
 
-gulp.task('js-libs', function () {
+/*gulp.task('js-libs', function () {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/libs/js-libs/jquery-2.1.3.min.js',
         'app/libs/js-libs/jquery-ui.min.js',
@@ -75,7 +75,7 @@ gulp.task('js-libs', function () {
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
         .pipe(gulp.dest('js')); // Выгружаем в папку app/js
-});
+});*/
 
 gulp.task('sass', function () { // Создаем таск Sass
     var processors = [
@@ -94,7 +94,7 @@ gulp.task('sass', function () { // Создаем таск Sass
             rootValue: 14,
             replace: false
         }),*/
-        focus,
+        /*focus,*/
         sorting(),
         stylefmt,
         cssnano
@@ -161,12 +161,12 @@ gulp.task('extend-blocks', function () {
         .pipe(gulp.dest('./'))
 });
 
-gulp.task('watch', ['browser-sync', 'compress', 'extend-pages', 'css-libs', 'js-libs', 'img', 'sass'], function () {
+
+gulp.task('watch', ['browser-sync','compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
     gulp.watch(['app/html/**/*.html'], ['extend-pages']);// Наблюдение за HTML-файлами в папке html/pages
-    /* gulp.watch(['app/html/!*.html'], ['extend-blocks']);// Наблюдение за HTML-файлами в папке html*/
     gulp.watch('app/js/**/*.js', ['compress']); // Наблюдение за js-файлами
 });
 
@@ -187,28 +187,8 @@ gulp.task('img', function () {
         }));
 });
 
-
-/*gulp.task('build', ['img', 'sass', 'scripts'], function() {
-
- var buildCss = gulp.src([ // Переносим библиотеки в продакшен
- 'app/css/main.css',
- 'app/css/libs.min.css'
- ])
- .pipe(gulp.dest('css'))
-
- var buildFonts = gulp.src('app/fonts/!**!/!*') // Переносим шрифты в продакшен
- .pipe(gulp.dest('fonts'))
-
- var buildJs = gulp.src('app/js/!**!/!*') // Переносим скрипты в продакшен
- .pipe(gulp.dest('js'))
-
- });*/
-
 gulp.task('clear', function (callback) {
     return cache.clearAll();
 });
 
 gulp.task('default', ['watch']);
-
-/*
- npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant gulp.spritesmith gulp-cache gulp-html-extend gulp-sourcemaps rimraf yargs gulp-plumber gulp-postcss autoprefixer cssnano postcss-pxtorem postcss-px-to-em postcss-short stylefmt postcss-assets postcss-short-spacing postcss-focus postcss-sorting postcss-font-magician postcss-fixes stylelint-config-standard --save-dev*/
