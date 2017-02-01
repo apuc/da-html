@@ -1,16 +1,16 @@
 {
   "name": "da-info",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.1",
+    "autoprefixer": "^6.7.2",
     "browser-sync": "^2.18.7",
     "cssnano": "^3.10.0",
     "del": "^2.2.2",
+    "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
     "gulp-concat": "^2.6.1",
     "gulp-html-extend": "^1.1.6",
@@ -49,5 +49,6 @@
   "bugs": {
     "url": "https://github.com/Gorotto/da-info/issues"
   },
-  "homepage": "https://github.com/Gorotto/da-info#readme"
+  "homepage": "https://github.com/Gorotto/da-info#readme",
+  "description": ""
 }

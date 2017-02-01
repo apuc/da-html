@@ -33,14 +33,16 @@
       width: 100%;
       float: left;
       text-transform: uppercase;
-      font-family: $or;
+      // font-family: $or;
+      font-weight: 400;
       font-size: 16px;
       color: #242424;
       line-height: 20px;
     }
     &:first-of-type{
       a{
-        font-family: $ob;
+        // font-family: $ob;
+        font-weight: 700;
         font-size: 20px;
         color: #f34942;
         line-height: 20px;
@@ -90,7 +92,8 @@
   line-height: 12px;
   padding-top: 5px;
   box-sizing: border-box;
-  font-family: $or;
+  // font-family: $or;
+  font-weight: 400;
   display: inline-block;
 }
 
@@ -110,7 +113,8 @@
     }
     .currency{
       color: #fff;
-      font-family: $or;
+      // font-family: $or;
+      font-weight: 400;
       font-size: 15px;
       line-height: 12px;
     }
