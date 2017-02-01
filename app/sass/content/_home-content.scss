@@ -93,7 +93,8 @@
           margin-right: 15px;
           color: #fff;
           font-size: 10px;
-          font-family: $or;
+          // font-family: $or;
+          font-weight: 400;
           float: left;
           width: initial;
         }
@@ -114,7 +115,8 @@
       }
       h3{
         font-size: 16px;
-        font-family: $ob;
+        // font-family: $ob;
+        font-weight: 700;
         color: #fff;
         margin: 0;
         width: 100%;
@@ -129,7 +131,8 @@
         font-size: 16px;
         color: #fff;
         float: left;
-        font-family: $or;
+        // font-family: $or;
+        font-weight: 400;
       }
 
     }
@@ -158,13 +161,15 @@
       text-transform: uppercase;
       color: #fff;
       font-size: 20px;
-      font-family: $ob;
+      // font-family: $ob;
+      font-weight: 700;
     }
     a{
       width: 50%;
       float: right;
       font-size: 13px;
-      font-family: $or;
+      // font-family: $or;
+      font-weight: 400;
       color: #fff;
       display: inline-block;
       line-height: 12px;
@@ -191,7 +196,7 @@
   float: left;
   padding: 5px;
   box-sizing: border-box;
-  
+
 }
 //home-content__wrap
 .home-content__tape{
