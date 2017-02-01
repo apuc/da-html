@@ -44,39 +44,6 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
         })) // Обновляем CSS на странице при изменении
 });
 
-/*gulp.task('sprite', function() {
- var spriteData =
- gulp.src('app/img/icons/sprite/!*.*') // путь, откуда берем картинки для спрайта
- .pipe(spritesmith({
- imgName: 'sprite.png',
- cssName: '_sprite.scss',
- cssFormat: 'scss',
- algorithm: 'binary-tree',
- /!*cssTemplate: 'stylus.template.mustache',
- cssVarMap: function(sprite) {
- sprite.name = 's-' + sprite.name
- }*!/
- }));
-
- spriteData.img.pipe(gulp.dest('img/icons/sprites/')); // путь, куда сохраняем картинку
- spriteData.css.pipe(gulp.dest('app/sass/base/')); // путь, куда сохраняем стили
- });*/
-
-/*gulp.task('js-libs', function () {
-    return gulp.src([ // Берем все необходимые библиотеки
-        'app/libs/js-libs/jquery-2.1.3.min.js',
-        'app/libs/js-libs/jquery-ui.min.js',
-        'app/libs/js-libs/bootstrap.min.js',
-        'app/libs/js-libs/fotorama.js',
-        'app/libs/js-libs/lightbox.min.js',
-        'app/libs/js-libs/owl.carousel.min.js',
-        'app/libs/js-libs/slick.min.js'
-    ])
-        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-        .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('js')); // Выгружаем в папку app/js
-});*/
-
 gulp.task('sass', function () { // Создаем таск Sass
     var processors = [
         assets,
@@ -119,7 +86,7 @@ gulp.task('sass', function () { // Создаем таск Sass
 gulp.task('browser-sync', function () { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
         proxy: {
-            target: 'da-info' // Директория для сервера - app
+            target: '' // Директория для сервера - app
         },
         ghostMode: {
             clicks: true,
@@ -163,7 +130,7 @@ gulp.task('extend-blocks', function () {
 
 
 
-gulp.task('watch', ['browser-sync','compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
+gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
 
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
