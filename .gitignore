@@ -53,3 +53,6 @@ gulpfile.js
 node_modules
 package.json
 
+css/styles.min.css.map
+css/styles.min.css
+js/script.min.js
