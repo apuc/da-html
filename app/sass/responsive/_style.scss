@@ -1,23 +1,64 @@
 @media only screen and (max-width: 1024px) {
-	
+
 }
 
 @media only screen and (max-width: 980px) {
-	
+
 }
 
 @media only screen and (max-width: 770px) {
-	
+
 }
 
 @media only screen and (max-width: 736px) {
-	
+
 }
 
-@media only screen and (max-width: 500px) {
-	
+@media only screen and (max-width: 680px) {
+
+  .footer__logo {
+    display: none;
+  }
+  .footer__main {
+    width: 100%;
+  }
+  .footer__nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: 60px;
+    padding: 0;
+    list-style: none;
+  }
+  .footer__nav li a {
+    padding: 8px 0;
+  }
+  .footer__main p {
+    display: none;
+  }
+  .footer__social {
+    width: 100%;
+    margin-left: 0;
+  }
+  .footer__links {
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .footer__send {
+    width: 280px;
+    margin-left: calc(50% - (280px / 2));
+    margin-bottom: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 568px) {
+
 }
 
 @media only screen and (max-width: 320px) {
-	
+
 }

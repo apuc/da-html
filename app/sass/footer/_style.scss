@@ -53,6 +53,8 @@
     background-color: #fff;
     border: 1px solid #ff0200;
     padding: 9px 0;
+    margin-bottom: 0;
+    margin-left: 0;
     @include border-box;
     text-align: center;
     color: #242424;
@@ -68,6 +70,19 @@
     position: relative;
     float: left;
     width: calc(100% - (83px + 26px + 183px + 34px));
+    p{
+      display: block;
+      position: relative;
+      width: 100%;
+      float: left;
+      margin-top: 37px;
+      margin-bottom: 44px;
+      color: #060000;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 12px;
+      font-variant: small-caps;
+    }
   }
   &__nav{
     display: flex;
@@ -91,6 +106,7 @@
         color: #242424;
         font-size: 14px;
         font-weight: 600;
+        padding: 0;
         &:after{
           display: block;
           position: absolute;
