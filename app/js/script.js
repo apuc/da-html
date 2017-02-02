@@ -1,3 +1,16 @@
+// window.onload = function () {
+//   //ищем элемент по селектору
+//   var a = document.querySelector('.mouse-area');
+//   //вешаем на него события
+//   a.onmouseout = function(e) {
+//     document.getElementByClassname('stock__item_hide').style.display='none';
+//   }
+//
+//   a.onmouseover = function(e) {
+//     document.getElementByClassname('stock__item_hide').style.display='block';
+//   };
+// }
+
 $(document).ready(function () {
   $(".home-content__wrap_slider").owlCarousel({
     loop: true,
@@ -35,4 +48,18 @@ $(document).ready(function () {
   });
 
 
+  // hover stoke
+   $(".mouse-area").mouseover(function(){
+
+    var visible =  $(this).parent();
+      if(visible.hasClass("hover")){
+        visible.removeClass("hover").animate({left:'0'},400);
+      }
+      else{
+        $(".stock__item_visible").removeClass("hover").animate({left:'0'},400);
+        visible.addClass("hover").animate({left:'-261px'},400);
+      }
+  });
+  // hover stoke
+  
 });
