@@ -300,16 +300,19 @@
   background-color: #fff;
   border: 1px solid rgba(185, 196, 213, 0.48);
   box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 15px;
+  box-sizing: border-box;
   .color-zebra{
-    width: 100%;
+    width: 97%;
     height: 13px;
     display: inline-block;
-    float: left;
+    float: none;
     position: relative;
     background-image: url("../img/home-content/color-zebra.png");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 5px 0;
+    margin: 12px auto 5px;
   }
   .title{
     width: 100%;
@@ -360,6 +363,7 @@
     box-sizing: border-box;
     padding-right: 15px;
     margin: 7px 0;
+    text-align: left;
     .color_checkpoint{
       width: 22px;
       height: 23px;
@@ -376,6 +380,7 @@
       display: inline-block;
       padding-left: 15px;
       box-sizing: border-box;
+      text-align: left;
       a{
         color: #120202;
         display: inline-block;
@@ -398,6 +403,7 @@
       font-weight: 600;
       line-height: 20px;
       margin: 0;
+      text-align: left;
     }
   }
 }
@@ -560,7 +566,7 @@
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
-    border-bottom: 5px solid #aeacb7;
+    // border-bottom: 5px solid #aeacb7;
     padding: 0 10px 5px;
     position: relative;
     box-sizing: border-box;
@@ -643,7 +649,7 @@
     img{
       width: 100%;
       height: 130px;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
   .content{
@@ -687,7 +693,7 @@
   height: 7px;
   background-color: #ff0200;
 }
-.poll{
+.home-content__sidebar_poll{
   margin-top: 30px;
   width: 100%;
   float: left;
@@ -732,5 +738,131 @@
       font-weight: 400;
       line-height: 35px;
     }
+    button{
+      width: 100%;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: #ff0200;
+      box-shadow: 1px 1.7px 4px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.12);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 27px;
+      .pencil{
+        display: inline-block;
+        position: relative;
+        background-image: url("../img/home-content/pencil.png");
+        width: 25px;
+        height: 21px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 3px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.home-content__sidebar_consultation{
+  margin-top: 30px;
+  width: 100%;
+  float: left;
+  background-color: #fff;
+  border: 1px solid rgba(185, 196, 213, 0.48);
+  padding: 10px;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  h3{
+    border-bottom: none;
+    position: relative;
+    z-index: 6;
+    padding-left: 0;
+  }
+  .ask{
+    width: 100%;
+    float: right;
+    text-align: right;
+    position: relative;
+    display: inline-block;
+    color: #050000;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 10px;
+    margin-bottom: 10px;
+    .ask-icon{
+      display: inline-block;
+      size: 20px 22px;
+      position: relative;
+      background-image: url("../img/home-content/ask-icon.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 7px;
+    }
+  }
+  .consultation-title{
+    content: "";
+    background-image: url("../img/home-content/consultation-title.png");
+    size: 64px;
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -39px;
+    z-index: 0;
+    margin-left: -18px;
+  }
+}
+
+.consultation__item{
+  width: 100%;
+  float: left;
+  position: relative;
+  margin: 10px 0;
+  &:nth-of-type(odd){
+    .thumb{
+      margin-left: 15px;
+      margin-right: 0;
+    }
+  }
+  .thumb{
+    size: 54px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    img{
+      height: 100%;
+      width: auto;
+      left: 0;
+      top: 0;
+      object-fit: contain;
+    }
+    .category{
+      position: absolute;
+      color: #050000;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 10px;
+      text-transform: uppercase;
+      left: 2%;
+      margin-top: 20px;
+    }
+  }
+  p{
+    color: #050000;
+    font-size: 13px;
+    font-weight: 600;
+    width: calc(100% - 69px);
+    float: left;
+    // padding-left: 15px;
+    box-sizing: border-box;
+    line-height: 24px;
+    padding-bottom: 18px;
+    margin: 0;
+    border-bottom: 1px solid #edeef0;
   }
 }
