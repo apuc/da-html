@@ -33,6 +33,22 @@ $(document).ready(function () {
       }
     }
   });
+  /*show ads block on mobile*/
+  $(document).on('click', '.ads__trigger', function () {
+    event.preventDefault();
+    var box = $(this).next('.ads__box'),
+        link = $(this).parent().find('.more');
+        
+    if(box.hasClass('open')){
+      box.removeClass('open').slideUp('fast');
+      link.css({display: "none"});
+    } else{
+      box.addClass('open').slideDown('fast');
+      link.css({display: "block"});
+    }
+    
+  });
+  /*close ads block on mobile*/
   
   /*show photo block on mobile*/
   $(document).on('click', '.photo__trigger', function (e) {

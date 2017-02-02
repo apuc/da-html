@@ -37,6 +37,26 @@
   background-color: #ffffff;
   z-index: 1;
 }
+.more{
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: 30px;
+  margin-bottom: 31px;
+  margin-right: 37px;
+  color: #090000;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-transform: uppercase;
+  .fa {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: -35px;
+    color: #ff0200;
+  }
+}
 #overlay {
   z-index: 3;
   position: fixed;
