@@ -1,0 +1,87 @@
+.modal-send {
+  display: none;
+  position: fixed;
+  width: 400px;
+  border-radius: 4px;
+  border: 1px solid #dadada;
+  background-color: #ffffff;
+  top: 25%;
+  margin-left: calc(50% - (400px / 2));
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 27px 41px;
+  @include border-box;
+  &__close {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 500;
+    top: 8px;
+    right: 16px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  &__form{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+  }
+  &__field{
+    display: block;
+    position: relative;
+    float: left;
+    width: 300px;
+    margin-left: calc(50% - (300px/2));
+    margin-bottom: 15px;
+    border-radius: 2px;
+    border: none;
+    background-color: #e7e7e7;
+    padding: 15px 15px 15px 25px;
+    @include border-box;
+    color: #030000;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  &__textarea{
+    display: block;
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 170px;
+    border-radius: 2px;
+    border: none;
+    background-color: #e7e7e7;
+    margin-left: calc(50% - (300px/2));
+    margin-bottom: 15px;
+    resize: none;
+    padding: 15px 15px 15px 25px;
+    @include border-box;
+    color: #030000;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  &__submit{
+    display: block;
+    position: relative;
+    width: 250px;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #ff0200;
+    padding: 9px 0;
+    margin-bottom: 0;
+    margin-left: calc(50% - (250px/2));
+    @include border-box;
+    text-align: center;
+    color: #242424;
+    font-size: 14px;
+    font-weight: 600;
+    @include transition(0.4s);
+    cursor: pointer;
+    &:hover{
+      background-color: #ececeb;
+    }
+  }
+}
