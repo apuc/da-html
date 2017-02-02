@@ -33,7 +33,14 @@ $(document).ready(function () {
       }
     }
   });
-
+  
+  /*show photo block on mobile*/
+  $(document).on('click', '.photo__trigger', function (e) {
+    event.preventDefault();
+    var box = $('.photo__box');
+        box.slideToggle('slow');
+  });
+  /*close photo block on mobile*/
 
   /*send message modal*/
   $(document).on('click', '.footer__send', function () {

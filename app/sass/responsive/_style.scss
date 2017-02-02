@@ -16,6 +16,44 @@
 
 @media only screen and (max-width: 680px) {
 
+  .photo__trigger {
+   display: block;
+  }
+  .photo__box{
+    display: none;
+  }
+  .photo__left {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .photo__center {
+    width: 100%;
+    padding: 0 9px 0 13px;
+    margin-top: 0;
+  }
+  .photo__center h3, .photo__center p {
+   display: none;
+  }
+  .photo__center--img {
+    width: 100%;
+    height: 204px;
+    margin-right: 0;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  .photo__center--imgs .photo__left--item {
+    width: 100%;
+    height: 204px;
+  }
+  .photo__right {
+    width: 100%;
+    margin-top: 0;
+  }
+  .photo__right--item {
+    height: 204px;
+    overflow: hidden;
+  }
+
   .footer__logo {
     display: none;
   }
@@ -51,6 +89,12 @@
     width: 280px;
     margin-left: calc(50% - (280px / 2));
     margin-bottom: 30px;
+  }
+
+  .modal-send {
+    width: 320px;
+    top: 10%;
+    margin-left: calc(50% - (320px/2));
   }
 
 }

@@ -46,7 +46,8 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
 
 gulp.task('js-libs', function () {
     return gulp.src([ // Берем все необходимые библиотеки
-        'app/libs/js-libs/validation.js'
+        'app/libs/js-libs/validation.js',
+        'app/libs/js-libs/lightbox.min.js'
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
