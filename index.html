@@ -386,44 +386,78 @@
 
 <!-- end home-content.html-->
 
+<!-- start ads.html-->
+<section class="ads">
+
+    <div class="container">
+
+        <h3 class="main-title">объявления</h3>
+        <span class="separator"></span>
+
+
+    </div>
+
+</section>
+<!-- end ads.html-->
+
 <!-- start photo.html-->
 <section class="photo">
 
     <div class="container">
 
-        <div class="photo__left">
-            <span class="photo__left--item">
-                <img src="img/home-content/photo-img-1.png" alt="photo">
-            </span>
-            <span class="photo__left--item">
-                <img src="img/home-content/photo-img-2.png" alt="photo">
-            </span>
-        </div>
-        <div class="photo__center">
+        <a href="#" class="photo__trigger">ДОНЕЦК В ФОТОГРАФИЯХ</a>
 
-            <h3>ДОНЕЦК В ФОТОГРАФИЯХ</h3>
+        <div class="photo__box">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua Ut enim ad minim veniam,
-                quis nostrud e</p>
+            <div class="photo__left">
+                <a href="img/home-content/photo-img-1.png" class="photo__left--item" data-lightbox="image-group">
+                    <img src="img/home-content/photo-img-1.png" alt="photo">
+                </a>
+                <a href="img/home-content/photo-img-2.png" class="photo__left--item" data-lightbox="image-group">
+                    <img src="img/home-content/photo-img-2.png" alt="photo">
+                </a>
+            </div>
+            <div class="photo__center">
 
-            <span class="photo__center--img">
-                <img src="img/home-content/photo-img-3.png" alt="">
-            </span>
+                <h3>ДОНЕЦК В ФОТОГРАФИЯХ</h3>
 
-        </div>
-        <div class="photo__right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua Ut enim ad minim veniam,
+                    quis nostrud e</p>
 
-             <span class="photo__right--item">
-                <img src="img/home-content/photo-img-6.png" alt="photo">
-            </span>
-            <span class="photo__right--item">
-                <img src="img/home-content/photo-img-7.png" alt="photo">
-            </span>
-             <span class="photo__right--item">
-                <img src="img/home-content/photo-img-3.png" alt="photo">
-            </span>
+                <a href="img/home-content/photo-img-3.png" class="photo__center--img" data-lightbox="image-group">
+                    <img src="img/home-content/photo-img-3.png" alt="">
+                </a>
+
+                <div class="photo__center--imgs">
+
+                    <a href="img/home-content/photo-img-3.png" class="photo__center--img" data-lightbox="image-group">
+                        <img src="img/home-content/photo-img-3.png" alt="">
+                    </a>
+                    <a href="img/home-content/photo-img-5.png" class="photo__left--item" data-lightbox="image-group">
+                        <img src="img/home-content/photo-img-5.png" alt="">
+                    </a>
+                    <a href="img/home-content/photo-img-4.png" class="photo__center--img" data-lightbox="image-group">
+                        <img src="img/home-content/photo-img-4.png" alt="">
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="photo__right">
+
+                <a href="img/home-content/photo-img-6.png" class="photo__right--item" data-lightbox="image-group">
+                    <img src="img/home-content/photo-img-6.png" alt="photo">
+                </a>
+                <a href="img/home-content/photo-img-7.png" class="photo__right--item" data-lightbox="image-group">
+                    <img src="img/home-content/photo-img-7.png" alt="photo">
+                </a>
+                <a href="img/home-content/photo-img-3.png" class="photo__right--item" data-lightbox="image-group">
+                    <img src="img/home-content/photo-img-3.png" alt="photo">
+                </a>
+
+            </div>
 
         </div>
 
@@ -474,11 +508,31 @@
     </div>
 
 </footer>
+
+<div class="modal-send">
+
+    <span class="modal-send__close">X</span>
+
+    <form action="" class="modal-send__form">
+
+        <input id="send-message-name" class="modal-send__field valid" type="name" placeholder="Имя" required>
+
+        <input id="send-message-email" class="modal-send__field valid" type="email" placeholder="Электронная почта" required>
+
+        <textarea name="" id="send-message-text" class="modal-send__textarea valid" placeholder="Ваше сообщение" required></textarea>
+
+        <input id="send-message-submit" class="modal-send__submit" type="submit" value="Отправить">
+
+    </form>
+
+</div>
+<div id="overlay"></div>
 <!-- end footer.html-->
 
 <!-- start html_close.html-->
 </body>
 <script src='js/jquery-2.1.3.min.js' type="text/javascript"></script>
+<script src='js/libs.min.js' type="text/javascript"></script>
 <script src='js/owl.carousel.min.js' type="text/javascript"></script>
 <script src="js/script.min.js" type="text/javascript"></script>
 </html>

@@ -47,6 +47,31 @@ $(document).ready(function () {
     }
   });
 
+  /*show photo block on mobile*/
+  $(document).on('click', '.photo__trigger', function (e) {
+    event.preventDefault();
+    var box = $('.photo__box');
+        box.slideToggle('slow');
+  });
+  /*close photo block on mobile*/
+
+  /*send message modal*/
+  $(document).on('click', '.footer__send', function () {
+    event.preventDefault();
+    $('#overlay').fadeIn(400,
+        function () {
+          $('.modal-send').css('display', 'block').animate({opacity: 1}, 200);
+        });
+  });
+  $(document).on('click','.modal-send__close, #overlay',function () {
+    $('.modal-send').animate({opacity: 0}, 200,
+        function () {
+          $(this).css('display', 'none');
+          $('#overlay').fadeOut(400);
+        }
+    );
+  });
+
 
   // hover stoke
    $(".mouse-area").mouseover(function(){
@@ -61,5 +86,15 @@ $(document).ready(function () {
       }
   });
   // hover stoke
-  
+
+
+
+  /*send message modal validation*/
+  var validMassage = new Validation();
+      validMassage.init({
+      classItem: 'valid',
+      eventElement: '#send-message-submit'
+  });
+  /*close send message modal validation*/
+  /*close send message modal*/
 });

@@ -1,0 +1,100 @@
+.modal-send {
+  display: none;
+  position: fixed;
+  width: 400px;
+  border-radius: 0;
+  border: 1px solid rgba(187, 195, 211, 0.48);
+  background-color: #ffffff;
+  top: 25%;
+  margin-left: calc(50% - (400px / 2));
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 27px 41px;
+  @include border-box;
+  &__close {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 500;
+    top: 8px;
+    right: 16px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  &__form{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+  }
+  &__field{
+    display: block;
+    position: relative;
+    float: left;
+    width: 300px;
+    margin-left: calc(50% - (300px/2));
+    margin-bottom: 15px;
+    border-radius: 0;
+    border: 1px solid transparent;
+    background-color: #e6e6e6;
+    padding: 13px 15px 13px 25px;
+    @include border-box;
+    color: #030000;
+    font-size: 15px;
+    font-weight: 400;
+    &:focus{
+      border: 1px solid #2196f3 !important;
+      box-shadow: 0 0 4px rgba(32, 150, 243, .47), inset 0 1px 3px rgba(0, 0, 0, .17);
+    }
+  }
+  &__textarea{
+    display: block;
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 170px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: #e7e7e7;
+    margin-left: calc(50% - (300px/2));
+    margin-bottom: 15px;
+    resize: none;
+    padding: 15px 15px 15px 25px;
+    @include border-box;
+    color: #030000;
+    font-size: 15px;
+    font-weight: 400;
+    &:focus{
+      border: 1px solid #2196f3 !important;
+      box-shadow: 0 0 4px rgba(32, 150, 243, .47), inset 0 1px 3px rgba(0, 0, 0, .17);
+    }
+  }
+  &__submit{
+    display: block;
+    position: relative;
+    width: 250px;
+    float: left;
+    background-color: #cd3229;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 9px 0;
+    margin-bottom: 0;
+    margin-left: calc(50% - (250px/2));
+    @include border-box;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    @include transition(0.4s);
+    cursor: pointer;
+    &:hover{
+      background-color: #ececeb;
+      color: #cd3229;
+    }
+  }
+}

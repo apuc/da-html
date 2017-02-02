@@ -44,6 +44,16 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
         })) // Обновляем CSS на странице при изменении
 });
 
+gulp.task('js-libs', function () {
+    return gulp.src([ // Берем все необходимые библиотеки
+        'app/libs/js-libs/validation.js',
+        'app/libs/js-libs/lightbox.min.js'
+    ])
+        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest('js')); // Выгружаем в папку app/js
+});
+
 gulp.task('sass', function () { // Создаем таск Sass
     var processors = [
         assets,
@@ -54,13 +64,13 @@ gulp.task('sass', function () { // Создаем таск Sass
             cascade: true
         }),
         /*pxtorem({
-            rootValue: 14,
-            replace: false
-        }),
-        pxtoem({
-            rootValue: 14,
-            replace: false
-        }),*/
+         rootValue: 14,
+         replace: false
+         }),
+         pxtoem({
+         rootValue: 14,
+         replace: false
+         }),*/
         /*focus,*/
         sorting(),
         stylefmt,
@@ -129,10 +139,9 @@ gulp.task('extend-blocks', function () {
 });
 
 
-
-gulp.task('watch', ['browser-sync', 'compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
-
+gulp.task('watch', ['browser-sync','compress', 'extend-pages', 'css-libs', 'js-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
+    gulp.watch('app/libs/**/*', ['js-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
     gulp.watch(['app/html/**/*.html'], ['extend-pages']);// Наблюдение за HTML-файлами в папке html/pages
@@ -159,6 +168,5 @@ gulp.task('img', function () {
 gulp.task('clear', function (callback) {
     return cache.clearAll();
 });
-
 
 gulp.task('default', ['watch']);
