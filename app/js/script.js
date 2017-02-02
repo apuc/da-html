@@ -51,6 +51,13 @@ $(document).ready(function () {
         }
     );
   });
-  /*close send message modal*/
 
+  /*send message modal validation*/
+  var validMassage = new Validation();
+      validMassage.init({
+      classItem: 'valid',
+      eventElement: '#send-message-submit'
+  });
+  /*close send message modal validation*/
+  /*close send message modal*/
 });

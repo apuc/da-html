@@ -370,13 +370,13 @@
 
     <form action="" class="modal-send__form">
 
-        <input id="send-message-name" class="modal-send__field" type="name" placeholder="Имя">
+        <input id="send-message-name" class="modal-send__field valid" type="name" placeholder="Имя" required>
 
-        <input id="send-message-email" class="modal-send__field" type="email" placeholder="Электронная почта">
+        <input id="send-message-email" class="modal-send__field valid" type="email" placeholder="Электронная почта" required>
 
-        <textarea name="" id="send-message-text" class="modal-send__textarea" placeholder="Ваше сообщение"></textarea>
+        <textarea name="" id="send-message-text" class="modal-send__textarea valid" placeholder="Ваше сообщение" required></textarea>
 
-        <input class="modal-send__submit" type="submit" value="Отправить">
+        <input id="send-message-submit" class="modal-send__submit" type="submit" value="Отправить">
 
     </form>
 
