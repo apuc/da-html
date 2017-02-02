@@ -33,6 +33,21 @@ $(document).ready(function () {
             }
         }
     });
+   
+    // hover stoke
+    $(".mouse-area").mouseover(function () {
+
+        var visible = $(this).parent();
+        if (visible.hasClass("hover")) {
+            visible.removeClass("hover").animate({left: '0'}, 400);
+        }
+        else {
+            $(".stock__item_visible").removeClass("hover").animate({left: '0'}, 400);
+            visible.addClass("hover").animate({left: '-261px'}, 400);
+        }
+    });
+    // hover stoke
+
     /*show ads block on mobile*/
     $(document).on('click', '.ads__trigger', function () {
         event.preventDefault();

@@ -49,7 +49,7 @@
     height: 185px;
     background-color: #ffffff;
     border: 1px solid #e8e8e8;
-    padding: 18px 22px;
+    padding: 10px 22px 10px 22px;
     @include border-box;
     margin-bottom: 12px;
     &--title {
@@ -59,8 +59,8 @@
       width: 100%;
       margin-top: 0;
       margin-bottom: 5px;
-      color: #0d0101;
-      font-size: 12px;
+      color: #292929;
+      font-size: 14px;
       font-weight: 700;
     }
     &--link {
@@ -69,10 +69,11 @@
       float: left;
       width: 100%;
       margin-top: 0;
-      margin-bottom: 5px;
-      color: #3b9be6;
-      font-size: 12px;
-      font-weight: 700;
+      margin-bottom: 0;
+      color: #292929;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 22px;
       span {
         font-size: 10px;
         color: #99a0ab;
@@ -160,5 +161,57 @@
     padding: 0;
     @include border-box;
     margin-bottom: 12px;
+    background-image: url("../img/home-content/map-bg.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--title{
+      display: block;
+      position: relative;
+      width: 100%;
+      float: left;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #292929;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &--subtitle{
+      display: block;
+      position: relative;
+      float: left;
+      width: 248px;
+      margin-top: 0;
+      margin-bottom: 13px;
+      margin-left: calc(50% - (248px/2));
+      text-align: center;
+      color: #292929;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    &--link{
+      display: block;
+      position: relative;
+      float: left;
+      width: 138px;
+      margin-left: calc(50% - (138px/2));
+      padding-top: 6px;
+      padding-bottom: 6px;
+      @include border-box;
+      border-radius: 4px;
+      border: 1px solid #ff0000;
+      text-align: center;
+      text-transform: lowercase;
+      color: #292929;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 22px;
+      @include transition(0.4s);
+      &:hover {
+        background-color: #ececeb;
+      }
+    }
   }
 }
