@@ -54,6 +54,30 @@
     overflow: hidden;
   }
 
+  .main-title, .separator {
+    display: none;
+  }
+  .more {
+    display: none;
+  }
+
+  .ads__trigger {
+    display: block;
+  }
+  .ads__box {
+    display: none;
+  }
+  .ads__item{
+    width: 100%;
+  }
+  .ads__map {
+    width: 100%;
+    height: 185px;
+  }
+  .ads__descr {
+    display: none;
+  }
+
   .footer__logo {
     display: none;
   }

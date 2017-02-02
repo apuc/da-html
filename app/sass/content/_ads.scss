@@ -1,7 +1,217 @@
-.ads{
+.ads {
   display: block;
   position: relative;
   float: left;
   width: 100%;
   background-color: #f4f4f4;
+  &__trigger{
+    display: none;
+    position: relative;
+    float: left;
+    background-color: #ee2e24;
+    padding: 7px 22px 9px;
+    @include border-box;
+    margin-top: 42px;
+    margin-bottom: 33px;
+    margin-left: 60px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+    &:after{
+      display: block;
+      position: absolute;
+      content: "";
+      bottom: -7px;
+      left: 47px;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #ee2e24;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  &__item {
+    display: block;
+    position: relative;
+    float: left;
+    width: 24%;
+    height: 185px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    padding: 10px 22px 10px 22px;
+    @include border-box;
+    margin-bottom: 12px;
+    &--title {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 5px;
+      color: #292929;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    &--link {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #292929;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 22px;
+      span {
+        font-size: 10px;
+        color: #99a0ab;
+      }
+    }
+  }
+  &__descr {
+    display: block;
+    position: relative;
+    float: left;
+    width: 24%;
+    height: 184px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 12px;
+    &--img {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 129px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .name {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: 12px;
+      margin-bottom: 0;
+      padding-left: 6px;
+      @include border-box;
+      color: #020100;
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+    .price {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: 5px;
+      margin-bottom: 0;
+      padding-left: 6px;
+      @include border-box;
+      color: #020100;
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+    .place{
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: -21px;
+      margin-right: 6px;
+      margin-bottom: 0;
+      color: #020100;
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+  }
+  &__map{
+    display: block;
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 185px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    padding: 0;
+    @include border-box;
+    margin-bottom: 12px;
+    background-image: url("../img/home-content/map-bg.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &--title{
+      display: block;
+      position: relative;
+      width: 100%;
+      float: left;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #292929;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &--subtitle{
+      display: block;
+      position: relative;
+      float: left;
+      width: 248px;
+      margin-top: 0;
+      margin-bottom: 13px;
+      margin-left: calc(50% - (248px/2));
+      text-align: center;
+      color: #292929;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    &--link{
+      display: block;
+      position: relative;
+      float: left;
+      width: 138px;
+      margin-left: calc(50% - (138px/2));
+      padding-top: 6px;
+      padding-bottom: 6px;
+      @include border-box;
+      border-radius: 4px;
+      border: 1px solid #ff0000;
+      text-align: center;
+      text-transform: lowercase;
+      color: #292929;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 22px;
+      @include transition(0.4s);
+      &:hover {
+        background-color: #ececeb;
+      }
+    }
+  }
 }
