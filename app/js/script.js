@@ -109,6 +109,10 @@ $(document).ready(function () {
         $('.page__tabcontent').hide();
         $("."+ target).show();
       });
-      // close tabs 
-
+      // close tabs
+      $(".komunalka__item").click(function(e) {
+      e.preventDefault();
+      $(".komunalka__item").removeClass('komunalka__line_active');
+      $(this).addClass('komunalka__line_active');
+      })
 });
