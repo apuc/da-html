@@ -1,4 +1,4 @@
-.main-title{
+.main-title {
   display: block;
   position: relative;
   float: left;
@@ -8,12 +8,12 @@
   margin-top: 42px;
   margin-bottom: 33px;
   margin-left: 76px;
-  color: #ffffff; 
+  color: #ffffff;
   font-size: 20px;
-  font-weight: 700;  
+  font-weight: 700;
   text-transform: uppercase;
   z-index: 2;
-  &:after{
+  &:after {
     display: block;
     position: absolute;
     content: "";
@@ -26,7 +26,8 @@
     border-top: 8px solid #ee2e24;
   }
 }
-.separator{
+
+.separator {
   display: block;
   position: absolute;
   content: "";
@@ -37,7 +38,8 @@
   background-color: #ffffff;
   z-index: 1;
 }
-.more{
+
+.more {
   display: block;
   position: relative;
   float: right;
@@ -57,6 +59,22 @@
     color: #ff0200;
   }
 }
+
+.content {
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 100px;
+  background-color: #f4f4f4;
+  padding: 8px;
+  @include border-box;
+  @include transition(0.9s);
+  &:hover {
+    color: white;
+    background-color: #292929;
+  }
+}
+
 #overlay {
   z-index: 3;
   position: fixed;

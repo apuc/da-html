@@ -51,6 +51,14 @@
     border-radius: 3px;
     border: 1px solid rgba(0, 7, 10, 0.36);
     background-color: #f4f4f4;
+    .content{
+      height: 104px;
+      &:hover{
+        .company__item--title, .company__item--descr{
+          color: white;
+        }
+      }
+    }
     &--image{
       display: block;
       position: relative;
@@ -69,14 +77,12 @@
       position: relative;
       float: left;
       width: 100%;
-      margin-top: 14px;
+      margin-top: 6px;
       margin-bottom: 9px;
-      padding-left: 13px;
-      padding-right: 12px;
-      @include border-box;
       color: #292929;
       font-size: 14px;
       font-weight: 700;
+      @include transition(0.9s);
     }
     &--descr{
       display: block;
@@ -85,12 +91,10 @@
       width: 100%;
       margin-top: 0;
       margin-bottom: 14px;
-      padding-left: 13px;
-      padding-right: 12px;
-      @include border-box;
       color: #292929;
       font-size: 12px;
       font-weight: 400;
+      @include transition(0.9s);
     }
   }
   &__big-item{
@@ -103,5 +107,13 @@
     border-radius: 3px;
     border: 1px solid rgba(0, 7, 10, 0.36);
     background-color: #f4f4f4;
+    .content{
+      height: 104px;
+      &:hover{
+        .company__item--title, .company__item--descr{
+          color: white;
+        }
+      }
+    }
   }
 }
