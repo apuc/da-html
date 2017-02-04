@@ -33,7 +33,7 @@ $(document).ready(function () {
             }
         }
     });
-   
+
     // hover stoke
     $(".mouse-area").mouseover(function () {
 
@@ -98,4 +98,21 @@ $(document).ready(function () {
     });
     /*close send message modal validation*/
     /*close send message modal*/
+
+    // open tabs
+    $('.page__tabs_target').click(function(event) {
+    $('.page__tabs_target').removeClass('page__tabs_active');
+        $(this).addClass('page__tabs_active');
+        event.preventDefault();
+        var target = ($(this).data('tab'));
+
+        $('.page__tabcontent').hide();
+        $("."+ target).show();
+      });
+      // close tabs
+      $(".komunalka__item").click(function(e) {
+      e.preventDefault();
+      $(".komunalka__item").removeClass('komunalka__line_active');
+      $(this).addClass('komunalka__line_active');
+      })
 });
