@@ -1,4 +1,8 @@
+
 $(document).ready(function () {
+
+
+
     $(".home-content__wrap_slider").owlCarousel({
         loop: true,
         margin: 30,

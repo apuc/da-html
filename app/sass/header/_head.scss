@@ -155,7 +155,37 @@
   }
 }
 
+.select{
+  float: left;
+  display: inline-block;
+  min-width: 15%;
+  position: relative;
+  z-index: 10;
+  padding-left: 10px;
+  box-sizing: border-box;
+  select{
+    border: none;
+    background-color: #0c242e;
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    // line-height: 12px;
+    margin: 5px 0;
+    /*for WebKit*/
+ -webkit-appearance: none;
+ /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+  }
 
+}
 .weather{
   width: 10%;
   display: inline-block;

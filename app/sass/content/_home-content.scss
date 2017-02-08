@@ -571,7 +571,23 @@
       width: 100%;
       float: left;
       display: inline-block;
-      margin-top: 20px;
+      // margin-top: 20px;
+      h4{
+        margin: 0;
+        color: #070000;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 16px;
+        text-transform: uppercase;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 1px solid #edeef0;
+        display: inline-block;
+        width: 100%;
+        padding: 20px 0;
+        box-sizing: border-box;
+      }
       .social-wrap__item{
         size: 45px;
         display: block;
