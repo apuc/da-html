@@ -34,6 +34,24 @@ $(document).ready(function () {
         }
     });
 
+    /*afisha*/
+    $('.fancybox').fancybox({
+       prevEffect : 'fade',
+       nextEffect : 'fade',
+
+       closeBtn  : true,
+       arrows    : true,
+       nextClick : true,
+
+       helpers : {
+           thumbs : {
+               width  : 40,
+               height : 40
+
+           }
+       }
+    });
+    /*afisha*/
     // hover stoke
     $(".mouse-area").mouseover(function () {
 
