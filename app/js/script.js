@@ -38,6 +38,112 @@ $(document).ready(function () {
         }
     });
 
+    var carousel1 = '.js-carousel-1';
+    var carousel2 = '.js-carousel-2';
+    var carousel3 = '.js-carousel-3';
+    var carousel4 = '.js-carousel-4';
+
+// Initialize plugin
+  var owlCarousel1 = $(carousel1).owlCarousel({
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    margin: 30,
+    nav: true,
+    navText: true,
+    navigation: true,
+    /*navigationText: true,*/
+    pagination: true,
+    items: 1,
+    dots: true,
+    singleItem: false,
+  });
+  var owlCarousel2 = $(carousel2).owlCarousel({
+      loop: true,
+      margin: 30,
+      mouseDrag: false,
+      touchDrag: false,
+      nav: true,
+      navText: true,
+      navigation: true,
+      /*navigationText: true,*/
+      pagination: true,
+      items: 1,
+      dots: true,
+      singleItem: false,
+  });
+  var owlCarousel3 = $(carousel3).owlCarousel({
+      loop: true,
+      margin: 30,
+      mouseDrag: false,
+      touchDrag: false,
+      nav: true,
+      navText: true,
+      navigation: true,
+      /*navigationText: true,*/
+      pagination: true,
+      items: 1,
+      dots: true,
+      singleItem: false,
+  });
+  var owlCarousel4 = $(carousel4).owlCarousel({
+      loop: true,
+      mouseDrag: false,
+      touchDrag: false,
+      margin: 30,
+      nav: true,
+      navText: true,
+      navigation: true,
+      /*navigationText: true,*/
+      pagination: true,
+      items: 1,
+      dots: true,
+      singleItem: false,
+  });
+
+  $('.customNextBtn').click(function() {
+      owlCarousel1.trigger('next.owl.carousel');
+      owlCarousel2.trigger('next.owl.carousel');
+      owlCarousel3.trigger('next.owl.carousel');
+      owlCarousel4.trigger('next.owl.carousel');
+      return false;
+  })
+  $('.customPrevBtn').click(function() {
+    owlCarousel1.trigger('prev.owl.carousel', [300]);
+    owlCarousel2.trigger('prev.owl.carousel', [300]);
+    owlCarousel3.trigger('prev.owl.carousel', [300]);
+    owlCarousel4.trigger('prev.owl.carousel', [300]);
+    return false;
+
+})
+
+// Thumbs switch click event.
+// owlCarousel2.find('.item').click(function () {
+//   var itemIndex = $(this).parent().index();
+//   owlCarousel1.trigger('to.owl.carousel', itemIndex);
+//   carouselSyncCurrentClass();
+// });
+
+//
+// function carouselSyncCurrentClass() {
+//   setTimeout(function () {
+//     var carousel1ActiveIndex = $('.js-carousel-1, .js-carousel-2, .js-carousel-3 .owl-item.active').index();
+//     $('.js-carousel-4 .owl-item').removeClass('current');
+//     var currentItem = $('.js-carousel-4 .owl-item:nth-child('+(carousel1ActiveIndex+1)+')');
+//     currentItem.addClass('current');
+//
+//     if(!currentItem.hasClass('active')){
+//       if(currentItem.prevAll('.active').length > 0){
+//         owlCarousel4.trigger('next.owl.carousel');
+//       }
+//       if(currentItem.nextAll('.active').length){
+//         owlCarousel4.trigger('prev.owl.carousel');
+//       }
+//     }
+//   }, 100);
+// }
+
+
     /*afisha*/
     $('.fancybox').fancybox({
        prevEffect : 'fade',
