@@ -29,12 +29,12 @@
 
 .header-menu{
   float: left;
-  width: calc(100% - 80px);
+  width: calc(100% - 81px);
   display: block;
   padding: 0;
   margin: 0;
   margin-top: 9px;
-  margin-left: 8px;
+  margin-left: 14px;
   position: relative;
   li{
     display: inline-block;
@@ -46,15 +46,16 @@
       text-transform: uppercase;
       // font-family: $or;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 14px;
       color: #242424;
       line-height: 20px;
     }
     &:first-of-type{
+      margin-right: 68px;
       a{
         // font-family: $ob;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 17px;
         color: #f34942;
         line-height: 20px;
       }
@@ -98,10 +99,12 @@
       height: 34px;
       float: left;
       padding-left: 37px;
+      -webkit-transition: width 1s; /* Safari */
+      transition: width 1s;
       box-sizing: border-box;
       background-image: url("../img/header/search-icon.png");
       background-repeat: no-repeat;
-      background-size: 8%;
+      background-size: 11px;
       background-position-x: 20px;
       background-position-y: 12px;
       &::-webkit-input-placeholder {color: #fff;
@@ -125,6 +128,9 @@
       line-height: 12px;
       text-transform: uppercase;}
 
+    }
+    .search_input_acive{
+      width: 400px;
     }
     button{
       float: left;
@@ -223,7 +229,7 @@
 }
 
 .currency-panel{
-  width: 40%;
+  width: 21%;
   float: left;
   position: relative;
   padding: 5px 0;

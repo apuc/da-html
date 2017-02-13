@@ -164,7 +164,7 @@
       margin: 0;
       text-transform: uppercase;
       color: #fff;
-      font-size: 20px;
+      font-size: 17px;
       // font-family: $ob;
       font-weight: 700;
     }
@@ -326,7 +326,7 @@
       margin: 0;
       text-transform: uppercase;
       color: #000;
-      font-size: 20px;
+      font-size: 17px;
       // font-family: $ob;
       font-weight: 700;
     }
@@ -421,7 +421,7 @@
   h3{
     margin: 0;
     color: #070000;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
@@ -524,7 +524,7 @@
     h3{
       margin: 0;
       color: #070000;
-      font-size: 20px;
+      font-size: 17px;
       font-weight: 700;
       line-height: 16px;
       text-transform: uppercase;
@@ -534,7 +534,7 @@
       border-bottom: 1px solid #edeef0;
       display: inline-block;
       width: 100%;
-      padding: 20px 0;
+      padding: 0 0 20px ;
       box-sizing: border-box;
     }
     form{
@@ -551,6 +551,7 @@
         padding-left: 20px;
         box-sizing: border-box;
         background-color: #e7e7e7;
+        padding-right: 10px;
       }
       button{
         display: inline-block;
@@ -575,7 +576,7 @@
       h4{
         margin: 0;
         color: #070000;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 700;
         line-height: 16px;
         text-transform: uppercase;
@@ -652,7 +653,7 @@
     text-align: center;
     margin: 0;
     color: #fffcf4;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 700;
     line-height: 12px;
     background-color: #ee2e24;
@@ -782,7 +783,7 @@
   h3{
     margin: 0;
     color: #070000;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
@@ -930,7 +931,7 @@
     border: none;
     text-align: center;
     color: #0f0101;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 22px;
     border-top: 7px solid #ff0200;
@@ -952,11 +953,21 @@
     float: left;
     padding: 10px;
     box-sizing: border-box;
+    label{
+      width: 100%;
+      display: inline-block;
+      float: left;
+      margin: 14px 0;
+    }
     p{
       color: #050000;
       font-size: 14px;
       font-weight: 400;
-      line-height: 35px;
+      // line-height: 30px;
+      margin:  0;
+    }
+    input{
+      margin-right: 10px;
     }
     button{
       width: 100%;
@@ -990,9 +1001,9 @@
   float: left;
   background-color: #fff;
   border: 1px solid rgba(185, 196, 213, 0.48);
-  padding: 10px;
+  padding: 15px 10px;
   box-sizing: border-box;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   h3{
     border-bottom: none;
     position: relative;
@@ -1041,7 +1052,7 @@
     font-weight: 700;
     text-decoration: underline;
     text-transform: uppercase;
-    padding: 5px 0 10px;
+    padding: 5px 0 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-top: 20px;
@@ -1131,7 +1142,7 @@
         text-align: center;
         a{
           color: #070000;
-          font-size: 20px;
+          font-size: 17px;
           font-weight: 700;
           line-height: 16px;
           text-transform: uppercase;

@@ -117,31 +117,8 @@ $(document).ready(function () {
 
 })
 
-// Thumbs switch click event.
-// owlCarousel2.find('.item').click(function () {
-//   var itemIndex = $(this).parent().index();
-//   owlCarousel1.trigger('to.owl.carousel', itemIndex);
-//   carouselSyncCurrentClass();
-// });
 
-//
-// function carouselSyncCurrentClass() {
-//   setTimeout(function () {
-//     var carousel1ActiveIndex = $('.js-carousel-1, .js-carousel-2, .js-carousel-3 .owl-item.active').index();
-//     $('.js-carousel-4 .owl-item').removeClass('current');
-//     var currentItem = $('.js-carousel-4 .owl-item:nth-child('+(carousel1ActiveIndex+1)+')');
-//     currentItem.addClass('current');
-//
-//     if(!currentItem.hasClass('active')){
-//       if(currentItem.prevAll('.active').length > 0){
-//         owlCarousel4.trigger('next.owl.carousel');
-//       }
-//       if(currentItem.nextAll('.active').length){
-//         owlCarousel4.trigger('prev.owl.carousel');
-//       }
-//     }
-//   }, 100);
-// }
+
 
 
     /*afisha*/
@@ -230,17 +207,25 @@ $(document).ready(function () {
     // open tabs
     $('.page__tabs_target').click(function(event) {
     $('.page__tabs_target').removeClass('page__tabs_active');
-        $(this).addClass('page__tabs_active');
-        event.preventDefault();
-        var target = ($(this).data('tab'));
+          $(this).addClass('page__tabs_active');
+          event.preventDefault();
+          var target = ($(this).data('tab'));
 
-        $('.page__tabcontent').hide();
-        $("."+ target).show();
-      });
-      // close tabs
-      $(".komunalka__item").click(function(e) {
+          $('.page__tabcontent').hide();
+          $("."+ target).show();
+        });
+        // close tabs
+        $(".komunalka__item").click(function(e) {
+        e.preventDefault();
+        $(".komunalka__item").removeClass('komunalka__line_active');
+        $(this).addClass('komunalka__line_active');
+        })
+    // input
+    $(".search-input").click(function(e) {
       e.preventDefault();
-      $(".komunalka__item").removeClass('komunalka__line_active');
-      $(this).addClass('komunalka__line_active');
-      })
+      $(".search-input").removeClass('search_input_acive');
+      $(this).addClass('search_input_acive', {duration:1000});
+    })
+
+    // input
 });
