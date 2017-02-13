@@ -155,8 +155,8 @@
     width: 100%;
     float: left;
     position: relative;
-    background-color: #ee2e24;
-    padding: 10px;
+    // background-color: #ee2e24;
+    padding: 20px 10px;
     box-sizing: border-box;
     h2{
       width: 50%;
@@ -168,17 +168,21 @@
       // font-family: $ob;
       font-weight: 700;
     }
+    .main-title{
+      margin: 0;
+
+    }
     a{
       width: 50%;
       float: right;
       font-size: 13px;
       // font-family: $or;
       font-weight: 400;
-      color: #fff;
+      color: #000;
       display: inline-block;
       line-height: 12px;
       text-align: right;
-      top: -2px;
+      top: 5px;
       position: relative;
       .add-icon{
         size: 18px;
@@ -596,6 +600,7 @@
         position: relative;
         margin-right: 10px;
         text-align: center;
+        margin-top: 15px;
           img{
             width: 19px;
             height: 19px;
@@ -643,7 +648,7 @@
   float: left;
   margin-right: 30px;
   background-color: white;
-  border: 1.5px solid #ee2e24;
+  border: 2.5px solid #ee2e24;
   text-align: center;
   h2{
     width: 100%;
