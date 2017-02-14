@@ -936,6 +936,18 @@
     height: 130px;
     cursor: pointer;
     position: relative;
+    &::before{
+      content: "";
+    	width: 0;
+    	height: 0;
+      position: absolute;
+      border-top: 10px solid transparent;
+      border-right: 9px solid #ee2e24;
+      border-bottom: 10px solid transparent;
+      position: absolute;
+      left: -9px;
+      bottom: 48%;
+    }
     img{
       size: 100%;
     }
