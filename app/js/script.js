@@ -226,6 +226,13 @@ $(document).ready(function () {
       $(".search-input").removeClass('search_input_acive');
       $(this).addClass('search_input_acive', {duration:1000});
     })
-
     // input
+
+    $('.open-soc').click(function(event) {
+      // $(this).next('.hide-social').slideToggle();
+      var prev = $(this).prev('.hide-social');
+        $(this).siblings('.hide-social').not(prev).slideUp("slow");
+        prev.slideToggle("slow");
+      return false;
+    });
 });

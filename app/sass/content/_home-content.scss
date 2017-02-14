@@ -82,6 +82,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
+      height: initial;
       padding: 10px 15px;
       box-sizing: border-box;
       background-color: rgba(14, 29, 35, 0.9);
@@ -131,6 +132,7 @@
         width: 100%;
         font-size: 16px;
         color: #fff;
+        margin: 0;
         float: left;
         // font-family: $or;
         font-weight: 400;
@@ -422,6 +424,23 @@
   padding: 20px ;
   box-sizing: border-box;
   margin-top: 30px;
+  .title_row{
+    width: 100%;
+    display: inline-block;
+    float: left;
+    border-bottom: 1px solid #edeef0;
+    a{
+      text-align: right;
+      width: 47%;
+      font-weight: 400;
+      display: inline-block;
+      color: #090000;
+      text-decoration: underline;
+      .red-arrow{
+        top: 8px;
+      }
+    }
+  }
   h3{
     margin: 0;
     color: #070000;
@@ -433,9 +452,9 @@
     position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-bottom: 1px solid #edeef0;
+
     display: inline-block;
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -443,16 +462,22 @@
   width: 100%;
   float: left;
   margin-top: 20px;
+
 }
 
 .komunalka__item{
   display: inline-block;
   float: left;
+  // &:first-of-type{
+  //   .komunalka__line{
+  //     display: block;
+  //   }
+  // }
 }
 
 .komunalka__icon{
-  width: 43px;
-  height: 43px;
+  width: 55px;
+  height: 55px;
   border: 1px solid #edeef0;
   display: inline-block;
   cursor: pointer;
@@ -472,8 +497,9 @@
 }
 
 .komunalka__line{
-  width: 295px;
-  height: 43px;
+  // width: 295px;
+
+  height: 55px;
   // border: 1px solid #edeef0;
   display: none;
   position: relative;
@@ -481,9 +507,10 @@
   color: #110101;
   font-size: 16px;
   font-weight: 400;
-  line-height: 15px;
+  line-height: 22px;
   text-align: right;
   padding: 14px 0;
+  padding-left: 10px;
   box-sizing: border-box;
   &:before{
     content: "";
@@ -491,18 +518,21 @@
     height: 30px;
     position: absolute;
     left: 0;
-    margin-top: -7px;
+    margin-top: -3px;
     background-color: #ff0200;
   }
   .red-arrow{
     margin: 0 10px;
+    top: 8px;
   }
+
 }
 
 .komunalka__line_active{
   border: 1px solid #ff0200;
   box-sizing: border-box;
-  height: 43px;
+  height: 55px;
+
   .komunalka__line{
     display: inline-block;
   }
@@ -647,9 +677,16 @@
   width: 21.7%;
   float: left;
   margin-right: 30px;
+
+  box-sizing: border-box;
   background-color: white;
   border: 2.5px solid #ee2e24;
   text-align: center;
+  .home-content__tape_wrap{
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+  }
   h2{
     width: 100%;
     float: left;
@@ -693,7 +730,7 @@
 .tape__item{
   width: 100%;
   box-sizing: border-box;
-  padding: 15px 15px 0 15px;
+  padding: 15px 0 ;
   float: left;
   display: inline-block;
   h4{
@@ -736,17 +773,18 @@
   height: 159px;
   float: left;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
+  border-bottom: 1px solid #edeef0;
   img{
     size: 100%;
     object-fit: cover;
   }
   .time{
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 70%;
     top: 20px;
     float: left;
     text-align: left;
@@ -771,7 +809,7 @@
     bottom: 0;
     font-size: 13px;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 17px;
     color: #fff;
     text-align: left;
   }
@@ -785,25 +823,7 @@
 .home-content__sidebar{
   width: 24%;
   float: left;
-  h3{
-    margin: 0;
-    color: #070000;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 16px;
-    text-transform: uppercase;
-    // border-bottom: 5px solid #aeacb7;
-    padding: 0 10px 5px;
-    position: relative;
-    box-sizing: border-box;
-    &:before{
-      content: "";
-      display: inline-block;
-      background-color: #070000;
-      width: 2px;
-      height: 100%;
-    }
-  }
+
 }
 
 
@@ -811,7 +831,17 @@
   width: 100%;
   float: left;
   position: relative;
-
+  .main-title{
+    margin-top: 0;
+    margin-bottom: 18px;
+    margin-right: 19px;
+    float: right;
+  }
+  .separator{
+    top: 19px;
+    width: 145px;
+    left: 48%;
+  }
 }
 
 .stock__item{
@@ -1009,6 +1039,25 @@
   padding: 15px 10px;
   box-sizing: border-box;
   // padding-bottom: 10px;
+  h3{
+    margin: 0;
+    color: #070000;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    // border-bottom: 5px solid #aeacb7;
+    padding: 0 10px 5px;
+    position: relative;
+    box-sizing: border-box;
+    &:before{
+      content: "";
+      display: inline-block;
+      background-color: #070000;
+      width: 2px;
+      height: 100%;
+    }
+  }
   h3{
     border-bottom: none;
     position: relative;
@@ -1278,6 +1327,25 @@
   margin-top: 30px;
   padding: 10px;
   box-sizing: border-box;
+  h3{
+    margin: 0;
+    color: #070000;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    // border-bottom: 5px solid #aeacb7;
+    padding: 0 10px 5px;
+    position: relative;
+    box-sizing: border-box;
+    &:before{
+      content: "";
+      display: inline-block;
+      background-color: #070000;
+      width: 2px;
+      height: 100%;
+    }
+  }
   h3{
     width: 100%;
     float: left;
