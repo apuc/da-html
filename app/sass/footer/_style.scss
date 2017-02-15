@@ -127,3 +127,18 @@
     }
   }
 }
+
+
+
+.fix-button{
+  position: fixed;
+  right: 0;
+  top: 37%;
+  width: 20px;
+  height: 189px;
+  img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}

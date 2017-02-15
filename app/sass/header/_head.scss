@@ -29,12 +29,12 @@
 
 .header-menu{
   float: left;
-  width: calc(100% - 80px);
+  width: calc(100% - 81px);
   display: block;
   padding: 0;
   margin: 0;
   margin-top: 9px;
-  margin-left: 8px;
+  margin-left: 14px;
   position: relative;
   li{
     display: inline-block;
@@ -46,15 +46,16 @@
       text-transform: uppercase;
       // font-family: $or;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 14px;
       color: #242424;
       line-height: 20px;
     }
     &:first-of-type{
+      margin-right: 68px;
       a{
         // font-family: $ob;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 17px;
         color: #f34942;
         line-height: 20px;
       }
@@ -62,17 +63,30 @@
   }
 }
 .header-ipanel{
-  width: calc(100% - 70px);
+  width: calc(100% - 73px);
   right: 0;
   height: 34px;
   position: relative;
-  float: left;
+  float: right;
   background-color: #0c242e;
   background-repeat: no-repeat;
   background-size: cover;
   // background-image: url("../img/header/line.png");
   z-index: 10;
-
+  &:before{
+    content: "";
+    -o-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    -moz-transform: skew(45deg);
+    -webkit-transform: skew(45deg);
+    transform: skew(45deg);
+    background-color: #0c242e;
+    width: 35px;
+    height: 34px;
+    display: block;
+    position: absolute;
+    margin-left: -17px;
+  }
   form{
     float: right;
     display: inline-block;
@@ -85,10 +99,12 @@
       height: 34px;
       float: left;
       padding-left: 37px;
+      -webkit-transition: width 1s; /* Safari */
+      transition: width 1s;
       box-sizing: border-box;
       background-image: url("../img/header/search-icon.png");
       background-repeat: no-repeat;
-      background-size: 8%;
+      background-size: 11px;
       background-position-x: 20px;
       background-position-y: 12px;
       &::-webkit-input-placeholder {color: #fff;
@@ -99,7 +115,7 @@
       &::-moz-placeholder {color: #fff;
       font-size: 10px;
       font-weight: 600;
-      line-height: 12px;
+      // line-height: 12px;
       text-transform: uppercase;}
       &:-moz-placeholder {color: #fff;
       font-size: 10px;
@@ -113,16 +129,18 @@
       text-transform: uppercase;}
 
     }
+    .search_input_acive{
+      width: 400px;
+    }
     button{
       float: left;
       display: inline-block;
       position: relative;
       width: 133px;
       height: 34px;
-      opacity: 0.4;
-      background-color: #f34942;
+      background-color: rgba(243, 73, 66, 0.4);
       border: none;
-      color: #fffcf4;
+      color: #fff;
       font-size: 10px;
       font-weight: 600;
       line-height: 12px;
@@ -142,7 +160,37 @@
   }
 }
 
+.select{
+  float: left;
+  display: inline-block;
+  min-width: 15%;
+  position: relative;
+  z-index: 10;
+  padding-left: 10px;
+  box-sizing: border-box;
+  select{
+    border: none;
+    background-color: #0c242e;
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    // line-height: 12px;
+    margin: 5px 0;
+    /*for WebKit*/
+ -webkit-appearance: none;
+ /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+  }
 
+}
 .weather{
   width: 10%;
   display: inline-block;
@@ -180,7 +228,7 @@
 }
 
 .currency-panel{
-  width: 40%;
+  width: 21%;
   float: left;
   position: relative;
   padding: 5px 0;
