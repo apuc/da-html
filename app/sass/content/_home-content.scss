@@ -984,6 +984,7 @@
     border-top: 7px solid #ff0200;
     padding: 5px 0;
     box-sizing: border-box;
+    text-transform: uppercase;
   }
   h5{
     width: 100%;
@@ -994,12 +995,15 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 23px;
+    margin-bottom: 10px;
   }
   form{
     width: 100%;
     float: left;
     padding: 10px;
+    border-top: 1px solid #edeef0;
     box-sizing: border-box;
+    padding-top: 0;
     label{
       width: 100%;
       display: inline-block;
@@ -1140,7 +1144,7 @@
     }
   }
   .thumb{
-    size: 54px;
+    size: 65px;
     overflow: hidden;
     border-radius: 50%;
     display: block;
@@ -1164,7 +1168,7 @@
     line-height: 10px;
     text-transform: uppercase;
     left: 0;
-    margin-top: 61px;
+    margin-top: 84px;
     width: 54px;
     text-align: center;
   }
@@ -1172,7 +1176,7 @@
     color: #050000;
     font-size: 13px;
     font-weight: 600;
-    width: calc(100% - 69px);
+    width: calc(100% - 83px);
     float: left;
     // padding-left: 15px;
     box-sizing: border-box;
