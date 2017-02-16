@@ -38,6 +38,21 @@ $(document).ready(function () {
         }
     });
 
+    $(".rubrick-slider__wrap").owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        navText: true,
+        navigation: true,
+        /*navigationText: true,*/
+        pagination: true,
+        items: 1,
+        dots: true,
+        singleItem: false,
+        responsiveClass: true,
+
+    });
+
     var carousel1 = '.js-carousel-1';
     var carousel2 = '.js-carousel-2';
     var carousel3 = '.js-carousel-3';
@@ -204,7 +219,7 @@ $(document).ready(function () {
     /*close send message modal validation*/
     /*close send message modal*/
 
-    // open tabs
+  /* open tabs*/
     $('.page__tabs_target').click(function(event) {
     $('.page__tabs_target').removeClass('page__tabs_active');
           $(this).addClass('page__tabs_active');
@@ -214,12 +229,17 @@ $(document).ready(function () {
           $('.page__tabcontent').hide();
           $("."+ target).show();
         });
-        // close tabs
-        $(".komunalka__item").click(function(e) {
-        e.preventDefault();
-        $(".komunalka__item").removeClass('komunalka__line_active');
-        $(this).addClass('komunalka__line_active');
-        })
+/* close tabs */
+
+/* komunalka */
+
+    $(".komunalka__item").hover(function(e) {
+    e.preventDefault();
+    $(".komunalka__item").removeClass('komunalka__line_active');
+    $(this).addClass('komunalka__line_active');
+    })
+
+/* komunalka */
     // input
     $(".search-input").click(function(e) {
       e.preventDefault();

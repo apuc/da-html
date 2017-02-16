@@ -1,0 +1,66 @@
+.rubrick-slider{
+  width: 100%;
+  float: left;
+  position: relative;
+
+}
+
+.rubrick-slider__wrap{
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 600px;
+}
+
+.rubrick-slider__item{
+  width: 100%;
+  float: left;
+  height: 600px;
+}
+
+.rubrick-slider__title{
+  width: 100%;
+  float: left;
+  position: relative;
+  h2{
+    width: 50%;
+    float: left;
+  }
+}
+
+.rubrick-slider__item_wrap{
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.item__big{
+  width: 50%;
+  float: left;
+  position: relative;
+  height: 500px;
+  margin-right: 11px;
+  img{
+    size: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.item__small{
+  width: 22%;
+  height: 240px;
+  float: left;
+  position: relative;
+  margin: 0 11px 22px 11px;
+  img{
+    size: 100%;
+    object-fit: cover;
+  }
+  .item__small_content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}

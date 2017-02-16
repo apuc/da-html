@@ -2,7 +2,27 @@
   width: 100%;
   float: left;
   position: relative;
+  padding: 40px 0;
+  box-sizing: border-box;
+  .news-slider-index-panel{
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    .hot-tag{
+      width: 100%;
+      float: left;
+      display: inline-block;
+      a{
+        color: #060000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-right: 15px;
+      }
+    }
+  }
 }
+
 
 .news__wrap{
   width: 100%;
@@ -10,15 +30,17 @@
   position: relative;
   .home-content__wrap_subscribe{
     width: 48%;
-    margin-top: 0;
+    margin-top: 11px;
   }
 }
 
 .news__wrap_item-sm, .news__wrap_item-lg{
-  width: 24%;
+  width: 23%;
   float: left;
   position: relative;
-
+  height: 225px;
+  box-sizing: border-box;
+  margin: 11px;
   .thumb{
     width: 100%;
     height: 174px;
@@ -67,6 +89,17 @@
     float: left;
     color: #060000;
     line-height: 22px;
+    padding: 5px;
+    box-sizing: border-box;
+    &::after{
+      content: "";
+      width: 80%;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      left: 5%;
+      bottom: 0;
+    }
     p{
       width: 75%;
       font-size: 14px;
@@ -135,7 +168,7 @@
 .news__wrap_item-lg{
   width: 48%;
   .thumb{
-    height: 218px;
+    height: 225px;
     .content-row{
       p{
         width: 100%;
@@ -165,4 +198,51 @@
 .news__wrap_item-sm:hover .hover-wrap{
   display: block;
 
+}
+
+
+.news__wrap_buttons{
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  a{
+    color: #090000;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin: 0 20px;
+  }
+  .show-more{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    background-color: #ee2e24;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+
+
+.rotate-arrow{
+  background-image: url("../img/home-content/red-arrow.png");
+  width: 5px;
+  height: 9px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  margin-left: 5px;
+
+  margin-right: 5px;
+  transform: rotate(-180deg);
 }
