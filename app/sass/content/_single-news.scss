@@ -5,12 +5,12 @@
   margin-bottom: 25px;
 
   .container{
-    display: flex;
-    justify-content: space-between;
+    position: relative;
   }
-
+  
   #article{
     width: 875px;
+    float: left;
 
     .thumbnail-wrapper{
       margin-bottom: 16px;
@@ -124,8 +124,9 @@
     }
   }
   #aside{
-    width: 280px;
+    width: 255px;
     margin-left: 20px;
+    float: right;
 
     .more-news{
       h3{
@@ -189,7 +190,6 @@
       }
     }
     .articles{
-      margin-top: 155px;
       margin-left: 5px;
 
       .article{
@@ -244,11 +244,9 @@
       }
     }
   }
-  #aside.move{
+  .scroll.move{
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    right: 78px;
     top: 25px;
+    width: 19%;
   }
 }
