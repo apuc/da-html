@@ -235,4 +235,20 @@ $(document).ready(function () {
         prev.slideToggle("slow");
       return false;
     });
+
+
+    /* scroll fixed side-bar */
+
+    jQuery(function () {
+        jQuery(window).scroll(function () {
+            var top = jQuery(document).scrollTop(),
+                h = jQuery("body").css("height");
+            if (top < 68) {
+                jQuery("#aside").removeClass("move");
+
+            } else {
+                jQuery("#aside").addClass("move");
+            }
+        });
+    });
 });
