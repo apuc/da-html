@@ -244,10 +244,10 @@ $(document).ready(function () {
             var top = jQuery(document).scrollTop(),
                 h = jQuery("body").css("height");
             if (top < 68) {
-                jQuery("#aside").removeClass("move");
+                jQuery(".scroll").removeClass("move");
 
             } else {
-                jQuery("#aside").addClass("move");
+                jQuery(".scroll").addClass("move");
             }
         });
     });
