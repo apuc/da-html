@@ -1,0 +1,123 @@
+.what-say{
+  width: 100%;
+  float: left;
+  background-color: #f6f9ff;
+  padding: 40px 0;
+  box-sizing: border-box;
+  h2{
+    width: 50%;
+    float: left;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.what-say__servises{
+  width: 50%;
+  float: left;
+  text-align: right;
+  a{
+    color: #010408;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 15px;
+  }
+  .comments-icon{
+    background-image: url("../img/icons/comments-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    size: 16px;
+    margin-right: 5px;
+    float: left;
+    top: 2px;
+    position: relative;
+  }
+  .mail-icon{
+    background-image: url("../img/icons/mail-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    size: 16px 12px;
+    margin-right: 5px;
+    float: left;
+    top: 5px;
+    position: relative;
+  }
+}
+
+.what-say__wrap{
+  width: 100%;
+  float: left;
+  position: relative;
+  margin-top: 40px;
+}
+
+.what-say__wrap_item{
+  width: 25%;
+  float: left;
+  position: relative;
+  height: 111px;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 0 22px;
+  box-sizing: border-box;
+  .counter{
+    position: absolute;
+    left: 5px;
+    size: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #ee2e24;
+    border: 2px solid white;
+    z-index: 3;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    line-height: 33px;
+    margin-top: -3px;
+  }
+  .thumb{
+    size: 62px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 7px;
+    img{
+      size: 100%;
+      object-fit: cover;
+    }
+  }
+  .wrapi{
+    width: calc(100% - 70px);
+    float: left;
+    position: relative;
+    padding-left: 8px;
+    box-sizing: border-box;
+    .name{
+      color: rgba(0, 0, 0, 0.48);
+      font-size: 16px;
+      font-weight: 400;
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+    }
+    p{
+      color: black;
+      display: inline-block;
+      width: 100%;
+      float: left;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 300;
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+  }
+}
