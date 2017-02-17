@@ -49,6 +49,8 @@ $(document).ready(function () {
         items: 1,
         dots: true,
         singleItem: false,
+        mouseDrag: false,
+        touchDrag: false,
         responsiveClass: true,
 
     });
