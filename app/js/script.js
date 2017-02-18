@@ -239,16 +239,18 @@ $(document).ready(function () {
 
     /* scroll fixed side-bar */
 
-    jQuery(function () {
+    /*jQuery(function () {
         jQuery(window).scroll(function () {
             var top = jQuery(document).scrollTop(),
                 h = jQuery("body").css("height");
-            if (top < 68) {
+            if (top < 1193) {
                 jQuery(".scroll").removeClass("move");
 
             } else {
                 jQuery(".scroll").addClass("move");
             }
         });
-    });
+    });*/
+
+    $('#aside').hcSticky();
 });
