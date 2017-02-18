@@ -20,7 +20,14 @@ a {
     &:hover, &:focus, &:active{
         text-decoration: none;
     }
+
 }
+
+// a{
+//   &:hover{
+//     color: #ee2e24;
+//   }
+// }
 
 input{
     outline: none;

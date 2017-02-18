@@ -55,16 +55,19 @@
   float: left;
   position: relative;
   margin-top: 40px;
+  text-align: center;
 }
 
 .what-say__wrap_item{
-  width: 25%;
-  float: left;
+  width: 23%;
+  float: none;
+  display: inline-block;
+  margin: 8px;
   position: relative;
   height: 111px;
   background-color: #fff;
   border-radius: 3px;
-  padding: 0 22px;
+  padding: 16px 18px;
   box-sizing: border-box;
   .counter{
     position: absolute;
