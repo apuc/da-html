@@ -1,0 +1,106 @@
+.afisha-events{
+  width: 100%;
+  float: left;
+  position: relative;
+  margin-bottom: 40px;
+  .show-more{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    background-color: #ee2e24;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+}
+
+.afisha-events__wrap{
+  display: flex;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+
+.what-to-see, .where-to-go, .interested{
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+  padding: 40px 0 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  h3{
+    width: 100%;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    float: left;
+    text-align: left;
+    padding-left: 22px;
+    box-sizing: border-box;
+    margin-top: 0;
+  }
+  .item{
+    width: 21%;
+    flex-basis: 21%;
+    float: none;
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    margin: 25px auto;
+    display: inline-block;
+
+    img{
+      size: 100%;
+      object-fit: cover;
+    }
+    .item-content{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.75);
+      display: none;
+      .type, .name-item, .time{
+        color: #090e10;
+        font-size: 16px;
+        font-weight: 400;
+        width: 100%;
+        text-align: left;
+        float: left;
+        float: left;
+        margin: 15px 0;
+      }
+      .name-item{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 10px;
+      }
+      .time{
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  .item:hover .item-content{
+    display: block;
+  }
+  .interested__item{
+    width: 49%;
+    float: left;
+    height: 140px;
+    overflow: hidden;
+    img{
+      size: 100%;
+      object-fit: cover;
+    }
+  }
+}
