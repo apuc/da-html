@@ -61,6 +61,24 @@ $(document).ready(function () {
         responsiveClass: true,
 
     });
+    $(".afisha-top-slider__wrap").owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        navText: true,
+        navigation: true,
+        /*navigationText: true,*/
+        pagination: true,
+        autoplay: true,
+        autoplayTimeout: 9000,
+        items: 3,
+        dots: true,
+        singleItem: false,
+        mouseDrag: false,
+        touchDrag: false,
+        responsiveClass: true,
+
+    });
 
     var carousel1 = '.js-carousel-1';
     var carousel2 = '.js-carousel-2';
