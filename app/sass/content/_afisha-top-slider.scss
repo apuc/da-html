@@ -1,0 +1,134 @@
+.afisha-top-slider{
+  width: 100%;
+  float: left;
+  position: relative;
+  padding-bottom: 17px;
+  box-sizing: border-box;
+}
+
+.afisha-top-slider__wrap{
+  width: 100%;
+  float: left;
+  position: relative;
+  .owl-controls{
+    .owl-nav{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 45%;
+      .owl-prev, .owl-next{
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.67);
+        display: inline-block;
+        size: 35px;
+        float: left;
+        margin-left: 7px;
+        border: 1px solid #fff;
+        &::before{
+          content: "";
+          size: 20px;
+          display: inline-block;
+          position: relative;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-image: url("../img/icons/prev.png");
+          top: 7px;
+          left: 3px;
+
+        }
+      }
+      .owl-next{
+        float: right;
+        margin-left: 0;
+        margin-right: 7px;
+        &::before{
+          content: "";
+          background-image: url("../img/icons/next.png");
+          left: 12px;
+        }
+      }
+    }
+  }
+}
+
+.afisha-top-slider__wrap_item{
+  width: 100%;
+  float: left;
+  position: relative;
+  display: inline-block;
+  .thumb{
+    height: 150px;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    img{
+      size: 100%;
+      object-fit: cover;
+    }
+  }
+  .contents{
+    width: 100%;
+    position: relative;
+    // height: 65px;
+    float: left;
+    padding: 10px 15px;
+    color: #fff;
+    box-sizing: border-box;
+    .contents-date{
+      float: left;
+      position: relative;
+      padding: 0 10px 0 0;
+      box-sizing: border-box;
+      border-right: 1px solid #fff;
+      height: 39px;
+      .number-day, .mounth{
+        width: 100%;
+        float: left;
+        display: inline-block;
+        text-align: center;
+        font-weight: 500;
+        line-height: 17px;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      .mounth{
+        font-size: 17px;
+        font-variant: small-caps;
+        text-transform: none;
+        font-weight: 500;
+        padding-top: 4px;
+        box-sizing: border-box;
+      }
+
+    }
+    p, .place{
+      width: 83%;
+      display: inline-block;
+      position: relative;
+      float: left;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+    .place{
+      font-size: 12px;
+    }
+  }
+}
+
+
+.contents-grey{
+  background-color: #3b3835;
+}
+
+
+.contents-purple{
+  background-color: #5f4e81;
+}
+
+.contents-maroon{
+  background-color: #8c3130;
+}
