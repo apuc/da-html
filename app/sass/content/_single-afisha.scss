@@ -1,0 +1,102 @@
+.single-afisha{
+  float: left;
+  width: 100%;
+
+  .container{
+    background-color: #fff;
+    padding-top: 22px;
+    padding-left: 55px;
+    padding-right: 55px;
+    margin-bottom: 40px;
+    padding-bottom: 35px;
+  }
+  .age{
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  h1{
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .afisha-content-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 29px;
+
+      .thumbnail-afisha{
+        width: 29%;
+
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .afisha-content{
+        font-size: 16px;
+        color: #060000;
+        width: 68%;
+        font-weight: 700;
+
+        .date-time{
+          font-size: 19px;
+          color: #030000;
+          background-image: url(../img/info-icons/icon-4.png);
+          background-repeat: no-repeat;
+          padding-left: 40px;
+          font-weight: 400;
+          background-size: 21px;
+          background-position: 0 6px;
+          line-height: 35px;
+        }
+        p{
+          margin-bottom: 35px;
+        }
+      }
+  }
+  .maps{
+    margin-top: 45px;
+    .maps-info{
+      display: flex;
+
+      .date{
+        display: flex;
+        width: 28%;
+
+        .day{
+          font-weight: 500;
+          font-size: 48px;
+          line-height: 49px;
+          margin-right: 8px;
+        }
+        .weekday{
+          flex-direction: column;
+          display: flex;
+
+          span{
+            &:first-child{
+              color: #ccc;
+            }
+          }
+        }
+      }
+      .adress{
+        font-size: 14px;
+        color: #060000;
+        font-weight: 700;
+        width: 23%;
+      }
+    }
+
+    .map{
+      h3{
+        font-size: 20px;
+      }
+      #map{
+        height: 250px;
+        width: 100%;
+      }
+    }
+  }
+}

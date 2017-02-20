@@ -1,7 +1,14 @@
+var map;
+ymaps.ready(function () {
+    if ($('#map').length > 0) {
+        map = new ymaps.Map("map", {
+            center: [59.94, 30.32],
+            zoom: 12
+        });
+    }
+});
 
 $(document).ready(function () {
-
-
 
     $(".home-content__wrap_slider").owlCarousel({
         loop: true,
