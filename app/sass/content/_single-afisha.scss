@@ -57,6 +57,50 @@
   }
   .maps{
     margin-top: 45px;
+
+    .tabs__caption{
+      padding-left: 0;
+      border-bottom: 1px solid #e3e3e3;
+
+      li{
+        list-style: none;
+        display: inline-block;
+        border-top: 1px solid #e3e3e3;
+        border-left: 1px solid #e3e3e3;
+        border-right: 1px solid #e3e3e3;
+        padding: 8px;
+        border-radius: 7px 7px 0px 0px;
+
+        &:hover{
+          cursor: pointer;
+        }
+
+        .date{
+          display: flex;
+          width: 28%;
+
+          .day{
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 49px;
+            margin-right: 8px;
+          }
+          .weekday{
+            flex-direction: column;
+            display: flex;
+
+            span{
+              &:first-child{
+                color: #ccc;
+              }
+            }
+          }
+        }
+      }
+      li.active{
+        border-color: #ff0000;
+      }
+    }
     .maps-info{
       display: flex;
 
@@ -85,7 +129,7 @@
         font-size: 14px;
         color: #060000;
         font-weight: 700;
-        width: 23%;
+        width: 14%;
       }
     }
 
@@ -93,10 +137,17 @@
       h3{
         font-size: 20px;
       }
-      #map{
+      .ymaps{
         height: 250px;
         width: 100%;
       }
     }
   }
+}
+
+.tabs__content {
+  display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+  display: block; /* по умолчанию показываем нужный блок */
 }

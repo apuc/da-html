@@ -36,8 +36,38 @@
         </div>
     </div>
 
-        <div class="maps">
-            <div class="map-wrapper">
+        <div class="maps tabs">
+            <ul class="tabs__caption">
+                <li class="active">
+                    <div class="date">
+                        <div class="day">03</div>
+                        <div class="weekday">
+                            <span>Пятница</span>
+                            <span>Февраля</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="date">
+                        <div class="day">21</div>
+                        <div class="weekday">
+                            <span>Понедельник</span>
+                            <span>Ноября</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="date">
+                        <div class="day">01</div>
+                        <div class="weekday">
+                            <span>Четверг</span>
+                            <span>Апреля</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="map-wrapper tabs__content active">
                 <div class="maps-info">
                     <div class="date">
                         <div class="day">03</div>
@@ -54,7 +84,49 @@
                 <div class="map">
                     <h3>Адресс</h3>
 
-                    <div id="map"></div>
+                    <div id="map" class="ymaps"></div>
+                </div>
+            </div>
+
+            <div class="map-wrapper tabs__content">
+                <div class="maps-info">
+                    <div class="date">
+                        <div class="day">21</div>
+                        <div class="weekday">
+                            <span>понедельник</span>
+                            <span>ноября</span>
+                        </div>
+                    </div>
+                    <div class="adress">
+                        Адрес: г. Донецк,
+                        ул. Фомина, 9
+                    </div>
+                </div>
+                <div class="map">
+                    <h3>Адресс</h3>
+
+                    <div id="map_2" class="ymaps"></div>
+                </div>
+            </div>
+
+            <div class="map-wrapper tabs__content">
+                <div class="maps-info">
+                    <div class="date">
+                        <div class="day">01</div>
+                        <div class="weekday">
+                            <span>Четверг</span>
+                            <span>Апреля</span>
+                        </div>
+                    </div>
+                    <div class="adress">
+                        Адрес: г. Донецк,
+                        ул. Жили-были, 75
+                    </div>
+                </div>
+                <div class="map">
+                    <h3>Адресс</h3>
+
+                    <div id="map_3" class="ymaps"></div>
                 </div>
             </div>
         </div>

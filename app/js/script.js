@@ -1,7 +1,19 @@
-var map;
+var map, map_2, map_3;
 ymaps.ready(function () {
     if ($('#map').length > 0) {
         map = new ymaps.Map("map", {
+            center: [59.94, 30.32],
+            zoom: 12
+        });
+    }
+    if ($('#map_2').length > 0) {
+        map_2 = new ymaps.Map("map_2", {
+            center: [48.0054, 37.7709],
+            zoom: 12
+        });
+    }
+    if ($('#map_3').length > 0) {
+        map_3 = new ymaps.Map("map_3", {
             center: [59.94, 30.32],
             zoom: 12
         });
@@ -301,3 +313,18 @@ $(document).ready(function () {
 
     $('#aside').hcSticky();
 });
+
+(function($) {
+    $(function() {
+
+        $('ul.tabs__caption').each(function() {
+            $(this).find('li').each(function(i) {
+                $(this).click(function(){
+                    $(this).addClass('active').siblings().removeClass('active')
+                        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(i).addClass('active');
+                });
+            });
+        });
+
+    })
+})(jQuery)
