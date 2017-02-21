@@ -298,6 +298,30 @@ $(document).ready(function () {
 
     /* scroll fixed side-bar */
 
+
+    /*datapicker*/
+    $(".datepicker-wrap").click(function() {
+        $(".datepicker-inline").toggle("slow");
+    });
+    // $('.datepicker-wrap').datepicker({
+    //   inline: false,
+    //     onShow: function(dp, animationCompleted){
+    //         if (!animationCompleted) {
+    //             log('start showing')
+    //         } else {
+    //             log('finished showing')
+    //         }
+    //     },
+    //     onHide: function(dp, animationCompleted){
+    //         if (!animationCompleted) {
+    //             log('start hiding')
+    //         } else {
+    //             log('finished hiding')
+    //         }
+    //     }
+    // });
+    /*datapicker*/
+
     /*jQuery(function () {
         jQuery(window).scroll(function () {
             var top = jQuery(document).scrollTop(),

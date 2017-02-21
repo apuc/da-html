@@ -59,10 +59,10 @@
 }
 
 .what-say__wrap_item{
-  width: 23%;
+  width: 24%;
   float: none;
   display: inline-block;
-  margin: 8px;
+  margin: 4px;
   position: relative;
   height: 111px;
   background-color: #fff;
@@ -86,7 +86,7 @@
     margin-top: -3px;
   }
   .thumb{
-    size: 62px;
+    size: 72px;
     position: relative;
     float: left;
     overflow: hidden;
@@ -98,7 +98,7 @@
     }
   }
   .wrapi{
-    width: calc(100% - 70px);
+    width: calc(100% - 75px);
     float: left;
     position: relative;
     padding-left: 8px;

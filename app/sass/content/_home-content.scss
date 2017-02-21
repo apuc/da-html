@@ -663,11 +663,50 @@
       .pinterest{
         background-color: #ed1b22;
       }
-      .vk{
 
-      }
     }
   }
+}
+
+.social-wrap__item{
+  size: 45px;
+  display: block;
+  float: left;
+  position: relative;
+  margin-right: 10px;
+  text-align: center;
+  margin-top: 15px;
+    img{
+      width: 19px;
+      height: 19px;
+      object-fit: contain;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+}
+.vk{
+  background-color: #527498;
+}
+.fb{
+  background-color: #365aa4;
+}
+.ok{
+  background-color: #ff8304;
+}
+.insta{
+  background-color: #517fa4;
+}
+.twitter{
+  background-color: #1ab2e8;
+}
+.google{
+  background-color: #d6492f;
+}
+.pinterest{
+  background-color: #ed1b22;
 }
 //home-content__wrap
 
