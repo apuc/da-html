@@ -11,8 +11,12 @@
     padding-bottom: 35px;
 
     .what-to-see{
+      margin-bottom: 45px;
+      padding-left: 0;
+      padding-right: 0;
+
       h3{
-        width: 80%;
+        width: 79%;
       }
       a.view-more{
         display: inline-block;
@@ -39,6 +43,14 @@
         &:hover{
           text-decoration: none;
         }
+      }
+    }
+    .afisha-events__wrap{
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      .item{
+        margin: 0;
       }
     }
   }

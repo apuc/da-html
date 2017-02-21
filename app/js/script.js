@@ -322,21 +322,23 @@ $(document).ready(function () {
 
     /* scroll fixed socials */
 
-    jQuery(function () {
+    $('#aside').hcSticky();
+});
 
-        jQuery(window).scroll(function () {
-            var top = jQuery(document).scrollTop(),
-                h = jQuery("body").css("height");
-            if (top < 649) {
-                jQuery(".social-wrap").addClass('move');
-                jQuery(".social-wrap").hcSticky();
-            } else {
-                jQuery(".social-wrap").hcSticky();
-            }
-        });
+jQuery(function () {
+
+    jQuery(window).scroll(function () {
+        var top = jQuery(document).scrollTop(),
+            h = jQuery("body").css("height");
+        if (top < 649) {
+            jQuery(".social-wrap").addClass('move');
+            jQuery(".social-wrap").hcSticky();
+        } else {
+            jQuery(".social-wrap").hcSticky();
+        }
     });
 
-    $('#aside').hcSticky();
+    
 });
 
 (function($) {
@@ -351,4 +353,29 @@ $(document).ready(function () {
             });
         });
     })
+
+    $(".consultation-slider").owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        smartSpeed: 500,
+        navText: ['<img src="img/icons/arrow-left.png" >', '<img src="img/icons/arrow-right.png" >'],
+        responsiveClass:true,
+        pagination: true,
+        items: 4,
+        responsive: {
+            0: {
+                items: 2
+            },
+            768: {
+                items: 3,
+                margin: 28
+            },
+            980: {
+                items: 4,
+                margin: 12
+            }
+        }
+    });
+      
 })(jQuery)
