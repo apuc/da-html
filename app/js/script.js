@@ -336,6 +336,18 @@ $(document).ready(function () {
     });*/
 
     $('#aside').hcSticky();
+
+
+
+    jQuery(".page__tabs_target").click(function (e) {
+ 			jQuery(".page__tabs_targett").removeClass("page__tabs_active");
+ 			 jQuery(this).addClass("page__tabs_active");
+ 			 jQuery('.page__tabcontent').removeClass('current');
+ 				e.preventDefault();
+ 			var t = jQuery(this).attr('data-tab');
+ 			jQuery(".page__tabcontent").fadeOut(500), jQuery("#" + t).addClass('current').fadeIn(500);
+
+ 	});
 });
 
 (function($) {
