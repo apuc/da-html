@@ -296,9 +296,6 @@ $(document).ready(function () {
     });
 
 
-    /* scroll fixed side-bar */
-
-
     /*datapicker*/
     $(".datepicker-wrap").click(function() {
         $(".datepicker-inline").toggle("slow");
@@ -322,18 +319,8 @@ $(document).ready(function () {
     // });
     /*datapicker*/
 
-    /*jQuery(function () {
-        jQuery(window).scroll(function () {
-            var top = jQuery(document).scrollTop(),
-                h = jQuery("body").css("height");
-            if (top < 1193) {
-                jQuery(".scroll").removeClass("move");
 
-            } else {
-                jQuery(".scroll").addClass("move");
-            }
-        });
-    });*/
+    /* scroll fixed socials */
 
     $('#aside').hcSticky();
 
@@ -350,6 +337,22 @@ $(document).ready(function () {
  	});
 });
 
+jQuery(function () {
+
+    jQuery(window).scroll(function () {
+        var top = jQuery(document).scrollTop(),
+            h = jQuery("body").css("height");
+        if (top < 649) {
+            jQuery(".social-wrap").addClass('move');
+            jQuery(".social-wrap").hcSticky();
+        } else {
+            jQuery(".social-wrap").hcSticky();
+        }
+    });
+
+    
+});
+
 (function($) {
     $(function() {
 
@@ -361,6 +364,30 @@ $(document).ready(function () {
                 });
             });
         });
-
     })
+
+    $(".consultation-slider").owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        smartSpeed: 500,
+        navText: ['<img src="img/icons/arrow-left.png" >', '<img src="img/icons/arrow-right.png" >'],
+        responsiveClass:true,
+        pagination: true,
+        items: 4,
+        responsive: {
+            0: {
+                items: 2
+            },
+            768: {
+                items: 3,
+                margin: 28
+            },
+            980: {
+                items: 4,
+                margin: 12
+            }
+        }
+    });
+      
 })(jQuery)

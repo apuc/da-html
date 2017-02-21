@@ -3,7 +3,7 @@
   float: left;
   position: relative;
   margin-bottom: 40px;
-
+ 
   .show-more{
     font-size: 12px;
     font-weight: 700;
@@ -26,7 +26,6 @@
   float: left;
   position: relative;
   flex-flow: row wrap;
-  // padding: 20px;
   box-sizing: border-box;
 }
 
@@ -68,11 +67,12 @@
       position: absolute;
       width: 100%;
       left: 0;
-      bottom: 0;
+      bottom: -147px;
       padding: 10px 15px;
       box-sizing: border-box;
       background-color: rgba(255, 255, 255, 0.75);
-      display: none;
+      transition: all 0.7s ease;
+
       .type, .name-item, .time{
         color: #090e10;
         font-size: 16px;
@@ -95,7 +95,8 @@
     }
   }
   .item:hover .item-content{
-    display: block;
+    bottom: 0;
+    transition: all 0.7s ease;
   }
   .interested__item{
     width: 46%;
