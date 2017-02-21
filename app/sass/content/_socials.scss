@@ -1,0 +1,43 @@
+.social-wrap{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -36px;
+  top: 115px;
+
+  a{
+    display: block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 43px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+
+    img{
+      max-width: 20px;
+    }
+  }
+
+  .vk{
+    background-color: #527498;
+  }
+  .fb{
+    background-color: #365aa4;
+  }
+  .ok{
+    background-color: #ff8304;
+  }
+  .insta{
+    background-color: #517fa4;
+  }
+  .google{
+    background-color: #d6492f;
+  }
+  .twitter{
+    background-color: #1ab2e8;
+  }
+}
+.social-wrap.move{
+  margin-top: 116px;
+}

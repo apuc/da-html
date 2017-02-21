@@ -296,20 +296,20 @@ $(document).ready(function () {
     });
 
 
-    /* scroll fixed side-bar */
+    /* scroll fixed socials */
 
-    /*jQuery(function () {
+    jQuery(function () {
         jQuery(window).scroll(function () {
             var top = jQuery(document).scrollTop(),
                 h = jQuery("body").css("height");
-            if (top < 1193) {
-                jQuery(".scroll").removeClass("move");
-
+            if (top < 649) {
+                jQuery(".social-wrap").addClass('move');
+                jQuery(".social-wrap").hcSticky();
             } else {
-                jQuery(".scroll").addClass("move");
+                jQuery(".social-wrap").hcSticky();
             }
         });
-    });*/
+    });
 
     $('#aside').hcSticky();
 });
