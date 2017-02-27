@@ -393,5 +393,38 @@ jQuery(function () {
             }
         }
     });
+    /*$(".accordion-menu ul li").click(function (event) {
+        event.preventDefault();
+        if($(this).hasClass('active')){
+            $(this).removeClass("active");
+        }else{
+            $(this).addClass("active");
+        }
+    });
+    /*$(".accordion-menu ul li.active").click(function (event) {
+        event.preventDefault();
+        $(this).removeClass("active");
+    });*/
+
+        $(".accordion-menu ul li").on("click", function(event){
+            event.preventDefault();
+            if($(this).hasClass('active')){
+                $(this).removeClass("active");
+            }else{
+                $(".accordion-menu ul li").removeClass("active");
+                $(this).addClass("active");
+            }
+        });
+
+    $(".accordion-menu ul li ul li").on("click", function(event){
+        event.preventDefault();
+        if($(this).hasClass('active-children')){
+            $(this).removeClass("active-children");
+        }else{
+            $(".accordion-menu ul li ul li").removeClass("active-children");
+            $(this).addClass("active-children");
+        }
+    });
+
 
 })(jQuery)

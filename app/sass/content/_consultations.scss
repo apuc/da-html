@@ -1,0 +1,80 @@
+#main-consultations{
+  #aside-consultations{
+    float: left;
+    width: 340px;
+
+    ul{
+      padding-left: 0;
+
+      li{
+        list-style: none;
+        position: relative;
+        max-height: 20px;
+        @include transition(max-height .7s);
+        overflow: hidden;
+        padding-left: 33px;
+        padding-top: 5px;
+
+        &:after{
+          width: 0;
+          background: #ee2e24 none repeat scroll 0 0;
+          bottom: 0;
+          content: "";
+          left: 0;
+          position: absolute;
+          right: 0;
+          transition: all .5s ease 0s;
+          height: 33px;
+          top: 0;
+        }
+
+        a{
+          font-family: Roboto-Bold;
+          font-size: 17px;
+          color: #040000;
+        }
+
+        /* 2 ;v; */
+        ul{
+          padding-left: 0;
+
+          li{
+            padding-left: 15px;
+            &:after{
+              display: none;
+            }
+            a{
+              font-family: Roboto-Medium;
+            }
+
+            /* 3 lvl */
+            ul{
+
+              li{
+                padding-left: 12px;
+                &:after{
+                  display: none;
+                }
+                a{
+                  font-family: Roboto-Light;
+                }
+              }
+            }
+          }
+          li.active-children{
+            max-height: 1000px;
+            @include transition(max-height .5s);
+          }
+        }
+      }
+      li.active{
+        max-height: 1000px;
+        @include transition(max-height .7s);
+
+        &:after{
+          width: 5px;
+        }
+      }
+    }
+  }
+}

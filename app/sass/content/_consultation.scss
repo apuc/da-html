@@ -60,7 +60,7 @@
 
           &:hover{
             .description{
-              max-height: 65px;
+              max-height: 85px;
               transition: max-height .7s;
               padding-bottom: 18px;
             }
@@ -71,7 +71,7 @@
         }
         li.active{
           .description{
-            max-height: 65px;
+            max-height: 85px;
           }
           &:after{
             width: 5px;
