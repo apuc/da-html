@@ -260,7 +260,7 @@ $(document).ready(function () {
 
   /* open tabs*/
     $('.page__tabs_target').click(function(event) {
-    $('.page__tabs_target').removeClass('page__tabs_active');
+    $('.page__tabs_targett').removeClass('page__tabs_active');
           $(this).addClass('page__tabs_active');
           event.preventDefault();
           var target = ($(this).data('tab'));
@@ -325,16 +325,20 @@ $(document).ready(function () {
     $('#aside').hcSticky();
 
 
-
+    /*consultants tabs*/
     jQuery(".page__tabs_target").click(function (e) {
- 			jQuery(".page__tabs_targett").removeClass("page__tabs_active");
+ 			jQuery(".page__tabs_target").removeClass("page__tabs_active");
  			 jQuery(this).addClass("page__tabs_active");
- 			 jQuery('.page__tabcontent').removeClass('current');
+ 			 jQuery('.consultants__aside_item').removeClass('current');
+ 			 jQuery('.consultants__main_item').removeClass('current');
  				e.preventDefault();
  			var t = jQuery(this).attr('data-tab');
- 			jQuery(".page__tabcontent").fadeOut(500), jQuery("#" + t).addClass('current').fadeIn(500);
+ 			var t1 = jQuery(this).attr('data-tab-main');
+ 			jQuery(".consultants__aside_item").fadeOut(500), jQuery("#" + t).addClass('current').fadeIn(500);
+ 			jQuery(".consultants__main_item").fadeOut(500), jQuery("#" + t1).addClass('current').fadeIn(500);
 
  	});
+    /*consultants tabs*/
 });
 
 jQuery(function () {
@@ -342,15 +346,15 @@ jQuery(function () {
     jQuery(window).scroll(function () {
         var top = jQuery(document).scrollTop(),
             h = jQuery("body").css("height");
-        if (top < 649) {
-            jQuery(".social-wrap").addClass('move');
-            jQuery(".social-wrap").hcSticky();
-        } else {
-            jQuery(".social-wrap").hcSticky();
-        }
+        // if (top < 649) {
+        //     jQuery(".social-wrap").addClass('move');
+        //     jQuery(".social-wrap").hcSticky();
+        // } else {
+        //     jQuery(".social-wrap").hcSticky();
+        // }
     });
 
-    
+
 });
 
 (function($) {
@@ -389,5 +393,5 @@ jQuery(function () {
             }
         }
     });
-      
+
 })(jQuery)
