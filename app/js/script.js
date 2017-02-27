@@ -346,12 +346,12 @@ jQuery(function () {
     jQuery(window).scroll(function () {
         var top = jQuery(document).scrollTop(),
             h = jQuery("body").css("height");
-        // if (top < 649) {
-        //     jQuery(".social-wrap").addClass('move');
-        //     jQuery(".social-wrap").hcSticky();
-        // } else {
-        //     jQuery(".social-wrap").hcSticky();
-        // }
+        if (top < 649) {
+            jQuery(".social-wrapper").addClass('move');
+            jQuery(".social-wrapper").hcSticky();
+         } else {
+            jQuery(".social-wrapper").hcSticky(); 
+        }
     });
 
 
