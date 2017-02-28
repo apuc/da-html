@@ -406,25 +406,32 @@ jQuery(function () {
         $(this).removeClass("active");
     });*/
 
-        $(".accordion-menu ul li").on("click", function(event){
+        /*$(".accordion-menu ul li").on("click", function(event){
             event.preventDefault();
             if($(this).hasClass('active')){
                 $(this).removeClass("active");
             }else{
-                $(".accordion-menu ul li").removeClass("active");
                 $(this).addClass("active");
             }
-        });
+        });*/
 
-    $(".accordion-menu ul li ul li").on("click", function(event){
+    $(".accordion-menu ul li a").on("click", function(event){
         event.preventDefault();
-        if($(this).hasClass('active-children')){
-            $(this).removeClass("active-children");
-        }else{
-            $(".accordion-menu ul li ul li").removeClass("active-children");
-            $(this).addClass("active-children");
-        }
+        $(this).next("ul").toggleClass("up-child");
     });
+
+
+
+    /*$(".accordion-menu ul li ul li").on("click", function(event){
+        event.preventDefault();
+        if($(this).hasClass('active')){
+            $(this).removeClass("active");
+        }else{
+            $(".accordion-menu ul li ul li").removeClass("active");
+            $(this).addClass("active");
+        }
+    });*/
+
 
 
 })(jQuery)

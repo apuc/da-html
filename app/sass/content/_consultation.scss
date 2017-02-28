@@ -60,7 +60,8 @@
 
           &:hover{
             .description{
-              max-height: 85px;
+              max-height: 70px;
+              overflow: hidden;
               transition: max-height .7s;
               padding-bottom: 18px;
             }
@@ -71,7 +72,8 @@
         }
         li.active{
           .description{
-            max-height: 85px;
+            max-height: 70px;
+            overflow: hidden;
           }
           &:after{
             width: 5px;
@@ -214,6 +216,10 @@
           text-decoration: underline;
           color: #ee2e24;
           font-size: 15px;
+
+          &:hover{
+            text-decoration: none;
+          }
         }
         .view{
           font-size: 15px;
