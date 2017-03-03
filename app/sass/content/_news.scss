@@ -31,6 +31,22 @@
   .home-content__wrap_subscribe{
     width: 48%;
     margin-top: 11px;
+    .subscribe__wrap{
+      h3{
+        padding-bottom: 5px;
+      }
+      form{
+        margin-top: 5px;
+      }
+    }
+    .social-wrap{
+      .social-wrap__item{
+        margin-top: 5px;
+      }
+      h4{
+        padding: 11px 0;
+      }
+    }
   }
 }
 
@@ -163,15 +179,19 @@
   position: relative;
   text-align: center;
   margin-top: 30px;
-  a{
+  a, .archive-news{
     color: #090000;
     font-size: 12px;
     font-weight: 700;
     text-decoration: underline;
     text-transform: uppercase;
     margin: 0 20px;
+    .datepicker-inline {
+      margin-top: 23px;
+      left: 55%;
+    }
   }
-  .show-more, .archive-news{
+  .show-more, {
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -183,10 +203,7 @@
     border-radius: 5px;
     display: inline-block;
     text-decoration: none;
-    .datepicker-inline {
-      margin-top: 23px;
-      left: 55%;
-    }
+
   }
 }
 
