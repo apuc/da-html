@@ -1304,6 +1304,7 @@
     box-sizing: border-box;
     background-color: #fff;
     border: 1px solid rgba(185, 196, 213, 0.48);
+    display: none;
     .show-more{
       float: right;
       display: inline-block;
@@ -1377,12 +1378,12 @@
     }
   }
 
-  .one{
+   .page__tabcontent_active{
     display: block;
   }
-  .two, .three, .four{
-    display: none;
-  }
+  // .two, .three, .four{
+  //   display: none;
+  // }
 }
 
 
