@@ -1220,7 +1220,9 @@
     // padding-left: 15px;
     box-sizing: border-box;
     line-height: 24px;
-    padding-bottom: 18px;
+    // padding-bottom: 18px;
+    height: 90px;
+    overflow: hidden;
     margin: 0;
 
   }
@@ -1229,6 +1231,7 @@
     .thumb{
       margin-left: 15px;
       margin-right: 0;
+      float: right;
     }
     .category{
       right: 0;
