@@ -14,6 +14,13 @@
 
     .thumbnail-wrapper{
       margin-bottom: 16px;
+      width: 100%;
+      height: 500px;
+      float: left;
+      img{
+        size: 100%;
+        object-fit: cover;
+      }
     }
 
     .breadcrumbs{
@@ -86,7 +93,7 @@
           position: relative;
           margin-left: 20px;
         }
-        .like-icon{
+        .like-icon, .like-set-icon{
           background-image: url(../img/info-icons/chat.png);
           background-repeat: no-repeat;
           // padding-left: 32px;
@@ -97,6 +104,9 @@
           height: 16px;
           position: relative;
           top: 6px;
+        }
+        .like-set-icon{
+          background-image: url(../img/info-icons/like-set-icon.png);
         }
         .like-counter{
           font-size: 14px;
