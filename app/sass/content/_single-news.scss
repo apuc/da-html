@@ -7,7 +7,7 @@
   .container{
     position: relative;
   }
-  
+
   #article{
     width: 875px;
     float: left;
@@ -81,12 +81,32 @@
           background-position: 0px 3px;
         }
         .like{
+          // float: left;
+          display: inline-block;
+          position: relative;
+          margin-left: 20px;
+        }
+        .like-icon{
           background-image: url(../img/info-icons/chat.png);
           background-repeat: no-repeat;
-          padding-left: 32px;
+          // padding-left: 32px;
           background-position: 0 0px;
-          background-size: 20px;
-          margin-left: 20px;
+          background-size: contain;
+          float: left;
+          width: 16px;
+          height: 16px;
+          position: relative;
+          top: 6px;
+        }
+        .like-counter{
+          font-size: 14px;
+          position: relative;
+          float: left;
+          position: relative;
+          color: #000;
+          font-weight: 400;
+          top: 4px;
+          margin-left: 10px;
         }
       }
 
@@ -128,7 +148,8 @@
           border: 1px solid #c3e1ff;
           padding:8px 12px 7px;
           border-radius: 3px;
-
+          display: inline-block;
+          margin-bottom: 5px;
           &:hover{
             cursor: pointer;
           }

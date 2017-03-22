@@ -49,6 +49,7 @@
       position: absolute;
       width: 100%;
       left: 0;
+      height: 196px;
       bottom: 0;
       padding: 10px 5px;
       box-sizing: border-box;
@@ -61,13 +62,12 @@
         width: 100%;
         text-align: left;
         float: left;
-        float: left;
         margin: 5px 0;
       }
       .name-item{
         font-size: 14px;
         font-weight: 700;
-        line-height: 10px;
+        // line-height: 10px;
       }
       .time{
         font-size: 14px;

@@ -201,7 +201,7 @@
   }
 }
 
-.enterprises__wrap{
+.enterprises__wrap, {
   width: 100%;
   float: left;
   padding: 5px;
@@ -223,22 +223,22 @@
         object-fit: cover;
       }
     }
-    .content{
+    .content, .content-hover{
       width: 100%;
       float: left;
       position: relative;
-      height: 100px;
+      height: 75px;
       background-color: #f4f4f4;
       padding: 8px;
       box-sizing: border-box;
-      &:hover{
-        background-color: #292929;
-        h4,p{color: #fff;}
-        -webkit-transition-duration: 0.9s;
-        -moz-transition-duration: 0.9s;
-        -o-transition-duration:0.9s;
-        transition-duration: 0.9s;
-      }
+      // &:hover{
+      //   background-color: #292929;
+      //   h4,p{color: #fff;}
+      //   -webkit-transition-duration: 0.9s;
+      //   -moz-transition-duration: 0.9s;
+      //   -o-transition-duration:0.9s;
+      //   transition-duration: 0.9s;
+      // }
       h4{
         color: #292929;
         font-size: 15px;
@@ -253,14 +253,31 @@
         color: #292929;
         width: 100%;
         float: left;
-        position: absolute;
-        bottom: 0;
+        // position: absolute;
+        // bottom: 0;
         display: inline-block;
         margin: 2px 0;
         font-size: 12px;
         font-weight: 400;
         line-height: 20px;
       }
+    }
+    .content-hover{
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background-color: rgba(12, 36, 46, 0.77);
+      height: 195px;
+      padding: 8px;
+      box-sizing: border-box;
+      p, h4{
+        color: #fff;
+      }
+    }
+    &:hover .content-hover{
+      display: block;
     }
   }
 
@@ -773,26 +790,35 @@
   padding: 15px 0 ;
   float: left;
   display: inline-block;
+  border-bottom: 1px solid #edeef0;
   h4{
-    color: #ee2e24;
+    color: #090000;
     font-size: 14px;
     font-weight: 700;
     font-variant: small-caps;
     display: inline-block;
     float: left;
-    text-align: center;
+    text-align: left;
     width: 100%;
     margin: 0;
   }
   .time{
-    color: #090000;
-    text-align: center;
+    color: #ee2e24;
+    text-align: left;
     display: inline-block;
     float: left;
     font-size: 14px;
     font-weight: 600;
     font-variant: small-caps;
-    width: 100%;
+    width: 70%;
+  }
+  .open-soc{
+    float: right;
+    i.fa.fa-random.fa-lg {
+        font-size: 13px;
+        vertical-align: 1px;
+        color: #090000;
+    }
   }
   p{
     display: inline-block;
@@ -843,7 +869,7 @@
     box-sizing: border-box;
     margin: 0;
     position: relative;
-    top: -73px;
+    top: -69px;
     height: 68px;
     left: 0;
     bottom: 0;

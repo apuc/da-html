@@ -60,20 +60,20 @@
   }
 }
 
-.content {
-  width: 100%;
-  float: left;
-  position: relative;
-  height: 100px;
-  background-color: #f4f4f4;
-  padding: 8px;
-  @include border-box;
-  @include transition(0.9s);
-  &:hover {
-    color: white;
-    background-color: #292929;
-  }
-}
+// .content {
+//   width: 100%;
+//   float: left;
+//   position: relative;
+//   height: 100px;
+//   background-color: #f4f4f4;
+//   padding: 8px;
+//   @include border-box;
+//   @include transition(0.9s);
+//   &:hover {
+//     color: white;
+//     background-color: #292929;
+//   }
+// }
 
 #overlay {
   z-index: 3;
