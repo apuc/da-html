@@ -44,15 +44,19 @@
           text-decoration: none;
         }
       }
-    }
-    .afisha-events__wrap{
-      justify-content: space-between;
-      margin-bottom: 50px;
+      .afisha-events__wrap{
+        display: block;
+        float: left;
+        width: 100%;
+        margin-bottom: 50px;
 
-      .item{
-        margin: 0;
+        .item{
+          margin: 15px;
+          float: left;
+        }
       }
     }
+
   }
   .age{
     font-size: 20px;
