@@ -61,6 +61,27 @@ $(document).ready(function () {
         });
     }
     /*hamburger*/
+    /*hamburger-news*/
+
+	$(".toggle_mnu__rubrick").click(function() {
+		$(".sandwich").toggleClass("active");
+	});
+
+  $(".dotsCont").click(function () {
+      $(".dotsCont").fadeOut(600);
+      $(".sandwich").toggleClass("active").append("<span>");
+  });
+
+  $(".toggle_mnu__rubrick").click(function () {
+      if ($(".dotsCont").is(":visible")) {
+          $(".dotsCont").fadeOut(600);
+          $(".dotsCont").removeClass("fadeInUp animated");
+      } else {
+          $(".dotsCont").fadeIn(600);
+          $(".dotsCont").addClass("fadeInUp animated");
+      }
+  });
+    /*hamburger-news*/
 
     $(".home-content__wrap_slider").owlCarousel({
         loop: true,
@@ -102,17 +123,20 @@ $(document).ready(function () {
         margin: 30,
         nav: true,
         navText: true,
+
         navigation: true,
         /*navigationText: true,*/
         pagination: true,
         items: 1,
         dots: true,
+        dotdata: true,
+        dotsContainer: '.dotsCont',
         singleItem: false,
         mouseDrag: false,
         touchDrag: false,
         responsiveClass: true,
-
     });
+
     $(".afisha-top-slider__wrap").owlCarousel({
         loop: true,
         margin: 15,
