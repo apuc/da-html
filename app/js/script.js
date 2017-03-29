@@ -62,25 +62,19 @@ $(document).ready(function () {
     }
     /*hamburger*/
     /*hamburger-news*/
-
-	$(".toggle_mnu__rubrick").click(function() {
-		$(".sandwich").toggleClass("active");
-	});
-
-  $(".dotsCont").click(function () {
-      $(".dotsCont").fadeOut(600);
-      $(".sandwich").toggleClass("active").append("<span>");
-  });
-
-  $(".toggle_mnu__rubrick").click(function () {
-      if ($(".dotsCont").is(":visible")) {
-          $(".dotsCont").fadeOut(600);
-          $(".dotsCont").removeClass("fadeInUp animated");
-      } else {
-          $(".dotsCont").fadeIn(600);
-          $(".dotsCont").addClass("fadeInUp animated");
-      }
-  });
+    $(".toggle_mnu__rubrick").click(function() {
+      if ($("#dotscustom").is(":visible")) {
+              $("#dotscustom").fadeOut(600);
+              $("#dotscustom").attr('style','display: none !important')
+          }
+           else {
+              $("#dotscustom").fadeIn(600);
+              $("#dotscustom").attr('style','display: block !important');
+          }
+    });
+  	$(".toggle_mnu__rubrick").click(function() {
+  		$(".sandwich").toggleClass("active");
+  	});
     /*hamburger-news*/
 
     $(".home-content__wrap_slider").owlCarousel({
@@ -128,9 +122,9 @@ $(document).ready(function () {
         /*navigationText: true,*/
         pagination: true,
         items: 1,
-        dots: true,
-        dotdata: true,
-        dotsContainer: '.dotsCont',
+        // dots: true,
+        // dotdata: true,
+        dotsContainer: '#dotscustom',
         singleItem: false,
         mouseDrag: false,
         touchDrag: false,
@@ -457,27 +451,7 @@ jQuery(function () {
             }
         }
     });
-    /*$(".accordion-menu ul li").click(function (event) {
-        event.preventDefault();
-        if($(this).hasClass('active')){
-            $(this).removeClass("active");
-        }else{
-            $(this).addClass("active");
-        }
-    });
-    /*$(".accordion-menu ul li.active").click(function (event) {
-        event.preventDefault();
-        $(this).removeClass("active");
-    });*/
 
-        /*$(".accordion-menu ul li").on("click", function(event){
-            event.preventDefault();
-            if($(this).hasClass('active')){
-                $(this).removeClass("active");
-            }else{
-                $(this).addClass("active");
-            }
-        });*/
 
     $(".accordion-menu ul li a").on("click", function(event){
         event.preventDefault();
@@ -486,15 +460,7 @@ jQuery(function () {
 
 
 
-    /*$(".accordion-menu ul li ul li").on("click", function(event){
-        event.preventDefault();
-        if($(this).hasClass('active')){
-            $(this).removeClass("active");
-        }else{
-            $(".accordion-menu ul li ul li").removeClass("active");
-            $(this).addClass("active");
-        }
-    });*/
+
 
 
 
