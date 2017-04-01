@@ -54,7 +54,23 @@
   #aside-consultations{
     float: left;
     width: 340px;
-
+    .single-consulting-menu{
+      ul{
+        li{
+          a{
+            font-family: "Roboto-Light";
+          }
+        }
+        li.active{
+          a{
+            font-family: "Roboto-Bold";
+          }
+        }
+        li.active:after{
+          display: none;
+        }
+      }
+    }
     ul{
       padding-left: 0;
 
@@ -156,6 +172,12 @@
 
         &:last-child{
           border: none;
+        }
+        p{
+          font-weight: 400;
+          font-size: 15px;
+          text-align: left;
+          color: #000;
         }
       }
       .title{
