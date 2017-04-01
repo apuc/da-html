@@ -433,7 +433,7 @@ jQuery(function () {
         nav: true,
         autoplay: true,
         smartSpeed: 500,
-        navText: ['<img src="img/icons/arrow-left.png" >', '<img src="img/icons/arrow-right.png" >'],
+        navText: ['<img src="/theme/portal-donbassa/img/icons/arrow-left.png" >', '<img src="/theme/portal-donbassa/img/icons/arrow-right.png" >'],
         responsiveClass:true,
         pagination: true,
         items: 4,
