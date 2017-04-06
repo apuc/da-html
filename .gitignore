@@ -49,6 +49,7 @@ Temporary Items
 .idea
 /node_modules
 gulpfile.js
+script.min.js
 node_modules
 package.json
 styles.min.css
