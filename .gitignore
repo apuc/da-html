@@ -51,4 +51,4 @@ Temporary Items
 gulpfile.js
 node_modules
 package.json
-css/styles.min.css.map
+styles.min.css
