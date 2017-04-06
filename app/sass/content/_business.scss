@@ -17,11 +17,17 @@
     float: left;
     width: 856px;
     margin-right: 34px;
+    @include breakpoint(max-width 600px){
+      width: 100%;
+    }
     .show-more{
       float: right;
       margin-right: 176px;
       margin-top: 57px;
       margin-bottom: 58px;
+      @include breakpoint(max-width 600px){
+        margin-right: 50px;
+      }
     }
   }
   &__title{
@@ -47,6 +53,10 @@
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
+    @include breakpoint(max-width 600px){
+      width: 100%;
+      margin-right: 0;
+    }
     &--img{
       display: block;
       position: relative;
@@ -152,6 +162,9 @@
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
+      @include breakpoint(max-width 600px){
+        margin-left: 5px;
+      }
     }
   }
   &__big-item{
@@ -165,6 +178,10 @@
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
+    @include breakpoint(max-width 600px){
+      width: 100%;
+      margin-right: 0;
+    }
     .business__sm-item--title {
       height: calc(12px * 1.4 * 1);
       margin-bottom: 3px;
@@ -216,6 +233,9 @@
     width: calc(100% - (856px + 34px));
     background-color: white;
     border-radius: 1px;
+    @include breakpoint(max-width 600px){
+      width: 100%;
+    }
     &--add{
       display: block;
       position: relative;
@@ -241,6 +261,9 @@
         height: 0;
         border-top: 20px solid #da763c;
         border-right: 35px solid transparent;
+        @include breakpoint(max-width 600px){
+          display: none;
+        }
       }
     }
     &--items{
