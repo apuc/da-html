@@ -230,7 +230,7 @@
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - (856px + 34px));
+    width: 260px;
     background-color: white;
     border-radius: 1px;
     @include breakpoint(max-width 600px){
@@ -353,5 +353,10 @@
         }
       }
     }
+  }
+  &__sidebar.fixed{
+    position: fixed;
+    top: 0;
+    margin-left: calc(856px + 34px);
   }
 }

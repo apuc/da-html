@@ -435,26 +435,33 @@ $(document).ready(function () {
     });
 
     /*business sidebar script*/
-    var a = $(".cat_menu");
-    a.length && new CisSidebarMenuObject(a);
+    /*var a = $(".cat_menu");
+     a.length && new CisSidebarMenuObject(a);*/
     /*close business sidebar script*/
-});
 
-jQuery(function () {
-
-    jQuery(window).scroll(function () {
-        var top = jQuery(document).scrollTop(),
-            h = jQuery("body").css("height");
-        if (top < 649) {
-            jQuery(".social-wrapper").addClass('move');
-            jQuery(".social-wrapper").hcSticky();
-        } else {
-            jQuery(".social-wrapper").hcSticky();
-        }
-    });
-
+    /*business sidebar scroll*/
+    var element = $('#business-sidebar');
+    if (element.length > 0) {
+        var elementPosition = element.offset().top;
+        $(window).scroll(function () {
+            fixedScroll(element, elementPosition, $('.what-say'));
+        });
+    }
+    /*close business sidebar scroll*/
 
 });
+
+$(window).scroll(function () {
+    var top = $(document).scrollTop(),
+        h = $('body').css('height');
+    if (top < 649) {
+        $('.social-wrapper').addClass('move');
+        $('.social-wrapper').hcSticky();
+    } else {
+        $(".social-wrapper").hcSticky();
+    }
+});
+
 
 function CisSidebarMenuObject(a) {
     $(".subcat_menu:visible").find(".back, .arr-back").bind("click", function (c) {
@@ -493,51 +500,66 @@ function CisSidebarMenuObject(a) {
     })
 }
 $(document).ready(function () {
-    
+
 });
 
 /*(function ($) {
-    $(function () {
+ $(function () {
 
-        $('ul.tabs__caption').each(function () {
-            $(this).find('li').each(function (i) {
-                $(this).click(function () {
-                    $(this).addClass('active').siblings().removeClass('active')
-                        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(i).addClass('active');
-                });
-            });
-        });
-    })
+ $('ul.tabs__caption').each(function () {
+ $(this).find('li').each(function (i) {
+ $(this).click(function () {
+ $(this).addClass('active').siblings().removeClass('active')
+ .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(i).addClass('active');
+ });
+ });
+ });
+ })
 
-    $(".consultation-slider").owlCarousel({
-        loop: true,
-        nav: true,
-        autoplay: true,
-        smartSpeed: 500,
-        navText: ['<img src="/theme/portal-donbassa/img/icons/arrow-left.png" >', '<img src="/theme/portal-donbassa/img/icons/arrow-right.png" >'],
-        responsiveClass: true,
-        pagination: true,
-        items: 4,
-        responsive: {
-            0: {
-                items: 2
-            },
-            768: {
-                items: 3,
-                margin: 28
-            },
-            980: {
-                items: 4,
-                margin: 12
-            }
-        }
-    });
-
-
-    $(".accordion-menu ul li a").on("click", function (event) {
-        event.preventDefault();
-        $(this).next("ul").toggleClass("up-child");
-    });
+ $(".consultation-slider").owlCarousel({
+ loop: true,
+ nav: true,
+ autoplay: true,
+ smartSpeed: 500,
+ navText: ['<img src="/theme/portal-donbassa/img/icons/arrow-left.png" >', '<img src="/theme/portal-donbassa/img/icons/arrow-right.png" >'],
+ responsiveClass: true,
+ pagination: true,
+ items: 4,
+ responsive: {
+ 0: {
+ items: 2
+ },
+ 768: {
+ items: 3,
+ margin: 28
+ },
+ 980: {
+ items: 4,
+ margin: 12
+ }
+ }
+ });
 
 
-})(jQuery)*/
+ $(".accordion-menu ul li a").on("click", function (event) {
+ event.preventDefault();
+ $(this).next("ul").toggleClass("up-child");
+ });
+
+
+ })(jQuery)*/
+
+function fixedScroll(element, elementPosition, blockElement) {//функция фиксированногоблока, с селекторами элемента, его позиционирования и преграждающего блока
+    var top = $(document).scrollTop(),
+        blockingElement = blockElement.offset().top,
+        height = element.outerHeight();//высота элемента, включающая внутренние и внешние отступы
+    if (top > elementPosition && top < blockingElement - height) {
+        element.addClass('fixed').removeAttr("style");
+    }
+    else if (top > blockingElement - height) {
+        element.removeClass('fixed').css({'position': 'absolute', 'bottom': '50px', 'right': '0'});
+    }
+    else {
+        element.removeClass('fixed');
+    }
+}
