@@ -437,7 +437,6 @@ $(document).ready(function () {
     /*business sidebar script*/
     $('.business__sidebar--items ul li a').on('click', function () {
         event.preventDefault();
-        console.log( $(this) );
         if($(this)[0].hasAttribute('data-id')){
             var dataId = $(this).attr('data-id'),
                 mainBlock = $('#business-sidebar-main'),
@@ -485,46 +484,6 @@ $(window).scroll(function () {
         $(".social-wrapper").hcSticky();
     }
 });
-
-
-function CisSidebarMenuObject(a) {
-    $(".subcat_menu:visible").find(".back, .arr-back").bind("click", function (c) {
-        c.preventDefault();
-        d($(this))
-    });
-    var d = function (c) {
-        c.unbind("click");
-        var a = c.closest(".subcat_menu"),
-            b = a.closest(".cat_menu");
-        b.css({height: b.data("height"), overflow: "hidden"});
-        a.animate({width: "toggle"}, 250, function () {
-            a.prevAll(".cat_menu").first().animate({width: "toggle"}, 250, function () {
-                b.css({height: "auto", overflow: "auto"})
-            })
-        })
-    };
-    a.data("height", $(".cat_menu").height());
-    a.find("a").not(".noslide").click(function (a) {
-        a.preventDefault();
-        var e = $(this).data("id"),
-            b = $(this).closest(".cat_menu");
-        b.css({height: b.height(), overflow: "hidden"});
-        b.animate({width: "toggle"}, 250, function () {
-            var a = $(this).nextAll(".subcat_menu[data-pid=" + e + "]").first();
-            a.animate({width: "toggle"}, 250, function () {
-                b.css({height: "auto", overflow: "auto"})
-            });
-            a.find(".back, .arr-back").bind("click", function (a) {
-                a.preventDefault();
-                d($(this))
-            })
-        })
-    });
-    $("li.lihref").click(function (a) {
-        a.preventDefault();
-        window.location = $(this).data("href")
-    })
-}
 
 function fixedScroll(element, elementPosition, blockElement) {//функция фиксированногоблока, с селекторами элемента, его позиционирования и преграждающего блока
     var top = $(document).scrollTop(),

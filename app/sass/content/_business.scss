@@ -43,6 +43,20 @@
     font-weight: 600;
     line-height: 23px;
   }
+  &__subtitle{
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 25px 30px;
+    @include box-sizing(border-box);
+    background-color: #fff;
+    color: #060000;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 23px;
+  }
   &__sm-item{
     display: block;
     position: relative;
@@ -377,7 +391,7 @@
       float: right;
       width: 15px;
       height: 15px;
-      background-image: url('../img/icons/close.png');
+      background-image: url('../img/icons/red-close-icon.png');
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
