@@ -19,6 +19,7 @@
     margin-right: 34px;
     @include breakpoint(max-width 600px){
       width: 100%;
+      margin-right: 0;
     }
     .show-more{
       float: right;
@@ -271,6 +272,7 @@
       position: relative;
       float: left;
       width: 100%;
+      height: auto;
       margin-top: 10px;
       ul{
         display: block;
@@ -352,6 +354,33 @@
           }
         }
       }
+    }
+    &--hover-title{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      background-color: #fff;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      padding-left: 11px;
+      padding-right: 11px;
+      @include box-sizing(border-box);
+      text-transform: uppercase;
+      color: black;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    &--hover-trigger{
+      display: block;
+      position: relative;
+      float: right;
+      width: 15px;
+      height: 15px;
+      background-image: url('../img/icons/close.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
     }
   }
   &__sidebar.fixed{

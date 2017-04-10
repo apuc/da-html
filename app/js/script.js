@@ -331,7 +331,7 @@ $(document).ready(function () {
         e.preventDefault();
         $(".komunalka__item").removeClass('komunalka__line_active');
         $(this).addClass('komunalka__line_active');
-    })
+    });
 
     /* komunalka */
     // input
@@ -429,14 +429,38 @@ $(document).ready(function () {
     });
 
 
-    $(".accordion-menu ul li a").on("click", function (event) {
+    $('.accordion-menu ul li a').on('click', function (event) {
         event.preventDefault();
         $(this).next("ul").toggleClass("up-child");
     });
 
     /*business sidebar script*/
-    /*var a = $(".cat_menu");
-     a.length && new CisSidebarMenuObject(a);*/
+    $('.business__sidebar--items ul li a').on('click', function () {
+        event.preventDefault();
+        console.log( $(this) );
+        if($(this)[0].hasAttribute('data-id')){
+            var dataId = $(this).attr('data-id'),
+                mainBlock = $('#business-sidebar-main'),
+                hoverBlock = $('#business-sidebar-hover-' + dataId);
+           if(hoverBlock.length > 0){
+               mainBlock.animate({width: "toggle"}, 400, function () {
+                   mainBlock.next(hoverBlock).animate({width: "toggle"}, 400, function () {
+                       hoverBlock.css({height: "auto"});
+                   });
+               });
+           }           
+        }        
+    });
+    $('.business__sidebar--hover-trigger').on('click', function () {
+        event.preventDefault();
+        var mainBlock = $('#business-sidebar-main'),
+            hoverBlock = $(this).closest('.business__sidebar--hover-items');
+        hoverBlock.animate({width: "toggle"}, 400, function () {
+            hoverBlock.prev(hoverBlock).animate({width: "toggle"}, 400, function () {
+                mainBlock.css({height: "auto"});
+            });
+        });
+    });
     /*close business sidebar script*/
 
     /*business sidebar scroll*/
@@ -470,7 +494,8 @@ function CisSidebarMenuObject(a) {
     });
     var d = function (c) {
         c.unbind("click");
-        var a = c.closest(".subcat_menu"), b = a.closest(".cat_menu");
+        var a = c.closest(".subcat_menu"),
+            b = a.closest(".cat_menu");
         b.css({height: b.data("height"), overflow: "hidden"});
         a.animate({width: "toggle"}, 250, function () {
             a.prevAll(".cat_menu").first().animate({width: "toggle"}, 250, function () {
@@ -481,7 +506,8 @@ function CisSidebarMenuObject(a) {
     a.data("height", $(".cat_menu").height());
     a.find("a").not(".noslide").click(function (a) {
         a.preventDefault();
-        var e = $(this).data("id"), b = $(this).closest(".cat_menu");
+        var e = $(this).data("id"),
+            b = $(this).closest(".cat_menu");
         b.css({height: b.height(), overflow: "hidden"});
         b.animate({width: "toggle"}, 250, function () {
             var a = $(this).nextAll(".subcat_menu[data-pid=" + e + "]").first();
@@ -499,67 +525,20 @@ function CisSidebarMenuObject(a) {
         window.location = $(this).data("href")
     })
 }
-$(document).ready(function () {
-
-});
-
-/*(function ($) {
- $(function () {
-
- $('ul.tabs__caption').each(function () {
- $(this).find('li').each(function (i) {
- $(this).click(function () {
- $(this).addClass('active').siblings().removeClass('active')
- .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(i).addClass('active');
- });
- });
- });
- })
-
- $(".consultation-slider").owlCarousel({
- loop: true,
- nav: true,
- autoplay: true,
- smartSpeed: 500,
- navText: ['<img src="/theme/portal-donbassa/img/icons/arrow-left.png" >', '<img src="/theme/portal-donbassa/img/icons/arrow-right.png" >'],
- responsiveClass: true,
- pagination: true,
- items: 4,
- responsive: {
- 0: {
- items: 2
- },
- 768: {
- items: 3,
- margin: 28
- },
- 980: {
- items: 4,
- margin: 12
- }
- }
- });
-
-
- $(".accordion-menu ul li a").on("click", function (event) {
- event.preventDefault();
- $(this).next("ul").toggleClass("up-child");
- });
-
-
- })(jQuery)*/
 
 function fixedScroll(element, elementPosition, blockElement) {//функция фиксированногоблока, с селекторами элемента, его позиционирования и преграждающего блока
     var top = $(document).scrollTop(),
         blockingElement = blockElement.offset().top,
         height = element.outerHeight();//высота элемента, включающая внутренние и внешние отступы
-    if (top > elementPosition && top < blockingElement - height) {
-        element.addClass('fixed').removeAttr("style");
-    }
-    else if (top > blockingElement - height) {
-        element.removeClass('fixed').css({'position': 'absolute', 'bottom': '50px', 'right': '0'});
-    }
-    else {
-        element.removeClass('fixed');
-    }
+    if(window.innerWidth > 770){
+        if (top > elementPosition && top < blockingElement - height) {
+            element.addClass('fixed').removeAttr("style");
+        }
+        else if (top > blockingElement - height) {
+            element.removeClass('fixed').css({'position': 'absolute', 'bottom': '50px', 'right': '0'});
+        }
+        else {
+            element.removeClass('fixed');
+        } 
+    }    
 }
