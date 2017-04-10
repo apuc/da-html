@@ -227,18 +227,16 @@ $(document).ready(function () {
         owlCarousel4.trigger('prev.owl.carousel', [300]);
         return false;
 
-    })
+    });
 
 
     /*afisha*/
     $('.fancybox').fancybox({
         prevEffect: 'fade',
         nextEffect: 'fade',
-
         closeBtn: true,
         arrows: true,
         nextClick: true,
-
         helpers: {
             thumbs: {
                 width: 40,
@@ -248,6 +246,7 @@ $(document).ready(function () {
         }
     });
     /*afisha*/
+    
     // hover stoke
     $(".mouse-area").mouseover(function () {
 
@@ -339,7 +338,7 @@ $(document).ready(function () {
         e.preventDefault();
         $(".search-input").removeClass('search_input_acive');
         $(this).addClass('search_input_acive', {duration: 1000});
-    })
+    });
     // input
 
     $('.open-soc').click(function (event) {
@@ -471,6 +470,17 @@ $(document).ready(function () {
         });
     }
     /*close business sidebar scroll*/
+
+    /*single business sidebar scroll*/
+    var element = $('#business-stock-sidebar');
+    if (element.length > 0) {
+        var elementPosition = element.offset().top;
+        $(window).scroll(function () {
+            fixedScroll(element, elementPosition, $('.footer'));
+        });
+    }
+    /*close single business sidebar scroll*/
+
 
 });
 
