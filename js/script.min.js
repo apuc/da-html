@@ -481,6 +481,13 @@ $(document).ready(function () {
     }
     /*close single business sidebar scroll*/
 
+    /*show business reviews*/
+    $(document).on('click', '.business__reviews--item .links__more', function () {
+       event.preventDefault();
+       var revBlock = $(this).closest('.descr').find('')
+
+    });
+    /*close business reviews*/
 
 });
 
