@@ -1026,4 +1026,129 @@
       padding: 0;
     }
   }
+  &__tab-links{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    list-style: none;
+    @include breakpoint(max-width 600px){
+      @include flex-direction(column);
+    }
+    li {
+      /*flex: 1 0 0;*/
+      a {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 5px 12px;
+        @include box-sizing(border-box);
+        border: 1px solid transparent;
+        border-radius: 2px;
+        text-align: center;
+        color: #060000;
+        font-size: 14px;
+        font-weight: 600;
+        &:hover {
+          border: 1px solid rgba(255, 2, 0, 0.32);
+        }
+      }
+      a.active{
+        border: 1px solid rgba(255, 2, 0, 0.32);
+      }
+    }
+  }
+  &__tab-content{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    &--wrapper{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 26px;
+    }
+    #stocks{
+      padding-left: 28px;
+      padding-right: 28px;
+      @include box-sizing(border-box);
+    }
+  }
+  &__offices{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 47px;
+    &--item{
+      display: block;
+      position: relative;
+      float: left;
+      width: 30%;
+      margin-left: 28px;
+      padding: 0 10px;
+      @include box-sizing(border-box);
+      h3{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: left;
+        color: black;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+      }
+      .address{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-bottom: 22px;
+        text-align: left;
+        color: #4f9def;
+        font-size: 14px;
+        font-weight: 400;
+        &:hover{
+          color: black;
+        }
+        &:hover:before{
+          background-color: #45a1ff;
+        }
+        &:before{
+          display: block;
+          position: absolute;
+          content: '';
+          top: 7px;
+          left: -13px;
+          width: 7px;
+          height: 7px;
+          background-color: transparent;
+          border-radius: 50%;
+        }
+      }
+      p{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
 }
