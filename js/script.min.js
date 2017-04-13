@@ -94,22 +94,21 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                nav: true,
+                nav: true
             },
             600: {
                 items: 1,
-                nav: true,
+                nav: true
             },
             1000: {
                 items: 1,
                 nav: true,
-                loop: true,
+                loop: true
             },
             1200: {
                 items: 1,
                 nav: true,
-                loop: true,
-
+                loop: true
             }
         }
     });
@@ -130,7 +129,7 @@ $(document).ready(function () {
         singleItem: false,
         mouseDrag: false,
         touchDrag: false,
-        responsiveClass: true,
+        responsiveClass: true
     });
 
     $(".afisha-top-slider__wrap").owlCarousel({
@@ -148,8 +147,7 @@ $(document).ready(function () {
         singleItem: false,
         mouseDrag: false,
         touchDrag: false,
-        responsiveClass: true,
-
+        responsiveClass: true
     });
 
     var carousel1 = '.js-carousel-1';
@@ -170,7 +168,7 @@ $(document).ready(function () {
         pagination: true,
         items: 1,
         dots: true,
-        singleItem: false,
+        singleItem: false
     });
     var owlCarousel2 = $(carousel2).owlCarousel({
         loop: true,
@@ -184,7 +182,7 @@ $(document).ready(function () {
         pagination: true,
         items: 1,
         dots: true,
-        singleItem: false,
+        singleItem: false
     });
     var owlCarousel3 = $(carousel3).owlCarousel({
         loop: true,
@@ -198,7 +196,7 @@ $(document).ready(function () {
         pagination: true,
         items: 1,
         dots: true,
-        singleItem: false,
+        singleItem: false
     });
     var owlCarousel4 = $(carousel4).owlCarousel({
         loop: true,
@@ -212,7 +210,7 @@ $(document).ready(function () {
         pagination: true,
         items: 1,
         dots: true,
-        singleItem: false,
+        singleItem: false
     });
 
     $('.customNextBtn').click(function () {
@@ -221,7 +219,7 @@ $(document).ready(function () {
         owlCarousel3.trigger('next.owl.carousel');
         owlCarousel4.trigger('next.owl.carousel');
         return false;
-    })
+    });
     $('.customPrevBtn').click(function () {
         owlCarousel1.trigger('prev.owl.carousel', [300]);
         owlCarousel2.trigger('prev.owl.carousel', [300]);
@@ -469,21 +467,21 @@ $(document).ready(function () {
     /*close business sidebar script*/
 
     /*business sidebar scroll*/
-    var element = $('#business-sidebar');
-    if (element.length > 0) {
-        var elementPosition = element.offset().top;
+    var businessElement = $('#business-sidebar');
+    if (businessElement.length > 0) {
+        var businessElementPosition = businessElement.offset().top;
         $(window).scroll(function () {
-            fixedScroll(element, elementPosition, $('.what-say'));
+            fixedScroll(businessElement, businessElementPosition, $('.what-say'));
         });
     }
     /*close business sidebar scroll*/
 
     /*single business sidebar scroll*/
-    var element = $('#business-stock-sidebar');
-    if (element.length > 0) {
-        var elementPosition = element.offset().top;
+    var stockElement = $('#business-stock-sidebar');
+    if (stockElement.length > 0) {
+        var stockElementPosition = stockElement.offset().top;
         $(window).scroll(function () {
-            fixedScroll(element, elementPosition, $('.footer'));
+            fixedScroll(stockElement, stockElementPosition, $('.footer'));
         });
     }
     /*close single business sidebar scroll*/
@@ -499,9 +497,19 @@ $(document).ready(function () {
             revBlock.addClass('full');
             $(this).text('Читать весь отзыв');
         }
-
     });
     /*close business reviews*/
+
+    /*business item businessScroll*/
+    $(document).on('click', '.businessScroll', function (event) {/*функция прокрутки на блок страницы при клике по элементам меню */
+        event.preventDefault();
+        var href = $(this).attr('href');
+        var target = $(href);
+        var top = target.offset().top;
+        $('html,body').animate({scrollTop: top}, 1000);
+        return false;
+    });
+    /*close business item businessScroll*/
 
 });
 
