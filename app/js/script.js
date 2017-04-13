@@ -246,7 +246,7 @@ $(document).ready(function () {
         }
     });
     /*afisha*/
-    
+
     // hover stoke
     $(".mouse-area").mouseover(function () {
 
@@ -430,8 +430,13 @@ $(document).ready(function () {
 
     $('.accordion-menu ul li a').on('click', function (event) {
         event.preventDefault();
-        $(this).next("ul").toggleClass("up-child");
-    });
+if($(this).hasClass('section') || $(this).next("ul").length == 0){
+  location.href = $(this).attr('href');
+  $(this).next("ul").toggleClass("up-child");
+}else {
+    $(this).next("ul").toggleClass("up-child");
+}
+});
 
     /*business sidebar script*/
     $('.business__sidebar--items ul li a').on('click', function () {
@@ -446,8 +451,8 @@ $(document).ready(function () {
                        hoverBlock.css({height: "auto"});
                    });
                });
-           }           
-        }        
+           }
+        }
     });
     $('.business__sidebar--hover-trigger').on('click', function () {
         event.preventDefault();
@@ -515,6 +520,6 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
         }
         else {
             element.removeClass('fixed');
-        } 
-    }    
+        }
+    }
 }
