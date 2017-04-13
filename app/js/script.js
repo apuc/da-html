@@ -23,12 +23,14 @@ var map = new Map();
 map.init({
     selector: '#map',
     center: $(".concreate-adress").html(),
-    zoom: 12,
+    zoom: 16,
     placemarks: [
         {
             address: $(".concreate-adress").html(),
             options: [
-                {key: 'draggable', value: false}
+                {key: 'draggable', value: false},
+                {key: 'iconLayout', value: 'default#image'},
+                {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
             ],
             properties: [
                 {key: 'balloonContentHeader', value: $(".map-placemarks-title").html()}
@@ -430,28 +432,28 @@ $(document).ready(function () {
 
     $('.accordion-menu ul li a').on('click', function (event) {
         event.preventDefault();
-if($(this).hasClass('section') || $(this).next("ul").length == 0){
-  location.href = $(this).attr('href');
-  $(this).next("ul").toggleClass("up-child");
-}else {
-    $(this).next("ul").toggleClass("up-child");
-}
-});
+        if ($(this).hasClass('section') || $(this).next("ul").length == 0) {
+            location.href = $(this).attr('href');
+            $(this).next("ul").toggleClass("up-child");
+        } else {
+            $(this).next("ul").toggleClass("up-child");
+        }
+    });
 
     /*business sidebar script*/
     $('.business__sidebar--items ul li a').on('click', function () {
         event.preventDefault();
-        if($(this)[0].hasAttribute('data-id')){
+        if ($(this)[0].hasAttribute('data-id')) {
             var dataId = $(this).attr('data-id'),
                 mainBlock = $('#business-sidebar-main'),
                 hoverBlock = $('#business-sidebar-hover-' + dataId);
-           if(hoverBlock.length > 0){
-               mainBlock.animate({width: "toggle"}, 400, function () {
-                   mainBlock.next(hoverBlock).animate({width: "toggle"}, 400, function () {
-                       hoverBlock.css({height: "auto"});
-                   });
-               });
-           }
+            if (hoverBlock.length > 0) {
+                mainBlock.animate({width: "toggle"}, 400, function () {
+                    mainBlock.next(hoverBlock).animate({width: "toggle"}, 400, function () {
+                        hoverBlock.css({height: "auto"});
+                    });
+                });
+            }
         }
     });
     $('.business__sidebar--hover-trigger').on('click', function () {
@@ -488,8 +490,15 @@ if($(this).hasClass('section') || $(this).next("ul").length == 0){
 
     /*show business reviews*/
     $(document).on('click', '.business__reviews--item .links__more', function () {
-       event.preventDefault();
-       var revBlock = $(this).closest('.descr').find('')
+        event.preventDefault();
+        var revBlock = $(this).closest('.business__reviews--item').find('.descr p:last-of-type');
+        if (revBlock.hasClass('full')) {
+            revBlock.removeClass('full');
+            $(this).text('Скрыть отзыв');
+        } else {
+            revBlock.addClass('full');
+            $(this).text('Читать весь отзыв');
+        }
 
     });
     /*close business reviews*/
@@ -511,7 +520,7 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
     var top = $(document).scrollTop(),
         blockingElement = blockElement.offset().top,
         height = element.outerHeight();//высота элемента, включающая внутренние и внешние отступы
-    if(window.innerWidth > 770){
+    if (window.innerWidth > 770) {
         if (top > elementPosition && top < blockingElement - height) {
             element.addClass('fixed').removeAttr("style");
         }
