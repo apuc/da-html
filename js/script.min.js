@@ -512,7 +512,7 @@ $(document).ready(function () {
     /*close business item businessScroll*/
 
     /*business pkg tabs*/
-    var businessPkgTabs = $('.business__tab-links .tab');
+   /* var businessPkgTabs = $('.business__tab-links .tab');*/
     $('.business__tab-content--wrapper').each(function (i) {
         if (i != 0) {
             $(this).hide(0)
