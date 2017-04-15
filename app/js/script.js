@@ -23,7 +23,7 @@ if($('#map').length > 0){
     var map = new Map();
     map.init({
         selector: '#map',
-        center: $(".concreate-adress").html(),
+        center: $('.concreate-adress').html(),
         zoom: 16,
         placemarks: [
             {
@@ -34,7 +34,7 @@ if($('#map').length > 0){
                     {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
                 ],
                 properties: [
-                    {key: 'balloonContentHeader', value: $(".map-placemarks-title").html()}
+                    {key: 'balloonContentHeader', value: $('.map-placemarks-title').html()}
                 ]
             }
         ]
@@ -611,6 +611,19 @@ $(document).ready(function () {
         $(tabId).show();
     });
     /*close single business goods tabs*/
+    
+    /*add business review*/
+    $(document).on('click', '#add-review', function (event) {
+        event.preventDefault();
+        var revTextarea = $(this).next('.business__form');
+        if(revTextarea.hasClass('open')){
+            revTextarea.removeClass('open').slideUp('fast');
+        } else {
+            revTextarea.addClass('open').slideDown('fast');
+        }
+        
+    });
+    /*close add business review*/
 
 });
 
