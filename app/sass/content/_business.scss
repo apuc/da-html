@@ -386,9 +386,9 @@
       background-size: contain;
     }
   }
-  &__sidebar.stock{
+  &__sidebar.stock {
     background-color: #edeef0;
-    h3{
+    h3 {
       display: block;
       position: relative;
       float: left;
@@ -398,11 +398,11 @@
       @include box-sizing(border-box);
       background-color: #ee2e24;
       text-align: center;
-      color: white;      
+      color: white;
       font-size: 15px;
       font-weight: 700;
       text-transform: uppercase;
-      &:after{
+      &:after {
         display: block;
         position: absolute;
         content: '';
@@ -414,27 +414,27 @@
         background-color: #ee2e24;
       }
     }
-    .stock__link{
+    .stock__link {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       margin-top: 15px;
       margin-bottom: 15px;
-      &--img{
+      &--img {
         display: block;
         position: relative;
         float: left;
         width: 100%;
         height: 178px;
         overflow: hidden;
-        img{
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
-      &--descr{
+      &--descr {
         display: block;
         position: relative;
         float: left;
@@ -442,7 +442,7 @@
         background-color: #673ab7;
         padding: 0 16px;
         @include box-sizing(border-box);
-        p{
+        p {
           display: block;
           display: -webkit-box;
           position: relative;
@@ -462,7 +462,7 @@
         }
       }
     }
-    .stock__title{
+    .stock__title {
       display: block;
       position: absolute;
       top: -8px;
@@ -508,8 +508,8 @@
       margin-top: 13px;
       border-radius: 50%;
       overflow: hidden;
-      @include breakpoint(max-width 600px){
-        margin-left: calc(50% - (110px/2));
+      @include breakpoint(max-width 600px) {
+        margin-left: calc(50% - (110px / 2));
       }
       img {
         width: 100%;
@@ -636,7 +636,7 @@
       float: left;
       width: calc(100% - (110px + 15px + 320px + 254px));
       margin-top: 45px;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 100%;
       }
       .phone {
@@ -652,10 +652,10 @@
         width: 24px;
         height: 24px;
         margin-top: 10px;
-        @include breakpoint(max-width 600px){
+        @include breakpoint(max-width 600px) {
           margin-bottom: 20px;
         }
-        img{
+        img {
           width: 12px;
           height: 12px;
           -o-object-fit: contain;
@@ -681,7 +681,7 @@
     margin-top: 21px;
     margin-bottom: 21px;
     list-style: none;
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       @include flex-direction(column);
     }
     li {
@@ -717,7 +717,7 @@
       display: block;
       position: relative;
       float: left;
-      width: 16.66%;
+      width: 100%;
       height: 148px;
       overflow: hidden;
       @include breakpoint(max-width 600px) {
@@ -785,7 +785,7 @@
       position: relative;
       float: left;
       width: 100%;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         @include flex-direction(column);
       }
     }
@@ -795,7 +795,7 @@
       float: left;
       width: 32%;
       margin-top: 20px;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 100%;
       }
       p {
@@ -869,17 +869,17 @@
       background-color: #eff0f1;
       border-radius: 3px;
       margin-bottom: 15px;
-      .descr{
+      .descr {
         display: block;
         position: relative;
         float: left;
         width: calc(100% - (56px + 26px + 23px));
         margin-left: 23px;
-        @include breakpoint(max-width 600px){
+        @include breakpoint(max-width 600px) {
           width: 100%;
           margin-left: 0;
         }
-        .date{
+        .date {
           display: block;
           position: absolute;
           width: auto;
@@ -888,7 +888,7 @@
           color: #030000;
           font-size: 12px;
           font-weight: 400;
-          @include breakpoint(max-width 600px){
+          @include breakpoint(max-width 600px) {
             top: -39px;
           }
         }
@@ -903,7 +903,7 @@
           font-size: 16px;
           font-weight: 700;
         }
-        p:first-of-type{
+        p:first-of-type {
           display: block;
           position: relative;
           float: left;
@@ -914,7 +914,7 @@
           font-weight: 400;
           line-height: 1.4;
         }
-        p:nth-of-type(2){
+        p:nth-of-type(2) {
           display: block;
           display: -webkit-box;
           position: relative;
@@ -933,7 +933,7 @@
           overflow: hidden;
           text-overflow: ellipsis;*/
         }
-        p:nth-of-type(2).full{
+        p:nth-of-type(2).full {
           height: calc(14px * 1.4 * 3);
           line-height: 1.4;
           -webkit-line-clamp: 3;
@@ -942,18 +942,18 @@
           text-overflow: ellipsis;
         }
       }
-      .links{
+      .links {
         display: block;
         position: relative;
         float: right;
         margin-top: 14px;
         margin-right: 32px;
         margin-bottom: 18px;
-        @include breakpoint(max-width 600px){
+        @include breakpoint(max-width 600px) {
           width: 100%;
           margin-right: 0;
         }
-        &__more{
+        &__more {
           display: block;
           position: relative;
           float: left;
@@ -963,11 +963,11 @@
           font-size: 12px;
           font-weight: 400;
           text-decoration: underline;
-          @include breakpoint(max-width 600px){
+          @include breakpoint(max-width 600px) {
             width: 100%;
             margin-right: 0;
           }
-          &:hover{
+          &:hover {
             text-decoration: none;
           }
         }
@@ -975,7 +975,7 @@
           width: 24px;
           height: 24px;
           margin-top: 0;
-          img{
+          img {
             width: 12px;
             height: 12px;
             -o-object-fit: contain;
@@ -1006,7 +1006,7 @@
       }
     }
   }
-  &__location{
+  &__location {
     display: block;
     position: relative;
     float: left;
@@ -1016,7 +1016,7 @@
     padding-top: 28px;
     @include box-sizing(border-box);
     background-color: #edeef0;
-    #map{
+    #map {
       display: block;
       position: relative;
       float: left;
@@ -1026,7 +1026,7 @@
       padding: 0;
     }
   }
-  &__tab-links{
+  &__tab-links {
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
@@ -1038,7 +1038,7 @@
     margin-top: 21px;
     margin-bottom: 21px;
     list-style: none;
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       @include flex-direction(column);
     }
     li {
@@ -1060,36 +1060,36 @@
           border: 1px solid rgba(255, 2, 0, 0.32);
         }
       }
-      a.active{
+      a.active {
         border: 1px solid rgba(255, 2, 0, 0.32);
       }
     }
   }
-  &__tab-content{
+  &__tab-content {
     display: block;
     position: relative;
     float: left;
     width: 100%;
-    &--wrapper{
+    &--wrapper {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       margin-bottom: 26px;
     }
-    #stocks{
+    #stocks {
       padding-left: 28px;
       padding-right: 28px;
       @include box-sizing(border-box);
     }
   }
-  &__offices{
+  &__offices {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     margin-top: 47px;
-    &--item{
+    &--item {
       display: block;
       position: relative;
       float: left;
@@ -1097,7 +1097,7 @@
       margin-left: 28px;
       padding: 0 10px;
       @include box-sizing(border-box);
-      h3{
+      h3 {
         display: block;
         position: relative;
         float: left;
@@ -1110,7 +1110,7 @@
         font-weight: 700;
         line-height: 22px;
       }
-      .address{
+      .address {
         display: block;
         position: relative;
         float: left;
@@ -1120,13 +1120,13 @@
         color: #4f9def;
         font-size: 14px;
         font-weight: 400;
-        &:hover{
+        &:hover {
           color: black;
         }
-        &:hover:before{
+        &:hover:before {
           background-color: #45a1ff;
         }
-        &:before{
+        &:before {
           display: block;
           position: absolute;
           content: '';
@@ -1138,7 +1138,7 @@
           border-radius: 50%;
         }
       }
-      p{
+      p {
         display: block;
         position: relative;
         float: left;
@@ -1151,14 +1151,14 @@
       }
     }
   }
-  &__delivery{
+  &__delivery {
     display: block;
     position: relative;
     float: left;
     width: 50%;
     padding-left: 28px;
     @include box-sizing(border-box);
-    h3{
+    h3 {
       display: block;
       position: relative;
       float: left;
@@ -1172,7 +1172,7 @@
       font-size: 14px;
       font-weight: 600;
     }
-    &--item{
+    &--item {
       display: block;
       position: relative;
       float: left;
@@ -1181,33 +1181,33 @@
       padding-left: 32px;
       @include box-sizing(border-box);
     }
-    &--img{
+    &--img {
       display: block;
       position: relative;
       float: left;
       width: 137px;
     }
-    &--descr{
+    &--descr {
       display: block;
       position: relative;
       float: left;
       width: calc(100% - (137px));
       padding-left: 20px;
       @include box-sizing(border-box);
-      p{
+      p {
         display: block;
         position: relative;
         float: left;
         width: 100%;
         margin-top: 0;
         margin-bottom: 0;
-        &:first-of-type{
+        &:first-of-type {
           color: #2a2a2a;
           font-size: 14px;
           font-weight: 700;
           margin-bottom: 17px;
         }
-        &:last-of-type{
+        &:last-of-type {
           color: #5f5f5f;
           font-size: 12px;
           font-weight: 400;
@@ -1215,7 +1215,7 @@
         }
       }
     }
-    .separator{
+    .separator {
       display: block;
       position: relative;
       float: left;
@@ -1229,14 +1229,14 @@
       background-color: #e8eaee;
     }
   }
-  &__pay{
+  &__pay {
     display: block;
     position: relative;
     float: left;
     width: 50%;
     padding-right: 28px;
     @include box-sizing(border-box);
-    h3{
+    h3 {
       display: block;
       position: relative;
       float: left;
@@ -1250,7 +1250,7 @@
       font-size: 14px;
       font-weight: 600;
     }
-    .separator{
+    .separator {
       display: block;
       position: relative;
       float: left;
@@ -1263,10 +1263,10 @@
       margin-left: 32px;
       background-color: #e8eaee;
     }
-    .separator.hover{
+    .separator.hover {
       background-color: #fff;
     }
-    &--item{
+    &--item {
       @include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(row);
@@ -1276,7 +1276,7 @@
       width: 100%;
       padding-left: 32px;
       @include box-sizing(border-box);
-      h3{
+      h3 {
         display: block;
         position: relative;
         float: left;
@@ -1291,7 +1291,7 @@
         font-weight: 600;
       }
     }
-    &--img{
+    &--img {
       display: block;
       position: relative;
       float: left;
@@ -1300,7 +1300,7 @@
       margin-bottom: 20px;
     }
   }
-  &__goods-tabs{
+  &__goods-tabs {
     display: block;
     position: relative;
     float: left;
@@ -1310,8 +1310,8 @@
     padding-left: 50px;
     @include box-sizing(border-box);
     list-style: none;
-    li{
-      a{
+    li {
+      a {
         display: block;
         position: relative;
         float: left;
@@ -1325,43 +1325,43 @@
         font-weight: 700;
         line-height: 29px;
         border-bottom: 2px solid #808080;
-        &:hover{
+        &:hover {
           border-bottom: 2px solid #ee2e24;
         }
       }
-      a.active{
+      a.active {
         border-bottom: 2px solid #ee2e24;
       }
     }
   }
-  &__goods-content{
+  &__goods-content {
     display: block;
     position: relative;
     float: left;
     padding-left: 50px;
     padding-right: 10px;
     @include box-sizing(border-box);
-    &--wrapper{
+    &--wrapper {
       display: block;
       position: relative;
       float: left;
       width: 100%;
     }
-    &--item{
+    &--item {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       margin-top: 31px;
     }
-    &--img{
+    &--img {
       display: block;
       position: relative;
       float: left;
       width: 193px;
       height: 188px;
       overflow: hidden;
-      .new{
+      .new {
         display: block;
         position: absolute;
         content: '';
@@ -1372,20 +1372,20 @@
         background-image: url('../img/business/goods-banner.png');
         background-repeat: no-repeat;
       }
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-    &--descr{
+    &--descr {
       display: block;
       position: relative;
       float: left;
       width: calc(100% - 193px);
       padding-left: 12px;
       @include box-sizing(border-box);
-      p{
+      p {
         display: block;
         position: relative;
         float: left;
@@ -1397,7 +1397,7 @@
         font-weight: 600;
         line-height: 20px;
       }
-      p:last-of-type{
+      p:last-of-type {
         display: block;
         position: relative;
         float: left;
@@ -1408,6 +1408,33 @@
         font-weight: 700;
         line-height: 29px;
       }
+    }
+  }
+  &__triggers {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-left: 28px;
+    padding-right: 28px;
+    @include box-sizing(border-box);
+    .show-more {
+      float: left;
+      margin-right: 36px;
+      margin-top: 51px;
+      margin-bottom: 35px;
+    }
+    p{
+      display: block;
+      position: relative;
+      float: left;
+      width: 408px;
+      margin-top: 51px;
+      margin-bottom: 35px;
+      color: #060000;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 23px;
     }
   }
 }

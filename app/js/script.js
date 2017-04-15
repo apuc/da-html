@@ -390,7 +390,6 @@ $(document).ready(function () {
         var t1 = jQuery(this).attr('data-tab-main');
         jQuery(".consultants__aside_item").fadeOut(500), jQuery("#" + t).addClass('current').fadeIn(500);
         jQuery(".consultants__main_item").fadeOut(500), jQuery("#" + t1).addClass('current').fadeIn(500);
-
     });
     /*consultants tabs*/
 
@@ -439,6 +438,37 @@ $(document).ready(function () {
         }
     });
 
+    /*business owl.slider*/
+    var businessSlider = $('.business__photos');
+    businessSlider.owlCarousel({
+        loop: true,
+        nav: false,
+        margin:0,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            960:{
+                items:5
+            },
+            1200:{
+                items:6
+            }
+        }
+    });
+    businessSlider.on('mousewheel', '.owl-stage', function (e) {
+        if (e.deltaY > 0) {
+            businessSlider.trigger('next.owl');
+        } else {
+            businessSlider.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
+    /*close businnes owl.slider*/
+    
     /*business sidebar script*/
     $('.business__sidebar--items ul li a').on('click', function () {
         event.preventDefault();
@@ -513,7 +543,6 @@ $(document).ready(function () {
     /*close business item businessScroll*/
 
     /*business pkg tabs*/
-   /* var businessPkgTabs = $('.business__tab-links .tab');*/
     $('.business__tab-content--wrapper').each(function (i) {
         if (i != 0) {
             $(this).hide(0)
@@ -527,8 +556,23 @@ $(document).ready(function () {
         $('.business__tab-content--wrapper').hide(0);
         $(tabId).show();
     });
-
     /*close business pkg tabs*/
+    
+    /*single business goods tabs*/
+    $('.business__goods-content--wrapper').each(function (i) {
+        if (i != 0) {
+            $(this).hide(0)
+        }
+    });
+    $(document).on('click', '.business__goods-tabs a', function (e) {
+        e.preventDefault();
+        var tabId = $(this).attr('href');
+        $('.business__goods-tabs a').removeClass('active');
+        $(this).addClass('active');
+        $('.business__goods-content--wrapper').hide(0);
+        $(tabId).show();
+    });
+    /*close single business goods tabs*/
 
 });
 
