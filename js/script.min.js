@@ -19,25 +19,28 @@
 //         });
 //     }
 // });
-var map = new Map();
-map.init({
-    selector: '#map',
-    center: $(".concreate-adress").html(),
-    zoom: 16,
-    placemarks: [
-        {
-            address: $(".concreate-adress").html(),
-            options: [
-                {key: 'draggable', value: false},
-                {key: 'iconLayout', value: 'default#image'},
-                {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
-            ],
-            properties: [
-                {key: 'balloonContentHeader', value: $(".map-placemarks-title").html()}
-            ]
-        }
-    ]
-});
+if($('#map').length > 0){
+    var map = new Map();
+    map.init({
+        selector: '#map',
+        center: $(".concreate-adress").html(),
+        zoom: 16,
+        placemarks: [
+            {
+                address: $(".concreate-adress").html(),
+                options: [
+                    {key: 'draggable', value: false},
+                    {key: 'iconLayout', value: 'default#image'},
+                    {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
+                ],
+                properties: [
+                    {key: 'balloonContentHeader', value: $(".map-placemarks-title").html()}
+                ]
+            }
+        ]
+    });  
+}
+
 $(document).ready(function () {
     /*hamburger*/
     var windowWidth = $(window).width();
