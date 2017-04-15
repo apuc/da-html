@@ -431,7 +431,8 @@ $(document).ready(function () {
         event.preventDefault();
         if ($(this).hasClass('section') || $(this).next("ul").length == 0) {
             location.href = $(this).attr('href');
-            $(this).next("ul").toggleClass("up-child");
+            // $(this).next("ul").toggleClass("up-child");
+
         } else {
             $(this).next("ul").toggleClass("up-child");
         }
