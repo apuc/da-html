@@ -302,7 +302,6 @@ $(document).ready(function () {
             }
         );
     });
-
     /*send message modal validation*/
     var validMassage = new Validation();
     validMassage.init({
@@ -311,6 +310,42 @@ $(document).ready(function () {
     });
     /*close send message modal validation*/
     /*close send message modal*/
+    
+    /*callback modal*/
+    $(document).on('click', '#callback', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-callback').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '#black-overlay', function () {
+        $('#modal-callback').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close callback modal*/
+
+    /*send message modal*/
+    $(document).on('click', '#send-message', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-send-message').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '#black-overlay', function () {
+        $('#modal-send-message').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close message modal*/
 
     /* open tabs*/
     $('.page__tabs_target').click(function (event) {
