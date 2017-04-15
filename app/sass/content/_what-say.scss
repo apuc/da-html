@@ -13,18 +13,31 @@
     text-align: left;
     margin: 0;
   }
+  .show-more{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .what-say__servises{
   width: 50%;
   float: left;
   text-align: right;
+  @include breakpoint(max-width 600px){
+    width: 100%;
+  }
   a{
     color: #010408;
     display: inline-block;
     font-size: 15px;
     font-weight: 700;
-    margin-left: 15px;
+    margin-left: 60px;
+    @include breakpoint(max-width 600px){
+      width: calc(100% - 30px);
+      margin-left: 30px;
+      margin-top: 20px;
+      text-align: left;
+    }
   }
   .comments-icon{
     background-image: url("../img/icons/comments-icon.png");
@@ -64,11 +77,18 @@
   display: inline-block;
   margin: 4px;
   position: relative;
-  height: 111px;
+  /*height: 111px;*/
   background-color: #fff;
   border-radius: 3px;
   padding: 16px 18px;
   box-sizing: border-box;
+  @include breakpoint(max-width 600px){
+    width: 100%;
+  }
+  .rew-title{
+    margin-top: -16px;
+    margin-bottom: 20px;
+  }
   .counter{
     position: absolute;
     left: 5px;

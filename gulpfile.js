@@ -1,4 +1,4 @@
-﻿var gulp = require('gulp'), // Подключаем Gulp
+var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass'), //Подключаем Sass пакет,
     browserSync = require('browser-sync'), // Подключаем Browser Sync
     concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
@@ -8,11 +8,12 @@
     imagemin = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
     pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     spritesmith = require('gulp.spritesmith'), // Подключаем библиотеку для создания png-спрайтов
+    svgstore = require('gulp-svgstore'),//// Подключаем библиотеку для объединения SVG в один файл
+    svgmin = require('gulp-svgmin'),//Подключаем библиотеку для минификации SVG
     cache = require('gulp-cache'), // Подключаем библиотеку кеширования
     extender = require('gulp-html-extend'),//Подключаем бибилиотеку для склейки html-файлов
     sourcemaps = require('gulp-sourcemaps'),//Подключаем плагин, записывающий карту источника в исходный файл
     rimraf = require('rimraf'),//Очищает указанные исходники
-    argv = require('yargs').argv,
     plumber = require('gulp-plumber');//Подключаем плагин, который не останавливает задачи от остановки во время их выполнения при возникновении ошибки
 
 var postcss = require('gulp-postcss'),//Блиотека-парсер стилей для работы с postcss-плагинами
@@ -41,13 +42,57 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
         .pipe(gulp.dest('css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({
             stream: true
-        })) // Обновляем CSS на странице при изменении
+        })); // Обновляем CSS на странице при изменении
 });
+
+gulp.task('png-sprite', function () {// PNG Sprites
+    var spriteData =
+        gulp.src('app/img/sprites/*.*')// путь, откуда берем картинки для спрайта
+            .pipe(spritesmith({
+                imgName: 'sprite.png',//имя генерируемой картинки
+                cssName: '_png-sprite.sass',//имя css файла, который получится на выходе
+                cssFormat: 'sass',//формат css файла
+                algorithm: 'binary-tree',//способ сортировки изображений
+                cssTemplate: 'sass.template.mustache',//функция или путь до mustache шаблона, дающие возможность настроить CSS-файл на выходе
+                cssVarMap: function (sprite) {//цикл, настраивающий названия CSS переменных
+                    sprite.name = 's-' + sprite.name
+                }
+            }));
+
+    spriteData.img.pipe(gulp.dest('img/sprites/'));// путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('app/sass/libs/'));// путь, куда сохраняем стили
+});
+
+// SVG Sprites
+/*gulp.task('svg-sprite', function () {
+
+    var svgs = gulp
+        .src(path.src.svgSprite)
+        .pipe(rename({prefix: 'svg-icon-'}))
+        .pipe(svgmin())
+        .pipe(svgstore({ inlineSvg: true }));
+
+    function fileContents (filePath, file) {
+        return file.contents.toString();
+    }
+
+    return gulp
+        .src('src/template/svg.html')
+        .pipe(inject(svgs, { transform: fileContents }))
+        .pipe(gulp.dest('src/template'));
+
+});*/
 
 gulp.task('js-libs', function () {
     return gulp.src([ // Берем все необходимые библиотеки
+        'app/libs/js-libs/jquery.jscrollpane.min.js',
+        'app/libs/js-libs/jquery.mousewheel.js',
+        'app/libs/js-libs/bootstrap.min.js',
         'app/libs/js-libs/validation.js',
-        'app/libs/js-libs/lightbox.min.js'
+        'app/libs/js-libs/fotorama.js',
+        'app/libs/js-libs/lightbox.min.js',
+        'app/libs/js-libs/owl.carousel.min.js',
+        'app/libs/js-libs/slick.min.js'
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
@@ -55,7 +100,7 @@ gulp.task('js-libs', function () {
 });
 
 gulp.task('sass', function () { // Создаем таск Sass
-    var processors = [
+    var processors = [// подключаем постпроцессоры в массиве
         assets,
         short,
         fontmagic,
@@ -64,14 +109,14 @@ gulp.task('sass', function () { // Создаем таск Sass
             cascade: true
         }),
         /*pxtorem({
-         rootValue: 14,
-         replace: false
-         }),
-         pxtoem({
-         rootValue: 14,
-         replace: false
-         }),*/
-        /*focus,*/
+            rootValue: 14,
+            replace: false
+        }),
+        pxtoem({
+            rootValue: 14,
+            replace: false
+        }),*/
+        focus,
         sorting(),
         stylefmt,
         cssnano
@@ -116,7 +161,6 @@ gulp.task('compress', ['clean'], function () {// Создаем таск compres
             extname: ".js"// Добавляем окончание .js
         }))
         .pipe(uglify()) // Сжимаем JS файл
-        /*.pipe(gulpif(argv.production, uglify())) // <- добавляем вот эту строчку (Сжимаем JS файл)*/
         .pipe(plumber.stop())
         .pipe(gulp.dest('js'));// Выгружаем в папку js
 
@@ -138,13 +182,11 @@ gulp.task('extend-blocks', function () {
         .pipe(gulp.dest('./'))
 });
 
-
-gulp.task('watch', ['browser-sync', 'compress', 'extend-pages', 'css-libs', 'js-libs', 'img', 'sass'], function () {
+gulp.task('watch', ['browser-sync','compress', 'extend-pages', 'css-libs', 'js-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
-    gulp.watch('app/libs/**/*', ['js-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
-    gulp.watch(['app/html/**/*.html'], ['extend-pages']);// Наблюдение за HTML-файлами в папке html/pages
+    gulp.watch(['app/html/**/*.html'], ['extend-pages']);// Наблюдение за HTML-файлами в папке html
     gulp.watch('app/js/**/*.js', ['compress']); // Наблюдение за js-файлами
 });
 
@@ -165,8 +207,29 @@ gulp.task('img', function () {
         }));
 });
 
+
+/*gulp.task('build', ['img', 'sass', 'scripts'], function() {
+
+ var buildCss = gulp.src([ // Переносим библиотеки в продакшен
+ 'app/css/main.css',
+ 'app/css/libs.min.css'
+ ])
+ .pipe(gulp.dest('css'))
+
+ var buildFonts = gulp.src('app/fonts/!**!/!*') // Переносим шрифты в продакшен
+ .pipe(gulp.dest('fonts'))
+
+ var buildJs = gulp.src('app/js/!**!/!*') // Переносим скрипты в продакшен
+ .pipe(gulp.dest('js'))
+
+ });*/
+
 gulp.task('clear', function (callback) {
     return cache.clearAll();
 });
 
 gulp.task('default', ['watch']);
+
+/*
+ npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant gulp.spritesmith gulp-svgstore gulp-svgmin gulp-cache gulp-html-extend gulp-sourcemaps rimraf gulp-plumber gulp-postcss autoprefixer cssnano postcss-pxtorem postcss-px-to-em postcss-short stylefmt postcss-assets postcss-short-spacing postcss-focus postcss-sorting postcss-font-magician postcss-fixes stylelint-config-standard --save-dev
+ */
