@@ -350,6 +350,24 @@ $(document).ready(function () {
     });
     /*close message modal*/
 
+    /*open modal order delivery*/
+    $(document).on('click', '#order-delivery', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-order-delivery').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '#black-overlay', function () {
+        $('#modal-order-delivery').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close modal order delivery*/
+
     /* open tabs*/
     $('.page__tabs_target').click(function (event) {
         $('.page__tabs_targett').removeClass('page__tabs_active');
@@ -624,6 +642,30 @@ $(document).ready(function () {
         
     });
     /*close add business review*/
+    
+    /*modal delivery second step show*/
+    $(document).on('click', '.modal-callback__first-step .show-more', function (event) {
+       event.preventDefault();
+        var first = $('#modal-order-delivery').find('.modal-callback__first-step'),
+            second = $('#modal-order-delivery').find('.modal-callback__second-step');
+        
+        first.slideUp('500');
+        second.slideDown('500');
+    });
+    $(document).on('click', '.modal-callback__trigger', function (event) {
+        event.preventDefault();
+        var textarea = $(this).next('.modal-callback__textarea');
+        if($(this).hasClass('open')){
+            $(this).removeClass('open');
+            textarea.slideUp('500');
+        } else{
+            $('.modal-callback__trigger').removeClass('open');
+            $('.modal-callback__textarea').slideUp('500');
+            $(this).addClass('open');
+            textarea.slideDown('500');
+        }
+    });
+    /*close modal delivery second step show*/
 
 });
 

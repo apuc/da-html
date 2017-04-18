@@ -1277,6 +1277,9 @@
       font-size: 14px;
       font-weight: 600;
     }
+    h3.hover{
+      color: transparent;
+    }
     &--item {
       display: block;
       position: relative;
@@ -1332,6 +1335,11 @@
       margin-bottom: 22px;
       margin-left: 32px;
       background-color: #e8eaee;
+    }
+    .show-more{
+      margin-right: 27px;
+      margin-top: 57px;
+      margin-bottom: 58px;
     }
   }
   &__pay {
