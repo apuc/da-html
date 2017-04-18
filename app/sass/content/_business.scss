@@ -141,19 +141,38 @@
     &--views {
       display: block;
       position: relative;
-      float: left;
+      float: right;
       min-width: 29px;
       max-width: 50px;
+      padding-left: 24px;
+      @include box-sizing(border-box);
       text-overflow: ellipsis;
       white-space: nowrap;
+      overflow: hidden;
       margin-top: 6px;
       margin-bottom: 0;
       margin-right: 20px;
       color: #020000;
       font-size: 13px;
       font-weight: 600;
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        top: 4px;
+        left: 4px;
+        width: 15px;
+        height: 12px;
+        /*margin-left: 50px;
+        margin-right: 7px;
+        margin-top: 10px;*/
+        background-image: url('../img/info-icons/icon-3.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
     }
-    &--views-icon {
+   /* &--views-icon {
       display: block;
       position: relative;
       float: left;
@@ -169,7 +188,7 @@
       @include breakpoint(max-width 600px) {
         margin-left: 5px;
       }
-    }
+    }*/
   }
   &__big-item {
     display: block;
