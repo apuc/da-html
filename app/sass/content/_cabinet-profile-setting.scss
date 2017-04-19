@@ -1,9 +1,17 @@
+.cabinet__container_white{
+  background-color: #fff;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding: 20px 50px 50px;
+  box-sizing: border-box;
+}
+
 .setting-account-form{
   width: 50%;
   float: left;
   position: relative;
   text-align: center;
-
+  box-sizing: border-box;
   h2{
     font-size: 14px;
     // font-family: $ob;
@@ -59,41 +67,63 @@
   display: inline-block;
   margin: 7px 0;
   a{
-    min-width: 149px;
+    padding: 5px 20px;
     display: inline-block;
-    // background-color: $bezh;
+    box-sizing: border-box;
     float: right;
     border-radius: 8px;
     border: 1px solid #dedede;
     text-align: center;
     height: 30px;
-    line-height: 26px;
-    color: #334a51;
+    color: #fff;
     font-size: 13px;
-    // font-family: $ob;
+    font-weight: 700;
     text-decoration: none;
     position: relative;
     margin-top: 7px;
-    // @include green-hov-rgba;
+    background-color: #ee2e24;
   }
   span{
     size: 37px;
     display: inline-block;
     position: relative;
     float: left;
+    img{
+      object-fit: contain;
+      size: 100%;
+    }
   }
-  .vk-soc-37{
-    background-image: url("../img/vk-soc-37.png");
+  .check-button{
+    background-color: #fff;
+    border: none;
+    color: #000;
+
   }
-  .gp-soc-37{
-    background-image: url("../img/gp-soc-37.png");
+  .black-check{
+    background-image: url("../img/cabinet/check-mark.png");
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    float: left;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+    position: relative;
+    top: 3px;
   }
-  .fb-soc-37{
-    background-image: url("../img/fb-soc-37.png");
-  }
-  .twi-soc-37{
-    background-image: url("../img/twi-soc-37.png");
-  }
+  // .vk-soc-37{
+  //   background-image: url("../img/vk-soc-37.png");
+  // }
+  // .gp-soc-37{
+  //   background-image: url("../img/gp-soc-37.png");
+  // }
+  // .fb-soc-37{
+  //   background-image: url("../img/fb-soc-37.png");
+  // }
+  // .twi-soc-37{
+  //   background-image: url("../img/twi-soc-37.png");
+  // }
 }
 
 .button{
@@ -175,13 +205,16 @@ input[type=file] {
     position: absolute;
     z-index: 2;
     float: right;
-		right: -283px;
+		right: -300px;
 		margin-top: 1px;
     top: 10px;
     -webkit-border-radius: 5px;
             border-radius: 5px;
 		p{
 			margin: 0;
+      font-size: 12px;
+      font-weight: 400;
+      text-align: left;
 		}
 
 }
