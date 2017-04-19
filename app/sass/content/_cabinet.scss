@@ -8,7 +8,14 @@
     background-color: #fbfbfb;
     border: 1px solid #dedede;
     margin-top: 40px;
+
     padding: 0;
+
+    margin-bottom: 229px;
+    padding: 0;
+    @include breakpoint(max-width 600px){
+      margin-bottom: 0;
+    }
     li {
       display: block;
       position: relative;
@@ -120,5 +127,13 @@
     position: relative;
     float: left;
     width: 100%;
+
+    padding-left: 12px;
+    padding-top: 28px;
+    @include box-sizing(border-box);
+    .business__sm-item {
+      width: 212px;
+    }
+
   }
 }
