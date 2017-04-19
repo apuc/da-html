@@ -1,0 +1,73 @@
+.cabinet {
+  background-color: #edeef0;
+  &__nav {
+    display: block;
+    position: relative;
+    float: left;
+    width: 223px;
+    background-color: #fbfbfb;
+    border: 1px solid #dedede;
+    margin-top: 40px;
+    padding: 0;
+    li {
+      display: block;
+      position: relative;
+      width: 100%;
+      float: left;
+      a {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 20px 14px;
+        @include box-sizing(border-box);
+        text-align: center;
+        text-transform: capitalize;
+        color: #040000;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      a:hover:after{
+        display: block;
+        position: absolute;
+        content: '';
+        top: 17px;
+        right: 0;
+        width: 3px;
+        height: 30px;
+        background-color: #ff0200;
+      }
+      a.active {
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 17px;
+          right: 0;
+          width: 3px;
+          height: 30px;
+          background-color: #ff0200;
+        }
+      }
+    }
+  }
+  &__wrapper{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 225px);
+    margin-top: 40px;
+    h3{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #040000;
+      font-size: 25px;
+      font-weight: 500;
+      margin: 0;
+      padding: 15px 21px;
+      @include box-sizing(border-box);
+    }
+  }
+}
