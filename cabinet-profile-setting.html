@@ -91,18 +91,18 @@
 
 <!-- end header.html-->
 
-<!-- start cabinet.html-->
+<!-- start cabinet-profile-setting.html-->
 <section class="cabinet">
 
     <div class="container">
 
         <ul class="cabinet__nav">
 
-            <li><a href="#" class="active">Мои новости</a></li>
+            <li><a href="#" >Мои новости</a></li>
             <li><a href="#">Мои предприятия</a></li>
             <li><a href="#">Мои консультации</a></li>
             <li><a href="#">Мои объявления</a></li>
-            <li><a href="#">Мой профиль</a></li>
+            <li><a href="#" class="active">Мой профиль</a></li>
             <li><a href="#">Мои афиши</a></li>
             <li><a href="#">Мои фото</a></li>
             <li><a href="#">Коментарии</a></li>
@@ -127,103 +127,31 @@
             </div>
 
             <div class="cabinet__container">
-
-                <a href="#" class="business__sm-item">
-
-                    <div class="business__sm-item--img">
-                        <img src="img/business/business-sm.png" alt="">
-                    </div>
-
-                    <p class="business__sm-item--title">Региональный центр восстановления позвоночника и
-                        реабилитации</p>
-
-                    <p class="business__sm-item--address">
-                        <span>Адрес:</span>
-                        <span>г. Донецк, проспект Мира, 8а</span>
-                    </p>
-
-                    <ul class="business__sm-item--numbers">
-                        <li>+380667778540</li>
-                        <li>+380667778540</li>
-                    </ul>
-
-                    <!-- <span class="business__sm-item&#45;&#45;views-icon"></span>-->
-                    <p class="business__sm-item--views">569</p>
-
-                </a>
-
-                <a href="#" class="business__sm-item">
-
-                    <div class="business__sm-item--img">
-                        <img src="img/business/business-sm.png" alt="">
-                    </div>
-
-                    <p class="business__sm-item--title">Региональный центр восстановления позвоночника и
-                        реабилитации</p>
-
-                    <p class="business__sm-item--address">
-                        <span>Адрес:</span>
-                        <span>г. Донецк, проспект Мира, 8а</span>
-                    </p>
-
-                    <ul class="business__sm-item--numbers">
-                        <li>+380667778540</li>
-                        <li>+380667778540</li>
-                    </ul>
-
-                    <!-- <span class="business__sm-item&#45;&#45;views-icon"></span>-->
-                    <p class="business__sm-item--views">569</p>
-
-                </a>
-
-                <a href="#" class="business__sm-item">
-
-                    <div class="business__sm-item--img">
-                        <img src="img/business/business-sm.png" alt="">
-                    </div>
-
-                    <p class="business__sm-item--title">Региональный центр восстановления позвоночника и
-                        реабилитации</p>
-
-                    <p class="business__sm-item--address">
-                        <span>Адрес:</span>
-                        <span>г. Донецк, проспект Мира, 8а</span>
-                    </p>
-
-                    <ul class="business__sm-item--numbers">
-                        <li>+380667778540</li>
-                        <li>+380667778540</li>
-                    </ul>
-
-                    <!-- <span class="business__sm-item&#45;&#45;views-icon"></span>-->
-                    <p class="business__sm-item--views">569</p>
-
-                </a>
-
-                <a href="#" class="business__sm-item">
-
-                    <div class="business__sm-item--img">
-                        <img src="img/business/business-sm.png" alt="">
-                    </div>
-
-                    <p class="business__sm-item--title">Региональный центр восстановления позвоночника и
-                        реабилитации</p>
-
-                    <p class="business__sm-item--address">
-                        <span>Адрес:</span>
-                        <span>г. Донецк, проспект Мира, 8а</span>
-                    </p>
-
-                    <ul class="business__sm-item--numbers">
-                        <li>+380667778540</li>
-                        <li>+380667778540</li>
-                    </ul>
-
-                    <!-- <span class="business__sm-item&#45;&#45;views-icon"></span>-->
-                    <p class="business__sm-item--views">569</p>
-
-                </a>
-
+              <form action="" class="setting-account-form">
+                <div class="row-form">
+                  <label for="">Имя</label>
+                  <input type="text">
+                </div>
+                <div class="row-form">
+                  <label for="">Публичный email</label>
+                  <input type="text">
+                  <div class="memo-error">
+                    <p>E-mail адресс не похож на настоящий</p>
+                  </div>
+                </div>
+                <div class="row-form">
+                  <label >Фото</label>
+                    <label class="file_upload">
+                    <span class="button"></span>
+                    <input class="input-file" type="file">
+                  </label>
+                </div>
+                <div class="row-form">
+                  <label for="">О себе</label>
+                  <input type="text">
+                </div>
+                  <button  type="submit" class="reg-form-send">Сохранить</button>
+              </form>
             </div>
 
 
@@ -232,7 +160,8 @@
     </div>
 
 </section>
-<!-- end cabinet.html-->
+
+<!-- end cabinet-profile-setting.html-->
 
 <!-- start footer.html-->
 <footer class="footer">
