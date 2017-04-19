@@ -86,6 +86,17 @@
       width: calc(100% - 331px);
       background-color: #fbfbfb;
       margin-right: 15px;
+    }
+    &--link{
+      display: block;
+      position: relative;
+      float: left;
+      text-align: center;
+      color: black;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 14px 40px;
+      @include box-sizing(border-box);
       &:after{
         display: block;
         position: absolute;
@@ -97,21 +108,10 @@
         transform: rotate(45deg);
         background-color: #fbfbfb;
       }
-      a{
-        display: block;
-        position: relative;
-        float: left;
-        text-align: center;
-        color: black;
-        font-size: 14px;
-        font-weight: 700;
-        padding: 14px 40px;
-        @include box-sizing(border-box);
-        span{
-          color: #959595;
-          font-size: 12px;
-          font-weight: 400;
-        }
+      span{
+        color: #959595;
+        font-size: 12px;
+        font-weight: 400;
       }
     }
     .show-more{
@@ -271,11 +271,81 @@
     background-color: #fff;
   }
   &__add-company-form{
-    display: block;
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
     position: relative;
     float: left;
     width: 100%;
     padding: 30px 42px;
     @include box-sizing(border-box);
+    &--title{
+      display: block;
+      position: relative;
+      float: left;
+      width: 165px;
+      height: 30px;
+      text-align: left;
+      margin: 0;
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    &--field{
+      display: block;
+      position: relative;
+      float: left;
+      width: 238px;
+      height: 30px;
+      margin-bottom: 40px;
+      border: 1px solid #b8b8b9;
+      padding: 1px 10px;
+      @include box-sizing(border-box);
+      &:focus{
+        outline: none;
+      }
+    }
+    &--block{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (238px + 165px + 2px));
+      height: 30px;
+    }
+    .show-more{
+      width: 128px;
+      height: 30px;
+      line-height: 11px;
+      margin-left: 33px;
+    }
+    &--notice{
+      display: block;
+      position: relative;
+      float: left;
+      height: 30px;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 27px;
+      margin-right: 10px;
+      color: black;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    &--text{
+      display: block;
+      position: relative;
+      float: left;
+      width: 644px;
+      height: 96px;
+      margin-bottom: 40px;
+      border: 1px solid #b8b8b9;
+      padding: 1px 10px;
+      @include box-sizing(border-box);
+      resize: none;
+    }
   }
 }
