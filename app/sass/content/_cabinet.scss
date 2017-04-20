@@ -88,6 +88,16 @@
       background-color: #fbfbfb;
       margin-right: 15px;
     }
+    &--return{
+      display: block;
+      position: relative;
+      float: left;
+      color: black;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 14px 40px;
+      @include box-sizing(border-box);
+    }
     &--link{
       display: block;
       position: relative;
