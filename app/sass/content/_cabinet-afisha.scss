@@ -16,3 +16,19 @@
 .cabinet__container .afisha-wrap__event .item-content{
   height: 265px;
 }
+
+.add_field_button{
+  position: absolute;
+  padding: 6px 20px;
+  box-sizing: border-box;
+  background-color: #ee2e24;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  right: -123px;
+  cursor: pointer;
+}

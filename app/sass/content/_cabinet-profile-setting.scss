@@ -38,12 +38,18 @@
       padding-right: 45px;
       box-sizing: border-box;
     }
-    input{
+    input, select, textarea{
       width: 55%;
       float: left;
       outline: none;
       height: 30px;
       padding-left: 10px;
+      box-sizing: border-box;
+    }
+    textarea{
+      resize: none;
+      height: 200px;
+      padding: 10px;
       box-sizing: border-box;
     }
     .file_upload{
@@ -54,6 +60,14 @@
     }
     .memo-error{
       top: 0;
+    }
+    .add-input{
+      width: 55%;
+      float: left;
+      display: inline-block;
+      input{
+        width: 100%;
+      }
     }
   }
   .row-knopka{
@@ -318,7 +332,7 @@ input[type=file] {
 
 }
 
-/*
+
 .cabinet__links--box a{
     display: block;
     position: relative;
@@ -331,4 +345,3 @@ input[type=file] {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-*/
