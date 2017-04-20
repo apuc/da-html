@@ -94,9 +94,21 @@
       float: left;
       color: black;
       font-size: 14px;
-      font-weight: 300;
-      padding: 14px 40px;
+      font-weight: 300!important;
+      padding: 14px 34px;
       @include box-sizing(border-box);
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        top: 15px;
+        left: 13px;
+        width: 0;
+        height: 0;
+        border-top: 9px solid transparent;
+        border-right: 12px solid #fc0023;
+        border-bottom: 9px solid transparent;
+      }
     }
     &--link{
       display: block;
