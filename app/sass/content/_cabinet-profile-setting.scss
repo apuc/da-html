@@ -317,3 +317,18 @@ input[type=file] {
   border: none;
 
 }
+
+.cabinet__links--box a{
+
+    display: block;
+    position: relative;
+    float: left;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}

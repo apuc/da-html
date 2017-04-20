@@ -1,0 +1,18 @@
+.cabinet__container .afisha-wrap__event{
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.cabinet__container .afisha-wrap__event .item{
+  width: 211px;
+  float: left;
+  position: relative;
+  height: 265px;
+  margin-right: 20px;
+  &:last-of-type{
+    margin-right: 0;
+  }
+}
+.cabinet__container .afisha-wrap__event .item-content{
+  height: 265px;
+}
