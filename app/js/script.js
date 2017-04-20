@@ -368,6 +368,41 @@ $(document).ready(function () {
     });
     /*close modal order delivery*/
 
+    /*add business review*/
+    $(document).on('click', '#add-review', function (event) {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-review').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '#black-overlay', function () {
+        $('#modal-review').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    $(document).on('click', '#modal-review-submit', function (event) {
+        event.preventDefault();
+        $('#modal-review').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#modal-review-success').css('display', 'block').animate({opacity: 1}, 200);
+            }
+        );
+    });
+    $(document).on('click', '#black-overlay', function () {
+        $('#modal-review-success').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close add business review*/
+
     /* open tabs*/
     $('.page__tabs_target').click(function (event) {
         $('.page__tabs_targett').removeClass('page__tabs_active');
@@ -631,6 +666,7 @@ $(document).ready(function () {
     });
     /*close single business goods tabs*/
 
+
     /*add business review*/
     $(document).on('click', '#add-review', function (event) {
         event.preventDefault();
@@ -643,6 +679,7 @@ $(document).ready(function () {
 
     });
     /*close add business review*/
+
 
     /*modal delivery second step show*/
     $(document).on('click', '.modal-callback__first-step .show-more', function (event) {
