@@ -8,9 +8,7 @@
     background-color: #fbfbfb;
     border: 1px solid #dedede;
     margin-top: 40px;
-
     padding: 0;
-
     margin-bottom: 229px;
     padding: 0;
     @include breakpoint(max-width 600px){
@@ -28,7 +26,7 @@
         width: 100%;
         padding: 20px 14px;
         @include box-sizing(border-box);
-        text-align: center;
+        text-align: left;
         text-transform: capitalize;
         color: #040000;
         font-size: 17px;
@@ -89,6 +87,16 @@
       width: calc(100% - 331px);
       background-color: #fbfbfb;
       margin-right: 15px;
+    }
+    &--return{
+      display: block;
+      position: relative;
+      float: left;
+      color: black;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 14px 40px;
+      @include box-sizing(border-box);
     }
     &--link{
       display: block;
@@ -271,6 +279,7 @@
     position: relative;
     float: left;
     width: 100%;
+    margin-bottom: 50px;
     background-color: #fff;
   }
   &__add-company-form{
