@@ -19,7 +19,7 @@
 //         });
 //     }
 // });
-if($('#map').length > 0){
+if ($('#map').length > 0) {
     var map = new Map();
     map.init({
         selector: '#map',
@@ -534,19 +534,19 @@ $(document).ready(function () {
     businessSlider.owlCarousel({
         loop: true,
         nav: false,
-        margin:0,
-        responsive:{
-            0:{
-                items:1
+        margin: 0,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:3
+            600: {
+                items: 3
             },
-            960:{
-                items:5
+            960: {
+                items: 5
             },
-            1200:{
-                items:6
+            1200: {
+                items: 6
             }
         }
     });
@@ -666,12 +666,11 @@ $(document).ready(function () {
     });
     /*close single business goods tabs*/
 
-
     /*add business review*/
     $(document).on('click', '#add-review', function (event) {
         event.preventDefault();
         var revTextarea = $(this).next('.business__form');
-        if(revTextarea.hasClass('open')){
+        if (revTextarea.hasClass('open')) {
             revTextarea.removeClass('open').slideUp('fast');
         } else {
             revTextarea.addClass('open').slideDown('fast');
@@ -680,10 +679,9 @@ $(document).ready(function () {
     });
     /*close add business review*/
 
-
     /*modal delivery second step show*/
     $(document).on('click', '.modal-callback__first-step .show-more', function (event) {
-       event.preventDefault();
+        event.preventDefault();
         var first = $('#modal-order-delivery').find('.modal-callback__first-step'),
             second = $('#modal-order-delivery').find('.modal-callback__second-step');
 
@@ -693,10 +691,10 @@ $(document).ready(function () {
     $(document).on('click', '.modal-callback__trigger', function (event) {
         event.preventDefault();
         var textarea = $(this).next('.modal-callback__textarea');
-        if($(this).hasClass('open')){
+        if ($(this).hasClass('open')) {
             $(this).removeClass('open');
             textarea.slideUp('500');
-        } else{
+        } else {
             $('.modal-callback__trigger').removeClass('open');
             $('.modal-callback__textarea').slideUp('500');
             $(this).addClass('open');
@@ -704,6 +702,28 @@ $(document).ready(function () {
         }
     });
     /*close modal delivery second step show*/
+
+    /*add form fields in cabinet step 3*/   
+    $(document).on('click', '.add-field', function (event) {
+        event.preventDefault();       
+       /* var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
+            addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
+            count = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count');//счетчик 
+       
+        console.log( addedBox );
+        if (count < 10) { //условие на максимум 10 полей
+            $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1 
+            $(wrapper).append(addedBox);//добавляем поля            
+        }*/
+
+        /*$(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
+            e.preventDefault();
+            $(this).parent('div').remove();
+            x--;
+        })*/
+
+    });
+    /*close add form fields in cabinet step 3*/
 
 });
 
@@ -736,21 +756,23 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
 }
 
 
-$(document).ready(function() {
-    var max_fields      = 10; //maximum input boxes allowed
-    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
-    var add_button      = $(".add_field_button"); //Add button ID
+$(document).ready(function () {
+    /*var max_fields = 10; //maximum input boxes allowed
+    var wrapper = $(".input_fields_wrap"); //Fields wrapper
+    var add_button = $(".add_field_button"); //Add button ID
 
     var x = 1; //initlal text box count
-    $(add_button).click(function(e){ //on add input button click
+    $(add_button).click(function (e) { //on add input button click
         e.preventDefault();
-        if(x < max_fields){ //max input box allowed
+        if (x < max_fields) { //max input box allowed
             x++; //text box increment
             $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">убрать</a></div>'); //add input box
         }
     });
 
-    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-        e.preventDefault(); $(this).parent('div').remove(); x--;
-    })
+    $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
+        e.preventDefault();
+        $(this).parent('div').remove();
+        x--;
+    })*/
 });
