@@ -22,7 +22,25 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 12px;
+        &:after{
+          display: block;
+          position: absolute;
+          content: "";
+          bottom: -1px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #242424;
+          transition: width ease-in-out 0.4s;
+        }
       }
+      a:hover{
+        &:after{
+          width: 100%;
+        }
+      }
+
+
     }
   }
 }

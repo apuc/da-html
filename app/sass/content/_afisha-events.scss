@@ -3,7 +3,7 @@
   float: left;
   position: relative;
   margin-bottom: 40px;
- 
+
   .show-more{
     font-size: 12px;
     font-weight: 700;
@@ -136,10 +136,27 @@
       display: inline-block;
       width: 100%;
     }
+    .show-more{
+      background-color: transparent;
+      margin-top: -4px;
+      display: none;
+      span{
+        width: 25px;
+        left: -40px;
+        position: relative;
+      }
+    }
+    &:hover{
+      .show-more{
+        display: block;
+      }
+    }
   }
 }
 
-
+.interested{
+  padding-bottom: 40px;
+}
 .events-day{
   width: 100%;
   float: left;
@@ -208,13 +225,26 @@
         font-weight: 700;
         margin: 5px 0;
         font-size: 17px;
+        padding-left: 0;
       }
       .social-wrap{
-        width: 100%;
-        float: right;
-        display: inline-block;
+        width: initial;
+        display: none;
+        position: absolute;
+        margin-top: -32px;
+        right: 6px;
         .social-wrap__item{
           size: 15px;
+          margin-right: 2px;
+          img{
+            size: 10px;
+            top: 0;
+          }
+        }
+      }
+      &:hover{
+        .social-wrap{
+          display: block;
         }
       }
     }
@@ -270,6 +300,7 @@
 .datepicker-wrap{
   padding-top: 9px;
   box-sizing: border-box;
+  margin-left: 12px;
 }
 
 .datepicker-inline{
