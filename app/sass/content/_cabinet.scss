@@ -62,7 +62,7 @@
     float: left;
     width: calc(100% - 225px);
     margin-top: 40px;
-    h3{
+    > h1{
       display: block;
       position: relative;
       float: left;
@@ -80,11 +80,20 @@
     position: relative;
     float: left;
     width: 100%;
+    margin-left: -1px;
     &--box{
       display: block;
       position: relative;
       float: left;
       width: calc(100% - 331px);
+      background-color: #fbfbfb;
+      margin-right: 15px;
+    }
+    &--full-box{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
       background-color: #fbfbfb;
       margin-right: 15px;
     }
@@ -111,6 +120,33 @@
       }
     }
     &--link{
+      display: block;
+      position: relative;
+      float: left;
+      text-align: center;
+      color: black;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 14px 40px;
+      @include box-sizing(border-box);
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        top: 35px;
+        left: calc(50% - (22px/2));
+        transform: rotate(45deg);
+        background-color: transparent;
+      }
+      span{
+        color: #959595;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+    &--link.active{
       display: block;
       position: relative;
       float: left;
@@ -164,6 +200,13 @@
     @include box-sizing(border-box);
     .business__sm-item {
       width: 212px;
+    }
+    .news__wrap_item-sm{
+      width: 282px;
+      margin-bottom: 35px;
+      .content-item:after {
+        bottom: -13px;
+      }
     }
   }
   &__add{
@@ -402,6 +445,68 @@
       height: 39px;
       margin-right: 50px;
       margin-bottom: 40px;
+    }
+  }
+  &__consultation{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding: 28px 30px;
+    @include box-sizing(border-box);
+    &--item{
+      display: block;
+      position: relative;
+      float: left;
+      width: 330px;
+      padding-left: 18px;
+      padding-right: 18px;
+      @include box-sizing(border-box);
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 0;
+        background-color: #ee2e24;
+        @include transition(0.4s);
+      }
+      h3{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        padding: 0;
+        text-transform: uppercase;
+        color: #040000;
+        font-size: 16px;
+      }
+      p{
+        display: block;
+        display: -webkit-box;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: calc(12px * 1.4 * 4);
+        margin: 0;
+        color: #040000;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.4;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    &--item:hover:before{
+      height: 69px;
+      @include transition(0.4s);
     }
   }
 }
