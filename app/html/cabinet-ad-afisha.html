@@ -26,7 +26,7 @@
                     <a href="#" >Соц сети</a>
                 </div>
 
-                <a href="#" class="show-more">Редактировать</a>
+                <a href="#" class="show-more">Сохранить</a>
 
                 <a href="#" class="show-more">Добавить</a>
 
@@ -35,26 +35,43 @@
             <div class="cabinet__container cabinet__container_white">
               <form action="" class="setting-account-form">
                 <div class="row-form">
-                  <label for="">Имя</label>
-                  <input type="text">
+                  <label for="">Категория</label>
+                  <select>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                  </select>
                 </div>
                 <div class="row-form">
-                  <label for="">Публичный email</label>
+                  <label for="">Название мероприятия</label>
                   <input type="text">
-                  <div class="memo-error">
-                    <p>E-mail адресс не похож на настоящий</p>
-                  </div>
+                </div>
+                <div class="row-form input_fields_wrap">
+                  <label for="">Адрес проведения</label>
+                  <div class="add-input"><input type="text" name="mytext[]"></div>
+                  <button class="add_field_button">Добавить</button>
                 </div>
                 <div class="row-form">
-                  <label >Фото</label>
+                  <label >Обложка мероприятия</label>
                     <label class="file_upload">
                     <span class="button"></span>
                     <input class="input-file" type="file">
                   </label>
                 </div>
                 <div class="row-form">
-                  <label for="">О себе</label>
+                  <label for="">Дата проведения</label>
                   <input type="text">
+                </div>
+
+                <div class="row-form input_fields_wrap">
+                  <label for="">Телефон</label>
+                  <div class="add-input"><input type="text" name="mytext[]"></div>
+                  <button class="add_field_button">Добавить</button>
+                </div>
+                <div class="row-form">
+                  <label for="">Описание</label>
+                  <textarea></textarea>
                 </div>
                   <button  type="submit" class="reg-form-send">Сохранить</button>
               </form>

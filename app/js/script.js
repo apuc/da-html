@@ -38,7 +38,7 @@ if($('#map').length > 0){
                 ]
             }
         ]
-    });  
+    });
 }
 
 $(document).ready(function () {
@@ -313,7 +313,7 @@ $(document).ready(function () {
     });
     /*close send message modal validation*/
     /*close send message modal*/
-    
+
     /*callback modal*/
     $(document).on('click', '#callback', function () {
         event.preventDefault();
@@ -391,7 +391,7 @@ $(document).ready(function () {
                 $(this).css('display', 'none');
                 $('#modal-review-success').css('display', 'block').animate({opacity: 1}, 200);
             }
-        );        
+        );
     });
     $(document).on('click', '#black-overlay', function () {
         $('#modal-review-success').animate({opacity: 0}, 200,
@@ -559,7 +559,7 @@ $(document).ready(function () {
         e.preventDefault();
     });
     /*close businnes owl.slider*/
-    
+
     /*business sidebar script*/
     $('.business__sidebar--items ul li a').on('click', function () {
         event.preventDefault();
@@ -649,7 +649,7 @@ $(document).ready(function () {
         $(tabId).fadeIn();
     });
     /*close business pkg tabs*/
-    
+
     /*single business goods tabs*/
     $('.business__goods-content--wrapper').each(function (i) {
         if (i != 0) {
@@ -665,15 +665,28 @@ $(document).ready(function () {
         $(tabId).fadeIn();
     });
     /*close single business goods tabs*/
-    
 
-    
+
+    /*add business review*/
+    $(document).on('click', '#add-review', function (event) {
+        event.preventDefault();
+        var revTextarea = $(this).next('.business__form');
+        if(revTextarea.hasClass('open')){
+            revTextarea.removeClass('open').slideUp('fast');
+        } else {
+            revTextarea.addClass('open').slideDown('fast');
+        }
+
+    });
+    /*close add business review*/
+
+
     /*modal delivery second step show*/
     $(document).on('click', '.modal-callback__first-step .show-more', function (event) {
        event.preventDefault();
         var first = $('#modal-order-delivery').find('.modal-callback__first-step'),
             second = $('#modal-order-delivery').find('.modal-callback__second-step');
-        
+
         first.slideUp('500');
         second.slideDown('500');
     });
@@ -721,3 +734,23 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
         }
     }
 }
+
+
+$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">убрать</a></div>'); //add input box
+        }
+    });
+
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+});
