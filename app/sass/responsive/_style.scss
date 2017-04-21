@@ -125,7 +125,58 @@
 }
 
 @media only screen and (max-width: 736px) {
+  .select{
+    margin-top: 23px;
+  }
+  .header-ipanel {
+    height: 68px;
+  }
+  .currency-panel, .weather, .header-ipanel form{
+    display: none;
+  }
+  .home-content__wrap{
+    width: 100%;
+    margin: 0;
+  }
+  .enterprises__wrap .item-large, .enterprises__wrap .item-small{
+    width: 100%;
+  }
+  .home-content__wrap_enterprises .title a{
+    width: 100%;
+    text-align: left;
+  }
+  .home-content__wrap_checkpoint, .home-content__wrap_komunalka, .home-content__wrap_subscribe{
+    display: none;
+  }
+  .home-content__tape{
+    width: 100%;
+    margin: 20px 0 0;
+  }
+  .home-content__sidebar, .home-content__sidebar_poll, .home-content__sidebar_consultation, .home-content__sidebar_exchange{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .home-content__sidebar_stock{
+    display: none;
+  }
+  .news-slider-index{
+    display: none;
+  }
+  .ads{
+    display: none;
 
+  }
+  .afisha-wrap__event .item, .afisha-wrap__look .item {
+    width: 48%;
+  }
+  .company__box .item-large, .company__box .item-small{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .photo{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 680px) {
