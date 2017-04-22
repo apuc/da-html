@@ -227,6 +227,17 @@
     }
     .show-more{
       margin-top: 9px;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      padding: 10px 25px;
+      @include box-sizing(border-box);
+      background-color: #ee2e24;
+      border-radius: 5px;
+      text-decoration: none;
     }
   }
   &__packages{
@@ -425,6 +436,12 @@
       }
     }
     &--hover-wrapper{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--hover-elements{
       @include display-flex(flex);
       @include flex-wrap(wrap);
       position: relative;
@@ -432,6 +449,9 @@
       width: 100%;
       > .cabinet__add-company-form--title, .cabinet__add-company-form--notice{
         color: transparent;
+      }
+      > .cabinet__add-company-form--notice{
+        width: 224px;
       }
       > .show-more{
         display: block;
@@ -510,6 +530,7 @@
       height: 39px;
       margin-right: 50px;
       margin-bottom: 40px;
+      cursor: pointer;
     }
   }
   &__consultation{
@@ -527,6 +548,8 @@
       width: 330px;
       padding-left: 18px;
       padding-right: 18px;
+      margin-bottom: 50px;
+      margin-right: 79px;
       @include box-sizing(border-box);
       &:before{
         display: block;
@@ -539,7 +562,7 @@
         background-color: #ee2e24;
         @include transition(0.4s);
       }
-      h3{
+      > h3{
         display: block;
         position: relative;
         float: left;
@@ -550,8 +573,11 @@
         text-transform: uppercase;
         color: #040000;
         font-size: 16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
-      p{
+      > p{
         display: block;
         display: -webkit-box;
         position: relative;
@@ -567,6 +593,16 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+      > .separator{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 2px;
+        top: 118px;
+        margin-left: calc(50% - (150px/2));
+        background-color: #bababa;
       }
     }
     &--item:hover:before{

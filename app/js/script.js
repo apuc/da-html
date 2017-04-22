@@ -706,22 +706,29 @@ $(document).ready(function () {
     /*add form fields in cabinet step 3*/   
     $(document).on('click', '.add-field', function (event) {
         event.preventDefault();       
-       /* var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
-            addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
-            count = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count');//счетчик 
+        var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
+            // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
+            count = wrapper.attr('data-count');//счетчик 
        
-        console.log( addedBox );
+       /* console.log( addedBox );*/
         if (count < 10) { //условие на максимум 10 полей
             $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1 
-            $(wrapper).append(addedBox);//добавляем поля            
-        }*/
+            $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' + 
+                              '<p class="cabinet__add-company-form--title"></p>' + 
+                              '<input class="cabinet__add-company-form--field" type="text" name="mytext[]">' + 
+                              '<a href="#" class="show-more remove-field">удалить</a>' + 
+                              '<p class="cabinet__add-company-form--notice"></p>' + 
+                              '</div>');//добавляем поля            
+        }       
 
-        /*$(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
-            e.preventDefault();
-            $(this).parent('div').remove();
-            x--;
-        })*/
-
+    });
+    $(document).on('click', '.remove-field', function (event) {
+        event.preventDefault();
+        var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
+            addedBox = $(this).closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
+            count = wrapper.attr('data-count');//счетчик             
+            addedBox.remove();
+            wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1        
     });
     /*close add form fields in cabinet step 3*/
 
