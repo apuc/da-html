@@ -1,24 +1,3 @@
-// var map, map_2, map_3;
-// ymaps.ready(function () {
-//     if ($('#map').length > 0) {
-//         map = new ymaps.Map("map", {
-//             center: [59.94, 30.32],
-//             zoom: 12
-//         });
-//     }
-//     if ($('#map_2').length > 0) {
-//         map_2 = new ymaps.Map("map_2", {
-//             center: [48.0054, 37.7709],
-//             zoom: 12
-//         });
-//     }
-//     if ($('#map_3').length > 0) {
-//         map_3 = new ymaps.Map("map_3", {
-//             center: [59.94, 30.32],
-//             zoom: 12
-//         });
-//     }
-// });
 if ($('#map').length > 0) {
     var map = new Map();
     map.init({
@@ -31,7 +10,7 @@ if ($('#map').length > 0) {
                 options: [
                     {key: 'draggable', value: false},
                     {key: 'iconLayout', value: 'default#image'},
-                    {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
+                    {key: 'iconImageHref', value: '/theme/portal-donbassa/img/icons/map-marker-icon.png'}
                 ],
                 properties: [
                     {key: 'balloonContentHeader', value: $('.map-placemarks-title').html()}
@@ -761,75 +740,3 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
         }
     }
 }
-
-// validate text input (special chars, min, max length)
-function validateTextInput(field, min, max, special, fieldname) {
-    special = typeof special !== 'undefined' ? special : true;
-    fieldname = typeof fieldname !== 'undefined' ? fieldname : '';
-
-    var textMin = 'Не менее' + min + 'символов',
-        textMax = 'Не более ' + max + ' символов',
-        textSpec = 'Специальные символы запрещены',
-        textEmpty = 'Не должно быть пустым';
-
-
-    if (fieldname['min']) {
-        textMin = fieldname['min'];
-    }
-
-    if (fieldname['max']) {
-        textMax = fieldname['max'];
-    }
-
-    if (fieldname['spec']) {
-        textSpec = fieldname['spec'];
-    }
-
-    if (fieldname['empty']) {
-        textEmpty = fieldname['empty'];
-    }
-
-    if (field.val().length < min) {
-        inputError(field);
-        return textMin;
-    } else if (field.val().length > max) {
-        inputError(field);
-        return textMax;
-    }  else if (/^ *$/.test(field.val()) && min > 0) {
-        inputError(field);
-        return textEmpty;
-    } else if (special){
-        if(!field.val().match(/^[А-яA-z0-9\-_!,.:+=?)(\s]*$/)) {
-            inputError(field);
-            return textSpec;
-        } else {
-            inputSuccess(field);
-            return false;
-        }
-    } else {
-        inputSuccess(field);
-        return false;
-    }
-}
-
-
-$(document).ready(function () {
-    /*var max_fields = 10; //maximum input boxes allowed
-    var wrapper = $(".input_fields_wrap"); //Fields wrapper
-    var add_button = $(".add_field_button"); //Add button ID
-
-    var x = 1; //initlal text box count
-    $(add_button).click(function (e) { //on add input button click
-        e.preventDefault();
-        if (x < max_fields) { //max input box allowed
-            x++; //text box increment
-            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">убрать</a></div>'); //add input box
-        }
-    });
-
-    $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
-        e.preventDefault();
-        $(this).parent('div').remove();
-        x--;
-    })*/
-});
