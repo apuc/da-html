@@ -755,6 +755,56 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
     }
 }
 
+// validate text input (special chars, min, max length)
+function validateTextInput(field, min, max, special, fieldname) {
+    special = typeof special !== 'undefined' ? special : true;
+    fieldname = typeof fieldname !== 'undefined' ? fieldname : '';
+
+    var textMin = 'Не менее' + min + 'символов',
+        textMax = 'Не более ' + max + ' символов',
+        textSpec = 'Специальные символы запрещены',
+        textEmpty = 'Не должно быть пустым';
+
+
+    if (fieldname['min']) {
+        textMin = fieldname['min'];
+    }
+
+    if (fieldname['max']) {
+        textMax = fieldname['max'];
+    }
+
+    if (fieldname['spec']) {
+        textSpec = fieldname['spec'];
+    }
+
+    if (fieldname['empty']) {
+        textEmpty = fieldname['empty'];
+    }
+
+    if (field.val().length < min) {
+        inputError(field);
+        return textMin;
+    } else if (field.val().length > max) {
+        inputError(field);
+        return textMax;
+    }  else if (/^ *$/.test(field.val()) && min > 0) {
+        inputError(field);
+        return textEmpty;
+    } else if (special){
+        if(!field.val().match(/^[А-яA-z0-9\-_!,.:+=?)(\s]*$/)) {
+            inputError(field);
+            return textSpec;
+        } else {
+            inputSuccess(field);
+            return false;
+        }
+    } else {
+        inputSuccess(field);
+        return false;
+    }
+}
+
 
 $(document).ready(function () {
     /*var max_fields = 10; //maximum input boxes allowed
