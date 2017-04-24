@@ -13,6 +13,11 @@
     padding: 0;
     @include breakpoint(max-width 600px){
       margin-bottom: 0;
+      position: absolute;
+      top: 63px;
+      z-index: 2;
+      left: -225px;
+      @include transition(0.4s);
     }
     li {
       display: block;
@@ -56,12 +61,21 @@
       }
     }
   }
+  &__nav.open{
+    @include breakpoint(max-width 600px){
+      left: 0;
+      @include transition(0.4s);
+    }
+  }
   &__wrapper{
     display: block;
     position: relative;
     float: left;
     width: calc(100% - 225px);
     margin-top: 40px;
+    @include breakpoint(max-width 600px){
+      width: 100%;
+    }
     > h1{
       display: block;
       position: relative;
@@ -73,6 +87,9 @@
       margin: 0;
       padding: 15px 21px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 600px){
+        cursor: pointer;
+      }
     }
   }
   &__links{
@@ -88,6 +105,16 @@
       width: calc(100% - 331px);
       background-color: #fbfbfb;
       margin-right: 15px;
+      @include breakpoint(max-width 770px){
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
     &--full-box{
       display: block;
@@ -166,6 +193,9 @@
         left: calc(50% - (22px/2));
         transform: rotate(45deg);
         background-color: #fbfbfb;
+        @include breakpoint(max-width 600px){
+          display: none;
+        }
       }
       span{
         color: #959595;
@@ -176,6 +206,12 @@
     .show-more{
       width: 151px;
       margin-top: 6px;
+      @include breakpoint(max-width 770px){
+        margin-left: 15px;
+      }
+      @include breakpoint(max-width 600px){
+        margin-left: 15px;
+      }
       &__icon{
         display: block;
         position: relative;
@@ -198,6 +234,10 @@
     padding-left: 12px;
     padding-top: 28px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 600px){
+      padding-left: 12px;
+      padding-right: 12px;
+    }
     .business__sm-item {
       width: 212px;
     }

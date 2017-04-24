@@ -11,6 +11,11 @@
       margin-right: 14px;
       margin-left: 10px;
       margin-bottom: 20px;
+      @include breakpoint(max-width 600px){
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
       &:last-of-type{
         margin-right: 0;
       }
@@ -22,6 +27,9 @@
         width: 100%;
         height: 153px;
         transition: top 0.2s linear;
+        @include breakpoint(max-width 600px){
+          top: 112px;
+        }
         .type{
           display: block;
           position: relative;

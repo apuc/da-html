@@ -45,6 +45,7 @@ $(document).ready(function () {
         });
     }
     /*hamburger*/
+
     /*hamburger-news*/
     $(".toggle_mnu__rubrick").click(function () {
         if ($("#dotscustom").is(":visible")) {
@@ -210,7 +211,6 @@ $(document).ready(function () {
         return false;
 
     });
-
 
     /*afisha*/
     $('.fancybox').fancybox({
@@ -388,29 +388,27 @@ $(document).ready(function () {
         $(this).addClass('page__tabs_active');
         event.preventDefault();
         var target = ($(this).data('tab'));
-
         $('.page__tabcontent').hide();
         $("." + target).show();
     });
     /* close tabs */
 
     /* komunalka */
-
     $(".komunalka__item").hover(function (e) {
         e.preventDefault();
         $(".komunalka__item").removeClass('komunalka__line_active');
         $(this).addClass('komunalka__line_active');
     });
-
     /* komunalka */
+
     // input
     $(".search-input").click(function (e) {
         e.preventDefault();
         $(".search-input").removeClass('search_input_acive');
         $(this).addClass('search_input_acive', {duration: 1000});
     });
-    // input
 
+    // input
     $('.open-soc').click(function (event) {
         // $(this).next('.hide-social').slideToggle();
         var prev = $(this).prev('.hide-social');
@@ -445,7 +443,6 @@ $(document).ready(function () {
 
 
     /* scroll fixed socials */
-
     $('#aside').hcSticky();
 
 
@@ -710,6 +707,22 @@ $(document).ready(function () {
             wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1        
     });
     /*close add form fields in cabinet step 3*/
+
+    /*show cabinet menu*/
+    $(document).on('click', '.cabinet__wrapper > h1', function () {
+       if(window.innerWidth < 600){
+           var cabinetMenu = $(this).closest('.cabinet').find('.cabinet__nav');
+           console.log( cabinetMenu );
+           if($(this).hasClass('open')){
+               $(this).removeClass('open');
+               cabinetMenu.removeClass('open');
+           } else{
+               $(this).addClass('open');
+               cabinetMenu.addClass('open');
+           }
+       }
+    });
+    /*close show cabinet menu*/
 
 });
 
