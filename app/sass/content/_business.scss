@@ -22,8 +22,9 @@
       margin-right: 0;
     }
     .show-more {
-      float: right;
-      margin-right: 176px;
+      width: 160px;
+      float: left;
+      margin-left: calc(50% - (160px/2));
       margin-top: 57px;
       margin-bottom: 58px;
       @include breakpoint(max-width 600px) {
@@ -1223,6 +1224,9 @@
       margin-left: 28px;
       padding: 0 10px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
       h3 {
         display: block;
         position: relative;
