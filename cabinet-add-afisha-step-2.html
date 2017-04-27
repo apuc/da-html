@@ -91,7 +91,7 @@
 
 <!-- end header.html-->
 
-<!-- start cabinet-ad-afisha.html-->
+<!-- start cabinet-add-afisha-st2.html-->
 <section class="cabinet">
 
     <div class="container">
@@ -123,55 +123,91 @@
 
               </div>
 
+
                 <a href="#" class="show-more">Сохранить</a>
 
-                <a href="#" class="show-more">Добавить</a>
+                <a href="#" class="show-more"><span class="show-more__icon"></span>Добавить</a>
 
             </div>
 
-            <div class="cabinet__container cabinet__container_white">
-              <form action="" class="setting-account-form">
-                <div class="row-form">
-                  <label for="">Категория</label>
-                  <select>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                  </select>
-                </div>
-                <div class="row-form">
-                  <label for="">Название мероприятия</label>
-                  <input type="text">
-                </div>
-                <div class="row-form input_fields_wrap">
-                  <label for="">Адрес проведения</label>
-                  <div class="add-input"><input type="text" name="mytext[]"></div>
-                  <button class="add_field_button">Добавить</button>
-                </div>
-                <div class="row-form">
-                  <label >Обложка мероприятия</label>
-                    <label class="file_upload">
-                    <span class="button"></span>
-                    <input class="input-file" type="file">
-                  </label>
-                </div>
-                <div class="row-form">
-                  <label for="">Дата проведения</label>
-                  <input type="text">
+            <div class="cabinet__container">
+
+                <div class="cabinet__add-company">
+
+                    <form action="" class="cabinet__add-company-form">
+
+                        <p class="cabinet__add-company-form--title">Категория</p>
+
+                        <select class="cabinet__add-company-form--field" name="" id="form-select">
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5"></option>
+                        </select>
+
+                        <div class="cabinet__add-company-form--block"></div>
+
+                        <p class="cabinet__add-company-form--title">Название мероприятия</p>
+
+                        <input class="cabinet__add-company-form--field" type="text">
+
+                        <div class="cabinet__add-company-form--block"></div>
+
+                        <div class="cabinet__add-company-form--wrapper">
+
+                            <p class="cabinet__add-company-form--title">Адрес проведения</p>
+
+                            <input class="cabinet__add-company-form--field" type="text">
+
+                            <a href="#" class="show-more add-field">добавить</a>
+
+                            <p class="cabinet__add-company-form--notice"></p>
+
+                        </div>
+
+                        <div class="cabinet__add-company-form--hover-wrapper" data-count="1">
+
+                        </div>
+
+                        <p class="cabinet__add-company-form--title">Обложка мероприятия</p>
+
+                        <label class="cabinet__add-company-form--add-foto">
+                            <span class="button"></span>
+                            <input class="input-file" type="file">
+                        </label>
+
+                        <div class="cabinet__add-company-form--block"></div>
+
+                        <p class="cabinet__add-company-form--title">Дата проведения</p>
+
+                        <input class="cabinet__add-company-form--field" type="text">
+
+                        <div class="cabinet__add-company-form--block"></div>
+
+                        <div class="cabinet__add-company-form--wrapper">
+
+                            <p class="cabinet__add-company-form--title">Телефон</p>
+
+                            <input class="cabinet__add-company-form--field" type="text">
+
+                            <a href="#" class="show-more add-field">добавить</a>
+
+                            <p class="cabinet__add-company-form--notice"></p>
+
+                        </div>
+
+                        <div class="cabinet__add-company-form--hover-wrapper" data-count="1">
+
+                        </div>
+
+                        <p class="cabinet__add-company-form--title">Описание</p>
+
+                        <textarea class="cabinet__add-company-form--text"></textarea>
+
+                    </form>
                 </div>
 
-                <div class="row-form input_fields_wrap">
-                  <label for="">Телефон</label>
-                  <div class="add-input"><input type="text" name="mytext[]"></div>
-                  <button class="add_field_button">Добавить</button>
-                </div>
-                <div class="row-form row-form-textarea">
-                  <label for="">Описание</label>
-                  <textarea></textarea>
-                </div>
-                  <button  type="submit" class="reg-form-send">Сохранить</button>
-              </form>
             </div>
 
 
@@ -181,7 +217,7 @@
 
 </section>
 
-<!-- end cabinet-ad-afisha.html-->
+<!-- end cabinet-add-afisha-st2.html-->
 
 <!-- start footer.html-->
 <footer class="footer">
@@ -406,6 +442,7 @@
 <script src="js/fancybox/jquery.fancybox-media.js" type="text/javascript"></script>
 <script src="js/fancybox/jquery.fancybox-thumbs.js" type="text/javascript"></script>
 <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox.js" type="text/javascript"></script>
 <script src="js/map.js" type="text/javascript"></script>
 <script src="js/script.min.js" type="text/javascript"></script>
 <script src='js/jquery.hc-sticky.min.js' type="text/javascript"></script>

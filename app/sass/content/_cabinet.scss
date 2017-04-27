@@ -13,6 +13,11 @@
     padding: 0;
     @include breakpoint(max-width 600px){
       margin-bottom: 0;
+      position: absolute;
+      top: 63px;
+      z-index: 2;
+      left: -225px;
+      @include transition(0.4s);
     }
     li {
       display: block;
@@ -56,12 +61,21 @@
       }
     }
   }
+  &__nav.open{
+    @include breakpoint(max-width 600px){
+      left: 0;
+      @include transition(0.4s);
+    }
+  }
   &__wrapper{
     display: block;
     position: relative;
     float: left;
     width: calc(100% - 225px);
     margin-top: 40px;
+    @include breakpoint(max-width 600px){
+      width: 100%;
+    }
     > h1{
       display: block;
       position: relative;
@@ -73,6 +87,9 @@
       margin: 0;
       padding: 15px 21px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 600px){
+        cursor: pointer;
+      }
     }
   }
   &__links{
@@ -88,6 +105,16 @@
       width: calc(100% - 331px);
       background-color: #fbfbfb;
       margin-right: 15px;
+      @include breakpoint(max-width 770px){
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
     &--full-box{
       display: block;
@@ -166,6 +193,9 @@
         left: calc(50% - (22px/2));
         transform: rotate(45deg);
         background-color: #fbfbfb;
+        @include breakpoint(max-width 600px){
+          display: none;
+        }
       }
       span{
         color: #959595;
@@ -176,6 +206,12 @@
     .show-more{
       width: 151px;
       margin-top: 6px;
+      @include breakpoint(max-width 770px){
+        margin-left: 15px;
+      }
+      @include breakpoint(max-width 600px){
+        margin-left: 15px;
+      }
       &__icon{
         display: block;
         position: relative;
@@ -198,6 +234,10 @@
     padding-left: 12px;
     padding-top: 28px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 600px){
+      padding-left: 12px;
+      padding-right: 12px;
+    }
     .business__sm-item {
       width: 212px;
     }
@@ -227,6 +267,17 @@
     }
     .show-more{
       margin-top: 9px;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      padding: 10px 25px;
+      @include box-sizing(border-box);
+      background-color: #ee2e24;
+      border-radius: 5px;
+      text-decoration: none;
     }
   }
   &__packages{
@@ -425,6 +476,12 @@
       }
     }
     &--hover-wrapper{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--hover-elements{
       @include display-flex(flex);
       @include flex-wrap(wrap);
       position: relative;
@@ -432,6 +489,9 @@
       width: 100%;
       > .cabinet__add-company-form--title, .cabinet__add-company-form--notice{
         color: transparent;
+      }
+      > .cabinet__add-company-form--notice{
+        width: 224px;
       }
       > .show-more{
         display: block;
@@ -510,6 +570,7 @@
       height: 39px;
       margin-right: 50px;
       margin-bottom: 40px;
+      cursor: pointer;
     }
   }
   &__consultation{
@@ -527,6 +588,8 @@
       width: 330px;
       padding-left: 18px;
       padding-right: 18px;
+      margin-bottom: 50px;
+      margin-right: 79px;
       @include box-sizing(border-box);
       &:before{
         display: block;
@@ -539,7 +602,7 @@
         background-color: #ee2e24;
         @include transition(0.4s);
       }
-      h3{
+      > h3{
         display: block;
         position: relative;
         float: left;
@@ -550,8 +613,11 @@
         text-transform: uppercase;
         color: #040000;
         font-size: 16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
-      p{
+      > p{
         display: block;
         display: -webkit-box;
         position: relative;
@@ -567,6 +633,16 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+      > .separator{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 2px;
+        top: 118px;
+        margin-left: calc(50% - (150px/2));
+        background-color: #bababa;
       }
     }
     &--item:hover:before{

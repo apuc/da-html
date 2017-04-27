@@ -72,6 +72,22 @@
   position: relative;
   float: left;
   width: 100%;
+  > .show-more{
+
+  }
+}
+.show-more {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  padding: 10px 25px;
+  @include box-sizing(border-box);
+  background-color: #ee2e24;
+  border-radius: 5px;
+  text-decoration: none;
 }
 .cabinet__links{
   .show-more {
@@ -103,8 +119,6 @@
     text-decoration: none;
   }
 }
-
-
 
 .section-title{
   width: 50%;

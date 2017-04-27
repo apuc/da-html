@@ -1,24 +1,3 @@
-// var map, map_2, map_3;
-// ymaps.ready(function () {
-//     if ($('#map').length > 0) {
-//         map = new ymaps.Map("map", {
-//             center: [59.94, 30.32],
-//             zoom: 12
-//         });
-//     }
-//     if ($('#map_2').length > 0) {
-//         map_2 = new ymaps.Map("map_2", {
-//             center: [48.0054, 37.7709],
-//             zoom: 12
-//         });
-//     }
-//     if ($('#map_3').length > 0) {
-//         map_3 = new ymaps.Map("map_3", {
-//             center: [59.94, 30.32],
-//             zoom: 12
-//         });
-//     }
-// });
 if ($('#map').length > 0) {
     var map = new Map();
     map.init({
@@ -31,7 +10,7 @@ if ($('#map').length > 0) {
                 options: [
                     {key: 'draggable', value: false},
                     {key: 'iconLayout', value: 'default#image'},
-                    {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
+                    {key: 'iconImageHref', value: '/theme/portal-donbassa/img/icons/map-marker-icon.png'}
                 ],
                 properties: [
                     {key: 'balloonContentHeader', value: $('.map-placemarks-title').html()}
@@ -66,6 +45,7 @@ $(document).ready(function () {
         });
     }
     /*hamburger*/
+
     /*hamburger-news*/
     $(".toggle_mnu__rubrick").click(function () {
         if ($("#dotscustom").is(":visible")) {
@@ -231,7 +211,6 @@ $(document).ready(function () {
         return false;
 
     });
-
 
     /*afisha*/
     $('.fancybox').fancybox({
@@ -409,29 +388,27 @@ $(document).ready(function () {
         $(this).addClass('page__tabs_active');
         event.preventDefault();
         var target = ($(this).data('tab'));
-
         $('.page__tabcontent').hide();
         $("." + target).show();
     });
     /* close tabs */
 
     /* komunalka */
-
     $(".komunalka__item").hover(function (e) {
         e.preventDefault();
         $(".komunalka__item").removeClass('komunalka__line_active');
         $(this).addClass('komunalka__line_active');
     });
-
     /* komunalka */
+
     // input
     $(".search-input").click(function (e) {
         e.preventDefault();
         $(".search-input").removeClass('search_input_acive');
         $(this).addClass('search_input_acive', {duration: 1000});
     });
-    // input
 
+    // input
     $('.open-soc').click(function (event) {
         // $(this).next('.hide-social').slideToggle();
         var prev = $(this).prev('.hide-social');
@@ -466,7 +443,6 @@ $(document).ready(function () {
 
 
     /* scroll fixed socials */
-
     $('#aside').hcSticky();
 
 
@@ -540,7 +516,7 @@ $(document).ready(function () {
                 items: 1
             },
             600: {
-                items: 3
+                items: 1
             },
             960: {
                 items: 5
@@ -706,24 +682,47 @@ $(document).ready(function () {
     /*add form fields in cabinet step 3*/   
     $(document).on('click', '.add-field', function (event) {
         event.preventDefault();       
-       /* var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
-            addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
-            count = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count');//счетчик 
+        var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
+            // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
+            count = wrapper.attr('data-count');//счетчик 
        
-        console.log( addedBox );
+       /* console.log( addedBox );*/
         if (count < 10) { //условие на максимум 10 полей
             $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1 
-            $(wrapper).append(addedBox);//добавляем поля            
-        }*/
-
-        /*$(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
-            e.preventDefault();
-            $(this).parent('div').remove();
-            x--;
-        })*/
+            $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' + 
+                              '<p class="cabinet__add-company-form--title"></p>' + 
+                              '<input class="cabinet__add-company-form--field" type="text" name="mytext[]">' + 
+                              '<a href="#" class="show-more remove-field">удалить</a>' + 
+                              '<p class="cabinet__add-company-form--notice"></p>' + 
+                              '</div>');//добавляем поля            
+        }       
 
     });
+    $(document).on('click', '.remove-field', function (event) {
+        event.preventDefault();
+        var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
+            addedBox = $(this).closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
+            count = wrapper.attr('data-count');//счетчик             
+            addedBox.remove();
+            wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1        
+    });
     /*close add form fields in cabinet step 3*/
+
+    /*show cabinet menu*/
+    $(document).on('click', '.cabinet__wrapper > h1', function () {
+       if(window.innerWidth < 600){
+           var cabinetMenu = $(this).closest('.cabinet').find('.cabinet__nav');
+           console.log( cabinetMenu );
+           if($(this).hasClass('open')){
+               $(this).removeClass('open');
+               cabinetMenu.removeClass('open');
+           } else{
+               $(this).addClass('open');
+               cabinetMenu.addClass('open');
+           }
+       }
+    });
+    /*close show cabinet menu*/
 
 });
 
@@ -754,25 +753,3 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
         }
     }
 }
-
-
-$(document).ready(function () {
-    /*var max_fields = 10; //maximum input boxes allowed
-    var wrapper = $(".input_fields_wrap"); //Fields wrapper
-    var add_button = $(".add_field_button"); //Add button ID
-
-    var x = 1; //initlal text box count
-    $(add_button).click(function (e) { //on add input button click
-        e.preventDefault();
-        if (x < max_fields) { //max input box allowed
-            x++; //text box increment
-            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">убрать</a></div>'); //add input box
-        }
-    });
-
-    $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
-        e.preventDefault();
-        $(this).parent('div').remove();
-        x--;
-    })*/
-});
