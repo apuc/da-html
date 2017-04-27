@@ -15,8 +15,11 @@
     display: block;
     position: relative;
     float: left;
-    width: 856px;
+    width: calc(100% - (34px + 260px));
     margin-right: 34px;
+    @include breakpoint(max-width 770px){
+      width: calc(100% - (34px + 220px));
+    }
     @include breakpoint(max-width 600px) {
       width: 100%;
       margin-right: 0;
@@ -259,6 +262,9 @@
     width: 260px;
     background-color: white;
     border-radius: 1px;
+    @include breakpoint(max-width 770px){
+      width: 220px;
+    }
     @include breakpoint(max-width 600px) {
       width: 100%;
     }
@@ -580,6 +586,14 @@
     float: left;
     width: 100%;
     background-color: #eff0f1;
+    @include breakpoint(max-width 1200px){
+      padding-bottom: 20px;
+      @include box-sizing(border-box);
+    }
+    @include breakpoint(max-width 770px){
+      padding-bottom: 20px;
+      @include box-sizing(border-box);
+    }
     &--avatar {
       display: block;
       position: relative;
@@ -606,6 +620,12 @@
       width: 320px;
       padding-left: 23px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 1200px){
+        width: calc(100% - (110px + 15px));
+      }
+      @include breakpoint(max-width 770px){
+        width: calc(100% - (110px + 15px));
+      }
       @include breakpoint(max-width 600px) {
         width: 100%;
         padding-left: 0;
@@ -665,6 +685,14 @@
       margin-top: 55px;
       padding-left: 5%;
       @include box-sizing (border-box);
+      @include breakpoint(max-width 1200px){
+        width: 50%;
+        margin-top: 20px;
+      }
+      @include breakpoint(max-width 770px){
+        width: 50%;
+        margin-top: 20px;
+      }
       @include breakpoint(max-width 600px) {
         width: 100%;
         padding-left: 0;
@@ -718,6 +746,14 @@
       float: left;
       width: calc(100% - (110px + 15px + 320px + 254px));
       margin-top: 45px;
+      @include breakpoint(max-width 1200px){
+        width: 50%;
+        margin-top: 20px;
+      }
+      @include breakpoint(max-width 770px){
+        width: 50%;
+        margin-top: 20px;
+      }
       @include breakpoint(max-width 600px) {
         width: 100%;
       }
@@ -1048,6 +1084,7 @@
           @include breakpoint(max-width 600px) {
             width: 100%;
             margin-right: 0;
+            margin-bottom: 20px;
           }
           &:hover {
             text-decoration: none;

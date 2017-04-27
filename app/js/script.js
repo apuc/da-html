@@ -518,6 +518,12 @@ $(document).ready(function () {
             600: {
                 items: 1
             },
+            660: {
+                items: 4
+            },
+            770: {
+                items: 4
+            },
             960: {
                 items: 5
             },
@@ -741,7 +747,7 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
     var top = $(document).scrollTop(),
         blockingElement = blockElement.offset().top,
         height = element.outerHeight();//высота элемента, включающая внутренние и внешние отступы
-    if (window.innerWidth > 770) {
+    if (window.innerWidth > 1200) {
         if (top > elementPosition && top < blockingElement - height) {
             element.addClass('fixed').removeAttr("style");
         }
