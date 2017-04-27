@@ -11,6 +11,10 @@
   z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
   padding: 27px 41px;
   @include border-box;
+  @include breakpoint(max-width 600px){
+    width: 100%;
+    margin-left: 0;
+  }
   &__close {
     display: block;
     position: absolute;
