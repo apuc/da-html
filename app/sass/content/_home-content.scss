@@ -1006,6 +1006,7 @@
   text-align: center;
   z-index: 6;
   top: -130px;
+   transition: 1s;
   height: 130px;
   .thumb{
     width: 50%;
@@ -1064,6 +1065,10 @@
   }
 }
 
+.stock__item_visible_left{
+  transition: 1s;
+  left: -261px;
+}
 .red-line{
   width: 100%;
   float: left;

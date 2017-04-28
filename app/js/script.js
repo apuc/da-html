@@ -230,17 +230,22 @@ $(document).ready(function () {
     /*afisha*/
 
     // hover stoke
-    $(".mouse-area").mouseover(function () {
-
-        var visible = $(this).parent();
-        if (visible.hasClass("hover")) {
-            visible.removeClass("hover").animate({left: '0'}, 400);
-        }
-        else {
-            $(".stock__item_visible").removeClass("hover").animate({left: '0'}, 400);
-            visible.addClass("hover").animate({left: '-261px'}, 400);
-        }
-    });
+    // $(".mouse-area").mouseover(function () {
+    //
+    //     var visible = $(this).parent();
+    //     if (visible.hasClass("hover")) {
+    //         visible.removeClass("hover").animate({left: '0'}, 500);
+    //     }
+    //     else {
+    //         $(".stock__item_visible").removeClass("hover").animate({left: '0'}, 500);
+    //         visible.addClass("hover").animate({left: '-291px'}, 500);
+    //     }
+    // });
+    $(".stock__item_visible").click(function(e) {
+      e.preventDefault();
+      $(".stock__item_visible").removeClass('stock__item_visible_left').animate({left: '0'}, 100);
+      $(this).addClass('stock__item_visible_left').animate({left: '-291px'}, 100);
+    })
     // hover stoke
 
     /*show ads block on mobile*/
