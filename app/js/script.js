@@ -412,8 +412,8 @@ $(document).ready(function () {
     $('.open-soc').click(function (event) {
         // $(this).next('.hide-social').slideToggle();
         var prev = $(this).prev('.hide-social');
-        $(this).siblings('.hide-social').not(prev).slideUp("slow");
-        prev.slideToggle("slow");
+        $(this).siblings('.hide-social').not(prev).slideUp("400");
+        prev.slideToggle("400");
         return false;
     });
 
@@ -685,32 +685,32 @@ $(document).ready(function () {
     });
     /*close modal delivery second step show*/
 
-    /*add form fields in cabinet step 3*/   
+    /*add form fields in cabinet step 3*/
     $(document).on('click', '.add-field', function (event) {
-        event.preventDefault();       
-        var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
+        event.preventDefault();
+        var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
             // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
-            count = wrapper.attr('data-count');//счетчик 
-       
+            count = wrapper.attr('data-count');//счетчик
+
        /* console.log( addedBox );*/
         if (count < 10) { //условие на максимум 10 полей
-            $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1 
-            $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' + 
-                              '<p class="cabinet__add-company-form--title"></p>' + 
-                              '<input class="cabinet__add-company-form--field" type="text" name="mytext[]">' + 
-                              '<a href="#" class="show-more remove-field">удалить</a>' + 
-                              '<p class="cabinet__add-company-form--notice"></p>' + 
-                              '</div>');//добавляем поля            
-        }       
+            $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1
+            $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' +
+                              '<p class="cabinet__add-company-form--title"></p>' +
+                              '<input class="cabinet__add-company-form--field" type="text" name="mytext[]">' +
+                              '<a href="#" class="show-more remove-field">удалить</a>' +
+                              '<p class="cabinet__add-company-form--notice"></p>' +
+                              '</div>');//добавляем поля
+        }
 
     });
     $(document).on('click', '.remove-field', function (event) {
         event.preventDefault();
-        var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля 
+        var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
             addedBox = $(this).closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
-            count = wrapper.attr('data-count');//счетчик             
+            count = wrapper.attr('data-count');//счетчик
             addedBox.remove();
-            wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1        
+            wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1
     });
     /*close add form fields in cabinet step 3*/
 
