@@ -3,7 +3,6 @@
   position: relative;
   float: left;
   width: 100%;
-  // background-color: #f4f4f4;
   &__trigger{
     display: none;
     position: relative;
@@ -32,90 +31,6 @@
       border-top: 8px solid #ee2e24;
     }
   }
-  // &__box{
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   flex-direction: row;
-  //   justify-content: space-between;
-  //   position: relative;
-  //   float: left;
-  //   width: 100%;
-  // }
-  // &__item{
-  //   display: block;
-  //   position: relative;
-  //   float: left;
-  //   width: 16%;
-  //   height: 228px;
-  //   margin-bottom: 9px;
-  //   border-radius: 3px;
-  //   // border: 1px solid rgba(0, 7, 10, 0.36);
-  //   background-color: #f4f4f4;
-  //   .content{
-  //     height: 104px;
-  //     &:hover{
-  //       .company__item--title, .company__item--descr{
-  //         color: white;
-  //       }
-  //     }
-  //   }
-  //   &--image{
-  //     display: block;
-  //     position: relative;
-  //     float: left;
-  //     width: 100%;
-  //     height: 124px;
-  //     overflow: hidden;
-  //     img{
-  //       width: 100%;
-  //       height: 100%;
-  //       object-fit: cover;
-  //     }
-  //   }
-  //   &--title{
-  //     display: block;
-  //     position: relative;
-  //     float: left;
-  //     width: 100%;
-  //     margin-top: 6px;
-  //     margin-bottom: 9px;
-  //     color: #292929;
-  //     font-size: 14px;
-  //     font-weight: 700;
-  //     @include transition(0.9s);
-  //   }
-  //   &--descr{
-  //     display: block;
-  //     position: relative;
-  //     float: left;
-  //     width: 100%;
-  //     margin-top: 0;
-  //     margin-bottom: 14px;
-  //     color: #292929;
-  //     font-size: 12px;
-  //     font-weight: 400;
-  //     @include transition(0.9s);
-  //   }
-  // }
-  // &__big-item{
-  //   display: block;
-  //   position: relative;
-  //   float: left;
-  //   width: 32%;
-  //   height: 228px;
-  //   margin-bottom: 9px;
-  //   border-radius: 3px;
-  //   border: 1px solid rgba(0, 7, 10, 0.36);
-  //   background-color: #f4f4f4;
-  //   .content{
-  //     height: 104px;
-  //     &:hover{
-  //       .company__item--title, .company__item--descr{
-  //         color: white;
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 .company__box{
@@ -148,33 +63,38 @@
       background-color: #f4f4f4;
       padding: 8px;
       box-sizing: border-box;
-      // &:hover{
-      //   background-color: #292929;
-      //   h4,p{color: #fff;}
-      //   -webkit-transition-duration: 0.9s;
-      //   -moz-transition-duration: 0.9s;
-      //   -o-transition-duration:0.9s;
-      //   transition-duration: 0.9s;
-      // }
       h4{
         color: #292929;
         font-size: 15px;
         font-weight: 700;
         margin: 0;
         width: 100%;
+        height: calc(15px * 2 * 1.3);
         display: inline-block;
         text-align: left;
-
+        display: -webkit-box;
+        line-height: 1.3;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       p{
         color: #292929;
         width: 100%;
+        height: calc(12px * 1 * 1.3);
         float: left;
         display: inline-block;
+        display: -webkit-box;
+        line-height: 1.3;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin: 2px 0;
         font-size: 12px;
         font-weight: 400;
-        line-height: 20px;
+        /*line-height: 20px;*/
       }
     }
     .content-hover{
@@ -195,7 +115,6 @@
       display: block;
     }
   }
-
   .item-large{
     width: 32.4%;
   }
