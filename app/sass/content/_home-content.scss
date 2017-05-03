@@ -73,6 +73,8 @@
     height: 400px;
     overflow: hidden;
     position: relative;
+    float: left;
+    display: inline-block;
     img{
       size: 100%;
       object-fit: cover;
@@ -110,11 +112,11 @@
           margin-right: 5px;
         }
       }
-      a{
-        width: 100%;
-        display: block;
-        float: left;
-      }
+      // .wraps{
+      //   width: 100%;
+      //   display: block;
+      //   float: left;
+      // }
       h3{
         font-size: 16px;
         // font-family: $ob;
@@ -124,6 +126,7 @@
         width: 100%;
         text-align: left;
         float: left;
+        display: inline-block;
         display: inline-block;
         text-transform: uppercase;
       }
@@ -791,6 +794,7 @@
   float: left;
   display: inline-block;
   border-bottom: 1px solid #edeef0;
+  position: relative;
   h4{
     color: #090000;
     font-size: 14px;
@@ -801,6 +805,9 @@
     text-align: left;
     width: 100%;
     margin: 0;
+    a{
+      color: #090000;
+    }
   }
   .time{
     color: #ee2e24;
@@ -814,10 +821,47 @@
   }
   .open-soc{
     float: right;
+    cursor: pointer;
+
     i.fa.fa-random.fa-lg {
         font-size: 13px;
         vertical-align: 1px;
         color: #090000;
+        &:hover{
+          color: #ee2e24;
+        }
+    }
+  }
+  .hide-social{
+    padding: 5px;
+    box-sizing: border-box;
+    display: none;
+    float: left;
+    position: absolute;
+    margin-top: -7px;
+    left: 40%;
+    &::after{
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 8px solid #231f21;
+      position: absolute;
+      left: 92%;
+      margin-top: -12px;
+      transform: rotate(30deg);
+    }
+    a{
+      margin: 0 5px;
+      display: inline-block;
+    }
+    i{
+      color: #000;
+      font-size: 14px;
+      &:hover{
+        color: #ee2e24;
+      }
     }
   }
   p{
@@ -962,6 +1006,7 @@
   text-align: center;
   z-index: 6;
   top: -130px;
+   transition: 1s;
   height: 130px;
   .thumb{
     width: 50%;
@@ -1020,6 +1065,10 @@
   }
 }
 
+.stock__item_visible_left{
+  transition: 1s;
+  left: -261px;
+}
 .red-line{
   width: 100%;
   float: left;
