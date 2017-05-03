@@ -1159,6 +1159,50 @@
       }
     }
   }
+  .pol-progress-cont{
+    width: 100%;
+    float: left;
+    &:last-of-type{
+      margin-bottom: 20px;
+    }
+    .answer{
+      margin-top:7px;
+      width: 100%;
+      float: left;
+      text-align: left;
+      padding: 0 5px;
+      p{
+        font-weight: 400;
+        font-size: 13px;
+        margin-bottom: 3px;
+      }
+    }
+    .poll-progressbar{
+      float: left;
+      width: 85%;
+      height: 20px;
+      border-radius: 0;
+      border: 1px solid transparent;
+      .ui-progressbar .ui-progressbar-value{
+        background-color: #c0b9b9;
+      }
+      background-color: transparent;
+    }
+    .result{
+      width: 14%;
+      float: left;
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+  .total{
+    margin-top: 12px;
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+
 }
 
 .home-content__sidebar_consultation{

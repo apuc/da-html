@@ -135,6 +135,10 @@
       }
     }
     &:hover {
+      .span, h4{
+        text-decoration: underline;
+        text-decoration-color: #ee2e24;
+      }
       .show-more {
         display: block;
       }
