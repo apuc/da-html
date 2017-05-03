@@ -16,7 +16,6 @@
   margin-right: 30px;
   .owl-controls{
     width: 100%;
-
     .owl-nav{
       position: absolute;
       top: 124px;
@@ -45,7 +44,6 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-
       width: 100%;
       float: left;
       margin-top: 5px;
@@ -204,7 +202,7 @@
   }
 }
 
-.enterprises__wrap, {
+.enterprises__wrap {
   width: 100%;
   float: left;
   padding: 5px;
@@ -1277,6 +1275,8 @@
     float: right;
     display: inline-block;
     color: #090000;
+    background-color: transparent;
+    border-radius: 0;
     font-size: 12px;
     font-weight: 700;
     text-decoration: underline;
@@ -1370,7 +1370,6 @@
   float: left;
   position: relative;
   margin-top: 30px;
-
   .title__tabs{
     width: 100%;
     float: left;
@@ -1420,7 +1419,6 @@
 
     box-sizing: border-box;
   }
-
   .page__tabcontent{
     width: 100%;
     float: left;
@@ -1432,6 +1430,8 @@
       float: right;
       display: inline-block;
       color: #090000;
+      background-color: transparent;
+      border-radius: 0;
       font-size: 12px;
       font-weight: 700;
       padding: 5px 0;
@@ -1500,7 +1500,6 @@
       }
     }
   }
-
    .page__tabcontent_active{
     display: block;
   }
