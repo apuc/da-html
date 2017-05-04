@@ -923,6 +923,9 @@
         width: 100%;
         margin: 0;
         color: #060000;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         &:first-of-type {
           font-size: 13px;
           font-weight: 700;
