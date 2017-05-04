@@ -374,7 +374,7 @@
       border-radius: 20px;
       text-align: center;
       color: #292929;
-      font-size: 7px;
+      font-size: 11px;
       font-weight: 400;
       line-height: 33px;
       text-transform: uppercase;
@@ -532,10 +532,10 @@
       position: relative;
       float: left;
       width: 644px;
-      height: 96px;
+      height: 139px;
       margin-bottom: 40px;
       border: 1px solid #b8b8b9;
-      padding: 1px 10px;
+      padding: 5px 10px;
       @include box-sizing(border-box);
       resize: none;
     }
