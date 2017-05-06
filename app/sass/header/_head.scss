@@ -43,12 +43,31 @@
     a{
       width: 100%;
       float: left;
+      display: block;
+      position: relative;
       text-transform: uppercase;
       // font-family: $or;
       font-weight: 400;
       font-size: 14px;
       color: #242424;
       line-height: 20px;
+          &:after{
+            display: block;
+            position: absolute;
+            content: "";
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #242424;
+            transition: width ease-in-out 0.4s;
+          }
+    }
+    a:hover{
+      &:after{
+        width: 100%;
+
+      }
     }
     &:first-of-type{
       margin-right: 68px;
@@ -58,6 +77,9 @@
         font-size: 17px;
         color: #f34942;
         line-height: 20px;
+        &:after{
+          display: none;
+        }
       }
     }
   }
