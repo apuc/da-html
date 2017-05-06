@@ -420,15 +420,24 @@
     }
     p{
       width: calc(37% - 35px);
-      float: left;
-      display: inline-block;
+
       position: relative;
       color: #090000;
       font-size: 11px;
       font-weight: 600;
-      line-height: 20px;
+      // line-height: 20px;
       margin: 0;
       text-align: left;
+      display: block;
+      display: -webkit-box;
+      position: relative;
+      height: calc(11px * 1.4 * 2);
+      float: left;
+      line-height: 1.4;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
