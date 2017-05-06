@@ -387,6 +387,24 @@ $(document).ready(function () {
     });
     /*close add business review*/
 
+    /*open modal order delivery*/
+    $(document).on('click', '.add-comment', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-add-comment').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '#black-overlay', function () {
+        $('#modal-add-comment').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close modal order delivery*/
+
     /* open tabs*/
     $('.page__tabs_target').click(function (event) {
         $('.page__tabs_targett').removeClass('page__tabs_active');
