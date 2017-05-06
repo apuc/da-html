@@ -245,7 +245,12 @@ $(document).ready(function () {
       e.preventDefault();
       $(".stock__item_visible").removeClass('stock__item_visible_left').animate({left: '0'}, 100);
       $(this).addClass('stock__item_visible_left').animate({left: '-291px'}, 100);
-    })
+    });
+    $(".stock__item_close").click(function(e) {
+
+    $(".stock__item_visible").removeClass('stock__item_visible_left').animate({left: '0'}, 100);
+
+  });
     // hover stoke
 
     /*show ads block on mobile*/

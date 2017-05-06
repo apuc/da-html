@@ -80,6 +80,10 @@
         font-weight: 400;
         float: left;
         width: auto;
+        &:last-of-type{
+          float: right;
+          text-align: right;
+        }
       }
       a{
         float: right;
@@ -165,7 +169,7 @@
           font-weight: 700;
           margin: 0;
           color: #fff;
-          text-align: left;
+          text-align: left!important;
           display: block;
           float: left;
           display: -webkit-box;
@@ -180,6 +184,9 @@
       a, span{
         float: left;
         margin-right: 5px;
+        &:last-of-type{
+          float: left;
+        }
       }
     }
   }
@@ -280,7 +287,7 @@
         width: 90%;
         // padding-right: 20px;
         // box-sizing: border-box;
-        display: -webkit-box; 
+        display: -webkit-box;
         bottom: 30px;
         line-height: 1.4;
         height: calc(16px * 1.4 * 4);
