@@ -960,6 +960,7 @@
   height: 130px;
   overflow: hidden;
   border: 1px solid rgba(185, 196, 213, 0.48);
+  cursor: pointer;
 }
 
 .stock__item_hide{
@@ -969,7 +970,15 @@
   height: 130px;
   position: relative;
   background-color: #fff;
-
+  .stock__item_close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    i{
+      color: #ee2e24;
+    }
+  }
   p{
     margin: 0;
     color: #050000;
@@ -992,6 +1001,10 @@
     margin-top: 9px;
     padding-right: 10px;
     box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+
     &:hover{
       text-decoration: underline;
     }
