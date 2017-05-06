@@ -53,6 +53,7 @@
     position: relative;
     float: left;
     width: calc(100% - (403px + 180px));
+    height: 27px;
     padding: 0 9px 0 13px;
     @include border-box;
     margin-top: 50px;
