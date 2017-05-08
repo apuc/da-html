@@ -138,7 +138,6 @@
         // font-family: $or;
         font-weight: 400;
       }
-
     }
   }
 }
@@ -365,7 +364,7 @@
       display: inline-block;
       line-height: 12px;
       text-align: right;
-      top: 9px;
+      top: 6px;
       position: relative;
       .rect-icon{
         size: 10px 6px;
@@ -1294,6 +1293,8 @@
     text-align: right;
     position: relative;
     display: inline-block;
+    padding-right: 5px;
+    @include box-sizing(border-box);
     color: #050000;
     font-size: 12px;
     font-weight: 600;
@@ -1485,10 +1486,10 @@
       border-radius: 0;
       font-size: 12px;
       font-weight: 700;
-      padding: 5px 0;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      @include box-sizing(border-box);
     }
     table{
       width: 100%;
