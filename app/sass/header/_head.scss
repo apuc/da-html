@@ -51,6 +51,7 @@
       font-size: 14px;
       color: #242424;
       line-height: 20px;
+      transition: width ease-in-out 0.4s;
           &:after{
             display: block;
             position: absolute;
@@ -59,15 +60,15 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #242424;
+            background-color: #ee2e24;
             transition: width ease-in-out 0.4s;
           }
     }
     a:hover{
       color: #ee2e24;
+      transition: width ease-in-out 0.4s;
       &:after{
         width: 100%;
-
       }
     }
     &:first-of-type{

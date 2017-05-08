@@ -1383,19 +1383,22 @@
     box-sizing: border-box;
   }
   p{
+    display: block;
+    display: -webkit-box;
     color: #050000;
     font-size: 13px;
     font-weight: 600;
     width: calc(100% - 83px);
+    height: calc(13px * 3 * 1.6);
     float: left;
-    // padding-left: 15px;
     box-sizing: border-box;
-    line-height: 24px;
-    // padding-bottom: 18px;
-    height: 90px;
+    line-height: 1.6;
+    /*height: 90px;*/
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0;
-
   }
   &:nth-of-type(odd){
     border-bottom: 1px solid #edeef0;
