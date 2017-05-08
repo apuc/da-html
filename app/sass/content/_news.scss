@@ -1,18 +1,18 @@
-.news{
+.news {
   width: 100%;
   float: left;
   position: relative;
   padding: 40px 0;
   box-sizing: border-box;
-  .news-slider-index-panel{
+  .news-slider-index-panel {
     padding-left: 10px;
     box-sizing: border-box;
     margin-bottom: 8px;
-    .hot-tag{
+    .hot-tag {
       width: 100%;
       float: left;
       display: inline-block;
-      a{
+      a {
         color: #060000;
         font-size: 16px;
         font-weight: 400;
@@ -23,73 +23,73 @@
   }
 }
 
-.news__wrap{
+.news__wrap {
   width: 100%;
   float: left;
   position: relative;
-  .home-content__wrap_subscribe{
+  .home-content__wrap_subscribe {
     width: 48%;
     margin-top: 11px;
-    .subscribe__wrap{
-      h3{
+    .subscribe__wrap {
+      h3 {
         padding-bottom: 5px;
       }
-      form{
+      form {
         margin-top: 5px;
       }
     }
-    .social-wrap{
-      .social-wrap__item{
+    .social-wrap {
+      .social-wrap__item {
         margin-top: 5px;
       }
-      h4{
+      h4 {
         padding: 11px 0;
       }
     }
   }
 }
 
-.news__wrap_item-sm, .news__wrap_item-lg{
+.news__wrap_item-sm, .news__wrap_item-lg {
   width: 23%;
   float: left;
   position: relative;
   height: 225px;
   box-sizing: border-box;
   margin: 11px;
-  .thumb{
+  .thumb {
     width: 100%;
     height: 174px;
     overflow: hidden;
     float: left;
     position: relative;
-    img{
+    img {
       size: 100%;
       object-fit: cover;
     }
-    .content-row{
+    .content-row {
       position: absolute;
       width: 100%;
       bottom: 0;
       left: 0;
       padding: 10px;
       box-sizing: border-box;
-      a, span{
+      a, span {
         display: inline-block;
         color: #fff;
         font-size: 12px;
         font-weight: 400;
         float: left;
         width: auto;
-        &:last-of-type{
+        &:last-of-type {
           float: right;
           text-align: right;
         }
       }
-      a{
+      a {
         float: right;
         text-align: right;
       }
-      .view-icon{
+      .view-icon {
         background-image: url("../img/home-content/view.png");
         size: 19px 13px;
         display: block;
@@ -101,7 +101,7 @@
     }
   }
 
-  .content-item{
+  .content-item {
     width: 100%;
     float: left;
     position: relative;
@@ -111,7 +111,7 @@
     padding: 5px;
     box-sizing: border-box;
 
-    &::after{
+    &::after {
       content: "";
       width: 80%;
       height: 2px;
@@ -120,14 +120,14 @@
       left: 10%;
       bottom: 0;
     }
-    p{
+    p {
       width: 75%;
 
       margin: 0;
       text-align: left;
       display: inline-block;
       float: left;
-      a{
+      a {
         font-size: 14px;
         font-weight: 700;
         color: #000;
@@ -142,7 +142,7 @@
         text-overflow: ellipsis;
       }
     }
-    span{
+    span {
       width: 25%;
       font-size: 12px;
       font-weight: 400;
@@ -153,38 +153,34 @@
     }
   }
 
-
 }
 
-.news__wrap_item-lg{
+.news__wrap_item-lg {
   width: 48%;
-  .thumb{
+  .thumb {
     height: 225px;
-    .content-row{
-      h2{
+    .content-row {
+      h2 {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 700;
         margin: 0;
-        a{
-          width: 100%;
-          font-size: 20px;
-          font-weight: 700;
-          margin: 0;
-          color: #fff;
-          text-align: left!important;
-          display: block;
-          float: left;
-          display: -webkit-box;
-          line-height: 1.4;
-          height: calc(20px * 1.4 * 1);
-          -webkit-line-clamp: 1;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+        color: #fff;
+        text-align: left !important;
+        display: block;
+        float: left;
+        display: -webkit-box;
+        line-height: 1.4;
+        height: calc(20px * 1.4 * 1);
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
-      a, span{
+      span {
         float: left;
         margin-right: 5px;
-        &:last-of-type{
+        &:last-of-type {
           float: left;
         }
       }
@@ -192,15 +188,13 @@
   }
 }
 
-
-
-.news__wrap_buttons{
+.news__wrap_buttons {
   width: 100%;
   float: left;
   position: relative;
   text-align: center;
   margin-top: 30px;
-  a, .archive-news{
+  a, .archive-news {
     color: #090000;
     font-size: 12px;
     font-weight: 700;
@@ -229,9 +223,7 @@
   }
 }
 
-
-
-.rotate-arrow{
+.rotate-arrow {
   background-image: url("../img/home-content/red-arrow.png");
   width: 5px;
   height: 9px;
@@ -246,24 +238,23 @@
   transform: rotate(90deg);
 }
 
-
-.news__wrap_item-sm-hot{
+.news__wrap_item-sm-hot {
   width: 23%;
   float: left;
   position: relative;
   height: 225px;
   box-sizing: border-box;
   margin: 11px;
-  .thumb{
+  .thumb {
     height: 218px;
     overflow: hidden;
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  .hover-wrap{
+  .hover-wrap {
     display: inline-block;
     position: absolute;
     left: 0;
@@ -274,30 +265,30 @@
     box-sizing: border-box;
     border: 4px solid #fff;
     background-color: rgba(68, 68, 68, 0.45);
-    h2{
+    h2 {
       width: 100%;
       margin: 0;
-      a{
-        color: #fbfafa;
-        font-size: 16px;
-        font-weight: 700;
-        text-align: left;
-        position: absolute;
-        left: 20px;
-        width: 90%;
-        // padding-right: 20px;
-        // box-sizing: border-box;
-        display: -webkit-box;
-        bottom: 30px;
-        line-height: 1.4;
-        height: calc(16px * 1.4 * 4);
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+      //a{
+      color: #fbfafa;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: left;
+      position: absolute;
+      left: 20px;
+      width: 90%;
+      // padding-right: 20px;
+      // box-sizing: border-box;
+      display: -webkit-box;
+      bottom: 30px;
+      line-height: 1.4;
+      height: calc(16px * 1.4 * 4);
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      //}
     }
-    .category{
+    .category {
       width: 100%;
       float: left;
       position: relative;
@@ -306,7 +297,7 @@
       font-weight: 700;
       line-height: 18px;
       display: inline-block;
-      .category-star{
+      .category-star {
         size: 29px;
         display: inline-block;
         position: relative;
