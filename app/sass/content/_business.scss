@@ -30,6 +30,9 @@
       margin-left: calc(50% - (160px/2));
       margin-top: 57px;
       margin-bottom: 58px;
+      &:hover, &:focus, &:active{
+        color: #fff;
+      }
       @include breakpoint(max-width 600px) {
         margin-right: 50px;
       }

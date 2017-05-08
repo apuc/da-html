@@ -156,7 +156,7 @@
     .search_input_acive{
       width: 330px;
     }
-    button{
+    a{
       float: left;
       display: inline-block;
       position: relative;
@@ -167,18 +167,19 @@
       color: #fff;
       font-size: 10px;
       font-weight: 600;
-      line-height: 12px;
+      line-height: 36px;
       text-transform: uppercase;
       .autoriz-icon{
         display: inline-block;
         float: none;
         position: relative;
-        top: 3px;
-        background-repeat: no-repeat;
+        top: 5px;
+        margin-left: 12px;
         background-size: contain;
         margin-right: 5px;
         size: 14px;
         background-image: url("../img/header/autoriz-icon.png");
+        background-repeat: no-repeat;
       }
     }
   }
