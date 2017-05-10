@@ -3,7 +3,6 @@
   float: left;
   position: relative;
   margin-bottom: 40px;
-
   .show-more {
     font-size: 12px;
     font-weight: 700;
@@ -19,6 +18,7 @@
     margin-top: 20px;
   }
 }
+
 .what-to-see, .where-to-go, .interested {
   width: 100%;
   float: left;
@@ -135,7 +135,7 @@
       }
     }
     &:hover {
-      .span, h4{
+      .span, h4 {
         text-decoration: underline;
         text-decoration-color: #ee2e24;
       }
@@ -162,7 +162,7 @@
         float: left;
         width: 100%;
         font-size: 18px;
-        height: calc(18px * 1 *2);
+        height: calc(18px * 1 * 2);
         line-height: 1;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
@@ -172,6 +172,7 @@
     }
   }
 }
+
 .interested {
   padding-bottom: 40px;
 }
@@ -229,22 +230,56 @@
         text-align: left;
         width: 100%;
         color: #000;
-        display: inline-block;
+        display: block;
+        display: -webkit-box;
+        float: left;
         font-size: 11px;
         font-weight: 400;
       }
       .date, .place {
         font-size: 13px;
       }
+      .type {
+        line-height: 1.2;
+        height: calc(11px * 1.2 * 1);
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .date{
+        line-height: 1.2;
+        height: calc(13px * 1.2 * 1);
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       h3 {
         width: 100%;
+        height: calc(17px * 1.2 * 1);
         text-align: left;
-        display: inline-block;
+        display: block;
+        display: -webkit-box;
+        float: left;
         color: #000;
         font-weight: 700;
         margin: 5px 0;
         font-size: 17px;
         padding-left: 0;
+        line-height: 1.2;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .place{
+        line-height: 1.2;
+        height: calc(13px * 1.2 * 2);
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .social-wrap {
         width: initial;
@@ -267,7 +302,6 @@
         }
       }
     }
-
   }
 }
 
