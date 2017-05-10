@@ -138,7 +138,6 @@
         // font-family: $or;
         font-weight: 400;
       }
-
     }
   }
 }
@@ -365,7 +364,7 @@
       display: inline-block;
       line-height: 12px;
       text-align: right;
-      top: 9px;
+      top: 6px;
       position: relative;
       .rect-icon{
         size: 10px 6px;
@@ -1294,6 +1293,8 @@
     text-align: right;
     position: relative;
     display: inline-block;
+    padding-right: 5px;
+    @include box-sizing(border-box);
     color: #050000;
     font-size: 12px;
     font-weight: 600;
@@ -1382,19 +1383,22 @@
     box-sizing: border-box;
   }
   p{
+    display: block;
+    display: -webkit-box;
     color: #050000;
     font-size: 13px;
     font-weight: 600;
     width: calc(100% - 83px);
+    height: calc(13px * 3 * 1.6);
     float: left;
-    // padding-left: 15px;
     box-sizing: border-box;
-    line-height: 24px;
-    // padding-bottom: 18px;
-    height: 90px;
+    line-height: 1.6;
+    /*height: 90px;*/
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0;
-
   }
   &:nth-of-type(odd){
     border-bottom: 1px solid #edeef0;
@@ -1485,10 +1489,10 @@
       border-radius: 0;
       font-size: 12px;
       font-weight: 700;
-      padding: 5px 0;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      @include box-sizing(border-box);
     }
     table{
       width: 100%;

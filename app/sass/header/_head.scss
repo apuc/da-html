@@ -51,6 +51,7 @@
       font-size: 14px;
       color: #242424;
       line-height: 20px;
+      transition: width ease-in-out 0.4s;
           &:after{
             display: block;
             position: absolute;
@@ -59,14 +60,15 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #242424;
+            background-color: #ee2e24;
             transition: width ease-in-out 0.4s;
           }
     }
     a:hover{
+      color: #ee2e24;
+      transition: width ease-in-out 0.4s;
       &:after{
         width: 100%;
-
       }
     }
     &:first-of-type{
@@ -154,7 +156,7 @@
     .search_input_acive{
       width: 330px;
     }
-    button{
+    a{
       float: left;
       display: inline-block;
       position: relative;
@@ -165,18 +167,19 @@
       color: #fff;
       font-size: 10px;
       font-weight: 600;
-      line-height: 12px;
+      line-height: 36px;
       text-transform: uppercase;
       .autoriz-icon{
         display: inline-block;
         float: none;
         position: relative;
-        top: 3px;
-        background-repeat: no-repeat;
+        top: 5px;
+        margin-left: 12px;
         background-size: contain;
         margin-right: 5px;
         size: 14px;
         background-image: url("../img/header/autoriz-icon.png");
+        background-repeat: no-repeat;
       }
     }
   }

@@ -393,7 +393,7 @@ $(document).ready(function () {
     /*close add business review*/
 
     /*open modal order delivery*/
-    $(document).on('click', '.add-comment', function () {
+    $(document).on('click', '.add-comment, .ask', function () {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
             function () {
