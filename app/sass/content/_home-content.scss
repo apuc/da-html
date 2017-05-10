@@ -8,7 +8,6 @@
   box-sizing: border-box;
 }
 //home-content__wrap
-
 .home-content__wrap{
   width: 48%;
   float: left;
@@ -60,7 +59,6 @@
     }
   }
 }
-
 // slider
 .home-content__wrap_slider{
   width: 100%;
@@ -142,8 +140,6 @@
   }
 }
 // slider
-
-
 // enterprises
 .home-content__wrap_enterprises{
   width: 100%;
@@ -200,7 +196,6 @@
     }
   }
 }
-
 .enterprises__wrap {
   width: 100%;
   float: left;
@@ -298,7 +293,6 @@
 
   }
 }
-
 .red-arrow{
   background-image: url("../img/home-content/red-arrow.png");
   width: 5px;
@@ -313,9 +307,7 @@
   margin-right: 5px;
 }
 // enterprises
-
 // checkpoint
-
 .home-content__wrap_checkpoint{
   width: 100%;
   float: left;
@@ -440,9 +432,7 @@
     }
   }
 }
-
 // checkpoint
-
 .home-content__wrap_komunalka{
   width: 100%;
   float: left;
@@ -484,14 +474,12 @@
     width: 50%;
   }
 }
-
 .komunalka{
   width: 100%;
   float: left;
   margin-top: 20px;
 
 }
-
 .komunalka__item{
   display: inline-block;
   float: left;
@@ -501,7 +489,6 @@
   //   }
   // }
 }
-
 .komunalka__icon{
   width: 55px;
   height: 55px;
@@ -522,7 +509,6 @@
     transform: translateY(-50%);
   }
 }
-
 .komunalka__line{
   // width: 295px;
 
@@ -554,7 +540,6 @@
   }
 
 }
-
 .komunalka__line_active{
   border: 1px solid #ff0200;
   box-sizing: border-box;
@@ -567,7 +552,6 @@
     border: none;
   }
 }
-
 .home-content__wrap_subscribe{
   width: 100%;
   padding: 10px;
@@ -694,7 +678,6 @@
     }
   }
 }
-
 .social-wrap__item{
   size: 45px;
   display: block;
@@ -736,9 +719,7 @@
   background-color: #ed1b22;
 }
 //home-content__wrap
-
 // home-content__tape
-
 .home-content__tape{
   width: 21.7%;
   float: left;
@@ -792,7 +773,6 @@
     box-sizing: border-box;
   }
 }
-
 .tape__item{
   width: 100%;
   box-sizing: border-box;
@@ -887,7 +867,6 @@
     border-bottom: 1px solid #edeef0;
   }
 }
-
 .tape__item_pic{
   height: 159px;
   float: left;
@@ -942,19 +921,12 @@
     text-overflow: ellipsis;
   }
 }
-
-
 // home-content__tape
-
-
-
 .home-content__sidebar{
   width: 24%;
   float: left;
 
 }
-
-
 .home-content__sidebar_stock{
   width: 100%;
   float: left;
@@ -971,7 +943,6 @@
     left: 48%;
   }
 }
-
 .stock__item{
   width: 100%;
   float: left;
@@ -982,7 +953,6 @@
   border: 1px solid rgba(185, 196, 213, 0.48);
   cursor: pointer;
 }
-
 .stock__item_hide{
   display: block;
   z-index: 2;
@@ -1105,7 +1075,6 @@
     }
   }
 }
-
 .stock__item_visible_left{
   transition: 1s;
   left: -261px;
@@ -1339,7 +1308,6 @@
     margin-top: 20px;
   }
 }
-
 .consultation__item{
   width: 100%;
   float: left;
@@ -1417,9 +1385,6 @@
     }
   }
 }
-
-
-
 .home-content__sidebar_exchange{
   width: 100%;
   float: left;
@@ -1520,7 +1485,6 @@
         tr{
           width: 100%;
           text-align: center;
-
           td{
             width: 33.3%;
             color: #050000;
@@ -1562,9 +1526,6 @@
   //   display: none;
   // }
 }
-
-
-
 .home-content__sidebar_weather{
   width: 100%;
   float: left;
@@ -1600,7 +1561,6 @@
     padding-left: 0;
   }
 }
-
 .main-weather{
   width: 100%;
   float: left;
@@ -1627,7 +1587,6 @@
     font-weight: 600;
   }
 }
-
 .main-weather__pic{
   width: 25%;
   float: left;
@@ -1639,7 +1598,6 @@
     object-fit: contain;
   }
 }
-
 .main-weather_temp{
   width: 25%;
   float: left;
@@ -1655,7 +1613,6 @@
   position: relative;
   margin-top: 10px;
 }
-
 .week-weather__item{
   width: 27.3%;
   margin-right: 23px;
@@ -1666,7 +1623,6 @@
     margin-right: 0;
   }
 }
-
 .week-weather__date{
   width: 100%;
   float: left;
@@ -1678,7 +1634,6 @@
   line-height: 24px;
   text-transform: uppercase;
 }
-
 .week-weather__pic{
   width: 50%;
   float: left;
@@ -1690,8 +1645,6 @@
     height: auto;
   }
 }
-
-
 .week-weather_temp{
   width: 50%;
   float: left;
@@ -1701,7 +1654,6 @@
   color: #000;
   font-size: 25px;
 }
-
 .mainlenta{
   width: 100%;
   float: left;
