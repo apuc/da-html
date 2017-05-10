@@ -429,14 +429,17 @@ $(document).ready(function () {
     });
     /* komunalka */
 
-    // input
-    $(".search-input").click(function (e) {
+    /*show header input field*/
+    $(document).on('click', '.search-input', function (e) {
         e.preventDefault();
-        $(".search-input").removeClass('search_input_acive');
-        $(this).addClass('search_input_acive', {duration: 1000});
+        if($(this).hasClass('search_input_acive')){
+            $(this).removeClass('search_input_acive', {duration: 1000});
+        } else {
+            $(this).addClass('search_input_acive', {duration: 1000});
+        } 
     });
-
-    // input
+    /*close show header input field*/
+    
     $('.open-soc').click(function (event) {
         // $(this).next('.hide-social').slideToggle();
         var prev = $(this).prev('.hide-social');

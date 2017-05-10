@@ -43,6 +43,9 @@
       float: left;
       color: #2c2c2c;
       font-size: 21px;
+      &:hover{
+        color: #ff0200;
+      }
     }
   }
   &__send{
@@ -107,6 +110,7 @@
         font-size: 14px;
         font-weight: 600;
         padding: 0;
+        @include transition(0.4s);
         &:after{
           display: block;
           position: absolute;
@@ -115,11 +119,13 @@
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #242424;
+          background-color: #ee2e24;
           transition: width ease-in-out 0.4s;
         }
       }
       a:hover{
+        @include transition(0.4s);
+        color: #ee2e24;
         &:after{
           width: 100%;
         }
