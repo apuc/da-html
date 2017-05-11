@@ -46,7 +46,7 @@
       h1{
         color: #060000;
         font-weight: 800;
-        font-size: 33px;
+        font-size: 30px;
         margin-top: 0;
         line-height: 38px;
       }
@@ -116,18 +116,15 @@
           margin-left: 10px;
         }
       }
-
       .content-single{
         font-size: 16px;
         color: #060000;
         font-weight: 600;
         margin-top: 35px;
         line-height: 28px;
-
         p{
-          margin-bottom: 55px;
+          margin-bottom: 20px;
         }
-
         img.align-center{
           display: block;
           margin-left: auto;
@@ -137,8 +134,9 @@
       .tags{
         border-top: 1px solid #f0f0f0;
         padding-left: 30px;
-        padding-top: 25px;
-
+        padding-top: 14px;
+        margin-top: 14px;
+        @include box-sizing(border-box);
         h3{
           font-size: 18px;
           color: #000;
@@ -164,7 +162,6 @@
       }
     }
   }
-
   .scroll.move{
     margin-top: 24px;
   }

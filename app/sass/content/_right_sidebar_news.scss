@@ -1,7 +1,6 @@
 #aside{
   width: 255px;
   float: right;
-
   .more-news{
     h3{
       color: #fffcf4;
@@ -15,13 +14,11 @@
     ul{
       padding-left: 0;
       margin-top: 10px;
-
       li{
         list-style: none;
         height: 72px;
         padding-left: 17px;
         position: relative;
-
         &:after{
           width: 0;
           background: #ee2e24 none repeat scroll 0 0;
@@ -40,10 +37,8 @@
           a{
             color: #ee2e24;
             display: block;
-
           }
         }
-
         span{
           font-size: 14px;
           color: #030000;
@@ -60,11 +55,11 @@
           transition: color 300ms ease 0s;
           margin-top: 6px;
           font-weight: 700;
-          font-size: 12px;
+          font-size: 13px;
           display: -webkit-box;
           position: relative;
           width: 100%;
-          height: calc(12px * 1.4 * 2);
+          height: calc(13px * 1.4 * 2);
           float: left;
           line-height: 1.4;
           -webkit-line-clamp: 2;
