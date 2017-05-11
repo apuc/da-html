@@ -15,13 +15,62 @@
     &:last-of-type{
       margin-right: 0;
     }
-
     .item{
       width: 100%;
       height: 345px;
       float: left;
       position: relative;
+      &__info{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+        @include transition(height 200ms ease-in);
+        > h4{
+          display: inline-block;
+          display: -webkit-box;
+          width: 100%;
+          height: calc(13px * 1.3 * 2);
+          float: left;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin: 5px 0;
+          text-align: left;
+          line-height: 1.3;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        > p{
+          display: inline-block;
+          display: -webkit-box;
+          width: 100%;
+          height: calc(13px * 1.2 * 2);
+          float: left;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 400;
+          margin-top: 10px;
+          margin-bottom: 0;
+          text-align: left;
+          line-height: 1.2;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+     /* &__info:hover{
+        height: 100px;
+        @include transition(height 200ms ease-in);
+      }*/
       img{
+        @include filter(grayscale(100%));
         size: 100%;
         object-fit: cover;
       }
@@ -96,19 +145,18 @@
             }
           }
         }
-        h4,a{
+        a{
           color: #fff;
           width: 100%;
           float: left;
           display: inline-block;
           font-size: 13px;
-          // line-height: 20px;
           font-weight: 700;
           text-transform: uppercase;
           margin: 5px 0;
           text-align: left;
         }
-        p{
+        /*p{
           color: #fff;
           width: 100%;
           float: left;
@@ -118,6 +166,12 @@
           font-weight: 400;
           margin: 0;
           text-align: left;
+        }*/
+      }
+      .content-item:hover{
+        .item__info{
+          height: 100px;
+          @include transition(height 200ms ease-in);
         }
       }
     }
