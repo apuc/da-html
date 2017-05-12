@@ -20,6 +20,12 @@
       height: 345px;
       float: left;
       position: relative;
+      &:hover{
+        .item__info{
+          height: 100px;
+          @include transition(height 200ms ease-in);
+        }
+      }
       &__info{
         display: block;
         position: relative;
@@ -65,10 +71,6 @@
           text-overflow: ellipsis;
         }
       }
-     /* &__info:hover{
-        height: 100px;
-        @include transition(height 200ms ease-in);
-      }*/
       img{
         @include filter(grayscale(100%));
         size: 100%;
@@ -82,7 +84,6 @@
         bottom: 0;
         padding: 7px;
         box-sizing: border-box;
-        // height: 90px;
         .content-row{
           width: 100%;
           float: left;
@@ -155,23 +156,6 @@
           text-transform: uppercase;
           margin: 5px 0;
           text-align: left;
-        }
-        /*p{
-          color: #fff;
-          width: 100%;
-          float: left;
-          display: inline-block;
-          font-size: 13px;
-          line-height: 20px;
-          font-weight: 400;
-          margin: 0;
-          text-align: left;
-        }*/
-      }
-      .content-item:hover{
-        .item__info{
-          height: 100px;
-          @include transition(height 200ms ease-in);
         }
       }
     }
