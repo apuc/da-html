@@ -20,9 +20,14 @@
       height: 345px;
       float: left;
       position: relative;
+      background-image: linear-gradient(to top, black 0%, rgba(4, 0, 1, 0.98) 2%, transparent 100%);
       &:hover{
+        /*img{
+          @include filter(grayscale(100%));
+        }*/
         .item__info{
           height: 100px;
+         /* background-image: linear-gradient(to top, black 0%, rgba(4, 0, 1, 0.98) 2%, transparent 100%);*/
           @include transition(height 200ms ease-in);
         }
       }
@@ -34,6 +39,7 @@
         height: 40px;
         overflow: hidden;
         @include transition(height 200ms ease-in);
+        /*background-image: linear-gradient(to top, black 0%, rgba(4, 0, 1, 0.98) 2%, transparent 100%);*/
         > h4{
           display: inline-block;
           display: -webkit-box;
@@ -72,7 +78,8 @@
         }
       }
       img{
-        @include filter(grayscale(100%));
+        z-index: -1;
+        position: absolute;
         size: 100%;
         object-fit: cover;
       }
