@@ -114,35 +114,10 @@
             }
           }
           .hide-social{
-            padding: 5px;
-            box-sizing: border-box;
-            display: none;
-            float: left;
-            position: absolute;
-            background-color: #231f21;
-            margin-top: -38px;
-            left: 21%;
-            &::after{
-              content: "";
-            	width: 0;
-            	height: 0;
-              border-left: 5px solid transparent;
-              border-right: 5px solid transparent;
-              border-top: 8px solid #231f21;
-              position: absolute;
-              left: 50%;
-              margin-top: 22px;
-            }
-            a, span{
-              margin: 0 5px;
-              display: inline-block;
-            }
-            i{
-              color: #fff;
-              font-size: 14px;
-              &:hover{
-                color: #ee2e24;
-              }
+            left: 0;
+            margin-top: -42px;
+            &:after{
+              right: 155px;
             }
           }
         }
