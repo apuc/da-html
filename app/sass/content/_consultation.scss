@@ -138,11 +138,13 @@
       .owl-prev{
         position: absolute;
         top: 50px;
+        left: -37px;
       }
       .owl-next{
         position: absolute;
-        right: 0;
+        right: -37px;
         top: 50px;
+        /*right: -37px;*/
       }
     }
     .owl-dots{

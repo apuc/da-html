@@ -332,10 +332,10 @@
             @include box-sizing(border-box);
             text-transform: uppercase;
             color: black;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 400;
             &:hover {
-              width: 120%;
+              /*width: 120%;*/
               font-weight: 700;
               background-color: #e2dfe0;
               border-right: 2px solid #fe5b61;
@@ -376,10 +376,10 @@
             @include box-sizing(border-box);
             text-transform: uppercase;
             color: black;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 400;
             &:hover {
-              width: 120%;
+              /*width: 120%;*/
               font-weight: 700;
               background-color: #e2dfe0;
               border-right: 2px solid #fe5b61;
