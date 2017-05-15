@@ -185,7 +185,7 @@
   float: left;
   width: 176px;
   padding: 5px 16px;
-  background-color: #ff0200;
+  background-color: #a0a3a8;
   margin-left: calc(50% - (176px/2));
   @include box-sizing(border-box);
   text-align: center;
@@ -198,15 +198,15 @@
 }
 
 .rew-wrap{
-  width: calc(100% - 62px);
+  width: calc(100% - 46px);
   float: left;
   position: relative;
   padding-left: 8px;
   @include box-sizing(border-box);
   .name{
-    color: rgba(0, 0, 0, 0.48);
+    color: rgba(30,4,4,0.83);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     display: inline-block;
     width: 100%;
     text-align: left;
@@ -222,7 +222,7 @@
   position: relative;
   width: 100%;
   height: calc(14px * 2 * 1.4);
-  margin-top: 4px;
+  margin-top: 0;
   margin-bottom: 0;
   float: left;
   text-align: left;
