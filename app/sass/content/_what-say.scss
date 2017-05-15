@@ -83,12 +83,12 @@
   padding: 16px 18px;
   box-sizing: border-box;
   &:hover{
-    background-color: #ee2e24;
-    .wrapi{
+   /* background-color: #ee2e24;*/
+    /*.wrapi{
       span,p{
         color: #fff;
       }
-    }
+    }*/
   }
   @include breakpoint(max-width 600px){
     width: 100%;
