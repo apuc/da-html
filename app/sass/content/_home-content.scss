@@ -879,14 +879,27 @@
 
 .tape__item {
   width: 100%;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   padding: 15px 0;
   float: left;
   display: inline-block;
   border-bottom: 1px solid #edeef0;
   position: relative;
+  &:after{
+    display: none;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff0200;
+  }
   &:hover {
-    border-bottom: 3px solid #ff0200;
+    border-bottom: 1px solid #ff0200;
+  }
+  &:hover:after{
+    display: block;
   }
   h4 {
     color: #090000;
@@ -945,12 +958,25 @@
   float: left;
   width: 100%;
   padding: 10px 0;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid #edeef0;
+  &:after{
+    display: none;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff0200;
+  }
   &:hover {
-    border-bottom: 3px solid #ff0200;
+    border-bottom: 1px solid #ff0200;
+  }
+  &:hover:after{
+    display: block;
   }
   img {
     size: 100%;
