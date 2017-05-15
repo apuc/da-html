@@ -18,6 +18,7 @@
     margin-top: 20px;
   }
 }
+
 .what-to-see, .where-to-go, .interested {
   width: 100%;
   float: left;
@@ -96,11 +97,11 @@
       size: 100%;
       object-fit: cover;
     }
-    &:hover{
+    /*&:hover{
       img{
         @include filter(grayscale(100%));
       }
-    }
+    }*/
   }
   .interested__item_title {
     width: 100%;
@@ -110,6 +111,7 @@
     left: 0;
     padding: 30px 102px;
     box-sizing: border-box;
+    /*background-image: linear-gradient(to top, black 0%, rgba(2, 0, 0, 0.98) 2%, transparent 100%);*/
     h4 {
       display: block;
       display: -webkit-box;
@@ -147,7 +149,7 @@
     &:hover {
       .span, h4 {
         /*text-decoration: underline;*/
-       /* text-decoration-color: #ee2e24;*/
+        /* text-decoration-color: #ee2e24;*/
       }
       .show-more {
         display: block;
@@ -155,6 +157,27 @@
     }
   }
 }
+
+.interested {
+  .interested__item_title {
+    background-image: linear-gradient(to top, black 0%, rgba(2, 0, 0, 0.98) 2%, transparent 100%);
+    &:after {
+      display: none;
+      position: absolute;
+      content: '';
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+      border: 1px solid #fcfcfc;
+      opacity: 0.59;
+      top: 5px;
+      left: 5px;
+    }
+  }
+  .interested__item_title:hover:after {
+    display: block;
+  }
+}
+
 .afisha-events__wrap {
   display: flex;
   width: 100%;
@@ -181,9 +204,11 @@
     }
   }
 }
+
 .interested {
   padding-bottom: 40px;
 }
+
 .events-day {
   width: 100%;
   float: left;
@@ -204,6 +229,7 @@
     margin-bottom: 0;
   }
 }
+
 .events-day__wrap {
   width: 100%;
   float: left;
@@ -227,7 +253,7 @@
         object-fit: cover;
       }
     }
-    .thumb:after{
+    .thumb:after {
       position: absolute;
       z-index: 2;
       width: 100%;
@@ -268,7 +294,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
-      .date{
+      .date {
         line-height: 1.2;
         height: calc(13px * 1.2 * 1);
         -webkit-line-clamp: 1;
@@ -294,7 +320,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
-      .place{
+      .place {
         line-height: 1.2;
         height: calc(13px * 1.2 * 2);
         -webkit-line-clamp: 2;
@@ -324,13 +350,14 @@
       }
     }
   }
-  .item:hover{
+  .item:hover {
     border: 1px solid #b2b2b2;
-    .thumb:after{
+    .thumb:after {
       display: block;
     }
   }
 }
+
 .calendar-wrap {
   width: 40%;
   float: right;
@@ -374,11 +401,13 @@
 
   }
 }
+
 .datepicker-wrap {
   padding-top: 9px;
   box-sizing: border-box;
   margin-left: 12px;
 }
+
 .datepicker-inline {
   display: none;
   width: 252px;

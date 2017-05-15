@@ -135,6 +135,7 @@
         size: 108px;
         border-radius: 50%;
         overflow: hidden;
+        margin-left: calc(50% - (108px/2));
         img{
           size: 100%;
           object-fit: cover;
@@ -145,7 +146,9 @@
         margin: 0 auto;
       }*/
       p{
-        max-width: 195px;
+        position: relative;
+        float: left;
+        max-width: 100%;
         margin: 20px auto 0;
         color: #000;
       }

@@ -729,16 +729,17 @@
         margin-right: 10px;
         text-align: center;
         margin-top: 15px;
+        border-radius: 5px;
         img {
           width: 19px;
           height: 19px;
           object-fit: contain;
           position: relative;
-          margin-top: 9px;
-          /*top: 50%;
+          /*margin-top: 9px;*/
+          top: 50%;
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
-          transform: translateY(-50%);*/
+          transform: translateY(-50%);
         }
       }
       .vk {
@@ -775,16 +776,17 @@
   margin-right: 10px;
   text-align: center;
   margin-top: 15px;
+  /*border-radius: 5px;*/
   img {
     width: 19px;
     height: 19px;
     object-fit: contain;
     position: relative;
-    margin-top: 9px;
-    /*top: 50%;
+   /* margin-top: 9px;*/
+    top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);*/
+    transform: translateY(-50%);
   }
 }
 
