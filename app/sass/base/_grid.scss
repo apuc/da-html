@@ -10,6 +10,11 @@
 .container {
     @extend %clearfix;
 }
+@media (min-width: 660px) {
+    .container {
+        width: 100%;
+    }
+}
 @media (min-width: 768px) {
     .container {
         width: 766px;
