@@ -132,10 +132,8 @@
     box-sizing: border-box;
     h4 {
       width: 100%;
-      /*display: inline-block;*/
       position: relative;
       margin: 0 0 40px;
-      /*a {*/
       font-size: 25px;
       font-weight: 400;
       color: #fff;
@@ -148,12 +146,10 @@
       overflow: hidden;
       text-overflow: ellipsis;
       @include transition(0.4s);
-      /* &:hover {
-         color: #ee2e24;
-         -webkit-transition-duration: .5s;
-         transition-duration: .5s;
-       }
-     }*/
+      @include breakpoint(max-width 660px){
+        font-size: 20px;
+        height: calc(20px * 1.2 * 2);
+      }
     }
   }
   &:hover{
@@ -188,6 +184,9 @@
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    @include breakpoint(max-width 660px){
+      bottom: 96px;
+    }
     h4 {
       width: 100%;
       position: relative;
@@ -222,6 +221,10 @@
   display: inline-block;
   color: #fff;
   line-height: 22px;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .item__content_panel {
@@ -229,6 +232,10 @@
   float: right;
   position: relative;
   text-align: right;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+    text-align: center;
+  }
   a, span {
     display: inline-block;
     position: relative;
