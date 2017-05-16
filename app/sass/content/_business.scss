@@ -595,8 +595,7 @@
       display: block;
       position: relative;
       float: left;
-      width: 110px;
-      height: 110px;
+      size: 80px;
       margin-left: 15px;
       margin-top: 13px;
       border-radius: 50%;
@@ -632,7 +631,7 @@
         position: relative;
         float: left;
         width: 100%;
-        margin-top: 36px;
+        margin-top: 24px;
         margin-bottom: 0;
         color: #040000;
         font-size: 16px;
@@ -740,9 +739,10 @@
     &--links {
       display: block;
       position: relative;
-      float: left;
+      float: right;
       width: calc(100% - (110px + 15px + 320px + 254px));
-      margin-top: 45px;
+      margin-top: 24px;
+      margin-bottom: 10px;
       @include breakpoint(max-width 1200px){
         width: 50%;
         margin-top: 20px;

@@ -14,6 +14,9 @@
     position: absolute;
     top: 7px;
     width: 32%;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
     .owl-nav {
       display: inline-block;
       width: 100%;
@@ -53,6 +56,9 @@
     font-weight: 700;
     margin: 0;
     line-height: 1.4;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
   }
   p {
     width: 53%;
@@ -73,6 +79,9 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
   }
   .go-rubrick {
     font-size: 12px;
@@ -106,14 +115,14 @@
   height: 500px;
   margin-right: 11px;
   background-image: linear-gradient(to top, black 0%, rgba(4, 0, 1, 0.98) 2%, transparent 100%);
- /* background-color: #000;*/
+  @include breakpoint(max-width 660px){
+    height: 420px;
+  }
   img {
-    /*@include filter(grayscale(100%));*/
     size: 100%;
     object-fit: cover;
     position: absolute;
     z-index: -1;
-    /*opacity: 0.3;*/
   }
   .item__big_content {
     position: absolute;
@@ -162,15 +171,15 @@
   float: left;
   position: relative;
   margin: 0 11px 22px 11px;
-  /*background-color: #000;*/
   background-image: linear-gradient(to top, black 0%, rgba(4, 0, 1, 0.98) 2%, transparent 100%);
+  @include breakpoint(max-width 660px){
+    width: calc(50% - (22px*2));
+  }
   img {
-   /* @include filter(grayscale(100%));*/
     size: 100%;
     object-fit: cover;
     position: absolute;
     z-index: -1;
-    /*opacity: 0.3;*/
   }
   .item__small_content {
     position: absolute;
@@ -181,10 +190,8 @@
     box-sizing: border-box;
     h4 {
       width: 100%;
-      /*display: inline-block;*/
       position: relative;
       margin: 20px 0 0;
-      /*a {*/
       font-size: 18px;
       font-weight: 400;
       color: #fff;

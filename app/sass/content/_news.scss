@@ -76,6 +76,10 @@
   @include box-sizing(border-box);
   /*border: 2px solid transparent;*/
   margin: 11px;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+    margin: 11px 0;
+  }
   .thumb {
     width: 100%;
     height: 174px;
@@ -206,6 +210,10 @@
 }
 .news__wrap_item-lg {
   width: 48%;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+    margin: 11px 0;
+  }
   .thumb {
     height: 225px;
     .content-row {
@@ -243,6 +251,11 @@
   position: relative;
   text-align: center;
   margin-top: 30px;
+  @include breakpoint(max-width 660px){
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(colomn);
+  }
   .businessScroll > .rotate-arrow {
     background-image: url("../img/home-content/red-arrow.png");
     width: 5px;
@@ -264,6 +277,10 @@
     text-transform: uppercase;
     margin: 0 20px;
     cursor: pointer;
+    @include breakpoint(max-width 660px){
+      margin: 10px 0;
+      width: 100%;
+    }
     .rotate-arrow {
       background-image: url("../img/home-content/red-arrow.png");
       width: 5px;
@@ -272,10 +289,13 @@
       background-size: contain;
       display: inline-block;
       position: absolute;
-      top: 15px;
+      top: 117px;
       margin-left: 22px;
       margin-right: 0;
       transform: rotate(0deg);
+      @include breakpoint(max-width 660px){
+
+      }
     }
     .datepicker-inline {
       margin-top: 23px;
@@ -296,19 +316,6 @@
     text-decoration: none;
   }
 }
-/*.rotate-arrow {
-  background-image: url("../img/home-content/red-arrow.png");
-  width: 5px;
-  height: 9px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-  position: absolute;
-  top: 15px;
-  margin-left: -22px;
-  margin-right: 0;
-  transform: rotate(180deg);
-}*/
 .news__wrap_item-sm-hot {
   width: 23%;
   float: left;
@@ -317,6 +324,10 @@
   @include box-sizing(border-box);
   border: 2px solid transparent;
   margin: 11px;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+    margin: 11px 0;
+  }
   .thumb {
     height: 218px;
     overflow: hidden;
