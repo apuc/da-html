@@ -786,6 +786,27 @@ $(document).ready(function () {
     });
     /*close show cabinet menu*/
 
+    /*search form option select*/
+    $(document).on('click', '.js-search-option', function (event) {
+       event.preventDefault();
+       var optionBox = $(this).next('.search-panel__result--option');          
+       if($(this).hasClass('open')){
+           $(this).removeClass('open');
+           optionBox.slideUp('400');
+       } else{
+           $(this).addClass('open');
+           optionBox.slideDown('400');
+       }
+    });
+    $(document).on('click', '.search-panel__result--option > a', function (event) {
+        event.preventDefault();
+        var optionName = $(this).text(),
+            optionPlace = $(this).closest('.search-panel__result').find('.js-search-option');
+            optionPlace.text(optionName);//меняем имя
+        $('.js-search-option').removeClass('open');
+        $('.search-panel__result--option').slideUp('400');
+    });
+    /*close search form option select*/
 });
 
 $(window).scroll(function () {
