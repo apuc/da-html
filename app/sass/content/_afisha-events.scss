@@ -47,6 +47,10 @@
     overflow: hidden;
     margin: 25px auto;
     display: inline-block;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      flex-basis: 100%;
+    }
     img {
       size: 100%;
       object-fit: cover;
@@ -60,6 +64,9 @@
       box-sizing: border-box;
       background-color: rgba(0, 0, 0, 0.85);
       transition: all 0.7s ease;
+      @include breakpoint(max-width 660px){
+        bottom: 0;
+      }
       .type, .name-item, .time {
         color: #fff;
         font-size: 16px;
@@ -93,6 +100,11 @@
     display: inline-block;
     overflow: hidden;
     position: relative;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      flex-basis: 100%;
+      margin: 10px 0;
+    }
     img {
       size: 100%;
       object-fit: cover;
@@ -227,6 +239,9 @@
     box-sizing: border-box;
     margin-top: 0;
     margin-bottom: 0;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
   }
 }
 
@@ -244,6 +259,9 @@
     box-sizing: border-box;
     margin: 11px;
     border: 1px solid transparent;
+    @include breakpoint(max-width 660px){
+      width: calc(100% - (11px * 2));
+    }
     .thumb {
       width: 100%;
       float: left;
@@ -362,6 +380,9 @@
   width: 40%;
   float: right;
   position: relative;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+  }
   ul {
     width: 100%;
     padding: 0;
@@ -415,4 +436,7 @@
   z-index: 10;
   margin-top: 38px;
   left: 180px;
+  @include breakpoint(max-width 660px){
+    left: 57px;
+  }
 }

@@ -101,20 +101,17 @@ $(document).ready(function () {
         margin: 30,
         nav: true,
         navText: true,
-
-        navigation: true,
-        /*navigationText: true,*/
+        navigation: true,        
         pagination: true,
-        items: 1,
-        // dots: true,
-        // dotdata: true,
+        items: 1,       
         dotsContainer: '#dotscustom',
         singleItem: false,
         mouseDrag: false,
         touchDrag: false,
-        responsiveClass: true
+        responsiveClass: true        
     });
 
+    /*afisha top slider*/
     $(".afisha-top-slider__wrap").owlCarousel({
         loop: true,
         margin: 15,
@@ -130,9 +127,30 @@ $(document).ready(function () {
         singleItem: false,
         mouseDrag: false,
         touchDrag: false,
-        responsiveClass: true
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 1,
+                nav: true
+            },
+            1000: {
+                items: 3,
+                nav: true,
+                loop: true
+            },
+            1200: {
+                items: 3,
+                nav: true,
+                loop: true
+            }
+        }
     });
-
+    /*close afisha top slider*/
+    
     var carousel1 = '.js-carousel-1';
     var carousel2 = '.js-carousel-2';
     var carousel3 = '.js-carousel-3';
