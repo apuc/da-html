@@ -678,6 +678,7 @@
         box-sizing: border-box;
         background-color: #e7e7e7;
         padding-right: 10px;
+        font-size: 14px;
       }
       button {
         display: inline-block;
@@ -904,8 +905,8 @@
   h4 {
     color: #090000;
     font-size: 14px;
-    font-weight: 700;
-    font-variant: small-caps;
+    font-weight: 600;
+    /*font-variant: small-caps;*/
     display: inline-block;
     float: left;
     text-align: left;
@@ -1677,7 +1678,7 @@
   float: left;
   position: relative;
   margin-top: 5px;
-  background-color: #edeef0;
+  /*background-color: #edeef0;*/
   padding: 0 10px;
   @include box-sizing(border-box);
   border-left: 1px solid #fff;
