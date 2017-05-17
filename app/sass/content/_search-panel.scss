@@ -20,6 +20,9 @@
       color: #0c242e;
       font-size: 23px;
       font-weight: 700;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
     }
   }
   &__field{
@@ -35,6 +38,10 @@
     color: #190202;
     font-size: 15px;
     font-weight: 400;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      margin: 10px 0;
+    }
   }
   &__field::-webkit-input-placeholder,
   &__field::-moz-placeholder,
@@ -59,6 +66,9 @@
     font-weight: 700;
     text-transform: uppercase;
     @include transition(0.4s);
+    @include breakpoint(max-width 660px){
+      margin-left: calc(50% - (128px/2));
+    }
     &:hover{
       @include transition(0.4s);
       background-color: rgba(238,46,36,.8);
@@ -124,6 +134,10 @@
       background-color: #fff;
       z-index: 1;
       border: 1px solid #ff0200;
+      @include breakpoint(max-width 660px){
+        left: 0;
+        top: 64px;
+      }
       > a{
         display: block;
         position: relative;
