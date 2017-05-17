@@ -94,6 +94,10 @@
       width: 856px;
       height: 1px;
       background-color: #ecf2fa;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        left: 0;
+      }
     }
     &--title {
       display: block;
@@ -137,6 +141,9 @@
       width: calc(100% - (162px + 110px));
       padding-left: 22px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 660px){
+        width: calc(100% - 110px);
+      }
       > h3{
         display: block;
         display: -webkit-box;
@@ -155,6 +162,9 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include breakpoint(max-width 660px){
+          width: 100%;
+        }
       }
       > span{
         display: block;

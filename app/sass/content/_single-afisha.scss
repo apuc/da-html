@@ -8,12 +8,15 @@
     padding-right: 55px;
     margin-bottom: 40px;
     padding-bottom: 35px;
-
+    @include box-sizing(border-box);
+    @include breakpoint(max-width 660px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     .what-to-see{
       margin-bottom: 45px;
       padding-left: 0;
       padding-right: 0;
-
       h3{
         width: 79%;
       }
@@ -48,14 +51,16 @@
         float: left;
         width: 100%;
         margin-bottom: 50px;
-
         .item{
           margin: 15px;
           float: left;
+          @include breakpoint(max-width 660px){
+            height: 520px;
+            margin: 10px 0;
+          }
         }
       }
     }
-
   }
   .age{
     font-size: 20px;
@@ -66,18 +71,32 @@
   h1{
     font-size: 25px;
     font-weight: 700;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
   }
   .afisha-content-wrapper{
     display: flex;
     justify-content: space-between;
     margin-top: 29px;
-
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      @include flex-direction(column);
+    }
       .thumbnail-afisha{
         width: 29%;
-
+        @include breakpoint(max-width 660px){
+          width: 100%;
+          height: 300px;
+          overflow: hidden;
+        }
         img{
           width: 100%;
           height: auto;
+          @include breakpoint(max-width 660px){
+            size: 100%;
+            object-fit: contain;
+          }
         }
       }
       .afisha-content{
@@ -86,10 +105,13 @@
         width: 68%;
         font-weight: 500;
         line-height: 1.6;
+        @include breakpoint(max-width 660px){
+          width: 100%;
+        }
         .date-time{
           font-size: 19px;
           color: #030000;
-          background-image: url(../img/info-icons/icon-4.png);
+          background-image: url('../img/info-icons/icon-4.png');
           background-repeat: no-repeat;
           padding-left: 40px;
           font-weight: 400;
@@ -104,11 +126,9 @@
   }
   .maps{
     margin-top: 45px;
-
     .tabs__caption{
       padding-left: 0;
       border-bottom: 1px solid #e3e3e3;
-
       li{
         list-style: none;
         display: inline-block;
@@ -150,11 +170,15 @@
     }
     .maps-info{
       display: flex;
-
+      @include breakpoint(max-width 660px){
+        @include flex-direction(column);
+      }
       .date{
         display: flex;
         width: 28%;
-
+        @include breakpoint(max-width 660px){
+          width: 100%;
+        }
         .day{
           font-weight: 500;
           font-size: 48px;
@@ -177,6 +201,9 @@
         color: #060000;
         font-weight: 700;
         width: 14%;
+        @include breakpoint(max-width 660px){
+          width: 100%;
+        }
       }
     }
 
@@ -194,6 +221,9 @@
 }
 .tabs__content {
   display: none; /* по умолчанию прячем все блоки */
+  @include breakpoint(max-width 660px){
+    width: 100%;
+  }
 }
 .tabs__content.active {
   display: block; /* по умолчанию показываем нужный блок */
