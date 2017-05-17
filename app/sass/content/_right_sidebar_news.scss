@@ -1,6 +1,11 @@
 #aside{
   width: 255px;
   float: right;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+    position: relative;
+    float: left;
+  }
   .more-news{
     h3{
       color: #fffcf4;

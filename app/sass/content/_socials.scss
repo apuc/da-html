@@ -4,6 +4,9 @@
   position: absolute;
   left: -36px;
   top: 115px;
+  @include breakpoint(max-width 660px){
+    display: none;
+  }
   a {
     display: block;
     width: 35px;

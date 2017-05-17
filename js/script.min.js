@@ -517,8 +517,9 @@ $(document).ready(function () {
 
 
     /* scroll fixed socials */
-    $('#aside').hcSticky();
-
+    if(window.innerWidth > 770 ){
+        $('#aside').hcSticky();
+    }
 
     /*consultants tabs*/
     jQuery(".page__tabs_target").click(function (e) {
