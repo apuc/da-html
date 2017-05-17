@@ -11,7 +11,13 @@
       border-color: transparent;
     }
     .panel{
+      display: block;
+      position: relative;
+      float: left;
       padding-top: 20px;
+      width: 496px;
+      margin-right: 0;
+      margin-left: calc(50% - (496px/2));
       height: 100%;
       border: 1px solid transparent;
       border-radius: 0;
@@ -37,7 +43,7 @@
           }
           .form-control {
             display: block;
-            width: calc(100% - 100px);
+            width: calc(100% - 187px);
             height: 45px;
             padding: 6px 12px;
             @include box-sizing(border-box);
@@ -69,6 +75,26 @@
             text-transform: uppercase;
             color: #fff;
             border: none;
+          }
+          .help-block {
+            display: block;
+            margin-top: 11px;
+            margin-bottom: 10px;
+            color: #ee2e24;
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+      .text-center {
+        a{
+          margin-right: 10px;
+          color: #070000;
+          text-decoration: underline;
+          font-size: 14px;
+          &:hover{
+            color: #070000;
+            text-decoration: none;
           }
         }
       }
