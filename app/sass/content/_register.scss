@@ -7,5 +7,15 @@
   margin: 200px 0;
   .register-form-container{
     height: 100%;
+    .panel-default{
+      border-color: transparent;
+    }
+    .panel{
+      padding-top: 20px;
+      height: 100%;
+      border: 1px solid transparent;
+      border-radius: 0;
+      background-color: #ecedef;
+    }
   }
 }
