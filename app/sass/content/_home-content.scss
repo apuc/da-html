@@ -966,6 +966,7 @@
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid #edeef0;
+  background-image: linear-gradient(0deg,#000,rgba(4,0,1,.98) 2%,transparent);
   &:after{
     display: none;
     position: absolute;
@@ -983,6 +984,8 @@
     display: block;
   }
   img {
+   /* position: absolute;
+    z-index: -1;*/
     size: 100%;
     object-fit: cover;
   }
@@ -1653,6 +1656,24 @@
   /*padding-top: 10px;
   padding-bottom: 10px;
   @include box-sizing(border-box);*/
+  h3{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding-left: 11px;
+    padding-top: 11px;
+    padding-right: 11px;
+    @include box-sizing(border-box);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
   &__slider{
     display: block;
     position: relative;
@@ -1669,6 +1690,7 @@
         size: 100%;
         object-fit: cover;
       }
+
       .city{
         display: block;
         position: absolute;
@@ -1759,7 +1781,7 @@
         text-transform: uppercase;
       }
     }
-    /*&--content{
+    &--content{
       display: block;
       position: relative;
       float: left;
@@ -1768,29 +1790,37 @@
         display: block;
         position: relative;
         float: left;
-        width: calc(98px + 13px);
-        color: #ffffff;
-        font-size: 14px;
-        font-weight: 600;
+        margin: 0;
+        &:first-of-type{
+          width: 88px;
+          padding-top: 20px;
+          @include box-sizing(border-box);
+          text-align: center;
+          color: #ee2e24;
+          font-size: 19px;
+          font-weight: 700;
+          text-transform: uppercase;
+          &:after{
+            display: block;
+            position: absolute;
+            content: '';
+            top: 14px;
+            right: 0;
+            width: 1px;
+            height: 34px;
+            background-color: #dbdbdb;
+          }
+        }
+        &:last-of-type{
+          width: calc(100% - 88px);
+          padding-top: 24px;
+          padding-left: 32px;
+          @include box-sizing(border-box);
+          color: #090101;
+          font-size: 15px;
+          font-weight: 600;
+        }
       }
-    }*/
-    > h3{
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      margin: 0;
-      padding-left: 11px;
-      padding-top: 11px;
-      padding-right: 11px;
-      @include box-sizing(border-box);
-      color: white;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 16px;
-      text-transform: uppercase;
-      z-index: 1;
     }
   }
   /*h3 {

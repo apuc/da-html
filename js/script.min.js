@@ -580,6 +580,35 @@ $(document).ready(function () {
         }
     });
 
+    /*weather slider*/
+    var whetherSlider = $('.home-content__sidebar_weather__slider');
+    whetherSlider.owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 0,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            660: {
+                items: 1
+            },
+            770: {
+                items: 1
+            },
+            960: {
+                items: 1
+            },
+            1200: {
+                items: 1
+            }
+        }
+    });
+    /*close weather slider*/
+
     /*business owl.slider*/
     var businessSlider = $('.business__photos');
     businessSlider.owlCarousel({
