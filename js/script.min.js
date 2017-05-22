@@ -584,7 +584,7 @@ $(document).ready(function () {
     var whetherSlider = $('.home-content__sidebar_weather__slider');
     whetherSlider.owlCarousel({
         loop: true,
-        nav: false,
+        nav: true,
         margin: 0,
         responsive: {
             0: {
