@@ -240,19 +240,33 @@
   display: block;
   position: absolute;
   top: 17px;
-  left: 31px;
-  width: 152px;
+  right: -9px;
+  width: 154px;
+  background-color: #f7a200;
   text-transform: uppercase;
   color: #fbfafa;
   font-size: 12px;
   font-weight: 700;
   line-height: 30px;
+  z-index: 2;
+  &:after{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    right: 0;
+    top: 30px;
+    border-top: 7px solid #da763c;
+    border-right: 7px solid transparent;
+  }
   &__star{
     display: block;
     position: relative;
     float: left;
     width: 29px;
     height: 29px;
+    margin-left: 12px;
     margin-right: 9px;
     background-image: url('../img/icons/star.png');
     background-repeat: no-repeat;
