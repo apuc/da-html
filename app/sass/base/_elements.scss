@@ -446,20 +446,22 @@
   }
 }
 
-// .content {
-//   width: 100%;
-//   float: left;
-//   position: relative;
-//   height: 100px;
-//   background-color: #f4f4f4;
-//   padding: 8px;
-//   @include border-box;
-//   @include transition(0.9s);
-//   &:hover {
-//     color: white;
-//     background-color: #292929;
-//   }
-// }
+#Go_Top {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 2;
+  display: none;
+  padding: 9px 10px;
+  @include box-sizing(border-box);
+  size: 50px;
+  border-radius: 50%;
+  background-color: #e6e3e3;
+  cursor: pointer;
+  img{
+    width: 30px;
+  }
+}
 
 #overlay {
   z-index: 3;
