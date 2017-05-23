@@ -75,7 +75,7 @@
     position: relative;
     float: left;
     display: inline-block;
-    background-image: linear-gradient(0deg,#000 0,rgba(4,0,1,.98) 2%,transparent);
+    background-image: linear-gradient(0deg, #000 0, rgba(4, 0, 1, .98) 2%, transparent);
     img {
       z-index: -1;
       position: absolute;
@@ -817,7 +817,7 @@
     height: 19px;
     object-fit: contain;
     position: relative;
-   /* margin-top: 9px;*/
+    /* margin-top: 9px;*/
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -922,7 +922,7 @@
   display: inline-block;
   border-bottom: 1px solid #edeef0;
   position: relative;
-  &:after{
+  &:after {
     display: none;
     position: absolute;
     content: '';
@@ -935,7 +935,7 @@
   &:hover {
     border-bottom: 1px solid #ff0200;
   }
-  &:hover:after{
+  &:hover:after {
     display: block;
   }
   h4 {
@@ -1000,8 +1000,8 @@
   @include box-sizing(border-box);
   overflow: hidden;
   border-bottom: 1px solid #edeef0;
- /* background-image: linear-gradient(0deg,#000,rgba(4,0,1,.98) 2%,transparent);*/
-  &--content{
+  /* background-image: linear-gradient(0deg,#000,rgba(4,0,1,.98) 2%,transparent);*/
+  &--content {
     display: block;
     position: absolute;
     content: '';
@@ -1009,7 +1009,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(0deg,#000,rgba(4,0,1,.98) 2%,transparent);
+    background-image: linear-gradient(0deg, #000, rgba(4, 0, 1, .98) 2%, transparent);
     .time {
       position: absolute;
       width: 70%;
@@ -1044,7 +1044,7 @@
       text-overflow: ellipsis;
     }
   }
-  &:after{
+  &:after {
     display: none;
     position: absolute;
     content: '';
@@ -1057,12 +1057,12 @@
   &:hover {
     border-bottom: 1px solid #ff0200;
   }
-  &:hover:after{
+  &:hover:after {
     display: block;
   }
   img {
-   /* position: absolute;
-    z-index: -1;*/
+    /* position: absolute;
+     z-index: -1;*/
     size: 100%;
     object-fit: cover;
   }
@@ -1422,7 +1422,7 @@
       background-image: url("../img/home-content/ask-icon.png");
       background-repeat: no-repeat;
     }
-    > .ask-title{
+    > .ask-title {
       display: inline-block;
       position: relative;
       top: -7px;
@@ -1477,7 +1477,7 @@
     position: relative;
     margin-right: 12px;
     background-color: #f2e2e5;
-    span{
+    span {
       display: block;
       position: relative;
       float: left;
@@ -1526,7 +1526,7 @@
     text-overflow: ellipsis;
     margin-bottom: 0;
     margin-top: 3px;
-    &:after{
+    &:after {
       display: block;
       position: absolute;
       content: '';
@@ -1694,7 +1694,7 @@
   background-color: white;
   border: 1px solid rgba(185, 196, 213, 0.48);
   margin-top: 30px;
-  h3{
+  h3 {
     display: block;
     position: absolute;
     top: 0;
@@ -1712,23 +1712,23 @@
     text-transform: uppercase;
     z-index: 2;
   }
-  &__slider{
+  &__slider {
     display: block;
     position: relative;
     float: left;
     size: 100%;
-    &--item{
+    &--item {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       height: 100%;
       overflow: hidden;
-      img{
+      img {
         size: 100%;
         object-fit: cover;
       }
-      .city{
+      .city {
         display: block;
         position: absolute;
         width: 100%;
@@ -1740,7 +1740,7 @@
         font-size: 14px;
         font-weight: 700;
       }
-      .date{
+      .date {
         display: block;
         position: absolute;
         width: 100%;
@@ -1752,10 +1752,10 @@
         font-size: 14px;
         font-weight: 500;
       }
-      .weather-val{
+      .weather-val {
         display: block;
         position: absolute;
-        width: 100%;
+        width: 50%;
         top: 83px;
         padding-left: 13px;
         @include box-sizing(border-box);
@@ -1765,14 +1765,14 @@
         font-weight: 500;
       }
     }
-    &--img{
+    &--img {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       height: 129px;
       overflow: hidden;
-      &:after{
+      &:after {
         display: block;
         position: absolute;
         content: '';
@@ -1780,14 +1780,14 @@
         height: 100%;
         left: 0;
         top: 0;
-        background-color: rgba(52,53,53,0.77);
+        background-color: rgba(52, 53, 53, 0.77);
       }
-      img{
+      img {
         size: 100%;
         object-fit: cover;
       }
     }
-    &--icon{
+    &--icon {
       display: block;
       position: relative;
       float: right;
@@ -1795,19 +1795,19 @@
       height: 43px;
       margin-top: -85px;
       margin-right: 18px;
-      .icon{
+      .icon {
         display: block;
         position: relative;
         float: left;
         width: 55px;
         height: 43px;
         overflow: hidden;
-        img{
+        img {
           size: 100%;
           object-fit: contain;
         }
       }
-      .degrees{
+      .degrees {
         display: block;
         position: relative;
         float: left;
@@ -1818,17 +1818,17 @@
         text-transform: uppercase;
       }
     }
-    &--content{
+    &--content {
       display: block;
       position: relative;
       float: left;
       width: 100%;
-      p{
+      p {
         display: block;
         position: relative;
         float: left;
         margin: 0;
-        &:first-of-type{
+        &:first-of-type {
           width: 88px;
           padding-top: 20px;
           @include box-sizing(border-box);
@@ -1837,7 +1837,7 @@
           font-size: 19px;
           font-weight: 700;
           text-transform: uppercase;
-          &:after{
+          &:after {
             display: block;
             position: absolute;
             content: '';
@@ -1848,7 +1848,7 @@
             background-color: #dbdbdb;
           }
         }
-        &:last-of-type{
+        &:last-of-type {
           width: calc(100% - 88px);
           padding-top: 24px;
           padding-left: 32px;
@@ -1856,16 +1856,17 @@
           color: #090101;
           font-size: 15px;
           font-weight: 600;
+          text-transform: capitalize;
         }
       }
     }
-    .owl-nav{
+    .owl-nav {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       margin-top: -15px;
-      .owl-prev{
+      .owl-prev {
         display: none;
         position: relative;
         float: left;
@@ -1875,7 +1876,7 @@
         color: transparent;
         z-index: -1;
       }
-      .owl-next{
+      .owl-next {
         display: block;
         position: relative;
         float: right;
