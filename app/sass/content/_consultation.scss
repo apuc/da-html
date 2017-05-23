@@ -4,6 +4,9 @@
   #article{
     width: 875px;
     float: left;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
   }
   #aside{
     float: right;
@@ -110,15 +113,23 @@
     margin-right: auto;
     padding-left: 14px;
     padding-right: 14px;
+    @include box-sizing(border-box);
     text-align: center;
     margin-top: 13px;
     margin-bottom: 31px;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      font-size: 22px;
+    }
   }
   .owl-carousel{
     position: relative;
-    width: 785px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    @include breakpoint(max-widyh 660px){
+      width: 100%;
+    }
     .item{
       display: block;
       position: relative;
@@ -151,6 +162,10 @@
         max-width: 100%;
         margin: 20px auto 0;
         color: #000;
+        @include breakpoint(max-width 660px){
+          width: 100%;
+          text-align: center;
+        }
       }
     }
     .owl-nav{
@@ -226,12 +241,18 @@
       .info{
         text-align: right;
         margin-top: 20px;
-
         a{
           text-decoration: underline;
           color: #ee2e24;
           font-size: 15px;
-
+          @include breakpoint(max-width 660px){
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+          }
           &:hover{
             text-decoration: none;
           }
@@ -239,11 +260,19 @@
         .view{
           font-size: 15px;
           color: #030000;
-          background-image: url(../img/info-icons/icon-3.png);
+          background-image: url('../img/info-icons/icon-3.png');
           background-repeat: no-repeat;
           padding-left: 26px;
           background-position: 0 5px;
           margin-left: 29px;
+          /*@include breakpoint(max-width 660px){
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
+            text-align: left;
+            margin-right: 0;
+          }*/
         }
       }
     }
@@ -268,6 +297,11 @@
         position: absolute;
         top: 26px;
         left: 0;
+      }
+    }
+    a.load-more{
+      @include breakpoint(max-width 660px){
+        margin-top: 97px;
       }
     }
   }

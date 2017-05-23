@@ -34,10 +34,17 @@
 }
 
 .company__box{
+  @include display-flex(flex);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include justify-content(space-between);
   width: 100%;
   float: left;
   padding: 5px;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
+  .business__sm-item, .business__sm-item.favorite, .business__big-item, .business__big-item.favorite {
+    margin-right: 0;
+  }
   .item-small, .item-large{
     width: 15.8%;
     float: left;
