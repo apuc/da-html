@@ -159,13 +159,10 @@
       p{
         position: relative;
         float: left;
-        max-width: 100%;
+        width: 100%;
+        text-align: center;
         margin: 20px auto 0;
         color: #000;
-        @include breakpoint(max-width 660px){
-          width: 100%;
-          text-align: center;
-        }
       }
     }
     .owl-nav{
