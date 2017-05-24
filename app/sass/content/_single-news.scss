@@ -167,8 +167,9 @@
             display: block;
             position: relative;
             float: left;
-            width: 50%;
-            height: 250px;
+            width: 100%;
+            min-height: 250px;
+            max-height: 500px;
             overflow: hidden;
             margin: 10px 0;
             img.newsImg{
