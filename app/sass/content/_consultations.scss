@@ -54,10 +54,16 @@
     float: left;
     width: 100%;
     > .accordion-menu{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
       margin-top: 50px;
+      margin-bottom: 50px;
     }
     .single-consulting-menu{
       ul{
+
         li{
           a{
             font-family: "Roboto-Light";
@@ -74,15 +80,24 @@
       }
     }
     ul{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
       padding-left: 0;
-
+      list-style: none;
+      margin: 0;
       li{
-        list-style: none;
+        display: block;
         position: relative;
+        float: left;
+        width: 100%;
+        list-style: none;
         @include transition(max-height .7s);
-        overflow: hidden;
+       /* overflow: hidden;*/
         padding-left: 33px;
         padding-top: 5px;
+        @include box-sizing(border-box);
         &:after{
           width: 0;
           background: #ee2e24 none repeat scroll 0 0;
@@ -100,14 +115,20 @@
           font-size: 17px;
           color: #040000;
         }
-        /* 2 ;v; */
-        ul{
+        > ul{
+          display: none;
+          position: relative;
+          float: left;
+          width: 100%;
           padding-left: 0;
-          max-height: 0;
           @include transition(max-height .5s);
-
           li{
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
             padding-left: 15px;
+            @include box-sizing(border-box);
             &:after{
               display: none;
             }
@@ -117,7 +138,13 @@
 
             /* 3 lvl */
             ul{
-
+              display: none;
+              position: relative;
+              float: left;
+              width: 100%;
+              padding-left: 0;
+              list-style: none;
+              margin: 0;
               li{
                 padding-left: 12px;
                 &:after{
@@ -129,24 +156,24 @@
               }
             }
           }
-          li.active-children{
+          /*li.active-children{
             max-height: 100%;
             @include transition(max-height .5s);
-          }
+          }*/
         }
-        ul.up-child{
+        /*ul.up-child{
           max-height: 100%;
           @include transition(max-height .5s);
-        }
+        }*/
       }
-      li.active{
+      /*li.active{
         max-height: 100%;
         @include transition(max-height .7s);
 
         &:after{
           width: 5px;
         }
-      }
+      }*/
     }
   }
   #article{
