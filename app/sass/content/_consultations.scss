@@ -156,6 +156,22 @@
               }
             }
           }
+          li.active-children{
+            max-height: 100%;
+            @include transition(max-height .5s);
+          }
+        }
+        ul.up-child{
+          max-height: 100%;
+          @include transition(max-height .5s);
+        }
+      }
+      li.active{
+        max-height: 100%;
+        @include transition(max-height .7s);
+
+        &:after{
+          width: 5px;
         }
       }
     }
