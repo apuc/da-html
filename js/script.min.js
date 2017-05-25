@@ -664,7 +664,7 @@ $(document).ready(function () {
     /*close businnes owl.slider*/
 
     /*business sidebar script*/
-    $('.business__sidebar--items ul li a').on('click', function () {
+    $('.business__sidebar--items ul li a').on('click', function (event) {
         event.preventDefault();
         if ($(this)[0].hasAttribute('data-id')) {
             var dataId = $(this).attr('data-id'),
@@ -679,7 +679,7 @@ $(document).ready(function () {
             }
         }
     });
-    $('.business__sidebar--hover-trigger').on('click', function () {
+    $('.business__sidebar--hover-trigger').on('click', function (event) {
         event.preventDefault();
         var mainBlock = $('#business-sidebar-main'),
             hoverBlock = $(this).closest('.business__sidebar--hover-items');
