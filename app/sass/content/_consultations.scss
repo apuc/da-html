@@ -63,7 +63,6 @@
     }
     .single-consulting-menu {
       ul {
-
         li {
           a {
             font-family: "Roboto-Light";
@@ -162,6 +161,7 @@
           }
         }
         ul.up-child{
+          display: block!important;
           max-height: 100%;
           @include transition(max-height .5s);
         }
