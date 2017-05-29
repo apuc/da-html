@@ -84,7 +84,7 @@
     overflow: hidden;
     float: left;
     position: relative;
-    background-image: linear-gradient(0deg,#000 0,rgba(2,0,0,.98) 2%,transparent);
+    background-image: linear-gradient(to top,rgba(0,0,0,0.4) 18%,transparent 50%);
     border: 1px solid #fff;
     img {
       size: 100%;
@@ -274,7 +274,7 @@
     top: 15px;
     margin-left: -22px;
     margin-right: 0;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
   }
   a, .archive-news {
     color: #090000;
@@ -299,10 +299,7 @@
       top: 15px;
       margin-left: 22px;
       margin-right: 0;
-      transform: rotate(-90deg);
-      @include breakpoint(max-width 660px){
-
-      }
+      transform: rotate(90deg);
     }
     .datepicker-inline {
       margin-top: 23px;
@@ -380,14 +377,15 @@
       //}
     }
     .category {
-      width: 100%;
+      display: inline-block;
       float: left;
       position: relative;
+      width: 100%;
+      margin-top: -18px;
       color: #fbfafa;
       font-size: 13px;
       font-weight: 700;
       line-height: 18px;
-      display: inline-block;
       .category-star {
         size: 29px;
         display: inline-block;
