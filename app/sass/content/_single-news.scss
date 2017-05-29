@@ -72,6 +72,7 @@
           @include display-flex(flex);
           @include flex-wrap(wrap);
           @include flex-direction(column);
+          width: 100%;
           > span{
             width: 100%;
             @include box-sizing(border-box);
