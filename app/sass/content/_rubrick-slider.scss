@@ -12,7 +12,7 @@
   margin: 40px 0;
   .owl-controls {
     position: absolute;
-    top: 7px;
+    top: 5px;
     width: 32%;
     @include breakpoint(max-width 660px){
       width: 100%;
