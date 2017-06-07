@@ -104,10 +104,11 @@
       }
     }
     .thumbnail-wrapper{
+      display: inline-block;
+      position: relative;
       margin-bottom: 16px;
       width: 100%;
       height: 367px;
-      float: left;
       @include breakpoint(max-width 660px){
         height: 200px;
       }
