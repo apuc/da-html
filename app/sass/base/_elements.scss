@@ -498,3 +498,16 @@
   border: 1px solid #FF0000 !important;
   box-shadow: 0 0 4px rgba(255, 0, 0, .47), inset 0 1px 3px rgba(0, 0, 0, .17);
 }
+.open-soc {
+  float: right;
+  cursor: pointer;
+
+  i.fa.fa-random.fa-lg {
+    font-size: 13px;
+    vertical-align: 1px;
+    color: #fff;
+    &:hover {
+      color: #ee2e24;
+    }
+  }
+}

@@ -140,6 +140,7 @@
       padding-right: 27px;
       padding-top: 36px;
       padding-bottom: 60px;
+      float: left;
       @include box-sizing(border-box);
       @include breakpoint(max-width 660px){
         padding-left: 10px;

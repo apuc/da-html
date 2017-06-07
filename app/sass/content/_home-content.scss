@@ -883,19 +883,7 @@
     font-variant: small-caps;
     width: 70%;
   }
-  .open-soc {
-    float: right;
-    cursor: pointer;
 
-    i.fa.fa-random.fa-lg {
-      font-size: 13px;
-      vertical-align: 1px;
-      color: #090000;
-      &:hover {
-        color: #ee2e24;
-      }
-    }
-  }
   p {
     display: inline-block;
     color: #050000;
@@ -1053,6 +1041,22 @@
 .home-content__sidebar {
   width: 24%;
   float: left;
+  &__button{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    background: #ee2e24;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    margin-top: 30px;
+  }
 }
 .home-content__sidebar_poll {
   margin-top: 30px;
@@ -1075,7 +1079,7 @@
     font-weight: 700;
     line-height: 22px;
     border-top: 7px solid #ff0200;
-    padding: 5px 0;
+    padding: 10px 0;
     box-sizing: border-box;
     text-transform: uppercase;
   }
@@ -1372,6 +1376,7 @@
       thead {
         background-color: #e2e2e2;
         tr {
+          border: 1px solid #5c5c5d;
           width: 100%;
           text-align: center;
           th {
@@ -1381,7 +1386,7 @@
             font-size: 14px;
             font-weight: 600;
             line-height: 24px;
-            border: 1px solid #fff;
+            border: 1px solid #5c5c5d;
             border-top: none;
           }
         }
@@ -1399,7 +1404,7 @@
             font-weight: 700;
             line-height: 24px;
             text-transform: uppercase;
-            border: 1px solid #edeef0;
+            border: 1px solid #5c5c5d;
             position: relative;
             .up {
               width: 0;
@@ -1650,6 +1655,7 @@
   overflow: hidden;
   border: 1px solid rgba(185, 196, 213, 0.48);
   cursor: pointer;
+  margin-bottom: 10px;
 }
 .stock__item_hide {
   display: block;
