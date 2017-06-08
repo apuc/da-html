@@ -43,7 +43,17 @@ $(document).ready(function () {
                 $(".header-menu li a").addClass("fadeInUp animated");
             }
         });
+
     }
+    $(".header-menu__sub_button").click(function () {
+        if ($(".header-menu__sub_list").is(":visible")) {
+            $(".header-menu__sub_list").fadeOut(600);
+            $(".header-menu__sub_list li a").removeClass("fadeInUp animated");
+        } else {
+            $(".header-menu__sub_list").fadeIn(600);
+            $(".header-menu__sub_list li a").addClass("fadeInUp animated");
+        }
+    });
     /*hamburger*/
 
     /*hamburger-news*/
@@ -101,14 +111,14 @@ $(document).ready(function () {
         margin: 30,
         nav: true,
         navText: true,
-        navigation: true,        
+        navigation: true,
         pagination: true,
-        items: 1,       
+        items: 1,
         dotsContainer: '#dotscustom',
         singleItem: false,
         mouseDrag: false,
         touchDrag: false,
-        responsiveClass: true        
+        responsiveClass: true
     });
 
     /*afisha top slider*/
@@ -150,7 +160,47 @@ $(document).ready(function () {
         }
     });
     /*close afisha top slider*/
-    
+
+    /*company-home slider*/
+    $(".company-slider__box").owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        navText: true,
+        navigation: true,
+        /*navigationText: true,*/
+        pagination: true,
+        autoplay: true,
+        autoplayTimeout: 9000,
+        items: 1,
+        dots: true,
+        singleItem: false,
+        mouseDrag: false,
+        touchDrag: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 1,
+                nav: true
+            },
+            1000: {
+                items: 1,
+                nav: true,
+                loop: true
+            },
+            1200: {
+                items: 1,
+                nav: true,
+                loop: true
+            }
+        }
+    });
+    /*company-home top slider*/
+
     var carousel1 = '.js-carousel-1';
     var carousel2 = '.js-carousel-2';
     var carousel3 = '.js-carousel-3';
@@ -445,7 +495,7 @@ $(document).ready(function () {
         );
     });
     /*close modal faq*/
-    
+
     /* open tabs*/
     $('.page__tabs_target').click(function (event) {
         $('.page__tabs_targett').removeClass('page__tabs_active');
@@ -472,7 +522,7 @@ $(document).ready(function () {
             $(this).removeClass('search_input_acive', {duration: 1000});
         } else {
             $(this).addClass('search_input_acive', {duration: 1000});
-        } 
+        }
     });
     /*close show header input field*/
 
@@ -577,9 +627,9 @@ $(document).ready(function () {
    /* $(document).on('click', '.accordion-menu a', function (event) {
         event.preventDefault();
         var list = $(this).next('ul');
-        if(list.hasClass('open')){           
+        if(list.hasClass('open')){
             list.removeClass('open').slideUp('400');
-        } else {           
+        } else {
             list.addClass('open').slideDown('400');
         }
     });*/
@@ -853,7 +903,7 @@ $(document).ready(function () {
     /*search form option select*/
     $(document).on('click', '.js-search-option', function (event) {
        event.preventDefault();
-       var optionBox = $(this).next('.search-panel__result--option');          
+       var optionBox = $(this).next('.search-panel__result--option');
        if($(this).hasClass('open')){
            $(this).removeClass('open');
            optionBox.slideUp('400');

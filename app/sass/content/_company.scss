@@ -1,4 +1,4 @@
-.company{
+.company, .company-slider{
   display: block;
   position: relative;
   float: left;
@@ -33,7 +33,7 @@
   }
 }
 
-.company__box{
+.company__box, .company-slider__box, .company-slider__box_item{
   @include display-flex(flex);
   @include flex-wrap(wrap);
   @include flex-direction(row);
