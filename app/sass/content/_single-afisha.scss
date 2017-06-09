@@ -1,7 +1,7 @@
-.single-afisha{
+.single-afisha {
   float: left;
   width: 100%;
-  .container{
+  .container {
     background-color: #fff;
     padding-top: 22px;
     padding-left: 55px;
@@ -9,18 +9,18 @@
     margin-bottom: 40px;
     padding-bottom: 35px;
     @include box-sizing(border-box);
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       padding-left: 10px;
       padding-right: 10px;
     }
-    .what-to-see{
+    .what-to-see {
       margin-bottom: 45px;
       padding-left: 0;
       padding-right: 0;
-      h3{
+      h3 {
         width: 79%;
       }
-      a.view-more{
+      a.view-more {
         display: inline-block;
         font-size: 14px;
         text-transform: uppercase;
@@ -30,7 +30,7 @@
         padding-right: 43px;
         position: relative;
 
-        &:after{
+        &:after {
           display: block;
           position: absolute;
           width: 7px;
@@ -42,19 +42,19 @@
           top: 4px;
         }
 
-        &:hover{
+        &:hover {
           text-decoration: none;
         }
       }
-      .afisha-events__wrap{
+      .afisha-events__wrap {
         display: block;
         float: left;
         width: 100%;
         margin-bottom: 50px;
-        .item{
+        .item {
           margin: 15px;
           float: left;
-          @include breakpoint(max-width 660px){
+          @include breakpoint(max-width 660px) {
             height: 520px;
             margin: 10px 0;
           }
@@ -62,74 +62,100 @@
       }
     }
   }
-  .age{
+  .age {
     font-size: 20px;
     color: #000;
     font-weight: 700;
     text-transform: uppercase;
   }
-  h1{
+  h1 {
+    position: relative;
+    width: 517px;
+    margin-left: calc(50% - (517px/2));
+    text-align: center;
     font-size: 25px;
     font-weight: 700;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
     }
   }
-  .afisha-content-wrapper{
+  .afisha-content-wrapper {
     display: flex;
     justify-content: space-between;
     margin-top: 29px;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
       @include flex-direction(column);
     }
-      .thumbnail-afisha{
-        width: 29%;
-        @include breakpoint(max-width 660px){
-          width: 100%;
-          height: 300px;
-          overflow: hidden;
-        }
-        img{
-          width: 100%;
-          height: auto;
-          @include breakpoint(max-width 660px){
-            size: 100%;
-            object-fit: contain;
-          }
+    .thumbnail-afisha {
+      width: 29%;
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        @include breakpoint(max-width 660px) {
+          size: 100%;
+          object-fit: contain;
         }
       }
-      .afisha-content{
-        font-size: 16px;
-        color: #060000;
-        width: 68%;
-        font-weight: 500;
-        line-height: 1.6;
-        @include breakpoint(max-width 660px){
-          width: 100%;
-        }
-        .date-time{
-          font-size: 19px;
-          color: #030000;
-          background-image: url('../img/info-icons/icon-4.png');
-          background-repeat: no-repeat;
-          padding-left: 40px;
-          font-weight: 400;
-          background-size: 21px;
-          background-position: 0 6px;
-          line-height: 35px;
-        }
-        p{
-          margin-bottom: 35px;
-        }
+    }
+    .afisha-content {
+      font-size: 16px;
+      color: #060000;
+      width: 68%;
+      font-weight: 500;
+      line-height: 1.6;
+      @include breakpoint(max-width 660px) {
+        width: 100%;
       }
+      .date-time {
+        font-size: 19px;
+        color: #030000;
+        background-image: url('../img/info-icons/icon-4.png');
+        background-repeat: no-repeat;
+        padding-left: 40px;
+        font-weight: 400;
+        background-size: 21px;
+        background-position: 0 6px;
+        line-height: 35px;
+      }
+      p {
+        margin-bottom: 35px;
+      }
+    }
+    &__separator{
+      display: inline-block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 1px;
+      margin-top: 28px;
+      margin-bottom: 28px;
+      background-color: #edeef0;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 116px;
+        height: 3px;
+        background-color: #ff0000;
+        top: -2px;
+        left: 0;
+      }
+    }
   }
-  .maps{
-    margin-top: 45px;
-    .tabs__caption{
+  .maps {
+    margin-top: 0;
+    position: relative;
+    display: inline-block;
+    .tabs__caption {
       padding-left: 0;
       border-bottom: 1px solid #e3e3e3;
-      li{
+      li {
         list-style: none;
         display: inline-block;
         border-top: 1px solid #e3e3e3;
@@ -138,99 +164,657 @@
         padding: 8px;
         border-radius: 7px 7px 0px 0px;
 
-        &:hover{
+        &:hover {
           cursor: pointer;
         }
 
-        .date{
+        .date {
           display: flex;
           width: 28%;
 
-          .day{
+          .day {
             font-weight: 500;
             font-size: 48px;
             line-height: 49px;
             margin-right: 8px;
           }
-          .weekday{
+          .weekday {
             flex-direction: column;
             display: flex;
 
-            span{
-              &:first-child{
+            span {
+              &:first-child {
                 color: #ccc;
               }
             }
           }
         }
       }
-      li.active{
+      li.active {
         border-color: #ff0000;
       }
     }
-    .maps-info{
+    .maps-info {
       display: flex;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         @include flex-direction(column);
       }
-      .date{
+      .date {
         display: flex;
         width: 28%;
-        @include breakpoint(max-width 660px){
+        @include breakpoint(max-width 660px) {
           width: 100%;
         }
-        .day{
+        .day {
           font-weight: 500;
           font-size: 48px;
           line-height: 49px;
           margin-right: 8px;
         }
-        .weekday{
+        .weekday {
           flex-direction: column;
           display: flex;
 
-          span{
-            &:first-child{
+          span {
+            &:first-child {
               color: #ccc;
             }
           }
         }
       }
-      .adress{
+      .adress {
         font-size: 14px;
         color: #060000;
         font-weight: 700;
         width: 14%;
-        @include breakpoint(max-width 660px){
+        @include breakpoint(max-width 660px) {
           width: 100%;
         }
       }
     }
 
-    .map{
-      h3{
+    .map {
+      h3 {
         font-size: 20px;
       }
 
     }
   }
+  &__when{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    > h3{
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 27px;
+      color: #030000;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    > p{
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 0;
+      color: #060000;
+      font-weight: 400;
+      font-size: 16px;
+      span{
+        margin-right: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__place{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    > .map{
+      display: block;
+      position: relative;
+      float: left;
+      width: 570px;
+      height: 250px;
+      overflow: hidden;
+      .ymaps {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &--requisites{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 575px);
+      padding-left: 48px;
+      @include box-sizing(border-box);
+      > h3{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #030000;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+  }
 }
-.ymaps{
-  height: 250px;
-  width: 100%;
-}
+
+
+
 .tabs__content {
   display: none; /* по умолчанию прячем все блоки */
-  @include breakpoint(max-width 660px){
+  @include breakpoint(max-width 660px) {
     width: 100%;
   }
 }
+
 .tabs__content.active {
   display: block; /* по умолчанию показываем нужный блок */
 }
 
-.main-consultations-sidebar{
+.main-consultations-sidebar {
   float: left;
   display: inline-block;
   width: 331px;
 }
+
+.afisha-events {
+  width: 100%;
+  float: left;
+  position: relative;
+  margin-bottom: 40px;
+  .show-more {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    padding: 12px 35px;
+    box-sizing: border-box;
+    background-color: #ee2e24;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+}
+
+.what-to-see, .where-to-go, .interested {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+  padding: 40px 12px 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  h3 {
+    width: 100%;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    float: left;
+    text-align: left;
+    padding-left: 17px;
+    box-sizing: border-box;
+    margin-top: 0;
+  }
+  .item {
+    display: inline-block;
+    float: none;
+    position: relative;
+    width: 22%;
+    height: 323px;
+    overflow: hidden;
+    margin: 25px auto;
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+      flex-basis: 100%;
+    }
+    img {
+      size: 100%;
+      object-fit: cover;
+    }
+    .item-content {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -150px;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.75);
+      transition: all 0.7s ease;
+      @include breakpoint(max-width 660px) {
+        bottom: 0;
+      }
+      .type, .name-item, .time {
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        width: 100%;
+        text-align: left;
+        float: left;
+        margin: 8px 0;
+      }
+      .name-item {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 10px;
+      }
+      .time {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+  .item:hover .item-content {
+    bottom: 0;
+    transition: all 0.7s ease;
+  }
+  .interested__item {
+    width: 47%;
+    flex-basis: 47%;
+    float: none;
+    margin: 0 auto 47px;
+    height: 140px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+      flex-basis: 100%;
+      margin: 10px 0;
+    }
+    img {
+      size: 100%;
+      object-fit: cover;
+    }
+    /*&:hover{
+      img{
+        @include filter(grayscale(100%));
+      }
+    }*/
+  }
+  .interested__item_title {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px 102px;
+    box-sizing: border-box;
+    /*background-image: linear-gradient(to top, black 0%, rgba(2, 0, 0, 0.98) 2%, transparent 100%);*/
+    h4 {
+      display: block;
+      display: -webkit-box;
+      color: #fff;
+      font-weight: 700;
+      font-size: 20px;
+      width: 100%;
+      height: calc(20px * 1 * 3);
+      text-align: center;
+      margin: 0;
+      line-height: 1;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    span {
+      color: #fff;
+      font-weight: 400;
+      font-size: 15px;
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+    }
+    .show-more {
+      background-color: transparent;
+      margin-top: -14px;
+      display: none;
+      > .red-arrow {
+        width: 25px;
+        left: -22px;
+        position: relative;
+      }
+    }
+    &:hover {
+      .span, h4 {
+        /*text-decoration: underline;*/
+        /* text-decoration-color: #ee2e24;*/
+      }
+      .show-more {
+        display: block;
+      }
+    }
+  }
+}
+
+.interested {
+  .interested__item_title {
+    background-image: linear-gradient(to top, black 0%, rgba(2, 0, 0, 0.98) 2%, transparent 100%);
+    &:after {
+      display: none;
+      position: absolute;
+      content: '';
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+      border: 1px solid #fcfcfc;
+      opacity: 0.59;
+      top: 5px;
+      left: 5px;
+    }
+  }
+  .interested__item_title:hover:after {
+    display: block;
+  }
+}
+
+.afisha-events__wrap {
+  display: flex;
+  width: 100%;
+  float: left;
+  position: relative;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  .item {
+    .item-content {
+      .name-item {
+        display: block;
+        display: -webkit-box;
+        position: relative;
+        float: left;
+        width: 100%;
+        font-size: 18px;
+        height: calc(18px * 1 * 2);
+        line-height: 1;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.interested {
+  padding-bottom: 40px;
+}
+
+.events-day {
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #fff;
+  padding: 30px 0 0;
+  box-sizing: border-box;
+  h3 {
+    width: 50%;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    float: left;
+    text-align: left;
+    padding-left: 28px;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+  }
+}
+
+.events-day__wrap {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  .item {
+    width: 22%;
+    float: none;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 11px;
+    border: 1px solid transparent;
+    @include breakpoint(max-width 660px) {
+      width: calc(100% - (11px * 2));
+    }
+    .thumb {
+      width: 100%;
+      float: left;
+      height: 165px;
+      img {
+        size: 100%;
+        object-fit: cover;
+      }
+    }
+    .thumb:after {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 165px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+      content: '';
+      opacity: 0.4;
+      background: #fff;
+    }
+    .contents {
+      width: 100%;
+      border: 2px solid #f9f9f9;
+      float: left;
+      padding: 10px;
+      box-sizing: border-box;
+      .type, .date, .place {
+        text-align: left;
+        width: 100%;
+        color: #000;
+        display: block;
+        display: -webkit-box;
+        float: left;
+        font-size: 11px;
+        font-weight: 400;
+      }
+      .date, .place {
+        font-size: 13px;
+      }
+      .type {
+        line-height: 1.2;
+        height: calc(11px * 1.2 * 1);
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .date {
+        line-height: 1.2;
+        height: calc(13px * 1.2 * 1);
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      h3 {
+        width: 100%;
+        height: calc(17px * 1.2 * 1);
+        text-align: left;
+        display: block;
+        display: -webkit-box;
+        float: left;
+        color: #000;
+        font-weight: 700;
+        margin: 5px 0;
+        font-size: 17px;
+        padding-left: 0;
+        line-height: 1.2;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .place {
+        line-height: 1.2;
+        height: calc(13px * 1.2 * 2);
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .social-wrap {
+        width: initial;
+        display: none;
+        position: absolute;
+        margin-top: -32px;
+        right: 6px;
+        .social-wrap__item {
+          size: 15px;
+          margin-right: 2px;
+          img {
+            size: 10px;
+            top: 0;
+          }
+        }
+      }
+      &:hover {
+        .social-wrap {
+          display: block;
+        }
+      }
+    }
+  }
+  .item:hover {
+    border: 1px solid #b2b2b2;
+    .thumb:after {
+      display: block;
+    }
+  }
+}
+
+.calendar-wrap {
+  width: 40%;
+  float: right;
+  position: relative;
+  @include breakpoint(max-width 660px) {
+    width: 100%;
+  }
+  ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+    li, .datepicker-wrap {
+      display: inline-block;
+      list-style-type: none;
+      width: 12%;
+      float: left;
+      cursor: pointer;
+      b, span {
+        width: 100%;
+        text-align: center;
+        color: #100020;
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 17px;
+      }
+      span {
+        font-size: 14px;
+      }
+      .dot {
+        width: 7px;
+        height: 7px;
+        background-color: #862636;
+        display: inline-block;
+        border-radius: 50%;
+      }
+    }
+    li.weekend {
+      b, span {
+        color: #ee2e24;
+      }
+    }
+
+  }
+}
+
+.datepicker-wrap {
+  padding-top: 9px;
+  box-sizing: border-box;
+  margin-left: 12px;
+}
+
+.datepicker-inline {
+  display: none;
+  width: 252px;
+  position: absolute;
+  z-index: 10;
+  margin-top: 38px;
+  left: 180px;
+  @include breakpoint(max-width 660px) {
+    left: 57px;
+  }
+}
+
+.afisha-menu {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+  padding: 17px 0;
+  box-sizing: border-box;
+  ul {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: block;
+    li {
+      display: inline-block;
+      list-style-type: none;
+      position: relative;
+      margin: 0 14px;
+      a {
+        text-transform: uppercase;
+        color: rgba(12, 36, 46, 0.92);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        &:after {
+          display: block;
+          position: absolute;
+          content: "";
+          bottom: -1px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #242424;
+          transition: width ease-in-out 0.4s;
+        }
+      }
+      a:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
