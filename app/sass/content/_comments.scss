@@ -39,10 +39,10 @@
       margin-right: 43px;
     }
   }
+
   .comments{
     background-color: #fff;
     padding-bottom: 32px;
-    width: 100%;
     position: relative;
     float: left;
     @include breakpoint(max-width 660px){
