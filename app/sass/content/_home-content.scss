@@ -345,6 +345,7 @@
   padding: 20px;
   box-sizing: border-box;
   margin-top: 30px;
+  height: 209px;
   .title_row {
     width: 100%;
     display: inline-block;
@@ -762,6 +763,7 @@
 .komunalka__item {
   display: inline-block;
   float: left;
+  position: relative;
 }
 
 .komunalka__icon {
@@ -787,29 +789,43 @@
 
 .komunalka__line {
   height: 55px;
+  // min-width: 200px;
   display: none;
-  position: relative;
-  float: left;
+  position: absolute;
+  border: 1px solid #ff0200;
+  left: -1px;
+  z-index: 3;
+  margin-top: 53px;
   color: #110101;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  text-align: right;
+  text-align: left;
   padding: 14px 0;
-  padding-left: 10px;
+  padding-left: 5px;
   box-sizing: border-box;
-  &:before {
-    content: "";
-    width: 1px;
-    height: 30px;
-    position: absolute;
-    left: 0;
-    margin-top: -3px;
-    background-color: #ff0200;
+  span{
+    min-width: 138px;
+    float: left;
+    display: inline-block;
   }
+  // &:before {
+  //   content: "";
+  //   width: 1px;
+  //   height: 30px;
+  //   position: absolute;
+  //   left: 0;
+  //   margin-top: -3px;
+  //   background-color: #ff0200;
+  // }
   .red-arrow {
-    margin: 0 10px;
-    top: 8px;
+    margin: 0 4px;
+    top: 22px;
+    position: absolute;
+    float: none;
+    display: inline-block;
+    right: 0;
+    min-width: auto;
   }
 
 }
