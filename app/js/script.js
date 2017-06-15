@@ -43,7 +43,17 @@ $(document).ready(function () {
                 $(".header-menu li a").addClass("fadeInUp animated");
             }
         });
+
     }
+    $(".header-menu__sub_button").click(function () {
+        if ($(".header-menu__sub_list").is(":visible")) {
+            $(".header-menu__sub_list").fadeOut(600);
+            $(".header-menu__sub_list li a").removeClass("fadeInUp animated");
+        } else {
+            $(".header-menu__sub_list").fadeIn(600);
+            $(".header-menu__sub_list li a").addClass("fadeInUp animated");
+        }
+    });
     /*hamburger*/
 
     /*hamburger-news*/
