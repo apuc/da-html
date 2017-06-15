@@ -1859,6 +1859,8 @@
   float: left;
   position: relative;
   margin: 17px 0;
+  display: inline-block;
+
   .thumb {
     size: 46px;
     overflow: hidden;
@@ -1926,7 +1928,9 @@
       background-color: #edeef0;
     }
   }
+
 }
+
 
 .main-weather {
   width: 100%;
