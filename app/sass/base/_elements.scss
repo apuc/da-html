@@ -5,51 +5,7 @@
   }
 }
 
-.hide-social {
-  padding: 5px;
-  box-sizing: border-box;
-  display: none;
-  @include flex-wrap(wrap);
-  @include flex-direction(row);
-  @include justify-content(space-around);
-  float: left;
-  position: absolute;
-  width: 100%;
-  /*height: 100px;*/
-  background-color: #090000;
-  margin-top: -36px;
-  left: 0;
-  &:after{
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    content: '';
-    right: 4px;
-    bottom: -10px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px solid #090000;
-  }
-  > a, span {
-    width: 20px;
-    height: 20px;
-    display: block;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    float: left;
-    position: relative;
-    margin-right: 0;
-    text-align: center;
-    margin-top: 0;
-    &:hover{
-      i{
-        color: #ee2e24;
-      }
-    }
-  }
-}
+
 
 .main-title {
   display: block;
@@ -499,19 +455,87 @@
   box-shadow: 0 0 4px rgba(255, 0, 0, .47), inset 0 1px 3px rgba(0, 0, 0, .17);
 }
 .open-soc {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
   cursor: pointer;
-
+  width: 50px;
+  height: 33px;
+  background-color: #16217e;
+  text-align: center;
   i.fa.fa-random.fa-lg {
-    font-size: 13px;
+    font-size: 20px;
     vertical-align: 1px;
-    color: #ee2e24;
-    &:hover {
-      color: #ee2e24;
+    // color: #ee2e24;
+    color: #fff;
+    position: relative;
+    top: 8px;
+    // &:hover {
+    //   color: #ee2e24;
+    // }
+  }
+}
+.hide-social {
+  width: 50px;
+  // height: 33px;
+  background-color: #16217e;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  // display: block;
+  z-index: 99999;
+  > a, span {
+    width: 50px;
+    height: 40px;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+    position: relative;
+
+    text-align: center;
+    i{
+      font-size: 17px;
+      vertical-align: 1px;
+      color: #fff;
+      position: relative;
+      top: 12px;
+    }
+  }
+  .vk-soc:hover{
+    background-color: #778db0;
+  }
+  .twi-soc:hover{
+    background-color: #00b5f5;
+  }
+  .fb-soc:hover{
+    background-color: #3b5ca2;
+  }
+  .ok-soc:hover{
+    background-color: #f48420;
+  }
+  .more-soc{
+    width: 50px;
+    height: 33px;
+    float: left;
+    box-sizing: border-box;
+    padding: 15px 11px;
+    &:hover{
+      background-color: #000;
+    }
+    span{
+      background-color: #fff;
+      border-radius: 50px;
+      margin: 0 2px;
+      overflow: hidden;
+      display: inline-block;
+      size: 5px;
+      float: left;
     }
   }
 }
-
 .pagination{
   position: relative;
   float: left;
