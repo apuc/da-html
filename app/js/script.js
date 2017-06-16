@@ -527,18 +527,23 @@ $(document).ready(function () {
     /*close show header input field*/
 
     /*show social links on main page*/
+    // $(document).on('click', '.open-soc', function (event) {
+    //     event.preventDefault();
+    //     var prev = $(this).prev('.hide-social');
+    //     if($(this).hasClass('open')){
+    //         $(this).removeClass('open');
+    //         prev.hide();
+    //     } else {
+    //         $('.open-soc').removeClass('open');
+    //         $('.hide-social').hide();
+    //         $(this).addClass('open');
+    //         prev.css({display: 'block'});
+    //     }
+    // });
     $(document).on('click', '.open-soc', function (event) {
         event.preventDefault();
-        var prev = $(this).prev('.hide-social');
-        if($(this).hasClass('open')){
-            $(this).removeClass('open');
-            prev.hide();
-        } else {
-            $('.open-soc').removeClass('open');
-            $('.hide-social').hide();
-            $(this).addClass('open');
-            prev.css({display: 'flex'});
-        }
+      $('.open-soc').hide();
+      $('.hide-social').show();
     });
     /*close show social links on main page*/
 
@@ -913,7 +918,7 @@ $(document).ready(function () {
        }
     });
     $(document).on('click', '.search-panel__result--option > a', function (event) {
-        event.preventDefault();
+      /*  event.preventDefault();*/
         var optionName = $(this).text(),
             optionPlace = $(this).closest('.search-panel__result').find('.js-search-option');
             optionPlace.text(optionName);//меняем имя
