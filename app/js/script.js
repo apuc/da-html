@@ -542,8 +542,8 @@ $(document).ready(function () {
     // });
     $(document).on('click', '.open-soc', function (event) {
         event.preventDefault();
-      $('.open-soc').hide();
-      $('.hide-social').show();
+        $(this).next('.open-soc').hide();
+    $(this).next('.hide-social').show();
     });
     /*close show social links on main page*/
 
