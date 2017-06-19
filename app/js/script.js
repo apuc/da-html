@@ -751,11 +751,10 @@ $(document).ready(function () {
     if (businessElement.length > 0) {
         var businessElementPosition = businessElement.offset().top;
         $(window).scroll(function () {
-            fixedScroll(businessElement, businessElementPosition, $('.what-say'));
+            fixedScroll(businessElement, businessElementPosition, $('.more-block'));
         });
     }
     /*close business sidebar scroll*/
-
     /*single business sidebar scroll*/
    /* var stockElement = $('#business-stock-sidebar');
     if (stockElement.length > 0) {

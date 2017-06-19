@@ -302,11 +302,38 @@
         float: left;
         width: 100%;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 31px;
         color: #030000;
         font-size: 32px;
         font-weight: 700;
       }
+      > a{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding-left: 61px;
+        @include box-sizing(border-box);
+        color: #060000;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 23px;
+      }
+      > p{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 54px;
+        margin-bottom: 0;
+        color: #060000;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 23px;
+      }
+    }
+    &--phone{
+
     }
   }
 }
