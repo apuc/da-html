@@ -262,19 +262,24 @@
       font-weight: 700;
     }
     a {
-      width: 35%;
+      width: calc(100% - 65%);
       float: right;
       font-size: 13px;
       // font-family: $or;
       font-weight: 400;
       color: #000;
+      text-transform: uppercase;
       display: inline-block;
       line-height: 12px;
       text-align: right;
       top: 6px;
       position: relative;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
       .rect-icon {
-        size: 10px 6px;
+        /*size: 10px 6px;
         display: inline-block;
         float: none;
         margin-right: 10px;
@@ -282,7 +287,18 @@
         background-image: url("../img/home-content/rect-icon.png");
         background-repeat: no-repeat;
         background-size: contain;
-        top: 0;
+        top: 0;*/
+        background-image: url('../img/home-content/red-arrow.png');
+        width: 5px;
+        height: 9px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        position: relative;
+        top: 1px;
+        margin-left: 5px;
+        float: right;
+        margin-right: 5px;
       }
     }
   }
@@ -356,7 +372,7 @@
   padding: 20px;
   box-sizing: border-box;
   margin-top: 30px;
-  height: 209px;
+  height: 152px;
   .title_row {
     width: 100%;
     display: inline-block;
@@ -370,7 +386,10 @@
       color: #090000;
       text-decoration: underline;
       .red-arrow {
-        top: 8px;
+        top: 5px;
+      }
+      &:hover{
+        text-decoration: none;
       }
     }
   }
@@ -1006,7 +1025,7 @@
     padding: 5px 0 0;
     @include box-sizing(border-box);
     margin-bottom: 11px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
@@ -1803,7 +1822,7 @@
       display: block;
       position: relative;
       left: 0;
-      bottom: -96px;
+      bottom: -89px;
       display: -webkit-box;
       padding: 10px;
       @include box-sizing(border-box);

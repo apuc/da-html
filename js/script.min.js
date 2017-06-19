@@ -170,7 +170,7 @@ $(document).ready(function () {
         navigation: true,
         /*navigationText: true,*/
         pagination: true,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 9000,
         items: 1,
         dots: true,

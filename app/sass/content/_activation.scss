@@ -1,0 +1,31 @@
+.activation{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: calc(100vh - (68px + 200px));
+  h1{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #0c242e;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  &__subtitle{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 17px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #5c6e75;
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
