@@ -135,6 +135,9 @@
           text-align: right;
         }
       }
+      span{
+        margin-right: 10px;
+      }
       a {
         float: right;
         text-align: right;
@@ -147,6 +150,17 @@
         background-size: contain;
         float: left;
         margin-right: 5px;
+        margin-top: 2px;
+      }
+      .comments-icon {
+        background-image: url("../img/icons/chat-icon.png");
+        size: 19px 13px;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin-right: 5px;
+        margin-top: 2px;
       }
     }
   }
@@ -278,7 +292,6 @@
     }
   }
 }
-
 .news__wrap_buttons {
   width: 100%;
   float: left;
@@ -424,6 +437,54 @@
         margin-right: 5px;
         top: 7px;
       }
+    }
+  }
+  .content-row {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    a, span {
+      display: inline-block;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 400;
+      float: left;
+      width: auto;
+      /*&:last-of-type {
+        float: right;
+        text-align: right;
+      }*/
+    }
+    span{
+      margin-right: 10px;
+    }
+    /*a {
+      float: right;
+      text-align: right;
+    }*/
+    .view-icon {
+      background-image: url("../img/home-content/view.png");
+      size: 19px 13px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      float: left;
+      margin-right: 5px;
+      margin-top: 2px;
+    }
+    .comments-icon {
+      background-image: url("../img/icons/chat-icon.png");
+      size: 19px 13px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      float: left;
+      margin-right: 5px;
+      margin-top: 2px;
     }
   }
 }
