@@ -1569,8 +1569,8 @@
 }
 
 .komunalka__icon {
-  width: 55px;
-  height: 55px;
+  width: 47px;
+  height: 47px;
   border: 1px solid #edeef0;
   display: inline-block;
   cursor: pointer;
@@ -1578,7 +1578,6 @@
   text-align: center;
   box-sizing: border-box;
   img {
-
     object-fit: contain;
     position: relative;
     top: 50%;
@@ -1590,24 +1589,30 @@
 }
 
 .komunalka__line {
-  height: 55px;
+  height: 47px;
   // min-width: 200px;
   display: none;
-  position: absolute;
-  border: 1px solid #ff0200;
-  left: -1px;
+  position: relative;
+  float: left;
+  /*position: absolute;*/
+  border-left: 1px solid #ff0200;
+  /*left: -1px;*/
   z-index: 3;
-  margin-top: 53px;
+  /*margin-top: 53px;*/
+  margin-top: 0;
   color: #110101;
-  font-size: 16px;
+  /*font-size: 16px;*/
+  font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  /*line-height: 22px;*/
   text-align: left;
-  padding: 14px 0;
+  padding-top: 14px;
+  padding-bottom: 14px;
   padding-left: 5px;
-  box-sizing: border-box;
-  span {
-    min-width: 138px;
+  @include box-sizing(border-box);
+  > span {
+    min-width: 114px;
+    line-height: 15px;
     float: left;
     display: inline-block;
   }
@@ -1621,21 +1626,22 @@
   //   background-color: #ff0200;
   // }
   .red-arrow {
+    width: 5px;
+    min-width: 5px;
+    height: 9px;
     margin: 0 4px;
-    top: 22px;
+    top: 18px;
     position: absolute;
     float: none;
     display: inline-block;
     right: 0;
-    min-width: auto;
   }
-
 }
 
 .komunalka__line_active {
   border: 1px solid #ff0200;
   box-sizing: border-box;
-  height: 55px;
+  height: 47px;
 
   .komunalka__line {
     display: inline-block;

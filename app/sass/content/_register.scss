@@ -4,7 +4,7 @@
   float: left;
   width: 100%;
   height: 270px;
-  margin: 200px 0;
+  margin: 100px 0;
   .register-form-container{
     height: 100%;
     .panel-default{
@@ -21,7 +21,7 @@
       height: 100%;
       border: 1px solid transparent;
       border-radius: 0;
-      background-color: #ecedef;
+      background-color: #bbbcbe;
       .panel-body {
         padding: 15px;
         > form{
@@ -64,8 +64,8 @@
             display: inline-block;
             position: relative;
             float: left;
-            width: 160px;
-            margin-left: calc(50% - (160px/2));
+            width: 180px;
+            margin-left: calc(50% - (180px/2));
             padding: 10px 15px;
             @include box-sizing(border-box);
             background-color: #ee2e24;
