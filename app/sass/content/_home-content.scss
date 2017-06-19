@@ -723,7 +723,7 @@
       background-size: cover;
     }
     &:last-of-type {
-      margin-bottom: -6px;
+      margin-bottom: -14px;
     }
     &:last-child {
       border: none;
@@ -1053,10 +1053,12 @@
     float: left;
     display: inline-block;
     text-align: center;
+    border-left: 2px solid transparent;
   }
   .page__tabs_active {
     display: block;
     box-sizing: border-box;
+    border-left: 2px solid black;
     span {
       color: #ee2e24;
     }
@@ -1065,7 +1067,6 @@
     width: 100%;
     float: left;
     position: relative;
-
     box-sizing: border-box;
   }
   .page__tabcontent {
@@ -1087,6 +1088,17 @@
       padding-bottom: 5px;
       padding-right: 10px;
       @include box-sizing(border-box);
+    }
+    .hr-icon{
+      display: inline-block;
+      position: relative;
+      width: 12px;
+      height: 16px;
+      top: 2px;
+      background-image: url('../img/icons/Hryvnia_sign.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
     }
     table {
       width: 100%;
