@@ -4,6 +4,9 @@
   float: left;
   width: 100%;
   height: calc(100vh - (68px + 200px));
+  @include breakpoint(max-width 660px){
+    height: 100%;
+  }
   h1{
     display: block;
     position: relative;
@@ -15,6 +18,10 @@
     color: #0c242e;
     font-size: 30px;
     font-weight: 400;
+    @include breakpoint(max-width 660px){
+      margin-top: 50px;
+      font-size: 22px;
+    }
   }
   &__subtitle{
     display: block;
@@ -27,5 +34,63 @@
     color: #5c6e75;
     font-size: 17px;
     font-weight: 300;
+    @include breakpoint(max-width 660px){
+     font-size: 15px;
+    }
+  }
+  &__actions{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    width: 552px;
+    margin-left: calc(50% - (552px/2));
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      margin-left: 0;
+      @include flex-direction(column);
+      @include justify-content(center);
+      align-items: center;
+    }
+    .more_type {
+      background-color: #ee2e24;
+      border-radius: 5px;
+      display: inline-block;
+      width: 200px;
+      margin-left: 0;
+      margin-top: 48px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      float: none;
+      padding: 10px 15px;
+      @include box-sizing(border-box);
+    }
+  }
+  &__back{
+    display: block;
+    position: relative;
+    float: left;
+    width: 276px;
+    margin-top: 30px;
+    margin-left: calc(50% - (276px/2));
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #0c242e;
+    span{
+      color: #fe2c2a;
+      text-decoration: underline;
+    }
+    &:hover{
+      span{
+        text-decoration: none;
+      }
+    }
   }
 }
