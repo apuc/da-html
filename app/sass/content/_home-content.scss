@@ -934,10 +934,10 @@
       }
       img {
         height: 100%;
-        width: auto;
+        width: 100%;
         left: 0;
         top: 0;
-        object-fit: contain;
+        object-fit: cover;
       }
     }
     .category {

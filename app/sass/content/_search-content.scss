@@ -14,7 +14,7 @@
     margin-bottom: 122px;
   }
   &__breadcrumbs {
-    @include display(flex);
+    @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
     @include justify-content(flex-start);
