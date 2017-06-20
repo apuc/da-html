@@ -187,7 +187,215 @@
           background-color: #c97a76;
         }
       }
+      .news span{
+        display: inline-block;
+        width: 29px;
+        margin-top: -3px;
+        padding: 3px 5px;
+        @include box-sizing(border-box);
+        border-radius: 4px;
+        background-color: #ffffff;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        float: right;
+        color: #22252e;
+        font-size: 11px;
+        font-weight: 100;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .news:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        top: 11px;
+        left: 20px;
+        background-image: url('../img/icons/stack-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+      .poster:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 25px;
+        top: 14px;
+        left: 20px;
+        background-image: url('../img/icons/calendar-cabinet-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+      .stock:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        top: 14px;
+        left: 20px;
+        background-image: url('../img/icons/bar-graph-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+      .configuration:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 24px;
+        top: 14px;
+        left: 20px;
+        background-image: url('../img/icons/cog-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+      .company .add{
+        display: inline-block;
+        position: absolute;
+        right: 18px;
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-image: url('../img/icons/cabinet-list-add-icon.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+      .company:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        top: 16px;
+        left: 20px;
+        background-image: url('../img/icons/tag-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+      .comments .add{
+        display: inline-block;
+        position: absolute;
+        right: 18px;
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-image: url('../img/icons/cabinet-list-add-icon.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+      .comments:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 24px;
+        top: 14px;
+        left: 20px;
+        background-image: url('../img/icons/paper-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+      .notice span{
+        display: inline-block;
+        position: absolute;
+        top: 16px;
+        right: 18px;
+        width: 30px;
+        padding: 3px 5px;
+        @include box-sizing(border-box);
+        border-radius: 4px;
+        background-color: #ee2e24;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        float: right;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 100;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .notice:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 22px;
+        top: 14px;
+        left: 20px;
+        background-image: url('../img/icons/bell-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
     }
+  }
+  &__main{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 220px);
+  }
+  &__owner{
+    position: relative;
+    float: left;
+    width: 100%;
+    box-shadow: 2px 4px 8px rgba(48, 56, 87, 0.2);
+    background-color: #ffffff;
+    > h3{
+      position: relative;
+      float: left;
+      margin-top: 14px;
+      margin-bottom: 14px;
+      padding-left: 47px;
+      @include box-sizing(border-box);
+      color: #4c5b69;
+      font-size: 21px;
+      font-weight: 400;
+    }
+    > p{
+      position: relative;
+      float: left;
+      margin-top: 19px;
+      margin-bottom: 17px;
+      margin-left: 32px;
+      color: #040000;
+      font-size: 15px;
+      font-weight: 300;
+      span{
+        display: inline-block;
+        position: relative;
+        margin-right: 8px;
+        width: 12px;
+        height: 16px;
+        background-image: url('../img/icons/cabinet-placeholder-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+    }
+  }
+  &__owner-tools{
+    position: relative;
+    float: left;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #d8dde7;
+    background-color: #ffffff;
   }
   &__nav {
     display: block;
