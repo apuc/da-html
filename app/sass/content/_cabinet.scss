@@ -5,29 +5,29 @@
   width: 100%;
   margin-top: 42px;
   margin-bottom: 34px;
-  &__tollbar{
+  &__tollbar {
     display: block;
     position: relative;
     float: left;
     width: 220px;
     background-color: #fbfafa;
   }
-  &__avatar{
+  &__avatar {
     display: block;
     position: relative;
     float: left;
     width: 92px;
     height: 92px;
     margin-top: 12px;
-    margin-left: calc(50% - (92px/2));
+    margin-left: calc(50% - (92px / 2));
     border-radius: 50%;
     overflow: hidden;
     z-index: 2;
-    img{
+    img {
       size: 100%;
       object-fit: cover;
     }
-    &--edit{
+    &--edit {
       display: block;
       position: absolute;
       top: 40px;
@@ -43,14 +43,14 @@
       z-index: 2;
     }
   }
-  &__info{
+  &__info {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     background-color: #dcdcdc;
     margin-top: -48px;
-    > h1{
+    > h1 {
       display: block;
       position: relative;
       float: left;
@@ -65,7 +65,7 @@
       padding-left: 50px;
       padding-right: 30px;
       @include box-sizing(border-box);
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
@@ -79,13 +79,13 @@
         background-size: 100% 100%;
       }
     }
-    > .show-more{
+    > .show-more {
       width: 190px;
-      margin-left: calc(50% - (190px/2));
+      margin-left: calc(50% - (190px / 2));
       margin-bottom: 23px;
     }
   }
-  &__pkg{
+  &__pkg {
     display: block;
     position: relative;
     float: left;
@@ -100,7 +100,7 @@
     font-weight: 900;
     text-transform: uppercase;
   }
-  &__add-pkg{
+  &__add-pkg {
     display: block;
     position: absolute;
     top: 113px;
@@ -115,7 +115,7 @@
     background-size: 100% 100%;
     z-index: 2;
   }
-  &__pkg-time{
+  &__pkg-time {
     display: block;
     position: relative;
     float: left;
@@ -129,7 +129,7 @@
     font-size: 11px;
     font-weight: 400;
   }
-  &__froze-pkg{
+  &__froze-pkg {
     display: block;
     position: relative;
     float: left;
@@ -142,7 +142,7 @@
     font-size: 10px;
     font-weight: 100;
     text-decoration: underline;
-    &:before{
+    &:before {
       display: block;
       position: absolute;
       content: '';
@@ -156,7 +156,7 @@
       background-size: 100% 100%;
     }
   }
-  &__list{
+  &__list {
     display: block;
     position: relative;
     float: left;
@@ -166,9 +166,9 @@
     padding-left: 0;
     list-style: none;
     background-color: #dcdcdc;
-    li{
+    li {
       width: 100%;
-      a{
+      a {
         display: block;
         position: relative;
         float: left;
@@ -182,12 +182,12 @@
         font-size: 13px;
         font-weight: 900;
         text-transform: uppercase;
-        &:hover{
+        &:hover {
           color: #fff;
           background-color: #c97a76;
         }
       }
-      .news span{
+      .news span {
         display: inline-block;
         width: 29px;
         margin-top: -3px;
@@ -205,7 +205,7 @@
         text-transform: uppercase;
         text-align: center;
       }
-      .news:before{
+      .news:before {
         display: block;
         position: absolute;
         content: '';
@@ -218,7 +218,7 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .poster:before{
+      .poster:before {
         display: block;
         position: absolute;
         content: '';
@@ -231,7 +231,7 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .stock:before{
+      .stock:before {
         display: block;
         position: absolute;
         content: '';
@@ -244,7 +244,7 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .configuration:before{
+      .configuration:before {
         display: block;
         position: absolute;
         content: '';
@@ -257,7 +257,7 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .company .add{
+      .company .add {
         display: inline-block;
         position: absolute;
         right: 18px;
@@ -270,7 +270,7 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .company:before{
+      .company:before {
         display: block;
         position: absolute;
         content: '';
@@ -283,7 +283,7 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .comments .add{
+      .comments .add {
         display: inline-block;
         position: absolute;
         right: 18px;
@@ -296,7 +296,7 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .comments:before{
+      .comments:before {
         display: block;
         position: absolute;
         content: '';
@@ -309,7 +309,7 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .notice span{
+      .notice span {
         display: inline-block;
         position: absolute;
         top: 16px;
@@ -329,7 +329,7 @@
         text-transform: uppercase;
         text-align: center;
       }
-      .notice:before{
+      .notice:before {
         display: block;
         position: absolute;
         content: '';
@@ -344,19 +344,20 @@
       }
     }
   }
-  &__main{
+  &__main {
     display: block;
     position: relative;
     float: left;
     width: calc(100% - 220px);
   }
-  &__owner{
+  &__owner {
     position: relative;
     float: left;
     width: 100%;
     box-shadow: 2px 4px 8px rgba(48, 56, 87, 0.2);
     background-color: #ffffff;
-    > h3{
+    z-index: 2;
+    > h3 {
       position: relative;
       float: left;
       margin-top: 14px;
@@ -367,7 +368,7 @@
       font-size: 21px;
       font-weight: 400;
     }
-    > p{
+    > p {
       position: relative;
       float: left;
       margin-top: 19px;
@@ -376,7 +377,7 @@
       color: #040000;
       font-size: 15px;
       font-weight: 300;
-      span{
+      span {
         display: inline-block;
         position: relative;
         margin-right: 8px;
@@ -389,13 +390,66 @@
       }
     }
   }
-  &__owner-tools{
+  &__owner-tools {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
     position: relative;
     float: left;
     width: 100%;
+    margin-top: -1px;
     border-radius: 4px;
     border: 1px solid #d8dde7;
     background-color: #ffffff;
+    > a {
+      flex: 1 0 0;
+      position: relative;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      text-align: center;
+      &:hover {
+        border-bottom: 2px solid #ee2e24;
+      }
+      span {
+        display: inline-block;
+        position: relative;
+        /* float: left;*/
+        width: auto;
+        margin-top: 16px;
+        text-align: center;
+        color: #de6f69;
+        font-size: 25px;
+        font-weight: 700;
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 27px;
+          height: 27px;
+          background-color: #ffffff;
+          top: 20px;
+          right: -14px;
+          transform: rotate(45deg);
+        }
+      }
+      p {
+        display: inline-block;
+        position: relative;
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 13px;
+        margin-bottom: 9px;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: lowercase;
+      }
+    }
+    > a.active {
+      border-bottom: 2px solid #ee2e24;
+    }
   }
   &__nav {
     display: block;
