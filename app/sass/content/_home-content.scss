@@ -74,6 +74,9 @@
     float: left;
     display: inline-block;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 18%, transparent 50%);
+    .hide-social:after{
+      right: 273px;
+    }
     img {
       z-index: -1;
       position: absolute;

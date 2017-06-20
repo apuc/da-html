@@ -310,15 +310,15 @@ $(document).ready(function () {
     //     }
     // });
     /*$(".stock__item_visible").click(function (e) {
-        e.preventDefault();
-        $(".stock__item_visible").removeClass('stock__item_visible_left').animate({left: '0'}, 100);
-        $(this).addClass('stock__item_visible_left').animate({left: '-291px'}, 100);
-    });
-    $(".stock__item_close").click(function (e) {
+     e.preventDefault();
+     $(".stock__item_visible").removeClass('stock__item_visible_left').animate({left: '0'}, 100);
+     $(this).addClass('stock__item_visible_left').animate({left: '-291px'}, 100);
+     });
+     $(".stock__item_close").click(function (e) {
 
-        $(".stock__item_visible").removeClass('stock__item_visible_left').animate({left: '0'}, 100);
+     $(".stock__item_visible").removeClass('stock__item_visible_left').animate({left: '0'}, 100);
 
-    });*/
+     });*/
     // hover stoke
 
     /*show ads block on mobile*/
@@ -719,31 +719,31 @@ $(document).ready(function () {
 
     /*business sidebar script*/
     /*$('.business__sidebar--items ul li a').on('click', function (event) {
-        event.preventDefault();
-        if ($(this)[0].hasAttribute('data-id')) {
-            var dataId = $(this).attr('data-id'),
-                mainBlock = $('#business-sidebar-main'),
-                hoverBlock = $('#business-sidebar-hover-' + dataId);
-            if (hoverBlock.length > 0) {
-                mainBlock.animate({width: "toggle"}, 400, function () {
-                    hoverBlock.animate({width: "toggle"}, 400, function () {
-                        hoverBlock.css({height: "auto"});
-                    });
-                });
-            }
-        }
-    });
-    $('.business__sidebar--hover-trigger').on('click', function (event) {
-        event.preventDefault();
-        var mainBlock = $('#business-sidebar-main'),
-            hoverBlock = $(this).closest('.business__sidebar--hover-items');
-        /!*console.log(hoverBlock);*!/
-        hoverBlock.animate({width: "toggle"}, 400, function () {
-            mainBlock.animate({width: "toggle"}, 400, function () {
-                mainBlock.css({height: "auto"});
-            });
-        });
-    });*/
+     event.preventDefault();
+     if ($(this)[0].hasAttribute('data-id')) {
+     var dataId = $(this).attr('data-id'),
+     mainBlock = $('#business-sidebar-main'),
+     hoverBlock = $('#business-sidebar-hover-' + dataId);
+     if (hoverBlock.length > 0) {
+     mainBlock.animate({width: "toggle"}, 400, function () {
+     hoverBlock.animate({width: "toggle"}, 400, function () {
+     hoverBlock.css({height: "auto"});
+     });
+     });
+     }
+     }
+     });
+     $('.business__sidebar--hover-trigger').on('click', function (event) {
+     event.preventDefault();
+     var mainBlock = $('#business-sidebar-main'),
+     hoverBlock = $(this).closest('.business__sidebar--hover-items');
+     /!*console.log(hoverBlock);*!/
+     hoverBlock.animate({width: "toggle"}, 400, function () {
+     mainBlock.animate({width: "toggle"}, 400, function () {
+     mainBlock.css({height: "auto"});
+     });
+     });
+     });*/
     /*close business sidebar script*/
 
     /*business sidebar scroll*/
@@ -925,6 +925,27 @@ $(document).ready(function () {
         $('.search-panel__result--option').slideUp('400');
     });
     /*close search form option select*/
+
+    /*single afisha countdown*/
+    (function ($) {
+        $(document).ready(function () {
+            var clock;
+            clock = $('.single-afisha__countdown-clock').FlipClock({
+                clockFace: 'DailyCounter',
+                autoStart: false,
+                language:'ru',
+                /*callbacks: {
+                    stop: function () {
+                        $('.message').html('The clock has stopped!')
+                    }
+                }*/
+            });
+            clock.setTime(220880);
+            clock.setCountdown(true);
+            clock.start();
+        });
+    })(jQuery);
+    /*close single afisha countdown*/
 
     /*go to top scroll*/
     $.fn.scrollToTop = function () {
