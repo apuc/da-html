@@ -927,24 +927,12 @@ $(document).ready(function () {
     /*close search form option select*/
 
     /*single afisha countdown*/
-    (function ($) {
-        $(document).ready(function () {
-            var clock;
-            clock = $('.single-afisha__countdown-clock').FlipClock({
-                clockFace: 'DailyCounter',
-                autoStart: false,
-                language:'ru',
-                /*callbacks: {
-                    stop: function () {
-                        $('.message').html('The clock has stopped!')
-                    }
-                }*/
-            });
-            clock.setTime(220880);
-            clock.setCountdown(true);
-            clock.start();
-        });
-    })(jQuery);
+    $("#countdown").countdown({  
+            date: "16 august 2017 12:00:00",
+            format: "on",
+            languge: 'ru'
+        },
+        function () {});
     /*close single afisha countdown*/
 
     /*go to top scroll*/

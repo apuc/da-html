@@ -3,7 +3,6 @@
   float: left;
   position: relative;
 }
-
 .rubrick-slider__wrap {
   width: 100%;
   float: left;
@@ -137,6 +136,7 @@
       font-size: 25px;
       font-weight: 400;
       color: #fff;
+      text-align: left;
       display: block;
       display: -webkit-box;
       height: calc(25px * 1.2 * 2);
@@ -194,6 +194,7 @@
       font-size: 18px;
       font-weight: 400;
       color: #fff;
+      text-align: left;
       display: block;
       display: -webkit-box;
       height: calc(18px * 1.2 * 2);
