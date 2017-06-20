@@ -361,6 +361,10 @@
     border: 1px solid #d1d1d1;
     border-radius: 5px;
     ul#countdown {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
       margin: 0;
       padding: 0;
       li{
@@ -502,7 +506,7 @@
         position: relative;
         float: left;
         width: 100%;
-        margin-top: 54px;
+        margin-top: 35px;
         margin-bottom: 0;
         padding-left: 61px;
         @include box-sizing(border-box);
@@ -530,7 +534,7 @@
     &--placeholder {
       display: block;
       position: absolute;
-      top: 170px;
+      top: 151px;
       left: 50px;
       width: 21px;
       height: 29px;

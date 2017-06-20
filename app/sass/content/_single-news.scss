@@ -13,6 +13,7 @@
       width: 100%;
     }
     .content-info{
+      display: inline-block;
       font-size: 15px;
       color: #030000;
       padding-left: 20px;
@@ -119,7 +120,7 @@
     .breadcrumbs{
       font-size: 16px;
       color: #060000;
-      font-weight: 700;
+      font-weight: 500;
       padding-left: 23px;
       margin-bottom: 20px;
       a{
@@ -246,6 +247,7 @@
         }
       }*/
       .content-single{
+        display: inline-block;
         font-size: 16px;
         color: #060000;
         font-weight: 500;
@@ -319,6 +321,15 @@
   .scroll.move{
     margin-top: 24px;
   }
+  .content__separator{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 1px;
+    background-color: #edeef0;
+    margin: 10px 0;
+  }
 }
 
 a.load-more{
@@ -341,6 +352,7 @@ a.load-more{
 #aside{
   width: 255px;
   float: right;
+  text-align: left;
   @include breakpoint(max-width 660px){
     width: 100%;
     position: relative;
@@ -487,12 +499,23 @@ a.load-more{
         margin-top: 158px;
       }
       p{
+        display: block;
+        display: -webkit-box;
+        position: absolute;
+        width: 100%;
+        height: calc(16px * 1.3 * 3);
+        left: 0;
         color: #fff;
         font-size: 16px;
         padding-left: 15px;
         padding-right: 15px;
-        position: absolute;
+        @include box-sizing(border-box);
         margin-top: 175px;
+        line-height: 1.3;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .po-teme{
         position: absolute;
