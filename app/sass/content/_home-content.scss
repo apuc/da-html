@@ -671,6 +671,8 @@
     float: left;
     margin-top: 0;
     margin-bottom: 10px;
+    padding: 0 10px;
+    @include box-sizing(border-box);
     text-align: center;
     color: #050000;
     font-size: 14px;
@@ -762,6 +764,8 @@
         font-size: 13px;
         margin-top: 5px;
         margin-bottom: 3px;
+        padding: 0 10px;
+        @include box-sizing(border-box);
       }
     }
     .poll-progressbar {

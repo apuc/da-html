@@ -1,5 +1,8 @@
 .cabinet {
   background-color: #edeef0;
+  &__rightbar{
+
+  }
   &__nav {
     display: block;
     position: relative;
@@ -419,7 +422,6 @@
       text-transform: uppercase;
     }
   }
-
   &__add-company {
     display: block;
     position: relative;
@@ -428,7 +430,6 @@
     margin-bottom: 50px;
     background-color: #fff;
   }
-
   &__add-company-form {
     @include display(flex);
     @include flex-wrap(wrap);
@@ -614,7 +615,6 @@
       cursor: pointer;
     }
   }
-
   &__consultation {
     display: block;
     position: relative;
