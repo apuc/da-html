@@ -3,7 +3,7 @@
   float: left;
   width: 100%;
   .after-comments {
-    > .load-more {
+    /*> .load-more {
       display: inline-block;
       position: relative;
       text-align: center;
@@ -20,7 +20,7 @@
       padding-left: 0;
       @include box-sizing(border-box);
       border-radius: 5px;
-    }
+    }*/
     > h2 {
       font-size: 25px;
       color: #000;
@@ -51,14 +51,23 @@
         margin-right: 0;
       }
       &:last-child {
-        background-image: url(../img/info-icons/comment-icon-2.png);
+        display: inline-block;
+        position: relative;
+        float: right;
+        margin-top: 38px;
+        margin-right: 43px;
+        background-image: url('../img/info-icons/comment-icon-2.png');
         background-repeat: no-repeat;
       }
     }
     a.populiation {
-      background-image: url(../img/info-icons/comment-icon-1.png);
+      display: inline-block;
+      position: relative;
+      float: right;
+      margin-top: 38px;
+      margin-right: 0;
+      background-image: url('../img/info-icons/comment-icon-1.png');
       background-repeat: no-repeat;
-      margin-right: 43px;
     }
   }
   .comments {
