@@ -137,7 +137,8 @@
         margin-left: 10px;
       }
       .like.active{
-        /*pointer-events: none;*/
+       /* pointer-events: none;*/
+        cursor: pointer;
         .like-set-icon{
           top: 3px;
           background-image: url('../img/icons/new-like-filled-icon.png');
