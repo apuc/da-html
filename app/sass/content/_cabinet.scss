@@ -11,6 +11,11 @@
     float: left;
     width: 220px;
     background-color: #fbfafa;
+    @include breakpoint(max-width 660px){
+      position: absolute;
+      z-index: 3;
+      left: -100%;
+    }
   }
   &__avatar {
     display: block;
@@ -349,6 +354,9 @@
     position: relative;
     float: left;
     width: calc(100% - 220px);
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
   }
   &__owner {
     position: relative;
@@ -402,6 +410,9 @@
     border-radius: 4px;
     border: 1px solid #d8dde7;
     background-color: #ffffff;
+    @include breakpoint(max-width 660px){
+      @include flex-direction(column);
+    }
     > a {
       flex: 1 0 0;
       position: relative;
@@ -468,9 +479,17 @@
     padding-left: 14px;
     padding-right: 17px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+    }
     &:last-of-type{
       width: calc(100% - (15px + 2px));
       height: auto;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
     }
     > h3{
       position: relative;
@@ -501,6 +520,9 @@
       width: 25%;
       height: 131px;
       margin: 4px 0;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
       .thumb{
         height: 100%;
       }
@@ -540,6 +562,9 @@
       margin-top: 22px;
       width: 206px;
       height: 304px;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
       .business__sm-item--img{
         height: 141px;
       }
@@ -548,8 +573,11 @@
       margin-top: 22px;
       width: 327px;
       height: 304px;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
       .business__sm-item--img{
-        height: 141px;
+        height: 174px;
       }
     }
     .business__sm-item--title {
@@ -585,6 +613,32 @@
       text-overflow: ellipsis;
       border-bottom: 1px solid #e8e9e9;
     }
+    .business__big-item .business__sm-item--title {
+      height: calc(10px * 1.3 * 1);
+      margin-bottom: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.1;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+    .business__sm-item--numbers {
+      float: left;
+      margin: 0;
+      margin-bottom: 18px;
+      list-style: none;
+      padding-left: 14px;
+      font-size: 10px;
+    }
+    .business__sm-item--views {
+      font-size: 12px;
+    }
+    .business__sm-item--views:before {
+      top: 3px;
+    }
   }
   &__statistics{
     display: block;
@@ -598,6 +652,9 @@
     border-radius: 4px;
     border: 1px solid #d8dde7;
     background-color: #ffffff;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
     > h3{
       display: block;
       position: relative;
