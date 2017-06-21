@@ -3,6 +3,7 @@
   float: left;
   position: relative;
 }
+
 .rubrick-slider__wrap {
   width: 100%;
   float: left;
@@ -13,7 +14,7 @@
     position: absolute;
     top: 5px;
     width: 32%;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
     }
     .owl-nav {
@@ -55,12 +56,12 @@
     font-weight: 700;
     margin: 0;
     line-height: 1.4;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
     }
   }
   p {
-    width: 53%;
+    width: 50%;
     float: left;
     position: relative;
     color: #040000;
@@ -78,26 +79,26 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
     }
   }
   .go-rubrick {
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 6px;
+    margin-right: 25px;
+    padding: 10px 25px;
+    @include box-sizing(border-box);
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
     text-align: center;
-    padding: 10px 25px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     background-color: #ee2e24;
     border-radius: 5px;
-    display: inline-block;
     text-decoration: none;
-    float: right;
-    top: 6px;
-    position: relative;
   }
 }
 
@@ -114,7 +115,7 @@
   height: 500px;
   margin-right: 11px;
   background-image: linear-gradient(to top, black 0%, rgba(4, 0, 1, 0.98) 2%, transparent 100%);
-  @include breakpoint(max-width 660px){
+  @include breakpoint(max-width 660px) {
     height: 420px;
   }
   img {
@@ -146,20 +147,19 @@
       overflow: hidden;
       text-overflow: ellipsis;
       @include transition(0.4s);
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         font-size: 20px;
         height: calc(20px * 1.2 * 2);
       }
     }
   }
-  &:hover{
-    .item__big_content h4{
+  &:hover {
+    .item__big_content h4 {
       color: #ee2e24;
       @include transition(0.4s);
     }
   }
 }
-
 
 .item__small {
   width: 22%;
@@ -168,8 +168,8 @@
   position: relative;
   margin: 0 11px 22px 11px;
   background-image: linear-gradient(to top, black 0%, rgba(4, 0, 1, 0.98) 2%, transparent 100%);
-  @include breakpoint(max-width 660px){
-    width: calc(50% - (22px*2));
+  @include breakpoint(max-width 660px) {
+    width: calc(50% - (22px * 2));
   }
   img {
     size: 100%;
@@ -184,7 +184,7 @@
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       bottom: 96px;
     }
     h4 {
@@ -206,8 +206,8 @@
       @include transition(0.4s);
     }
   }
-  &:hover{
-    .item__small_content h4{
+  &:hover {
+    .item__small_content h4 {
       color: #ee2e24;
       @include transition(0.4s);
     }
@@ -222,7 +222,7 @@
   display: inline-block;
   color: #fff;
   line-height: 22px;
-  @include breakpoint(max-width 660px){
+  @include breakpoint(max-width 660px) {
     width: 100%;
     text-align: center;
   }
@@ -233,7 +233,7 @@
   float: right;
   position: relative;
   text-align: right;
-  @include breakpoint(max-width 660px){
+  @include breakpoint(max-width 660px) {
     width: 100%;
     text-align: center;
   }
@@ -251,7 +251,7 @@
       float: left;
       display: inline-block;
       position: relative;
-      background-image: url("../img/icons/comments-icon1.png");
+      background-image: url("../img/icons/new-chat-white-icon.png");
       background-repeat: no-repeat;
       background-size: contain;
       margin-right: 5px;
@@ -261,7 +261,7 @@
 }
 
 .view-icon {
-  background-image: url("../img/home-content/view.png");
+  background-image: url("../img/icons/eye-new-white-icon.png");
   width: 17px;
   height: 13px;
   display: block;
