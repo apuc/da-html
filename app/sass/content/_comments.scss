@@ -1,25 +1,47 @@
-.comments-wrapper{
-  .after-comments{
-    h2{
+.comments-wrapper {
+  position: relative;
+  float: left;
+  width: 100%;
+  .after-comments {
+    > .load-more {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      color: #fff;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 24px;
+      font-size: 12px;
+      font-weight: 700;
+      background-color: #ee2e24;
+      width: 180px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 0;
+      @include box-sizing(border-box);
+      border-radius: 5px;
+    }
+    > h2 {
       font-size: 25px;
       color: #000;
       font-weight: 700;
-      margin-top: 34px;
+      margin-top: 27px;
       letter-spacing: 1.2px;
       margin-left: 4px;
       display: inline-block;
-      width: 61%;
-      @include breakpoint(max-width 660px){
+      float: left;
+      /*width: 61%;*/
+      @include breakpoint(max-width 660px) {
         width: 100%;
         margin-left: 0;
         font-size: 20px;
       }
     }
-    a{
+    a {
       color: #01050a;
       font-size: 14px;
       padding-left: 22px;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         display: block;
         position: relative;
         float: left;
@@ -28,48 +50,48 @@
         margin-bottom: 10px;
         margin-right: 0;
       }
-      &:last-child{
+      &:last-child {
         background-image: url(../img/info-icons/comment-icon-2.png);
         background-repeat: no-repeat;
       }
     }
-    a.populiation{
+    a.populiation {
       background-image: url(../img/info-icons/comment-icon-1.png);
       background-repeat: no-repeat;
       margin-right: 43px;
     }
   }
-
-  .comments{
+  .comments {
     background-color: #fff;
     padding-bottom: 32px;
     position: relative;
     float: left;
-    @include breakpoint(max-width 660px){
+    width: 100%;
+    @include breakpoint(max-width 660px) {
       width: 100%;
     }
-    .comment-wrapper{
+    .comment-wrapper {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid #ecf2fa;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         @include flex-wrap(wrap);
         @include flex-direction(column);
         @include justify-content(center);
       }
-      &:last-child{
+      &:last-child {
         border-bottom: none;
       }
-      .user{
+      .user {
         padding-left: 19px;
         padding-right: 10px;
         padding-top: 18px;
         position: relative;
         @include box-sizing(border-box);
-        @include breakpoint(max-width 660px){
+        @include breakpoint(max-width 660px) {
           width: 100%;
         }
-        span{
+        span {
           position: absolute;
           width: 23px;
           height: 23px;
@@ -84,20 +106,19 @@
           text-align: center;
           line-height: 24px;
         }
-
-        .user-photo{
+        .user-photo {
           width: 63px;
           height: 63px;
           overflow: hidden;
           border-radius: 35px;
           position: relative;
 
-          img{
+          img {
             width: 100%;
             height: auto;
           }
         }
-        a{
+        a {
           display: block;
           width: 17px;
           height: 17px;
@@ -106,11 +127,11 @@
           display: inline-block;
           margin-top: 7px;
         }
-        a.up{
+        a.up {
           background-color: #fff6ef;
           margin-left: 12px;
 
-          &:after{
+          &:after {
             display: block;
             position: absolute;
             content: "";
@@ -121,10 +142,10 @@
             z-index: 2;
           }
         }
-        a.down{
+        a.down {
           background-color: #f6faff;
 
-          &:after{
+          &:after {
             display: block;
             position: absolute;
             content: "";
@@ -136,20 +157,20 @@
           }
         }
       }
-      .comment{
+      .comment {
         padding-top: 10px;
         min-width: 88%;
-        @include breakpoint(max-width 660px){
+        @include breakpoint(max-width 660px) {
           width: 100%;
         }
-        .child-comment{
+        .child-comment {
           display: flex;
-          @include breakpoint(max-width 660px){
+          @include breakpoint(max-width 660px) {
             @include flex-wrap(wrap);
             @include flex-direction(column);
             width: 100%;
           }
-          .moder{
+          .moder {
             font-size: 11px;
             color: #f6f9ff;
             background-color: #ee2e24;
@@ -158,44 +179,43 @@
             border-radius: 2px;
             padding: 0 4px;
             @include box-sizing(border-box);
-            @include breakpoint(max-width 660px){
+            @include breakpoint(max-width 660px) {
               width: 50%;
               position: relative;
               float: left;
             }
           }
-          .comment-info{
+          .comment-info {
             width: 60%;
             justify-content: flex-end;
-            @include breakpoint(max-width 660px){
+            @include breakpoint(max-width 660px) {
               width: 50%;
               position: relative;
               float: left;
             }
           }
         }
-
-        .comment-info-wrapper{
+        .comment-info-wrapper {
           display: flex;
           justify-content: space-between;
-          @include breakpoint(max-width 660px){
+          @include breakpoint(max-width 660px) {
             @include flex-wrap(wrap);
             @include flex-direction(column);
             width: 100%;
           }
-          .user-name{
+          .user-name {
             font-size: 16px;
             color: #01060c;
             font-weight: 600;
             margin-top: 4px;
           }
-          .comment-info{
+          .comment-info {
             display: flex;
             margin-right: 38px;
-            @include breakpoint(max-width 660px){
+            @include breakpoint(max-width 660px) {
               margin: 10px 0;
             }
-            .modern-comment{
+            .modern-comment {
               color: #f6f9ff;
               font-size: 11px;
               background-color: #ee2e24;
@@ -206,18 +226,18 @@
               padding-right: 5px;
               margin-right: 13px;
             }
-            a{
+            a {
               font-size: 14px;
               color: #000101;
             }
-            .time{
+            .time {
               font-size: 12px;
               color: #9d9d9d;
               margin-left: 12px;
             }
           }
         }
-        .text{
+        .text {
           font-size: 15px;
           color: #000;
           margin-top: 4px;
@@ -226,7 +246,7 @@
         }
       }
     }
-    .comment-wrapper.moder{
+    .comment-wrapper.moder {
       background-color: #fff8f3;
     }
   }
