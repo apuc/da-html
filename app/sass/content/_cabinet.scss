@@ -11,7 +11,7 @@
     float: left;
     width: 220px;
     background-color: #fbfafa;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       position: absolute;
       z-index: 3;
       left: -100%;
@@ -265,6 +265,7 @@
       .company .add {
         display: inline-block;
         position: absolute;
+        top: 16px;
         right: 18px;
         width: 21px;
         height: 21px;
@@ -355,7 +356,7 @@
     position: relative;
     float: left;
     width: calc(100% - 220px);
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
     }
   }
@@ -411,7 +412,7 @@
     border-radius: 4px;
     border: 1px solid #d8dde7;
     background-color: #ffffff;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       @include flex-direction(column);
     }
     > a {
@@ -463,7 +464,7 @@
       border-bottom: 2px solid #ee2e24;
     }
   }
-  &__inner-box{
+  &__inner-box {
     display: block;
     position: relative;
     float: left;
@@ -480,19 +481,56 @@
     padding-left: 14px;
     padding-right: 17px;
     @include box-sizing(border-box);
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
       height: auto;
       margin-left: 0;
     }
-    &:last-of-type{
+    &:last-of-type {
       width: calc(100% - (15px + 2px));
       height: auto;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
     }
-    > h3{
+    &--toolth {
+      display: none;
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      background-image: linear-gradient(to top, #000001 0%, #000001 39%, #ffffff 100%);
+      opacity: 0.94;
+      z-index: 2;
+      a {
+        display: block;
+        position: relative;
+        float: left;
+        size: 30px 25px;
+        margin: 0 5px;
+        overflow: hidden;
+        text-align: center;
+        /*@include vertical-align;*/
+        img {
+          width: 70%;
+        }
+      }
+      /*a:first-of-type {
+        margin-left: 30px;
+      }*/
+      a:nth-of-type(2) {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    > h3 {
       position: relative;
       float: left;
       width: 100%;
@@ -503,7 +541,7 @@
       color: #040000;
       font-size: 17px;
       font-weight: 500;
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
@@ -517,20 +555,20 @@
         background-size: 100% 100%;
       }
     }
-    .news__wrap_item-sm-hot{
+    .news__wrap_item-sm-hot {
       width: 25%;
       height: 131px;
       margin: 4px 0;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
-      .thumb{
+      .thumb {
         height: 100%;
       }
-      .hover-wrap{
+      .hover-wrap {
         padding: 12px 15px;
         height: 100%;
-        > h2{
+        > h2 {
           color: #fbfafa;
           font-size: 10px;
           text-align: left;
@@ -546,39 +584,54 @@
           overflow: hidden;
         }
       }
-      .category{
+      .category {
         color: #fbfafa;
         font-size: 8px;
         font-weight: 700;
         line-height: 11px;
         margin-top: 0;
-        .category-star{
+        .category-star {
           width: 17px;
           height: 17px;
           top: 5px;
         }
       }
+      &:hover {
+        .cabinet__inner-box--toolth {
+          @include display-flex(flex);
+        }
+      }
     }
-    .business__sm-item{
+    .business__sm-item {
       margin-top: 22px;
       width: 206px;
       height: 304px;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
-      .business__sm-item--img{
+      .business__sm-item--img {
         height: 141px;
       }
+      &:hover{
+        .cabinet__inner-box--toolth {
+          @include display-flex(flex);
+        }
+      }
     }
-    .business__big-item{
+    .business__big-item {
       margin-top: 22px;
       width: 327px;
       height: 304px;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
-      .business__sm-item--img{
+      .business__sm-item--img {
         height: 174px;
+      }
+      &:hover{
+        .cabinet__inner-box--toolth {
+          @include display-flex(flex);
+        }
       }
     }
     .business__sm-item--title {
@@ -641,7 +694,7 @@
       top: 3px;
     }
   }
-  &__statistics{
+  &__statistics {
     display: block;
     position: relative;
     float: left;
@@ -653,10 +706,10 @@
     border-radius: 4px;
     border: 1px solid #d8dde7;
     background-color: #ffffff;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
     }
-    > h3{
+    > h3 {
       display: block;
       position: relative;
       float: left;
@@ -669,7 +722,7 @@
       font-weight: 900;
       text-transform: uppercase;
       line-height: 21px;
-      &:after{
+      &:after {
         display: block;
         position: absolute;
         content: '';
@@ -685,19 +738,19 @@
         background-size: 100% 100%;
       }
     }
-    &--item{
+    &--item {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       border-bottom: 1px solid #e6eaf1;
-      &:first-of-type{
+      &:first-of-type {
         margin-top: 10px;
       }
-      &:last-of-type{
+      &:last-of-type {
         border-bottom: 1px solid transparent;
       }
-      span{
+      span {
         display: inline-block;
         position: relative;
         float: left;
@@ -711,14 +764,14 @@
         text-overflow: ellipsis;
         overflow: hidden;
       }
-      p{
+      p {
         display: inline-block;
         position: relative;
         float: left;
         width: 50%;
         margin: 0;
         color: #4c5b69;
-        font-size: 7px;
+        font-size: 9px;
         font-weight: 100;
         line-height: 33px;
         text-align: right;
