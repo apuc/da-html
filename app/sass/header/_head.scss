@@ -40,6 +40,12 @@
     display: inline-block;
     list-style-type: none;
     margin-right: 30px;
+    @include breakpoint(max-width 1024px){
+      margin-right: 10px;
+    }
+    @include breakpoint(max-width 770px){
+      margin-right: 5px;
+    }
     a {
       width: 100%;
       float: left;
@@ -52,6 +58,12 @@
       color: #242424;
       line-height: 20px;
       transition: width ease-in-out 0.4s;
+      @include breakpoint(max-width 1024px){
+        font-size: 12px;
+      }
+      @include breakpoint(max-width 1024px){
+        font-size: 10px;
+      }
       &:after {
         display: block;
         position: absolute;
@@ -73,6 +85,12 @@
     }
     &:first-of-type {
       margin-right: 68px;
+      @include breakpoint(max-width 1024px){
+        margin-right: 46px;
+      }
+      @include breakpoint(max-width 770px){
+        margin-right: 5px;
+      }
       a {
         // font-family: $ob;
         font-weight: 700;

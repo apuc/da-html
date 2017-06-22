@@ -22,6 +22,9 @@
       margin-top: 180px;
       text-align: center;
       width: 100%;
+      @include breakpoint(max-width 770px) {
+        margin-top: 180px;
+      }
       .owl-prev, .owl-next {
         background-image: url("../img/home-content/left-arrow.png");
         width: 18px;
@@ -66,6 +69,9 @@
   width: 100%;
   height: 400px;
   float: left;
+  @include breakpoint(max-width 770px) {
+    height: 288px;
+  }
   .item {
     width: 100%;
     height: 400px;
@@ -74,7 +80,7 @@
     float: left;
     display: inline-block;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 18%, transparent 50%);
-    .hide-social:after{
+    .hide-social:after {
       right: 273px;
     }
     img {
@@ -209,6 +215,9 @@
       text-align: right;
       top: 5px;
       position: relative;
+      @include breakpoint(max-width 770px) {
+        width: 43%;
+      }
       .add-icon {
         size: 18px;
         display: inline-block;
@@ -263,6 +272,9 @@
       color: #000;
       font-size: 17px;
       font-weight: 700;
+      @include breakpoint(max-width 1024px) {
+        font-size: 14px;
+      }
     }
     a {
       width: calc(100% - 65%);
@@ -278,7 +290,10 @@
       top: 6px;
       position: relative;
       text-decoration: underline;
-      &:hover{
+      @include breakpoint(max-width 1024px) {
+        font-size: 9px;
+      }
+      &:hover {
         text-decoration: none;
       }
       .rect-icon {
@@ -376,6 +391,9 @@
   box-sizing: border-box;
   margin-top: 30px;
   height: 152px;
+  @include breakpoint(max-width 770px) {
+    height: 184px;
+  }
   .title_row {
     width: 100%;
     display: inline-block;
@@ -388,10 +406,13 @@
       display: inline-block;
       color: #090000;
       text-decoration: underline;
+      @include breakpoint(max-width 1024px) {
+        font-size: 9px;
+      }
       .red-arrow {
         top: 5px;
       }
-      &:hover{
+      &:hover {
         text-decoration: none;
       }
     }
@@ -409,6 +430,9 @@
     box-sizing: border-box;
     display: inline-block;
     width: 50%;
+    @include breakpoint(max-width 1024px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -441,6 +465,9 @@
       width: 100%;
       padding: 0 0 20px;
       box-sizing: border-box;
+      @include breakpoint(max-width 1024px) {
+        font-size: 14px;
+      }
     }
     form {
       width: 100%;
@@ -476,6 +503,9 @@
         text-transform: uppercase;
         @include transition(0.4s);
         cursor: pointer;
+        @include breakpoint(max-width 1024px) {
+          font-size: 10px;
+        }
         &:hover {
           @include transition(0.4s);
           background-color: rgba(238, 46, 36, 0.8);
@@ -502,6 +532,9 @@
         width: 100%;
         padding: 20px 0;
         box-sizing: border-box;
+        @include breakpoint(max-width 1024px) {
+          font-size: 14px;
+        }
       }
       .social-wrap__item {
         size: 35px;
@@ -567,6 +600,9 @@
   box-sizing: border-box;
   background-color: white;
   border: 2.5px solid #ee2e24;
+  @include breakpoint(max-width 1024px) {
+    margin-right: 10px;
+  }
   /*text-align: center;*/
   .home-content__tape_wrap {
     display: block;
@@ -736,18 +772,18 @@
     padding-bottom: 3px;
     @include box-sizing(border-box);
     /* border-bottom: 1px solid rgba(185, 196, 213, 0.48);*/
-   /* background-image: url('../img/content/vote-bg.png');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;*/
-    &:nth-of-type(odd){
+    /* background-image: url('../img/content/vote-bg.png');
+     background-repeat: no-repeat;
+     -webkit-background-size: cover;
+     background-size: cover;*/
+    &:nth-of-type(odd) {
       background-image: url('../img/content/vote-bg.png');
       background-repeat: no-repeat;
       -webkit-background-size: cover;
       background-size: cover;
     }
     &:last-of-type {
-     /* margin-bottom: -14px;*/
+      /* margin-bottom: -14px;*/
     }
     &:last-child {
       border: none;
@@ -816,6 +852,9 @@
     top: 19px;
     width: 145px;
     left: 48%;
+    @include breakpoint(max-width 770px){
+      display: none;
+    }
   }
 }
 
@@ -858,7 +897,7 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 15px;
-    &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:last-of-type{
+    &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:last-of-type {
       margin-top: 15px;
     }
   }
@@ -981,12 +1020,12 @@
       }
     }
   }
-  .consultation__item--company{
+  .consultation__item--company {
     display: block;
     position: relative;
     float: left;
     width: calc(100% - 58px);
-    .consultation__item--company-icon{
+    .consultation__item--company-icon {
       display: block;
       position: relative;
       float: left;
@@ -998,7 +1037,7 @@
       -webkit-background-size: contain;
       background-size: contain;
     }
-    > p{
+    > p {
       display: block;
       display: -webkit-box;
       position: relative;
@@ -1115,7 +1154,7 @@
       padding-right: 10px;
       @include box-sizing(border-box);
     }
-    .hr-icon{
+    .hr-icon {
       display: inline-block;
       position: relative;
       width: 12px;
@@ -1249,6 +1288,9 @@
         color: #ffffff;
         font-size: 14px;
         font-weight: 700;
+        @include breakpoint(max-width 1024px) {
+          font-size: 10px;
+        }
       }
       .date {
         display: block;
@@ -1261,6 +1303,9 @@
         color: #ffffff;
         font-size: 14px;
         font-weight: 500;
+        @include breakpoint(max-width 1024px) {
+          font-size: 10px;
+        }
       }
       .weather-val {
         display: block;
@@ -1273,6 +1318,9 @@
         color: #ffffff;
         font-size: 14px;
         font-weight: 500;
+        @include breakpoint(max-width 1024px) {
+          font-size: 10px;
+        }
       }
     }
     &--img {
@@ -1409,7 +1457,8 @@
   float: left;
   padding: 5px;
   box-sizing: border-box;
-  .item-small, .item-large {
+  .item-small /*, .item-large*/
+  {
     width: 31.1%;
     height: 215px;
     float: left;
@@ -1419,6 +1468,9 @@
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
     border-radius: 5px;
+    @include breakpoint(max-width 1024px) {
+      width: calc(50% - (6px * 2));
+    }
     .thumb {
       display: block;
       float: left;
@@ -1476,7 +1528,6 @@
         text-overflow: ellipsis
       }
     }
-
     .content-hover {
       display: none;
       position: absolute;
@@ -1504,9 +1555,17 @@
     border: 2px solid #f8ac00;
     border-radius: 5px;
     min-height: 240px;
+    @include breakpoint(max-width 1024px) {
+      width: calc(100% - (6px * 2));
+    }
     .thumb {
+      width: 100%;
       height: 157px;
       position: relative;
+      img {
+        size: 100%;
+        object-fit: cover;
+      }
       h4 {
         position: absolute;
         width: 100%;
@@ -1603,6 +1662,9 @@
   float: left;
   text-align: center;
   box-sizing: border-box;
+  @include breakpoint(max-width 1024px) {
+    size: 35px;
+  }
   img {
     object-fit: contain;
     position: relative;
@@ -1636,21 +1698,18 @@
   padding-bottom: 14px;
   padding-left: 5px;
   @include box-sizing(border-box);
+  @include breakpoint(max-width 1024px) {
+    height: 35px;
+  }
   > span {
     min-width: 114px;
     line-height: 15px;
     float: left;
     display: inline-block;
+    @include breakpoint(max-width 1024px) {
+      line-height: 6px;
+    }
   }
-  // &:before {
-  //   content: "";
-  //   width: 1px;
-  //   height: 30px;
-  //   position: absolute;
-  //   left: 0;
-  //   margin-top: -3px;
-  //   background-color: #ff0200;
-  // }
   .red-arrow {
     width: 5px;
     min-width: 5px;
@@ -1661,6 +1720,9 @@
     float: none;
     display: inline-block;
     right: 0;
+    @include breakpoint(max-width 1024px) {
+      top: 12px;
+    }
   }
 }
 
@@ -1668,6 +1730,9 @@
   border: 1px solid #ff0200;
   box-sizing: border-box;
   height: 47px;
+  @include breakpoint(max-width 1024px) {
+    height: 35px;
+  }
 
   .komunalka__line {
     display: inline-block;
@@ -1973,7 +2038,7 @@
   transition: 1s;
   //height: 130px;
   padding: 10px 7px 8px 10px;
- @include box-sizing(border-box);
+  @include box-sizing(border-box);
   .thumb {
     width: 137px;
     height: 137px;
@@ -1996,6 +2061,15 @@
     margin-top: 84px;
     padding-left: 15px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 770px) {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      background-color: white;
+      z-index: 2;
+      padding-left: 10px;
+      @include box-sizing(border-box);
+    }
     p {
       font-size: 12px;
       font-weight: 600;
@@ -2010,6 +2084,9 @@
         width: 100%;
         display: inline-block;
         font-size: 13px;
+        @include breakpoint(max-width 1024px) {
+          font-size: 10px;
+        }
       }
     }
     a {
@@ -2102,6 +2179,7 @@
   height: 7px;
   background-color: #ff0200;
 }
+
 .main-weather {
   width: 100%;
   float: left;
@@ -2381,6 +2459,9 @@
   }
   .js-carousel-1 {
     width: 35%;
+    @include breakpoint(max-width 1024px) {
+      width: 33%;
+    }
   }
   .js-carousel-2 {
     width: 27%;
@@ -2423,6 +2504,9 @@
       display: inline-block;
       margin-left: 15px;
       position: relative;
+      @include breakpoint(max-width 1024px) {
+        width: 300px;
+      }
     }
   }
   .buttons-wrap {
@@ -2431,6 +2515,9 @@
     margin-left: 10px;
     float: left;
     position: relative;
+    @include breakpoint(max-width 1024px) {
+      width: calc(100% - 515px);
+    }
     a {
       display: inline-block;
       background-color: #ee2e24;

@@ -9,16 +9,16 @@
     position: relative;
     float: left;
     width: 100%;
-    margin-top: 56px;
+    margin-top: 25px;
   }
   &__content {
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - (34px + 260px));
-    margin-right: 34px;
+    width: calc(100% - (14px + 260px));
+    margin-right: 14px;
     @include breakpoint(max-width 770px){
-      width: calc(100% - (34px + 220px));
+      width: calc(100% - (14px + 220px));
     }
     @include breakpoint(max-width 600px) {
       width: 100%;
@@ -67,6 +67,10 @@
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
     .recommend{
       display: none;
+    }
+    @include breakpoint(max-width 770px) {
+      width: 49%;
+      margin-right: 0;
     }
     @include breakpoint(max-width 600px) {
       width: 100%;
@@ -208,6 +212,10 @@
     border: 2px solid #f8ac00;
     .recommend{
       display: block;
+    }
+    @include breakpoint(max-width 770px) {
+      width: calc(49% - 2px);
+      margin-right: 0;
     }
     @include breakpoint(max-width 600px) {
       width: 100%;
@@ -354,6 +362,10 @@
     border-radius: 6px;
     /*overflow: hidden;*/
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
+    @include breakpoint(max-width 770px) {
+      width: 49%;
+      margin-right: 0;
+    }
     .business__sm-item--img{
       height: 225px;
     }
@@ -414,6 +426,10 @@
     border: 2px solid #f8ac00;
     .recommend{
       display: block;
+    }
+    @include breakpoint(max-width 770px) {
+      width: calc(49% - 2px);
+      margin-right: 0;
     }
     @include breakpoint(max-width 600px) {
       width: 100%;

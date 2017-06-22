@@ -1,5 +1,5 @@
 @media only screen and (max-width: 1024px) {
-  .header-ipanel{
+  /*.header-ipanel{
     height: initial;
   }
   .header-ipanel:before{
@@ -113,7 +113,7 @@
   }
   .home-content__sidebar_weather{
     width: 100%;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 980px) {
@@ -125,7 +125,7 @@
 }
 
 @media only screen and (max-width: 736px) {
-  .select{
+  /*.select{
     margin-top: 23px;
   }
   .header-ipanel {
@@ -176,12 +176,12 @@
   }
   .photo{
     display: none;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 680px) {
 
-  .photo__trigger {
+  /*.photo__trigger {
    display: block;
   }
   .photo__box{
@@ -288,7 +288,7 @@
     width: 320px;
     top: 10%;
     margin-left: calc(50% - (320px/2));
-  }
+  }*/
 
 }
 
