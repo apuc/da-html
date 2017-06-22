@@ -41,6 +41,9 @@
     left: 0;
     width: 100%;
     height: 15px;
+    @include breakpoint(max-width 770px){
+      display: none;
+    }
     .owl-prev{
       display: block;
       position: relative;

@@ -23,7 +23,7 @@
       text-align: center;
       width: 100%;
       @include breakpoint(max-width 770px) {
-        margin-top: 180px;
+        margin-top: 120px;
       }
       .owl-prev, .owl-next {
         background-image: url("../img/home-content/left-arrow.png");
@@ -80,6 +80,9 @@
     float: left;
     display: inline-block;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 18%, transparent 50%);
+    @include breakpoint(max-width 770px) {
+      height: 275px;
+    }
     .hide-social:after {
       right: 273px;
     }
@@ -506,6 +509,9 @@
         @include breakpoint(max-width 1024px) {
           font-size: 10px;
         }
+        @include breakpoint(max-width 770px){
+          font-size: 8px;
+        }
         &:hover {
           @include transition(0.4s);
           background-color: rgba(238, 46, 36, 0.8);
@@ -897,6 +903,9 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 15px;
+    @include breakpoint(max-width 770px){
+      padding-left: 0;
+    }
     &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:last-of-type {
       margin-top: 15px;
     }
@@ -1243,6 +1252,9 @@
   background-color: white;
   border: 1px solid rgba(185, 196, 213, 0.48);
   margin-top: 30px;
+  @include breakpoint(max-width 770px){
+    height: 260px;
+  }
   h3 {
     display: block;
     position: absolute;
@@ -1330,6 +1342,9 @@
       width: 100%;
       height: 129px;
       overflow: hidden;
+      @include breakpoint(max-width 770px){
+        height: 142px;
+      }
       &:after {
         display: block;
         position: absolute;
@@ -1353,6 +1368,10 @@
       height: 43px;
       margin-top: -85px;
       margin-right: 0;
+      @include breakpoint(max-width 770px){
+        width: 100%;
+        margin-top: -45px;
+      }
       .icon {
         display: block;
         position: relative;
@@ -1397,6 +1416,9 @@
           font-size: 19px;
           font-weight: 700;
           text-transform: uppercase;
+          @include breakpoint(max-width 770px){
+            width: 100%;
+          }
           &:after {
             display: block;
             position: absolute;
@@ -2507,6 +2529,9 @@
       @include breakpoint(max-width 1024px) {
         width: 300px;
       }
+      @include breakpoint(max-width 770px) {
+        width: 158px;
+      }
     }
   }
   .buttons-wrap {
@@ -2517,6 +2542,9 @@
     position: relative;
     @include breakpoint(max-width 1024px) {
       width: calc(100% - 515px);
+    }
+    @include breakpoint(max-width 770px) {
+      width: calc(100% - 368px);
     }
     a {
       display: inline-block;

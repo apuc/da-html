@@ -52,6 +52,9 @@
     padding: 10px 22px 10px 22px;
     @include border-box;
     margin-bottom: 12px;
+    @include breakpoint(max-width 770px){
+      height: auto;
+    }
     &--title {
       display: block;
       position: relative;
@@ -90,6 +93,9 @@
     border: none;
     padding: 0;
     margin-bottom: 12px;
+    @include breakpoint(max-width 770px){
+      height: auto;
+    }
     &--img {
       display: block;
       position: relative;
@@ -148,6 +154,9 @@
       font-size: 13px;
       line-height: 20px;
       font-weight: 600;
+      @include breakpoint(max-width 770px){
+        margin-top: 0;
+      }
     }
   }
   &__map{

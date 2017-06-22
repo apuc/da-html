@@ -1,21 +1,23 @@
-.afisha{
+.afisha {
   width: 100%;
   float: left;
   position: relative;
   background-color: #f4f4f4;
 }
-.afisha-wrap{
+
+.afisha-wrap {
   width: 100%;
   float: left;
   position: relative;
   text-align: center;
 }
-.afisha-wrap__event, .afisha-wrap__look{
+
+.afisha-wrap__event, .afisha-wrap__look {
   width: 28%;
   float: left;
   position: relative;
   text-align: center;
-  h3{
+  h3 {
     width: 100%;
     float: left;
     margin: 0;
@@ -29,7 +31,7 @@
     padding-left: 5px;
     box-sizing: border-box;
   }
-  .item{
+  .item {
     width: 48%;
     float: none;
     position: relative;
@@ -37,11 +39,11 @@
     overflow: hidden;
     margin: 0 auto 3px;
     display: inline-block;
-    img{
+    img {
       object-fit: cover;
       size: 100%;
     }
-    .item-content{
+    .item-content {
       position: absolute;
       width: 100%;
       left: 0;
@@ -51,7 +53,7 @@
       @include box-sizing(border-box);
       background-color: rgba(0, 0, 0, 0.85);
       display: none;
-      .name-item, .time{
+      .name-item, .time {
         color: #fff;
         font-size: 10px;
         font-weight: 400;
@@ -60,14 +62,14 @@
         float: left;
         margin: 5px 0;
       }
-      .type{
+      .type {
         color: #fff;
         font-size: 14px;
         font-weight: 400;
         text-align: left;
         float: left;
       }
-      .name-item{
+      .name-item {
         display: block;
         display: -webkit-box;
         width: 100%;
@@ -80,24 +82,24 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
-      .time{
+      .time {
         font-size: 14px;
         font-weight: 700;
       }
     }
   }
-  .item:hover .item-content{
+  .item:hover .item-content {
     display: block;
   }
 }
 
-.afisha-wrap__yesterday{
+.afisha-wrap__yesterday {
   width: 44%;
   float: left;
   padding: 0 20px;
   box-sizing: border-box;
   position: relative;
-  h3{
+  h3 {
     width: 100%;
     float: left;
     margin: 0;
@@ -109,13 +111,13 @@
     line-height: 12px;
     margin-bottom: 20px;
   }
-  .gallery{
+  .gallery {
     width: 100%;
     float: left;
     position: relative;
     margin-bottom: 45px;
   }
-  a{
+  a {
     width: 100%;
     float: left;
     color: #030000;
@@ -125,17 +127,17 @@
     margin: 15px 0;
     text-align: left;
   }
-  .main-gallery{
+  .main-gallery {
     width: 100%;
     float: left;
     position: relative;
     height: 280px;
-    a{
+    a {
       width: 100%;
       float: left;
       overflow: hidden;
       height: 280px;
-      img{
+      img {
         size: 100%;
         float: left;
         overflow: hidden;
@@ -143,7 +145,7 @@
       }
     }
   }
-  .nav-gallery{
+  .nav-gallery {
     width: auto;
     bottom: -38px;
     display: inline-block;
@@ -153,13 +155,20 @@
     box-sizing: border-box;
     position: absolute;
     right: 15px;
-    a{
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+      right: 0;
+    }
+    a {
       size: 50px;
       float: left;
       overflow: hidden;
       margin: 0 5px;
       // height: 90px;
-      img{
+      @include breakpoint(max-width 770px) {
+        size: 45px;
+      }
+      img {
         size: 100%;
         float: left;
         overflow: hidden;
@@ -169,7 +178,7 @@
   }
 }
 
-.fancybox-skin{
+.fancybox-skin {
   background: transparent;
   box-shadow: transparent;
 }
