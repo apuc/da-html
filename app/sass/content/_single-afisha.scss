@@ -401,6 +401,45 @@
         margin-top: 15px;
       }
     }
+    .like{
+      display: inline-block;
+      position: relative;
+      float: left;
+      margin-left: 20px;
+    }
+    .like-icon, .like-set-icon{
+      background-image: url('../img/info-icons/chat.png');
+      background-repeat: no-repeat;
+      // padding-left: 32px;
+      background-position: 0 0px;
+      background-size: contain;
+      float: left;
+      width: 16px;
+      height: 16px;
+      position: relative;
+    }
+    .like-set-icon{
+      top: 3px;
+      background-image: url('../img/icons/new-like-icon.png');
+    }
+    .like-counter{
+      font-size: 14px;
+      position: relative;
+      float: left;
+      position: relative;
+      color: #000;
+      font-weight: 400;
+      top: 0;
+      margin-left: 10px;
+    }
+    .like.active{
+      /* pointer-events: none;*/
+      cursor: pointer;
+      .like-set-icon{
+        top: 3px;
+        background-image: url('../img/icons/new-like-filled-icon.png');
+      }
+    }
   }
   &__countdown-clock {
     display: block;
