@@ -484,7 +484,39 @@
   &__when {
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 60%;
+    float: left;
+    > h3 {
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 27px;
+      color: #030000;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 0;
+      color: #060000;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: left;
+      span {
+        margin-right: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__price {
+    display: inline-block;
+    position: relative;
+    width: 40%;
+    float: left;
     > h3 {
       position: relative;
       float: left;
