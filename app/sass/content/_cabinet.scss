@@ -530,6 +530,39 @@
         }
       }
     }
+    &--add{
+      display: block;
+      position: absolute;
+      width: 82px;
+      height: 21px;
+      top: 22px;
+      right: 23px;
+      color: #4c5b69;
+      font-size: 11px;
+      font-weight: 100;
+      line-height: 19px;
+      z-index: 2;
+      &:hover{
+        color: #ee2e24;
+      }
+      span{
+        display: block;
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        overflow: hidden;
+        /*background-image: url('./img/icons/add-pkg-icon.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;*/
+        img {
+          size: 100%;
+        }
+      }
+    }
     > h3 {
       position: relative;
       float: left;
