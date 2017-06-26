@@ -3,6 +3,11 @@
   float: left;
   position: relative;
   background-color: #f4f4f4;
+  @include breakpoint(max-width 660px){
+    .separator{
+      display: none;
+    }
+  }
 }
 
 .afisha-wrap {
@@ -17,6 +22,9 @@
   float: left;
   position: relative;
   text-align: center;
+  @include breakpoint(max-width 770px){
+    width: 100%;
+  }
   h3 {
     width: 100%;
     float: left;
@@ -99,6 +107,12 @@
   padding: 0 20px;
   box-sizing: border-box;
   position: relative;
+  @include breakpoint(max-width 770px){
+    width: 100%;
+  }
+  @include breakpoint(max-width 660px){
+    width: 100%;
+  }
   h3 {
     width: 100%;
     float: left;
@@ -165,8 +179,14 @@
       overflow: hidden;
       margin: 0 5px;
       // height: 90px;
+      @include breakpoint(max-width 1024px) {
+        size: 35px;
+      }
       @include breakpoint(max-width 770px) {
-        size: 45px;
+        size: 33px;
+      }
+      @include breakpoint(max-width 660px) {
+        size: 30px;
       }
       img {
         size: 100%;

@@ -13,6 +13,13 @@
   float: left;
   position: relative;
   margin-right: 30px;
+  @include breakpoint(max-width 1024px) {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+  }
+  @include breakpoint(max-width 660px) {
+    width: 100%;
+  }
   .owl-controls {
     width: 100%;
     .owl-nav {
@@ -293,6 +300,9 @@
       top: 6px;
       position: relative;
       text-decoration: underline;
+      @include breakpoint(max-width 1200px){
+        font-size: 12px;
+      }
       @include breakpoint(max-width 1024px) {
         font-size: 9px;
       }
@@ -320,6 +330,12 @@
         margin-left: 5px;
         float: right;
         margin-right: 5px;
+        @include breakpoint(max-width 1200px){
+          top: -10px;
+          margin-left: 9px;
+          float: right;
+          margin-right: -9px;
+        }
       }
     }
   }
@@ -394,8 +410,11 @@
   box-sizing: border-box;
   margin-top: 30px;
   height: 152px;
-  @include breakpoint(max-width 770px) {
+  @include breakpoint(max-width 1200px) {
     height: 184px;
+  }
+  @include breakpoint(max-width 770px) {
+    height: 210px;
   }
   .title_row {
     width: 100%;
@@ -509,7 +528,7 @@
         @include breakpoint(max-width 1024px) {
           font-size: 10px;
         }
-        @include breakpoint(max-width 770px){
+        @include breakpoint(max-width 770px) {
           font-size: 8px;
         }
         &:hover {
@@ -607,6 +626,11 @@
   background-color: white;
   border: 2.5px solid #ee2e24;
   @include breakpoint(max-width 1024px) {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+  }
+  @include breakpoint(max-width 660px) {
+    width: calc(100% - 10px);
     margin-right: 10px;
   }
   /*text-align: center;*/
@@ -665,6 +689,14 @@
 .home-content__sidebar {
   width: 24%;
   float: left;
+  @include breakpoint(max-width 1024px) {
+    width: calc(50% - 15px);
+    margin-top: 15px;
+  }
+  @include breakpoint(max-width 770px) {
+    width: calc(100% - 15px);
+    margin-top: 15px;
+  }
   &__button {
     display: block;
     position: relative;
@@ -858,7 +890,7 @@
     top: 19px;
     width: 145px;
     left: 48%;
-    @include breakpoint(max-width 770px){
+    @include breakpoint(max-width 770px) {
       display: none;
     }
   }
@@ -903,7 +935,7 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 15px;
-    @include breakpoint(max-width 770px){
+    @include breakpoint(max-width 770px) {
       padding-left: 0;
     }
     &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:last-of-type {
@@ -1252,7 +1284,7 @@
   background-color: white;
   border: 1px solid rgba(185, 196, 213, 0.48);
   margin-top: 30px;
-  @include breakpoint(max-width 770px){
+  @include breakpoint(max-width 770px) {
     height: 260px;
   }
   h3 {
@@ -1342,7 +1374,7 @@
       width: 100%;
       height: 129px;
       overflow: hidden;
-      @include breakpoint(max-width 770px){
+      @include breakpoint(max-width 770px) {
         height: 142px;
       }
       &:after {
@@ -1368,7 +1400,7 @@
       height: 43px;
       margin-top: -85px;
       margin-right: 0;
-      @include breakpoint(max-width 770px){
+      @include breakpoint(max-width 770px) {
         width: 100%;
         margin-top: -45px;
       }
@@ -1416,7 +1448,7 @@
           font-size: 19px;
           font-weight: 700;
           text-transform: uppercase;
-          @include breakpoint(max-width 770px){
+          @include breakpoint(max-width 770px) {
             width: 100%;
           }
           &:after {
@@ -1479,8 +1511,7 @@
   float: left;
   padding: 5px;
   box-sizing: border-box;
-  .item-small /*, .item-large*/
-  {
+  .item-small /*, .item-large*/  {
     width: 31.1%;
     height: 215px;
     float: left;
@@ -1490,6 +1521,9 @@
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
     border-radius: 5px;
+    @include breakpoint(max-width 1200px) {
+      width: calc(50% - (6px * 2));
+    }
     @include breakpoint(max-width 1024px) {
       width: calc(50% - (6px * 2));
     }
@@ -1577,6 +1611,9 @@
     border: 2px solid #f8ac00;
     border-radius: 5px;
     min-height: 240px;
+    @include breakpoint(max-width 1024px) {
+      width: calc(100% - (6px * 2));
+    }
     @include breakpoint(max-width 1024px) {
       width: calc(100% - (6px * 2));
     }
@@ -2330,6 +2367,9 @@
   box-sizing: border-box;
   .separator {
     width: 450px;
+    @include breakpoint(max-width 660px){
+      display: none;
+    }
   }
   .owl-carousel {
     height: 345px;
@@ -2481,19 +2521,52 @@
   }
   .js-carousel-1 {
     width: 35%;
+    @include breakpoint(max-width 1200px) {
+      width: calc(25% - 10px);
+    }
     @include breakpoint(max-width 1024px) {
-      width: 33%;
+      width: calc(25% - 10px);
+    }
+    @include breakpoint(max-width 660px) {
+      width: calc(50% - 10px);
     }
   }
   .js-carousel-2 {
     width: 27%;
+    @include breakpoint(max-width 1200px) {
+      width: calc(25% - 10px);
+    }
+    @include breakpoint(max-width 1024px) {
+      width: calc(25% - 10px);
+    }
+    @include breakpoint(max-width 660px) {
+      width: calc(50% - 10px);
+    }
   }
   .js-carousel-3 {
     width: 20%;
+    @include breakpoint(max-width 1200px) {
+      width: calc(25% - 10px);
+    }
+    @include breakpoint(max-width 1024px) {
+      width: calc(25% - 10px);
+    }
+    @include breakpoint(max-width 660px) {
+      width: calc(50% - 10px);
+    }
   }
   .js-carousel-4 {
     width: 15.3%;
     margin-right: 0;
+    @include breakpoint(max-width 1200px) {
+      width: calc(25% - 10px);
+    }
+    @include breakpoint(max-width 1024px) {
+      width: calc(25% - 10px);
+    }
+    @include breakpoint(max-width 660px) {
+      width: calc(50% - 10px);
+    }
   }
 }
 
@@ -2526,11 +2599,17 @@
       display: inline-block;
       margin-left: 15px;
       position: relative;
+      @include breakpoint(max-width 1200px) {
+        width: 300px;
+      }
       @include breakpoint(max-width 1024px) {
         width: 300px;
       }
       @include breakpoint(max-width 770px) {
         width: 158px;
+      }
+      @include breakpoint(max-width 660px) {
+        display: none;
       }
     }
   }
@@ -2540,11 +2619,19 @@
     margin-left: 10px;
     float: left;
     position: relative;
+    @include breakpoint(max-width 1200px) {
+      width: calc(100% - 515px);
+    }
     @include breakpoint(max-width 1024px) {
       width: calc(100% - 515px);
     }
     @include breakpoint(max-width 770px) {
       width: calc(100% - 368px);
+    }
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
     a {
       display: inline-block;
@@ -2558,6 +2645,9 @@
       box-sizing: border-box;
       text-transform: uppercase;
       margin-right: 10px;
+      @include breakpoint(max-width 660px) {
+        margin-bottom: 15px;
+      }
       &:last-of-type {
         margin-right: 0;
       }
@@ -2572,6 +2662,9 @@
   bottom: 26px;
   position: absolute;
   display: inline-block;
+  @include breakpoint(max-width 660px){
+    width: 40%;
+  }
   .customPrevBtn, .customNextBtn {
     display: block;
     position: relative;

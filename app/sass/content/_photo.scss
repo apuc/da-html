@@ -73,6 +73,9 @@
       color: #0d0101;
       font-size: 20px;
       font-weight: 700;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
     }
     p{
       display: block;
@@ -96,6 +99,10 @@
       @include breakpoint(max-width 770px){
         width: calc(100% - 122px);
       }
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        height: 100%;
+      }
     }
     &--img{
       display: block;
@@ -112,6 +119,10 @@
       @include breakpoint(max-width 770px){
         width: 122px;
       }
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        margin-top: 0;
+      }
       img{
         width: 100%;
         height: 100%;
@@ -125,16 +136,27 @@
       width: 100%;
       margin-top: 5px;
       .photo__center--img{
+        width: calc(50% - 10px);
         margin-right: 10px;
         margin-bottom: 9px;
         margin-top: 0;
+        @include breakpoint(max-width 1024px){
+          width: calc(50% - 10px);
+        }
+        @include breakpoint(max-width 770px){
+          width: calc(50% - 10px);
+        }
       }
       .photo__left--item{
-        width: 355px;
+        width: calc(50% - 10px);
+       /* width: 355px;*/
         height: 277px;
         float: right;
         @include breakpoint(max-width 1024px){
-          width: 219px;
+          width: 50%;
+        }
+        @include breakpoint(max-width 770px){
+          width: 50%;
         }
       }
     }

@@ -52,7 +52,12 @@
     padding: 10px 22px 10px 22px;
     @include border-box;
     margin-bottom: 12px;
+    @include breakpoint(max-width 1200px){
+      width: 50%;
+      height: auto;
+    }
     @include breakpoint(max-width 770px){
+      width: 50%;
       height: auto;
     }
     &--title {
@@ -93,7 +98,12 @@
     border: none;
     padding: 0;
     margin-bottom: 12px;
+    @include breakpoint(max-width 1200px){
+      width: 50%;
+      height: auto;
+    }
     @include breakpoint(max-width 770px){
+      width: 50%;
       height: auto;
     }
     &--img {
