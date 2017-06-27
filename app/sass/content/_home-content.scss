@@ -746,8 +746,8 @@
     margin-left: 15px;
   }
   @include breakpoint(max-width 600px){
-    width: calc(100% - 15px);
-    margin-left: 15px;
+    width: 100%;
+    margin-left: 0;
   }
   > h3 {
     width: 100%;
@@ -941,8 +941,8 @@
     float: right;
   }
   @include breakpoint(max-width 600px){
-    width: calc(100% - 17px);
-    margin-right: 16px;
+    width: 100%;
+    margin-right: 0;
     float: right;
   }
   > h3 {
@@ -1194,7 +1194,7 @@
     margin-left: 0;
   }
   @include breakpoint(max-width 600px){
-    width: calc(100% - 14px);
+    width: 100%;
     margin-left: 0;
   }
   .title__tabs {
@@ -1383,7 +1383,7 @@
     margin-left: 0;
   }
   @include breakpoint(max-width 600px){
-    width: calc(100% - 14px);
+    width: 100%;
     margin-left: 0;
   }
   h3 {
@@ -2232,8 +2232,8 @@
     @include box-sizing(border-box);
     @include breakpoint(max-width 770px) {
       position: absolute;
-      width: calc(100% - 137px);
-      left: 137px;
+      width: calc(100% - 162px);
+      left: 158px;
       background-color: white;
       z-index: 2;
       padding-left: 10px;

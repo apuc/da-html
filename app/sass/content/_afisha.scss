@@ -180,10 +180,10 @@
       margin: 0 5px;
       // height: 90px;
       @include breakpoint(max-width 1024px) {
-        size: 35px;
+        size: 50px;
       }
       @include breakpoint(max-width 770px) {
-        size: 33px;
+        size: 50px;
       }
       @include breakpoint(max-width 660px) {
         size: 30px;

@@ -13,8 +13,12 @@
     display: inline-block;
     position: absolute;
     top: 0;
+    @include breakpoint(max-width 770px){
+      height: calc(100% - 42px);
+    }
     @include breakpoint(max-width 660px){
-      display: none;
+      /*display: none;*/
+      height: calc(100% - 42px);
     }
   }
 }
@@ -45,6 +49,16 @@
   background-size: cover;
   // background-image: url("../img/header/line.png");
   z-index: 10;
+  /*&:after {
+    content: "";
+    height: 100%;
+    background-color: #0c242e;
+    right: 0;
+    width: 20%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }*/
   @include breakpoint(max-width 1024px){
     height: auto;
   }

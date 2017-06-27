@@ -20,6 +20,10 @@
   font-weight: 700;
   text-transform: uppercase;
   z-index: 2;
+  @include breakpoint(max-width 600px){
+    margin-left: 0;
+    margin-top: 0;
+  }
   &:after {
     display: block;
     position: absolute;
@@ -61,6 +65,9 @@
   font-weight: 700;
   text-decoration: underline;
   text-transform: uppercase;
+  /*@include breakpoint(max-width 770px){
+    margin-top: ;
+  }*/
   .fa {
     display: inline-block;
     position: absolute;
