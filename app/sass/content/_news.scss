@@ -70,6 +70,9 @@
   .home-content__wrap_subscribe {
     width: 48%;
     margin-top: 11px;
+    @include breakpoint(max-width 1024px){
+      width: 100%;
+    }
     .subscribe__wrap {
       h3 {
         padding-bottom: 5px;
@@ -97,9 +100,17 @@
   @include box-sizing(border-box);
   /*border: 2px solid transparent;*/
   margin: 11px;
+  @include breakpoint(max-width 1024px) {
+    width: calc(33% - (11px*2));
+    /*margin: 11px 0;*/
+  }
   @include breakpoint(max-width 660px) {
-    width: 100%;
-    margin: 11px 0;
+    width: calc(50% - (11px*2));
+    /*margin: 11px 0;*/
+  }
+  @include breakpoint(max-width 600px) {
+    width: calc(100% - (11px*2));
+    /*margin: 11px 0;*/
   }
   .thumb {
     width: 100%;
@@ -259,9 +270,13 @@
 
 .news__wrap_item-lg {
   width: 48%;
+  @include breakpoint(max-width 1024px) {
+    width: calc(66% - (11px*2));
+    /*margin: 11px 0;*/
+  }
   @include breakpoint(max-width 660px) {
-    width: 100%;
-    margin: 11px 0;
+    width: calc(100% - (11px*2));
+    /*margin: 11px 0;*/
   }
   .thumb {
     height: 225px;
@@ -371,9 +386,17 @@
   @include box-sizing(border-box);
   border: 2px solid transparent;
   margin: 11px;
+  @include breakpoint(max-width 1024px) {
+    width: calc(33% - (11px*2));
+    /*margin: 11px 0;*/
+  }
   @include breakpoint(max-width 660px) {
-    width: 100%;
-    margin: 11px 0;
+    width: calc(50% - (11px*2));
+    /*margin: 11px 0;*/
+  }
+  @include breakpoint(max-width 600px) {
+    width: calc(100% - (11px*2));
+    /*margin: 11px 0;*/
   }
   .thumb {
     height: 218px;
