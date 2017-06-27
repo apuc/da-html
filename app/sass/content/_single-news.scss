@@ -7,7 +7,8 @@
     position: relative;
   }
   #article{
-    width: 875px;
+    width: calc(100% - (255px + 14px));
+    margin-right: 14px;
     float: left;
     @include breakpoint(max-width 660px){
       width: 100%;
@@ -176,12 +177,14 @@
       }
     }
     .content-single-wrapper{
+      position: relative;
+      float: left;
+      width: 100%;
       background-color: #ffffff;
       padding-left: 27px;
       padding-right: 27px;
       padding-top: 36px;
       padding-bottom: 60px;
-      float: left;
       @include box-sizing(border-box);
       @include breakpoint(max-width 660px){
         padding-left: 10px;
@@ -289,6 +292,8 @@
       }*/
       .content-single{
         display: inline-block;
+        position: relative;
+        width: 100%;
         font-size: 16px;
         color: #060000;
         font-weight: 500;
@@ -319,6 +324,7 @@
           display: block;
           margin-left: auto;
           margin-right: auto;
+          width: 100%;
           @include breakpoint(max-width 660px){
             width: 100%;
           }
@@ -644,7 +650,8 @@ a.load-more{
   display: block;
   position: relative;
   float: left;
-  width: 875px;
+  width: calc(100% - (255px + 14px));
+  margin-right: 14px;
   @include breakpoint(max-width 660px){
     width: 100%;
   }
@@ -668,12 +675,27 @@ a.load-more{
     width: 100%;
     .news__wrap_item-sm{
       width: 30%;
+      @include breakpoint(max-width 770px){
+        width: calc(50% - 22px);
+      }
+      @include breakpoint(max-width 600px){
+        width: calc(100% - 22px);
+      }
     }
     .news__wrap_item-sm-hot{
       width: 30%;
+      @include breakpoint(max-width 770px){
+        width: calc(50% - 22px);
+      }
+      @include breakpoint(max-width 600px){
+        width: calc(100% - 22px);
+      }
     }
     .news__wrap_item-lg{
       width: 60%;
+      @include breakpoint(max-width 770px){
+        width: calc(100% - 22px);
+      }
     }
   }
 }

@@ -4,8 +4,13 @@
   position: absolute;
   left: -36px;
   top: 115px;
+  @include breakpoint(max-width 1024px){
+    left: -15px;
+  }
   @include breakpoint(max-width 660px){
-    display: none;
+    display: block;
+    top: 0;
+    left: 10px;
   }
   a {
     display: block;
@@ -86,6 +91,17 @@
   }
 }
 
+.social-wrapper.fixed{
+  position: fixed;
+  top: 0;
+  margin-left: 258px;
+}
+.social-wrapper.absolute{
+  position: absolute;
+  bottom: 50px;
+  top: 1084px;
+  left: -36px;
+}
 .social-wrapper.move {
   margin-top: 116px;
 }

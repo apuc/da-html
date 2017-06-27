@@ -776,6 +776,11 @@
     top: 0;
     margin-left: calc(856px + 34px);
   }
+  &__sidebar.absolute {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+  }
   &__subtitle {
     display: block;
     position: relative;

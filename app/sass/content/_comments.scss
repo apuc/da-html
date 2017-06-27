@@ -96,6 +96,7 @@
         padding-right: 10px;
         padding-top: 18px;
         position: relative;
+        width: 100px;
         @include box-sizing(border-box);
         @include breakpoint(max-width 660px) {
           width: 100%;
@@ -168,7 +169,7 @@
       }
       .comment {
         padding-top: 10px;
-        min-width: 88%;
+       width: calc(100% - 100px);
         @include breakpoint(max-width 660px) {
           width: 100%;
         }
