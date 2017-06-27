@@ -534,6 +534,9 @@
         @include breakpoint(max-width 770px) {
           font-size: 8px;
         }
+        @include breakpoint(max-width 600px) {
+          font-size: 7px;
+        }
         &:hover {
           @include transition(0.4s);
           background-color: rgba(238, 46, 36, 0.8);
@@ -736,6 +739,7 @@
   }
   @include breakpoint(max-width 770px){
      width: calc(50% - 15px);
+    float: right;
    }
   @include breakpoint(max-width 660px){
     width: calc(50% - 15px);
@@ -1175,7 +1179,7 @@
   position: relative;
   margin-top: 30px;
   @include breakpoint(max-width 1024px){
-    width: 24%;
+    width: calc(50% - 9px);
     float: left;
     margin-right: 0;
     margin-left: 14px;
@@ -1361,7 +1365,7 @@
   @include breakpoint(max-width 1024px){
     float: left;
     position: relative;
-    width: calc(24% - 14px);
+    width: calc(50% - 9px);
     height: 194px;
     background-color: #fff;
     border: 1px solid rgba(185,196,213,.48);
@@ -1495,9 +1499,12 @@
       height: 43px;
       margin-top: -85px;
       margin-right: 0;
+      @include box-sizing(border-box);
       @include breakpoint(max-width 770px) {
         width: 100%;
-        margin-top: -45px;
+        margin-top: -110px;
+        padding-left: 167px;
+
       }
       .icon {
         display: block;
@@ -2225,8 +2232,8 @@
     @include box-sizing(border-box);
     @include breakpoint(max-width 770px) {
       position: absolute;
-      width: 100%;
-      left: 0;
+      width: calc(100% - 137px);
+      left: 137px;
       background-color: white;
       z-index: 2;
       padding-left: 10px;
