@@ -124,21 +124,21 @@
   @include breakpoint(max-width 660px) {
     .business__sm-item {
       width: 49%;
-      height: 465px;
+      height: 100%;
     }
     .business__big-item, .business__big-item.favorite {
       width: 49%;
-      height: 465px;
+      height: 100%;
     }
   }
-  @include breakpoint(max-width 440px) {
+  @include breakpoint(max-width 600px) {
     .business__sm-item {
       width: 100%;
-      height: 465px;
+      height: 100%;
     }
     .business__big-item, .business__big-item.favorite {
       width: 100%;
-      height: 465px;
+      height: 100%;
     }
   }
   .item-small, .item-large {

@@ -311,6 +311,7 @@
   box-sizing: border-box;
   @include breakpoint(max-width 660px){
     width: auto;
+    padding-left: 10px;
   }
   .item {
     display: inline-block;
