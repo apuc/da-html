@@ -11,10 +11,20 @@
     float: left;
     width: 220px;
     background-color: #fbfafa;
+    z-index: 5;
     @include breakpoint(max-width 660px) {
       position: absolute;
-      z-index: 3;
+      /*z-index: 3;*/
       left: -100%;
+      @include transition(0.4s);
+    }
+  }
+  &__tollbar.show {
+    @include breakpoint(max-width 660px) {
+      position: absolute;
+      left: 0;
+      @include transition(0.4s);
+      z-index: 5;
     }
   }
   &__avatar {
@@ -446,6 +456,9 @@
       color: #4c5b69;
       font-size: 21px;
       font-weight: 400;
+      @include breakpoint(max-width 660px){
+        margin-top: 60px;
+      }
     }
     > p {
       position: relative;
@@ -467,6 +480,41 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
+    }
+  }
+  &__trigger{
+    display: none;
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    width: 30px;
+    height: 46px;
+    overflow: hidden;
+    @include transition(0.4s);
+    img{
+      size: 100%;
+      object-fit: contain;
+    }
+    @include breakpoint(max-width 660px){
+      display: block;
+    }
+  }
+  &__trigger.show{
+    display: none;
+    position: absolute;
+    top: 13px;
+    left: calc(16px + 220px);
+    width: 30px;
+    height: 46px;
+    overflow: hidden;
+    @include transition(0.4s);
+    img{
+      size: 100%;
+      object-fit: contain;
+      transform: rotate(180deg);
+    }
+    @include breakpoint(max-width 660px){
+      display: block;
     }
   }
   &__owner-tools {

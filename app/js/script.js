@@ -973,8 +973,37 @@ $(document).ready(function () {
             }
         }
     });
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('#authorized-user-profile').length != 1) {
+            $('.currency-panel__submenu').slideUp('500');
+            $('#authorized-user-profile').removeClass('show');
+        }
+    });
     /*close show cabinet menu*/
 
+    /*show mobile cabinet toolbar*/
+    $(document).on('click', '#cabinet--mobile-trigger', function (event) {
+       event.preventDefault();
+       var tollbar = $('.cabinet__tollbar');
+       if($(this).hasClass('show')){
+           $(this).removeClass('show');
+           tollbar.removeClass('show');
+       } else{
+           $(this).addClass('show');
+           tollbar.addClass('show');
+           /*$('#black-overlay').fadeIn(400);*/
+       }
+       /*if(window.innerWidth < 661){
+           $(document).on('click', function (e) {
+               if ($(e.target).closest('.cabinet__tollbar').length != 1) {
+                   $('.cabinet__tollbar').removeClass('show');                   
+                   $('#cabinet--mobile-trigger').removeClass('show');                   
+               }
+           });
+       } */
+    });
+    /*close mobile cabinet toolbar*/
+    
     /*search form option select*/
     $(document).on('click', '.js-search-option', function (event) {
         event.preventDefault();
