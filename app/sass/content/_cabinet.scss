@@ -152,6 +152,27 @@
     background-size: 100% 100%;
     z-index: 2;
   }
+  &__add-element{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 44px;
+    margin-bottom: 75px;
+    > p{
+      display: block;
+      position: relative;
+      float: left;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 35px;
+      margin-right: 31px;
+      color: #040000;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 33px;
+    }
+  }
   &__remove-pkg {
     display: block;
     position: relative;
