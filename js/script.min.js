@@ -891,14 +891,14 @@ $(document).ready(function () {
         }
 
     });
-    $(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
+    /*$(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
         event.preventDefault();
         var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
             addedBox = $(this).closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
             count = wrapper.attr('data-count');//счетчик
         addedBox.remove();
         wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1
-    });
+    });*/
     /*close form fields user cabinet companys*/
 
     /*add form fields in user cabinet*/
