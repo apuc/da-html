@@ -872,26 +872,26 @@ $(document).ready(function () {
     });
     /*close modal delivery second step show*/
 
-    /*add form fields in cabinet step 3*/
-    $(document).on('click', '.add-field', function (event) {
+    /*add form fields user cabinet companys*/
+    $(document).on('click', '.cabinet__add-company-form--wrapper .cabinet__add-field', function (event) {
         event.preventDefault();
         var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
         // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
             count = wrapper.attr('data-count');//счетчик
 
         /* console.log( addedBox );*/
-        if (count < 10) { //условие на максимум 10 полей
+        if (count < 5) { //условие на максимум 10 полей
             $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1
             $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' +
                 '<p class="cabinet__add-company-form--title"></p>' +
                 '<input class="cabinet__add-company-form--field" type="text" name="mytext[]">' +
-                '<a href="#" class="show-more remove-field">удалить</a>' +
+                '<a href="#" class="cabinet__remove-pkg"></a>' +
                 '<p class="cabinet__add-company-form--notice"></p>' +
                 '</div>');//добавляем поля
         }
 
     });
-    $(document).on('click', '.cabinet__add-pkg', function (event) {
+    $(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
         event.preventDefault();
         var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
             addedBox = $(this).closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
@@ -899,7 +899,7 @@ $(document).ready(function () {
         addedBox.remove();
         wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1
     });
-    /*close add form fields in cabinet step 3*/
+    /*close form fields user cabinet companys*/
 
     /*add form fields in user cabinet*/
     $(document).on('click', '.cabinet__add-company-form--wrapper .cabinet__add-pkg', function (event) {
