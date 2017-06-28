@@ -55,7 +55,7 @@
     width: 100%;
     background-color: #dcdcdc;
     margin-top: -48px;
-    > h1 {
+    > h3 {
       display: block;
       position: relative;
       float: left;
@@ -1295,6 +1295,7 @@
     float: left;
     width: 100%;
     padding: 30px 42px;
+    padding-left: 35px;
     @include box-sizing(border-box);
     &--title {
       display: block;
