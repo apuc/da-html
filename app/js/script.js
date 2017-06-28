@@ -363,11 +363,11 @@ $(document).ready(function () {
         );
     });
     /*send message modal validation*/
-    var validMassage = new Validation();
+    /*var validMassage = new Validation();
     validMassage.init({
         classItem: 'valid',
         eventElement: '#send-message-submit'
-    });
+    });*/
     /*close send message modal validation*/
     /*close send message modal*/
 
@@ -902,14 +902,14 @@ $(document).ready(function () {
     /*close form fields user cabinet companys*/
 
     /*add form fields in user cabinet*/
-    $(document).on('click', '.cabinet__add-company-form--wrapper .cabinet__add-pkg', function (event) {
+    /*$(document).on('click', '.cabinet__add-company-form--wrapper .cabinet__add-pkg', function (event) {
         event.preventDefault();
-       /* console.log( 111 );*/
+       /!* console.log( 111 );*!/
         var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
         // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
             count = wrapper.attr('data-count');//счетчик
 
-        /* console.log( addedBox );*/
+        /!* console.log( addedBox );*!/
         if (count < 5) { //условие на максимум 10 полей
             $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1
             $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' + 
@@ -921,12 +921,12 @@ $(document).ready(function () {
                 '<option value="4"></option>' +
                 '<option value="5"></option>' +
                 '</select>' +                
-                '<a href="#" class="cabinet__remove-pkg"></a>' /*+
-                '<p class="cabinet__add-company-form--notice"></p>'*/ +
+                '<a href="#" class="cabinet__remove-pkg"></a>' /!*+
+                '<p class="cabinet__add-company-form--notice"></p>'*!/ +
                 '</div>');//добавляем поля
         }
 
-    });
+    });*/
     $(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
         event.preventDefault();
         var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
