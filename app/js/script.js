@@ -891,7 +891,7 @@ $(document).ready(function () {
         }
 
     });
-    $(document).on('click', '.remove-field', function (event) {
+    $(document).on('click', '.cabinet__add-pkg', function (event) {
         event.preventDefault();
         var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
             addedBox = $(this).closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
@@ -900,6 +900,42 @@ $(document).ready(function () {
         wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1
     });
     /*close add form fields in cabinet step 3*/
+
+    /*add form fields in user cabinet*/
+    $(document).on('click', '.cabinet__add-company-form--wrapper .cabinet__add-pkg', function (event) {
+        event.preventDefault();
+       /* console.log( 111 );*/
+        var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
+        // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
+            count = wrapper.attr('data-count');//счетчик
+
+        /* console.log( addedBox );*/
+        if (count < 5) { //условие на максимум 10 полей
+            $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1
+            $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' + 
+                '<p class="cabinet__add-company-form--title">Категория</p>' +
+                '<select class="cabinet__add-company-form--field" name="" id="form-select">' +
+                '<option value="1"></option>' +
+                '<option value="2"></option>' +
+                '<option value="3"></option>' +
+                '<option value="4"></option>' +
+                '<option value="5"></option>' +
+                '</select>' +                
+                '<a href="#" class="cabinet__remove-pkg"></a>' /*+
+                '<p class="cabinet__add-company-form--notice"></p>'*/ +
+                '</div>');//добавляем поля
+        }
+
+    });
+    $(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
+        event.preventDefault();
+        var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
+            addedBox = $(this).closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
+            count = wrapper.attr('data-count');//счетчик
+        addedBox.remove();
+        wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1
+    });
+    /*close add form fields in user cabinet*/
 
     /*show cabinet menu*/
     $(document).on('click', '.cabinet__wrapper > h1', function () {

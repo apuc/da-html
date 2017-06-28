@@ -64,7 +64,7 @@ h2 {
 .form-wrapper:focus {
   border: 1px solid #c1c5c8;
 }
-input[type="email"] {
+/*input[type="email"] {
   border: none;
   float: left;
   font-size: 1em;
@@ -99,7 +99,7 @@ input[type="submit"]:hover {
   background-image: -moz-linear-gradient(top, #2da2d4, #2382aa);
   background-image: -o-linear-gradient(top, #2da2d4, #2382aa);
   background-image: linear-gradient(to bottom, #2da2d4, #2382aa);
-}
+}*/
 /* ---------- FOOTER ---------- */
 footer#disclaimer p {
   font-size: .875em;
