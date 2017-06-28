@@ -21,6 +21,7 @@ if ($('#map').length > 0) {
 }
 
 $(document).ready(function () {
+   
     /*hamburger*/
     var windowWidth = $(window).width();
 
@@ -71,6 +72,27 @@ $(document).ready(function () {
         $(".sandwich").toggleClass("active");
     });
     /*hamburger-news*/
+    
+    /*show authorize submenu*/
+    $(document).on('click', '#authorized-user-profile', function (event) {
+       event.preventDefault();
+       var submenu = $(this).closest('form').find('.currency-panel__submenu');
+       console.log( submenu );
+        if($(this).hasClass('show')){
+            $(this).removeClass('show');
+            submenu.slideUp('500');
+        } else {
+            $(this).addClass('show');
+            submenu.slideDown('500');
+        }
+    });
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('#authorized-user-profile').length != 1) {
+            $('.currency-panel__submenu').slideUp('500');
+            $('#authorized-user-profile').removeClass('show');
+        }
+    });
+    /*close show authorize submenu*/
 
     $(".home-content__wrap_slider").owlCarousel({
         loop: true,

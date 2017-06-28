@@ -86,7 +86,7 @@
     @include breakpoint(max-width 660px){
       width: 100%;
     }
-    input {
+    > input {
       background-color: rgba(231, 231, 231, 0.4);
       border: none;
       width: 133px;
@@ -134,7 +134,7 @@
     .search_input_acive {
       width: 330px;
     }
-    a {
+    > a {
       float: left;
       display: inline-block;
       position: relative;
@@ -349,24 +349,32 @@
     }
   }
   &__submenu{
-    display: block;
+    display: none;
     position: absolute;
-    width: 30%;
-    position: absolute;
+    width: 135px;
     top: 38px;
     right: 0;
-    background-color: #edeef0;
+    background-color: #0c242e;
     border-radius: 6px;
     padding: 20px 0;
     @include box-sizing(border-box);
     z-index: 12;
-    a{
+    > a{
       display: block;
       position: relative;
       float: left;
       width: 100%;
+      height: auto;
+      background-color: transparent;
       padding: 10px 10px;
-
+      @include box-sizing(border-box);
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 600;
+      &:hover{
+        background-color: #ee2e24;
+      }
     }
   }
 }
