@@ -1046,10 +1046,11 @@ $(document).ready(function () {
     $('#Go_Top').scrollToTop();
     /*close go to top scroll*/
 
+    /*show upload img prev in cabinet*/
     $("#news-photo").change(function () {
         readURL(this);
     });
-
+    /*close show upload img prev in cabinet*/
 });
 
 $(window).scroll(function () {
@@ -1115,6 +1116,7 @@ function anonymRecall() {
 }
 /*close set anonymous profile in div*/
 
+/*show img prew*/
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -1126,3 +1128,4 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+/*close function*/

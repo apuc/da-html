@@ -457,7 +457,8 @@
       font-size: 21px;
       font-weight: 400;
       @include breakpoint(max-width 660px){
-        margin-top: 60px;
+        margin-top: 22px;
+        padding-left: 60px;
       }
     }
     > p {
@@ -490,7 +491,9 @@
     width: 30px;
     height: 46px;
     overflow: hidden;
+    background-color: white;
     @include transition(0.4s);
+    z-index: 2;
     img{
       size: 100%;
       object-fit: contain;
@@ -503,7 +506,7 @@
     display: none;
     position: absolute;
     top: 13px;
-    left: calc(16px + 220px);
+    left: 210px;
     width: 30px;
     height: 46px;
     overflow: hidden;
@@ -598,6 +601,9 @@
     padding-left: 14px;
     padding-right: 17px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 1024px) {
+      height: auto;
+    }
     @include breakpoint(max-width 660px) {
       width: 100%;
       height: auto;
@@ -843,19 +849,56 @@
     .business__sm-item--views:before {
       top: 3px;
     }
-    .business__tab-links{
-      @include justify-content(flex-start);
-      padding-left: 23px;
-      @include box-sizing(border-box);
-      li{
-        a{
-          font-size: 13px;
-          font-weight: 700;
-        }
-      }
-    }
+
     .business__tab-content--wrapper {
       height: 450px;
+    }
+  }
+  &__tab-links{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-left: 23px;
+    @include box-sizing(border-box);
+    margin-top: 21px;
+    margin-bottom: 21px;
+    list-style: none;
+    @include breakpoint(max-width 600px) {
+      @include flex-direction(column);
+    }
+    li {
+      /*flex: 1 0 0;*/
+      a {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 13px;
+        padding-left: 12px;
+        padding-right: 12px;
+        @include box-sizing(border-box);
+        border-bottom: 2px solid #edeef0;
+        /*border-radius: 2px;*/
+        text-align: center;
+        color: #060000;
+        font-size: 13px;
+        font-weight: 700;
+        &:hover {
+          color: #b91209;
+          /*border: 1px solid rgba(255, 2, 0, 0.32);*/
+          border-bottom: 2px solid #ee2e24;
+        }
+      }
+      a.active {
+        color: #b91209;
+        /*border: 1px solid rgba(255, 2, 0, 0.32);*/
+        border-bottom: 2px solid #ee2e24;
+      }
     }
   }
   &__statistics {
