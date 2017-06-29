@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: -36px;
+  margin-left: -63px;
   top: 115px;
   @include breakpoint(max-width 1024px){
-    left: -15px;
+    margin-left: -45px;
   }
   @include breakpoint(max-width 660px){
     display: block;
@@ -94,13 +94,13 @@
 .social-wrapper.fixed{
   position: fixed;
   top: 0;
-  margin-left: 258px;
+  /*margin-left: 258px;*/
 }
 .social-wrapper.absolute{
   position: absolute;
   bottom: 50px;
   top: 1084px;
-  left: -293px;
+  /*left: -293px;*/
 }
 .social-wrapper.move {
   margin-top: 116px;
