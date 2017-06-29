@@ -37,10 +37,25 @@
     margin-left: calc(50% - (92px / 2));
     border-radius: 50%;
     overflow: hidden;
+    background-color: #fff;
     z-index: 2;
     img {
       size: 100%;
       object-fit: cover;
+    }
+    span{
+      display: block;
+      position: relative;
+      float: left;
+      width: 30%;
+      height: 30%;
+      margin-top: calc(50% - (30%/2));
+      margin-left: calc(50% - (30%/2));
+      color: #ee2e24;
+      font-size: 33px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 25px;
     }
     &--edit {
       display: block;
