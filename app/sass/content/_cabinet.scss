@@ -176,6 +176,9 @@
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     z-index: 2;
+    @include breakpoint(max-width 600px){
+      margin-left: 0;
+    }
   }
   &__add-element{
     display: block;
@@ -618,6 +621,11 @@
     @include box-sizing(border-box);
     @include breakpoint(max-width 1024px) {
       height: auto;
+    }
+    @include breakpoint(max-width 1000px) {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
     }
     @include breakpoint(max-width 660px) {
       width: 100%;
@@ -1606,6 +1614,9 @@
       border: 1px solid #b8b8b9;
       padding: 1px 10px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 600px){
+        width: 166px;
+      }
       &:focus {
         outline: none;
       }
