@@ -2152,6 +2152,9 @@
     width: calc(100% - (96px + 35px + 69px + 182px));
     padding-left: 48px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 1024px){
+      width: 100%;
+    }
     > h3{
       display: block;
       position: relative;
