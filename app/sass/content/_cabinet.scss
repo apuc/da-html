@@ -2113,7 +2113,7 @@
         height: 9px;
         top: 3px;
         left: 0;
-        background-image: url('../img/icons/cabinet-edit-sm-icon.png');
+        background-image: url('../img/icons/cabinet-delete-sm-icon.png');
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
@@ -2361,7 +2361,7 @@
         color: #c97a76;
       }
     }
-    > p{
+    /*> p{
       display: block;
       position: relative;
       float: left;
@@ -2382,6 +2382,34 @@
         font-size: 11px;
         font-weight: 400;
       }
+    }*/
+    &--type{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 36px;
+      @include box-sizing(border-box);
+      margin-top: 9px;
+      color: #ee2e24;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    &--period{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 36px;
+      @include box-sizing(border-box);
+      color: #4c5b69;
+      font-size: 11px;
+      font-weight: 400;
     }
     > .notice{
       display: block;
