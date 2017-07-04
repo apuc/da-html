@@ -904,7 +904,7 @@ $(document).ready(function () {
         // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
             count = wrapper.attr('data-count'),//счетчик
             maxCount = $(this).attr('max-count');//максимальное количество полей
-            console.log( maxCount );
+            /*console.log( maxCount );*/
         /* console.log( addedBox );*/
         if (count < maxCount) { //условие 
             $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1
@@ -955,13 +955,10 @@ $(document).ready(function () {
     });*/
     $(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
         event.preventDefault();
-        var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
-            addedBox = $(this).closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
-            count = wrapper.attr('data-count');//счетчик
-        addedBox.remove();
-        wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1
+       removeField($(this));
     });
     /*close add form fields in user cabinet*/
+    
 
     /*show cabinet menu*/
     $(document).on('click', '.cabinet__wrapper > h1', function () {
@@ -1131,5 +1128,15 @@ function readURL(input) {
 
         reader.readAsDataURL(input.files[0]);
     }
+}
+/*close function*/
+
+/*remove field*/
+function removeField(selector) {
+    var wrapper = selector.closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
+        addedBox = selector.closest('.cabinet__add-company-form--hover-elements'),//элементы, которые добавляются
+        count = wrapper.attr('data-count');//счетчик
+    addedBox.remove();
+    wrapper.attr('data-count', parseInt(count) - 1);//увеличиваем счетчик на 1
 }
 /*close function*/
