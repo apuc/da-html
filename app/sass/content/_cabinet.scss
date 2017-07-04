@@ -1463,7 +1463,7 @@
     position: relative;
     float: left;
     width: 100%;
-    background-color: #fbfbfb;
+   /* background-color: #fbfbfb;*/
     > .more-block {
       @include display-flex(flex);
       @include flex-wrap(wrap);
@@ -1494,8 +1494,8 @@
       position: relative;
       float: left;
       width: 188px;
-      height: 225px;
-      margin-bottom: 52px;
+      height: 305px;
+      margin-bottom: 36px;
       border: 1px solid #e8e9ed;
       border-radius: 5px 0 0 5px;
       p:first-of-type {
@@ -1513,8 +1513,17 @@
         font-size: 15px;
         font-weight: 700;
         line-height: 18px;
-        text-align: center;
         padding: 0;
+        span{
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          text-align: center;
+          &:last-of-type{
+            text-transform: uppercase;
+          }
+        }
       }
       .icon{
         display: block;
@@ -1561,52 +1570,192 @@
       }
       p:nth-of-type(2) {
         text-align: center;
-        color: #0c242e;
+        color: #ffffff;
         font-size: 9px;
         font-weight: 600;
         line-height: 14px;
         margin: 0;
         a {
-          color: #0c242e;
+          color: #ffffff;
           text-decoration: underline;
         }
       }
+      .cabinet__packages--buy{
+        background-color: #ffffff;
+        color: #030000;
+      }
     }
-    /*&--item:hover {
-      border: 1px solid #ee2e24;
-      background-color: #ee2e24;
-      p:first-of-type {
-        color: #0c242e;
-      }
-      h3 {
-        color: #fbfbfb;
-      }
-      p:nth-of-type(2) {
-        color: #fbfbfb;
-        a {
-          color: #fbfbfb;
-        }
-      }
-      .cabinet__packages--buy {
-        color: #FFFFFF;
-        border: 3px solid white;
-      }
-    }*/
     &--buy {
       display: block;
       position: relative;
       float: left;
-      width: 93px;
+      width: 118px;
       height: 33px;
       margin-top: 33px;
-      border: 3px solid #ff0200;
-      border-radius: 20px;
+      background-color: #ee2e24;
+      border-radius: 5px;
       text-align: center;
-      color: #292929;
-      font-size: 11px;
-      font-weight: 400;
+      color: #fbfbfb;
+      font-size: 13px;
+      font-weight: 700;
       line-height: 33px;
       text-transform: uppercase;
+    }
+    &--notification{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 47px;
+      text-align: center;
+      color: #040000;
+      font-size: 13px;
+      font-weight: 500;
+      > a{
+        color: #f56f68;
+        text-decoration: underline;
+      }
+    }
+    &--hover-block{
+      display: none;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 62px;
+      padding: 0 62px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 430px){
+        padding: 0;
+      }
+      > h3{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 29px;
+        color: #040000;
+        font-size: 17px;
+        font-weight: 500;
+        > span{
+          text-transform: uppercase;
+        }
+      }
+      ul{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+          @include display-flex(flex);
+          @include flex-wrap(wrap);
+          @include flex-direction(row);
+          @include justify-content(space-between);
+          position: relative;
+          float: left;
+          width: 100%;
+          > .descr{
+            display: block;
+            position: relative;
+            float: left;
+            width: 50%;
+            color: #040000;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 25px;
+            @include breakpoint(max-width 429px){
+              width: 100%;
+            }
+           /* &:last-of-type{
+              font-size: 16px;
+              font-weight: 700;
+              text-align: right;
+            }*/
+          }
+          > .val{
+            font-size: 16px;
+            font-weight: 700;
+            text-align: right;
+            @include breakpoint(max-width 429px){
+              width: 100%;
+            }
+          }
+          &:last-of-type{
+            @include display-flex(flex);
+            @include flex-wrap(wrap);
+            @include flex-direction(row);
+            @include justify-content(flex-end);
+            > .descr{
+              display: block;
+              position: relative;
+              float: left;
+              width: auto;
+              color: #040000;
+              font-size: 13px;
+              font-weight: 500;
+              margin: 0 15px;
+             /* &:nth-of-type(even){
+                font-size: 16px;
+                font-weight: 700;
+              }*/
+            }
+            > .val{
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+          &:last-of-type:before{
+            display: block;
+            position: relative;
+            content: '';
+            float: left;
+            width: 100%;
+            height: 1px;
+            background-color: #d1d1d1;
+            margin-top: 18px;
+            margin-bottom: 18px;
+          }
+          > .checkbox{
+            display: none;
+          }
+          > .checkbox + .forcheck {
+            display: block;
+            position: relative;
+            /*width: 100%;*/
+            float: left;
+            width: 50%;
+            > .descr{
+              display: block;
+              position: relative;
+              float: left;
+              color: #040000;
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 25px;
+            }
+          }
+          > .checkbox + .forcheck .checked{
+            display: block;
+            position: relative;
+            float: left;
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            border-radius: 2px;
+            border: 2px solid #9fa3a7;
+          }
+          > .checkbox:checked + .forcheck .checked {
+            background-image: url('../img/icons/cabinet-checkbox-checked-icon.png');
+            background-repeat: no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+          }
+        }
+      }
     }
   }
   &__add-company {
