@@ -902,10 +902,11 @@ $(document).ready(function () {
         event.preventDefault();
         var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
         // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
-            count = wrapper.attr('data-count');//счетчик
-
+            count = wrapper.attr('data-count'),//счетчик
+            maxCount = $(this).attr('max-count');//максимальное количество полей
+            console.log( maxCount );
         /* console.log( addedBox );*/
-        if (count < 5) { //условие на максимум 10 полей
+        if (count < maxCount) { //условие 
             $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1
             $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' +
                 '<p class="cabinet__add-company-form--title"></p>' +
