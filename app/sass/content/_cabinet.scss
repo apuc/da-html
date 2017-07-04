@@ -1680,6 +1680,7 @@
             font-size: 16px;
             font-weight: 700;
             text-align: right;
+            line-height: 25px;
             @include breakpoint(max-width 429px){
               width: 100%;
             }
@@ -1706,6 +1707,7 @@
             > .val{
               font-size: 16px;
               font-weight: 700;
+              line-height: 25px;
             }
           }
           &:last-of-type:before{
