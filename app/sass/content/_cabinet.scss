@@ -43,14 +43,14 @@
       size: 100%;
       object-fit: cover;
     }
-    span{
+    span {
       display: block;
       position: relative;
       float: left;
       width: 30%;
       height: 30%;
-      margin-top: calc(50% - (30%/2));
-      margin-left: calc(50% - (30%/2));
+      margin-top: calc(50% - (30% / 2));
+      margin-left: calc(50% - (30% / 2));
       color: #ee2e24;
       font-size: 33px;
       text-transform: uppercase;
@@ -95,7 +95,7 @@
       padding-left: 50px;
       padding-right: 30px;
       @include box-sizing(border-box);
-      span{
+      span {
         display: block;
         position: absolute;
         /*content: '';*/
@@ -105,7 +105,7 @@
         height: 24px;
         overflow: hidden;
         border-radius: 50%;
-        img{
+        img {
           size: 100%;
           object-fit: contain;
         }
@@ -161,7 +161,7 @@
     background-size: 100% 100%;
     z-index: 2;
   }
-  &__add-field{
+  &__add-field {
     display: block;
     position: relative;
     float: left;
@@ -176,18 +176,18 @@
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     z-index: 2;
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       margin-left: 0;
     }
   }
-  &__add-element{
+  &__add-element {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     margin-top: 44px;
     margin-bottom: 75px;
-    > p{
+    > p {
       display: block;
       position: relative;
       float: left;
@@ -474,7 +474,7 @@
       color: #4c5b69;
       font-size: 21px;
       font-weight: 400;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         margin-top: 22px;
         padding-left: 60px;
       }
@@ -501,7 +501,7 @@
       }
     }
   }
-  &__trigger{
+  &__trigger {
     display: none;
     position: absolute;
     top: 13px;
@@ -512,15 +512,15 @@
     background-color: white;
     @include transition(0.4s);
     z-index: 2;
-    img{
+    img {
       size: 100%;
       object-fit: contain;
     }
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       display: block;
     }
   }
-  &__trigger.show{
+  &__trigger.show {
     display: none;
     position: absolute;
     top: 13px;
@@ -529,12 +529,12 @@
     height: 46px;
     overflow: hidden;
     @include transition(0.4s);
-    img{
+    img {
       size: 100%;
       object-fit: contain;
       transform: rotate(180deg);
     }
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       display: block;
     }
   }
@@ -657,7 +657,7 @@
       left: 0;
       width: 100%;
       height: 82px;
-      background-color: rgba(255,255,255,0.87);
+      background-color: rgba(255, 255, 255, 0.87);
       z-index: 2;
       @include transition(0.4s);
       a {
@@ -703,11 +703,11 @@
       font-weight: 100;
       line-height: 19px;
       z-index: 2;
-      &:first-of-type{
+      &:first-of-type {
         right: 121px;
       }
-      &:last-of-type{
-        right:  23px;
+      &:last-of-type {
+        right: 23px;
       }
       &:hover {
         color: #ee2e24;
@@ -730,13 +730,13 @@
         }
       }
     }
-    &--visible{
+    &--visible {
       display: block;
       position: relative;
       float: left;
       width: 100%;
     }
-    &--hover{
+    &--hover {
       display: block;
       position: relative;
       float: left;
@@ -926,7 +926,7 @@
       width: 100%;
       margin-bottom: 20px;
     }
-    .item{
+    .item {
       display: inline-block;
       float: none;
       position: relative;
@@ -936,7 +936,7 @@
       margin-top: 15px;
       margin-left: 10px;
       margin-right: 10px;
-      img{
+      img {
         size: 100%;
         object-fit: cover;
       }
@@ -947,7 +947,7 @@
         bottom: -150px;
         padding: 10px 15px;
         @include box-sizing(border-box);
-        background-color: hsla(0,0%,100%,.75);
+        background-color: hsla(0, 0%, 100%, .75);
         @include transition(0.4s);
         .name-item, .time, .type {
           color: #000;
@@ -978,7 +978,7 @@
           font-weight: 700;
         }
       }
-      &:hover{
+      &:hover {
         .item-content {
           bottom: 0;
           @include transition(0.4s);
@@ -986,7 +986,7 @@
       }
     }
   }
-  &__tab-links{
+  &__tab-links {
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
@@ -1362,10 +1362,10 @@
       font-size: 13px;
       font-weight: 400;
     }
-    .social-wrap__item{
+    .social-wrap__item {
       width: 24px;
       height: 23px;
-      img{
+      img {
         width: 11px;
         height: 11px;
         -o-object-fit: contain;
@@ -1381,11 +1381,11 @@
       padding-left: 12px;
       padding-right: 12px;
     }
-    .row-soc{
-     .check-button {
+    .row-soc {
+      .check-button {
         margin-top: 10px;
       }
-      &__add{
+      &__add {
         display: block;
         position: relative;
         float: left;
@@ -1397,13 +1397,13 @@
         background-color: transparent;
         padding: 0;
         border: none;
-       /* overflow: hidden;*/
+        /* overflow: hidden;*/
         background-image: url('../img/icons/add-pkg-icon.png');
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
         z-index: 2;
-        > span{
+        > span {
           display: block;
           position: absolute;
           top: 0;
@@ -1464,7 +1464,7 @@
     position: relative;
     float: left;
     width: 100%;
-   /* background-color: #fbfbfb;*/
+    /* background-color: #fbfbfb;*/
     > .more-block {
       @include display-flex(flex);
       @include flex-wrap(wrap);
@@ -1515,18 +1515,18 @@
         font-weight: 700;
         line-height: 18px;
         padding: 0;
-        span{
+        span {
           display: block;
           position: relative;
           float: left;
           width: 100%;
           text-align: center;
-          &:last-of-type{
+          &:last-of-type {
             text-transform: uppercase;
           }
         }
       }
-      .icon{
+      .icon {
         display: block;
         position: relative;
         float: left;
@@ -1534,7 +1534,7 @@
         height: 51px;
         margin-bottom: 28px;
         overflow: hidden;
-        img{
+        img {
           size: 100%;
           object-fit: contain;
         }
@@ -1552,13 +1552,13 @@
         }
       }
     }
-    &--item:nth-of-type(2){
+    &--item:nth-of-type(2) {
       border-radius: 0 0 0 0;
     }
-    &--item:nth-of-type(3){
+    &--item:nth-of-type(3) {
       border-radius: 0 0 0 0;
     }
-    &--item:nth-of-type(4){
+    &--item:nth-of-type(4) {
       border-radius: 0 5px 5px 0;
     }
     &--item.top {
@@ -1581,7 +1581,7 @@
           text-decoration: underline;
         }
       }
-      .cabinet__packages--buy{
+      .cabinet__packages--buy {
         background-color: #ffffff;
         color: #030000;
       }
@@ -1602,7 +1602,7 @@
       line-height: 33px;
       text-transform: uppercase;
     }
-    &--notification{
+    &--notification {
       display: block;
       position: relative;
       float: left;
@@ -1613,12 +1613,12 @@
       color: #040000;
       font-size: 13px;
       font-weight: 500;
-      > a{
+      > a {
         color: #f56f68;
         text-decoration: underline;
       }
     }
-    &--hover-block{
+    &--hover-block {
       display: none;
       position: relative;
       float: left;
@@ -1626,10 +1626,10 @@
       margin-bottom: 62px;
       padding: 0 62px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 430px){
+      @include breakpoint(max-width 430px) {
         padding: 0;
       }
-      > h3{
+      > h3 {
         display: block;
         position: relative;
         float: left;
@@ -1639,11 +1639,11 @@
         color: #040000;
         font-size: 17px;
         font-weight: 500;
-        > span{
+        > span {
           text-transform: uppercase;
         }
       }
-      ul{
+      ul {
         display: block;
         position: relative;
         float: left;
@@ -1651,7 +1651,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        li{
+        li {
           @include display-flex(flex);
           @include flex-wrap(wrap);
           @include flex-direction(row);
@@ -1659,39 +1659,39 @@
           position: relative;
           float: left;
           width: 100%;
-          > .descr{
+          > .descr {
             display: block;
             position: relative;
             float: left;
-            width: 50%;
+            width: 80%;
             color: #040000;
             font-size: 13px;
             font-weight: 500;
             line-height: 25px;
-            @include breakpoint(max-width 429px){
+            @include breakpoint(max-width 429px) {
               width: 100%;
             }
-           /* &:last-of-type{
-              font-size: 16px;
-              font-weight: 700;
-              text-align: right;
-            }*/
+            /* &:last-of-type{
+               font-size: 16px;
+               font-weight: 700;
+               text-align: right;
+             }*/
           }
-          > .val{
+          > .val {
             font-size: 16px;
             font-weight: 700;
             text-align: right;
             line-height: 25px;
-            @include breakpoint(max-width 429px){
+            @include breakpoint(max-width 429px) {
               width: 100%;
             }
           }
-          &:last-of-type{
+          &:last-of-type {
             @include display-flex(flex);
             @include flex-wrap(wrap);
             @include flex-direction(row);
             @include justify-content(flex-end);
-            > .descr{
+            > .descr {
               display: block;
               position: relative;
               float: left;
@@ -1700,18 +1700,18 @@
               font-size: 13px;
               font-weight: 500;
               margin: 0 15px;
-             /* &:nth-of-type(even){
-                font-size: 16px;
-                font-weight: 700;
-              }*/
+              /* &:nth-of-type(even){
+                 font-size: 16px;
+                 font-weight: 700;
+               }*/
             }
-            > .val{
+            > .val {
               font-size: 16px;
               font-weight: 700;
               line-height: 25px;
             }
           }
-          &:last-of-type:before{
+          &:last-of-type:before {
             display: block;
             position: relative;
             content: '';
@@ -1722,7 +1722,7 @@
             margin-top: 18px;
             margin-bottom: 18px;
           }
-          > .checkbox{
+          > .checkbox {
             display: none;
           }
           > .checkbox + .forcheck {
@@ -1730,8 +1730,8 @@
             position: relative;
             /*width: 100%;*/
             float: left;
-            width: 50%;
-            > .descr{
+            width: 80%;
+            > .descr {
               display: block;
               position: relative;
               float: left;
@@ -1741,7 +1741,7 @@
               line-height: 25px;
             }
           }
-          > .checkbox + .forcheck .checked{
+          > .checkbox + .forcheck .checked {
             display: block;
             position: relative;
             float: left;
@@ -1803,7 +1803,7 @@
       border: 1px solid #b8b8b9;
       padding: 1px 10px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 166px;
       }
       &:focus {
@@ -1849,7 +1849,7 @@
       left: 0;
       width: 80%;
       height: 1px;
-      background-color: rgba(0,1,2,0.33);
+      background-color: rgba(0, 1, 2, 0.33);
       z-index: 1;
       position: relative;
       float: left;
@@ -1976,7 +1976,7 @@
       margin-right: 50px;
       margin-bottom: 40px;
       cursor: pointer;
-      &:after{
+      &:after {
         display: block;
         position: absolute;
         content: 'добавьте к своей новости изображение';
@@ -1988,7 +1988,7 @@
         font-size: 11px;
         font-weight: 400;
       }
-      .button{
+      .button {
         top: 2px;
       }
     }
@@ -2089,13 +2089,13 @@
       @include transition(0.4s);
     }
   }
-  &__like-block{
+  &__like-block {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     margin-top: 39px;
-    &:after{
+    &:after {
       display: block;
       position: absolute;
       content: '';
@@ -2104,12 +2104,12 @@
       background-color: #ecf2fa;
       right: -17px;
       bottom: 0;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 100%;
         right: 0;
       }
     }
-    &--section{
+    &--section {
       display: block;
       position: relative;
       float: left;
@@ -2118,26 +2118,26 @@
       color: #0c242e;
       font-size: 15px;
       font-weight: 700;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 100%;
       }
     }
-    &--photo{
+    &--photo {
       display: block;
       position: relative;
       float: left;
       width: 69px;
       height: 65px;
       overflow: hidden;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         margin: 20px 0;
       }
-      img{
+      img {
         size: 100%;
         object-fit: cover;
       }
     }
-    &--descr{
+    &--descr {
       display: block;
       position: relative;
       float: left;
@@ -2148,7 +2148,7 @@
       color: #0c242e;
       font-size: 15px;
       font-weight: 600;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 100%;
       }
     }
@@ -2158,8 +2158,8 @@
       float: left;
       margin-left: 24px;
     }
-    .like.active{
-      .like-set-icon{
+    .like.active {
+      .like-set-icon {
         background-image: url('../img/icons/new-like-filled-icon.png');
       }
     }
@@ -2194,7 +2194,7 @@
       font-weight: 400;
       line-height: 23px;
     }
-    &--company-photo{
+    &--company-photo {
       display: block;
       position: relative;
       float: left;
@@ -2203,8 +2203,8 @@
       margin-left: 41px;
       margin-bottom: 82px;
       overflow: hidden;
-      @include breakpoint(max-width 600px){
-        margin-left: calc(50% - (60px/2));
+      @include breakpoint(max-width 600px) {
+        margin-left: calc(50% - (60px / 2));
         margin-bottom: 30px;
       }
       img {
@@ -2212,7 +2212,7 @@
         object-fit: cover;
       }
     }
-    &--company-name{
+    &--company-name {
       display: block;
       display: -webkit-box;
       position: relative;
@@ -2232,11 +2232,11 @@
       overflow: hidden;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: calc(100% - (103px + 35px));
       }
     }
-    &--company-edit{
+    &--company-edit {
       display: block;
       position: relative;
       float: right;
@@ -2248,7 +2248,7 @@
       color: #090901;
       font-size: 10px;
       font-weight: 400;
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
@@ -2262,7 +2262,7 @@
         background-size: 100% 100%;
       }
     }
-    &--company-remove{
+    &--company-remove {
       display: block;
       position: relative;
       float: right;
@@ -2274,7 +2274,7 @@
       color: #090901;
       font-size: 10px;
       font-weight: 400;
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
@@ -2288,7 +2288,7 @@
         background-size: 100% 100%;
       }
     }
-    &--company-address{
+    &--company-address {
       display: block;
       position: relative;
       float: left;
@@ -2307,11 +2307,11 @@
       overflow: hidden;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 100%;
       }
     }
-    &--company-views{
+    &--company-views {
       display: block;
       position: relative;
       float: left;
@@ -2323,14 +2323,14 @@
       color: #030000;
       font-size: 11px;
       font-weight: 400;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 100%;
       }
-      .date{
+      .date {
         float: right;
         font-weight: 700;
       }
-      .views{
+      .views {
         float: right;
         width: auto;
         background-image: url('../img/icons/eye-new-icon.png');
@@ -2343,12 +2343,12 @@
         color: #030000;
         font-size: 11px;
         font-weight: 400;
-        &:before{
+        &:before {
           display: none;
         }
       }
     }
-    &--comment-descr{
+    &--comment-descr {
       display: block;
       display: -webkit-box;
       position: relative;
@@ -2368,11 +2368,11 @@
       overflow: hidden;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         width: 100%;
       }
     }
-    &--date{
+    &--date {
       display: block;
       position: absolute;
       width: 207px;
@@ -2385,17 +2385,17 @@
       text-transform: uppercase;
     }
   }
-  &__comment-block{
+  &__comment-block {
     display: block;
     position: relative;
     float: left;
     width: calc(100% - (96px + 35px + 69px + 182px + 48px));
     padding-left: 48px;
     @include box-sizing(border-box);
-    @include breakpoint(max-width 1024px){
+    @include breakpoint(max-width 1024px) {
       width: 100%;
     }
-    > h3{
+    > h3 {
       display: block;
       position: relative;
       float: left;
@@ -2405,11 +2405,11 @@
       color: #090901;
       font-size: 15px;
       font-weight: 600;
-      > span{
+      > span {
         color: #c97a76;
       }
     }
-    > .counter{
+    > .counter {
       display: inline-block;
       position: relative;
       float: left;
@@ -2431,7 +2431,7 @@
       text-transform: uppercase;
       text-align: center;
     }
-    > p{
+    > p {
       display: block;
       display: -webkit-box;
       position: relative;
@@ -2451,7 +2451,7 @@
       overflow: hidden;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
@@ -2462,7 +2462,7 @@
         left: 0;
       }
     }
-    > a{
+    > a {
       display: block;
       position: relative;
       float: left;
@@ -2472,11 +2472,11 @@
       font-size: 12px;
       font-weight: 400;
       text-decoration: underline;
-      &:hover{
+      &:hover {
         text-decoration: none;
       }
     }
-    &--answer{
+    &--answer {
       display: block;
       position: relative;
       float: left;
@@ -2485,31 +2485,31 @@
       font-size: 11px;
       font-weight: 100;
       text-transform: uppercase;
-      > span{
+      > span {
         margin-right: 2px;
       }
     }
   }
-  &__pkg-descr{
+  &__pkg-descr {
     display: block;
     position: relative;
     float: left;
     width: calc(100% - 236px);
-    @include breakpoint(max-width 1024px){
+    @include breakpoint(max-width 1024px) {
       width: 100%;
     }
   }
-  &__pkg-block{
+  &__pkg-block {
     display: block;
     position: relative;
     float: left;
     width: 236px;
-    @include breakpoint(max-width 1024px){
+    @include breakpoint(max-width 1024px) {
       width: 100%;
       margin-bottom: 30px;
       margin-top: 24px;
     }
-    &:before{
+    &:before {
       display: block;
       position: absolute;
       content: '';
@@ -2519,18 +2519,18 @@
       top: 0;
       left: 0;
     }
-    .show-more{
+    .show-more {
       margin-left: 33px;
       margin-top: 9px;
     }
-    .cabinet__like-block--company-edit{
+    .cabinet__like-block--company-edit {
       float: left;
       margin-top: 5px;
       margin-bottom: 5px;
       margin-right: 0;
       margin-left: 35px;
     }
-    .cabinet__like-block--company-remove{
+    .cabinet__like-block--company-remove {
       float: left;
       margin-top: 5px;
       margin-bottom: 5px;
@@ -2553,11 +2553,11 @@
       color: #030000;
       font-size: 11px;
       font-weight: 400;
-      &:before{
+      &:before {
         display: none;
       }
     }
-    > h3{
+    > h3 {
       display: block;
       position: relative;
       float: left;
@@ -2567,7 +2567,7 @@
       color: #090901;
       font-size: 15px;
       font-weight: 600;
-      > span{
+      > span {
         color: #c97a76;
       }
     }
@@ -2593,7 +2593,7 @@
         font-weight: 400;
       }
     }*/
-    &--type{
+    &--type {
       display: block;
       position: relative;
       float: left;
@@ -2608,7 +2608,7 @@
       font-weight: 900;
       text-transform: uppercase;
     }
-    &--period{
+    &--period {
       display: block;
       position: relative;
       float: left;
@@ -2621,7 +2621,7 @@
       font-size: 11px;
       font-weight: 400;
     }
-    > .notice{
+    > .notice {
       display: block;
       position: relative;
       float: left;
@@ -2644,5 +2644,14 @@
         left: 0;
       }*/
     }
+  }
+  &__selected {
+    display: block;
+    position: relative;
+    float: left;
+    width: 398px;
+    height: 208px;
+    margin-left: calc(50% - (398px / 2));
+    margin-top: calc(50% - (208px / 2));
   }
 }

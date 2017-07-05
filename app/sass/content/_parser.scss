@@ -15,4 +15,244 @@
     font-size: 22px;
     font-weight: 700;
   }
+  &__top-counter{
+    display: block;
+    position: relative;
+    float: left;
+    width: 260px;
+    height: 51px;
+    margin-right: 13px;
+    background-color: #ffffff;
+    > a{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      color: #4c5b69;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 47px;
+      > .counter{
+        display: inline-block;
+        position: relative;
+        width: 29px;
+        margin-bottom: -2px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 0 5px;
+        @include box-sizing(border-box);
+        border-radius: 4px;
+        background-color: #ee2e24;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 100;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 15px;
+      }
+    }
+  }
+  &__top-link{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (260px + 13px));
+    height: 51px;
+    background-color: #ffffff;
+    > a{
+      display: block;
+      position: relative;
+      float: left;
+      margin-top: 15px;
+      margin-left: 25px;
+      padding-left: 26px;
+      @include box-sizing(border-box);
+      color: #010408;
+      font-size: 15px;
+      font-weight: 700;
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 12px;
+        top: 5px;
+        left: 0;
+        background-image: url('../img/icons/mail-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+    }
+  }
+  &__top-nav{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 26px;
+    margin-bottom: 18px;
+    padding: 0;
+    list-style: none;
+    li{
+      position: relative;
+      margin: 0 11px;
+      a{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        color: #040000;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+    li:after{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 14px;
+      top: 2px;
+      right: -12px;
+      background-color: #040000;
+    }
+    li:last-of-type:after{
+      background-color: transparent;
+    }
+  }
+  &__wrapper{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  &__element{
+    display: block;
+    position: relative;
+    float: left;
+    width: 406px;
+    padding: 17px 20px;
+    @include box-sizing(border-box);
+    border-radius: 0 0 3px 3px;
+    background-color: #ffffff;
+    &--author{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 11px;
+      padding-bottom: 16px;
+      @include box-sizing(border-box);
+      border-bottom: 1px solid #edeef0;
+      .avatar{
+        display: block;
+        position: relative;
+        float: left;
+        width: 35px;
+        height: 35px;
+        margin-right: 8px;
+        img{
+          size: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .name{
+        display: block;
+        position: relative;
+        float: left;
+        color: #120000;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 36px;
+      }
+      .date{
+        display: block;
+        position: relative;
+        float: right;
+        color: rgba(3,0,0,0.7);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 36px;
+      }
+    }
+    &--title{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: #000000;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    &--descr{
+      display: block;
+      display: -webkit-box;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: calc(15px * 1.4 * 3);
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #000000;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.4;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      @include transition(0.4s);
+    }
+    &--text-show{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #000000;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.4;
+      overflow: inherit;
+      @include transition(0.4s);
+    }
+    &--more{
+      display: block;
+      position: relative;
+      float: left;
+      margin-top: 15px;
+      color: #fc716a;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    &--tools{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 12px;
+      padding-top: 13px;
+      @include box-sizing(border-box);
+      border-top: 1px solid #edeef0;
+    }
+  }
 }
