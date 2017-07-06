@@ -2095,7 +2095,7 @@
     position: relative;
     float: left;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 35px;
     &:after {
       display: block;
       position: absolute;
@@ -2242,9 +2242,11 @@
     }
     &--company-edit {
       display: block;
-      position: relative;
-      float: right;
+      position: absolute;
+     /* float: right;*/
       width: 103px;
+      top: 0;
+      right: 0;
       margin-right: 35px;
       margin-bottom: 19px;
       padding-left: 28px;
@@ -2268,8 +2270,9 @@
     }
     &--company-remove {
       display: block;
-      position: relative;
-      float: right;
+      position: absolute;
+      top: 28px;
+      right: 0;
       width: 103px;
       margin-right: 35px;
       margin-bottom: 19px;
@@ -2535,6 +2538,7 @@
       margin-bottom: 5px;
       margin-right: 0;
       margin-left: 35px;
+      right: 101px;
     }
     .cabinet__like-block--company-remove {
       float: left;
@@ -2542,6 +2546,7 @@
       margin-bottom: 5px;
       margin-right: 0;
       margin-left: 35px;
+      right: 101px;
     }
     .views {
       display: block;
