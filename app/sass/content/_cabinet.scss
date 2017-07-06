@@ -916,6 +916,9 @@
       top: 3px;
     }
     .business__tab-content{
+      .field-profile-name, .field-profile-public_email, .field-profile-avatar{
+        width: calc(100% - 165px);
+      }
       .help-block{
         width: calc(100% - (165px + 290px));
         /* height: 100px; */
