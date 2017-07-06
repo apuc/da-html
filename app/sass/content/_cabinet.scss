@@ -915,6 +915,21 @@
     .business__sm-item--views:before {
       top: 3px;
     }
+    .business__tab-content{
+      .help-block{
+       /* display: block;*/
+        position: absolute;
+        width: 250px;
+        top: 0;
+        margin-left: 246px;
+        /* height: 50px; */
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #dcdcdc;
+        border-radius: 5px;
+        color: #ee2e24;
+      }
+    }
     .business__tab-content--wrapper {
       height: 450px;
     }
