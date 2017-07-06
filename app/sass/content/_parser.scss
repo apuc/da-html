@@ -23,6 +23,10 @@
     height: 51px;
     margin-right: 13px;
     background-color: #ffffff;
+    @include breakpoint(max-width 1024px){
+      width: calc(100% - 13px);
+      margin-bottom: 10px;
+    }
     > a{
       display: block;
       position: relative;
@@ -63,6 +67,10 @@
     width: calc(100% - (260px + 13px));
     height: 51px;
     background-color: #ffffff;
+    @include breakpoint(max-width 1024px){
+      width: calc(100% - 13px);
+      margin-bottom: 10px;
+    }
     > a{
       display: block;
       position: relative;
@@ -136,6 +144,9 @@
     width: 100%;
     column-count: 2;
     column-gap: 0;
+    @include breakpoint(max-width 1024px){
+      column-count: 1;
+    }
   }
   &__element{
     display: block;
@@ -149,6 +160,13 @@
     @include box-sizing(border-box);
     border-radius: 0 0 3px 3px;
     background-color: #ffffff;
+    @include breakpoint(max-width 1200px){
+      width: 306px;
+    }
+    @include breakpoint(max-width 1024px){
+      width: calc(100% - 18px);
+      margin-left: 0;
+    }
     &--author{
       display: block;
       position: relative;
@@ -387,6 +405,19 @@
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0);
+      }
+    }
+    &--photo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 205px;
+      margin-top: 13px;
+      overflow: hidden;
+      img{
+        size: 100%;
+        object-fit: cover;
       }
     }
   }
