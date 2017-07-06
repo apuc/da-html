@@ -916,7 +916,13 @@
       top: 3px;
     }
     .business__tab-content{
-      .field-profile-name, .field-profile-public_email, .field-profile-avatar, .field-settings-form-username, .field-settings-form-email, .field-settings-form-new_password{
+      .field-profile-name,
+      .field-profile-public_email,
+      .field-profile-avatar,
+      .field-settings-form-username,
+      .field-settings-form-email,
+      .field-settings-form-new_password,
+      .field-settings-form-current_password{
         width: calc(100% - 165px);
       }
       .help-block{
