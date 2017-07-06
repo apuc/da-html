@@ -281,7 +281,7 @@
         padding-right: 46px;
         @include box-sizing(border-box);
         color: #4c5b69;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 900;
         text-transform: uppercase;
         &:hover {
@@ -311,8 +311,8 @@
         display: block;
         position: absolute;
         content: '';
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
         top: 11px;
         left: 20px;
         background-image: url('../img/icons/stack-icon.png');
@@ -324,8 +324,8 @@
         display: block;
         position: absolute;
         content: '';
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         top: 14px;
         left: 20px;
         background-image: url('../img/icons/calendar-cabinet-icon.png');
@@ -337,8 +337,8 @@
         display: block;
         position: absolute;
         content: '';
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
         top: 14px;
         left: 20px;
         background-image: url('../img/icons/bar-graph-icon.png');
@@ -350,8 +350,8 @@
         display: block;
         position: absolute;
         content: '';
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         top: 14px;
         left: 20px;
         background-image: url('../img/icons/cog-icon.png');
@@ -364,8 +364,8 @@
         position: absolute;
         top: 16px;
         right: 18px;
-        width: 21px;
-        height: 21px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
         overflow: hidden;
         background-image: url('../img/icons/cabinet-list-add-icon.svg');
@@ -377,8 +377,8 @@
         display: block;
         position: absolute;
         content: '';
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
         top: 16px;
         left: 20px;
         background-image: url('../img/icons/tag-icon.png');
@@ -391,8 +391,8 @@
         position: absolute;
         top: 16px;
         right: 18px;
-        width: 21px;
-        height: 21px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
         overflow: hidden;
         background-image: url('../img/icons/cabinet-list-add-icon.svg');
@@ -405,7 +405,7 @@
         position: absolute;
         content: '';
         width: 20px;
-        height: 24px;
+        height: 20px;
         top: 14px;
         left: 20px;
         background-image: url('../img/icons/paper-icon.png');
@@ -437,8 +437,8 @@
         display: block;
         position: absolute;
         content: '';
-        width: 24px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
         top: 14px;
         left: 20px;
         background-image: url('../img/icons/bell-icon.png');
@@ -770,10 +770,11 @@
     .news__wrap_item-sm-hot {
       width: 25%;
       height: 131px;
-      margin: 4px 0;
+      margin: 8px 0;
       overflow: hidden;
       @include breakpoint(max-width 660px) {
         width: 100%;
+        height: 235px;
       }
       .thumb {
         height: 100%;
@@ -1979,7 +1980,7 @@
       &:after {
         display: block;
         position: absolute;
-        content: 'добавьте к своей новости изображение';
+        content: 'добавьте изображение';
         top: 6px;
         left: 54px;
         width: 208px;
@@ -2094,15 +2095,17 @@
     position: relative;
     float: left;
     width: 100%;
-    margin-top: 39px;
+    margin-top: 20px;
     &:after {
       display: block;
       position: absolute;
       content: '';
-      width: calc(100% - (96px + 35px + 69px));
+      width: 100%;
+      //width: calc(100% - (96px + 35px + 69px));
       height: 1px;
       background-color: #ecf2fa;
-      right: -17px;
+      right: 0;
+      //right: -17px;
       bottom: 0;
       @include breakpoint(max-width 600px) {
         width: 100%;
@@ -2188,6 +2191,7 @@
       position: relative;
       float: left;
       margin-left: 18px;
+      margin-bottom: 20px;
       background-image: none;
       color: #060000;
       font-size: 12px;
@@ -2214,11 +2218,11 @@
     }
     &--company-name {
       display: block;
-      display: -webkit-box;
+      /*display: -webkit-box;*/
       position: relative;
       float: left;
       width: calc(100% - (60px + 41px + 103px + 35px));
-      height: calc(15px * 1.3 * 3);
+      /*height: calc(15px * 1.3 * 3);*/
       margin-top: 0;
       margin-bottom: 0;
       padding-left: 27px;
@@ -2227,11 +2231,11 @@
       font-size: 15px;
       font-weight: 500;
       line-height: 1.3;
-      -webkit-line-clamp: 3;
+      /*-webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
       -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
+      text-overflow: ellipsis;*/
       @include breakpoint(max-width 600px) {
         width: calc(100% - (103px + 35px));
       }
@@ -2293,8 +2297,8 @@
       position: relative;
       float: left;
       width: calc(100% - (60px + 41px + 103px + 35px));
-      height: calc(13px * 1.3 * 3);
-      margin-top: 0;
+      /*height: calc(13px * 1.3 * 3);*/
+      margin-top: 8px;
       margin-bottom: 0;
       padding-left: 27px;
       @include box-sizing(border-box);
@@ -2302,11 +2306,11 @@
       font-size: 13px;
       font-weight: 400;
       line-height: 1.3;
-      -webkit-line-clamp: 3;
+      /*-webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
       -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
+      text-overflow: ellipsis;*/
       @include breakpoint(max-width 600px) {
         width: 100%;
       }
@@ -2315,8 +2319,8 @@
       display: block;
       position: relative;
       float: left;
-      width: calc(100% - 239px);
-      margin-top: 0;
+      width: calc(100% - 103px);
+      margin-top: 17px;
       margin-bottom: 0;
       padding-left: 27px;
       @include box-sizing(border-box);
@@ -2327,11 +2331,13 @@
         width: 100%;
       }
       .date {
-        float: right;
+        //float: right;
         font-weight: 700;
       }
       .views {
-        float: right;
+        display: inline-block;
+        float: none;
+        //float: right;
         width: auto;
         background-image: url('../img/icons/eye-new-icon.png');
         background-repeat: no-repeat;
