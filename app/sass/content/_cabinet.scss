@@ -2343,12 +2343,11 @@
         float: none;
         //float: right;
         width: auto;
-        background-image: url('../img/icons/eye-new-icon.png');
+        background-image: url('../img/icons/cabinet-eye-type2-icon.png');
         background-repeat: no-repeat;
-        -webkit-background-size: 19px 18px;
-        background-size: 19px 18px;
+        background-size: 19px 10px;
         padding-left: 26px;
-        background-position: 5px -1px;
+        background-position: 5px 3px;
         margin-right: 29px;
         color: #030000;
         font-size: 11px;
@@ -2537,12 +2536,14 @@
       position: relative;
       float: left;
       margin: 5px 0 5px 35px;
+      top: 0;
       right: 0;
     }
     .cabinet__like-block--company-remove {
       position: relative;
       float: left;
       margin: 5px 0 5px 35px;
+      top: 0;
       right: 0;
     }
     .views {
@@ -2552,11 +2553,11 @@
       top: -22px;
       right: -40px;
       width: auto;
-      background-image: url('../img/icons/eye-new-icon.png');
+      background-image: url('../img/icons/cabinet-eye-type2-icon.png');
       background-repeat: no-repeat;
-      background-size: 19px 18px;
+      background-size: 19px 10px;
       padding-left: 26px;
-      background-position: 5px -1px;
+      background-position: 5px 3px;
       margin-right: 29px;
       color: #030000;
       font-size: 11px;
