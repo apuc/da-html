@@ -1,0 +1,233 @@
+.shop {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #edeef0;
+  &__top-tools {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 22px;
+  }
+  &__top-form {
+    position: relative;
+    float: left;
+    &--field {
+      display: block;
+      position: relative;
+      float: left;
+      width: 518px;
+      height: 37px;
+      padding-left: 20px;
+      padding-right: 20px;
+      @include box-sizing(border-box);
+      border: 1px solid #a2a2a2;
+      background-color: #edeef0;
+      @include breakpoint(max-width 600px){
+        width: 50%;
+      }
+    }
+    &--wrapper {
+      display: block;
+      position: relative;
+      float: left;
+    }
+    &--field-category {
+      display: block;
+      position: relative;
+      float: left;
+      width: 170px;
+      height: 37px;
+      border: 1px solid #a2a2a2;
+      padding-left: 20px;
+      padding-right: 20px;
+      @include box-sizing(border-box);
+      margin-left: -1px;
+      text-align: center;
+      background-color: #edeef0;
+      @include breakpoint(max-width 600px){
+        width: 30%;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    &--submit {
+      display: block;
+      position: relative;
+      float: left;
+      width: 82px;
+      height: 37px;
+      margin-left: -14px;
+      border-radius: 5px;
+      background-color: #ee2e24;
+      border: none;
+      text-align: center;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+  &__top-nav {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 755px);
+    @include breakpoint(max-width 600px){
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    &--navigation {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
+      position: relative;
+      float: left;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      @include breakpoint(max-width 600px){
+        display: none;
+        opacity: 0;
+        @include transition(0.4s);
+        @include flex-direction(column);
+      }
+      li {
+        float: left;
+        a {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0 14px;
+          padding-top: 10px;
+          padding-left: 26px;
+          @include box-sizing(border-box);
+          color: #444444;
+          font-size: 15px;
+          font-weight: 400;
+          @include breakpoint(max-width 600px){
+            margin: 6px 14px;
+          }
+          &:hover {
+            color: #ee2e24;
+          }
+        }
+        .delivery:before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 25px;
+          height: 21px;
+          top: 9px;
+          left: -8px;
+          background-image: url('../img/icons/shop-delivery-truck-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+        }
+        .basket:before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 19px;
+          top: 10px;
+          left: -7px;
+          background-image: url('../img/icons/shop-shopping-cart-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+        }
+        .my-desires:before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 24px;
+          height: 22px;
+          top: 8px;
+          left: -7px;
+          background-image: url('../img/icons/shop-heart-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+        }
+      }
+      > .basket-counter {
+        display: block;
+        position: absolute;
+        min-width: 25px;
+        height: 16px;
+        margin-left: -42px;
+        margin-top: -1px;
+        line-height: 16px;
+        text-align: center;
+        border-radius: 8px;
+        background-color: #e62e04;
+        color: #fff;
+        font-size: 12px;
+        @include breakpoint(max-width 600px){
+          margin-left: 99px;
+        }
+      }
+    }
+    &--navigation.show-shop-menu {
+      @include display-flex(flex);
+      position: absolute;
+      background-color: #fff;
+      z-index: 2;
+      top: 36px;
+      opacity: 1;
+      @include transition(0.4s);
+    }
+  }
+  &__top-trigger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-right: -4px;
+    position: absolute;
+    z-index: 6;
+    border: none;
+    right: 10px;
+    top: 0;
+    outline: none;
+    background-color: transparent;
+    @include breakpoint(max-width 600px){
+      display: block;
+    }
+    span {
+      display: block;
+      position: relative;
+      width: 34px;
+      height: 3px;
+      margin-top: 7px;
+      background-color: #ee2e24;
+      border: none;
+      border-radius: 4px 4px 4px 4px;
+      @include transition(0.4s);
+    }
+  }
+  &__top-trigger.show-trigger {
+    span:first-of-type {
+      top: 9px;
+      transform: rotate(-45deg);
+      @include transition(0.4s);
+    }
+    span:nth-of-type(2){
+      top: 0;
+      transform: rotate(45deg);
+    }
+    span:last-of-type{
+      opacity: 0;
+      top: 0;
+      transform: rotate(180deg);
+    }
+  }
+}

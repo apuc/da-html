@@ -762,7 +762,35 @@
         margin-top: 32px;
       }*/
     }
-    > h1, h3 {
+    > h1 {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 36px;
+      @include box-sizing(border-box);
+      color: #040000;
+      font-size: 17px;
+      font-weight: 700;
+      @include breakpoint(max-width 600px){
+        margin-bottom: 41px;
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 12px;
+        top: 6px;
+        left: 8px;
+        background-image: url('../img/icons/burger-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+    }
+    > h3 {
       position: relative;
       float: left;
       width: 100%;
@@ -1660,6 +1688,9 @@
       font-weight: 700;
       line-height: 33px;
       text-transform: uppercase;
+      &:hover{
+        color: #fbfbfb;
+      }
     }
     &--notification {
       display: block;
