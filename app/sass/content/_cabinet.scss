@@ -2333,6 +2333,9 @@
       @include breakpoint(max-width 600px) {
         width: calc(100% - (103px + 35px));
       }
+      &:before{
+        display: none;
+      }
     }
     &--company-edit {
       display: block;
