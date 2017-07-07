@@ -201,6 +201,12 @@
       font-weight: 400;
       line-height: 33px;
     }
+    > .show-more{
+      @include breakpoint(max-width 600px){
+        margin-top: 20px;
+        margin-left: 100px;
+      }
+    }
   }
   &__remove-pkg {
     display: block;
@@ -706,9 +712,16 @@
       z-index: 2;
       &:first-of-type {
         right: 121px;
+        @include breakpoint(max-width 600px){
+          right: 223px;
+          top: 55px;
+        }
       }
       &:last-of-type {
         right: 23px;
+        @include breakpoint(max-width 600px){
+          top: 57px;
+        }
       }
       &:hover {
         color: #ee2e24;
@@ -736,12 +749,18 @@
       position: relative;
       float: left;
       width: 100%;
+      @include breakpoint(max-width 600px){
+        /*margin-top: 32px;*/
+      }
     }
     &--hover {
       display: block;
       position: relative;
       float: left;
       width: 100%;
+      /*@include breakpoint(max-width 600px){
+        margin-top: 32px;
+      }*/
     }
     > h1, h3 {
       position: relative;
@@ -754,6 +773,9 @@
       color: #040000;
       font-size: 17px;
       font-weight: 700;
+      @include breakpoint(max-width 600px){
+        margin-bottom: 41px;
+      }
       &:before {
         display: block;
         position: absolute;
@@ -2157,8 +2179,11 @@
       color: #0c242e;
       font-size: 15px;
       font-weight: 700;
+      @include box-sizing(border-box);
       @include breakpoint(max-width 600px) {
         width: 100%;
+        margin-left: 0;
+        padding-left: 10px;
       }
     }
     &--photo {
@@ -2169,7 +2194,9 @@
       height: 65px;
       overflow: hidden;
       @include breakpoint(max-width 600px) {
-        margin: 20px 0;
+        margin: 20px 10px;
+        width: 100%;
+        height: 220px;
       }
       img {
         size: 100%;
@@ -2290,6 +2317,13 @@
       color: #090901;
       font-size: 10px;
       font-weight: 400;
+      @include breakpoint(max-width 600px){
+        position: relative;
+        float: left;
+        width: 103px;
+        top: 0;
+        right: 0;
+      }
       &:before {
         display: block;
         position: absolute;
@@ -2317,6 +2351,12 @@
       color: #090901;
       font-size: 10px;
       font-weight: 400;
+      @include breakpoint(max-width 600px){
+        position: relative;
+        float: left;
+        top: 0;
+        right: 0;
+      }
       &:before {
         display: block;
         position: absolute;
@@ -2427,6 +2467,10 @@
       font-size: 14px;
       font-weight: 600;
       text-transform: uppercase;
+      @include breakpoint(max-width 600px){
+        margin-top: 339px;
+        margin-left: 10px;
+      }
     }
   }
   &__comment-block {
@@ -2586,7 +2630,7 @@
       position: absolute;
       /*float: right;*/
       top: -22px;
-      right: -40px;
+      right: -85px;
       width: auto;
       background-image: url('../img/icons/cabinet-eye-type2-icon.png');
       background-repeat: no-repeat;
@@ -2597,6 +2641,13 @@
       color: #030000;
       font-size: 11px;
       font-weight: 400;
+      @include breakpoint(max-width 1024px){
+        right: 0;
+      }
+      @include breakpoint(max-width 600px){
+        top: -22px;
+        right: -27px;
+      }
       &:before {
         display: none;
       }
