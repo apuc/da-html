@@ -2038,8 +2038,16 @@
       display: block;
       position: relative;
       float: left;
+      width: calc(100% - 165px);
       /* width: 644px;*/
       margin-bottom: 40px;
+    }
+    &--social-element{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 15px;
       .social-wrap__item {
         width: 24px;
         height: 24px;
@@ -2055,6 +2063,26 @@
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
         }
+      }
+      .social-name{
+        display: block;
+        position: relative;
+        float: left;
+        width: 165px;
+        color: #000;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+      .social-way{
+        display: block;
+        position: relative;
+        float: left;
+        width: 238px;
+        height: 30px;
+        border: 1px solid #b8b8b9;
+        padding: 1px 10px;
+        @include box-sizing(border-box);
       }
     }
     &--add-foto {
@@ -2106,12 +2134,15 @@
       position: relative;
       float: left;
       width: calc(100% - 165px);
+      .close{
+        display: none;
+      }
     }
     .file-preview-frame {
       position: relative;
       display: block;
       float: left;
-      width: 33%;
+      width: 30%;
       height: 176px;
       margin: 8px;
       border: 1px solid #ddd;
@@ -2126,6 +2157,9 @@
           size: 100%;
           object-fit: cover;
         }
+      }
+      .file-drag-handle{
+        display: none;
       }
     }
   }
