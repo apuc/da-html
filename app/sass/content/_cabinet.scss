@@ -2166,6 +2166,15 @@
     .kv-file-zoom{
       display: none;
     }
+    .kv-file-upload{
+      display: none;
+    }
+    .fileinput-remove-button{
+      display: none;
+    }
+    .btn-primary{
+      background-color: #ee2e24;
+    }
   }
   &__consultation {
     display: block;
