@@ -2101,6 +2101,33 @@
       border-radius: 5px;
       border: none;
     }
+    .file-input{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 165px);
+    }
+    .file-preview-frame {
+      position: relative;
+      display: block;
+      float: left;
+      width: 33%;
+      height: 176px;
+      margin: 8px;
+      border: 1px solid #ddd;
+      box-shadow: 1px 1px 5px 0 #a2958a;
+      padding: 6px;
+      text-align: center;
+      .kv-file-content {
+        width: 100%;
+        height: calc(100% - 70px);
+        overflow: hidden;
+        .kv-file-content{
+          size: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
   &__consultation {
     display: block;
