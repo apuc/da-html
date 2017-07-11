@@ -2117,6 +2117,7 @@
       width: 128px;
       height: 30px;
       line-height: 11px;
+      margin-top: 20px;
       margin-left: 163px;
       text-align: center;
       text-transform: uppercase;
@@ -2161,6 +2162,9 @@
       .file-drag-handle{
         display: none;
       }
+    }
+    .kv-file-zoom{
+      display: none;
     }
   }
   &__consultation {
