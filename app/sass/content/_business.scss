@@ -16,6 +16,8 @@
     position: relative;
     float: left;
     width: calc(100% - (14px + 260px));
+    min-height: 624px;
+    margin-bottom: 60px;
     margin-right: 14px;
     @include breakpoint(max-width 770px){
       width: calc(100% - (14px + 220px));
