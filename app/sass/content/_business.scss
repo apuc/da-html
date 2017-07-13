@@ -881,6 +881,7 @@
       size: 100px;
       margin-left: 12px;
       margin-top: 18px;
+      margin-bottom: 15px;
       border-radius: 50%;
       overflow: hidden;
       @include breakpoint(max-width 600px) {
@@ -1063,6 +1064,23 @@
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+        }
+      }
+      > .views {
+        display: inline-block;
+        position: relative;
+        float: left;
+        width: auto;
+        padding-left: 26px;
+        background-image: url('../img/icons/eye-new-icon.png');
+        background-repeat: no-repeat;
+        background-size: 19px 19px;
+        background-position: 0 1px;
+        margin-right: 29px;
+        color: #000;
+        font-size: 15px;
+        &:before{
+          display: none;
         }
       }
     }
