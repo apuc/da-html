@@ -1,10 +1,11 @@
 .what-say{
-  width: 100%;
+  display: block;
+  position: relative;
   float: left;
+  width: 100%;
   background-color: #f6f9ff;
   padding: 40px 0;
   box-sizing: border-box;
-  display: none;
   h2{
     width: 50%;
     float: left;
@@ -32,11 +33,12 @@
   @include breakpoint(max-width 600px){
     width: 100%;
   }
-  a{
+  > a{
     color: #010408;
     display: inline-block;
     font-size: 15px;
     font-weight: 700;
+    margin-top: 14px;
     margin-left: 60px;
     @include breakpoint(max-width 600px){
       width: calc(100% - 30px);
@@ -75,12 +77,24 @@
   position: relative;
   margin-top: 40px;
   text-align: center;
+  &--photo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 118px;
+    overflow: hidden;
+    img{
+      size: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .what-say__wrap_item{
   width: 24%;
-  height: 125px;
-  float: none;
+  /*height: 125px;*/
+  float: left;
   display: inline-block;
   margin: 4px;
   position: relative;

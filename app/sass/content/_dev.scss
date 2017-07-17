@@ -5,6 +5,21 @@
   width: 100%;
   height: calc(100% - (68px + 200px));
   background-color: #fff;
+  &__mistake{
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 65px;
+    margin-bottom: 37px;
+    color: rgba(13,36,46,0.8);
+    font-size: 60px;
+    font-weight: 700;
+  }
+  &__wrapper{
+    display: block;
+    position: relative;
+    float: left;
+  }
   &__title{
     display: block;
     position: relative;
