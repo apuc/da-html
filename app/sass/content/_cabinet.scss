@@ -327,6 +327,9 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
+      .news:hover:before {
+        background-image: url('../img/icons/stack-hover-icon.png');
+      }
       .poster:before {
         display: block;
         position: absolute;
@@ -339,6 +342,9 @@
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
+      }
+      .poster:hover:before {
+        background-image: url('../img/icons/calendar-cabinet--hover-icon.png');
       }
       .stock:before {
         display: block;
@@ -353,6 +359,9 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
+      .stock:hover:before {
+        background-image: url('../img/icons/bar-graph-hover-icon.png');
+      }
       .configuration:before {
         display: block;
         position: absolute;
@@ -365,6 +374,9 @@
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
+      }
+      .configuration:hover:before {
+        background-image: url('../img/icons/cog-hover-icon.png');
       }
       .company .add {
         display: inline-block;
@@ -393,6 +405,9 @@
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
       }
+      .company:hover:before {
+        background-image: url('../img/icons/tag-hover-icon.png')
+      }
       .comments .add {
         display: inline-block;
         position: absolute;
@@ -419,6 +434,9 @@
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
+      }
+      .comments:hover:before {
+        background-image: url('../img/icons/paper-icon.png');
       }
       .notice span {
         display: inline-block;

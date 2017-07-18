@@ -268,9 +268,12 @@
       height: 20px;
       top: 9px;
       left: 5px;
-      background-image: url('../img/icons/tag-icon.png');
+      background-image: url('../img/icons/tag-hover-icon.png');
       background-repeat: no-repeat;
       background-size: 100% 100%;
+    }
+    &--company:hover:before{
+      background-image: url('../img/icons/tag-icon.png');
     }
     &--news:before{
       display: block;
@@ -280,9 +283,12 @@
       height: 20px;
       top: 9px;
       left: 5px;
-      background-image: url('../img/icons/stack-icon.png');
+      background-image: url('../img/icons/stack-hover-icon.png');
       background-repeat: no-repeat;
       background-size: 100% 100%;
+    }
+    &--news:hover:before{
+      background-image: url('../img/icons/stack-icon.png');
     }
     &--poster:before{
       display: block;
@@ -292,21 +298,27 @@
       height: 20px;
       top: 6px;
       left: 5px;
-      background-image: url('../img/icons/calendar-cabinet-icon.png');
+      background-image: url('../img/icons/calendar-cabinet-hover-icon.png');
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
+    &--poster:hover:before{
+      background-image: url('../img/icons/calendar-cabinet-icon.png');
+    }
     &--stock:before{
-      display: block;
-      position: absolute;
-      content: '';
-      width: 20px;
-      height: 20px;
-      top: 6px;
-      left: 5px;
+       display: block;
+       position: absolute;
+       content: '';
+       width: 20px;
+       height: 20px;
+       top: 6px;
+       left: 5px;
+       background-image: url('../img/icons/bar-graph-hover-icon.png');
+       background-repeat: no-repeat;
+       background-size: 100% 100%;
+     }
+    &--stock:hover:before{
       background-image: url('../img/icons/bar-graph-icon.png');
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
     }
   }
 }
