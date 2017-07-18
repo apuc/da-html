@@ -422,6 +422,21 @@
       }
     }
   }
+  &__more{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    > .show-more{
+      width: 200px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: calc(50% - (200px/2));
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
   /*&__element:nth-of-type(even){
     float: left;
   }
