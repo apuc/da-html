@@ -1,7 +1,9 @@
 $(document).ready(function(){
     /*single afisha countdown*/
-    $("#countdown").countdown({
-            date: "16 august 2017 12:00:00",
+    var date = $('#countdown').attr('data-date');
+    
+    $('#countdown').countdown({
+            date: date,
             format: "on",
             languge: 'ru'
         },
