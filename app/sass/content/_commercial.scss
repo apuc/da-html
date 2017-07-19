@@ -312,6 +312,34 @@
             vertical-align: middle;
           }
         }
+        > .average-ad-title {
+          float: left;
+          width: 75%;
+          font-size: 18px;
+          color: #334a51;
+          font-weight: 600;
+          text-decoration: none;
+          text-align: left;
+          margin-top: 15px;
+        }
+        > .average-ad-geo {
+          font-size: 12px;
+          font-weight: 400;
+          color: #464646;
+          padding-left: 15px;
+          position: relative;
+          float: left;
+          width: 100%;
+          > .geo-space {
+            background-image: url('../img/icons/cabinet-placeholder-icon.png');
+            background-repeat: no-repeat;
+            height: 12px;
+            width: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+          }
+        }
       }
     }
   }
