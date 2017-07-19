@@ -1918,6 +1918,23 @@
         outline: none;
       }
     }
+    &--select-wrapper{
+      display: block;
+      position: relative;
+      float: left;
+      width: 238px;
+      height: 30px;
+      margin-bottom: 40px;
+      border: 1px solid #b8b8b9;
+      padding: 1px 10px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 600px) {
+        width: 166px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
     &--block {
       display: block;
       position: relative;
