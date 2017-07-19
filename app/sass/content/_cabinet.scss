@@ -1918,12 +1918,11 @@
         outline: none;
       }
     }
-    &--select-wrapper{
+    &--select-wrapper-cat{
       display: block;
       position: relative;
       float: left;
-      width: 238px;
-      height: 30px;
+      width: calc(100% - 165px);
       margin-bottom: 40px;
       border: 1px solid #b8b8b9;
       padding: 0;
@@ -1934,15 +1933,9 @@
       &:focus {
         outline: none;
       }
-      .select2-container .selection .select2-container--krajee .select2-selection {
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      span.select2-selection.select2-selection--multiple{
+        border: 1px solid transparent;
         box-shadow: none;
-        background-color: #fff;
-        border: none;
-        border-radius: 0;
-        color: #555555;
-        font-size: 14px;
-        outline: 0;
       }
     }
     &--block {
