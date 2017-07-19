@@ -66,6 +66,12 @@
       background-size: 100% 100%;
     }
   }
+  &__search-form{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (174px));
+  }
   &__category-list {
     display: none;
     position: absolute;
@@ -169,6 +175,22 @@
         }
       }
     }
+    &--submit{
+      display: block;
+      position: relative;
+      float: left;
+      width: 109px;
+      height: 34px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ee2e24;
+      text-align: center;
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
     > .ad-charasteristics-form-priece{
       width: 100%;
       float: left;
@@ -234,5 +256,11 @@
         cursor: pointer;
       }
     }
+  }
+  &__ads{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (174px));
   }
 }

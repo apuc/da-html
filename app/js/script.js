@@ -779,7 +779,7 @@ $(document).ready(function () {
     if (businessElement.length > 0) {
         var businessElementPosition = businessElement.offset().top;
         $(window).scroll(function () {
-            fixedScroll(businessElement, businessElementPosition, $('.footer'));
+            fixedScroll(businessElement, businessElementPosition, $('.what-say'));
         });
     }
     /*close business sidebar scroll*/
