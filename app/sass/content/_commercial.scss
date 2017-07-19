@@ -262,5 +262,46 @@
     position: relative;
     float: left;
     width: calc(100% - (174px));
+    > .average-ad-item {
+      width: 100%;
+      float: left;
+      display: inline-block;
+      padding: 11px 0 11px 1px;
+      border-bottom: 1px solid #dedede;
+      > .average-ad-item-thumb {
+        width: 25%;
+        float: left;
+        display: block;
+        height: 124px;
+        position: relative;
+        overflow: hidden;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          min-height: 100%;
+        }
+      }
+      > .average-ad-item-content {
+        width: 75%;
+        float: left;
+        display: inline-block;
+        position: relative;
+        padding-left: 15px;
+        > .average-ad-price {
+          float: right;
+          min-width: 25px;
+          text-align: right;
+          font-size: 18px;
+          color: #000;
+          font-weight: 700px;
+          padding-right: 10px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-top: 15px;
+        }
+      }
+    }
   }
 }
