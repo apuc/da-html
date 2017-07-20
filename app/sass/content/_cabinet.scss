@@ -1945,6 +1945,7 @@
       width: 238px;
       margin-bottom: 40px;
       border: none;
+      border-radius: 0;
       padding: 0;
       @include box-sizing(border-box);
       @include breakpoint(max-width 600px) {
