@@ -471,9 +471,9 @@
 
     <div class="fix-button">
 
-    <span class="fix-button__trigger">
-        <img src="img/home-content/fix-button.png" alt="">
-    </span>
+        <span class="fix-button__trigger">
+            <img src="img/home-content/fix-button.png" alt="">
+        </span>
 
         <ul class="fix-button__list">
             <li><a href="#" class="fix-button__list--company">Предприятие</a></li>
@@ -482,6 +482,14 @@
             <li><a href="#" class="fix-button__list--stock">Акция</a></li>
         </ul>
 
+
+
+    </div>
+
+    <div id="send-error-message" class="fix-button-msg-error">
+        <div class="fix-button__notice">
+            <img src="img/home-content/fix-button.png" alt="">
+        </div>
     </div>
 
 </footer>
@@ -548,6 +556,22 @@
         <input class="modal-callback__field" type="text" placeholder="Имя">
 
         <input class="modal-callback__field" type="text" placeholder="Телефон">
+
+        <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="error-message">
+
+    <h3 class="modal-callback__title">Написать нам</h3>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
 
         <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
 

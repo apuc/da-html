@@ -206,7 +206,7 @@
 .fix-button {
   position: fixed;
   right: -158px;
-  top: 37%;
+  top: 25%;
   width: 195px;
   height: 163px;
   z-index: 6;
@@ -321,6 +321,29 @@
       background-image: url('../img/icons/bar-graph-icon.png');
     }
   }
+  &__notice{
+    display: block;
+    position: relative;
+    float: left;
+    width: 38px;
+    height: 163px;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      /* object-fit: cover;*/
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.fix-button-msg-error{
+    position: fixed;
+    right: 0;
+    top: 53%;
+    width: 38px;
+    height: 163px;
+    z-index: 6;
+    /*@include transition(0.4s);*/
 }
 .fix-button.show-fix-menu {
   right: 0;
