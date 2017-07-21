@@ -122,10 +122,27 @@
           overflow: hidden;
           border-radius: 35px;
           position: relative;
-
+          background-color: #fff;
           img {
-            width: 100%;
-            height: auto;
+            size: 100%;
+            object-fit: cover;
+          }
+          > span{
+            display: block;
+            position: relative;
+            float: left;
+            width: 30px;
+            height: 30px;
+            left: calc(50% - (30px/2));
+            top: calc(50% - (30px/2));
+            margin-top: 0;
+            margin-left: 0;
+            color: #ee2e24;
+            font-size: 33px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 25px;
+            background-color: transparent;
           }
         }
         a {
