@@ -727,7 +727,7 @@
       font-size: 11px;
       font-weight: 100;
       line-height: 19px;
-      z-index: 2;
+      z-index: 1;
       &:first-of-type {
         right: 121px;
         @include breakpoint(max-width 600px){
