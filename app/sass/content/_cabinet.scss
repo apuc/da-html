@@ -11,7 +11,7 @@
     float: left;
     width: 220px;
     background-color: #fbfafa;
-    z-index: 5;
+    z-index: 2;
     @include breakpoint(max-width 660px) {
       position: absolute;
       /*z-index: 3;*/
@@ -488,7 +488,7 @@
     width: 100%;
     box-shadow: 2px 4px 8px rgba(48, 56, 87, 0.2);
     background-color: #ffffff;
-    z-index: 2;
+    z-index: 1;
     > h3 {
       position: relative;
       float: left;
