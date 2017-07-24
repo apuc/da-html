@@ -437,7 +437,7 @@
 }
 
 #overlay {
-  z-index: 3;
+  z-index: 4;
   position: fixed;
   background-color: #fff;
   opacity: 0.8;
@@ -452,7 +452,7 @@
 }
 
 #black-overlay {
-  z-index: 3;
+  z-index: 4;
   position: fixed;
   background-color: #000;
   opacity: 0.8;

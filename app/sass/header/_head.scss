@@ -48,7 +48,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   // background-image: url("../img/header/line.png");
-  z-index: 1;
+  z-index: 2;
+  @include breakpoint(max-width 660px){
+    z-index: 4;
+  }
   /*&:after {
     content: "";
     height: 100%;
