@@ -1171,6 +1171,10 @@
       /*font-weight: 600;*/
       line-height: 23px;
     }
+    ul, ol{
+      position: relative;
+      float: left;
+    }
   }
   &__stocks {
     display: block;
