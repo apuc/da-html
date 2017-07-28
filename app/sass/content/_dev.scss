@@ -24,6 +24,7 @@
     > .show-more{
       float: left;
       margin-top: 20px;
+      margin-bottom: 42px;
       &:hover{
         color: #fff;
       }
@@ -57,10 +58,11 @@
   }
   &__photo{
     display: block;
-    position: relative;
-    float: left;
+    position: absolute;
+    right: 0;
+    top: -317px;
     width: 50%;
-    margin-top: 90px;
+    margin-top: 0;
     padding-left: 42px;
     padding-right: 42px;
     @include box-sizing(border-box);
@@ -78,7 +80,7 @@
     background-color: #ffffff;
     padding-bottom: 54px;
     @include box-sizing(border-box);
-    margin-top: -166px;
+    margin-top: 0;
     margin-bottom: 54px;
     > .main-title{
       float: right;
