@@ -38,6 +38,14 @@
     font-size: 150px;
     font-weight: 700;
   }
+  &__news-banner{
+    display: block;
+    position: relative;
+    float: left;
+    color: #ff1f1d;
+    font-size: 66px;
+    font-weight: 700;
+  }
   &__notice{
     display: block;
     position: relative;
@@ -68,6 +76,21 @@
     @include box-sizing(border-box);
     img{
       size: 100%;
+      object-fit: contain;
+    }
+  }
+  &__news-photo{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -426px;
+    width: 50%;
+    margin-top: 0;
+    padding-left: 42px;
+    padding-right: 42px;
+    @include box-sizing(border-box);
+    img{
+      size: 70% 100%;
       object-fit: contain;
     }
   }
