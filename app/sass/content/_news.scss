@@ -320,20 +320,22 @@
     @include flex-wrap(wrap);
     @include flex-direction(colomn);
   }
-  .businessScroll > .rotate-arrow {
-    background-image: url("../img/home-content/red-arrow.png");
+  .businessScroll:before {
+    display: block;
+    position: absolute;
+    content: '';
     width: 5px;
     height: 9px;
+    top: 6px;
+    left: -25px;
+    background-image: url("../img/home-content/red-arrow.png");
     background-repeat: no-repeat;
     background-size: contain;
-    display: inline-block;
-    position: absolute;
-    margin-top: 15px;
-    margin-left: -22px;
-    margin-right: 0;
     transform: rotate(90deg);
   }
   a, .archive-news {
+    display: inline-block;
+    position: relative;
     color: #090000;
     font-size: 12px;
     font-weight: 700;
@@ -345,7 +347,7 @@
       margin: 10px 0;
       width: 100%;
     }
-    .rotate-arrow {
+    /*.rotate-arrow {
       background-image: url("../img/home-content/red-arrow.png");
       width: 5px;
       height: 9px;
@@ -357,11 +359,24 @@
       margin-left: 22px;
       margin-right: 0;
       transform: rotate(90deg);
-    }
+    }*/
     .datepicker-inline {
       margin-top: 23px;
       left: 55%;
     }
+  }
+  .archive-news:after{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 9px;
+    top: 14px;
+    right: -25px;
+    background-image: url("../img/home-content/red-arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(90deg);
   }
   .show-more {
     font-size: 12px;
