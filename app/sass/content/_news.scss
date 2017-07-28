@@ -62,7 +62,6 @@
   }
 }
 
-
 .news__wrap {
   width: 100%;
   float: left;
@@ -309,6 +308,7 @@
     }
   }
 }
+
 .news__wrap_buttons {
   width: 100%;
   float: left;
@@ -328,7 +328,7 @@
     background-size: contain;
     display: inline-block;
     position: absolute;
-    top: 15px;
+    margin-top: 15px;
     margin-left: -22px;
     margin-right: 0;
     transform: rotate(90deg);
@@ -353,7 +353,7 @@
       background-size: contain;
       display: inline-block;
       position: absolute;
-      top: 15px;
+      margin-top: 15px;
       margin-left: 22px;
       margin-right: 0;
       transform: rotate(90deg);
