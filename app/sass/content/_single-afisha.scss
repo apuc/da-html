@@ -92,9 +92,9 @@
   h1 {
     position: relative;
     float: left;
-    width: 517px;
+    width: 510px;
     margin-top: 35px;
-    margin-left: calc(50% - (517px / 2));
+    margin-left: calc(50% - (510px / 2));
     text-align: center;
     font-size: 25px;
     font-weight: 700;
@@ -280,13 +280,13 @@
     width: auto;
     height: 42px;
     padding-right: 14px;
-    padding-left: 27px;
+    padding-left: 14px;
     @include box-sizing(border-box);
     background-color: #ff0200;
     text-align: center;
     text-transform: uppercase;
     color: #edeef0;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 38px;
     &:after {
