@@ -144,6 +144,13 @@
     width: 100%;
     /*column-count: 2;
     column-gap: 0;*/
+    .grid-sizer{
+      width: 50%;
+    }
+    .grid-item {
+      width: 45%;
+      float: left;
+    }
     @include breakpoint(max-width 1024px){
       /*column-count: 1;*/
     }
@@ -423,10 +430,10 @@
     }
   }
   &__element:nth-of-type(even){
-    float: right;
+   /* float: right;*/
   }
   &__element:nth-of-type(odd){
-    float: left;
+    /*float: left;*/
   }
   &__more{
     display: block;
