@@ -142,10 +142,10 @@
     position: relative;
     float: left;
     width: 100%;
-    column-count: 2;
-    column-gap: 0;
+    /*column-count: 2;
+    column-gap: 0;*/
     @include breakpoint(max-width 1024px){
-      column-count: 1;
+      /*column-count: 1;*/
     }
   }
   &__element{
@@ -421,6 +421,12 @@
         object-fit: cover;
       }
     }
+  }
+  &__element:nth-of-type(even){
+    float: right;
+  }
+  &__element:nth-of-type(odd){
+    float: left;
   }
   &__more{
     display: block;
