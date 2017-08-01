@@ -1166,8 +1166,10 @@
       float: left;
       margin-top: 30px;
       margin-bottom: 0;
+      padding-right: 40px;
+      @include box-sizing(border-box);
       color: #060000;
-      font-size: 13px;
+      font-size: 16px;
       /*font-weight: 600;*/
       line-height: 23px;
     }
