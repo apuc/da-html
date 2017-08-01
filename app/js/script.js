@@ -1185,6 +1185,10 @@ $(document).ready(function () {
         });
     }
     /*close*/
+
+
+    $.fancybox.defaults.thumbs = { showOnStart : true };
+    
 });
 
 $(window).scroll(function () {
