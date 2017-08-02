@@ -2,7 +2,7 @@
   @include display-flex(flex);
   @include flex-wrap(wrap);
   @include flex-direction(row);
-  @include justify-content (center);
+  @include justify-content (flex-start);
   position: relative;
   float: left;
   width: -webkit-calc(100% - 274px);
@@ -10,6 +10,16 @@
   min-height: 624px;
   margin-bottom: 60px;
   margin-right: 14px;
+  padding: 0 15px;
+  @include box-sizing(border-box);
+  > .stock__sm-item{
+    width: calc(25% - (10px*2));
+    margin: 10px;
+  }
+  > .stock__big-item{
+    width: calc(50% - (10px*2));
+    margin: 10px;
+  }
 }
 .stock__sm-item {
   display: block;
@@ -18,6 +28,70 @@
   width: 216px;
   margin-right: 15px;
   margin-bottom: 23px;
+  &--header{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #edeef0;
+    > h3{
+      display: block;
+      display: -webkit-box;
+      position: relative;
+      float: left;
+      width: calc(100% - (33px + 5px));
+      height: calc(10px * 1.2 * 2);
+      color: #060000;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 17px;
+      margin-bottom: 11px;
+      padding-left: 40px;
+      @include box-sizing(border-box);
+      line-height: 1.2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > .like {
+      display: inline-block;
+      position: relative;
+      float: left;
+      width: 33px;
+      margin-top: 24px;
+      margin-left: 5px;
+      > .like-set-icon {
+        display: block;
+        position: relative;
+        float: left;
+        width: 11px;
+        height: 11px;
+        background-image: url('../img/icons/new-like-icon.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+      }
+      > .like-counter{
+        float: left;
+        position: relative;
+        max-width: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 10px;
+        color: #000;
+        font-weight: 400;
+        top: -2px;
+        margin-left: 5px;
+      }
+    }
+    > .like.active{
+      > .like-set-icon {
+        background-image: url('../img/icons/new-like-filled-icon.png');
+      }
+    }
+  }
   &--img {
     display: block;
     position: relative;
@@ -41,25 +115,36 @@
     position: relative;
     float: left;
     width: 100%;
-    background-color: #673ab7;
+    background-color: #647278;
     padding: 0 16px;
     @include box-sizing(border-box);
-    p {
+    > p {
       display: block;
       display: -webkit-box;
       position: relative;
       float: left;
       width: 100%;
-      height: 48px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      height: calc(12px * 1.2 * 2);
+      margin-top: 10px;
+      margin-bottom: 12px;
       color: #f9f7f7;
       font-size: 12px;
       font-weight: 700;
-      line-height: 2;
+      line-height: 1.2;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > .views{
+      display: block;
+      position: relative;
+      float: right;
+      width: 60px;
+      margin-bottom: 12px;
+      text-align: left;
+      overflow: hidden;
+      white-space: nowrap;
       text-overflow: ellipsis;
     }
   }
@@ -69,18 +154,33 @@
     float: left;
     width: 100%;
     background-color: #fff;
-    padding: 0 16px;
+    /*padding: 0 16px;*/
     @include box-sizing(border-box);
     p {
       display: block;
       position: relative;
       float: left;
       width: 100%;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 11px;
+      margin-bottom: 10px;
       color: #060000;
       font-size: 12px;
       font-weight: 700;
+      padding-left: 38px;
+      @include box-sizing(border-box);
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        top: 4px;
+        left: 8px;
+        background-image: url("../img/icons/stock-timer-icon.png");
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
     }
   }
 }
@@ -92,6 +192,70 @@
   width: 322px;
   margin-right: 15px;
   margin-bottom: 23px;
+  &--header{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #edeef0;
+    > h3{
+      display: block;
+      display: -webkit-box;
+      position: relative;
+      float: left;
+      width: calc(100% - (33px + 5px));
+      height: calc(10px * 1.2 * 2);
+      color: #060000;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 17px;
+      margin-bottom: 11px;
+      padding-left: 40px;
+      @include box-sizing(border-box);
+      line-height: 1.2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > .like {
+      display: inline-block;
+      position: relative;
+      float: left;
+      width: 33px;
+      margin-top: 24px;
+      margin-left: 5px;
+      > .like-set-icon {
+        display: block;
+        position: relative;
+        float: left;
+        width: 11px;
+        height: 11px;
+        background-image: url('../img/icons/new-like-icon.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+      }
+      > .like-counter{
+        float: left;
+        position: relative;
+        max-width: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 10px;
+        color: #000;
+        font-weight: 400;
+        top: -2px;
+        margin-left: 5px;
+      }
+    }
+    > .like.active{
+      > .like-set-icon {
+        background-image: url('../img/icons/new-like-filled-icon.png');
+      }
+    }
+  }
   &--img {
     display: block;
     position: relative;
@@ -115,25 +279,36 @@
     position: relative;
     float: left;
     width: 100%;
-    background-color: #673ab7;
+    background-color: #647278;
     padding: 0 16px;
     @include box-sizing(border-box);
-    p {
+    > p {
       display: block;
       display: -webkit-box;
       position: relative;
       float: left;
       width: 100%;
-      height: 48px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      height: calc(12px * 1.2 * 2);
+      margin-top: 10px;
+      margin-bottom: 12px;
       color: #f9f7f7;
       font-size: 12px;
       font-weight: 700;
-      line-height: 2;
+      line-height: 1.2;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > .views{
+      display: block;
+      position: relative;
+      float: right;
+      width: 60px;
+      margin-bottom: 12px;
+      text-align: left;
+      overflow: hidden;
+      white-space: nowrap;
       text-overflow: ellipsis;
     }
   }
@@ -143,18 +318,33 @@
     float: left;
     width: 100%;
     background-color: #fff;
-    padding: 0 16px;
+    /*padding: 0 16px;*/
     @include box-sizing(border-box);
     p {
       display: block;
       position: relative;
       float: left;
       width: 100%;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 11px;
+      margin-bottom: 10px;
       color: #060000;
       font-size: 12px;
       font-weight: 700;
+      padding-left: 38px;
+      @include box-sizing(border-box);
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        top: 4px;
+        left: 8px;
+        background-image: url("../img/icons/stock-timer-icon.png");
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
     }
   }
 }
