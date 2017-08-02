@@ -1115,16 +1115,13 @@ $(document).ready(function () {
             text.removeClass('parser__element--descr').addClass('parser__element--text-show');
         }
     });
-    /*close*/
-
-    /*show parser comments*/
     $(document).on('click', '.parser__element--tools > .comments', function () {
         event.preventDefault();
         var comments = $(this).closest('.parser__element--tools').next();
         $(this).toggleClass('show-comments');
         comments.slideToggle();
         return false;
-    });
+    });    
     /*close*/
 
     /*show shop toolbar menu*/
@@ -1175,17 +1172,6 @@ $(document).ready(function () {
         $('.commercial__trigger .commercial__trigger--title').html(listText).attr('data-id', listAttr);
     });
     /*close*/
-    
-    /*parsr grid*/
-    if($('.parser__wrapper').length > 0){
-        $('.parser__wrapper').masonry({
-            // options...
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer'
-        });
-    }
-    /*close*/
-
 
     $.fancybox.defaults.thumbs = { showOnStart : true };
     

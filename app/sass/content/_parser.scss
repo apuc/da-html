@@ -155,6 +155,12 @@
       /*column-count: 1;*/
     }
   }
+  &__column{
+    @include display-flex(flex);
+    @include flex-direction(column);
+    position: relative;
+    float: left;
+  }
   &__element{
     display: block;
     position: relative;
@@ -430,10 +436,10 @@
     }
   }
   &__element:nth-of-type(even){
-   /* float: right;*/
+
   }
   &__element:nth-of-type(odd){
-    /*float: left;*/
+
   }
   &__more{
     display: block;
