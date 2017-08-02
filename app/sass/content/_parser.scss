@@ -142,15 +142,29 @@
     position: relative;
     float: left;
     width: 100%;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    /* boring properties: */
+
+   /* width: 90vw;
+    height: 85vh;*/
+    /*margin: 4vh auto;
+    padding: 1rem;*/
+    overflow: auto;
+
     /*column-count: 2;
     column-gap: 0;*/
-    .grid-sizer{
+    /*.grid-sizer{
       width: 50%;
     }
     .grid-item {
       width: 45%;
       float: left;
-    }
+    }*/
     @include breakpoint(max-width 1024px){
       /*column-count: 1;*/
     }
