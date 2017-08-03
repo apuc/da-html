@@ -41,6 +41,9 @@
       width: calc(100% - (10px*2));
     }
   }
+  > .news__wrap_buttons{
+    margin-bottom: 30px;
+  }
 }
 .stock__sm-item {
   display: block;
