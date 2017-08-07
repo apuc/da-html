@@ -436,7 +436,10 @@
       }
     }
     &--photo{
-      display: block;
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(flex-start);
       position: relative;
       float: left;
       width: 100%;
@@ -444,16 +447,13 @@
       margin-top: 13px;
       overflow: hidden;
       img{
-        size: 100%;
-        object-fit: cover;
+        flex: 1 0 0;
+        position: relative;
+        float: left;
+        height: 100%;
+        object-fit: contain;
       }
     }
-  }
-  &__element:nth-of-type(even){
-
-  }
-  &__element:nth-of-type(odd){
-
   }
   &__more{
     display: block;
