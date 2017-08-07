@@ -499,6 +499,7 @@
           > .geo-space {
             background-image: url('../img/icons/cabinet-placeholder-icon.png');
             background-repeat: no-repeat;
+            background-size: contain;
             height: 12px;
             width: 10px;
             position: absolute;
@@ -506,8 +507,35 @@
             bottom: 3px;
           }
         }
+        > .bottom-content{
+          width: 100%;
+          float: left;
+          position: relative;
+          .average-ad-time {
+            display: inline-block;
+            float: left;
+            width: 100%;
+            font-size: 12px;
+            margin: 0;
+            margin-right: 5px;
+            color: #878787;
+          }
+          .average-ad-category {
+            float: left;
+            display: inline-block;
+            font-size: 12px;
+            color: #1a97bb;
+            margin: 0 4px;
+          }
+          .separatorListCategory {
+            float: left;
+            display: inline-block;
+            line-height: 17px;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
       }
     }
   }
-
 }
