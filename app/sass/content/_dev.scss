@@ -1,36 +1,36 @@
-.dev{
+.dev {
   display: block;
   position: relative;
   float: left;
   width: 100%;
   height: calc(100% - (68px + 200px));
   background-color: #edeef0;
-  &__mistake{
+  &__mistake {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     margin-top: 65px;
     margin-bottom: 0;
-    color: rgba(13,36,46,0.8);
+    color: rgba(13, 36, 46, 0.8);
     font-size: 60px;
     font-weight: 700;
   }
-  &__wrapper{
+  &__wrapper {
     display: block;
     position: relative;
     float: left;
     width: 50%;
-    > .show-more{
+    > .show-more {
       float: left;
       margin-top: 20px;
       margin-bottom: 42px;
-      &:hover{
+      &:hover {
         color: #fff;
       }
     }
   }
-  &__banner{
+  &__banner {
     display: block;
     position: relative;
     float: left;
@@ -38,7 +38,7 @@
     font-size: 150px;
     font-weight: 700;
   }
-  &__news-banner{
+  &__news-banner {
     display: block;
     position: relative;
     float: left;
@@ -46,7 +46,7 @@
     font-size: 66px;
     font-weight: 700;
   }
-  &__notice{
+  &__notice {
     display: block;
     position: relative;
     float: left;
@@ -55,16 +55,16 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
-    > a{
+    > a {
       color: #ff1f1d;
       text-decoration: underline;
-      &:hover{
+      &:hover {
         color: #ff1f1d;
         text-decoration: none;
       }
     }
   }
-  &__photo{
+  &__photo {
     display: block;
     position: absolute;
     right: 0;
@@ -74,12 +74,12 @@
     padding-left: 42px;
     padding-right: 42px;
     @include box-sizing(border-box);
-    img{
+    img {
       size: 100%;
       object-fit: contain;
     }
   }
-  &__news-photo{
+  &__news-photo {
     display: block;
     position: absolute;
     right: 0;
@@ -89,12 +89,12 @@
     padding-left: 42px;
     padding-right: 42px;
     @include box-sizing(border-box);
-    img{
+    img {
       size: 70% 100%;
       object-fit: contain;
     }
   }
-  &__elements{
+  &__elements {
     display: block;
     position: relative;
     float: left;
@@ -105,11 +105,11 @@
     @include box-sizing(border-box);
     margin-top: 0;
     margin-bottom: 54px;
-    > .main-title{
+    > .main-title {
       float: right;
       margin-right: 62px;
     }
-    &--news{
+    &--news {
       @include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(row);
@@ -117,7 +117,7 @@
       position: relative;
       float: left;
       width: 100%;
-      > .stock__item{
+      > .stock__item {
         width: 270px;
         margin-top: 11px;
         margin-bottom: 11px;
@@ -128,7 +128,7 @@
       }
     }
   }
-  &__title{
+  &__title {
     display: block;
     position: relative;
     float: left;
@@ -140,11 +140,11 @@
     color: #424141;
     font-size: 69px;
     font-family: $BebasNeueBoldRegular;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       font-size: 20px;
     }
   }
-  &__subtitle{
+  &__subtitle {
     display: block;
     position: relative;
     float: left;
@@ -158,40 +158,40 @@
     text-transform: uppercase;
     font-weight: 500;
     color: #424141;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       font-size: 16px;
       width: 100%;
       margin-left: 0;
       margin-top: 20px;
       margin-bottom: 20px;
     }
-    > a{
+    > a {
       color: #ee2e24;
       font-weight: 900;
     }
   }
-  &__form{
+  &__form {
     width: 600px;
     float: left;
     position: relative;
-    margin-left: calc(50% - 600px/2);
+    margin-left: calc(50% - 600px / 2);
     margin-top: 0;
     margin-bottom: 250px;
-    @include breakpoint(max-width 1920px){
+    @include breakpoint(max-width 1920px) {
       margin-bottom: 305px;
     }
-    @include breakpoint(max-width 1690px){
+    @include breakpoint(max-width 1690px) {
       margin-bottom: 250px;
     }
-    @include breakpoint(max-width 1440px){
+    @include breakpoint(max-width 1440px) {
       margin-bottom: 250px;
     }
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
       margin-left: 0;
       margin-bottom: 20px;
     }
-    > input[type='text']{
+    > input[type='text'] {
       width: 70%;
       display: inline-block;
       float: left;
@@ -203,7 +203,7 @@
       background-color: #e7e7e7;
       padding-right: 10px;
     }
-    > button{
+    > button {
       display: inline-block;
       width: 30%;
       float: left;
@@ -218,35 +218,85 @@
       text-transform: uppercase;
       @include transition(0.4s);
       cursor: pointer;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         font-size: 10px;
       }
-      &:hover{
+      &:hover {
         @include transition(0.4s);
-        background-color: rgba(238,46,36,.8);
+        background-color: rgba(238, 46, 36, .8);
       }
     }
   }
-  &__tech{
+  &__tech {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     margin-top: 5px;
-    &--title{
+    background: url('../img/content/dev-tech-bg.png') center center no-repeat;
+    &:before{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(255,255,255,0.9);
+    }
+    &--title {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       margin-top: 141px;
       margin-bottom: 80px;
+      > p {
+        position: relative;
+        float: left;
+        color: #515253;
+        font-size: 40px;
+        width: 100%;
+        margin: 40px;
+        clear: both;
+        @include breakpoint(max-width 660px){
+          font-size: 25px;
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
     }
-    &--icon{
+    &--icon {
       display: block;
       position: relative;
       float: left;
       width: 183px;
       height: 184px;
+    }
+    &--big{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 183px);
+      font-size: 64px;
+      font-weight: 700;
+      color: #e30613;
+      @include breakpoint(max-width 770px){
+        font-size: 48px;
+      }
+      @include breakpoint(max-width 660px){
+        font-size: 30px;
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+    &--img {
+      width: 70%;
+      margin: 0 auto;
+      z-index: 2;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
