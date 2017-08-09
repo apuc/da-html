@@ -356,6 +356,12 @@
       font-weight: 700;
       text-transform: uppercase;
     }
+    &--children-category{
+      width: 100%;
+      .childrenCategorySelect{
+        width: 100%;
+      }
+    }
     > .ad-charasteristics-form-priece {
       width: 100%;
       float: left;
@@ -422,7 +428,6 @@
       }
     }
   }
-
   &__ads {
     display: block;
     position: relative;
