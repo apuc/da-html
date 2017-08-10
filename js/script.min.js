@@ -522,7 +522,7 @@ $(document).ready(function () {
     /*close modal order delivery*/
 
     /*open modal faq*/
-    $(document).on('click', '.ask', function () {
+    /*$(document).on('click', '.ask', function () {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
             function () {
@@ -536,7 +536,7 @@ $(document).ready(function () {
                 $('#black-overlay').fadeOut(400);
             }
         );
-    });
+    });*/
     /*close modal faq*/
 
     /* open tabs*/
