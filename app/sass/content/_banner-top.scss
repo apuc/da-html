@@ -5,6 +5,9 @@
   text-align: center;
   margin-top: 17px;
   z-index: 1;
+  @include breakpoint(max-width 660px){
+    margin-top: 50px;
+  }
   img{
     object-fit: cover;
     width: 100%;

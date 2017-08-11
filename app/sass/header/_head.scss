@@ -18,7 +18,8 @@
     }
     @include breakpoint(max-width 660px){
       /*display: none;*/
-      height: calc(100% - 42px);
+      //height: calc(100% - 42px);
+      height: 100%;
     }
   }
 }

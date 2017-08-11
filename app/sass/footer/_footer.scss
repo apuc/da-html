@@ -328,8 +328,8 @@
     display: block;
     position: relative;
     float: left;
-    width: 38px;
-    height: 163px;
+    width: 27px;
+    height: 132px;
     overflow: hidden;
     cursor: pointer;
     img {
@@ -344,8 +344,8 @@
   position: fixed;
   right: 0;
   top: 53%;
-  width: 38px;
-  height: 163px;
+  width: 27px;
+  height: 132px;
   z-index: 2;
   @include breakpoint(max-width 600px) {
     top: 68%;

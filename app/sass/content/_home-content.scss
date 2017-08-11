@@ -6,6 +6,9 @@
   padding-top: 15px;
   padding-bottom: 20px;
   box-sizing: border-box;
+  @include breakpoint(max-width 660px){
+    margin-top: 30px;
+  }
 }
 
 .home-content__wrap {
