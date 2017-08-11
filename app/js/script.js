@@ -1178,7 +1178,29 @@ $(document).ready(function () {
     /*close*/
 
     $.fancybox.defaults.thumbs = { showOnStart : true };
-    
+
+
+    /*commercial slider*/
+    $('.commercial__ads-slider--single').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.commercial__ads-slider--nav'
+    });
+    $('.commercial__ads-slider--nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.commercial__ads-slider--single',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        vertical: true,
+        arrows: false,
+        verticalSwiping: true
+    });
+    /*close*/
+
 });
 
 $(window).scroll(function () {
