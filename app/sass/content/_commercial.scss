@@ -73,6 +73,11 @@
     width: calc(100% - (174px));
     height: 35px;
     border: 1px solid #ff0200;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
     > .input-search {
       width: 33%;
       float: left;
@@ -85,6 +90,9 @@
       position: relative;
       outline: none;
       border-radius: 50%;
+      @include breakpoint(max-width 992px){
+        width: 100%;
+      }
     }
     > .region {
       display: inline-block;
@@ -96,6 +104,12 @@
       float: none;
       margin-right: 20px;
       margin-top: 4px;
+      @include breakpoint(max-width 992px){
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 20px;
+      }
       > .location-mark {
         background-size: contain;
         background-image: url('../img/icons/cabinet-placeholder-icon.png');
@@ -564,6 +578,9 @@
     color: #000000;
     font-size: 15px;
     font-weight: 700;
+    @include breakpoint(max-width 992px){
+      padding-left: 0;
+    }
   }
   &__ads-slider{
     display: block;
@@ -571,6 +588,9 @@
     float: left;
     width: calc(100% - 228px);
     margin-top: 12px;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
     &--single{
       display: block;
       position: relative;
@@ -647,6 +667,9 @@
       overflow: hidden;
       padding: 0 38px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 1200px){
+        display: none;
+      }
       .slide{
         display: block;
         position: relative;
@@ -668,6 +691,10 @@
     width: 228px;
     padding-right: 38px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 992px){
+      margin-left: calc(50% - (228px/2));
+      padding-right: 0;
+    }
     > .price{
       display: block;
       position: relative;
@@ -711,6 +738,10 @@
       float: left;
       width: 330px;
       margin-left: 35px;
+      @include breakpoint(max-width 992px){
+        width: 100%;
+        margin-left: 0;
+      }
     }
     &--row{
       display: inline-block;
@@ -742,6 +773,10 @@
       width: calc(100% - (330px + 35px));
       padding-left: 28px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 992px){
+        width: 100%;
+        padding-left: 0;
+      }
       > span{
         display: block;
         position: relative;
@@ -766,6 +801,12 @@
       font-size: 12px;
       font-weight: 600;
       line-height: 1.2;
+      @include breakpoint(max-width 992px){
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
