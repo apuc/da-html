@@ -10,10 +10,14 @@
     float: left;
     width: 100%;
     margin-top: 41px;
-    margin-bottom: 29px;
+    //margin-bottom: 29px;
+    margin-bottom: 0;
     color: #000000;
     font-size: 22px;
     font-weight: 700;
+  }
+  .business__wrapper{
+    margin-top: 0;
   }
   &__top-counter{
     display: block;
@@ -436,15 +440,16 @@
       }
     }
     &--photo{
-      @include display-flex(flex);
+      /*@include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(row);
-      @include justify-content(flex-start);
+      @include justify-content(flex-start);*/
+      display: block;
       position: relative;
       float: left;
       width: 100%;
       /*height: 205px;*/
-      max-height: 300px;
+      /*max-height: 300px;*/
       /*height: auto;*/
       margin-top: 13px;
       overflow: hidden;
@@ -494,7 +499,7 @@
         margin-bottom: 20px;
       }
       > .parser__element--photo{
-        height: auto;
+        max-height: 100%;
       }
       > .parser__element--tools{
         > .views, .comments{
@@ -509,6 +514,7 @@
     > .business__content{
       > .parser__title {
         margin-top: 10px;
+        margin-bottom: 29px;
       }
     }
   }
