@@ -377,6 +377,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotate(90deg);
+    @include breakpoint(max-width 660px) {
+     display: none;
+    }
   }
   .show-more {
     font-size: 12px;

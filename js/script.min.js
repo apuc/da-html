@@ -1170,7 +1170,7 @@ $(document).ready(function () {
     $(document).on('click', '.commercial__category-list li', function () {
         var listText = $(this).html(),
             listAttr = $(this).attr('data-id'),
-            list = $(this).parent();
+            list = $(this).parent();           
 
         list.slideUp('fast');
         $('.commercial__trigger .commercial__trigger--title').html(listText).attr('data-id', listAttr);

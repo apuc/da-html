@@ -448,6 +448,7 @@
       position: relative;
       float: left;
       width: 100%;
+      @include box-sizing(border-box);
       /*height: 205px;*/
       /*max-height: 300px;*/
       /*height: auto;*/
@@ -500,6 +501,7 @@
       }
       > .parser__element--photo{
         max-height: 100%;
+        padding: 0 50px;
       }
       > .parser__element--tools{
         > .views, .comments{
