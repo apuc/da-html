@@ -1,4 +1,4 @@
-.stock__content{
+.stock__content {
   @include display-flex(flex);
   @include flex-wrap(wrap);
   @include flex-direction(row);
@@ -12,39 +12,166 @@
   margin-right: 14px;
   padding: 0 15px;
   @include box-sizing(border-box);
-  @include breakpoint(max-width 600px){
+  @include breakpoint(max-width 600px) {
     width: 100%;
   }
-  > .stock__sm-item{
-    width: calc(25% - (10px*2));
+  > .stock__sm-item {
+    width: calc(25% - (10px * 2));
     margin: 10px;
-    @include breakpoint(max-width 992px){
-      width: calc(30% - (10px*2));
+    @include breakpoint(max-width 992px) {
+      width: calc(30% - (10px * 2));
     }
-    @include breakpoint(max-width 970px){
-      width: calc(50% - (10px*2));
+    @include breakpoint(max-width 970px) {
+      width: calc(50% - (10px * 2));
     }
-    @include breakpoint(max-width 660px){
-      width: calc(100% - (10px*2));
+    @include breakpoint(max-width 660px) {
+      width: calc(100% - (10px * 2));
     }
   }
-  > .stock__big-item{
-    width: calc(50% - (10px*2));
+  > .stock__big-item {
+    width: calc(50% - (10px * 2));
     margin: 10px;
-    @include breakpoint(max-width 992px){
-      width: calc(30% - (10px*2));
+    @include breakpoint(max-width 992px) {
+      width: calc(30% - (10px * 2));
     }
-    @include breakpoint(max-width 970px){
-      width: calc(50% - (10px*2));
+    @include breakpoint(max-width 970px) {
+      width: calc(50% - (10px * 2));
     }
-    @include breakpoint(max-width 660px){
-      width: calc(100% - (10px*2));
+    @include breakpoint(max-width 660px) {
+      width: calc(100% - (10px * 2));
     }
   }
-  > .news__wrap_buttons{
+  > .news__wrap_buttons {
     margin-bottom: 30px;
   }
 }
+
+.stock__box {
+  display: block;
+  position: relative;
+  float: left;
+  width: calc(100% - 274px);
+  min-height: 624px;
+  margin-bottom: 60px;
+  margin-right: 14px;
+  padding: 0 15px;
+  @include box-sizing(border-box);
+  @include breakpoint(max-width 600px) {
+    width: 100%;
+  }
+  > .search-panel__form {
+    margin-top: 17px;
+    .search-panel__field {
+      width: calc(100% - 128px);
+    }
+  }
+}
+
+.stock__content--right {
+  display: block;
+  position: relative;
+  float: left;
+  width: 539px;
+  > .stock__sm-item--header {
+    background-color: transparent;
+    > .title {
+      width: calc(100% - 60px);
+      font-size: 11px;
+      margin-top: 0;
+    }
+    > .views {
+      display: block;
+      float: right;
+      width: 60px;
+      text-align: left;
+      white-space: nowrap;
+      position: relative;
+      margin-bottom: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 13px;
+      color: #030000;
+      &:before {
+        top: 4px;
+        left: 0;
+        width: 19px;
+        height: 12px;
+        background-image: url('../img/icons/eye-icon.png');
+      }
+    }
+  }
+}
+
+.stock__content--banner {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 177px;
+  overflow: hidden;
+  img {
+    size: 100%;
+    object-fit: cover;
+  }
+}
+
+.stock__content--left {
+  display: block;
+  position: relative;
+  float: left;
+  width: calc(100% - 539px);
+  padding: 0 28px;
+  @include box-sizing(border-box);
+  > .stock__sm-item--time {
+    margin-top: 44px;
+    > p {
+      line-height: 2;
+      &:before {
+        top: 13px;
+      }
+    }
+  }
+  > .show-more{
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+.stock__content--descr{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  h3{
+    margin-top: 25px;
+    margin-bottom: 17px;
+    color: #0c242e;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+  p{
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #0c242e;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+.stock__title {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 38px;
+  margin-bottom: 19px;
+  color: #0c242e;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .stock__sm-item {
   display: block;
   position: relative;
@@ -52,13 +179,13 @@
   width: 216px;
   margin-right: 15px;
   margin-bottom: 23px;
-  &--header{
+  &--header {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     background-color: #edeef0;
-    > .title{
+    > .title {
       display: block;
       display: -webkit-box;
       position: relative;
@@ -78,7 +205,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       @include transition(0.4s);
-      &:hover, &:active{
+      &:hover, &:active {
         color: #ee2e24;
         text-decoration: none;
         @include transition(0.4s);
@@ -102,7 +229,7 @@
         background-position: 0 0;
         background-size: contain;
       }
-      > .like-counter{
+      > .like-counter {
         float: left;
         position: relative;
         max-width: 20px;
@@ -116,7 +243,7 @@
         margin-left: 5px;
       }
     }
-    > .like.active{
+    > .like.active {
       > .like-set-icon {
         background-image: url('../img/icons/new-like-filled-icon.png');
       }
@@ -169,7 +296,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    > .views{
+    > .views {
       display: block;
       position: relative;
       float: right;
@@ -201,7 +328,7 @@
       font-weight: 700;
       padding-left: 38px;
       @include box-sizing(border-box);
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
@@ -225,13 +352,13 @@
   width: 322px;
   margin-right: 15px;
   margin-bottom: 23px;
-  &--header{
+  &--header {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     background-color: #edeef0;
-    > .title{
+    > .title {
       display: block;
       display: -webkit-box;
       position: relative;
@@ -250,7 +377,7 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
-      &:hover, &:active{
+      &:hover, &:active {
         color: #ee2e24;
         text-decoration: none;
         @include transition(0.4s);
@@ -274,7 +401,7 @@
         background-position: 0 0;
         background-size: contain;
       }
-      > .like-counter{
+      > .like-counter {
         float: left;
         position: relative;
         max-width: 20px;
@@ -288,7 +415,7 @@
         margin-left: 5px;
       }
     }
-    > .like.active{
+    > .like.active {
       > .like-set-icon {
         background-image: url('../img/icons/new-like-filled-icon.png');
       }
@@ -341,7 +468,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    > .views{
+    > .views {
       display: block;
       position: relative;
       float: right;
@@ -373,7 +500,7 @@
       font-weight: 700;
       padding-left: 38px;
       @include box-sizing(border-box);
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
