@@ -520,6 +520,25 @@ $(document).ready(function () {
         );
     });
     /*close modal order delivery*/
+    
+    /*open company modal*/
+    $(document).on('click', '.show-company-modal', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-company-rew').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '#black-overlay', function () {
+        $('#modal-company-rew').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close*/
+    
 
     /*open modal faq*/
     /*$(document).on('click', '.ask', function () {

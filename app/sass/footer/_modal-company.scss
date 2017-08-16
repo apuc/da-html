@@ -1,0 +1,75 @@
+.modal-company {
+  display: none;
+  position: fixed;
+  width: 592px;
+  background-color: #fff;
+  border-radius: 0;
+  top: 25%;
+  margin-left: calc(50% - (592px / 2));
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 28px 22px;
+  @include border-box;
+  @include breakpoint(max-width 600px) {
+    width: 100%;
+    margin-left: 0;
+  }
+  > .thumb {
+    size: 46px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 7px;
+    background-color: #f2e2e5;
+    > span {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #0f1111;
+      font-size: 30px;
+      text-align: center;
+    }
+    > img {
+      size: 100%;
+      object-fit: cover;
+    }
+  }
+  > .rew-wrap {
+    padding-left: 24px;
+    .rew-descr {
+      height: 100%;
+      line-height: 1.4;
+      -webkit-line-clamp: inherit;
+      text-overflow: inherit;
+      overflow: inherit;
+    }
+    .date{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      color: #030000;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .social-wrap{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      .social-wrap__item {
+        width: 23px;
+        height: 23px;
+        img{
+          size: 11px;
+          object-fit: contain;
+          top: 6px;
+        }
+      }
+    }
+  }
+}
