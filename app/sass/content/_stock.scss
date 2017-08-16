@@ -72,6 +72,12 @@
   position: relative;
   float: left;
   width: 539px;
+  @include breakpoint(max-width 1199px){
+    width: 420px;
+  }
+  @include breakpoint(max-width 960px){
+    width: 100%;
+  }
   > .stock__sm-item--header {
     background-color: transparent;
     > .title {
@@ -122,6 +128,12 @@
   width: calc(100% - 539px);
   padding: 0 28px;
   @include box-sizing(border-box);
+  @include breakpoint(max-width 1199px){
+    width: calc(100% - 420px);
+  }
+  @include breakpoint(max-width 960px){
+    width: 300px;
+  }
   > .stock__sm-item--time {
     margin-top: 44px;
     > p {
