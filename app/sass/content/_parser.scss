@@ -500,7 +500,7 @@
         margin-bottom: 20px;
       }
       > .parser__element--photo{
-        @include display-flex(flex);
+        display: flex;
         max-height: 700px;
         padding: 0 50px;
         img{
