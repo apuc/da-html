@@ -15,12 +15,18 @@
     color: rgba(13, 36, 46, 0.8);
     font-size: 60px;
     font-weight: 700;
+    @include breakpoint(max-width 660px){
+      font-size: 30px;
+    }
   }
   &__wrapper {
     display: block;
     position: relative;
     float: left;
     width: 50%;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
     > .show-more {
       float: left;
       margin-top: 20px;
@@ -37,6 +43,9 @@
     color: #ff1f1d;
     font-size: 150px;
     font-weight: 700;
+    @include breakpoint(max-width 660px){
+      font-size: 30px;
+    }
   }
   &__news-banner {
     display: block;
@@ -45,6 +54,9 @@
     color: #ff1f1d;
     font-size: 48px;
     font-weight: 700;
+    @include breakpoint(max-width 660px){
+      font-size: 30px;
+    }
   }
   &__notice {
     display: block;
@@ -77,6 +89,9 @@
     img {
       size: 100%;
       object-fit: contain;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
     }
   }
   &__news-photo {
@@ -92,6 +107,9 @@
     img {
       size: 70% 100%;
       object-fit: contain;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
     }
   }
   &__poster-photo {
@@ -107,6 +125,9 @@
     img {
       size: 100% 100%;
       object-fit: contain;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
     }
   }
   &__elements {
