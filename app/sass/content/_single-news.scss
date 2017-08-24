@@ -7,7 +7,7 @@
     position: relative;
   }
   #article{
-    width: calc(100% - (255px + 14px));
+    width: calc(100% - (260px + 14px));
     margin-right: 14px;
     float: left;
     @include breakpoint(max-width 660px){
@@ -190,7 +190,6 @@
         padding-left: 10px;
         padding-right: 10px;
       }
-      position: relative;
       h1{
         color: #060000;
         font-weight: 800;
@@ -201,6 +200,9 @@
           font-size: 20px;
           line-height: 28px;
         }
+      }
+      > .social-wrapper{
+        margin-left: -90px;
       }
       /*.content-info{
         font-size: 15px;
