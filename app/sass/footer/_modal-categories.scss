@@ -3,10 +3,10 @@
   text-align: left;
   vertical-align: middle;
   width: 850px;
-  position: fixed;
+  position: relative;
   border-radius: 0;
-  top: 25%;
-  margin-left: calc(50% - (850px / 2));
+  /*top: 25%;
+  margin-left: calc(50% - (850px / 2));*/
   opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
   z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
   padding: 28px 22px;
@@ -156,4 +156,13 @@
       }
     }
   }
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
 }
