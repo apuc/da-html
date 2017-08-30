@@ -204,7 +204,7 @@
       }
     }
     > .city-list {
-      text-align: center;
+      text-align: left;
       display: none;
       position: absolute;
       z-index: 3;
@@ -378,6 +378,10 @@
     }
     &--children-category{
       width: 100%;
+      label {
+        font-family: OpenSansRegular;
+        font-size: 9px;
+      }
       .childrenCategorySelect{
         width: 100%;
       }
@@ -765,7 +769,7 @@
         width: 50%;
         color: #020000;
         font-size: 12px;
-        font-weight: 700;
+        //font-weight: 700;
         text-align: left;
       }
     }
