@@ -1,0 +1,172 @@
+.modal-callback{
+  display: none;
+  position: fixed;
+  width: 438px;
+  background-color: #f6e8e8;
+  border-radius: 5px;
+  top: 25%;
+  margin-left: calc(50% - (438px / 2));
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 29px 30px;
+  @include border-box;
+  @include breakpoint(max-width 600px){
+    width: 100%;
+    margin-left: 0;
+  }
+  &__title{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+    font-size: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__subtitle{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #050101;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+  .separator{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 2px;
+    background-color: #ee2e24;
+    top: 0;
+    left: 0;
+    margin-top: 23px;
+    margin-bottom: 26px;
+  }
+  &__form{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0 38px;
+    @include box-sizing(border-box);
+    p{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #050101;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    .show-more{
+      width: 172px;
+      margin-top: 24px;
+      margin-bottom: 30px;
+      border: none;
+      margin-left: calc(50% - (172px/2));
+    }
+  }
+  &__first-step{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  &__second-step{
+    display: none;
+    position: relative;
+    float: left;
+    width: 100%;
+    .modal-callback__textarea{
+      display: none;
+    }
+  }
+  &__fields{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  &__field{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 34px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    @include box-sizing(border-box);
+    border: 1px solid #797a7d;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #050101;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  &__sm-field{
+    display: block;
+    position: relative;
+    float: left;
+    width: 113px;
+    height: 34px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    @include box-sizing(border-box);
+    border: 1px solid #797a7d;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #050101;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  &__textarea{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 55px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 9px 15px;
+    @include box-sizing(border-box);
+    border: 1px solid #797a7d;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #050101;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    resize: none
+  }
+  &__trigger{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 23px;
+    color: #050101;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+}

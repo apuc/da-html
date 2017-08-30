@@ -1,0 +1,201 @@
+.what-say{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #f6f9ff;
+  padding: 40px 0;
+  box-sizing: border-box;
+  h2{
+    width: 50%;
+    float: left;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  .show-more{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.what-say__servises{
+  width: 50%;
+  float: left;
+  text-align: right;
+  @include breakpoint(max-width 600px){
+    width: 100%;
+  }
+  > a{
+    color: #010408;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 14px;
+    margin-left: 60px;
+    @include breakpoint(max-width 600px){
+      width: calc(100% - 30px);
+      margin-left: 30px;
+      margin-top: 20px;
+      text-align: left;
+    }
+  }
+  .comments-icon{
+    background-image: url("../img/icons/comments-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    size: 16px;
+    margin-right: 5px;
+    float: left;
+    top: 2px;
+    position: relative;
+  }
+  .mail-icon{
+    background-image: url("../img/icons/mail-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    size: 16px 12px;
+    margin-right: 5px;
+    float: left;
+    top: 5px;
+    position: relative;
+  }
+}
+
+.what-say__wrap{
+  width: 100%;
+  float: left;
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+  &--photo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 118px;
+    overflow: hidden;
+    img{
+      size: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.what-say__wrap_item{
+  width: 24%;
+  /*height: 125px;*/
+  float: left;
+  display: inline-block;
+  margin: 4px;
+  position: relative;
+  /*height: 111px;*/
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  &:hover{
+    border: 1px solid rgba(128, 127, 127, 0.32);
+    .name{
+      color: #ff0200;
+    }
+  }
+  @include breakpoint(max-width 600px){
+    width: 100%;
+  }
+  .rew-title{
+    margin-top: -16px;
+    margin-bottom: 20px;
+  }
+  .counter{
+    position: absolute;
+    left: 5px;
+    size: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #ee2e24;
+    border: 2px solid white;
+    z-index: 3;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    line-height: 33px;
+    margin-top: -3px;
+  }
+  .thumb{
+    size: 46px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 7px;
+    background-color: #f2e2e5;
+    > span {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #0f1111;
+      font-size: 30px;
+      text-align: center;
+    }
+    > img{
+      size: 100%;
+      object-fit: cover;
+    }
+  }
+  .wrapi{
+    width: calc(100% - 78px);
+    float: left;
+    position: relative;
+    padding-left: 8px;
+    box-sizing: border-box;
+    .name{
+      display: block;
+      display: -webkit-box;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: calc(16px * 1.2 * 2);
+      text-align: left;
+      color: rgba(30,4,4,0.83);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: left;
+      color: black;
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 4px;
+      margin-bottom: 0;
+      display: -webkit-box;
+      height: calc(14px * 1.2 * 2);
+      line-height: 1.2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
