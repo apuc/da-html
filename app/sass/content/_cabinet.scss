@@ -3755,3 +3755,162 @@ input[type=file] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.cabinet{
+  &__image-box{
+    position: relative;
+    width: 100%;
+    float: left;
+    padding: 30px;
+    box-sizing: border-box;
+    >div{
+      position: relative;
+      width: 20%;
+      padding: 10px;
+      box-sizing: border-box;
+      float: left;
+      img{
+        height: 120px;
+        object-fit: contain;
+        position: relative;
+        display: block;
+        max-width: 100%;
+      }
+      p{
+        font-size: 14px;
+        font-weight:600;
+        text-align: left;
+      }
+      span{
+        font-size:16px;
+        font-weight:700;
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+  &__company-box{
+    position: relative;
+    width: 100%;
+    float: left;
+    padding: 30px;
+    box-sizing: border-box;
+    &--img{
+      position: relative;
+      float: left;
+        img {
+          height: 100px;
+          object-fit: contain;
+          position: relative;
+          float: left;
+          display: block;
+          max-width: 100%;
+        }
+    }
+    &--content{
+      position: relative;
+      float: left;
+      max-width: 40%;
+    }
+    &--data{
+      font-size:9px;
+      position: relative;
+      float: left;
+      margin-left:10px;
+      span{
+       &:last-child{
+         margin-left: 40px;
+         font-size:12px;
+       }
+      }
+    }
+    &--text {
+      margin: 30px;
+      position: relative;
+      float: left;
+      margin-left: 10px;
+      width: 100%;
+      span {
+        font-weight: 700;
+        position: relative;
+        font-size: 16px;
+        text-align: left;
+        a{
+          color: #0b0000;
+          text-decoration: underline;
+        }
+      }
+      p{
+        font-size: 12px;
+        text-align: left;
+      }
+    }
+    &--edit{
+      margin-left: 10px;
+      position: relative;
+      float: left;
+      width: 110px;
+      a{
+        color: #0b0000;
+        position: relative;
+        float: left;
+        margin: 10px;
+        font-size: 9px;
+      }
+      img{
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &--button{
+      position: relative;
+      float: left;
+      width: 221px;
+      text-align: center;
+      margin-top: 20px;
+      text-align: center;
+      padding: 10px 0 10px 10px;
+      border-left: 2px solid #eee;
+    }
+    &--mess{
+      position: relative;
+      float: left;
+      width:221px;
+      span{
+        text-align: left;
+        font-size: 16px;
+        font-weight: 700;
+        &:last-of-type {
+          font-size: 16px;
+          font-weight:700;
+          color: hotpink;
+        }
+      }
+      p{
+        padding: 10px 0 10px 10px;
+        border-left: 2px solid #eee;
+      }
+    }
+    &--mess2{
+      position: relative;
+      float: left;
+      width:221px;
+      span{
+        text-align: left;
+        font-size: 16px;
+        font-weight: 700;
+        color: red;
+      }
+      p{
+        padding: 10px 0 10px 10px;
+        border-left: 2px solid #eee;
+        a{
+          text-decoration: underline;
+          font-size: 16px;
+          font-weight: 400;
+          color: red;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
