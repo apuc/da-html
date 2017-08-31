@@ -301,6 +301,9 @@
     padding-left: 0;
     padding-right: 15px;
     @include box-sizing(border-box);
+    select {
+      width:100%;
+    }
     &--type {
       display: block;
       position: relative;

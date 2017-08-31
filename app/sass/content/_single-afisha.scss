@@ -715,7 +715,11 @@
 .tabs__content.active {
   display: block; /* по умолчанию показываем нужный блок */
 }
-
+#main-consultations{
+  position: relative;
+  float: left;
+  width: 100%;
+}
 .main-consultations-sidebar {
   float: left;
   display: inline-block;
