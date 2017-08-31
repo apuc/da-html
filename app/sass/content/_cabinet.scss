@@ -126,7 +126,7 @@
       }*/
     }
     > .show-more {
-      width: 190px;
+      width: 170px;
       margin-left: calc(50% - (190px / 2));
       margin-bottom: 23px;
       font-size: 11px;
@@ -3792,11 +3792,12 @@ input[type=file] {
     position: relative;
     width: 100%;
     float: left;
-    padding: 30px;
+    padding: 10px;
     box-sizing: border-box;
     &--img{
       position: relative;
       float: left;
+
         img {
           height: 100px;
           object-fit: contain;
@@ -3816,15 +3817,17 @@ input[type=file] {
       position: relative;
       float: left;
       margin-left:10px;
+      color: #4c5b69;
       span{
        &:last-child{
          margin-left: 40px;
          font-size:12px;
+         color: #4c5b69;
        }
       }
     }
     &--text {
-      margin: 30px;
+      margin: 10px;
       position: relative;
       float: left;
       margin-left: 10px;
@@ -3855,10 +3858,14 @@ input[type=file] {
         float: left;
         margin: 10px;
         font-size: 9px;
+        margin-left: 5px;
+        span{
+          margin-left: 15px;
+        }
       }
       img{
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
       }
     }
     &--button{
@@ -3867,9 +3874,12 @@ input[type=file] {
       width: 221px;
       text-align: center;
       margin-top: 20px;
-      text-align: center;
+      text-align: right;
       padding: 10px 0 10px 10px;
       border-left: 2px solid #eee;
+      >.show-more{
+        font-size: 10px;
+      }
     }
     &--mess{
       position: relative;
@@ -3877,17 +3887,19 @@ input[type=file] {
       width:221px;
       span{
         text-align: left;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         &:last-of-type {
-          font-size: 16px;
+          font-size: 14px;
           font-weight:700;
-          color: hotpink;
+          color: indianred;
         }
       }
       p{
         padding: 10px 0 10px 10px;
         border-left: 2px solid #eee;
+        font-weight: 700;
+        font-size: 11px;
       }
     }
     &--mess2{
@@ -3896,16 +3908,18 @@ input[type=file] {
       width:221px;
       span{
         text-align: left;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         color: red;
       }
       p{
         padding: 10px 0 10px 10px;
         border-left: 2px solid #eee;
+        font-size: 11px;
+        font-weight: 700;
         a{
           text-decoration: underline;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 400;
           color: red;
           padding-left: 5px;
