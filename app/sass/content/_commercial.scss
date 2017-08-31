@@ -772,8 +772,11 @@
         width: 50%;
         color: #020000;
         font-size: 12px;
-        //font-weight: 700;
+        font-weight: 700;
         text-align: left;
+        &:last-of-type{
+          font-weight:400;
+        }
       }
     }
     &--row:nth-of-type(odd){
