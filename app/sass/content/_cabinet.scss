@@ -3762,6 +3762,14 @@ input[type=file] {
     float: left;
     padding: 30px;
     box-sizing: border-box;
+    a{
+      color: #000;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+        text-decoration-color:#ee2e24 ;
+      }
+    }
     >div{
       position: relative;
       width: 20%;
@@ -3821,7 +3829,7 @@ input[type=file] {
       span{
        &:last-child{
          margin-left: 40px;
-         font-size:12px;
+         font-size:11px;
          color: #4c5b69;
        }
       }
@@ -3843,7 +3851,7 @@ input[type=file] {
         }
       }
       p{
-        font-size: 12px;
+        font-size: 11px;
         text-align: left;
       }
     }
