@@ -3802,10 +3802,13 @@ input[type=file] {
     float: left;
     padding: 10px;
     box-sizing: border-box;
+    margin-left: 23px;
     &--img{
       position: relative;
       float: left;
-
+      background-size: cover;
+      width: 129px;
+      height: 99px;
         img {
           height: 100px;
           object-fit: contain;
@@ -3818,10 +3821,15 @@ input[type=file] {
     &--content{
       position: relative;
       float: left;
-      max-width: 40%;
+      width: 240px;
+      height: 100px;
+      @include breakpoint(max-width 1200px) {
+        width: calc(100% - 130px);
+      }
     }
     &--data{
-      font-size:9px;
+      margin-top: 8px;
+      font-size:8px;
       position: relative;
       float: left;
       margin-left:10px;
@@ -3829,7 +3837,7 @@ input[type=file] {
       span{
        &:last-child{
          margin-left: 40px;
-         font-size:11px;
+         font-size:9px;
          color: #4c5b69;
        }
       }
@@ -3843,7 +3851,7 @@ input[type=file] {
       span {
         font-weight: 700;
         position: relative;
-        font-size: 16px;
+        font-size: 12px;
         text-align: left;
         a{
           color: #0b0000;
@@ -3851,15 +3859,20 @@ input[type=file] {
         }
       }
       p{
-        font-size: 11px;
+        font-size: 9px;
         text-align: left;
       }
     }
     &--edit{
-      margin-left: 10px;
+      margin-left: 46px;
       position: relative;
       float: left;
       width: 110px;
+      height: 40px;
+      @include breakpoint(max-width 1200px) {
+        width: auto;
+        margin-top: 10px;
+      }
       a{
         color: #0b0000;
         position: relative;
@@ -3877,6 +3890,8 @@ input[type=file] {
       }
     }
     &--button{
+      margin-left: 57px;
+      background-size: cover;
       position: relative;
       float: left;
       width: 221px;
@@ -3885,6 +3900,10 @@ input[type=file] {
       text-align: right;
       padding: 10px 0 10px 10px;
       border-left: 2px solid #eee;
+      @include breakpoint(max-width 1200px) {
+       border:none;
+        margin-top: 0;
+      }
       >.show-more{
         font-size: 10px;
       }
@@ -3893,6 +3912,7 @@ input[type=file] {
       position: relative;
       float: left;
       width:221px;
+      margin-left: 57px;
       span{
         text-align: left;
         font-size: 14px;
@@ -3904,7 +3924,7 @@ input[type=file] {
         }
       }
       p{
-        padding: 10px 0 10px 10px;
+        padding: 10px 0 20px 20px;
         border-left: 2px solid #eee;
         font-weight: 700;
         font-size: 11px;
@@ -3914,6 +3934,7 @@ input[type=file] {
       position: relative;
       float: left;
       width:221px;
+      margin-left: 57px;
       span{
         text-align: left;
         font-size: 14px;
@@ -3921,7 +3942,7 @@ input[type=file] {
         color: red;
       }
       p{
-        padding: 10px 0 10px 10px;
+        padding: 10px 0 20px 20px;
         border-left: 2px solid #eee;
         font-size: 11px;
         font-weight: 700;
