@@ -204,7 +204,7 @@
       }
     }
     > .city-list {
-      text-align: left;
+      text-align: center;
       display: none;
       position: absolute;
       z-index: 3;
@@ -301,9 +301,6 @@
     padding-left: 0;
     padding-right: 15px;
     @include box-sizing(border-box);
-    select {
-      width:100%;
-    }
     &--type {
       display: block;
       position: relative;
@@ -381,12 +378,12 @@
     }
     &--children-category{
       width: 100%;
-      label {
-        font-family: OpenSansRegular;
-        font-size: 12px;
-      }
       .childrenCategorySelect{
         width: 100%;
+      }
+      label{
+        font-weight: 400;
+        font-size: 14px;
       }
     }
     > .ad-charasteristics-form-priece {
@@ -774,9 +771,6 @@
         font-size: 12px;
         font-weight: 700;
         text-align: left;
-        &:last-of-type{
-          font-weight:400;
-        }
       }
     }
     &--row:nth-of-type(odd){

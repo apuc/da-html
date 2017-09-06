@@ -206,9 +206,9 @@
 .fix-button {
   position: fixed;
   right: -158px;
-  top: 20%;
+  top: 25%;
   width: 195px;
-  height: 203px;
+  height: 163px;
   z-index: 2;
   @include transition(0.4s);
   @include breakpoint(max-width 600px) {
@@ -219,7 +219,7 @@
     position: relative;
     float: left;
     width: 38px;
-    height: 203px;
+    height: 163px;
     overflow: hidden;
     cursor: pointer;
     img {
@@ -322,21 +322,6 @@
     }
     &--stock:hover:before {
       background-image: url('../img/icons/bar-graph-icon.png');
-    }
-    &--advert:before {
-      display: block;
-      position: absolute;
-      content: '';
-      width: 20px;
-      height: 20px;
-      top: 6px;
-      left: 5px;
-      background-image: url('../img/icons/add-image-icon.png');
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
-    &--advert:hover:before {
-      background-image: url('../img/icons/add-image-icon.png');
     }
   }
   &__notice {
