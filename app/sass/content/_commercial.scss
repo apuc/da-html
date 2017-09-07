@@ -254,7 +254,6 @@
       text-transform: uppercase;
     }
   }
-
   &__category-list {
     display: none;
     position: absolute;
@@ -266,7 +265,7 @@
     padding: 0;
     list-style: none;
     top: 40px;
-    z-index: 2;
+    z-index: 3;
     > li {
       position: relative;
       float: left;
@@ -285,14 +284,12 @@
       }
     }
   }
-
   &__content-sidebar {
     display: block;
     position: relative;
     float: left;
     width: 174px;
   }
-
   &__sidebar-filter {
     display: block;
     position: relative;
@@ -383,6 +380,7 @@
         heigth: 100%;
       }
       label{
+        font-family: 'Open Sans', sans-serif;
         font-weight: 400;
         font-size: 14px;
       }
