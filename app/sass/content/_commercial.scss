@@ -43,6 +43,7 @@
     position: relative;
     float: left;
     width: 100%;
+    cursor: pointer;
     &--title {
       display: block;
       position: relative;
@@ -463,11 +464,11 @@
       padding: 11px 0 11px 1px;
       border-bottom: 1px solid #dedede;
       > .average-ad-item-thumb {
-        width: 25%;
-        float: left;
         display: block;
-        height: 124px;
         position: relative;
+        float: left;
+        width: 170px;
+        height: 124px;
         overflow: hidden;
         img {
           position: absolute;
@@ -478,7 +479,7 @@
         }
       }
       > .average-ad-item-content {
-        width: 75%;
+        width: calc(100% - 170px);
         float: left;
         display: inline-block;
         position: relative;
@@ -507,14 +508,23 @@
           }
         }
         > .average-ad-title {
+          display: block;
+          display: -webkit-box;
+          position: relative;
           float: left;
           width: 75%;
+          //height: calc(18px * 1.4 * 3);
           font-size: 18px;
           color: #334a51;
           font-weight: 600;
           text-decoration: none;
           text-align: left;
           margin-top: 15px;
+          line-height: 1.4;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         > .average-ad-geo {
           font-size: 12px;
