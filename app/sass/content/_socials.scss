@@ -1,0 +1,136 @@
+.social-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-left: -63px;
+  top: 115px;
+  @include breakpoint(max-width 1024px){
+    margin-left: -62px;
+  }
+  @include breakpoint(max-width 800px){
+    display: none;
+  }
+
+  a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 22px;
+    margin-bottom: 7px;
+    margin-top: 0;
+    /*border-radius: 5px;*/
+   /* transition: all .4s ease-in-out;*/
+    span {
+      display: none;
+      color: #fff;
+      position: absolute;
+      top: 9px;
+      right: 0;
+      border-left: 1px solid #fff;
+      height: 20px;
+      line-height: 16px;
+      padding-left: 6px;
+      padding-right: 6px;
+      transition: all .4s ease-in-out;
+    }
+   /* &:hover {
+      width: 60px;
+      margin-left: -25px;
+      transition: all .4s ease-in-out;
+      img {
+        left: -16px;
+        transition: all .4s ease-in-out;
+      }
+      span {
+        display: block;
+        transition: all .4s ease-in-out;
+      }
+    }*/
+    img {
+      max-width: 20px;
+      margin-top: 8px;
+      top: 0;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+     /* transition: all .4s ease-in-out;*/
+    }
+  }
+
+  .vk {
+    background-color: #527498;
+  }
+  .fb {
+    background-color: #365aa4;
+  }
+  .ok {
+    background-color: #ff8304;
+  }
+  .insta {
+    background-color: #517fa4;
+  }
+  .google {
+    background-color: #d6492f;
+  }
+  .twitter {
+    background-color: #1ab2e8;
+  }
+  .pinterest {
+    background-color: #ed1b22;
+  }
+  .telegram {
+    background: #2ca5e0;
+  }
+  .live-journal {
+    background: #16539a;
+  }
+  .in {
+    background: #007ab9;
+  }
+}
+
+.social-wrapper.fixed{
+  position: fixed;
+  top: 0;
+  /*margin-left: 258px;*/
+}
+.social-wrapper.absolute{
+  position: absolute;
+  /*bottom: 50px;*/
+  top: 0;
+  /*left: -293px;*/
+}
+.social-wrapper.move {
+  margin-top: 116px;
+}
+.vk {
+  background-color: #527498;
+}
+.fb {
+  background-color: #365aa4;
+}
+.ok {
+  background-color: #ff8304;
+}
+.insta {
+  background-color: #517fa4;
+}
+.google {
+  background-color: #d6492f;
+}
+.twitter {
+  background-color: #1ab2e8;
+}
+.pinterest {
+  background-color: #ed1b22;
+}
+.telegram {
+  background: #2ca5e0;
+}
+.live-journal {
+  background: #16539a;
+}
+.in {
+  background: #007ab9;
+}

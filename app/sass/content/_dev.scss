@@ -1,0 +1,338 @@
+.dev {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: calc(100% - (68px + 200px));
+  background-color: #edeef0;
+  &__mistake {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 65px;
+    margin-bottom: 0;
+    color: rgba(13, 36, 46, 0.8);
+    font-size: 60px;
+    font-weight: 700;
+    @include breakpoint(max-width 660px){
+      font-size: 30px;
+    }
+  }
+  &__wrapper {
+    display: block;
+    position: relative;
+    float: left;
+    width: 50%;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
+    > .show-more {
+      float: left;
+      margin-top: 20px;
+      margin-bottom: 42px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &__banner {
+    display: block;
+    position: relative;
+    float: left;
+    color: #ff1f1d;
+    font-size: 150px;
+    font-weight: 700;
+    @include breakpoint(max-width 660px){
+      font-size: 30px;
+    }
+  }
+  &__news-banner {
+    display: block;
+    position: relative;
+    float: left;
+    color: #ff1f1d;
+    font-size: 48px;
+    font-weight: 700;
+    @include breakpoint(max-width 660px){
+      font-size: 30px;
+    }
+  }
+  &__notice {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    > a {
+      color: #ff1f1d;
+      text-decoration: underline;
+      &:hover {
+        color: #ff1f1d;
+        text-decoration: none;
+      }
+    }
+  }
+  &__photo {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -317px;
+    width: 50%;
+    margin-top: 0;
+    padding-left: 42px;
+    padding-right: 42px;
+    @include box-sizing(border-box);
+    img {
+      size: 100%;
+      object-fit: contain;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
+    }
+  }
+  &__news-photo {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -426px;
+    width: 50%;
+    margin-top: 0;
+    padding-left: 42px;
+    padding-right: 42px;
+    @include box-sizing(border-box);
+    img {
+      size: 70% 100%;
+      object-fit: contain;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
+    }
+  }
+  &__poster-photo {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -426px;
+    width: 50%;
+    margin-top: 0;
+    padding-left: 42px;
+    padding-right: 42px;
+    @include box-sizing(border-box);
+    img {
+      size: 100% 100%;
+      object-fit: contain;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
+    }
+  }
+  &__elements {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+    background-color: #ffffff;
+    padding-bottom: 54px;
+    @include box-sizing(border-box);
+    margin-top: 0;
+    margin-bottom: 54px;
+    > .main-title {
+      float: right;
+      margin-right: 62px;
+    }
+    &--news {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      position: relative;
+      float: left;
+      width: 100%;
+      > .stock__item {
+        width: 270px;
+        margin-top: 11px;
+        margin-bottom: 11px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 1px solid rgba(185, 196, 213, 0.48);
+        background-color: #ffffff;
+      }
+    }
+  }
+  &__title {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #424141;
+    font-size: 69px;
+    font-family: $BebasNeueBoldRegular;
+    @include breakpoint(max-width 660px) {
+      font-size: 20px;
+    }
+  }
+  &__subtitle {
+    display: block;
+    position: relative;
+    float: left;
+    width: 750px;
+    margin-left: calc(50% - (750px / 2));
+    margin-bottom: 54px;
+    margin-top: 42px;
+    font-size: 29px;
+    line-height: 39px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #424141;
+    @include breakpoint(max-width 660px) {
+      font-size: 16px;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    > a {
+      color: #ee2e24;
+      font-weight: 900;
+    }
+  }
+  &__form {
+    width: 600px;
+    float: left;
+    position: relative;
+    margin-left: calc(50% - 600px / 2);
+    margin-top: 0;
+    margin-bottom: 250px;
+    @include breakpoint(max-width 1920px) {
+      margin-bottom: 305px;
+    }
+    @include breakpoint(max-width 1690px) {
+      margin-bottom: 250px;
+    }
+    @include breakpoint(max-width 1440px) {
+      margin-bottom: 250px;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+    > input[type='text'] {
+      width: 70%;
+      display: inline-block;
+      float: left;
+      height: 45px;
+      border: none;
+      padding-left: 20px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #e7e7e7;
+      padding-right: 10px;
+    }
+    > button {
+      display: inline-block;
+      width: 30%;
+      float: left;
+      height: 45px;
+      color: #fff;
+      background-color: #ee2e24;
+      border-radius: 5px;
+      border: none;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 15px;
+      text-transform: uppercase;
+      @include transition(0.4s);
+      cursor: pointer;
+      @include breakpoint(max-width 660px) {
+        font-size: 10px;
+      }
+      &:hover {
+        @include transition(0.4s);
+        background-color: rgba(238, 46, 36, .8);
+      }
+    }
+  }
+  &__tech {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+    background: url('../img/content/dev-tech-bg.png') center center no-repeat;
+    &:before{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(255,255,255,0.9);
+    }
+    &--title {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 141px;
+      margin-bottom: 80px;
+      > p {
+        position: relative;
+        float: left;
+        color: #515253;
+        font-size: 40px;
+        width: 100%;
+        margin: 40px;
+        clear: both;
+        @include breakpoint(max-width 660px){
+          font-size: 25px;
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
+    }
+    &--icon {
+      display: block;
+      position: relative;
+      float: left;
+      width: 183px;
+      height: 184px;
+    }
+    &--big{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 183px);
+      font-size: 64px;
+      font-weight: 700;
+      color: #e30613;
+      @include breakpoint(max-width 770px){
+        font-size: 48px;
+      }
+      @include breakpoint(max-width 660px){
+        font-size: 30px;
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+    &--img {
+      width: 70%;
+      margin: 0 auto;
+      z-index: 2;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

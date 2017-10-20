@@ -1,0 +1,52 @@
+.breadcrumbs-wrap{
+  width: 100%;
+  float: left;
+  background-image: url("../img/breadcrumbs.png");
+  // min-height: 130px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .breadcrumbs{
+    width: 100%;
+    float: left;
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    @include breakpoint(max-width 660px){
+      flex-wrap: wrap;
+    }
+    li{
+      list-style-type: none;
+      display: inline-block;
+      float: left;
+      margin-right: 20px;
+      position: relative;
+      &::after{
+        content: "/";
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        // size: 10px;
+        position: absolute;
+        left: 100%;
+        margin-top: -23px;
+        margin-left: 7px;
+      }
+      &:last-of-type{
+        pointer-events: none;
+        cursor: default;
+        &::after{
+          content: "";
+          display: none;
+        }
+      }
+      a{
+        color: #060000;
+        font-size: 13px;
+        line-height: 23px;
+      }
+    }
+  }
+}

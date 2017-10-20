@@ -1,0 +1,55 @@
+@media only screen and (max-width: 1999px) {
+  .cabinet__container .right .content-forma .content-dannie {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+
+}
+
+@media only screen and (max-width: 770px) {
+  .fix-button {
+    display: none;
+  }
+  .fix-button__notice {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  .register .register-form-container .panel {
+
+  }
+  .register .register-form-container .panel .panel-body > form .control-label {
+    width: 100%;
+  }
+
+  .register .register-form-container .panel .panel-body > form .form-control {
+    display: block;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 680px) {
+  .cabinet__container_white {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .field-login-form-rememberme label {
+    padding-left: 0;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+
+}

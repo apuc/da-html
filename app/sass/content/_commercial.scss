@@ -1,0 +1,1001 @@
+.commercial {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #edeef0;
+  &__wrapper {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 25px;
+    @include breakpoint(max-width 660px) {
+      margin-top: 36px;
+    }
+  }
+  &__content {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (14px + 260px));
+    min-height: 624px;
+    padding-top: 25px;
+    padding-left: 27px;
+    padding-right: 27px;
+    @include box-sizing(border-box);
+    margin-bottom: 60px;
+    margin-right: 14px;
+    background-color: #fff;
+    @include breakpoint(max-width 992px) {
+      padding: 15px 15px;
+    }
+    @include breakpoint(max-width 770px) {
+      width: calc(100% - (14px + 220px));
+    }
+    @include breakpoint(max-width 660px) {
+      padding: 10px;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  &__new-ads {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    a {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+      align-items: center;
+      .plus {
+        text-align: center;
+        border-radius: 5px;
+        background: #ee2e24;
+        width: 38px;
+        min-width: 38px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        margin-right: 15px;
+      }
+      span {
+        display: inline-block;
+        color: #172831;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__category {
+    display: block;
+    position: relative;
+    float: left;
+    width: 174px;
+  }
+  &__trigger {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    &--title {
+      display: block;
+      position: relative;
+      float: left;
+      color: #0c242e;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 25px;
+    }
+    &--icon {
+      display: block;
+      position: relative;
+      float: left;
+      width: 5px;
+      height: 4px;
+      margin-top: 13px;
+      margin-left: 7px;
+      background-image: url('../img/icons/triangle-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: 100% 100%;
+      background-size: 100% 100%;
+    }
+  }
+  &__search-form {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (174px));
+    height: 35px;
+    border: 1px solid #ff0200;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+    > .input-search {
+      width: 33%;
+      float: left;
+      display: inline-block;
+      height: 33px;
+      background-color: #fff;
+      border: none;
+      padding-left: 20px;
+      z-index: 1;
+      position: relative;
+      outline: none;
+      border-radius: 50%;
+      @include breakpoint(max-width 992px) {
+        width: 100%;
+      }
+    }
+    > .region {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      font-size: 14px;
+      color: #0c242e;
+      @include box-sizing(border-box);
+      float: none;
+      margin-right: 20px;
+      margin-top: 4px;
+      @include breakpoint(max-width 992px) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 20px;
+      }
+      > .location-mark {
+        background-size: contain;
+        background-image: url('../img/icons/cabinet-placeholder-icon.png');
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 3px;
+      }
+    }
+    > .region-list {
+      text-align: center;
+      display: none;
+      position: absolute;
+      z-index: 3;
+      right: 0;
+      top: 40px;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      @include box-sizing(border-box);
+      border: 1px solid #ff0200;
+      span {
+        min-width: 30%;
+        padding: 0 10px;
+        @include box-sizing(border-box);
+        font-size: 13px;
+        color: #334a51;
+        text-align: left;
+        cursor: pointer;
+      }
+      > .russia-list {
+        text-align: center;
+        display: none;
+        position: absolute;
+        z-index: 3;
+        right: 0;
+        top: 40px;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        @include box-sizing(border-box);
+        border: 1px solid #ff0200;
+        > ul {
+          width: 100%;
+          padding: 0;
+          margin: 0 auto;
+          -moz-column-count: 4;
+          -moz-column-width: 20%;
+          -moz-column-gap: 10px;
+          -webkit-column-count: 4;
+          -webkit-column-width: 20%;
+          -webkit-column-gap: 10px;
+          column-count: 4;
+          column-width: 20%;
+          column-gap: 10px;
+          > .republic {
+            width: 95%;
+            display: inline-block;
+            color: #334a51;
+            font-size: 13px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    > .city {
+      display: none;
+      position: relative;
+      cursor: pointer;
+      font-size: 14px;
+      color: #0c242e;
+      @include box-sizing(border-box);
+      float: none;
+      //margin-right: 20px;
+      margin-right: 0;
+      @include breakpoint(max-width 992px) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 20px;
+      }
+      > .hotel-icon {
+        display: inline-block;
+        position: relative;
+        width: 21px;
+        height: 19px;
+        background-repeat: no-repeat;
+        top: 3px;
+        background-size: contain;
+        background-image: url('../img/icons/hotel.png');
+      }
+    }
+    > .city-list {
+      text-align: center;
+      display: none;
+      position: absolute;
+      z-index: 3;
+      right: 0;
+      top: 40px;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      @include box-sizing(border-box);
+      border: 1px solid #ff0200;
+      > ul {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        -moz-column-count: 4;
+        -moz-column-width: 20%;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 4;
+        -webkit-column-width: 20%;
+        -webkit-column-gap: 10px;
+        column-count: 4;
+        column-width: 20%;
+        column-gap: 10px;
+        > .republic {
+          width: 95%;
+          display: inline-block;
+          color: #334a51;
+          font-size: 13px;
+          cursor: pointer;
+          text-align: left;
+        }
+      }
+    }
+    > .button-search {
+      display: block;
+      position: relative;
+      float: right;
+      border: none;
+      margin-right: -3px;
+      margin-top: -1px;
+      width: 98px;
+      height: 34px;
+      border-radius: 5px;
+      background-color: #ee2e24;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      @include breakpoint(max-width 660px) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__category-list {
+    display: none;
+    position: absolute;
+    width: 156px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    top: 89px;
+    z-index: 3;
+    > li {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #0c242e;
+      font-size: 12px;
+      font-weight: 600;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 9px;
+      @include box-sizing(border-box);
+      background-color: transparent;
+      &:hover {
+        color: #fb0023;
+        background-color: #edeef0;
+      }
+    }
+  }
+  &__content-sidebar {
+    display: block;
+    position: relative;
+    width: 174px;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+  }
+  &__sidebar-filter {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 15px;
+    @include breakpoint(max-width 660px) {
+      padding-right: 0;
+    }
+    @include box-sizing(border-box);
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+      margin-right: 0;
+    }
+    &--type {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 30px;
+      padding: 10px 0;
+      @include box-sizing(border-box);
+      border-bottom: 1px solid #dedede;
+      border-top: 1px solid #dedede;
+      > .title {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        color: #0c242e;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 0;
+      }
+      > .line-type {
+        width: 100%;
+        float: left;
+        display: inline-block;
+        @include breakpoint(max-width 660px) {
+          width: 50%;
+        }
+        @include breakpoint(max-width 992px) {
+          width: 50%;
+        }
+        > .input-checkbox {
+          display: none;
+        }
+        > .label-checkbox {
+          float: left;
+          display: inline-block;
+          position: absolute;
+          background-image: url('../img/icons/checkbox-sprite.png');
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          width: 14px;
+          height: 14px;
+          cursor: pointer;
+        }
+        > .input-checkbox:checked + .label-checkbox {
+          background-image: url('../img/icons/checkbox-sprite.png');
+          background-repeat: no-repeat;
+          height: 14px;
+          display: block;
+          background-position: -18px 0px;
+          width: 14px;
+          cursor: pointer;
+        }
+        > .text-type {
+          display: inline-block;
+          float: left;
+          color: #0c242e;
+          font-weight: 400;
+          font-size: 14px;
+          padding-left: 20px;
+          @include box-sizing(border-box);
+          line-height: 14px;
+        }
+      }
+    }
+    &--submit {
+      display: block;
+      position: relative;
+      float: left;
+      width: 109px;
+      height: 34px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ee2e24;
+      text-align: center;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &--children-category {
+      width: 100%;
+      .childrenCategorySelect {
+        width: 100%;
+        heigth: 100%;
+      }
+      label {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+      }
+    }
+    > .ad-charasteristics-form-priece {
+      width: 100%;
+      float: left;
+      display: block;
+      position: relative;
+      padding: 10px 0;
+      @include box-sizing(border-box);
+      > .ad-charasteristics-form-type-title {
+        font-size: 16px;
+        color: #0c242e;
+        font-weight: 600;
+        margin-top: 0;
+      }
+      #price, #price2 {
+        border: 1px solid #e1e1e1;
+        padding: 5px;
+        width: 65%;
+        display: inline-block;
+        color: #000;
+        font-size: 10px;
+      }
+      #options {
+        display: block;
+        width: 100%;
+        float: left;
+        label {
+          width: 45%;
+          color: #6f6f6f;
+          font-size: 10px;
+        }
+      }
+      #slider_price {
+        margin-top: 10px;
+        background-color: #e3e3e3;
+        position: relative;
+        span {
+          cursor: pointer;
+        }
+      }
+      .ui-slider-range {
+        background-color: #fff6c4;
+      }
+      .ui-slider .ui-slider-handle {
+        background-color: #334a51;
+        cursor: pointer;
+        outline: none;
+        width: 11px;
+        height: 12px;
+        position: absolute;
+        top: 11px;
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          margin-top: -10px;
+          border-left: 6px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 10px solid #334a51;
+        }
+      }
+      .ui-slider-horizontal {
+        cursor: pointer;
+      }
+    }
+  }
+  &__ads {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (174px));
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+      height: 100%;
+    }
+    > .average-ad-item {
+      width: 100%;
+      float: left;
+      display: inline-block;
+      padding: 11px 0 11px 1px;
+      border-bottom: 1px solid #dedede;
+      > .average-ad-item-thumb {
+        display: block;
+        position: relative;
+        float: left;
+        width: 170px;
+        height: 130px;
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+          img {
+            object-fit: cover;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      > .average-ad-item-content {
+        width: calc(100% - 170px);
+        float: left;
+        display: inline-block;
+        position: relative;
+        padding-left: 15px;
+        @include breakpoint(max-width 660px) {
+          width: 100%;
+          padding-left: 0;
+        }
+        > .average-ad-price {
+          float: right;
+          min-width: 25px;
+          text-align: right;
+          font-size: 18px;
+          color: #000;
+          font-weight: 700;
+          padding-right: 10px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-top: 15px;
+          @include breakpoint(max-width 992px) {
+            margin-top: 0;
+          }
+          @include breakpoint(max-width 660px) {
+            padding-right: 0;
+            margin-top: 15px;
+          }
+          .rubl-icon, .average-ad-price .rubl-icon svg, .vip-ad-price .rubl-icon, .vip-ad-price .rubl-icon svg {
+            display: inline-block;
+            width: 16px;
+            height: 13px;
+            position: relative;
+            top: -1px;
+            left: -1px;
+          }
+          .rubl-icon svg {
+            vertical-align: middle;
+          }
+        }
+        > .average-ad-title {
+          display: block;
+          display: -webkit-box;
+          position: relative;
+          float: left;
+          width: 75%;
+          @include breakpoint(max-width 1200px) {
+            width: calc(100% - 87px);
+          }
+          @include breakpoint(max-width 992px) {
+            margin-top: 0;
+          }
+          @include breakpoint(max-width 660px) {
+            width: calc(100% - 87px);
+            margin-top: 15px;
+          }
+
+          //height: calc(18px * 1.4 * 3);
+          font-size: 18px;
+          color: #334a51;
+          font-weight: 600;
+          text-decoration: none;
+          text-align: left;
+          margin-top: 15px;
+          line-height: 1.4;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        > .average-ad-geo {
+          font-size: 12px;
+          font-weight: 400;
+          color: #464646;
+          padding-left: 15px;
+          position: relative;
+          float: left;
+          width: 100%;
+          > .geo-space {
+            background-image: url('../img/icons/cabinet-placeholder-icon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 12px;
+            width: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+          }
+        }
+        > .bottom-content {
+          width: 100%;
+          float: left;
+          position: relative;
+          .view {
+            position: relative;
+            float: right;
+            display: inline-block;
+            text-align: left;
+            width: 16%;
+            padding-left: 25px;
+            &:before {
+              display: block;
+              position: absolute;
+              content: "";
+              top: 4px;
+              left: 4px;
+              width: 15px;
+              height: 12px;
+              background-image: url(../img/info-icons/icon-3.png);
+              background-repeat: no-repeat;
+              background-size: contain;
+            }
+          }
+          .average-ad-time {
+            display: inline-block;
+            float: left;
+            width: 100%;
+            font-size: 12px;
+            margin: 0;
+            margin-right: 5px;
+            color: #878787;
+          }
+          .average-ad-category {
+            float: left;
+            display: inline-block;
+            font-size: 12px;
+            color: #1a97bb;
+            margin: 0 4px;
+          }
+          .separatorListCategory {
+            float: left;
+            display: inline-block;
+            line-height: 17px;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  &__ads-title {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 700;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f2f2;
+  }
+  &__ads-subtitle {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-left: 79px;
+    @include box-sizing(border-box);
+    color: #000000;
+    font-size: 15px;
+    font-weight: 700;
+    @include breakpoint(max-width 992px) {
+      padding-left: 0;
+    }
+  }
+  &__ads-slider {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 228px);
+    margin-top: 12px;
+    @include breakpoint(max-width 1200px) {
+      padding-right: 0;
+    }
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
+    &--single {
+      display: block;
+      position: relative;
+      float: left;
+      width: 400px;
+      height: 272px;
+      padding: 0 36px;
+      @include box-sizing(border-box);
+      overflow: hidden;
+      @include breakpoint(max-width 992px) {
+        width: 100%;
+      }
+      > .slide {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+          size: 100%;
+          object-fit: cover;
+        }
+      }
+      button.slick-prev.slick-arrow {
+        position: absolute;
+        width: 32px;
+        height: 28px;
+        border: none;
+        background-color: #fff;
+        top: calc(50% - (32px / 2));
+        left: 0;
+        color: transparent;
+        &:active, &:focus {
+          outline: none;
+        }
+        &:before {
+          content: "";
+          background-image: url('../img/icons/arrow-left.png');
+          background-repeat: no-repeat;
+          display: inline-block;
+          background-size: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      button.slick-next.slick-arrow {
+        position: absolute;
+        width: 32px;
+        height: 28px;
+        border: none;
+        background-color: #fff;
+        top: calc(50% - (32px / 2));
+        right: 0;
+        color: transparent;
+        &:active, &:focus {
+          outline: none;
+        }
+        &:before {
+          content: "";
+          background-image: url('../img/icons/arrow-left.png');
+          background-repeat: no-repeat;
+          display: inline-block;
+          background-size: contain;
+          width: 100%;
+          height: 100%;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &--nav {
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 400px);
+      height: 272px;
+      overflow: hidden;
+      padding: 0 38px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 1200px) {
+        display: none;
+      }
+      .slide {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 70px;
+        overflow: hidden;
+        img {
+          size: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &__ads-sidebar {
+    display: block;
+    position: relative;
+    float: left;
+    width: 228px;
+    padding-right: 38px;
+    @include box-sizing(border-box);
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+      padding-right: 0;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    > .price {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 26px;
+      margin-bottom: 16px;
+      text-align: center;
+      color: #000000;
+      font-size: 17px;
+      font-weight: 700;
+      @include breakpoint(max-width 992px) {
+        margin-top: 15px;
+        text-align: right;
+      }
+      @include breakpoint(max-width 1200px) {
+        margin-top: 0;
+        text-align: right;
+      }
+    }
+    > .show-more {
+      width: 100%;
+      font-size: 10px;
+      margin-bottom: 12px;
+    }
+    > .what-say__wrap_item {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 23px;
+      padding: 0;
+      > .thumb {
+        size: 37px;
+        margin-left: 10px;
+      }
+      > .wrapi {
+        @include breakpoint(max-width 992px) {
+          margin-top: 15px;
+          padding-left: 0;
+        }
+        p {
+          margin-top: 13px;
+          height: 17px;
+          @include breakpoint(max-width 992px) {
+            margin-top: 0;
+            padding-left: 0;
+          }
+        }
+      }
+
+    }
+  }
+  &__ads-descr {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    &--rows {
+      display: block;
+      position: relative;
+      float: left;
+      width: 330px;
+      margin-left: 35px;
+      @include breakpoint(max-width 992px) {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    &--row {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding: 8px 0 8px 10px;
+      @include box-sizing(border-box);
+      > span {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50%;
+        color: #020000;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: left;
+      }
+    }
+    &--row:nth-of-type(odd) {
+      background-color: #f1f2f2;
+    }
+    &--row:nth-of-type(even) {
+      background-color: transparent;
+    }
+    &--numbers {
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (330px + 35px));
+      padding-left: 28px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 992px) {
+        width: 100%;
+        padding-left: 0;
+      }
+      .view {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        color: #020000;
+        font-size: 12px;
+        font-weight: 700;
+        position: relative;
+        padding-left: 25px;
+        &:before {
+          display: block;
+          position: absolute;
+          content: " ";
+          top: 4px;
+          left: 4px;
+          width: 15px;
+          height: 12px;
+          background-image: url(../img/info-icons/icon-3.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      > span {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50%;
+        margin-bottom: 20px;
+        color: #020000;
+        font-size: 12px;
+        font-weight: 700;
+        @include breakpoint(max-width 992px) {
+          padding-bottom: 0;
+        }
+      }
+    }
+    > p {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 43px;
+      margin-bottom: 43px;
+      padding-left: 36px;
+      @include box-sizing(border-box);
+      color: #020000;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.2;
+      @include breakpoint(max-width 992px) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

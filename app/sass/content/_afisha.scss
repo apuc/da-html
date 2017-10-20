@@ -1,0 +1,217 @@
+.afisha {
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #f4f4f4;
+  @include breakpoint(max-width 660px){
+    .separator{
+      display: none;
+    }
+  }
+}
+
+
+.afisha-wrap {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+.afisha-wrap__event, .afisha-wrap__look {
+  width: 28%;
+  float: left;
+  position: relative;
+  text-align: center;
+  @include breakpoint(max-width 770px){
+    width: 100%;
+  }
+  h3 {
+    width: 100%;
+    float: left;
+    margin: 0;
+    text-align: left;
+    position: relative;
+    color: #030000;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 12px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    box-sizing: border-box;
+  }
+  .item {
+    width: 48%;
+    float: none;
+    position: relative;
+    height: 196px;
+    overflow: hidden;
+    margin: 0 auto 3px;
+    display: inline-block;
+    img {
+      object-fit: cover;
+      size: 100%;
+    }
+    .item-content {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 196px;
+      bottom: 0;
+
+      padding: 10px 10px;
+      @include box-sizing(border-box);
+      background-color: rgba(0, 0, 0, 0.85);
+      display: none;
+
+      .name-item, .time {
+        color: #fff;
+        font-size: 10px;
+        font-weight: 400;
+        width: 100%;
+        text-align: left;
+        float: left;
+        margin: 5px 0;
+      }
+      .type {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        float: left;
+      }
+      .name-item {
+        display: block;
+        display: -webkit-box;
+        width: 100%;
+        height: calc(17px * 1 * 4);
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .time {
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+  }
+  .item:hover .item-content {
+    display: block;
+  }
+}
+
+.afisha-wrap__yesterday {
+  width: 44%;
+  float: left;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  @include breakpoint(max-width 770px){
+    width: 100%;
+  }
+  @include breakpoint(max-width 660px){
+    width: 100%;
+  }
+  h3 {
+    width: 100%;
+    float: left;
+    margin: 0;
+    text-align: left;
+    position: relative;
+    color: #030000;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 12px;
+    margin-bottom: 20px;
+  }
+  .gallery {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 45px;
+  }
+  a {
+    width: 100%;
+    float: left;
+    color: #030000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  > .show-more{
+    color: #fff!important;
+    width: 200px!important;
+    text-align: center;
+    margin-left: calc(50% - (200px/2));
+    &:hover, &:active{
+      color: #fff
+    }
+  }
+  .main-gallery {
+    width: 100%;
+    float: left;
+    position: relative;
+    height: 280px;
+    a {
+      width: 100%;
+      float: left;
+      overflow: hidden;
+      height: 280px;
+      img {
+        size: 100%;
+        float: left;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+  }
+  .nav-gallery {
+    width: auto;
+    bottom: -38px;
+    display: inline-block;
+    height: 60px;
+    background-color: #fff;
+    padding: 5px 0;
+    box-sizing: border-box;
+    position: absolute;
+    right: 15px;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+      right: 0;
+    }
+    a {
+      size: 50px;
+      float: left;
+      overflow: hidden;
+      margin: 0 5px;
+      // height: 90px;
+      @include breakpoint(max-width 1024px) {
+        size: 50px;
+      }
+      @include breakpoint(max-width 770px) {
+        size: 50px;
+      }
+      @include breakpoint(max-width 660px) {
+        size: 30px;
+      }
+      img {
+        size: 100%;
+        float: left;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.fancybox-skin {
+  background: transparent;
+  box-shadow: transparent;
+}
