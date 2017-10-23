@@ -1252,20 +1252,20 @@ $(document).ready(function () {
 })
 ;
 //последний закомментированный скрипт
-// $(window).scroll(function () {
-//     var top = $(document).scrollTop(),
-//         h = $('body').css('height');
-//     if (top < 649) {
-//         /*$('.social-wrapper').addClass('move');
-//          $('.social-wrapper').hcSticky();*/
-//         $('#business-stock-sidebar').addClass('move');
-//         $('#business-stock-sidebar').hcSticky();
-//     } else {
-//         /*$(".social-wrapper").hcSticky();*/
-//         $('#business-stock-sidebar').hcSticky();
-//     }
-//
-// });
+$(window).scroll(function () {
+    var top = $(document).scrollTop(),
+        h = $('body').css('height');
+    if (top < 649) {
+        /*$('.social-wrapper').addClass('move');
+         $('.social-wrapper').hcSticky();*/
+        $('#business-stock-sidebar').addClass('move');
+        $('#business-stock-sidebar').hcSticky();
+    } else {
+        /*$(".social-wrapper").hcSticky();*/
+        $('#business-stock-sidebar').hcSticky();
+    }
+
+});
 var businessElement = $('#business-stock-sidebar');
 if (businessElement.length > 0) {
     var businessElementPosition = businessElement.offset().top;

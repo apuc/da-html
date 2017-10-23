@@ -12,17 +12,14 @@
   margin-right: 14px;
   padding: 0 15px;
   @include box-sizing(border-box);
-  @include breakpoint(max-width 600px) {
+  @include breakpoint(max-width 992px) {
     width: 100%;
   }
   > .stock__sm-item {
     width: calc(25% - (10px * 2));
     margin: 10px;
     @include breakpoint(max-width 992px) {
-      width: calc(30% - (10px * 2));
-    }
-    @include breakpoint(max-width 970px) {
-      width: calc(50% - (10px * 2));
+      width: calc(33% - 20px)
     }
     @include breakpoint(max-width 660px) {
       width: calc(100% - (10px * 2));
@@ -32,10 +29,7 @@
     width: calc(50% - (10px * 2));
     margin: 10px;
     @include breakpoint(max-width 992px) {
-      width: calc(30% - (10px * 2));
-    }
-    @include breakpoint(max-width 970px) {
-      width: calc(50% - (10px * 2));
+      width: calc(33% - 20px)
     }
     @include breakpoint(max-width 660px) {
       width: calc(100% - (10px * 2));
@@ -56,7 +50,7 @@
   margin-right: 14px;
   padding: 0 15px;
   @include box-sizing(border-box);
-  @include breakpoint(max-width 600px) {
+  @include breakpoint(max-width 770px) {
     width: 100%;
   }
   > .search-panel__form {
@@ -92,11 +86,11 @@
       text-align: left;
       white-space: nowrap;
       position: relative;
-      margin-bottom: 0;
       overflow: hidden;
       text-overflow: ellipsis;
       font-size: 13px;
       color: #030000;
+      margin-bottom: 10px;
       &:before {
         top: 4px;
         left: 0;
@@ -134,12 +128,22 @@
   @include breakpoint(max-width 960px){
     width: 300px;
   }
+  @include breakpoint(max-width 770px){
+    width: 100%;
+    padding: 0;
+  }
   > .stock__sm-item--time {
     margin-top: 44px;
+    @include breakpoint(max-width 770px){
+      margin-top: 0;
+    }
     > p {
       line-height: 2;
       &:before {
         top: 13px;
+        @include breakpoint(max-width 770px){
+          top: 2px;
+        }
       }
     }
   }
@@ -164,7 +168,7 @@
   }
   p{
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     color: #0c242e;
     font-size: 14px;
     font-weight: 600;
@@ -297,9 +301,7 @@
       position: relative;
       float: left;
       width: 100%;
-      height: calc(12px * 1.2 * 2);
       margin-top: 10px;
-      margin-bottom: 12px;
       color: #f9f7f7;
       font-size: 12px;
       font-weight: 700;
@@ -312,13 +314,15 @@
     > .views {
       display: block;
       position: relative;
-      float: right;
-      width: 60px;
-      margin-bottom: 12px;
+      float: left;
+      width: 100%;
       text-align: left;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      color: #fff;
+      margin-top: 10px;
+      padding-left: 23px;
+      &:before{
+        left: 0;
+      }
     }
   }
   &--time {
