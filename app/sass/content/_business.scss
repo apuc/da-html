@@ -96,7 +96,7 @@
       position: relative;
       float: left;
       width: 100%;
-      height: 185px;
+      height: 150px;
       overflow: hidden;
       border-radius: 6px 6px 0 0;
       img {
@@ -1397,9 +1397,8 @@
         float: left;
         width: calc(100% - (56px + 26px + 23px));
         margin-left: 23px;
-        @include breakpoint(max-width 600px) {
-          width: 100%;
-          margin-left: 0;
+        @include breakpoint(max-width 660px){
+
         }
         .date {
           display: block;
@@ -1519,7 +1518,8 @@
       width: 56px;
       height: 56px;
       margin-left: 26px;
-      margin-top: 52px;
+      margin-top: 30px;
+      margin-bottom: 30px;
       border-radius: 50%;
       overflow: hidden;
       background-color: #fff;

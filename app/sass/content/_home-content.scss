@@ -1633,7 +1633,7 @@
   padding: 5px;
   box-sizing: border-box;
   .item-small /*, .item-large*/  {
-    width: 31.1%;
+    width: 165px;
     height: 215px;
     float: left;
     position: relative;
@@ -1641,6 +1641,7 @@
     display: block;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
+    box-sizing: content-box;
     border-radius: 5px;
     @include breakpoint(max-width 1200px) {
       width: calc(50% - (6px * 2));
@@ -1656,7 +1657,8 @@
       float: left;
       width: 100%;
       position: relative;
-      height: 115px;
+      height: 110px;
+
       img {
         width: 100%;
         object-fit: cover;
@@ -1727,7 +1729,7 @@
     // }
   }
   .item-large {
-    width: 47.4%;
+    width: 252px;
     float: left;
     position: relative;
     margin: 5px;
@@ -1735,6 +1737,7 @@
     border: 2px solid #f8ac00;
     border-radius: 5px;
     min-height: 240px;
+    box-sizing: content-box;
     @include breakpoint(max-width 1024px) {
       width: calc(100% - (6px * 2));
     }
@@ -1743,7 +1746,7 @@
     }
     .thumb {
       width: 100%;
-      height: 157px;
+      height: 168px;
       position: relative;
       img {
         size: 100%;
