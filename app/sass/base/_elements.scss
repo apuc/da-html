@@ -755,8 +755,10 @@ div#business-stock-sidebar {
   background: #fff!important;
 }
 .register{
+  min-height: calc(100vh - 587px);
   @include breakpoint(max-width 992px){
     height: auto!important;
+    min-height: auto;
   }
 }
 .subscribe__wrap .errorMsgClass {
@@ -788,4 +790,10 @@ div#business-stock-sidebar {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+}
+.modal-company .rew-wrap .title{
+  margin-top: 6px;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 24px;
 }

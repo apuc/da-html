@@ -4,7 +4,11 @@
   float: left;
   width: 100%;
   height: calc(100% - (68px + 200px));
+  min-height: calc(100vh - 285px);
   background-color: #edeef0;
+  @include breakpoint(max-width 992px){
+    height: auto;
+  }
   &__mistake {
     display: block;
     position: relative;
