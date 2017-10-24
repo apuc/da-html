@@ -737,10 +737,13 @@ div#business-stock-sidebar {
 .cabinet__container .right .content-forma .form-line .memo-error{
   @include breakpoint(max-width 992px){
     right: 0!important;
-    top: -25px!important;
+    top: -17px!important;
     &:after{
      display: none;
     }
+  }
+  @include breakpoint(max-width 660px){
+    top: -3px!important;
   }
 }
 .cabinet__container .right .content-forma .form-line .memo{
@@ -796,4 +799,14 @@ div#business-stock-sidebar {
   margin-bottom: 30px;
   width: 100%;
   font-size: 24px;
+}
+.memo{
+  @include breakpoint(max-width 992px){
+    display: none!important;
+  }
+}
+.modal-categories .modal-content .modal-body .column-modal{
+ @include breakpoint(max-width 992px){
+   width: 50%!important;
+ }
 }
