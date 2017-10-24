@@ -2,15 +2,17 @@
   h3 {
     font-size: 17px;
     font-weight: 600;
-    margin-bottom: 30px;
   }
   &__ads-box {
     display: block;
     position: relative;
     float: left;
     width: calc(100% - 20px);
-    margin-left: 20px;
-    margin-bottom: 30px;
+    margin: 15px 0 15px 10px;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+      margin: 15px 0;
+    }
     &--img {
       display: block;
       position: relative;
@@ -18,6 +20,10 @@
       margin-right: 15px;
       width: 150px;
       height: 120px;
+      @include breakpoint(max-width 770px) {
+        float: none;
+        margin: 0 auto 15px auto;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -29,6 +35,12 @@
       position: relative;
       float: left;
       width: calc(67% - 145px);
+      @include breakpoint(max-width 770px) {
+        width: 70%;
+      }
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
     }
     &--data {
       font-size: 11px;
@@ -44,7 +56,6 @@
       position: relative;
       float: left;
       width: 100%;
-
       a {
         font-size: 18px;
         color: #334a51;
@@ -58,12 +69,30 @@
         overflow: hidden;
         -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
-
+        @include breakpoint(max-width 660px){
+          display: block;
+          float: left;
+          width: 65%;
+          margin-top: 0;
+          padding-right: 8px;
+        }
+        @include breakpoint(max-width 460px){
+          width: 100%;
+        }
       }
+
       p {
         color: #464646;
         font-size: 11px;
         font-weight: 400;
+        @include breakpoint(max-width 660px){
+          width: 35%;
+          display: block;
+          float: left;
+        }
+        @include breakpoint(max-width 460px){
+          width: 100%;
+        }
       }
     }
     &--edit {
@@ -72,6 +101,24 @@
       float: left;
       height: 115px;
       border-right: 4px solid #edeef0;
+      @include breakpoint(max-width 992px) {
+        float: right;
+      }
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        margin-bottom: 0;
+        height: auto;
+      }
+      .cabinet__like-block--company-edit {
+        @include breakpoint(max-width 660px) {
+          margin-bottom: 0;
+        }
+      }
+      .cabinet__like-block--company-remove {
+        @include breakpoint(max-width 660px) {
+          margin-bottom: 0;
+        }
+      }
       a {
         img {
           width: 11px;
@@ -85,6 +132,15 @@
       color: #000;
       font-size: 18px;
       font-weight: normal;
+      @include breakpoint(max-width 660px){
+        text-align: right;
+        display: inherit;
+      }
+      @include breakpoint(max-width 660px){
+        text-align: left;
+        display: inherit;
+      }
+
     }
     &--button {
       display: block;
@@ -92,12 +148,28 @@
       float: left;
       margin-top: 13px;
       margin-left: 33px;
+      @include breakpoint(max-width 1200px) {
+        float: right;
+        margin-top: 15px;
+      }
+      @include breakpoint(max-width 992px) {
+        margin-left: 0;
+      }
+      @include breakpoint(max-width 660px) {
+        margin-top: 0;
+        float: left;
+        width: 100%;
+      }
       a {
         color: #fbfbfb;
         font-size: 12px;
         font-weight: 700;
         padding: 11px 18px;
         text-transform: none;
+        @include breakpoint(max-width 660px){
+          display: block;
+          width: 100%;
+        }
       }
     }
     &--add {
@@ -125,6 +197,14 @@
       position: relative;
       width: 26.5%;
       float: right;
+      @include breakpoint(max-width 992px) {
+        width: 55%;
+        float: left;
+        margin-top: 15px;
+      }
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+      }
       span {
         font-family: 'Roboto', sans-serif;
         font-weight: 600;
@@ -141,11 +221,24 @@
         text-transform: uppercase;
       }
     }
-    .bottom-content{
+    .bottom-content {
+      @include breakpoint(max-width 992px) {
+        width: 180%;
+        display: block;
+        float: left;
+      }
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+      }
       a {
         font-size: 12px;
         font-weight: 400;
         color: #1a97bb;
+        @include breakpoint(max-width 660px){
+          width: auto;
+          display: inline-block;
+          float: none;
+        }
         &:hover {
           color: #2a6496;
         }

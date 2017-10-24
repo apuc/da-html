@@ -666,9 +666,6 @@ button#saveInfo {
   line-height: inherit;
 }
 
-.cabinet h3 {
-  margin-bottom: 0 !important;
-}
 
 aside#aside {
   @include breakpoint(max-width 660px) {

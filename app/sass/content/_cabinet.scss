@@ -6,9 +6,7 @@
   margin-top: 42px;
   margin-bottom: 34px;
   h3 {
-    @include breakpoint(max-width 660px) {
-      margin: 15px 0;
-    }
+    margin: 15px 0;
   }
   &__tollbar {
     display: block;
@@ -665,10 +663,7 @@
     margin-top: 11px;
     margin-left: 15px;
     margin-right: 11px;
-    padding-top: 21px;
-    padding-bottom: 0;
-    padding-left: 14px;
-    padding-right: 17px;
+    padding: 20px 20px;
     @include box-sizing(border-box);
     @include breakpoint(max-width 1024px) {
       height: auto;
