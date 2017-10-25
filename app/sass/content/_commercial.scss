@@ -467,7 +467,7 @@
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     &--children-category {
       width: 100%;
@@ -1026,6 +1026,11 @@
         margin-top: 10px;
         margin-bottom: 10px;
       }
+    }
+  }
+  .business__sidebar.absolute{
+    @include breakpoint(max-width 770px){
+      position: relative!important;
     }
   }
 }
