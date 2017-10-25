@@ -2153,6 +2153,13 @@
   background-color: #fff;
   overflow: hidden;
   margin-bottom: 10px;
+  @include breakpoint(max-width 770px){
+    width: 48%;
+    margin: 1%;
+  }
+  @include breakpoint(max-width 570px){
+    width: 100%;
+  }
 }
 
 .stock__item_hide {
@@ -2218,10 +2225,8 @@
   width: 100%;
   position: relative;
   text-align: center;
-  /*z-index: 6;*/
   display: inline-block;
   transition: 1s;
-  //height: 130px;
   padding: 10px 7px 8px 10px;
   @include box-sizing(border-box);
   .thumb {

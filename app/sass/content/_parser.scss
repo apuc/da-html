@@ -189,7 +189,8 @@
     break-inside: avoid;
     margin-bottom: 24px;
     margin-right: 32px;
-    padding: 17px 20px;
+    padding: 17px 0;
+  @include box-shadow(0 1px 4px 0 rgba(0,0,0,0.14));
     @include box-sizing(border-box);
     border-radius: 0 0 3px 3px;
     background-color: #ffffff;
@@ -204,6 +205,8 @@
       margin-right: 0;
     }
     &--author{
+      padding-right: 20px;
+      padding-left: 20px;
       display: block;
       position: relative;
       float: left;
@@ -212,6 +215,11 @@
       padding-bottom: 16px;
       @include box-sizing(border-box);
       border-bottom: 1px solid #edeef0;
+      @include breakpoint(max-width 410px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
       .avatar{
         display: block;
         position: relative;
@@ -233,6 +241,10 @@
         font-size: 15px;
         font-weight: 400;
         line-height: 36px;
+        @include breakpoint(max-width 410px){
+          line-height: inherit;
+          width: 56%
+        }
       }
       .date{
         display: block;
@@ -254,8 +266,12 @@
       color: #000000;
       font-size: 15px;
       font-weight: 400;
+      padding-right: 20px;
+      padding-left: 20px;
     }
     &--descr{
+      padding-right: 20px;
+      padding-left: 20px;
       display: block;
       display: -webkit-box;
       position: relative;
@@ -296,6 +312,8 @@
     &--more{
       display: block;
       position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
       float: left;
       margin-top: 15px;
       color: #fc716a;
@@ -312,6 +330,8 @@
       position: relative;
       float: left;
       width: 100%;
+      padding-right: 20px;
+      padding-left: 20px;
       margin-top: 12px;
       padding-top: 13px;
       @include box-sizing(border-box);
@@ -388,6 +408,8 @@
     }
     &--comments-block{
       display: none;
+      padding-right: 20px;
+      padding-left: 20px;
       position: relative;
       float: left;
       width: 100%;
@@ -480,6 +502,7 @@
         width: 100%;
         height: auto;
         object-fit: contain;
+
       }
     }
   }

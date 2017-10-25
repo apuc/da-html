@@ -31,7 +31,8 @@
       padding: 15px 15px;
     }
     @include breakpoint(max-width 770px) {
-      width: calc(100% - (14px + 220px));
+      width: 100%;
+      margin-right: 0;
     }
     @include breakpoint(max-width 660px) {
       padding: 10px;
@@ -46,6 +47,10 @@
     position: relative;
     width: 100%;
     margin-bottom: 20px;
+    @include breakpoint(max-width 992px) {
+      width: 174px;
+      margin-bottom: 0;
+    }
     a {
       display: flex;
       justify-content: space-between;
@@ -79,6 +84,11 @@
     position: relative;
     float: left;
     width: 174px;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
   }
   &__trigger {
     display: block;
@@ -86,6 +96,11 @@
     float: left;
     width: 100%;
     cursor: pointer;
+    @include breakpoint(max-width 992px) {
+      width: calc(100% - 174px);
+      float: right;
+      padding-right: 16px;
+    }
     &--title {
       display: block;
       position: relative;
@@ -94,6 +109,9 @@
       font-size: 14px;
       font-weight: 600;
       line-height: 25px;
+      @include breakpoint(max-width 992px) {
+        float: right;
+      }
     }
     &--icon {
       display: block;
@@ -107,6 +125,11 @@
       background-repeat: no-repeat;
       -webkit-background-size: 100% 100%;
       background-size: 100% 100%;
+      @include breakpoint(max-width 992px) {
+        position: absolute;
+        right: 3px;
+        top: -2px;
+      }
     }
   }
   &__search-form {
@@ -122,7 +145,7 @@
       margin: 10px 0;
     }
     > .input-search {
-      width: 33%;
+      width: 40%;
       float: left;
       display: inline-block;
       height: 33px;
@@ -134,7 +157,7 @@
       outline: none;
       border-radius: 50%;
       @include breakpoint(max-width 992px) {
-        width: 100%;
+        width: 29%;
       }
     }
     > .region {
@@ -148,10 +171,10 @@
       margin-right: 20px;
       margin-top: 4px;
       @include breakpoint(max-width 992px) {
-        width: 100%;
+        width: 50%;
         margin-left: 0;
         margin-right: 0;
-        padding: 0 20px;
+        padding: 0 10px;
       }
       > .location-mark {
         background-size: contain;
@@ -289,15 +312,16 @@
       border: none;
       margin-right: -3px;
       margin-top: -1px;
-      width: 98px;
-      height: 34px;
+      width: 38px;
+      height: 35px;
       border-radius: 5px;
       background-color: #ee2e24;
       color: #ffffff;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      @include breakpoint(max-width 660px) {
+      @include breakpoint(max-width 992px) {
+        margin-top: 0;
         margin-right: 0;
       }
     }
@@ -312,7 +336,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    top: 89px;
+    top: 87px;
+    right: 0;
     z-index: 3;
     > li {
       position: relative;
@@ -330,6 +355,9 @@
         color: #fb0023;
         background-color: #edeef0;
       }
+    }
+    @include breakpoint(max-width 992px) {
+      top: 30px;
     }
   }
   &__content-sidebar {
@@ -357,6 +385,7 @@
     @include breakpoint(max-width 992px) {
       width: 100%;
       margin-right: 0;
+      padding-right: 0;
     }
     &--type {
       display: block;
@@ -438,6 +467,7 @@
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
+      margin-bottom: 10px;
     }
     &--children-category {
       width: 100%;

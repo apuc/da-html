@@ -807,3 +807,8 @@ div#business-stock-sidebar {
    width: 50%!important;
  }
 }
+div#w0-warning-0 {
+  @include breakpoint(max-width 992px){
+    display: none!important;
+  }
+}

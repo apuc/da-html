@@ -17,9 +17,10 @@
   padding: 0;
   margin: 0;
   margin-top: 15px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   @include breakpoint(max-width 660px){
     flex-wrap: wrap;
+    margin-bottom: 15px;
   }
   li{
     list-style-type: none;
@@ -33,7 +34,7 @@
       background-size: contain;
       display: block;
       // size: 10px;
-      font-size: 16px;
+      font-size: 15px;
       position: absolute;
       left: 100%;
       margin-top: -21px;
@@ -43,7 +44,7 @@
       pointer-events: none;
       cursor: default;
       color: #ee2e24;
-      font-size: 16px;
+      font-size: 15px;
       &::after{
         content: "";
         display: none;
@@ -51,7 +52,7 @@
     }
     a{
       color: #060000;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 23px;
       text-decoration: underline;
     }
