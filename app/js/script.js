@@ -1273,6 +1273,7 @@ if (businessElement.length > 0) {
         fixedScroll(businessElement, businessElementPosition, $('.footer'));
     });
 }
+
 /*fixed div function*/
 function fixedScroll(element, elementPosition, blockElement) {//функция фиксированного блока, с селекторами элемента, его позиционирования и преграждающего блока
     var top = $(document).scrollTop(),
@@ -1369,3 +1370,18 @@ $(window).scroll(function () {
 //     $('html,body').animate({scrollTop: top}, 1000);
 //     return false;
 // });
+
+$(document).ready(function () {
+    function newAtt() {
+        var el = document.querySelector(".textSearch");
+        if (window.width > 600) {
+            console.log(1);
+            el.placeholder = "Поискdsds";
+        }
+        else {
+            el.placeholder = "Поиск";
+        }
+    }
+    newAtt();
+});
+
