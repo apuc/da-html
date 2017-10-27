@@ -1251,19 +1251,21 @@ $(document).ready(function () {
 
 
     /*===============Замена плейсхолдера в поиске================*/
-    $(window).resize(function () {
-        searchPlaceholder();
-    });
-    function searchPlaceholder() {
-        var el = document.querySelector(".textSearch");
-        if ($(window).width() <= 420) {
-            el.placeholder = "Поиск";
-        }
-        else  {
-            el.placeholder = "Поиск по объявлениям";
-        }
-    }
-    searchPlaceholder();
+
+    // var el = document.querySelector(".placeholder-xs");
+    // function searchPlaceholder() {
+    //
+    //     if ($(window).width() <= 420) {
+    //         el.placeholder = "Поиск";
+    //     }
+    //     else  {
+    //         el.placeholder = "Поиск по объявлениям";
+    //     }
+    // }
+    // searchPlaceholder();
+    // $(window).resize(function () {
+    //     searchPlaceholder();
+    // });
     /*===============end замена плейсхолдера в поиске================*/
 });
 

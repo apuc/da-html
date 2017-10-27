@@ -1,22 +1,16 @@
-//.breadcrumbs-wrap{
-//  width: 100%;
-//  float: left;
-//  background-image: url("../img/breadcrumbs.png");
-//  // min-height: 130px;
-//  margin-top: 15px;
-//  margin-bottom: 15px;
-//  background-repeat: no-repeat;
-//  background-size: cover;
-//
-//}
+.breadcrumbs-wrap {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
 .breadcrumbs{
   width: 100%;
   float: left;
   position: relative;
   display: flex;
   padding: 0;
-  margin: 0;
-  margin-top: 15px;
+  margin: 15px 0;
   flex-wrap: wrap;
   @include breakpoint(max-width 660px){
     flex-wrap: wrap;

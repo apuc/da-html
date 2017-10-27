@@ -4,6 +4,14 @@
   float: left;
   width: 100%;
   min-height: calc(100vh - 285px);
+  .wrapper-sticky {
+    @include breakpoint(max-width 992px){
+      display: none!important;
+    }
+    @include breakpoint(max-width 660px){
+      display: block!important;
+    }
+  }
   table{
     @include breakpoint(max-width 660px){
       width: 100% !important;
@@ -196,7 +204,7 @@
     }
     .owl-dots {
       display: flex;
-      width: 20px;
+      width: 100px;
       margin: 60px auto;
       justify-content: space-between;
 
@@ -338,6 +346,8 @@
   position: relative;
   float: left;
   width: 100%;
+  min-height: calc(100vh - 340px);
+
   h1 {
     font-weight: 500;
     font-size: 22px;
@@ -415,10 +425,6 @@
       h2 {
         font-size: 18px;
       }
-    }
-    h2 {
-      margin: 0 0 10px 0;
-
     }
     .laws {
       .law {
