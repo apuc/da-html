@@ -164,6 +164,10 @@
       position: relative;
       outline: none;
       border-radius: 50%;
+      @include breakpoint(max-width 420px){
+        width: 20%;
+        padding-left: 10px;
+      }
     }
     > .region {
       display: inline-block;
@@ -181,6 +185,9 @@
         margin-left: 0;
         margin-right: 0;
         padding: 0 10px;
+      }
+      @include breakpoint(max-width 420px){
+        width: 65%;
       }
       > .location-mark {
         background-size: contain;
@@ -260,7 +267,7 @@
       //margin-right: 20px;
       margin-right: 0;
       @include breakpoint(max-width 992px) {
-        width: 100%;
+        width: calc(100% - 38px);
         margin-left: 0;
         margin-right: 0;
         padding: 0 20px;
@@ -871,7 +878,6 @@
     position: relative;
     float: left;
     width: 228px;
-    padding-right: 38px;
     @include box-sizing(border-box);
     @include breakpoint(max-width 992px) {
       width: 100%;

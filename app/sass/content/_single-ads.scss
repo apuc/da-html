@@ -1,12 +1,57 @@
-.commer-single-ads{
-  .commercial__wrap_item--numbers{
+.commer-single-ads {
+  .commercial__ads-sidebar > .what-say__wrap_item {
+    .wrapi {
+      top: inherit;
+      width: calc(100% - 78px) !important;
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .commercial__wrap_item--numbers {
     width: 100%;
     position: relative;
     float: left;
     display: flex;
     flex-wrap: wrap;
+    span {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 20px;
+      color: #020000;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .number-ads{
+      width: 82%;
+    }
+    .view {
+      display: inline-block;
+      float: right;
+      width: 18%;
+      color: #020000;
+      font-size: 12px;
+      font-weight: 700;
+      position: relative;
+      padding-left: 0;
+      &:before{
+        display: block;
+        position: absolute;
+        content: " ";
+        top: 4px;
+        left: -18px;
+        width: 15px;
+        height: 12px;
+        background-image: url(../img/info-icons/icon-3.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
   }
-  .commercial__ads-sidebar>.price{
+  .commercial__ads-sidebar > .price {
     text-align: right;
   }
 }

@@ -114,13 +114,6 @@
   border: 1px solid transparent;
   padding: 15px;
   box-sizing: border-box;
-  &:hover {
-    border: 1px solid #d0d2d6;
-    transition: 200ms ease;
-    .name {
-      color: #ff0200;
-    }
-  }
   @include breakpoint(max-width 992px){
     width: 32%;
   }

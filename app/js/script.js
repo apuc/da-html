@@ -1249,23 +1249,40 @@ $(document).ready(function () {
     }
     /*close*/
 
-})
-;
-//последний закомментированный скрипт
-$(window).scroll(function () {
-    var top = $(document).scrollTop(),
-        h = $('body').css('height');
-    if (top < 649) {
-        /*$('.social-wrapper').addClass('move');
-         $('.social-wrapper').hcSticky();*/
-        $('#business-stock-sidebar').addClass('move');
-        $('#business-stock-sidebar').hcSticky();
-    } else {
-        /*$(".social-wrapper").hcSticky();*/
-        $('#business-stock-sidebar').hcSticky();
-    }
 
+    /*===============Замена плейсхолдера в поиске================*/
+    $(window).resize(function () {
+        searchPlaceholder();
+    });
+    function searchPlaceholder() {
+        var el = document.querySelector(".textSearch");
+        if ($(window).width() <= 420) {
+            el.placeholder = "Поиск";
+        }
+        else  {
+            el.placeholder = "Поиск по объявлениям";
+        }
+    }
+    searchPlaceholder();
+    /*===============end замена плейсхолдера в поиске================*/
 });
+
+
+//последний закомментированный скрипт
+// $(window).scroll(function () {
+//     var top = $(document).scrollTop(),
+//         h = $('body').css('height');
+//     if (top < 649) {
+//         /*$('.social-wrapper').addClass('move');
+//          $('.social-wrapper').hcSticky();*/
+//         $('#business-stock-sidebar').addClass('move');
+//         $('#business-stock-sidebar').hcSticky();
+//     } else {
+//         /*$(".social-wrapper").hcSticky();*/
+//         $('#business-stock-sidebar').hcSticky();
+//     }
+//
+// });
 var businessElement = $('#business-stock-sidebar');
 if (businessElement.length > 0) {
     var businessElementPosition = businessElement.offset().top;
@@ -1371,17 +1388,4 @@ $(window).scroll(function () {
 //     return false;
 // });
 
-$(document).ready(function () {
-    function newAtt() {
-        var el = document.querySelector(".textSearch");
-        if (window.width > 600) {
-            console.log(1);
-            el.placeholder = "Поискdsds";
-        }
-        else {
-            el.placeholder = "Поиск";
-        }
-    }
-    newAtt();
-});
 
