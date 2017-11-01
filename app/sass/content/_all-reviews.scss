@@ -10,6 +10,9 @@
     display: block;
     position: relative;
     float: left;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
     &__header {
       position: relative;
       float: left;
@@ -29,6 +32,10 @@
         width: 60%;
         margin-top: 50px;
         margin-bottom: 30px;
+        @include breakpoint(max-width 660px){
+          width: 100%;
+        }
+
       }
     }
     &__content {
@@ -46,6 +53,7 @@
         max-width: 585px;
         width: 100%;
         display: block;
+        padding: 0 15px;
         margin: 25px auto 40px auto;
       }
       .what-say__wrap {
@@ -57,7 +65,13 @@
       }
       .what-say__wrap_item {
         width: 30%;
-        margin: 1% auto
+        margin: 1% auto;
+        @include breakpoint(max-width 660px){
+          width:45%;
+        }
+        @include breakpoint(max-width 550px){
+          width: 100%;
+        }
       }
     }
   }
@@ -71,6 +85,9 @@
         bottom: -15px;
         border-top: 14px solid #ee2e24;
       }
+    }
+    @include breakpoint(max-width 1024px){
+      width: 24%;
     }
   }
 }
