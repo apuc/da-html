@@ -568,10 +568,10 @@ button#saveInfo {
   cursor: pointer;
   height: auto;
   width: auto;
-  @include breakpoint(max-width 992px){
+  @include breakpoint(max-width 992px) {
     float: none;
-    margin-left:0;
-    margin-right:0;
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
   }
 }
@@ -666,7 +666,6 @@ button#saveInfo {
   line-height: inherit;
 }
 
-
 aside#aside {
   @include breakpoint(max-width 660px) {
     position: relative;
@@ -712,111 +711,161 @@ div#business-stock-sidebar {
 }
 
 .select2-container--krajee {
-  @include breakpoint(max-width 660px){
-    width: 100%!important;
+  @include breakpoint(max-width 660px) {
+    width: 100% !important;
   }
 
 }
+
 .modal-categories .modal-content .modal-body .modal-item {
-  @include breakpoint(max-width 660px){
-    width: 49%!important;
+  @include breakpoint(max-width 660px) {
+    width: 49% !important;
   }
 }
-.register .panel-default>.panel-heading {
+
+.register .panel-default > .panel-heading {
   color: #333;
   background-color: transparent;
   border-color: transparent;
   text-align: center;
-  h3{
+  h3 {
     font-weight: 600;
   }
 }
-.cabinet__container .right .content-forma .form-line .memo-error{
-  @include breakpoint(max-width 992px){
-    right: 0!important;
-    top: -17px!important;
-    &:after{
-     display: none;
+
+.cabinet__container .right .content-forma .form-line .memo-error {
+  @include breakpoint(max-width 992px) {
+    right: 0 !important;
+    top: -17px !important;
+    &:after {
+      display: none;
     }
   }
-  @include breakpoint(max-width 660px){
-    top: -3px!important;
+  @include breakpoint(max-width 660px) {
+    top: -3px !important;
   }
 }
-.cabinet__container .right .content-forma .form-line .memo{
-  @include breakpoint(max-width 992px){
-    right: 0!important;
-    &:after{
+
+.cabinet__container .right .content-forma .form-line .memo {
+  @include breakpoint(max-width 992px) {
+    right: 0 !important;
+    &:after {
       display: none;
     }
   }
 }
-.sw-footer, .sw-bottom, .sw-topper{
-  background: #fff!important;
+
+.sw-footer, .sw-bottom, .sw-topper {
+  background: #fff !important;
 }
-.register{
+
+.register {
   min-height: calc(100vh - 587px);
-  @include breakpoint(max-width 992px){
-    height: auto!important;
+  @include breakpoint(max-width 992px) {
+    height: auto !important;
     min-height: auto;
   }
 }
+
 .subscribe__wrap .errorMsgClass {
   position: absolute;
   top: -20px;
-  @include breakpoint(max-width 660px){
+  @include breakpoint(max-width 660px) {
     top: -16px;
     right: 17px;
   }
 }
-.business__sidebar--add{
-  @include breakpoint(max-width 1024px){
-      margin-left: 0!important;
+
+.business__sidebar--add {
+  @include breakpoint(max-width 1024px) {
+    margin-left: 0 !important;
   }
 }
-.afisha-events__wrap .item .item-content .time{
-  @include breakpoint(max-width 992px){
-    font-size: 14px!important;
+
+.afisha-events__wrap .item .item-content .time {
+  @include breakpoint(max-width 992px) {
+    font-size: 14px !important;
   }
 }
-.afisha-events__wrap .item .item-content .name-item{
-  @include breakpoint(max-width 992px){
-    font-size: 16px!important;
-    line-height: 1.1!important;
+
+.afisha-events__wrap .item .item-content .name-item {
+  @include breakpoint(max-width 992px) {
+    font-size: 16px !important;
+    line-height: 1.1 !important;
   }
 }
-#more-company-box{
+
+#more-company-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
-.modal-company .rew-wrap .title{
+
+.modal-company .rew-wrap .title {
   margin-top: 6px;
   margin-bottom: 30px;
   width: 100%;
   font-size: 24px;
 }
-.memo{
-  @include breakpoint(max-width 992px){
-    display: none!important;
+
+.memo {
+  @include breakpoint(max-width 992px) {
+    display: none !important;
   }
 }
-.modal-categories .modal-content .modal-body .column-modal{
- @include breakpoint(max-width 992px){
-   width: 50%!important;
- }
+
+.modal-categories .modal-content .modal-body .column-modal {
+  @include breakpoint(max-width 992px) {
+    width: 50% !important;
+  }
 }
+
 div#w0-warning-0 {
-  @include breakpoint(max-width 992px){
-    display: none!important;
+  @include breakpoint(max-width 992px) {
+    display: none !important;
   }
 }
+
 select.large-select.filterAdsFields {
   width: 100%;
 }
-#article{
-  .laws .law table{
-    width: 100%!important;
+
+#article {
+  .laws .law table {
+    width: 100% !important;
   }
+}
+
+.select2-container--krajee {
+  width: 80% !important;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.search-panel__submit {
+  height: 33px !important;
+  border-radius: 0 !important;
+  margin-left: 0 !important;
+  width: 20% !important;
+}
+
+.select2-container--krajee .select2-selection--multiple {
+  border-radius: 0;
+  border: 0;
+  outline: none;
+}
+
+.select2-container--krajee.select2-container--open .select2-selection, .select2-container--krajee .select2-selection:focus {
+  box-shadow: none;
+}
+.select2-container--krajee .select2-results__option--highlighted[aria-selected]{
+  background-color: #ee2e24;
+}
+.s2-togall-button{
+  color: #ee2e24;
+}
+.select2-container--krajee .select2-results__option[aria-selected=true] {
+  color: #fff;
+  background-color: rgba(238,46,36,.5);
 }
