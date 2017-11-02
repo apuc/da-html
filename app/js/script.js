@@ -1310,7 +1310,6 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
         }
     }
 }
-
 /*close fixed div function*/
 
 /*set anonymous profile in div*/
@@ -1369,7 +1368,6 @@ function removeField(selector) {
 }
 
 /*close function*/
-
 //scroll header fixed
 
 // $(window).scroll(function () {
