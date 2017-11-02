@@ -113,7 +113,7 @@
         float: right;
         line-height: inherit;
       }
-      @include breakpoint(max-width 368px){
+      @include breakpoint(max-width 368px) {
         width: 75px;
       }
     }
@@ -135,7 +135,7 @@
         top: -2px;
         margin-top: 10px;
       }
-      @include breakpoint(max-width 368px){
+      @include breakpoint(max-width 368px) {
         margin-top: 18px;
       }
     }
@@ -164,7 +164,7 @@
       position: relative;
       outline: none;
       border-radius: 50%;
-      @include breakpoint(max-width 420px){
+      @include breakpoint(max-width 420px) {
         width: 20%;
         padding-left: 10px;
       }
@@ -186,7 +186,7 @@
         margin-right: 0;
         padding: 0 10px;
       }
-      @include breakpoint(max-width 420px){
+      @include breakpoint(max-width 420px) {
         width: 65%;
       }
       > .location-mark {
@@ -372,7 +372,7 @@
     @include breakpoint(max-width 992px) {
       top: 30px;
     }
-    @include breakpoint(max-width 368px){
+    @include breakpoint(max-width 368px) {
       top: 45px;
     }
   }
@@ -1043,9 +1043,8 @@
       }
     }
   }
-  .business__sidebar.absolute{
-    @include breakpoint(max-width 770px){
-      position: relative!important;
-    }
+  .business__sidebar.absolute {
+    position: relative !important;
+    bottom: inherit!important;
   }
 }

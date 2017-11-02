@@ -1390,7 +1390,7 @@ function removeField(selector) {
 //     return false;
 // });
 
-/*fixed menu for mobile*/
+/*fixed menu for mobile */
 var options = {
     offset: 46
 }
