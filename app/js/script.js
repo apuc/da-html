@@ -1372,13 +1372,13 @@ function removeField(selector) {
 
 //scroll header fixed
 
-$(window).scroll(function () {
-    if ($(this).scrollTop() >= $(this).height()) {
-        $('.header').addClass('scrolled');
-    } else {
-        $('.header').removeClass('scrolled');
-    }
-});
+// $(window).scroll(function () {
+//     if ($(this).scrollTop() >= $(this).height()) {
+//         $('.header').addClass('scrolled');
+//     } else {
+//         $('.header').removeClass('scrolled');
+//     }
+// });
 
 // $(document).on('click', '.subscribe-scroll', function (event) {
 //     event.preventDefault();
@@ -1390,4 +1390,8 @@ $(window).scroll(function () {
 //     return false;
 // });
 
-
+/*fixed menu for mobile*/
+var options = {
+    offset: 46
+}
+var header = new Headhesive('.header', options);

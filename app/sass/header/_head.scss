@@ -1,20 +1,9 @@
-@include breakpoint(max-width 992px){
-  .scrolled{
-    position: fixed!important;
-    z-index: 9999;
-    transition: .5s ease;
-    margin-bottom: 15px;
-  }
-}
 .header {
   width: 100%;
   float: left;
   position: relative;
   background-color: #fbfafa;
   box-shadow: 1.6px 1.2px 1.8px 0.2px rgba(0, 0, 0, 0.18);
-
-
-
   &:after {
     content: "";
     height: 34px;
@@ -29,7 +18,19 @@
     }
   }
 }
-
+.headhesive{
+  display: none;
+  @include breakpoint(max-width 992px){
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+}
+//.headhesive--stick{
+//  opacity: 1;
+//}
 .header-logo {
   size: 67px;
   float: left;
