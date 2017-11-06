@@ -1,18 +1,194 @@
-.exchange-rates{
+.exchange-rates {
   display: block;
   position: relative;
   float: left;
   width: 100%;
-  .e-content{
+  .e-content {
     width: 74%;
     margin-right: 2%;
     display: block;
     position: relative;
     float: left;
     margin-top: 50px;
-    h1{
+    h1 {
       font-size: 22px;
       font-weight: 700;
+      margin-top: 0;
     }
+    &__header {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 15px;
+      &__left {
+        display: block;
+        position: relative;
+        float: left;
+        width: 328px;
+        background: #fff;
+        ul {
+          margin: 0;
+          list-style: none;
+          width: 100%;
+          float: left;
+          padding: 12px 0;
+          display: flex;
+          justify-content: center;
+          li {
+            display: inline-block;
+            text-align: center;
+            a {
+              font-size: 14px;
+              font-weight: 900;
+              text-transform: uppercase;
+              color: #040000;
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+      }
+      &__right {
+        width: calc(100% - 328px);
+        display: block;
+        position: relative;
+        float: left;
+        ul{
+          margin: 0;
+          list-style: none;
+          width: 100%;
+          float: left;
+          padding: 12px 0;
+          display: flex;
+          justify-content: space-around;
+          li{
+          a{
+            color: #000;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+          }
+        }
+      }
+    }
+    &__wrapper{
+      width: 100%;
+      float: left;
+      background: #fff;
+      padding: 40px;
+      &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #f1f1f3;
+        padding-bottom: 15px;
+        h2{
+          margin: 0;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        a{
+          text-transform: uppercase;
+          color: #151313;
+          font-size: 12px;
+          font-weight: 700;
+          .fa{
+            color: #ff0200;
+            font-size: 15px;
+            font-weight: 700;
+            padding-left: 8px;
+          }
+        }
+      }
+      &__info{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 15px 0;
+        p{
+          display: block;
+          width: 100%;
+          font-weight: 600;
+          font-size: 12px;
+          span{
+            font-weight: 900;
+          }
+        }
+      }
+      &__table{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        table{
+          width: 100%;
+          float: left;
+          border-collapse: collapse;
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+          tr{
+            text-align: center;
+            background: #fff;
+
+            &:nth-child(2n){
+              background: #eff0f4;
+            }
+          }
+          thead{
+            tr{
+              background: #eff0f4;
+              td{
+                text-transform: uppercase;
+                width: 19%;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 15px 0;
+              }
+            }
+          }
+          tbody{
+            tr{
+              td{
+                padding: 7px 0;
+
+              }
+              .currency{
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      &__description{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+        h3{
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #878787;
+          font-weight: 600;
+          display: block;
+          position: relative;
+          width: 100%;
+        }
+        ol{
+          padding-left: 20px;
+          li{
+            padding-left: 15px;
+            font-size: 14px;
+          }
+        }
+        p{
+          font-size: 13px;
+        }
+      }
+    }
+
   }
+
 }
