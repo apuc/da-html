@@ -14,9 +14,9 @@
       display: block;
       position: relative;
       float: left;
-      width: 281px;
+      width: 100%;
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 15px;
       color: #0c242e;
       font-size: 23px;
       font-weight: 700;
@@ -29,7 +29,7 @@
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - (281px + 124px));
+    width: 80%;
     height: 43px;
     border: 1px solid #ff0200;
     padding-left: 17px;
@@ -55,7 +55,7 @@
     position: relative;
     float: left;
     width: 128px;
-    height: 43px;
+    height: 43px!important;
     margin-left: -4px;
     background-color: #ee2e24;
     border: 1px solid #ff0200;
@@ -86,7 +86,7 @@
       position: relative;
       float: left;
       margin-left: 10px;
-      a{
+      a {
         color: #f34942;
       }
     }

@@ -776,6 +776,7 @@
     }
     @include breakpoint(max-width 992px) {
       width: 100%;
+      margin-bottom: 15px;
     }
     &--single {
       display: block;
@@ -884,6 +885,7 @@
       padding-right: 0;
       display: flex;
       flex-direction: row-reverse;
+      flex-wrap: wrap;
     }
     > .price {
       display: block;
@@ -899,6 +901,7 @@
       @include breakpoint(max-width 992px) {
         margin-top: 15px;
         text-align: right;
+        width: 31%;
       }
       @include breakpoint(max-width 1200px) {
         margin-top: 0;
@@ -915,13 +918,16 @@
       margin: 0;
       margin-bottom: 23px;
       padding: 0;
+      @include breakpoint(max-width 992px) {
+        width: 69%;
+      }
       > .thumb {
         size: 37px;
         margin-left: 10px;
       }
       > .wrapi {
         @include breakpoint(max-width 992px) {
-          margin-top: 15px;
+          margin-top: 0;
           padding-left: 0;
         }
         p {
@@ -933,7 +939,6 @@
           }
         }
       }
-
     }
   }
   &__ads-descr {
@@ -1042,9 +1047,5 @@
         margin-bottom: 10px;
       }
     }
-  }
-  .business__sidebar.absolute {
-    position: relative !important;
-    bottom: inherit!important;
   }
 }
