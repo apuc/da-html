@@ -164,6 +164,8 @@
       padding-left: 14px;
       padding-right: 20px;
       @include box-sizing(border-box);
+      span
+
       span:first-of-type {
         display: block;
         position: relative;
@@ -970,6 +972,16 @@
       float: left;
       width: 320px;
       padding-left: 23px;
+      .companyDtReg {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        span{
+          font-weight: 700;
+        }
+      }
       @include box-sizing(border-box);
       @include breakpoint(max-width 1200px) {
         width: calc(100% - (110px + 15px));
@@ -981,6 +993,7 @@
         width: 100%;
         padding-left: 0;
       }
+
       h3 {
         display: block;
         position: relative;
