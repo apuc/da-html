@@ -10,6 +10,11 @@
     position: relative;
     float: left;
     margin-top: 50px;
+    @include breakpoint(max-width 992px){
+      width:100%;
+      margin-right: 0;
+      margin-top: 30px;
+    }
     h1 {
       font-size: 22px;
       font-weight: 700;
@@ -27,6 +32,9 @@
         float: left;
         width: 328px;
         background: #fff;
+        @include breakpoint(max-width 992px){
+          width: 100%;
+        }
         ul {
           margin: 0;
           list-style: none;
@@ -40,7 +48,7 @@
             text-align: center;
             a {
               font-size: 14px;
-              font-weight: 900;
+              font-weight: 600;
               text-transform: uppercase;
               color: #040000;
               display: block;
@@ -54,6 +62,9 @@
         display: block;
         position: relative;
         float: left;
+        @include breakpoint(max-width 992px){
+          width: 100%;
+        }
         ul{
           margin: 0;
           list-style: none;
@@ -62,10 +73,14 @@
           padding: 12px 0;
           display: flex;
           justify-content: space-around;
+          flex-wrap: wrap;
           li{
+            display: inline-block;
+            margin-top: 5px;
+            margin-left: 4px;
           a{
             color: #000;
-            font-weight: 600;
+            font-weight: 400;
             text-transform: uppercase;
           }
           }
@@ -77,6 +92,9 @@
       float: left;
       background: #fff;
       padding: 40px;
+      @include breakpoint(max-width 992px){
+        padding: 15px;
+      }
       &__title{
         display: flex;
         justify-content: space-between;
@@ -94,6 +112,7 @@
           color: #151313;
           font-size: 12px;
           font-weight: 700;
+          display: inherit;
           .fa{
             color: #ff0200;
             font-size: 15px;
@@ -122,9 +141,11 @@
         position: relative;
         float: left;
         width: 100%;
+        overflow: auto;
         table{
           width: 100%;
           float: left;
+          min-width: 700px;
           border-collapse: collapse;
           border-top-left-radius: 50px;
           border-top-right-radius: 50px;
@@ -141,7 +162,7 @@
               background: #eff0f4;
               td{
                 text-transform: uppercase;
-                width: 19%;
+                width: 20%;
                 font-size: 12px;
                 font-weight: 600;
                 padding: 15px 0;
@@ -188,7 +209,6 @@
         }
       }
     }
-
   }
 
 }
