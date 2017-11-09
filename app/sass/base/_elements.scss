@@ -710,12 +710,6 @@ div#business-stock-sidebar {
   }
 }
 
-.select2-container--krajee {
-  @include breakpoint(max-width 660px) {
-    width: 100% !important;
-  }
-
-}
 
 .modal-categories .modal-content .modal-body .modal-item {
   @include breakpoint(max-width 660px) {
@@ -838,7 +832,6 @@ select.large-select.filterAdsFields {
 }
 
 .select2-container--krajee {
-  width: 80% !important;
   float: left;
   margin-bottom: 20px;
 }
@@ -878,4 +871,7 @@ select.large-select.filterAdsFields {
 }
 .select2-container--krajee .select2-selection--multiple .select2-search--inline .select2-search__field{
   height: 43px;
+}
+.modal-callback__textarea{
+  overflow-x: hidden;
 }

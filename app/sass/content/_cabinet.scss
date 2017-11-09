@@ -823,8 +823,8 @@
       color: #040000;
       font-size: 17px;
       font-weight: 700;
-      @include breakpoint(max-width 600px) {
-        margin-bottom: 41px;
+      @include breakpoint(max-width 660px) {
+        margin-bottom: 20px;
       }
       &:before {
         display: block;
@@ -2318,18 +2318,21 @@
       padding: 0;
       @include box-sizing(border-box);
       @include breakpoint(max-width 600px) {
-        width: 166px;
+        width: 100%;
       }
       &:focus {
         outline: none;
       }
     }
     &--block {
-      display: none;
+      display: block;
       position: relative;
       float: left;
       width: calc(100% - (238px + 165px + 2px));
       height: 30px;
+      @include breakpoint(max-width 992px){
+        display: none;
+      }
     }
     .show-more {
       display: block;
@@ -2350,13 +2353,19 @@
       border-radius: 5px;
     }
     .cabinet__add-pkg {
-      display: block;
+      display: none;
       position: relative;
       float: left;
       margin-left: 14px;
       margin-top: 5px;
       top: 0;
       right: 0;
+      @include breakpoint(max-width 992px){
+        position: absolute;
+        top: 28px;
+        right: 3px;
+
+      }
     }
     .separator {
       top: 0;
@@ -2395,6 +2404,9 @@
         @include box-sizing(border-box);
         background-color: #ee2e24;
         border-radius: 5px;
+      }
+      @include breakpoint(max-width 992px){
+        margin-bottom: 20px;
       }
     }
     &--hover-wrapper {
@@ -2460,6 +2472,9 @@
       padding: 5px 10px;
       @include box-sizing(border-box);
       resize: none;
+      @include breakpoint(max-width 992px){
+        width: 100%;
+      }
     }
     &--social {
       display: block;
@@ -2552,7 +2567,6 @@
       height: 30px;
       line-height: 11px;
       margin-top: 20px;
-      margin-left: 163px;
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
@@ -2614,6 +2628,36 @@
     .btn-primary {
       border-color: #ee2e24;
       background-color: #ee2e24;
+    }
+    .field-news-title{
+      @include breakpoint(max-width 992px){
+        width: 100%;
+      }
+    }
+    .field-news-content{
+      @include breakpoint(max-width 992px){
+        width: 100%;
+      }
+      textarea{
+        @include breakpoint(max-width 992px){
+          width: 100%;
+        }
+      }
+    }
+    .field-company-descr{
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
+    }
+    .field-company-name{
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
+    }
+    .field-company-address{
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
     }
   }
   &__consultation {
