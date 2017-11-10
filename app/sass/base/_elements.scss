@@ -677,6 +677,7 @@ aside#aside {
 div#business-stock-sidebar {
   @include breakpoint(max-width 660px) {
     position: relative !important;
+    margin-bottom: 15px;
   }
 }
 
@@ -689,7 +690,6 @@ div#business-stock-sidebar {
     }
   }
 }
-
 .main-consultations-sidebar {
   @include breakpoint(max-width 660px) {
     width: 100% !important;
