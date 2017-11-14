@@ -48,8 +48,8 @@
     }
     &--item {
       max-width: 279px;
-      width: 100%;
       background: #fff;
+      height: 300px;
       @include breakpoint(max-width 1200px){
         margin-top: 50px;
       }

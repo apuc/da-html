@@ -10,6 +10,10 @@
     align-items: baseline;
     margin: 85px auto;
     width: 890px;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+      flex-wrap: wrap;
+    }
     .development-img{
       width: 132px;
       height: 132px;
@@ -29,6 +33,12 @@
         font-weight: 700;
         margin: 0;
         line-height: 46px;
+        @include breakpoint(max-width 992px){
+          text-align: center;
+          width: 100%;
+          font-size: 30px;
+          margin-top: 25px;
+        }
       }
       p{
         width: 100%;
@@ -37,6 +47,11 @@
         margin-top: 60px;
         line-height: 30px;
         font-weight: 700;
+        @include breakpoint(max-width 992px){
+          text-align: center;
+          width: 100%;
+          margin-top: 25px;
+        }
       }
     }
   }

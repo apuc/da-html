@@ -1400,6 +1400,6 @@ var header = new Headhesive('.header', options);
 
 //Скрип заменяет тег 'h1' в продублированной шапке на тег 'a' (SEO) !======================
 $(".headhesive .header-logo").replaceWith(function (index, oldHTML) {
-    return $("<a class='header-logo'>").html(oldHTML);
+    return $("<a href='/' class='header-logo'>").html(oldHTML);
 });
 //Конец Скрип заменяет тег 'h1' в продублированной шапке на тег 'a' (SEO) !======================
