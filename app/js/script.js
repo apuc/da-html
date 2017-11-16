@@ -1417,3 +1417,13 @@ $(".headhesive .header-logo").replaceWith(function (index, oldHTML) {
     return $("<a href='/' class='header-logo'>").html(oldHTML);
 });
 //Конец Скрип заменяет тег 'h1' в продублированной шапке на тег 'a' (SEO) !======================
+
+//currency cehcked
+
+$(function () {
+    $('.check-item>span').hide();
+    $('#subcat li').click(function () {
+        $(this).find('span:last').toggle();
+    });
+});
+//currency cehcked close

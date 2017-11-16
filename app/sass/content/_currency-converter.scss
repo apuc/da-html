@@ -1,4 +1,4 @@
-.exchange-rates {
+.currency-converter {
   display: block;
   position: relative;
   float: left;
@@ -11,8 +11,8 @@
     display: block;
     position: relative;
     float: left;
-    @include breakpoint(max-width 992px){
-      width:100%;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
       margin-right: 0;
     }
     h1 {
@@ -32,7 +32,7 @@
         float: left;
         width: 328px;
         background: #fff;
-        @include breakpoint(max-width 992px){
+        @include breakpoint(max-width 992px) {
           width: 100%;
         }
         ul {
@@ -62,10 +62,10 @@
         display: block;
         position: relative;
         float: left;
-        @include breakpoint(max-width 992px){
+        @include breakpoint(max-width 992px) {
           width: 100%;
         }
-        ul{
+        ul {
           margin: 0;
           list-style: none;
           width: 100%;
@@ -74,46 +74,46 @@
           display: flex;
           justify-content: space-around;
           flex-wrap: wrap;
-          li{
+          li {
             display: inline-block;
             margin-left: 4px;
-          a{
-            color: #000;
-            font-weight: 400;
-            text-transform: uppercase;
-          }
+            a {
+              color: #000;
+              font-weight: 400;
+              text-transform: uppercase;
+            }
           }
         }
       }
     }
-    &__wrapper{
+    &__wrapper {
       width: 100%;
       float: left;
       background: #fff;
       padding: 40px;
       margin-bottom: 150px;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         padding: 15px;
       }
-      &__title{
+      &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         border-bottom: 1px solid #f1f1f3;
         padding-bottom: 15px;
-        h2{
+        h2 {
           margin: 0;
           font-size: 18px;
           font-weight: 700;
         }
-        a{
+        a {
           text-transform: uppercase;
           color: #151313;
           font-size: 12px;
           font-weight: 700;
           display: inherit;
-          .fa{
+          .fa {
             color: #ff0200;
             font-size: 15px;
             font-weight: 700;
@@ -121,79 +121,119 @@
           }
         }
       }
-      &__info{
+      form {
+        width: 100%;
+        display: block;
+        position: relative;
+        margin-top: 20px;
+        .convert-wrap {
+          display: block;
+          position: relative;
+          float: left;
+          width: 45%;
+          label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 12px;
+          }
+          input {
+            width: 90%;
+            height: 30px;
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 0 10px;
+            box-sizing: border-box;
+          }
+          select {
+            display: inline-block;
+            width: 90%;
+            height: 30px;
+            option {
+              padding: 0 10px;
+              box-sizing: border-box;
+            }
+          }
+          .checkbox {
+            display: block;
+            position: relative;
+            float: left;
+            width: 90%;
+
+          }
+          .check-list {
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: 15px 0;
+              li {
+                font-weight: 600;
+                font-size: 13px;
+                cursor: pointer;
+                width: auto;
+              }
+              li > span {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border: 2px solid #adadad;
+                padding: 3px;
+                position: relative;
+                top: 2px;
+                margin-right: 5px;
+                text-align: center;
+                font-size: 0;
+                border-radius: 50%;
+              }
+              li > span span {
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #ff2624;
+                position: relative;
+                top: -1px;
+                left: -1px;
+              }
+            }
+          }
+        }
+        .convert-arrow {
+          display: block;
+          position: relative;
+          float: left;
+          top: 28px;
+          right: 17px;
+          .fa-angle-right {
+            font-size: 25px;
+            color: #ff2624;
+          }
+          .fa-exchange {
+            color: #000;
+          }
+        }
+      }
+      &__info {
         display: block;
         position: relative;
         width: 100%;
         margin: 15px 0;
-        p{
+        p {
           display: block;
           width: 100%;
           font-weight: 600;
           font-size: 12px;
-          span{
+          span {
             font-weight: 900;
           }
         }
       }
-      &__table{
-        display: block;
-        position: relative;
-        float: left;
-        width: 100%;
-        overflow: auto;
-        table{
-          width: 100%;
-          float: left;
-          min-width: 700px;
-          border-collapse: collapse;
-          border-top-left-radius: 50px;
-          border-top-right-radius: 50px;
-          tr{
-            text-align: center;
-            background: #fff;
-
-            &:nth-child(2n){
-              background: #eff0f4;
-            }
-          }
-          thead{
-            tr{
-              background: #eff0f4;
-              td{
-                text-transform: uppercase;
-                width: 20%;
-                font-size: 11px;
-                font-weight: 600;
-                padding: 15px 0;
-                cursor: pointer;
-                .fa{
-                  padding-left: 5px;
-                  box-sizing: border-box;
-                }
-              }
-            }
-          }
-          tbody{
-            tr{
-              td{
-                padding: 7px 0;
-
-              }
-              .currency{
-                font-weight: 700;
-              }
-            }
-          }
-        }
-      }
-      &__description{
+      &__description {
         display: block;
         position: relative;
         float: left;
         width: 100%;
         margin-top: 20px;
-        h3{
+        h3 {
           font-size: 16px;
           text-transform: uppercase;
           color: #878787;
@@ -202,14 +242,7 @@
           position: relative;
           width: 100%;
         }
-        ol{
-          padding-left: 20px;
-          li{
-            padding-left: 15px;
-            font-size: 14px;
-          }
-        }
-        p{
+        p {
           font-size: 13px;
         }
       }
