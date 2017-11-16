@@ -836,14 +836,22 @@ $(document).ready(function () {
         });
     }
     /*business sidebar scroll*/
-    var businessElement = $('#business-sidebar');
     if (businessElement.length > 0) {
-        var businessElementPosition = businessElement.offset().top;
         $(window).scroll(function () {
             fixedScroll(businessElement, businessElementPosition, $('.what-say'));
         });
     }
     /*close business sidebar scroll*/
+
+    //promotion
+
+    var promotionElement = $('#promotion-sidebar');
+    if (promotionElement.length > 0) {
+        var promotionElementPosition = promotionElement.offset().top;
+        $(window).scroll(function () {
+            fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
+        });
+    }
 
     /*single business sidebar scroll*/
     // var stockElement = $('#business-stock-sidebar');
@@ -1294,6 +1302,13 @@ if (businessElement.length > 0) {
         fixedScroll(businessElement, businessElementPosition, $('.footer'));
     });
 }
+// var businessElementS = $('#promotions-sidebar');
+// if (businessElementS.length > 0) {
+//     var businessElementPositionS = businessElementS.offset().top;
+//     $(window).scroll(function () {
+//         fixedScroll(businessElementS, businessElementPositionS, $('.footer'));
+//     });
+// }
 
 /*fixed div function*/
 function fixedScroll(element, elementPosition, blockElement) {//функция фиксированного блока, с селекторами элемента, его позиционирования и преграждающего блока
@@ -1312,7 +1327,6 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
         }
     }
 }
-
 /*close fixed div function*/
 
 /*set anonymous profile in div*/
