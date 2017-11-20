@@ -2,8 +2,8 @@
   display: block;
   position: relative;
   float: left;
-  width: 260px;
-  margin-right: 20px;
+  width: 250px;
+  margin-right: 10px;
   @include breakpoint(max-width 992px) {
     width: 100%;
   }
@@ -102,14 +102,4 @@
       }
     }
   }
-}
-.fixed{
-  position: fixed;
-  top: 0;
-  margin-left: 870px;
-}
-.absolute{
-  position: absolute;
-  bottom: 30px;
-  right: 10px;
 }

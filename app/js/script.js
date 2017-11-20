@@ -1295,7 +1295,7 @@ $(document).ready(function () {
 //     }
 //
 // });
-var businessElement = $('#business-stock-sidebar');
+var businessElement = $('#promotion-sidebar');
 if (businessElement.length > 0) {
     var businessElementPosition = businessElement.offset().top;
     $(window).scroll(function () {

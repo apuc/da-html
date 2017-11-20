@@ -875,3 +875,16 @@ select.large-select.filterAdsFields {
 .modal-callback__textarea{
   overflow-x: hidden;
 }
+input#error-user-name {
+  margin-bottom: 20px!important;
+}
+.fixed{
+  position: fixed!important;
+  top: 0;
+  margin-left: 870px;
+}
+.absolute{
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+}
