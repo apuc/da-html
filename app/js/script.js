@@ -1327,6 +1327,7 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
         }
     }
 }
+
 /*close fixed div function*/
 
 /*set anonymous profile in div*/
@@ -1426,4 +1427,27 @@ $(function () {
         $(this).find('span:last').toggle();
     });
 });
-//currency cehcked close
+
+
+
+/*=================================================================
+/ script header second menu
+==================================================================*/
+$(document).ready(function () {
+    $(".header-second-menu .second-menu-wrapper").hover(function () {
+        $(".overlay-menu").css({
+            "visibility": "visible",
+            "transition": "200ms",
+            "transform": "translateY(0%)"
+        });
+    }, function () {
+        $(".overlay-menu").css({
+            "visibility": "hidden",
+            "transition": "200ms",
+            "transform": "translateY(-100%)"
+        });
+    });
+});
+/*=================================================================
+/close script header second menu
+==================================================================*/
