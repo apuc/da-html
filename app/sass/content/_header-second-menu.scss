@@ -94,6 +94,10 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                &:last-child{
+                  left: -260px;
+                  right: inherit;
+                }
                 li {
                   width: 100%;
                   display: block;
