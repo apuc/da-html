@@ -58,6 +58,7 @@
           visibility: hidden;
           align-items: center;
           min-height: 150px;
+          background: #cecece;
           top: 39px;
           //background: #cecece;
           z-index: 10;
@@ -69,6 +70,11 @@
               height: auto;
               padding: 0;
               position: relative;
+              img{
+                height: 22px;
+                object-fit: cover;
+                width: 50px;
+              }
               &:before, &:after {
                 display: none;
               }
@@ -103,6 +109,7 @@
                   display: block;
                   position: relative;
                   a{
+
                     &:before{
                       content: "";
                       height: 1px;
@@ -157,18 +164,18 @@
   }
 }
 
-.overlay-menu {
-  background: #cecece;
-  overflow: hidden;
-  width: 100%;
-  min-height: 150px;
-  position: absolute;
-  padding: 0;
-  list-style: none;
-  visibility: hidden;
-  transition: 200ms ease;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 8;
-  top: 0;
-}
+//.overlay-menu {
+//  background: #cecece;
+//  overflow: hidden;
+//  width: 100%;
+//  min-height: 150px;
+//  position: absolute;
+//  padding: 0;
+//  list-style: none;
+//  visibility: hidden;
+//  transition: 200ms ease;
+//  justify-content: space-between;
+//  align-items: center;
+//  z-index: 8;
+//  top: 0;
+//}
