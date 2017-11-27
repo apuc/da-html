@@ -8,7 +8,7 @@
   z-index: 10;
   padding-left: 66px;
   position: relative;
-  @include breakpoint(max-width 992px){
+  @include breakpoint(max-width 992px) {
     display: none;
   }
   .second-menu-wrapper {
@@ -66,14 +66,34 @@
             margin: 0;
             padding: 0;
             position: relative;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
             li {
-              height: auto;
               padding: 0;
               position: relative;
-              img{
+              height: 100%;
+              width: 100px;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              a {
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                img {
+                  height: 100px;
+                  width: 100px;
+                  object-fit: contain;
+                }
+              }
+              &:hover {
+                background: rgba(255, 255, 255, .5);
+              }
+              img {
                 height: 22px;
                 object-fit: cover;
-                width: 50px;
               }
               &:before, &:after {
                 display: none;
@@ -100,7 +120,7 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                &:last-child{
+                &:last-child {
                   left: -260px;
                   right: inherit;
                 }
@@ -108,9 +128,9 @@
                   width: 100%;
                   display: block;
                   position: relative;
-                  a{
+                  a {
 
-                    &:before{
+                    &:before {
                       content: "";
                       height: 1px;
                       width: 12px;
