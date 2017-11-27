@@ -1433,21 +1433,53 @@ $(function () {
 /*=================================================================
 / script header second menu
 ==================================================================*/
-// $(document).ready(function () {
-//     $(".header-second-menu .second-menu-wrapper").hover(function () {
-//         $(".overlay-menu").css({
-//             "visibility": "visible",
-//             "transition": "200ms",
-//             "transform": "translateY(0%)"
-//         });
-//     }, function () {
-//         $(".overlay-menu").css({
-//             "visibility": "hidden",
-//             "transition": "200ms",
-//             "transform": "translateY(-100%)"
-//         });
-//     });
-// });
+$(document).ready(function () {
+    $(".header-second-menu .second-menu-wrapper").hover(function () {
+        $(".overlay-menu").css({
+            "visibility": "visible",
+            "transition": "200ms",
+            "transform": "translateY(0%)"
+        });
+    }, function () {
+        $(".overlay-menu").css({
+            "visibility": "hidden",
+            "transition": "200ms",
+            "transform": "translateY(-100%)"
+        });
+    });
+});
+
+$(".owl-header-second-menu").owlCarousel({
+    loop: false,
+    margin: 0,
+    nav: true,
+    navText: false,
+    navigation: true,
+    /*navigationText: true,*/
+    pagination: false,
+    items: 6,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: true
+        },
+        600: {
+            items: 1,
+            nav: true
+        },
+        1000: {
+            items: 5,
+            nav: true,
+            loop: false
+        },
+        1200: {
+            items: 6,
+            nav: true,
+            loop: false
+        }
+    }
+});
 /*=================================================================
 /close script header second menu
 ==================================================================*/
