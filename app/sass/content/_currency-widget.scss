@@ -1,0 +1,73 @@
+.currency-widget{
+  display: block;
+  position: relative;
+  float: left;
+  width: 377px;
+  margin-bottom: 20px;
+  h1{
+    font-size: 16px;
+    font-weight: 600;
+    color: #7d7e7f;
+    margin-bottom: 30px;
+  }
+  ol{
+    margin: 0;
+    padding: 0;
+  }
+  &__label{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background: transparent;
+    margin-bottom: 20px;
+    span{
+      display: inline-block;
+      padding: 8px 15px;
+      background: #fff;
+      box-sizing: border-box;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+  &__content{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    table{
+      width: 100%;
+      thead{
+        tr {
+          text-align: center;
+
+          background: #edeef0;
+          td{
+            text-transform: uppercase;
+            padding: 11px 0;
+            font-size: 12px;
+            font-weight: 600;
+            width: 33.33%;
+            text-align: center;
+          }
+        }
+      }
+      tr{
+       width: 100%;
+        &:nth-child(even){
+          background: #edeef0;
+        }
+      }
+      tbody{
+        tr{
+          text-align: center;
+          td{
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+}
