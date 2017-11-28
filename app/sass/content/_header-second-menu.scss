@@ -49,7 +49,7 @@
       li {
         height: 100%;
         display: flex;
-        padding: 10px 24px;
+        padding: 10px 0;
         &:hover .submenu-wrapper {
           visibility: visible;
           transition: 500ms ease;
@@ -197,10 +197,17 @@
             margin: 0;
             padding: 0;
             position: relative;
+            display: block;
+            float: left;
+            flex-wrap: wrap;
+            padding: 10px;
             li {
               height: auto;
               padding: 0;
               position: relative;
+              display: block;
+              float: left;
+              width: 20%;
               a {
                 padding: 0;
                 transition: 200ms ease;
@@ -310,10 +317,10 @@
     top: 29%;
     transform: translate(0, -50%);
     width: 100%;
-    .fa-angle-left{
+    .fa-angle-left {
       font-size: 35px;
     }
-    .fa-angle-right{
+    .fa-angle-right {
       font-size: 35px;
 
     }
@@ -323,7 +330,7 @@
       display: block;
       z-index: 13;
     }
-    .owl-next{
+    .owl-next {
       position: absolute;
       display: block;
       right: 10px;
