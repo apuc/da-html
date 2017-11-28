@@ -1448,6 +1448,37 @@ $(function () {
 //         });
 //     });
 // });
+
+$(".owl-header-second-menu").owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    navigation: true,
+    navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    pagination: false,
+    items: 6,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: true
+        },
+        600: {
+            items: 2,
+            nav: true
+        },
+        1000: {
+            items: 4,
+            nav: true,
+            loop: false
+        },
+        1200: {
+            items: 6,
+            nav: true,
+            loop: true
+        }
+    }
+});
 /*=================================================================
 /close script header second menu
 ==================================================================*/
