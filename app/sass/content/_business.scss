@@ -31,11 +31,13 @@
       width: 100%;
       margin-right: 0;
     }
+    margin-bottom: 10px;
     .wrapper-company-load {
       display: block;
       position: relative;
       float: left;
       width: 100%;
+      margin-bottom: 10px;
       .show-more {
         width: 160px;
         display: block;
@@ -2042,6 +2044,7 @@
     padding-right: 28px;
     @include box-sizing(border-box);
     > .more-block {
+      text-align: center;
       @include display-flex(flex);
       @include flex-direction(row);
       @include flex-wrap(wrap);
