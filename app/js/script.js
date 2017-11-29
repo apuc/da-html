@@ -1479,6 +1479,17 @@ $(".owl-header-second-menu").owlCarousel({
         }
     }
 });
+
+var parentDiv = document.querySelector('.submenu-wrapper-yet').getBoundingClientRect().right;
+var children = document.querySelectorAll('.menu-lvl-2');
+for (var i = 0; i< children.length; i++) {
+    // console.log(children[i].getBoundingClientRect().right)
+    if(children[i].getBoundingClientRect().right >= parentDiv) {
+        children[i].style.left = '-265px';
+        children[i].style.right = 'auto';
+    }
+}
+
 /*=================================================================
 /close script header second menu
 ==================================================================*/

@@ -234,7 +234,7 @@
               }
               .menu-lvl-2 {
                 position: absolute;
-                right: -265px;
+                right: -100%;
                 background: #fff;
                 z-index: 11;
                 top:0;
@@ -271,12 +271,12 @@
             a {
               line-height: 30px;
             }
-            &:last-of-type {
-              .menu-lvl-2 {
-                right: auto;
-                left: -265px;
-              }
-            }
+            //&:last-of-type {
+            //  .menu-lvl-2 {
+            //    right: auto;
+            //    left: -265px;
+            //  }
+            //}
           }
         }
       }
