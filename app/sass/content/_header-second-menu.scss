@@ -78,6 +78,14 @@
           background: #cecece;
           top: 39px;
           z-index: 10;
+          .owl-carousel .owl-stage-outer{
+            background: #cecece;
+          }
+          .owl-carousel .owl-item{
+            height: 120px;
+            display: flex;
+            justify-content: space-between;
+          }
           ul {
             margin: 0;
             padding: 0;
@@ -104,7 +112,7 @@
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-                padding: 12px;
+                padding: 28px;
                 transition: 200ms ease;
                 line-height: inherit!important;
                 span {
