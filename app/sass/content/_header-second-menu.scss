@@ -82,7 +82,7 @@
             background: #cecece;
           }
           .owl-carousel .owl-item{
-            height: 120px;
+            height: 110px;
             display: flex;
             justify-content: space-between;
           }
@@ -114,7 +114,6 @@
                 flex-wrap: wrap;
                 padding: 28px;
                 transition: 200ms ease;
-                line-height: inherit!important;
                 span {
                   display: block;
                   width: 100%;
@@ -182,9 +181,6 @@
                     }
                   }
                 }
-              }
-              a {
-                line-height: 30px;
               }
             }
           }
@@ -320,7 +316,7 @@
     display: block;
     align-items: center;
     position: absolute;
-    top: 29%;
+    top: 45%;
     transform: translate(0, -50%);
     width: 100%;
     .fa-angle-left {
