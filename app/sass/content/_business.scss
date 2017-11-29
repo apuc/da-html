@@ -51,6 +51,12 @@
   }
   &__single-content {
     background-color: #fff;
+    display: block;
+    position: relative;
+    float: left;
+    width: -webkit-calc(100% - 274px);
+    width: calc(100% - 274px);
+    margin-right: 14px;
   }
   &__title {
     display: block;
