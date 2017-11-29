@@ -6,7 +6,6 @@
   border-top: 1px solid #ddd;
   background: #fff;
   z-index: 10;
-  padding-left: 66px;
   position: relative;
   @include breakpoint(max-width 992px) {
     display: none;
