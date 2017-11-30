@@ -1430,7 +1430,7 @@ $(function () {
 
 
 /*=================================================================
-/ script header second menu
+/  header second menu
 ==================================================================*/
 $(".owl-header-second-menu").owlCarousel({
     loop: true,
@@ -1471,7 +1471,13 @@ for (var i = 0; i < children.length; i++) {
         children[i].style.right = 'auto';
     }
 }
+/*=================================================================
+/close  header second menu
+==================================================================*/
 
+/*=================================================================
+/ header second mobile menu
+==================================================================*/
 $(".button-second-menu a").click(function () {
     $(".mobile-second-menu").slideToggle("slide", function () {
     });
@@ -1483,7 +1489,6 @@ headerMenuClose.onclick = function () {
     secondHeaderMenu.style.display = 'none';
 
 };
-
 /*=================================================================
-/close script header second menu
+/ close header second mobile menu
 ==================================================================*/
