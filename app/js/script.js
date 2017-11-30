@@ -1490,6 +1490,11 @@ for (var i = 0; i< children.length; i++) {
     }
 }
 
+$( ".button-second-menu a" ).click(function() {
+    $( ".mobile-second-menu" ).slideToggle( "slow", function() {
+    });
+});
+
 /*=================================================================
 /close script header second menu
 ==================================================================*/

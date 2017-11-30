@@ -8,6 +8,7 @@
   z-index: 10;
   position: relative;
   @include breakpoint(max-width 992px) {
+    display: none;
   }
   .second-menu-wrapper {
     display: flex;
