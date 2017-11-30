@@ -1429,32 +1429,15 @@ $(function () {
 });
 
 
-
 /*=================================================================
 / script header second menu
 ==================================================================*/
-// $(document).ready(function () {
-//     $(".header-second-menu .second-menu-wrapper").hover(function () {
-//         $(".overlay-menu").css({
-//             "visibility": "visible",
-//             "transition": "200ms",
-//             "transform": "translateY(0%)"
-//         });
-//     }, function () {
-//         $(".overlay-menu").css({
-//             "visibility": "hidden",
-//             "transition": "200ms",
-//             "transform": "translateY(-100%)"
-//         });
-//     });
-// });
-
 $(".owl-header-second-menu").owlCarousel({
     loop: true,
     margin: 0,
     nav: true,
     navigation: true,
-    navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
     pagination: false,
     items: 6,
     responsiveClass: true,
@@ -1482,18 +1465,24 @@ $(".owl-header-second-menu").owlCarousel({
 
 var parentDiv = document.querySelector('.submenu-wrapper-yet').getBoundingClientRect().right;
 var children = document.querySelectorAll('.menu-lvl-2');
-for (var i = 0; i< children.length; i++) {
-    // console.log(children[i].getBoundingClientRect().right)
-    if(children[i].getBoundingClientRect().right >= parentDiv) {
+for (var i = 0; i < children.length; i++) {
+    if (children[i].getBoundingClientRect().right >= parentDiv) {
         children[i].style.left = '-265px';
         children[i].style.right = 'auto';
     }
 }
 
-$( ".button-second-menu a" ).click(function() {
-    $( ".mobile-second-menu" ).slideToggle( "slow", function() {
+$(".button-second-menu a").click(function () {
+    $(".mobile-second-menu").slideToggle("slide", function () {
     });
 });
+
+var headerMenuClose = document.querySelector('.mobile-second-menu .header-close');
+var secondHeaderMenu = document.querySelector('.mobile-second-menu');
+headerMenuClose.onclick = function () {
+    secondHeaderMenu.style.display = 'none';
+
+};
 
 /*=================================================================
 /close script header second menu
