@@ -19,6 +19,9 @@
     position: relative;
     float: left;
     width: 100%;
+    a{
+      margin: 0 4.333px 8.666px 4.333px;
+    }
     @include breakpoint(max-width 1200px) {
       display: flex;
       justify-content: space-between;
@@ -79,7 +82,6 @@
     float: left;
     width: 248px;
     height: 385px;
-   margin-bottom: 10px;
     background-color: white;
     border-radius: 6px;
 
