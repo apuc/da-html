@@ -1487,8 +1487,29 @@ var headerMenuClose = document.querySelector('.mobile-second-menu .header-close'
 var secondHeaderMenu = document.querySelector('.mobile-second-menu');
 headerMenuClose.onclick = function () {
     secondHeaderMenu.style.display = 'none';
-
+    var menuLv2 = $('.mobile-menu-lvl-2');
+    menuLv2.css({
+        transform: 'translateX(100%)'
+    });
+    $('.header-m-arrow').hide()
 };
+
+$(document).on('click', '.mobile-menu-lvl-1 li', function () {
+    var id = $(this).attr('data-menu-id');
+    var menuLv2 = $('.mobile-menu-lvl-2[data-menu-id="' + id + '"]');
+    menuLv2.css({
+        transform: 'translateX(0)'
+    });
+    $('.header-m-arrow').css('display', 'flex')
+});
+
+$(document).on('click', '.header-m-arrow', function () {
+    var menuLv2 = $('.mobile-menu-lvl-2');
+    menuLv2.css({
+        transform: 'translateX(100%)'
+    });
+    $('.header-m-arrow').hide()
+});
 /*=================================================================
 / close header second mobile menu
 ==================================================================*/
