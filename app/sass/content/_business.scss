@@ -10,7 +10,6 @@
     float: left;
     width: 100%;
     margin-top: 25px;
-
   }
   &__content {
     display: flex;
@@ -20,7 +19,7 @@
     float: left;
     width: calc(100% - 260px);
     a{
-      margin: 0 4.333px 8.666px 4.333px;
+
     }
     @include breakpoint(max-width 1200px) {
       display: flex;
@@ -87,7 +86,11 @@
     height: 385px;
     background-color: white;
     border-radius: 6px;
+    margin: 0 4.333px 8.666px 4.333px;
 
+    img{
+      margin: 0;
+    }
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
     .recommend {
       display: none;
@@ -267,6 +270,7 @@
     //margin: 5px 7px;
     border: 2px solid #f8ac00;
     box-sizing: border-box;
+    margin: 0 4.333px 8.666px 4.333px;
     .recommend {
       display: block;
     }
@@ -417,6 +421,7 @@
     float: left;
     width: 370px;
     height: 385px;
+    margin: 0 4.333px 8.666px 4.333px;
     margin-bottom: 10px;
     background-color: white;
     border-radius: 6px;
@@ -488,6 +493,7 @@
     //margin: 5px 7px;
     border: 2px solid #f8ac00;
     box-sizing: border-box;
+    margin: 0 4.333px 8.666px 4.333px;
     .recommend {
       display: block;
     }
