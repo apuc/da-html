@@ -1504,6 +1504,7 @@ $(document).on('click', '.mobile-menu-lvl-1 li', function () {
         });
         $('.header-m-arrow').css('display', 'flex');
         $('.mobile-menu-lvl-1').fadeOut('fast');
+        return false;
     } else {
     }
 
