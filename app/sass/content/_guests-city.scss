@@ -5,4 +5,60 @@
   width: 100%;
   background: #fff;
   margin-top: 30px;
+  padding: 20px;
+  h2{
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    &:before{
+      content: "";
+      background: url("../img/russ-home/icon1.png") no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      left: -25px;
+      top: -3px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &__links{
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    a{
+      font-size: 13px;
+      color: #000;
+      &:hover{
+        color: #ee2e24;
+      }
+    }
+  }
+  &__learn-more{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    &--price{
+      span{
+        display: block;
+      }
+    }
+    &--button{
+      width: 90px;
+      height: 26px;
+      line-height: 25px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      background: #ee2e24;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
 }
