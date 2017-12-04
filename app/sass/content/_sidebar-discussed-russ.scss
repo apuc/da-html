@@ -15,6 +15,7 @@
     position: relative;
     float: left;
     width: 100%;
+    border-bottom: 1px solid #d8d8d8;
     h2{
       color: #000000;
       text-align: center;
@@ -24,6 +25,7 @@
       margin-top: 0;
       line-height: 21.29px;
     }
+
     &__img {
       max-height: 250px;
       width: 100%;
@@ -34,10 +36,21 @@
         height: 100%;
       }
     }
-    p{
-      color: #000;
-      font-size: 13px;
+    &__text{
+      display: flex;
+      width: 100%;
       margin: 10px 0;
+      p{
+        color: #000;
+        font-size: 13px;
+       margin: 0;
+      }
+    }
+    &__comments{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
     }
   }
+
 }
