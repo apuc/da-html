@@ -100,14 +100,12 @@ gulp.task('extend-pages', function () {
     gulp.src('./app/html/pages/*.html')
         .pipe(extender({annotations: true, verbose: false})) // default options
         .pipe(gulp.dest('./'))
-        .pipe(browserSync.stream({}));
 });
 
 gulp.task('extend-blocks', function () {
     gulp.src('./app/html/*.html')
         .pipe(extender({annotations: true, verbose: false})) // default options
         .pipe(gulp.dest('./'))
-        .pipe(browserSync.stream({}));
 });
 
 gulp.task('watch', ['compress', 'extend-pages', 'css-libs',  'sass'], function () {

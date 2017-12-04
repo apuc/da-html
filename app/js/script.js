@@ -1499,7 +1499,6 @@ $(document).on('click', '.mobile-menu-lvl-1 li', function () {
     var menuLv2 = $('.mobile-menu-lvl-2[data-menu-id="' + id + '"]');
     if ($.trim(menuLv2.html()).length) {
         menuLv2.css({
-            // transform: 'translateX(0)'
             display: 'flex'
         });
         $('.header-m-arrow').css('display', 'flex');
@@ -1514,7 +1513,6 @@ $(document).on('click', '.mobile-menu-lvl-1 li', function () {
 $(document).on('click', '.header-m-arrow', function () {
     var menuLv2 = $('.mobile-menu-lvl-2');
     menuLv2.css({
-        // transform: 'translateX(100%)'
         display: 'none'
     });
     $('.mobile-menu-lvl-1').fadeIn('fast');
