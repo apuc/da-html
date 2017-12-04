@@ -1497,14 +1497,16 @@ headerMenuClose.onclick = function () {
 $(document).on('click', '.mobile-menu-lvl-1 li', function () {
     var id = $(this).attr('data-menu-id');
     var menuLv2 = $('.mobile-menu-lvl-2[data-menu-id="' + id + '"]');
-    if(id) {
+    if ($.trim(menuLv2.html()).length) {
         menuLv2.css({
             // transform: 'translateX(0)'
             display: 'flex'
         });
         $('.header-m-arrow').css('display', 'flex');
         $('.mobile-menu-lvl-1').fadeOut('fast');
+    } else {
     }
+
 
 });
 
@@ -1517,6 +1519,7 @@ $(document).on('click', '.header-m-arrow', function () {
     $('.mobile-menu-lvl-1').fadeIn('fast');
     $('.header-m-arrow').hide()
 });
+
 /*=================================================================
 / close header second mobile menu
 ==================================================================*/
