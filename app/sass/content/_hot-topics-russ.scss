@@ -1,0 +1,22 @@
+.home-content__hot-topics-russ{
+  display: block;
+  position: relative;
+  margin-top: 40px;
+  float: left;
+  .title{
+    position: relative;
+    width: 195px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ee2e24;
+    h2{
+      margin: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+
+    }
+  }
+}
