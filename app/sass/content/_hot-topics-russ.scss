@@ -4,11 +4,16 @@
   margin-top: 60px;
   width: 100%;
   float: left;
+  flex-wrap: wrap;
   .left-column {
     width: 310px;
     margin-right: 20px;
     position: relative;
     display: block;
+    @include breakpoint(max-width 1200px){
+      width: 100%;
+      margin-right: 0;
+    }
     .title {
       position: absolute;
       width: 195px;
@@ -85,6 +90,9 @@
     display: block;
     float: left;
     position: relative;
+    @include breakpoint(max-width 1200px){
+      width: 100%;
+    }
     &__content {
       background: #fff;
       display: block;
