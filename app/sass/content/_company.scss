@@ -97,7 +97,7 @@
   padding: 5px;
   @include box-sizing(border-box);
   .business__sm-item, .business__sm-item.favorite, .business__big-item, .business__big-item.favorite {
-    margin-right: 0;
+    margin: 0;
   }
   @include breakpoint(max-width 1200px) {
     .business__sm-item {
