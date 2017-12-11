@@ -1479,23 +1479,20 @@ $(".owl-header-second-menu").owlCarousel({
 / header second mobile menu
 ==================================================================*/
 window.onload = function(){
+
     $(".button-second-menu a").click(function () {
         $(".mobile-second-menu").slideToggle("slide", function () {
         });
     });
 
-
     var headerMenuClose = document.querySelector('.mobile-second-menu .header-close');
     var secondHeaderMenu = document.querySelector('.mobile-second-menu');
-    headerMenuClose.onclick = function () {
-        secondHeaderMenu.style.display = 'none';
-        var menuLv2 = $('.mobile-menu-lvl-2');
-        menuLv2.css({
-            // transform: 'translateX(100%)'
-        });
-        $('.header-m-arrow').hide()
-    };
-
+    if (headerMenuClose !== null) {
+        headerMenuClose.onclick = function () {
+            secondHeaderMenu.style.display = 'none';
+            $('.header-m-arrow').hide()
+        };
+    }
     $(document).on('click', '.mobile-menu-lvl-1 li', function () {
         var id = $(this).attr('data-menu-id');
         var menuLv2 = $('.mobile-menu-lvl-2[data-menu-id="' + id + '"]');
