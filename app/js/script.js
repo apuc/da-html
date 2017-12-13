@@ -1505,8 +1505,6 @@ window.onload = function(){
             return false;
         } else {
         }
-
-
     });
 
     $(document).on('click', '.header-m-arrow', function () {

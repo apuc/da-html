@@ -62,6 +62,9 @@
     width: -webkit-calc(100% - 274px);
     width: calc(100% - 274px);
     margin-right: 14px;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
   }
   &__title {
     display: block;
