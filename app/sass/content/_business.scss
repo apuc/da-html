@@ -97,6 +97,7 @@ body{
     box-shadow: 0 0 2px rgba(204, 208, 213, 0.75);
     .recommend {
       display: none;
+      background:#ee2e24;
     }
     @include breakpoint(max-width 1024px) {
       width: calc(50% - 16px);
@@ -271,7 +272,7 @@ body{
   }
   &__sm-item.favorite {
     //margin: 5px 7px;
-    border: 2px solid #f8ac00;
+    border: 2px solid #ee2e24;
     box-sizing: border-box;
     margin: 0 4.333px 8.666px 4.333px;
     .recommend {
@@ -494,7 +495,7 @@ body{
   }
   &__big-item.favorite {
     //margin: 5px 7px;
-    border: 2px solid #f8ac00;
+    border: 2px solid #ee2e24;
     box-sizing: border-box;
     margin: 0 4.333px 8.666px 4.333px;
     .recommend {
