@@ -444,6 +444,7 @@ body{
     }
     .recommend {
       display: none;
+
     }
     @include breakpoint(max-width 660px) {
       width: 100%;
@@ -500,6 +501,10 @@ body{
     margin: 0 4.333px 8.666px 4.333px;
     .recommend {
       display: block;
+      background: #ee2e24;
+      &__star{;
+        color: #f7a200;
+      }
     }
     @include breakpoint(max-width 1024px) {
       width: calc(50% - 20px);
