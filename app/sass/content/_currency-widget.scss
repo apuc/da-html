@@ -13,6 +13,9 @@
   ol{
     margin: 0;
     padding: 0;
+    @include breakpoint(max-width 992px){
+      padding-left: 30px;
+    }
   }
   &__label{
     display: block;
