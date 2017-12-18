@@ -903,13 +903,13 @@ input#error-user-name {
   position: relative;
   display: inline-block;
   margin-left: 25px;
-  margin-right: 8px;
+  margin-right: 6px;
   font-size: 13px !important;
   color: #000 !important;
   font-weight: 600;
   &:before {
     content: '';
-    left: -22px;
+    left: -17px;
     top: 4px;
     width: 13px;
     height: 13px;

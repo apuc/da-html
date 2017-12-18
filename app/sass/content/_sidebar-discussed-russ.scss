@@ -50,8 +50,25 @@
     }
     &__comments {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       width: 100%;
+      align-items: center;
+      .tag{
+        width: 84%;
+      }
+      .hashteg-mini{
+        border: 1px solid #cfe0ff;
+        border-radius: 5px;
+        padding: 3px;
+        margin: 5px;
+        font-size: 10px;
+        color: #e52d31;
+        text-transform: uppercase;
+        transition: .2s ease;
+        &:hover{
+          border: 1px solid #e52d31;
+        }
+      }
       a {
         display: inline-block;
         text-align: right;

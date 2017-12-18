@@ -5,12 +5,20 @@
   width: 100%;
   float: left;
   flex-wrap: wrap;
+  .business__sm-item--views {
+    height: auto!important;
+    &:before {
+      height: 13px;
+      width: 13px;
+      top: 3px;
+    }
+  }
   .left-column {
-    width: 310px;
-    margin-right: 20px;
+    width: 340px;
+    margin-right: 15px;
     position: relative;
     display: block;
-    @include breakpoint(max-width 1200px){
+    @include breakpoint(max-width 1200px) {
       width: 100%;
       margin-right: 0;
     }
@@ -39,7 +47,7 @@
       background: #fff;
       flex-wrap: wrap;
       margin-bottom: 15px;
-      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
       h2 {
         font-size: 16px;
         color: #0b0000;
@@ -51,13 +59,13 @@
         color: #000;
         font-size: 13px;
         width: 100%;
-        margin: 20px 0;
+        margin: 5px 0;
       }
-      .hashtag__wrapper{
+      .hashtag__wrapper {
         margin: 0;
         padding: 0;
         align-items: center;
-        p{
+        p {
           margin: 0;
         }
       }
@@ -68,13 +76,15 @@
       position: relative;
       display: flex;
       width: 100%;
-      height: 105px;
+      height: 100px;
       align-items: center;
-      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+      .hashteg-mini {
 
+      }
       img {
         width: 112px;
-        height: 100%;
+        height: 100px;
         object-fit: cover;
       }
       &__wrapper {
@@ -82,10 +92,11 @@
         box-sizing: border-box;
         display: flex;
         justify-content: center;
-        padding: 0 25px;
+        padding: 0 18px;
         align-items: center;
-        p{
-          height: calc(12px * 1.5 * 5);
+        flex-wrap: wrap;
+        p {
+          height: 57px;
           line-height: 1.2;
           -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
@@ -95,20 +106,38 @@
           margin: 0;
           font-size: 12px;
         }
+        .hashtag-wrap {
+          display: flex;
+          align-items: center;
+          .hashteg-mini{
+            border: 1px solid #cfe0ff;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            padding: 3px;
+            margin: 5px;
+            font-size: 10px;
+            color: #e52d31;
+            text-transform: uppercase;
+            transition: 200ms ease;
+            &:hover{
+              border: 1px solid #e52d31;
+            }
+          }
+        }
       }
     }
   }
   .right-column {
-    width: calc(100% - 330px);
+    width: calc(100% - 355px);
     display: block;
     float: left;
     position: relative;
-    @include breakpoint(max-width 1200px){
+    @include breakpoint(max-width 1200px) {
       width: 100%;
     }
     &__content {
       background: #fff;
-      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
       display: block;
       width: 100%;
       position: relative;
@@ -121,13 +150,16 @@
       }
       p {
         font-size: 13px;
-        border-bottom: 1px solid #dbdbdb;
+        border-bottom: 1px solid #f79f9b;
         line-height: 1.3;
-        margin: 0 20px;
+        margin: 0 15px;
         padding: 15px 0;
         display: block;
       }
-      img{
+      .border-none{
+        border: none;
+      }
+      img {
         width: 100%;
         height: 107px;
         object-fit: cover;
@@ -135,15 +167,17 @@
       }
 
     }
-    .news__wrap_item-lg{
+    .news__wrap_item-lg {
       margin: 0;
+      height: auto;
       .thumb {
-        height: 207px;
+        height: 135px;
+        margin-bottom: 15px;
         position: relative;
         width: 100%;
         float: left;
         background: transparent;
-        &:before{
+        &:before {
           content: '';
           position: absolute;
           z-index: 2;
@@ -153,7 +187,7 @@
           width: 100%;
           background-image: linear-gradient(to top, black 0%, rgba(4, 0, 1, 0.98) 2%, transparent 100%);
         }
-        .content-row h2{
+        .content-row h2 {
           font-size: 13px;
           color: #fff;
           height: calc(13px * 1.4 * 2);
@@ -163,7 +197,7 @@
           overflow: hidden;
           text-overflow: ellipsis;
         }
-        img{
+        img {
           position: absolute;
           object-fit: cover;
           size: 100%;
