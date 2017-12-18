@@ -690,6 +690,7 @@ div#business-stock-sidebar {
     }
   }
 }
+
 .main-consultations-sidebar {
   @include breakpoint(max-width 660px) {
     width: 100% !important;
@@ -709,7 +710,6 @@ div#business-stock-sidebar {
     padding-left: 0 !important;
   }
 }
-
 
 .modal-categories .modal-content .modal-body .modal-item {
   @include breakpoint(max-width 660px) {
@@ -853,38 +853,68 @@ select.large-select.filterAdsFields {
 .select2-container--krajee.select2-container--open .select2-selection, .select2-container--krajee .select2-selection:focus {
   box-shadow: none;
 }
-.select2-container--krajee .select2-results__option--highlighted[aria-selected]{
+
+.select2-container--krajee .select2-results__option--highlighted[aria-selected] {
   background-color: #ee2e24;
 }
-.s2-togall-button{
+
+.s2-togall-button {
   color: #ee2e24;
 }
+
 .select2-container--krajee .select2-results__option[aria-selected=true] {
   color: #fff;
-  background-color: rgba(238,46,36,.5);
+  background-color: rgba(238, 46, 36, .5);
 }
-.select2-container--krajee .select2-selection--multiple .select2-selection__choice{
+
+.select2-container--krajee .select2-selection--multiple .select2-selection__choice {
   margin: 11px 0 0 6px;
 }
-.select2-container--krajee .select2-selection--multiple .select2-selection__clear{
+
+.select2-container--krajee .select2-selection--multiple .select2-selection__clear {
   margin: 11px 10px 0 10px;
 }
-.select2-container--krajee .select2-selection--multiple .select2-search--inline .select2-search__field{
+
+.select2-container--krajee .select2-selection--multiple .select2-search--inline .select2-search__field {
   height: 43px;
 }
-.modal-callback__textarea{
+
+.modal-callback__textarea {
   overflow-x: hidden;
 }
+
 input#error-user-name {
-  margin-bottom: 20px!important;
+  margin-bottom: 20px !important;
 }
-.fixed{
-  position: fixed!important;
+
+.fixed {
+  position: fixed !important;
   top: 0;
   margin-left: 890px;
 }
-.absolute{
-  position: absolute!important;
+
+.absolute {
+  position: absolute !important;
   bottom: 30px;
   right: 0;
+}
+
+.comments {
+  position: relative;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 8px;
+  font-size: 13px !important;
+  color: #000 !important;
+  font-weight: 600;
+  &:before {
+    content: '';
+    left: -22px;
+    top: 4px;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    background: url("../img/icons/new-chat-icon.png") no-repeat center center;
+    background-size: contain;
+  }
 }
