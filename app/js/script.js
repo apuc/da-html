@@ -862,17 +862,17 @@ $(document).ready(function () {
     // });
     // }
 
-    /*close single business sidebar scroll*/
+    /*    close single business sidebar scroll
 
-    /*social sidebar scroll*/
-// var socialElement = $('.social-wrapper');
-// if (socialElement.length > 0) {
-//     var socialElementPosition = socialElement.offset().top;
-//     $(window).scroll(function () {
-//         fixedScroll(socialElement, socialElementPosition, $('.footer'));
-//     });
-// }
-    /*close social sidebar scroll*/
+        social sidebar scroll
+    // var socialElement = $('.social-wrapper');
+    // if (socialElement.length > 0) {
+    //     var socialElementPosition = socialElement.offset().top;
+    //     $(window).scroll(function () {
+    //         fixedScroll(socialElement, socialElementPosition, $('.footer'));
+    //     });
+    // }
+        close social sidebar scroll*/
 
     /*parser sidebar scroll*/
     var parserElement = $('#parser-sidebar');
@@ -1281,20 +1281,17 @@ $(document).ready(function () {
 
 
 //последний закомментированный скрипт
-// $(window).scroll(function () {
-//     var top = $(document).scrollTop(),
-//         h = $('body').css('height');
-//     if (top < 649) {
-//         /*$('.social-wrapper').addClass('move');
-//          $('.social-wrapper').hcSticky();*/
-//         $('#business-stock-sidebar').addClass('move');
-//         $('#business-stock-sidebar').hcSticky();
-//     } else {
-//         /*$(".social-wrapper").hcSticky();*/
-//         $('#business-stock-sidebar').hcSticky();
-//     }
-//
-// });
+$(window).scroll(function () {
+    var top = $(document).scrollTop(),
+        h = $('body').css('height');
+    if (top < 649) {
+        $('.social-wrapper').addClass('move');
+        $('.social-wrapper').hcSticky();
+    } else {
+        $(".social-wrapper").hcSticky();
+    }
+
+});
 var businessElement = $('#promotion-sidebar');
 if (businessElement.length > 0) {
     var businessElementPosition = businessElement.offset().top;
@@ -1479,7 +1476,7 @@ $(".owl-header-second-menu").owlCarousel({
 /*=================================================================
 / header second mobile menu
 ==================================================================*/
-window.onload = function(){
+window.onload = function () {
 
     $(".button-second-menu a").click(function () {
         $(".mobile-second-menu").slideToggle("slide", function () {

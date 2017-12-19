@@ -93,7 +93,8 @@
 .social-wrapper.fixed{
   position: fixed;
   top: 0;
-  /*margin-left: 258px;*/
+  left: -149px;
+  margin-left: inherit;
 }
 .social-wrapper.absolute{
   position: absolute;
