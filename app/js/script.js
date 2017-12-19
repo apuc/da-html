@@ -1281,17 +1281,7 @@ $(document).ready(function () {
 
 
 //последний закомментированный скрипт
-$(window).scroll(function () {
-    var top = $(document).scrollTop(),
-        h = $('body').css('height');
-    if (top < 649) {
-        $('.social-wrapper').addClass('move');
-        $('.social-wrapper').hcSticky();
-    } else {
-        $(".social-wrapper").hcSticky();
-    }
 
-});
 var businessElement = $('#promotion-sidebar');
 if (businessElement.length > 0) {
     var businessElementPosition = businessElement.offset().top;
@@ -1514,8 +1504,28 @@ window.onload = function () {
         $('.header-m-arrow').hide()
     });
 };
-
-
+// var menulvl2= document.querySelectorAll('.menu-lvl-2');
+// if (menulvl2 !== null) {
+//
+// }
 /*=================================================================
 / close header second mobile menu
 ==================================================================*/
+
+/*=================================================================
+/ scroll social-sidebar single news
+==================================================================*/
+$(window).scroll(function () {
+    var top = $(document).scrollTop(),
+        h = $('body').css('height');
+    if (top < 649) {
+        $('.social-wrapper').addClass('move');
+        $('.social-wrapper').hcSticky();
+    } else {
+        $(".social-wrapper").hcSticky();
+    }
+});
+/*=================================================================
+/ close scroll social-sidebar single news
+==================================================================*/
+
