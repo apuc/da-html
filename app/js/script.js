@@ -1420,7 +1420,7 @@ $(function () {
 /  header second menu
 ==================================================================*/
 $(".owl-header-second-menu").owlCarousel({
-    loop: true,
+    loop: false,
     margin: 0,
     nav: true,
     navigation: true,
@@ -1446,7 +1446,7 @@ $(".owl-header-second-menu").owlCarousel({
         1200: {
             items: 6,
             nav: true,
-            loop: true
+            loop: false
         }
     }
 });
