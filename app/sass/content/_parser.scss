@@ -425,6 +425,18 @@
         width: 35px;
         height: 35px;
         margin-right: 8px;
+        span{
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          height: 35px;
+          width: 100%;
+          border-radius: 50%;
+          border: 1px solid gray;
+          color: #ee2e24;
+          font-weight: 600;
+          font-size: 19px;
+        }
         img{
           size: 100%;
           border-radius: 50%;
