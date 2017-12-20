@@ -235,11 +235,11 @@
               }
               .menu-lvl-2 {
                 position: absolute;
-                right: -111%;
+                right: -265px;
                 background: #fff;
                 z-index: 11;
                 top:0;
-                min-width: 190px;
+                width: 265px;
                 opacity: 0;
                 transition: 200ms ease;
                 padding: 20px;
@@ -253,6 +253,7 @@
                   font-weight: 600;
                   border-bottom: 1px solid #e1e4e6;
                   margin-bottom: 9px;
+                  padding-bottom: 5px;
                 }
               }
               li {

@@ -1450,15 +1450,17 @@ $(".owl-header-second-menu").owlCarousel({
         }
     }
 });
+window.onload = function () {
 
-// var parentDiv = document.querySelector('.submenu-wrapper-yet').this.getBoundingClientRect().right;
-// var children = document.querySelectorAll('.menu-lvl-2');
-// for (var i = 0; i < children.length; i++) {
-//     if (children[i].this.getBoundingClientRect().right >= parentDiv) {
-//         children[i].style.left = '-265px';
-//         children[i].style.right = 'auto';
-//     }
-// }
+    var parentDiv = document.querySelector('.submenu-wrapper-yet').this.getBoundingClientRect().right;
+    var children = document.querySelectorAll('.menu-lvl-2');
+    for (var i = 0; i < children.length; i++) {
+        if (children[i].this.getBoundingClientRect().right >= parentDiv) {
+            children[i].style.left = '-265px';
+            children[i].style.right = 'auto';
+        }
+    }
+};
 /*=================================================================
 /close  header second menu
 ==================================================================*/
