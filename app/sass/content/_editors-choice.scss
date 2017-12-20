@@ -1,11 +1,14 @@
-.editors-choice{
+.editors-choice {
   display: block;
   position: relative;
   float: left;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  box-sizing: border-box;
   width: 100%;
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     top: -4px;
@@ -14,7 +17,7 @@
     width: 45%;
     background: #ee2e24;
   }
-  h2{
+  h2 {
     font-size: 15px;
     position: relative;
     top: -5px;
@@ -27,7 +30,7 @@
     width: 100%;
     margin: 0 0 10px 0;
     height: 200px;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
     .thumb {

@@ -211,12 +211,16 @@
               float: left;
               width: 20%;
               padding: 0 15px;
+              line-height: 30px;
               a {
                 transition: 200ms ease;
                 line-height: inherit;
                 padding: 0 15px;
+                font-size: 12px;
                 &:hover{
                   background: #fff;
+                  font-weight: 600;
+
                 }
               }
               img {
@@ -249,9 +253,12 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                &:last-child{
+                  border-bottom: none;
+                }
                 a{
                   font-weight: 600;
-                  border-bottom: 1px solid #e1e4e6;
+
                   margin-bottom: 9px;
                   padding-bottom: 5px;
                 }
