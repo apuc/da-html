@@ -1420,7 +1420,7 @@ $(function () {
 /  header second menu
 ==================================================================*/
 $(".owl-header-second-menu").owlCarousel({
-    loop: false,
+    loop: true,
     margin: 0,
     nav: true,
     navigation: true,
@@ -1446,10 +1446,11 @@ $(".owl-header-second-menu").owlCarousel({
         1200: {
             items: 6,
             nav: true,
-            loop: false
+            loop: true
         }
     }
 });
+
 window.onload = function () {
 
     var parentDiv = document.querySelector('.submenu-wrapper-yet').this.getBoundingClientRect().right;
