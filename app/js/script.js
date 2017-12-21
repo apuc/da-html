@@ -1451,8 +1451,6 @@ $(".owl-header-second-menu").owlCarousel({
     }
 });
 
-window.onload = function () {
-
     var parentDiv = document.querySelector('.submenu-wrapper-yet').this.getBoundingClientRect().right;
     var children = document.querySelectorAll('.menu-lvl-2');
     for (var i = 0; i < children.length; i++) {
@@ -1461,7 +1459,6 @@ window.onload = function () {
             children[i].style.right = 'auto';
         }
     }
-};
 /*=================================================================
 /close  header second menu
 ==================================================================*/

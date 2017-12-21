@@ -1110,9 +1110,7 @@ body {
           display: block;
           position: relative;
           float: left;
-          width: 16px;
           height: 16px;
-          overflow: hidden;
           margin-top: 3px;
           img {
             width: 100%;
@@ -1187,6 +1185,22 @@ body {
       .business__requisites--links-w {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        .views {
+          color: #000;
+          display: inline-block;
+          position: relative;
+          float: left;
+          width: auto;
+          padding-left: 26px;
+          background-image: url('../img/icons/eye-new-icon.png');
+          background-repeat: no-repeat;
+          background-size: 19px 19px;
+          background-position: 0 1px;
+          &:before {
+            display: none;
+          }
+        }
       }
       > .views {
         display: inline-block;
@@ -1207,13 +1221,13 @@ body {
       }
       .unique-views {
         color: #000;
-        font-size: 14px;
+        font-size: 13px;
         margin-right: 20px;
-        text-align: right;
-        padding-left: 15px;
-        width: auto;
+        text-align: left;
+        padding-left: 26px;
+        width: 100%;
         position: relative;
-        &:hover:after{
+        &:hover:after {
           display: block;
         }
       }
@@ -1224,10 +1238,9 @@ body {
         top: -21px;
         left: -170px;
         width: 173px;
-        background: rgba(0,0,0,.5);
+        background: rgba(0, 0, 0, .5);
         color: #fff;
         text-align: center;
-        font-weight: 600;
         font-size: 12px;
         height: 20px;
       }
@@ -1235,12 +1248,12 @@ body {
         display: block;
         position: absolute;
         content: "";
-        top: 6px;
-        left: -9px;
-        width: 15px;
-        height: 12px;
-        background-image: url('../img/icons/vision.png');
-        background-repeat: no-repeat;
+        top: 1px;
+        left: -4px;
+        padding-left: 26px;
+        width: 18px;
+        height: 17px;
+        background:  url(../img/icons/vision.png) no-repeat center center;
         background-size: contain;
       }
     }

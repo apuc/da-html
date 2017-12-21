@@ -213,12 +213,11 @@
               float: left;
               width: 20%;
               padding: 0 15px;
-              line-height: 30px;
               a {
                 transition: 200ms ease;
-                line-height: inherit;
                 padding: 0 15px;
                 font-size: 12px;
+                line-height: 20px;
                 &:hover{
                   background: #fff;
                   font-weight: 600;
@@ -255,10 +254,18 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                a{
-                  font-weight: 600;
-                  margin-bottom: 9px;
-                  padding-bottom: 5px;
+
+                li{
+                  border-bottom: 1px solid #e1e4e6;
+                  &:last-child{
+                    border: none;
+                  }
+                  a{
+                    font-weight: 600;
+                    padding-bottom: 5px;
+                    margin-top: 10px;
+
+                  }
                 }
               }
               li {
