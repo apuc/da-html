@@ -297,6 +297,7 @@
   z-index: 1;
   padding-left: 10px;
   box-sizing: border-box;
+
   @include breakpoint(max-width 660px) {
     width: 107px;
   }
@@ -306,6 +307,7 @@
     background-repeat: no-repeat;
     background-size: 9%;
     border: none;
+    position: relative;
     min-width: 105px;
     background-color: #0c242e;
     color: #fff;
@@ -327,6 +329,18 @@
     appearance: none !important;
     @include breakpoint(max-width 992px){
       background-position: 81% 49%;
+      .header-selet-arrow{
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
     }
     option {
       font-size: 12px;
