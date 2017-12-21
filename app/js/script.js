@@ -1504,10 +1504,7 @@ window.onload = function () {
         $('.header-m-arrow').hide()
     });
 };
-// var menulvl2= document.querySelectorAll('.menu-lvl-2');
-// if (menulvl2 !== null) {
-//
-// }
+$( '.menu-lvl-1 li' ).mouseenter( handlerIn ).mouseleave( handlerOut );
 /*=================================================================
 / close header second mobile menu
 ==================================================================*/
