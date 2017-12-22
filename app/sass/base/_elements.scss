@@ -898,4 +898,15 @@ input#error-user-name {
   bottom: 30px;
   right: 0;
 }
+.home-like{
+  color: #000!important;
+  border: none;
+  display: inline-block;
+  .fa-heart{
+    font-size: 11px;
+  }
+  .like-counter{
+    font-size: 11px;
+  }
+}
 

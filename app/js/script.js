@@ -1459,6 +1459,9 @@ $(".owl-header-second-menu").owlCarousel({
             children[i].style.right = 'auto';
         }
     }
+$(".menu-lvl-1 li").mouseover(function(e){
+    $('.submenu-wrapper').addClass('hovering');
+});
 /*=================================================================
 /close  header second menu
 ==================================================================*/
@@ -1504,7 +1507,6 @@ window.onload = function () {
         $('.header-m-arrow').hide()
     });
 };
-$( '.menu-lvl-1 li' ).mouseenter( handlerIn ).mouseleave( handlerOut );
 /*=================================================================
 / close header second mobile menu
 ==================================================================*/
@@ -1525,4 +1527,3 @@ $(window).scroll(function () {
 /*=================================================================
 / close scroll social-sidebar single news
 ==================================================================*/
-
