@@ -58,10 +58,25 @@
         font-size: 15px;
         font-weight: 600;
       }
-      .review {
-        font-size: 15px;
-        color: #060000;
-        font-weight: 600;
+      div{
+        position: relative;
+        .review {
+          font-size: 15px;
+          color: #060000;
+          font-weight: 600;
+          &:before{
+            display: block;
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: -19px;
+            width: 15px;
+            height: 12px;
+            background-image: url(../img/info-icons/icon-3.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
       }
     }
   }
