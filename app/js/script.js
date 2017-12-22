@@ -1459,9 +1459,11 @@ $(".owl-header-second-menu").owlCarousel({
             children[i].style.right = 'auto';
         }
     }
-$(".menu-lvl-1 li").mouseover(function(e){
-    $('.submenu-wrapper').addClass('hovering');
-});
+// $(".menu-lvl-1 li").mouseover(function(e){
+//     $('.submenu-wrapper').addClass('hovering');
+// });
+
+
 /*=================================================================
 /close  header second menu
 ==================================================================*/
@@ -1527,3 +1529,19 @@ $(window).scroll(function () {
 /*=================================================================
 / close scroll social-sidebar single news
 ==================================================================*/
+
+$(document).ready(function(){
+    $('.menu-lvl-1 li a').on('click', function(e){
+        e.preventDefault();
+    });
+
+    $('.menu-lvl-1 li').hover(function () {
+        clearTimeout($.data(this,'timer'));
+        $('.submenu-wrapper',this).stop(true,true).slideDown(200);
+    }, function () {
+        $.data(this,'timer', setTimeout($.proxy(function() {
+            $('.submenu-wrapper',this).stop(true,true).slideUp(200);
+        }, this), 100));
+    });
+
+});
