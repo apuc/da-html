@@ -292,20 +292,35 @@
 .select {
   float: left;
   display: inline-block;
-  min-width: 15%;
   position: relative;
   z-index: 1;
   padding-left: 10px;
   box-sizing: border-box;
+  &:after {
+    content: "▼";
+    padding: 0 8px;
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
   @include breakpoint(max-width 660px) {
     width: 107px;
   }
   select {
-    background-image: url("../img/icons/rect.png");
-    background-position: 100% 57%;
-    background-repeat: no-repeat;
+    //background-image: url("../img/icons/rect.png");
+    //background-position: 100% 57%;
+    //background-repeat: no-repeat;
     background-size: 9%;
     border: none;
+    position: relative;
     min-width: 105px;
     background-color: #0c242e;
     color: #fff;
@@ -322,9 +337,11 @@
     -moz-appearance: none;
     text-indent: 0.01px;
     text-overflow: '';
+    padding-right: 25px;
     /* for IE */
     -ms-appearance: none;
     appearance: none !important;
+
     @include breakpoint(max-width 992px){
       background-position: 81% 49%;
     }
@@ -332,6 +349,7 @@
       font-size: 12px;
     }
   }
+
 
 }
 

@@ -4,6 +4,44 @@
   float: left;
   width: 100%;
   background-color: #edeef0;
+  min-height: calc(100vh - 366px);
+  .org {
+    width: 100%;
+    margin-bottom: 30px;
+    h2 {
+      font-size: 26px;
+    }
+    .org-items {
+      float: left;
+      width: 20%;
+      padding: 0px 10px;
+      margin: 0;
+      &:hover .slide-link h4{
+        color: #000;
+        transition: 200ms ease;
+      }
+      .slide-link h4 {
+        font-size: 14px;
+        color: #647278;
+        text-align: left;
+        line-height: 1.4;
+        overflow: hidden;
+        height: 35px;
+        font-weight: 600;
+        margin: 20px 0;
+        transition: 200ms ease;
+      }
+      @include breakpoint(max-width 770px) {
+        width: 33%;
+      }
+      @include breakpoint(max-width 500px) {
+        width: 50%;
+      }
+      @include breakpoint(max-width 360px) {
+        width: 100%;
+      }
+    }
+  }
   &__wrapper {
     display: block;
     position: relative;
@@ -40,6 +78,7 @@
       margin-right: 0;
       margin-bottom: 15px;
     }
+
   }
   &__new-ads {
     display: block;
@@ -109,6 +148,7 @@
       font-size: 14px;
       font-weight: 600;
       line-height: 25px;
+
       @include breakpoint(max-width 992px) {
         float: right;
         line-height: inherit;
@@ -746,10 +786,13 @@
     float: left;
     width: 100%;
     color: #000000;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     padding-bottom: 14px;
     border-bottom: 1px solid #f1f2f2;
+    .price{
+      float: right;
+    }
   }
   &__ads-subtitle {
     display: block;

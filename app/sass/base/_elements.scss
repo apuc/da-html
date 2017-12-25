@@ -898,23 +898,15 @@ input#error-user-name {
   bottom: 30px;
   right: 0;
 }
-
-.comments {
-  position: relative;
+.home-like{
+  color: #000!important;
+  border: none;
   display: inline-block;
-  margin-left: 25px;
-  margin-right: 6px;
-  font-size: 13px !important;
-  color: #000 !important;
-  font-weight: 600;
-  &:before {
-    content: '';
-    left: -17px;
-    top: 4px;
-    width: 13px;
-    height: 13px;
-    position: absolute;
-    background: url("../img/icons/new-chat-icon.png") no-repeat center center;
-    background-size: contain;
+  .fa-heart{
+    font-size: 11px;
+  }
+  .like-counter{
+    font-size: 11px;
   }
 }
+

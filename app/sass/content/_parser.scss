@@ -425,6 +425,18 @@
         width: 35px;
         height: 35px;
         margin-right: 8px;
+        span{
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          height: 35px;
+          width: 100%;
+          border-radius: 50%;
+          border: 1px solid gray;
+          color: #ee2e24;
+          font-weight: 600;
+          font-size: 19px;
+        }
         img{
           size: 100%;
           border-radius: 50%;
@@ -577,5 +589,57 @@
     display: block;
     position: absolute;
 
+  }
+  .promotions-sidebar{
+    .main-title{
+      font-size: 16px;
+      margin-bottom: 23px;
+    }
+    .parser__element{
+      margin: 0;
+      width: 100%;
+      margin-bottom: 24px;
+      .avatar{
+        width: 20px;
+        height: 20px;
+      }
+      .parser__element--author{
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+        padding-bottom: 9px;
+        .name{
+          font-size: 12px;
+          line-height: 24px;
+        }
+        .date{
+          font-size: 12px;
+        }
+
+
+      }
+
+    }
+    .social-wrap__item{
+      width: 20px;
+      height: 20px;
+      left: -10px;
+      img{
+        width: 15px;
+        height: 15px;
+        margin-top: -2px;
+      }
+
+    }
+    .comments:before{
+      display: none;
+      margin-right: 5px;
+    }
+    .parser__element--photo{
+      height: 200px;
+    }
   }
 }
