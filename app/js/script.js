@@ -1537,11 +1537,11 @@ $(document).ready(function(){
 
     $('.menu-lvl-1 li').hover(function () {
         clearTimeout($.data(this,'timer'));
-        $('.submenu-wrapper',this).stop(true,true).slideDown(50);
+        $('.submenu-wrapper',this).stop(true,true).slideDown(100);
     }, function () {
         $.data(this,'timer', setTimeout($.proxy(function() {
-            $('.submenu-wrapper',this).stop(true,true).slideUp(50);
-        }, this), 50));
+            $('.submenu-wrapper',this).stop(true,true).slideUp(100);
+        }, this), 100));
     });
 
 });
