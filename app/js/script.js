@@ -1438,7 +1438,7 @@ window.onload = function () {
             children[i].style.right = 'auto';
         }
     }
-}  ;
+};
 
 
 /*=================================================================
@@ -1515,7 +1515,7 @@ $(document).ready(function () {
     $('.menu-lvl-1 li').hover(function () {
             clearTimeout($.data(this, 'timer'));
             $('.submenu-wrapper', this).slideDown(200);
-            $('.submenu-wrapper',this).css({
+            $('.submenu-wrapper', this).css({
                 visibility: 'visible',
                 display: 'block'
             })
