@@ -1429,17 +1429,16 @@ $(".owl-header-second-menu").owlCarousel({
     items: 6
 });
 
-var parentDiv = document.querySelector('.submenu-wrapper-yet').getBoundingClientRect().right;
-var children = document.querySelectorAll('.menu-lvl-2');
-for (var i = 0; i < children.length; i++) {
-    if (children[i].getBoundingClientRect().right >= parentDiv) {
-        children[i].style.left = '-265px';
-        children[i].style.right = 'auto';
+window.onload = function () {
+    var parentDiv = document.querySelector('.submenu-wrapper-yet').getBoundingClientRect().right;
+    var children = document.querySelectorAll('.menu-lvl-2');
+    for (var i = 0; i < children.length; i++) {
+        if (children[i].getBoundingClientRect().right >= parentDiv) {
+            children[i].style.left = '-265px';
+            children[i].style.right = 'auto';
+        }
     }
-}
-// $(".menu-lvl-1 li").mouseover(function(e){
-//     $('.submenu-wrapper').addClass('hovering');
-// });
+}  ;
 
 
 /*=================================================================
