@@ -12,6 +12,10 @@
   padding: 0;
   margin: 15px 0;
   flex-wrap: wrap;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
   @include breakpoint(max-width 660px){
     flex-wrap: wrap;
     margin-bottom: 15px;
