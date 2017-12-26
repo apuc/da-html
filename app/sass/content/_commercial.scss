@@ -16,13 +16,9 @@
       width: 20%;
       padding: 0px 10px;
       margin: 0;
-      &:hover .slide-link h4{
-        color: #000;
-        transition: 200ms ease;
-      }
       .slide-link h4 {
         font-size: 14px;
-        color: #647278;
+        color: #000;
         text-align: left;
         line-height: 1.4;
         overflow: hidden;
@@ -402,6 +398,7 @@
       padding-top: 7px;
       padding-bottom: 7px;
       padding-left: 9px;
+      cursor: pointer;
       @include box-sizing(border-box);
       background-color: transparent;
       &:hover {

@@ -1425,32 +1425,11 @@ $(".owl-header-second-menu").owlCarousel({
     nav: true,
     navigation: true,
     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-    pagination: false,
-    items: 6,
-    responsiveClass: true,
-
-    responsive: {
-        0: {
-            items: 1,
-            nav: true
-        },
-        600: {
-            items: 3,
-            nav: true
-        },
-        1000: {
-            items: 4,
-            nav: true,
-            loop: true
-        },
-        1200: {
-            items: 6,
-            nav: true,
-            loop: true
-        }
-    }
+    pagination: true,
+    items: 6
 });
 
+window.onload = function () {
     var parentDiv = document.querySelector('.submenu-wrapper-yet').getBoundingClientRect().right;
     var children = document.querySelectorAll('.menu-lvl-2');
     for (var i = 0; i < children.length; i++) {
@@ -1459,9 +1438,7 @@ $(".owl-header-second-menu").owlCarousel({
             children[i].style.right = 'auto';
         }
     }
-// $(".menu-lvl-1 li").mouseover(function(e){
-//     $('.submenu-wrapper').addClass('hovering');
-// });
+};
 
 
 /*=================================================================
@@ -1530,18 +1507,23 @@ $(window).scroll(function () {
 / close scroll social-sidebar single news
 ==================================================================*/
 
-$(document).ready(function(){
-    $('.menu-lvl-1 li a').on('click', function(e){
-        e.preventDefault();
+$(document).ready(function () {
+    $('.menu-lvl-1 li a').on('click', function (e) {
+        return false;
     });
 
     $('.menu-lvl-1 li').hover(function () {
-        clearTimeout($.data(this,'timer'));
-        $('.submenu-wrapper',this).stop(true,true).slideDown(100);
-    }, function () {
-        $.data(this,'timer', setTimeout($.proxy(function() {
-            $('.submenu-wrapper',this).stop(true,true).slideUp(100);
-        }, this), 100));
-    });
-
+            clearTimeout($.data(this, 'timer'));
+            $('.submenu-wrapper', this).slideDown(200);
+            $('.submenu-wrapper', this).css({
+                visibility: 'visible',
+                display: 'block'
+            })
+        },
+        function () {
+            $('.submenu-wrapper', this).slideUp(200);
+            $.data(this, 'timer', setTimeout($.proxy(function () {
+                $('.submenu-wrapper', this).slideUp(200);
+            }), 200));
+        });
 });
