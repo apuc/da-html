@@ -149,6 +149,7 @@
               .menu-lvl-2 {
                 position: absolute;
                 right: -265px;
+
                 background: #fff;
                 z-index: 11;
                 width: 260px;
@@ -243,9 +244,9 @@
               .menu-lvl-2 {
                 position: absolute;
                 right: -265px;
+                top: -30px;
                 background: #fff;
                 z-index: 11;
-                top: 0;
                 width: 265px;
                 opacity: 0;
                 transition: 200ms ease;
@@ -260,10 +261,6 @@
                 li {
                   border-bottom: 1px solid #e1e4e6;
                   padding: 0;
-                  a {
-                    padding-left: 0;
-                    padding-right: 0;
-                  }
                   &:last-child {
                     border: none;
                   }
@@ -271,6 +268,8 @@
                     font-weight: 600;
                     padding-bottom: 5px;
                     margin-top: 10px;
+                    padding-left: 0;
+                    padding-right: 0;
 
                   }
                 }
@@ -398,3 +397,8 @@
 //  float: left;
 //  width: 100%;
 //}
+.active-menu{
+  background: #fff;
+  color: red;
+  font-weight: 600;
+}
