@@ -1530,10 +1530,10 @@ $(document).ready(function () {
             }), 200));
         });
 
-    // $('.yet .submenu-wrapper-yet .menu-lvl-2').hover(function () {
-    //
-    //     $(this).toggleClass(('active-menu'));
-    //
-    // });
+    $('.yet .submenu-wrapper-yet li').hover(function () {
+
+        $(this).toggleClass('active-menu');
+
+    });
 
 });
