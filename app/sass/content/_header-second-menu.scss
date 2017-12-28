@@ -50,6 +50,9 @@
         height: 100%;
         display: flex;
         padding: 10px 19px;
+        &:hover{
+          color: #000;
+        }
         //&:hover .submenu-wrapper {
         //  visibility: visible;
         //  transition: 500ms ease;
@@ -221,11 +224,6 @@
                 padding: 0 15px;
                 font-size: 12px;
                 line-height: 20px;
-                &:hover {
-                  background: #fff;
-                  font-weight: 600;
-
-                }
               }
               img {
                 height: 22px;
@@ -399,6 +397,8 @@
 //}
 .active-menu{
   background: #fff;
-  color: red;
   font-weight: 600;
+  >a{
+    color: #ee2e24!important;
+  }
 }
