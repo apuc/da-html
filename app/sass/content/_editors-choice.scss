@@ -3,11 +3,12 @@
   position: relative;
   float: left;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   background: #fff;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 20px;
   &:before {
     content: '';
     position: absolute;
@@ -28,14 +29,10 @@
   }
   .news__wrap_item-lg {
     width: 100%;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     height: 200px;
-    &:last-child {
-      margin-bottom: 0;
-    }
     .thumb {
       height: 200px;
-      margin-bottom: 15px;
       position: relative;
       width: 100%;
       float: left;

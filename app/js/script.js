@@ -1507,9 +1507,7 @@ $(window).scroll(function () {
 ==================================================================*/
 
 $(document).ready(function () {
-    $('.menu-lvl-1 li a').on('click', function (e) {
-        return false;
-    });
+
 
     $('.menu-lvl-1 li').hover(function () {
             clearTimeout($.data(this, 'timer'));
