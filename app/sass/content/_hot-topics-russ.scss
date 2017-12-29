@@ -97,15 +97,15 @@
         align-items: center;
         flex-wrap: wrap;
         p {
-          height: 57px;
+          height: 30px;
           line-height: 1.2;
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
           color: #000;
           margin: 0;
-          font-size: 12px;
+          font-size: 13px;
         }
         .hashtag-wrap {
           display: flex;

@@ -216,6 +216,19 @@
       }
     }
   }
+  .fix-button-head{
+    display: inline-block;
+    float: right;
+    position: relative;
+    width: 183px;
+    height: 34px;
+    margin-right: 10px;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
 .header-menu__sub_button {
