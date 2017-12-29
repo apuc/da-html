@@ -626,19 +626,17 @@
         align-items: center;
         margin-bottom: 0;
         padding-bottom: 9px;
-        flex-wrap: wrap;
-        div{
-          display: flex;
-          align-items: center;
-
-        }
         .name{
           font-size: 12px;
+          margin-top: 4px;
           line-height: 14px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 148px;
+          white-space: nowrap
         }
         .date{
           font-size: 12px;
-          width: 100%;
         }
       }
 
