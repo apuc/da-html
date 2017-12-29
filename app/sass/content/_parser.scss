@@ -591,6 +591,9 @@
 
   }
   .promotions-sidebar{
+    @include breakpoint(max-width 992px){
+      justify-content: flex-start;
+    }
     .main-title{
       font-size: 16px;
       margin-bottom: 23px;
@@ -599,6 +602,18 @@
       margin: 0;
       width: 100%;
       margin-bottom: 24px;
+      @include breakpoint(max-width 992px){
+        width: 30%;
+        margin: 12px 12px;
+      }
+      @include breakpoint(max-width 770px){
+        width: 44%;
+        margin: 12px;
+      }
+      @include breakpoint(max-width 500px){
+        width: 100%;
+        margin: 12px 0;
+      }
       .avatar{
         width: 20px;
         height: 20px;
@@ -613,24 +628,26 @@
         padding-bottom: 9px;
         .name{
           font-size: 12px;
-          line-height: 24px;
+          margin-top: 4px;
+          line-height: 14px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 148px;
+          white-space: nowrap
         }
         .date{
           font-size: 12px;
         }
-
-
       }
-
     }
     .social-wrap__item{
       width: 20px;
       height: 20px;
       left: -10px;
       img{
-        width: 15px;
-        height: 15px;
-        margin-top: -2px;
+        width: 14px;
+        height: 14px;
+        margin-top: -5px;
       }
 
     }

@@ -16,6 +16,11 @@
       width: 20%;
       padding: 0px 10px;
       margin: 0;
+      img{
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+      }
       .slide-link h4 {
         font-size: 14px;
         color: #000;
