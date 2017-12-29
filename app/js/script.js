@@ -1535,7 +1535,6 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '#fix-button-head', function (event) {
-        event.preventDefault();
         var submenu = $(this).closest('.fix-button-head').find('.list');
         /*console.log( submenu );*/
         /*if($(this).hasClass('show')){
@@ -1547,7 +1546,6 @@ $(document).ready(function () {
          }*/
         $(this).toggleClass('show');
         submenu.slideToggle();
-        return false;
     });
     $(document).on('click', function (e) {
         if ($(e.target).closest('#fix-button-head').length != 1) {
