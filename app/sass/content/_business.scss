@@ -1756,6 +1756,21 @@ body {
         border-bottom: 2px solid #ee2e24;
       }
     }
+    .tabs-counters{
+      position: relative;
+      right: 0;
+      top: 0;
+      text-overflow: ellipsis;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #ee2e24;
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      font-size: 11px;
+      line-height: 19px;
+    }
   }
   &__tab-content {
     display: block;
