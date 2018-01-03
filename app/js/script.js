@@ -1476,7 +1476,7 @@ window.onload = function () {
     });
 
 
-    if($('section').hasClass('header-second-menu')){
+    if ($('section').hasClass('header-second-menu')) {
         var parentDiv = document.querySelector('.submenu-wrapper-yet').getBoundingClientRect().right;
         var children = document.querySelectorAll('.menu-lvl-2');
         for (var i = 0; i < children.length; i++) {
@@ -1556,3 +1556,12 @@ $(document).ready(function () {
 
 });
 
+
+if ($('.select').hasClass('select')) {
+    var arrowSelect = document.querySelector('.select select option');
+
+
+}
+else {
+
+}
