@@ -1559,9 +1559,8 @@ $(document).ready(function () {
 
 if ($('.select').hasClass('select')) {
     var arrowSelect = document.querySelector('.select select option');
-    $(arrowSelect).attr('selected", "selected');
+    $(arrowSelect).attr(selected", "selected");
     console.log(arrowSelect)
-
 }
 else {
 

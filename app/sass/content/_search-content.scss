@@ -4,6 +4,8 @@
   float: left;
   width: 100%;
   background-color: #edeef0;
+  padding-left: 30px;
+  padding-right: 30px;
   &__wrapper {
     display: block;
     position: relative;
@@ -21,8 +23,6 @@
     position: relative;
     width: 100%;
     list-style: none;
-    padding-left: 31px;
-    padding-right: 31px;
     @include box-sizing(border-box);
     margin-top: 19px;
     margin-bottom: 32px;

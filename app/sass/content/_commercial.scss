@@ -288,6 +288,10 @@
           column-count: 4;
           column-width: 20%;
           column-gap: 10px;
+          @include breakpoint(max-width 660px){
+            column-count: 3;
+            overflow: hidden;
+          }
           > .republic {
             width: 95%;
             display: inline-block;
@@ -378,6 +382,9 @@
       @include breakpoint(max-width 992px) {
         margin-top: 0;
         margin-right: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
       }
     }
   }
