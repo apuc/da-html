@@ -19,7 +19,7 @@
     }
     @include breakpoint(max-width 660px) {
       margin: 20px auto;
-      width: 50%;
+      width: 100%;
     }
     img {
       width: 100%;
@@ -113,7 +113,7 @@
     float: left;
     width: calc(100% - (83px + 26px + 230px + 34px));
     @include breakpoint(max-width 660px) {
-      width: 50%;
+      width: 100%;
       margin: 20px auto 0 auto;
     }
     p {
@@ -148,10 +148,20 @@
       margin-top: 30px;
       padding: 9px 0;
       transition: 300ms ease;
+      @include breakpoint(max-width 770px){
+        margin-top: 21px;
+      }
       &:hover {
         background: #ff0200;
         color: #fff;
         transition: 300ms ease;
+      }
+    }
+    .footer-error-button{
+      @include breakpoint(max-width 660px){
+       margin: 0 auto;
+        display: block;
+        float: none;
       }
     }
   }
@@ -171,8 +181,11 @@
       margin-top: 20px;
     }
     @include breakpoint(max-width 770px) {
-      @include flex-direction(column);
+      @include flex-direction(row);
       text-align: center;
+      width: 100%;
+      justify-content: flex-start;
+      margin-bottom: 0;
     }
     @include breakpoint(max-width 660px) {
       width: 100%;
@@ -184,6 +197,12 @@
       display: block;
       position: relative;
       float: left;
+      @include breakpoint(max-width 770px){
+        margin: 0 5px;
+      }
+      @include breakpoint(max-width 660px){
+        margin: inherit;
+      }
       a {
         display: block;
         position: relative;
@@ -215,6 +234,7 @@
       }
     }
   }
+
   &__send-mail {
     display: block;
     position: relative;

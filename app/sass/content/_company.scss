@@ -251,3 +251,8 @@
 .company-slider .business__sm-item--img{
   height: 147px;
 }
+.company-slider__box_item .business__sm-item, .business__big-item.favorite{
+  @include breakpoint(max-width 992px){
+    margin-bottom: 10px!important;
+  }
+}
