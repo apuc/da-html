@@ -862,7 +862,7 @@ $(document).ready(function () {
     // });
     // }
 
-    /*    close single business sidebar scroll
+    /* close single business sidebar scroll
 
         social sidebar scroll
     // var socialElement = $('.social-wrapper');
@@ -892,7 +892,7 @@ $(document).ready(function () {
             revBlock.removeClass('full');
             $(this).text('Скрыть отзыв');
         } else {
-            revBlock.addClass('full');
+            revBlock.addClass('full' );
             $(this).text('Читать весь отзыв');
         }
     });
@@ -1556,12 +1556,12 @@ $(document).ready(function () {
 
 });
 
-
-if ($('.select').hasClass('select')) {
-    var arrowSelect = document.querySelector('.select select option');
-    $(arrowSelect).attr(selected", "selected");
-    console.log(arrowSelect)
-}
-else {
-
-}
+//
+// if ($('.select').hasClass('select')) {
+//     var arrowSelect = document.querySelector('.select select option');
+//     // $(arrowSelect).attr(selected", "selected");
+//     // console.log(arrowSelect)
+// }
+// else {
+//
+// }
