@@ -86,17 +86,17 @@
             width: 30.3%;
             height: 300px;
           }
-          @include breakpoint(max-width 660px){
+          @include breakpoint(max-width 660px) {
             width: 100%;
             height: auto;
           }
         }
       }
     }
-    .load-more{
+    .load-more {
       margin: 30px auto 0 auto;
-      @include breakpoint(max-width 992px){
-       margin-bottom: 10px;
+      @include breakpoint(max-width 992px) {
+        margin-bottom: 10px;
       }
     }
   }
@@ -351,7 +351,7 @@
       color: #030000;
       font-size: 14px;
       font-weight: 400;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         margin-top: 15px;
       }
       span {
@@ -864,7 +864,7 @@
         text-align: left;
         float: left;
         margin: 8px 0;
-        @include breakpoint(max-width 992px){
+        @include breakpoint(max-width 992px) {
           margin: 3px 0;
         }
       }
@@ -960,13 +960,13 @@
     }
     .type {
       @include breakpoint(max-width 992px) {
-        margin: 3px 0!important;
+        margin: 3px 0 !important;
       }
     }
     .time {
       @include breakpoint(max-width 992px) {
-        font-size: 14px!important;
-        margin: 3px 0!important;
+        font-size: 14px !important;
+        margin: 3px 0 !important;
       }
     }
   }
@@ -1003,13 +1003,13 @@
   box-sizing: border-box;
   justify-content: flex-start;
   .item {
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       height: auto;
     }
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       margin-bottom: 15px;
       height: 323px;
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
       }
     }
@@ -1034,13 +1034,13 @@
 
         }
       }
-      .type{
-        @include breakpoint(max-width 992px){
+      .type {
+        @include breakpoint(max-width 992px) {
           margin: 3px 0;
         }
       }
-      .time{
-        @include breakpoint(max-width 992px){
+      .time {
+        @include breakpoint(max-width 992px) {
           margin: 3px 0;
         }
       }

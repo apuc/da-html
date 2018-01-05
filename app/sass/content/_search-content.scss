@@ -4,6 +4,10 @@
   float: left;
   width: 100%;
   background-color: #edeef0;
+  min-height: calc(100vh - 648px);
+  @include breakpoint(max-width 992px){
+    min-height: inherit;
+  }
   &__wrapper {
     display: block;
     position: relative;
@@ -186,7 +190,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        @include breakpoint(max-width 660px){
+        @include breakpoint(max-width 992px){
           width: 100%;
         }
       }

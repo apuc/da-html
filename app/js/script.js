@@ -1500,15 +1500,25 @@ $(window).scroll(function () {
     var top = $(document).scrollTop(),
         h = $('body').css('height');
     if (top < 649) {
-        $('.social-wrapper').addClass('move');
-        $('.social-wrapper').hcSticky();
+        $('#main-single-news .social-wrapper').addClass('move');
+        $('#main-single-news .social-wrapper').hcSticky();
     } else {
-        $(".social-wrapper").hcSticky();
+        $("#main-single-news .social-wrapper").hcSticky();
     }
 });
 /*=================================================================
 / close scroll social-sidebar single news
 ==================================================================*/
+
+/*=================================================================
+/ scroll social-sidebar single afisha
+==================================================================*/
+
+
+/*=================================================================
+/ close scroll social-sidebar single afisha
+==================================================================*/
+
 
 $(document).ready(function () {
 
