@@ -193,6 +193,12 @@
     width: 100%;
     margin-top: 44px;
     margin-bottom: 75px;
+    @include breakpoint(max-width 992px){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     > p {
       display: block;
       position: relative;
@@ -763,14 +769,15 @@
       &:first-of-type {
         right: 121px;
         @include breakpoint(max-width 600px) {
-          right: 223px;
-          top: 55px;
+          right: 13px;
+          top: 22px;
         }
       }
       &:last-of-type {
         right: 23px;
         @include breakpoint(max-width 600px) {
-          top: 57px;
+          top: 50px;
+          right: 13px;
         }
       }
       &:hover {
@@ -2296,8 +2303,9 @@
       border: 1px solid #b8b8b9;
       padding: 0;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 600px) {
-        width: 166px;
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        height: 30px;
       }
       &:focus {
         outline: none;
@@ -3460,6 +3468,26 @@
           text-decoration: none;
         }
       }
+    }
+  }
+  .field-poster-title.required{
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
+  }
+  .form-group.field-poster-price{
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
+  }
+  .form-group.field-poster-start {
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
+  }
+  .form-group.field-poster-address{
+    @include breakpoint(max-width 660px){
+      width: 100%;
     }
   }
 }

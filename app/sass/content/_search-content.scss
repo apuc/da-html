@@ -76,6 +76,11 @@
     position: relative;
     float: left;
     width: 100%;
+    .no-result{
+      font-size: 30px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
   }
   &__box{
     display: block;
