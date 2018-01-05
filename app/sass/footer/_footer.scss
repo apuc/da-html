@@ -151,17 +151,15 @@
       @include breakpoint(max-width 770px){
         margin-top: 21px;
       }
+      @include breakpoint(max-width 660px){
+        margin: 20px auto 0 auto;
+        display: block;
+        float: none;
+      }
       &:hover {
         background: #ff0200;
         color: #fff;
         transition: 300ms ease;
-      }
-    }
-    .footer-error-button{
-      @include breakpoint(max-width 660px){
-       margin: 0 auto;
-        display: block;
-        float: none;
       }
     }
   }

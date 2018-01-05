@@ -112,18 +112,26 @@
           margin-top: 10px;
           align-items: center;
           width: 100%;
+          @include breakpoint(max-width 370px){
+            flex-wrap: wrap;
+          }
           .hashteg-mini{
             border: 1px solid #cfe0ff;
             -webkit-border-radius: 5px;
             border-radius: 5px;
             padding: 3px;
-            margin: 5px;
-            font-size: 10px;
+            margin: 2px;
+            font-size: 9px;
             color: #e52d31;
             text-transform: uppercase;
             transition: 200ms ease;
             &:hover{
               border: 1px solid #e52d31;
+            }
+          }
+          .comments{
+            @include breakpoint(max-width 370px){
+              width: 17%;
             }
           }
         }

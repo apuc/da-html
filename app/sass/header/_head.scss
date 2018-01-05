@@ -410,6 +410,7 @@
 
     @include breakpoint(max-width 992px) {
       background-position: 81% 49%;
+      width: 100%;
     }
     option {
       font-size: 12px;

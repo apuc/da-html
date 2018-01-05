@@ -4,13 +4,12 @@
   float: left;
   width: 100%;
   background-color: #edeef0;
-  padding-left: 30px;
-  padding-right: 30px;
   &__wrapper {
     display: block;
     position: relative;
     float: left;
     width: 100%;
+    padding: 0 30px;
     background-color: #fff;
     border-radius: 0 0 3px 3px;
     margin-bottom: 122px;
@@ -22,6 +21,7 @@
     @include justify-content(flex-start);
     position: relative;
     width: 100%;
+    padding: 0;
     list-style: none;
     @include box-sizing(border-box);
     margin-top: 19px;
@@ -103,7 +103,6 @@
     float: left;
     width: 100%;
     margin: 25px 0;
-    padding: 0 31px;
     @include box-sizing(border-box);
    /* &:after{
       display: block;

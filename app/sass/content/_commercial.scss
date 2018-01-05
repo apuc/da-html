@@ -289,7 +289,7 @@
           column-width: 20%;
           column-gap: 10px;
           @include breakpoint(max-width 660px){
-            column-count: 3;
+            column-count: 2;
             overflow: hidden;
           }
           > .republic {

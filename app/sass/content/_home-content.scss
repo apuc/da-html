@@ -471,6 +471,10 @@
   box-sizing: border-box;
   background-color: #fff;
   margin-top: 30px;
+  @include breakpoint(max-width 660px){
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
   .subscribe__wrap {
     width: 100%;
     float: left;
