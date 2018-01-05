@@ -872,7 +872,7 @@ select.large-select.filterAdsFields {
 }
 
 .select2-container--krajee .select2-selection--multiple .select2-selection__clear {
-  margin: 11px 10px 0 10px;
+  margin: 6px 10px 0 10px;
 }
 
 .select2-container--krajee .select2-selection--multiple .select2-search--inline .select2-search__field {
@@ -909,4 +909,6 @@ input#error-user-name {
     font-size: 11px;
   }
 }
-
+span.select2.select2-container.select2-container--krajee.select2-container--below{
+  width: 80%!important;
+}
