@@ -1500,12 +1500,13 @@ $(window).scroll(function () {
     var top = $(document).scrollTop(),
         h = $('body').css('height');
     if (top < 649) {
-        $('#main-single-news .social-wrapper').addClass('move');
-        $('#main-single-news .social-wrapper').hcSticky();
+        $('.social-wrapper').addClass('move');
+        $('.social-wrapper').hcSticky();
     } else {
-        $("#main-single-news .social-wrapper").hcSticky();
+        $('.social-wrapper').hcSticky();
     }
 });
+
 /*=================================================================
 / close scroll social-sidebar single news
 ==================================================================*/
