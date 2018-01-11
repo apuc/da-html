@@ -1,0 +1,105 @@
+.company-statistics {
+  .cabinet__like-block:after {
+    display: none;
+  }
+  .cabinet-company-statistic {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 41px);
+    position: relative;
+    margin-left: 41px;
+    &__header {
+      width: 100%;
+      display: flex;
+      position: relative;
+      align-items: center;
+      h3 {
+        margin: 0 56px 0 0;
+        color: #030000;
+        font-size: 15px;
+        font-weight: 700;
+        position: relative;
+        padding-left: 47px;
+        &:after {
+          width: 30px;
+          height: 3px;
+          background-color: #ee2e24;
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 8px
+        }
+      }
+      .company-static-close {
+        color: #677685;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    &__body {
+      display: flex;
+      position: relative;
+      width: 100%;
+      &--left {
+        width: 50%;
+        position: relative;
+        h4 {
+          margin: 22px 0 12px 0;
+          color: #000000;
+          font-size: 14px;
+          font-weight: 700;
+        }
+        h5 {
+          color: #000000;
+          font-size: 14px;
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+        p {
+          color: #000000;
+          font-size: 13px;
+          font-weight: 600;
+          span {
+            color: #ee2e24;
+            font-weight: 700;
+          }
+        }
+        table {
+          width: 257px;
+          margin-top: 13px;
+          tr {
+            padding: 0 10px;
+            height: 30px;
+            td {
+              width: 50%;
+              padding: 0 10px;
+              color: #000000;
+              font-size: 13px;
+              font-weight: 400;
+            }
+          }
+          thead {
+            height: 20px;
+            background-color: #edeef0;
+            width: 100%;
+            tr {
+              padding: 0 10px;
+              height: 20px;
+              td {
+                color: #000000;
+                font-size: 13px;
+                font-weight: 700;
+              }
+            }
+          }
+          tbody {
+          }
+        }
+      }
+      &--right {
+        width: 50%;
+        position: relative;
+      }
+    }
+  }
+}

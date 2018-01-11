@@ -892,7 +892,7 @@ $(document).ready(function () {
             revBlock.removeClass('full');
             $(this).text('Скрыть отзыв');
         } else {
-            revBlock.addClass('full' );
+            revBlock.addClass('full');
             $(this).text('Читать весь отзыв');
         }
     });
@@ -1565,14 +1565,27 @@ $(document).ready(function () {
         }
     });
 
-});
+    /*=================================================================
+    / folding post parsing page
+    ==================================================================*/
+    var parserClose = document.querySelector('.single-parser-element');
+    $(document).on('click', '.parser__close', function () {
+        $('.single-parser-element').slideToggle('slow');
+        return false;
+    });
 
-//
-// if ($('.select').hasClass('select')) {
-//     var arrowSelect = document.querySelector('.select select option');
-//     // $(arrowSelect).attr(selected", "selected");
-//     // console.log(arrowSelect)
-// }
-// else {
-//
-// }
+    /*=================================================================
+    / close folding post parsing page
+    ==================================================================*/
+
+    /*=================================================================
+    / Личный кабинет статистика компании, сворачивание блока при клике
+    ==================================================================*/
+    $(document).on('click', '.company-static-close', function () {
+        $('.cabinet-company-statistic__body').slideToggle('slow');
+        return false;
+    });
+    /*=================================================================
+    / end кабинет статистика компании, сворачивание блока при клике
+    ==================================================================*/
+});
