@@ -8,6 +8,10 @@
     width: calc(100% - 41px);
     position: relative;
     margin-left: 41px;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+      margin: 0;
+    }
     &__header {
       width: 100%;
       display: flex;
@@ -40,9 +44,16 @@
       display: flex;
       position: relative;
       width: 100%;
+      @include breakpoint(max-width 550px){
+        flex-direction: column;
+        align-items: center;
+      }
       &--left {
         width: 50%;
         position: relative;
+        @include breakpoint(max-width 550px){
+          width: 100%;
+        }
         h4 {
           margin: 22px 0 12px 0;
           color: #000000;
@@ -99,6 +110,9 @@
       &--right {
         width: 50%;
         position: relative;
+        @include breakpoint(max-width 550px){
+          width: 100%;
+        }
       }
     }
   }
