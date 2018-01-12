@@ -4,7 +4,7 @@
   float: left;
   width: 100%;
   background-color: #edeef0;
-  min-height: calc(100vh - 648px);
+  min-height: calc(100vh - 286px);
   @include breakpoint(max-width 992px){
     min-height: inherit;
   }

@@ -195,7 +195,7 @@
       margin: 10px 0;
     }
     > .input-search {
-      width: 46%;
+      width: 41%;
       float: left;
       display: inline-block;
       height: 33px;
@@ -1090,7 +1090,7 @@
       padding-left: 36px;
       @include box-sizing(border-box);
       color: #020000;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 600;
       line-height: 1.2;
       @include breakpoint(max-width 992px) {
