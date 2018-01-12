@@ -915,10 +915,10 @@ $(document).ready(function () {
             $(this).hide(0)
         }
     });
-    $(document).on('click', '.business__tab-links a', function (e) {
+    $(document).on('click', '.business__tab-links li', function (e) {
         e.preventDefault();
         var tabId = $(this).attr('href');
-        $('.business__tab-links a').removeClass('active');
+        $('.business__tab-links li').removeClass('active');
         $(this).addClass('active');
         $('.business__tab-content--wrapper').hide(0);
         $(tabId).fadeIn();
