@@ -153,6 +153,9 @@
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
+    &:focus{
+      color: #000;
+    }
     &:hover{
       color: #ee2e24;
     }
@@ -160,14 +163,20 @@
       display: block;
       position: absolute;
       content: '';
-      width: 13px;
-      height: 13px;
-      top: 2px;
-      left: -17px;
-      background-image: url('../img/icons/red-close-icon.png');
+      width: 19px;
+      height: 19px;
+      top: -1px;
+      left: -20px;
+      background-image: url('../img/icons/chevron-down.png');
       background-repeat: no-repeat;
       -webkit-background-size: cover;
       background-size: cover;
+    }
+  }
+  .change{
+    &:before{
+      transform: rotate(180deg);
+      transition: 200ms ease;
     }
   }
   &__wrapper{
@@ -588,7 +597,6 @@
   &__close{
     display: block;
     position: absolute;
-
   }
   .promotions-sidebar{
     @include breakpoint(max-width 992px){
