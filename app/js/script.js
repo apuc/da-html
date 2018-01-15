@@ -1568,18 +1568,9 @@ $(document).ready(function () {
     /*=================================================================
     / folding post parsing page
     ==================================================================*/
-    // var parserClose = document.querySelector('.single-parser-element');
-    // $(document).on('click', '.parser__close', function () {
-    //     $('.single-parser-element').slideToggle('slow');
-    //     if ($(parserClose).css =("display","none")){
-    //         $('.parser__close').html('Раскрыть элемент');
-    //     }
-    //     return false;
-    // });
-
     $(document).on('click', '.parser__close', function () {
         $('.single-parser-element').slideToggle('slow');
-        $('.parser__close').toggleClass('change')
+        $('.parser__close').toggleClass('change');
         $('.parser__close').text(function(i, text) {
             return text === 'закрыть элемент' ? 'раскрыть элемент' : 'закрыть элемент';
         });
