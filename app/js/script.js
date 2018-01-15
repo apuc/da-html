@@ -1581,7 +1581,7 @@ $(document).ready(function () {
         $('.single-parser-element').slideToggle('slow');
         $('.parser__close').toggleClass('change')
         $('.parser__close').text(function(i, text) {
-            return text === 'Закрыть элемент' ? 'Раскрыть элемент' : 'Закрыть элемент';
+            return text === 'закрыть элемент' ? 'раскрыть элемент' : 'закрыть элемент';
         });
         return false;
     });
