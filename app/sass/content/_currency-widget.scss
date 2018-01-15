@@ -5,6 +5,9 @@
   width: 400px;
   margin-bottom: 20px;
   overflow-x: scroll;
+  @include breakpoint(max-width 992px){
+    width: 100%;
+  }
   h1{
     font-size: 16px;
     font-weight: 600;
@@ -75,4 +78,7 @@
       }
     }
   }
+}
+#container-currency, #container-coin, #container-metal{
+  margin-bottom: 20px;
 }
