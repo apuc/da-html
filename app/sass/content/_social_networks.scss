@@ -54,6 +54,11 @@
       @include breakpoint(max-width 1200px){
         margin-top: 50px;
       }
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        max-width: inherit;
+        margin-top: 10px;
+      }
       .item-photo {
         width: 75px;
         height: 75px;
@@ -150,6 +155,7 @@
       margin-bottom: 0;
       @include breakpoint(max-width 660px){
         text-align: center;
+        margin: 0 20px;
       }
     }
   }

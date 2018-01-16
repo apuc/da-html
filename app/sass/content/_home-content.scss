@@ -643,8 +643,7 @@
     margin-right: 10px;
   }
   @include breakpoint(max-width 660px) {
-    width: calc(100% - 10px);
-    margin-right: 10px;
+    width: 100%;
   }
   /*text-align: center;*/
   .home-content__tape_wrap {
@@ -711,8 +710,7 @@
     margin-top: 15px;
   }
   @include breakpoint(max-width 600px) {
-    width: calc(100% - 15px);
-    margin-top: 15px;
+    width: 100%;
   }
   &__button {
     display: block;
@@ -2511,6 +2509,10 @@
     float: left;
     position: relative;
     margin-right: 10px;
+    @include breakpoint(max-width 660px){
+      height: 200px;
+      margin-bottom: 10px;
+    }
     &:last-of-type {
       margin-right: 0;
     }
@@ -2520,6 +2522,9 @@
       float: left;
       position: relative;
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 18%, transparent 50%);
+      @include breakpoint(max-width 660px){
+        height: 200px;
+      }
       &:hover {
         /*img{
           @include filter(grayscale(100%));
