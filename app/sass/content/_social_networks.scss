@@ -155,7 +155,7 @@
       margin-bottom: 0;
       @include breakpoint(max-width 660px){
         text-align: center;
-        margin: 0 20px;
+        margin: 20px 0;
       }
     }
   }
