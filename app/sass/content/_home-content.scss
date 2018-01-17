@@ -729,6 +729,9 @@
     cursor: pointer;
     outline: none;
     margin-top: 0;
+    &:hover{
+      color: #ee2e24;
+    }
   }
 }
 
@@ -931,7 +934,8 @@
 }
 
 .home-content__sidebar_consultation {
-  margin-top: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
   width: 24%;
   float: left;
   background-color: #fff;
@@ -939,7 +943,6 @@
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 23px;
-  padding-bottom: 0;
   @include box-sizing(border-box);
   @include breakpoint(max-width 1024px){
     width: calc(50% - 9px);
@@ -967,6 +970,12 @@
     line-height: 16px;
     text-transform: uppercase;
     text-align: center;
+    > a{
+      color: #170201;
+      &:hover{
+        color: #170201;
+      }
+    }
   }
   > h4 {
     display: block;
