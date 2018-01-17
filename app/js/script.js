@@ -374,11 +374,11 @@ $(document).ready(function () {
 
     /*send message modal*/
     $(document).on('click', '.footer__send', function () {
-        event.preventDefault();
         $('#overlay').fadeIn(400,
             function () {
                 $('.modal-send').css('display', 'block').animate({opacity: 1}, 200);
             });
+        return false
     });
     $(document).on('click', '.modal-send__close, #overlay', function () {
         $('.modal-send').animate({opacity: 0}, 200,
@@ -435,11 +435,12 @@ $(document).ready(function () {
 
     /*modal about error*/
     $(document).on('click', '#send-error-message', function () {
-        event.preventDefault();
+
         $('#black-overlay').fadeIn(400,
             function () {
                 $('#error-message').css('display', 'block').animate({opacity: 1}, 200);
             });
+        return false
     });
     $(document).on('click', '#black-overlay', function () {
         $('#error-message').animate({opacity: 0}, 200,
