@@ -1163,6 +1163,20 @@ body {
         font-size: 16px;
         font-weight: 600;
         transition: 200ms ease;
+        @include breakpoint(max-width 992px){
+          display: flex;
+          align-items: center;
+          font-size: 17px;
+        }
+        span{
+          display: none;
+          font-size: 11px;
+          font-weight: 400;
+          margin-left: 10px;
+          @include breakpoint(max-width 992px){
+            display: inline-block;
+          }
+        }
         img{
           visibility: hidden;
           opacity: 0;
@@ -1174,7 +1188,8 @@ body {
           object-fit: contain;
           border-radius: 50%;
           @include breakpoint(max-width 992px){
-            display: none;
+            visibility: visible;
+            opacity: 1;
           }
         }
         &:hover{
