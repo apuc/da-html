@@ -20,6 +20,10 @@
     margin-left: 0;
     width: 100%;
   }
+  @include breakpoint(max-width 992px){
+    display: flex;
+    justify-content: space-between;
+  }
   @include breakpoint(max-width 770px){
    margin-left: 0;
   }
