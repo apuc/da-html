@@ -1162,6 +1162,38 @@ body {
         color: #020000;
         font-size: 16px;
         font-weight: 600;
+        transition: 200ms ease;
+        img{
+          visibility: hidden;
+          opacity: 0;
+          display: inline-block;
+          margin-right: 5px;
+          height: 10px;
+          width: 10px;
+          transition: 200ms ease;
+          object-fit: contain;
+          border-radius: 50%;
+          @include breakpoint(max-width 992px){
+            display: none;
+          }
+        }
+        &:hover{
+          color: #ee2e24;
+          font-weight: 700;
+          margin-left: 11px;
+          @include breakpoint(max-width 992px){
+            color: #020000;
+            font-weight: 600;
+            margin-left: 0;
+          }
+          img{
+            visibility: visible;
+            margin-left: 5px;
+            transition: 200ms ease;
+            opacity: 1;
+          }
+        }
+
       }
       .social-wrap__item {
         width: 24px;
