@@ -1165,6 +1165,7 @@ body {
         transition: 200ms ease;
         @include breakpoint(max-width 992px){
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
           font-size: 17px;
         }
