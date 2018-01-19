@@ -158,6 +158,11 @@
         text-align: center;
         margin: 20px 0;
       }
+      .fa{
+        @include breakpoint(max-width 660px){
+          right: 10px;
+        }
+      }
     }
   }
 }
