@@ -2,7 +2,7 @@
   display: block;
   position: relative;
   float: left;
-  width: 400px;
+  width: 416px;
   margin-bottom: 20px;
   @include breakpoint(max-width 992px){
     width: 100%;
@@ -19,6 +19,16 @@
   ol{
     margin: 0;
     padding: 0;
+    margin-top: 55px;
+    margin-left: 16px;
+    @include breakpoint(max-width 992px){
+      margin-top: 0;
+    }
+    li{
+      margin-bottom: 20px;
+      text-indent: 20px;
+      font-size: 14px;
+    }
     @include breakpoint(max-width 992px){
       padding-left: 30px;
     }
@@ -32,11 +42,21 @@
     margin-bottom: 20px;
     span{
       display: inline-block;
+      width: auto;
       padding: 8px 15px;
       background: #fff;
       box-sizing: border-box;
       font-size: 15px;
       font-weight: 600;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        border: 5px solid transparent;
+        border-top: 9px solid #fff;
+        bottom: -13px;
+        right: 20px;
+      }
     }
   }
   &__content{
