@@ -1591,4 +1591,17 @@ $(document).ready(function () {
     /*=================================================================
     / end кабинет статистика компании, сворачивание блока при клике
     ==================================================================*/
+
+    if ( ! Modernizr.objectfit ) {
+        $('.item').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('compat-object-fit');
+            }
+        });
+    }
+
 });
