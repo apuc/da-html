@@ -1593,13 +1593,26 @@ $(document).ready(function () {
     ==================================================================*/
 
     if ( ! Modernizr.objectfit ) {
-        $('.item').each(function () {
+        $('.owl-item .item').each(function () {
             var $container = $(this),
                 imgUrl = $container.find('img').prop('src');
             if (imgUrl) {
                 $container
                     .css('backgroundImage', 'url(' + imgUrl + ')')
                     .addClass('compat-object-fit');
+            }
+        });
+    }
+
+
+    if ( ! Modernizr.objectfit ) {
+        $('.thumbnail-wrapper').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('object-fit');
             }
         });
     }
