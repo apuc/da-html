@@ -1572,7 +1572,7 @@ $(document).ready(function () {
     $(document).on('click', '.parser__close', function () {
         $('.single-parser-element').slideToggle('slow');
         $('.parser__close').toggleClass('change');
-        $('.parser__close').text(function(i, text) {
+        $('.parser__close').text(function (i, text) {
             return text === 'закрыть элемент' ? 'раскрыть элемент' : 'закрыть элемент';
         });
         return false;
@@ -1592,7 +1592,11 @@ $(document).ready(function () {
     / end кабинет статистика компании, сворачивание блока при клике
     ==================================================================*/
 
-    if ( ! Modernizr.objectfit ) {
+    /*=================================================================
+    / Исправление картинок в ie-11, edge
+    ==================================================================*/
+
+    if (!Modernizr.objectfit) {
         $('.owl-item .item').each(function () {
             var $container = $(this),
                 imgUrl = $container.find('img').prop('src');
@@ -1605,8 +1609,8 @@ $(document).ready(function () {
     }
 
 
-    if ( ! Modernizr.objectfit ) {
-        $('.thumbnail-wrapper').each(function () {
+    if (!Modernizr.objectfit) {
+        $('.item a').each(function () {
             var $container = $(this),
                 imgUrl = $container.find('img').prop('src');
             if (imgUrl) {
@@ -1615,8 +1619,15 @@ $(document).ready(function () {
                     .addClass('object-fit');
             }
         });
-    }
-    if ( ! Modernizr.objectfit ) {
+        $('.business__sm-item--img').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('object-fit');
+            }
+        });
         $('.item-img').each(function () {
             var $container = $(this),
                 imgUrl = $container.find('img').prop('src');
@@ -1626,6 +1637,28 @@ $(document).ready(function () {
                     .addClass('object-fit');
             }
         });
+        $('.thumbnail-wrapper').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('object-fit');
+            }
+        });
+        $('.thumb').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('compat-object-fit');
+            }
+        });
     }
 
+
+    /*=================================================================
+   / end Исправление картинок в ie-11, edge
+   ==================================================================*/
 });
