@@ -1656,7 +1656,30 @@ $(document).ready(function () {
     /*=================================================================
     / меню категорий для страницы магазина
     ==================================================================*/
+    // $('').hover(function () {
+    //     $('.shop__categories--sub-menu').css({
+    //         display: 'block'
+    //     });
+    // })
+    $('.shop__categories--list li ').hover(function () {
+            clearTimeout($.data(this, 'timer'));
+            $('.shop__categories--sub-menu', this).slideDown(200);
+            $('.shop__categories--sub-menu', this).css({
+                display: 'flex'
+            })
+        },
+        function () {
+            $('.shop__categories--sub-menu', this).slideUp(200);
+            $.data(this, 'timer', setTimeout($.proxy(function () {
+                $('.shop__categories--sub-menu', this).slideUp(200);
+            }), 200));
+        });
 
+    $('.shop__categories--list li').hover(function () {
+
+        $(this).toggleClass('active-link');
+
+    });
     /*=================================================================
     / end меню категорий для страницы магазина
     ==================================================================*/
