@@ -1600,7 +1600,6 @@ $(document).ready(function () {
         });
     }
 
-
     if (!Modernizr.objectfit) {
         $('.item a').each(function () {
             var $container = $(this),
@@ -1706,16 +1705,16 @@ $(document).ready(function () {
     ==================================================================*/
     $('.shop__categories--list li ').hover(function () {
             clearTimeout($.data(this, 'timer'));
-            $('.shop__categories--sub-menu', this).slideDown(200);
+            $('.shop__categories--sub-menu', this).slideDown(0);
             $('.shop__categories--sub-menu', this).css({
                 display: 'flex'
             })
         },
         function () {
-            $('.shop__categories--sub-menu', this).slideUp(200);
+            $('.shop__categories--sub-menu', this).slideUp(0);
             $.data(this, 'timer', setTimeout($.proxy(function () {
-                $('.shop__categories--sub-menu', this).slideUp(200);
-            }), 200));
+                $('.shop__categories--sub-menu', this).slideUp(0);
+            }), 0));
         });
 
     $('.shop__categories--list li').hover(function () {
