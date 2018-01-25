@@ -1647,20 +1647,63 @@ $(document).ready(function () {
                     .addClass('compat-object-fit');
             }
         });
+        $('.average-ad-item-thumb').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('object-fit');
+            }
+        });
+        $('.slide-link').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('object-fit');
+            }
+        });
+        $('.slick-slide').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('object-fit');
+            }
+        });
+        $('.recommended .img a').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('object-fit');
+            }
+        });
+        $('.stock__sm-item--img').each(function () {
+            var $container = $(this),
+                imgUrl = $container.find('img').prop('src');
+            if (imgUrl) {
+                $container
+                    .css('backgroundImage', 'url(' + imgUrl + ')')
+                    .addClass('object-fit');
+            }
+        });
+
     }
 
 
     /*=================================================================
    / end Исправление картинок в ie-11, edge
    ==================================================================*/
+
+
     /*=================================================================
     / меню категорий для страницы магазина
     ==================================================================*/
-    // $('').hover(function () {
-    //     $('.shop__categories--sub-menu').css({
-    //         display: 'block'
-    //     });
-    // })
     $('.shop__categories--list li ').hover(function () {
             clearTimeout($.data(this, 'timer'));
             $('.shop__categories--sub-menu', this).slideDown(200);
