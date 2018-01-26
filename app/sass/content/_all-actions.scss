@@ -1,0 +1,202 @@
+.all-actions {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: calc(100vh - 265px);
+  &__wrapper {
+    width: calc(100% - 265px);
+    float: left;
+    position: relative;
+    margin-right: 15px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+  &__title {
+    margin: 0;
+    color: #000000;
+    font-size: 19px;
+    font-weight: 700;
+    float: left;
+  }
+  &__search {
+    position: relative;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+  &__button-search {
+    border: none;
+    background: transparent;
+    margin-left: 75px;
+    margin-right: 14px;
+    width: 13px;
+    height: 13px;
+    background: url("../img/icons/search-1.png") no-repeat center center;
+    background-size: contain;
+  }
+  &__content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 1px;
+    padding: 20px;
+    margin-bottom: 50px;
+    @include box-sizing(border-box);
+  }
+  &__desc {
+    color: #000000;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+  &__item {
+    width: 100%;
+    box-shadow: 3px 7px 23px 1px rgba(116, 130, 137, 0.15);
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    margin: 10px 0;
+    position: relative;
+  }
+  &__img {
+    height: 135px;
+    width: 135px;
+    margin-right: 10px;
+    float: left;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__title-item {
+    color: #000000;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 700;
+    width: calc(100% - 145px);
+    float: left;
+    &--view {
+      font-weight: 400;
+      margin-left: 35px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -25px;
+        width: 20px;
+        top: 0;
+        height: 15px;
+        background: url("../img/icons/cabinet-eye-type2-icon.png") no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+  &__company {
+    position: relative;
+    width: calc(100% - 145px);
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &--img {
+      width: 34px;
+      height: 33px;
+      float: left;
+      position: relative;
+      margin-right: 13px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--title {
+      color: #000000;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 0;
+      float: left;
+      width: calc(100% - 47px);
+    }
+    &--addres {
+      color: #000000;
+      font-size: 10px;
+      font-weight: 600;
+      float: left;
+      width: calc(100% - 47px);
+    }
+  }
+  &__description {
+    position: relative;
+    width: calc(100% - 145px);
+    float: left;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &__bottom {
+    position: relative;
+    width: calc(100% - 145px);
+    float: left;
+    display: flex;
+    margin-top: 10px;
+    &--more, &--comments {
+      color: #075882;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: underline;
+      margin-right: 20px;
+    }
+    &--sale {
+      position: relative;
+      font-size: 12px;
+      font-weight: 600;
+      color: #060000;
+      margin-left: 22px;
+      &:after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -26px;
+        width: 20px;
+        height: 20px;
+        background: url("../img/home-content/time-icon.png") no-repeat center center;
+        background-size: contain;
+      }
+    }
+  }
+  &__favorites {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    cursor: pointer;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      background: url("../img/icons/favorite.png") no-repeat center center;
+      background-size: contain;
+    }
+  }
+  .main-title{
+    font-size: 15px;
+  }
+  .absolute{
+    right: 10px;
+  }
+  .show-more{
+    margin: 35px auto;
+  }
+}
