@@ -13,6 +13,7 @@
       width: 100%;
     }
   }
+
   &__header {
     display: flex;
     align-items: center;
@@ -29,6 +30,10 @@
     font-weight: 700;
     float: left;
   }
+  form {
+    position: relative;
+    width: 60%;
+  }
   &__search {
     position: relative;
     border: none;
@@ -37,6 +42,79 @@
     font-weight: 600;
     &::placeholder {
       opacity: 1;
+    }
+  }
+  &__select {
+    position: absolute;
+    right: 0;
+    top: -9px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+    width: 316px;
+    border-radius: 3px;
+    border: 1px solid #8f9091;
+    background-color: #ffffff;
+    li{
+      padding: 8px 15px;
+      width: 100%;
+      box-sizing: border-box;
+      cursor: pointer;
+      color: #444343;
+      font-size: 14px;
+      input{
+        width: 94px;
+        height: 25px;
+        border: 1px solid #8f9091;
+        color: #807e7e;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        &::placeholder{
+          opacity: 1;
+        }
+      }
+      button{
+        width: 99px;
+        height: 25px;
+        background-color: #ff0000;
+        border: none;
+        color: #fff;
+      }
+      &:hover{
+        background-color: #eff0f1;
+      }
+    }
+    .init{
+      color: #000000;
+      font-size: 15px;
+      font-weight: 600;
+      padding-left: 45px;
+      background-color: #fff;
+      button{
+        display: none;
+      }
+      &:hover{
+        background: #fff;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 11px;
+        height: 18px;
+        width: 18px;
+        background: url("../img/icons/clock.png") no-repeat center center;
+        background-size: contain;
+      }
+    }
+    li:not(.init) {
+      float: left;
+      display: none;
     }
   }
   &__button-search {
@@ -241,4 +319,5 @@
   .show-more {
     margin: 35px auto;
   }
+
 }

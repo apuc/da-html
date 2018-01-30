@@ -1725,4 +1725,27 @@ $(document).ready(function () {
     /*=================================================================
     / end меню категорий для страницы магазина
     ==================================================================*/
+
+    /*=================================================================
+    / Выпадающий селект с датами, для страницы всех акций
+    ==================================================================*/
+    $(".all-actions__select").on("click", ".init", function () {
+        $(this).closest(".all-actions__select").children('li:not(.init)').slideDown();
+    });
+
+    var allOptions = $(".all-actions__select").children('li:not(.init)');
+    $(".all-actions__select").on("click", "li:not(.init)", function () {
+        allOptions.removeClass('selected');
+        $(this).addClass('selected');
+        $(".all-actions__select").children('.init').html($(this).html());
+        allOptions.slideUp();
+    });
+
+
+    $("#submit").click(function () {
+        alert("The selected Value is " + $(".all-actions__select").find(".selected").data("value"));
+    });
+    /*=================================================================
+   /  end Выпадающий селект с датами, для страницы всех акций
+   ==================================================================*/
 });
