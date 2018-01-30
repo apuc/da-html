@@ -33,6 +33,10 @@
   form {
     position: relative;
     width: 60%;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      padding-bottom: 50px;
+    }
   }
   &__search {
     position: relative;
@@ -56,6 +60,11 @@
     border-radius: 3px;
     border: 1px solid #8f9091;
     background-color: #ffffff;
+    @include breakpoint(max-width 660px){
+      left: 0;
+      top: 35px;
+      width: 100%;
+    }
     li{
       padding: 8px 15px;
       width: 100%;
