@@ -33,7 +33,7 @@
   form {
     position: relative;
     width: 60%;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
       padding-bottom: 50px;
     }
@@ -60,19 +60,19 @@
     border-radius: 3px;
     border: 1px solid #8f9091;
     background-color: #ffffff;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       left: 0;
       top: 35px;
       width: 100%;
     }
-    li{
+    li {
       padding: 8px 15px;
       width: 100%;
       box-sizing: border-box;
       cursor: pointer;
       color: #444343;
       font-size: 14px;
-      input{
+      input {
         width: 94px;
         height: 25px;
         border: 1px solid #8f9091;
@@ -83,34 +83,34 @@
         display: inline-block;
         margin-left: 10px;
         margin-right: 10px;
-        &::placeholder{
+        &::placeholder {
           opacity: 1;
         }
       }
-      button{
+      button {
         width: 99px;
         height: 25px;
         background-color: #ff0000;
         border: none;
         color: #fff;
       }
-      &:hover{
+      &:hover {
         background-color: #eff0f1;
       }
     }
-    .init{
+    .init {
       color: #000000;
       font-size: 15px;
       font-weight: 600;
       padding-left: 45px;
       background-color: #fff;
-      button{
+      button {
         display: none;
       }
-      &:hover{
+      &:hover {
         background: #fff;
       }
-      &:after{
+      &:after {
         content: '';
         position: absolute;
         left: 15px;
