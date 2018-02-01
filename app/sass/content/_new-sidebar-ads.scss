@@ -7,7 +7,7 @@
   color: #000;
   margin-bottom: 12px;
   display: block;
-  &__title{
+  &__title {
     position: relative;
     float: left;
     width: 100%;
@@ -16,36 +16,36 @@
     font-size: 14px;
     font-weight: 700;
   }
-  &__img{
+  &__img {
     position: relative;
     float: left;
     height: 126px;
     width: 100%;
     margin: 12px 0;
-    img{
+    img {
       height: 100%;
       width: 100%;
       object-fit: cover;
     }
   }
-  &__desc{
+  &__desc {
     display: flex;
     width: 100%;
     align-items: center;
   }
-  &__link{
+  &__link {
     display: block;
     position: relative;
     float: left;
     width: 50%;
-    a{
+    a {
       font-size: 12px;
       display: inline-block;
-      &:first-child{
+      &:first-child {
         margin-left: 15px;
       }
     }
-    .geo-space{
+    .geo-space {
       background-image: url(../img/icons/cabinet-placeholder-icon.png);
       background-repeat: no-repeat;
       -webkit-background-size: contain;
@@ -57,7 +57,7 @@
       bottom: 3px;
     }
   }
-  &__price{
+  &__price {
     color: #000000;
     font-size: 18px;
     font-weight: 700;
@@ -65,5 +65,81 @@
     float: left;
     width: 50%;
     text-align: right;
+    .fa-rub {
+      font-size: 16px;
+    }
+  }
+}
+
+.company-sidebar {
+  padding: 15px;
+  position: relative;
+  float: left;
+  background: #fff;
+  width: 100%;
+  color: #000;
+  margin-bottom: 12px;
+  display: block;
+  &__img {
+    position: relative;
+    float: left;
+    height: 120px;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 12px 0;
+  }
+  &__desc {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    float: left;
+    width: 50%;
+    a {
+      font-size: 12px;
+      display: inline-block;
+      color: #000;
+      font-weight: 600;
+    }
+  }
+  &__view {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: right;
+    span {
+      color: #000;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+      &:after {
+        content: '';
+        height: 18px;
+        width: 18px;
+        left: -23px;
+        position: absolute;
+        background: url("../img/icons/eye-new-icon.png") no-repeat center center;
+        background-size: cover;
+      }
+    }
   }
 }
