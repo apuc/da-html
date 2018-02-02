@@ -1748,4 +1748,89 @@ $(document).ready(function () {
     /*=================================================================
    /  end Выпадающий селект с датами, для страницы всех акций
    ==================================================================*/
+
+
+    /*=================================================================
+   /  Ретинг звездочек на странице одного товара
+   ==================================================================*/
+    $('#stars li').on('mouseover', function () {
+        var onStar = parseInt($(this).data('value'), 10);
+
+        $(this).parent().children('li.star').each(function (e) {
+            if (e < onStar) {
+                $(this).addClass('hover');
+            }
+            else {
+                $(this).removeClass('hover');
+            }
+        });
+
+    }).on('mouseout', function () {
+        $(this).parent().children('li.star').each(function (e) {
+            $(this).removeClass('hover');
+        });
+    });
+
+
+    $('#stars li').on('click', function () {
+        var onStar = parseInt($(this).data('value'), 10);
+        var stars = $(this).parent().children('li.star');
+        for (i = 0; i < stars.length; i++) {
+            $(stars[i]).removeClass('selected');
+        }
+        for (i = 0; i < onStar; i++) {
+            $(stars[i]).addClass('selected');
+        }
+        var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+        var msg = "";
+        if (ratingValue > 1) {
+            msg = "Thanks! You rated this " + ratingValue + " stars.";
+        }
+        else {
+            msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
+        }
+        responseMessage(msg);
+    });
+
+    function responseMessage(msg) {
+        $('.success-box').fadeIn(200);
+        $('.success-box div.text-message').html("<span>" + msg + "</span>");
+    }
+
+    /*=================================================================
+    /  end Ретинг звездочек на странице одного товара, Магазин
+    ==================================================================*/
+
+    /*=================================================================
+  /  Выбираем количество товаров на странице одного тоавара, Магазин
+  ==================================================================*/
+    $(document).on('click', '.plus', function () {
+        event.preventDefault();
+        var count = $('.single-shop__info-content--counter').find('.number'),
+            val = parseInt($('.single-shop__info-content--counter').find('.number').val());
+        if (val == 999) {
+            return false;
+        } else {
+            count.val(val + 1);
+            $('.js-single-addtocart').attr('data-quantity', count.val());
+            $('.js-single-favorites').attr('data-quantity', count.val());
+        }
+        return false;
+    });
+
+    $(document).on('click', '.minus', function () {
+        event.preventDefault();
+        var count = $('.single-shop__info-content--counter').find('.number');
+        var counter = parseInt(count.val()) - 1;
+        counter = counter < 1 ? 1 : counter;
+        count.val(counter);
+        count.change();
+        $('.js-single-addtocart').attr('data-quantity', counter);
+        $('.js-single-favorites').attr('data-quantity', counter);
+        return false;
+    });
+    /*=================================================================
+ /  end Выбираем количество товаров на странице одного тоавара, Магазин
+ ==================================================================*/
 });
+
