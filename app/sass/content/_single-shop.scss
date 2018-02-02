@@ -11,7 +11,7 @@
   &__gallery {
     width: 470px;
     float: left;
-    background: #fff;
+    background-color: #fbfbfb;
     margin-right: 10px;
     padding: 10px;
   }
@@ -20,7 +20,7 @@
     width: calc(100% - 480px);
     display: block;
     float: left;
-    background: #fff;
+    background-color: #fbfbfb;
   }
   &__info-header {
     display: flex;
@@ -183,7 +183,7 @@
       right: 10px;
       top: 3px;
       color: #9fa3a7;
-      .fa{
+      .fa {
         color: #9fa3a7;
         font-weight: 700;
       }
@@ -192,16 +192,51 @@
       position: absolute;
       left: 10px;
       top: 3px;
-      .fa{
+      .fa {
         color: #9fa3a7;
         font-weight: 700;
       }
     }
   }
-  .button-buy{
+  .button-buy {
     border-radius: 5px;
     background-color: #ee2e24;
     padding: 12px 19px;
+    color: #fff;
+    transition: 200ms ease;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+    &:hover {
+      background-color: darken(#ee2e24, 10%);
+      transition: 200ms ease;
+    }
+  }
+  .button-basket {
+    padding: 12px 19px;
+    margin: 0 20px;
+    border-radius: 5px;
+    background-color: #6c7376;
+    color: #fff;
+    transition: 200ms ease;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+    &:hover {
+      background-color: darken(#6c7376, 10%);
+      transition: 200ms ease;
+    }
+  }
+  .promotion-seller {
+    color: #075882;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid #075882;
+    span {
+      color: #000000;
+      display: block;
+      text-decoration: none;
+    }
   }
   .shop__top-tools {
     margin-bottom: 0;
