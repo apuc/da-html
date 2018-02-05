@@ -1832,5 +1832,24 @@ $(document).ready(function () {
     /*=================================================================
  /  end Выбираем количество товаров на странице одного тоавара, Магазин
  ==================================================================*/
+    $('.single-shop__gallery-wrap').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.single-shop__gallery-nav'
+    });
+    $('.single-shop__gallery-nav').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        asNavFor: '.single-shop__gallery-wrap',
+        dots: false,
+        centerMode: true,
+        centerPadding: '0px',
+        focusOnSelect: true,
+        arrows: false,
+        vertical: true
+    });
+    $(".single-shop__tabs").lightTabs();
+    $('.single-shop__gallery-item').zoom();
 });
-
