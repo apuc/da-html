@@ -155,7 +155,7 @@
   }
   &__desc {
     color: #000000;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 13px;
     margin-bottom: 7px;
   }
@@ -179,7 +179,7 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
     @include breakpoint(max-width 660px) {
       margin: 20px 0;

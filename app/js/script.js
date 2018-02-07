@@ -1854,10 +1854,12 @@ $(document).ready(function () {
             focusOnSelect: true
         });
     }
-
+    if ($('div').hasClass('single-shop__slider-item')) {
+        $('.single-shop__slider-item').zoom();
+    }
 
     $(".single-shop__tabs").lightTabs();
-    $('.single-shop__slider-item').zoom();
+
     var promotionElement = $('#store-info');
     if (promotionElement.length > 0) {
         var promotionElementPosition = promotionElement.offset().top;
