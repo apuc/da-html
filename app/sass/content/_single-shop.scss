@@ -18,6 +18,7 @@
     background-color: #fbfbfb;
     @include breakpoint(max-width 992px){
       width: 100%;
+      height: auto;
     }
   }
   &__slider {
@@ -61,6 +62,9 @@
     display: block;
     float: left;
     background-color: #fbfbfb;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
   }
   &__info-header {
     display: flex;

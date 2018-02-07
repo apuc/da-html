@@ -1832,25 +1832,30 @@ $(document).ready(function () {
     /*=================================================================
  /  end Выбираем количество товаров на странице одного тоавара, Магазин
  ==================================================================*/
-    $('.single-shop__slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        draggable: false,
-        asNavFor: '.single-shop__slider-nav'
-    });
-    $('.single-shop__slider-nav').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        asNavFor: '.single-shop__slider',
-        dots: false,
-        centerPadding: '10px',
-        arrows: false,
-        vertical: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
+
+    if ($('div').hasClass('single-shop__gallery')) {
+        $('.single-shop__slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            draggable: false,
+            asNavFor: '.single-shop__slider-nav'
+        });
+        $('.single-shop__slider-nav').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            asNavFor: '.single-shop__slider',
+            dots: false,
+            centerPadding: '10px',
+            arrows: false,
+            vertical: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    }
+
+
     $(".single-shop__tabs").lightTabs();
     $('.single-shop__slider-item').zoom();
     var promotionElement = $('#store-info');
@@ -1868,4 +1873,6 @@ $(document).ready(function () {
                 $('#modal-review-promotions').css('display', 'block').animate({opacity: 1}, 200);
             });
     });
+
+
 });
