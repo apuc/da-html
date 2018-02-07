@@ -11,43 +11,48 @@
   &__gallery {
     position: relative;
     width: 470px;
-    height: 450px;
+    height: 452px;
     float: left;
     margin-right: 10px;
     padding: 10px;
     background-color: #fbfbfb;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
   }
-  &__gallery-wrap {
+  &__slider {
+    position: relative;
+    display: flex;
+    align-items: center;
     width: calc(100% - 70px);
     height: 100%;
     float: left;
-    display: block;
-  }
-  &__gallery-item {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    position: relative;
     img {
-      display: block;
-      max-width: 100%;
       max-height: 100%;
+      max-width: 100%;
+      height: 100%;
+      width: 100%;
+      display: block;
+      cursor: crosshair;
     }
   }
-  &__gallery-nav {
+  &__slider-nav {
+    position: relative;
     float: left;
     width: 60px;
     margin-right: 10px;
   }
-  &__gallery-nav-it {
-    margin: 5px 0;
+  &__nav-item {
+    width: 100%;
     height: 60px;
-    border: 1px solid #e9e9e9 !important;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #e9e9e9;
     img {
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
   &__info {
@@ -158,9 +163,15 @@
   }
   &__info-footer {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     align-items: center;
+    .all-actions__company{
+      width: 45%;
+      margin-right: 35px;
+      &--addres{
+        float: right;
+      }
+    }
   }
   &__desires {
     position: relative;
@@ -234,6 +245,8 @@
       float: left;
       width: 100%;
       margin-bottom: 20px;
+      line-height: 25px;
+
       p {
         margin: 0;
         font-size: 13px;
@@ -267,6 +280,7 @@
       }
     }
   }
+
   &__buy-history {
     position: relative;
     width: 100%;
@@ -312,7 +326,7 @@
       }
       .amount {
         color: #a6a4a4;
-        font-size: 12px;
+        font-size: 10px;
       }
       .date {
         color: #000000;
@@ -322,7 +336,7 @@
   }
   &__main-content {
     position: relative;
-    float: left;
+    float: right;
     width: calc(100% - 310px);
   }
   &__tabs {
@@ -370,7 +384,7 @@
     position: relative;
     width: 100%;
     float: left;
-    padding: 15px 10px;
+    padding: 20px;
     div {
       animation: fadeEffect 200ms;
     }
@@ -640,7 +654,7 @@
       color: #9fa3a7;
       .fa {
         color: #9fa3a7;
-        font-weight: 700;
+        font-size: 10px;
       }
     }
     .minus {
@@ -649,14 +663,14 @@
       top: 3px;
       .fa {
         color: #9fa3a7;
-        font-weight: 700;
+        font-size: 10px;
       }
     }
   }
   .button-buy {
     border-radius: 5px;
     background-color: #ee2e24;
-    padding: 12px 19px;
+    padding: 10px 22px;
     color: #fff;
     transition: 200ms ease;
     font-size: 13px;
@@ -668,7 +682,7 @@
     }
   }
   .button-basket {
-    padding: 12px 19px;
+    padding: 10px 22px;
     margin: 0 20px;
     border-radius: 5px;
     background-color: #6c7376;
@@ -695,6 +709,18 @@
   }
   .shop__top-tools {
     margin-bottom: 0;
+  }
+  .slick-vertical .slick-slide{
+    height: 60px!important;
+    border: 1px solid #e9e9e9!important;
+    outline: none;
+    cursor: pointer;
+  }
+  .fixed{
+    margin: 0;
+  }
+  .absolute{
+    left: 10px;
   }
   .breadcrumbs {
     li {
@@ -746,9 +772,10 @@
     cursor: pointer;
   }
   .rating-stars ul > li.star > i.fa {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #ccc;
   }
+
   .rating-stars ul > li.star.hover > i.fa {
     color: #ffc80a;
   }

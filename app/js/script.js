@@ -1832,24 +1832,40 @@ $(document).ready(function () {
     /*=================================================================
  /  end Выбираем количество товаров на странице одного тоавара, Магазин
  ==================================================================*/
-    $('.single-shop__gallery-wrap').slick({
+    $('.single-shop__slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.single-shop__gallery-nav'
+        draggable: false,
+        asNavFor: '.single-shop__slider-nav'
     });
-    $('.single-shop__gallery-nav').slick({
-        slidesToShow: 8,
+    $('.single-shop__slider-nav').slick({
+        slidesToShow: 6,
         slidesToScroll: 1,
-        asNavFor: '.single-shop__gallery-wrap',
+        asNavFor: '.single-shop__slider',
         dots: false,
-        centerMode: true,
-        centerPadding: '0px',
-        focusOnSelect: true,
+        centerPadding: '10px',
         arrows: false,
-        vertical: true
+        vertical: true,
+        centerMode: true,
+        focusOnSelect: true
     });
     $(".single-shop__tabs").lightTabs();
-    $('.single-shop__gallery-item').zoom();
+    $('.single-shop__slider-item').zoom();
+    var promotionElement = $('#store-info');
+    if (promotionElement.length > 0) {
+        var promotionElementPosition = promotionElement.offset().top;
+        $(window).scroll(function () {
+            fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
+        });
+    }
+
+    $(document).on('click', ' #add-review-promotions', function (event) {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-review-promotions').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
 });
