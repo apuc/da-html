@@ -130,6 +130,7 @@
   }
   &__info-item {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 15px;
     > div {
@@ -739,6 +740,9 @@
       background-color: darken(#ee2e24, 10%);
       transition: 200ms ease;
     }
+    @include breakpoint(max-width 660px){
+      margin: 0 10px 10px 0 ;
+    }
   }
   .button-basket {
     padding: 10px 22px;
@@ -754,6 +758,9 @@
       background-color: darken(#6c7376, 10%);
       transition: 200ms ease;
     }
+    @include breakpoint(max-width 660px){
+      margin: 0 10px 10px 0 ;
+    }
   }
   .promotion-seller {
     color: #075882;
@@ -764,6 +771,9 @@
       color: #000000;
       display: block;
       text-decoration: none;
+    }
+    @include breakpoint(max-width 660px){
+      margin: 0 10px 0 0 ;
     }
   }
   .shop__top-tools {
