@@ -3512,6 +3512,11 @@
       width: 100%;
     }
   }
+  input#news-photo {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+  }
 }
 
 .cabinet__container {
@@ -3983,7 +3988,6 @@
   float: none;
   border: none;
 }
-
 .cabinet__links--box a {
   display: block;
   position: relative;
@@ -3996,4 +4000,5 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 
