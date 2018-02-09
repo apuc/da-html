@@ -2286,7 +2286,7 @@
       border-radius: 5px;
       background-color: #eff0f1;
       z-index: 1;
-      @include breakpoint(max-width 1200px){
+      @include breakpoint(max-width 1200px) {
         display: none;
       }
       &:after {
@@ -2302,7 +2302,7 @@
       display: block;
       position: relative;
       float: left;
-      width: 238px;
+      width: 70%;
       height: 30px;
       margin-bottom: 40px;
       border: 1px solid #b8b8b9;
@@ -2577,8 +2577,8 @@
         display: block;
         position: absolute;
         content: 'добавьте изображение';
-        top: 6px;
-        left: 54px;
+        top: 10px;
+        left: 113px;
         width: 208px;
         height: 12px;
         color: #8696a6;
@@ -2685,6 +2685,7 @@
       }
     }
     .field-company-address {
+      margin-bottom: 20px;
       @include breakpoint(max-width 660px) {
         width: 100%;
       }
@@ -3522,9 +3523,11 @@
     position: absolute;
     top: 0;
   }
-}
-span.select2.select2-container.select2-container--krajee, span.select2.select2-container.select2-container--krajee.select2-container--below, span.select2.select2-container.select2-container--krajee.select2-container--focus{
-  width: 70%!important;
+
+  span.select2.select2-container.select2-container--krajee, span.select2.select2-container.select2-container--krajee.select2-container--below, span.select2.select2-container.select2-container--krajee.select2-container--focus {
+    width: 70% !important;
+  }
+
 }
 
 .cabinet__container {
@@ -3995,6 +3998,7 @@ span.select2.select2-container.select2-container--krajee, span.select2.select2-c
   float: none;
   border: none;
 }
+
 .cabinet__links--box a {
   display: block;
   position: relative;
