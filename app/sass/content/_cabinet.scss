@@ -3517,6 +3517,14 @@
     position: absolute;
     top: 0;
   }
+  input#company-photo {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+span.select2.select2-container.select2-container--krajee, span.select2.select2-container.select2-container--krajee.select2-container--below, span.select2.select2-container.select2-container--krajee.select2-container--focus{
+  width: 70%!important;
 }
 
 .cabinet__container {
