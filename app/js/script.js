@@ -1751,8 +1751,10 @@ $(document).ready(function () {
 
 
     /*=================================================================
-   /  Ретинг звездочек на странице одного товара
+   /   страница одного товара (Магазин)
    ==================================================================*/
+
+    //Ретинг звездочек на странице одного товара
     $('#stars li').on('mouseover', function () {
         var onStar = parseInt($(this).data('value'), 10);
 
@@ -1770,8 +1772,6 @@ $(document).ready(function () {
             $(this).removeClass('hover');
         });
     });
-
-
     $('#stars li').on('click', function () {
         var onStar = parseInt($(this).data('value'), 10);
         var stars = $(this).parent().children('li.star');
@@ -1791,19 +1791,13 @@ $(document).ready(function () {
         }
         responseMessage(msg);
     });
-
     function responseMessage(msg) {
         $('.success-box').fadeIn(200);
         $('.success-box div.text-message').html("<span>" + msg + "</span>");
     }
+    //end Ретинг звездочек на странице одного товара
 
-    /*=================================================================
-    /  end Ретинг звездочек на странице одного товара, Магазин
-    ==================================================================*/
-
-    /*=================================================================
-  /  Выбираем количество товаров на странице одного тоавара, Магазин
-  ==================================================================*/
+    //Выбираем количество товаров
     $(document).on('click', '.plus', function () {
         event.preventDefault();
         var count = $('.single-shop__info-content--counter').find('.number'),
@@ -1817,7 +1811,6 @@ $(document).ready(function () {
         }
         return false;
     });
-
     $(document).on('click', '.minus', function () {
         event.preventDefault();
         var count = $('.single-shop__info-content--counter').find('.number');
@@ -1829,10 +1822,9 @@ $(document).ready(function () {
         $('.js-single-favorites').attr('data-quantity', counter);
         return false;
     });
-    /*=================================================================
- /  end Выбираем количество товаров на странице одного тоавара, Магазин
- ==================================================================*/
+    // end Выбираем количество товаров
 
+    // слайдер товаров
     if ($('div').hasClass('single-shop__gallery')) {
         $('.single-shop__slider').slick({
             slidesToShow: 1,
@@ -1866,12 +1858,19 @@ $(document).ready(function () {
             ]
         });
     }
+    // end слайдер товаров
+
+    // инициализация zoom effect при навидение на слайдер
     if ($('div').hasClass('single-shop__slider-item')) {
         $('.single-shop__slider-item').zoom();
     }
+    // end инициализация zoom effect при навидение на слайдер
 
+    // инициализация табов
     $(".single-shop__tabs").lightTabs();
+    //end инициализация табов
 
+    //
     var promotionElement = $('#store-info');
     if (promotionElement.length > 0) {
         var promotionElementPosition = promotionElement.offset().top;
@@ -1879,6 +1878,11 @@ $(document).ready(function () {
             fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
         });
     }
+    /*=================================================================
+    / страница одного товара (Магазин)
+    ==================================================================*/
+
+
 
     $(document).on('click', ' #add-review-promotions', function (event) {
         event.preventDefault();
@@ -1887,6 +1891,16 @@ $(document).ready(function () {
                 $('#modal-review-promotions').css('display', 'block').animate({opacity: 1}, 200);
             });
     });
+    $(document).on('click', '#black-overlay', function () {
+        $('#modal-review-promotions').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
 
-
+    $(".all-actions__select").click(function () {
+        $(this).toggleClass('select-init')
+    })
 });

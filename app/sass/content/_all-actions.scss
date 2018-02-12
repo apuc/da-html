@@ -58,8 +58,7 @@
     z-index: 999;
     width: 316px;
     border-radius: 3px;
-    border: 1px solid #8f9091;
-    background-color: #ffffff;
+
     @include breakpoint(max-width 660px) {
       left: 0;
       top: 35px;
@@ -103,12 +102,9 @@
       font-size: 15px;
       font-weight: 600;
       padding-left: 45px;
-      background-color: #fff;
+      background-color: transparent;
       button {
         display: none;
-      }
-      &:hover {
-        background: #fff;
       }
       &:after {
         content: '';
@@ -125,6 +121,10 @@
       float: left;
       display: none;
     }
+  }
+  .select-init{
+    border: 1px solid #8f9091;
+    background-color: #ffffff;
   }
   &__button-search {
     border: none;
