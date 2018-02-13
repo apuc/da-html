@@ -222,7 +222,8 @@
   }
   &__remove-pkg {
     display: block;
-    position: relative;
+    position: absolute;
+    right: 3px;
     float: left;
     width: 21px;
     height: 21px;
@@ -1620,6 +1621,7 @@
             float: left;
             display: block;
             font-size: 13px;
+            padding-right: 5px;
             text-align: left;
             position: relative;
             top: 17px;
@@ -2263,7 +2265,7 @@
     &--title {
       display: block;
       float: left;
-      width: 165px;
+      width: 158px;
       height: 30px;
       text-align: left;
       margin: 0;
@@ -2560,11 +2562,12 @@
     &--add-foto {
       display: block;
       position: relative;
-      float: left;
+      float: right;
       width: 43px;
       /*height: 39px;*/
-      margin-right: 50px;
-      margin-bottom: 40px;
+      margin-bottom: 0;
+      margin-right: 312px;
+      margin-top: 30px;
       cursor: pointer;
       @include breakpoint(max-width 660px) {
         width: 100%;
@@ -2576,14 +2579,14 @@
       &:after {
         display: block;
         position: absolute;
-        content: 'добавьте изображение';
+        content: 'Добавьте изображение';
         top: 10px;
-        left: 113px;
+        right: 38px;
         width: 208px;
         height: 12px;
-        color: #8696a6;
-        font-size: 11px;
-        font-weight: 400;
+        color: hsla(200,4%,44%,.75);
+        font-size: 13px;
+        font-weight: 700;
       }
       .button {
         top: 2px;
@@ -3537,6 +3540,19 @@
   .input-group{
     margin-bottom: 20px;
   }
+  .select2-container--krajee .select2-selection--multiple{
+    min-height: auto;
+    border: 1px solid #b8b6b6;
+  }
+  .select2-container--krajee .select2-selection--multiple .select2-selection__choice{
+    margin: 5px;
+  }
+  .select2-container--krajee .select2-selection--multiple .select2-selection__clear {
+    margin: 0;
+  }
+  .select2-container--krajee .select2-selection--single{
+    text-align: left;
+  }
 }
 
 .cabinet__container {
@@ -3937,6 +3953,7 @@
   line-height: 30px;
   border: 1px solid #b8b6b6;
   margin: 12px 0;
+  resize: vertical;
   height: 30px;
   padding-left: 10px;
   @include breakpoint(max-width 660px) {
