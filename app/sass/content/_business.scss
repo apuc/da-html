@@ -1167,22 +1167,22 @@ body {
         font-size: 16px;
         font-weight: 600;
         transition: 200ms ease;
-        @include breakpoint(max-width 992px){
+        @include breakpoint(max-width 992px) {
           display: flex;
           flex-wrap: wrap;
           align-items: center;
           font-size: 17px;
         }
-        span{
+        span {
           display: none;
           font-size: 11px;
           font-weight: 400;
           margin-left: 10px;
-          @include breakpoint(max-width 992px){
+          @include breakpoint(max-width 992px) {
             display: inline-block;
           }
         }
-        img{
+        img {
           visibility: hidden;
           opacity: 0;
           display: inline-block;
@@ -1192,21 +1192,21 @@ body {
           transition: 200ms ease;
           object-fit: contain;
           border-radius: 50%;
-          @include breakpoint(max-width 992px){
+          @include breakpoint(max-width 992px) {
             visibility: visible;
             opacity: 1;
           }
         }
-        &:hover{
+        &:hover {
           color: #ee2e24;
           font-weight: 700;
           margin-left: 11px;
-          @include breakpoint(max-width 992px){
+          @include breakpoint(max-width 992px) {
             color: #020000;
             font-weight: 600;
             margin-left: 0;
           }
-          img{
+          img {
             visibility: visible;
             margin-left: 5px;
             transition: 200ms ease;
@@ -1305,7 +1305,7 @@ body {
         padding-left: 26px;
         width: 18px;
         height: 17px;
-        background:  url(../img/icons/vision.png) no-repeat center center;
+        background: url(../img/icons/vision.png) no-repeat center center;
         background-size: contain;
       }
     }
@@ -1810,7 +1810,7 @@ body {
       /*border: 1px solid rgba(255, 2, 0, 0.32);*/
       border-bottom: 2px solid #ee2e24;
     }
-    .tabs-counters{
+    .tabs-counters {
       position: relative;
       right: 0;
       top: 0;
@@ -2233,4 +2233,71 @@ body {
       }
     }
   }
+  &__company {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 25px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    @include breakpoint(max-width 660px) {
+      justify-content: space-around;
+    }
+  }
+  &__company-item {
+    position: relative;
+    width: 195px;
+    &:hover .business__company-img img {
+      transform: scale(1.06);
+      transition: 200ms ease;
+    }
+  }
+  &__company-img {
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+    width: 100%;
+    height: 190px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: 200ms ease;
+    }
+  }
+  &__company-desc {
+    color: #060000;
+    font-size: 12px;
+    margin: 13px 5px;
+    box-sizing: content-box;
+    font-weight: 600;
+    height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__company-price {
+    color: #060000;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .heart {
+      width: 17px;
+      height: 15px;
+      transition: 200ms ease;
+      background: url(../img/company-shop/heart.png) no-repeat center center;
+      background-size: contain;
+      &:hover {
+        transition: 200ms ease;
+        background-image: url(../img/company-shop/heart1.png);
+      }
+    }
+  }
+
+}
+.like{
+  background-image: url(../img/company-shop/heart1.png)!important;
+
 }
