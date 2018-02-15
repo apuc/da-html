@@ -68,9 +68,9 @@
       display: block;
       position: relative;
       float: left;
-      width: 82px;
+      width: 40px;
       height: 37px;
-      margin-left: -14px;
+      margin-left: -1px;
       border-radius: 5px;
       background-color: #ee2e24;
       border: none;
@@ -189,7 +189,9 @@
         color: #fff;
         font-size: 12px;
         @include breakpoint(max-width 600px) {
-          margin-left: 99px;
+          margin-left: 100px;
+          margin-top: 5px;
+
         }
       }
     }

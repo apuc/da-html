@@ -1578,6 +1578,10 @@ $(document).ready(function () {
     ==================================================================*/
     $(document).on('click', '.company-static-close', function () {
         $('.cabinet-company-statistic__body').slideToggle('slow');
+        $('.company-static-close').toggleClass('change');
+        $('.company-static-close').text(function (i, text) {
+            return text === 'развернуть блок статистики' ? 'свернуть блок статистики' : 'развернуть блок статистики';
+        });
         return false;
     });
     /*=================================================================

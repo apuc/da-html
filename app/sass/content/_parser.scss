@@ -174,12 +174,7 @@
       background-size: cover;
     }
   }
-  .change{
-    &:before{
-      transform: rotate(180deg);
-      transition: 200ms ease;
-    }
-  }
+
   &__wrapper{
     display: block;
     position: relative;
@@ -667,5 +662,11 @@
     .parser__element--photo{
       height: 200px;
     }
+  }
+}
+.change{
+  &:before{
+    transform: rotate(180deg);
+    transition: 200ms ease;
   }
 }
