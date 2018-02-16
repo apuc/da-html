@@ -3561,6 +3561,22 @@
     float: right;
     margin-top: 15px;
   }
+  .input-group.file-caption-main {
+    width: 70%;
+    float: right;
+  }
+  label.control-label {
+    width: 30%;
+    float: left;
+    display: block;
+    font-size: 13px;
+    padding-right: 5px;
+    text-align: left;
+    position: relative;
+    top: 30px;
+    color: hsla(200,4%,44%,.75);
+    right: 0;
+  }
 }
 
 .cabinet__container {
