@@ -142,6 +142,7 @@
       &:last-child {
         width: auto;
         margin-right: 0;
+        display: flex;
       }
     }
   }
@@ -707,7 +708,8 @@
     font-weight: 700;
   }
   .discount {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     color: #075882;
     font-size: 13px;
     font-weight: 600;
@@ -721,7 +723,7 @@
       content: '-52%';
       position: absolute;
       left: -40px;
-      top: -10px;
+      top: 50%;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -730,6 +732,7 @@
       width: 38px;
       height: 38px;
       background-color: #ee2e24;
+     transform: translateY(-50%);
     }
     &:hover {
       text-decoration: underline;
