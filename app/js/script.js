@@ -1866,7 +1866,9 @@ $(document).ready(function () {
 
     // инициализация zoom effect при навидение на слайдер
     if ($('div').hasClass('single-shop__slider-item')) {
-        $('.single-shop__slider-item').zoom();
+        $('.single-shop__slider-item').zoom({
+            magnify: 3
+        });
     }
     // end инициализация zoom effect при навидение на слайдер
 
