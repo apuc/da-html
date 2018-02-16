@@ -719,7 +719,7 @@
     @include breakpoint(max-width 490px){
       display: none;
     }
-    &:after {
+   .discount-sale {
       content: '-52%';
       position: absolute;
       left: -40px;
