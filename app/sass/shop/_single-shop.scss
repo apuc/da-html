@@ -269,9 +269,13 @@
     margin-bottom: 10px;
     background-color: #fbfbfb;
     @include breakpoint(max-width 992px){
+      width: 59%;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+    }
+    @include breakpoint(max-width 600px){
+      width: 100%;
     }
     .all-actions__company {
       width: 100%;
@@ -344,6 +348,14 @@
     padding: 25px 17px;
     margin-bottom: 10px;
     background-color: #fbfbfb;
+    @include breakpoint(max-width 992px){
+      width: 39%;
+      float: right;
+    }
+    @include breakpoint(max-width 600px){
+      width: 100%;
+      padding: 18px 17px;
+    }
   }
   &__buy-history-wrap {
     display: flex;
@@ -549,6 +561,9 @@
     @include breakpoint(max-width 992px){
       padding: 0 30px;
     }
+    @include breakpoint(max-width 600px){
+      padding: 0;
+    }
 
     &--item {
       @include breakpoint(max-width 992px) {
@@ -584,11 +599,17 @@
     position: absolute;
     top: 50%;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 0;
+    @include breakpoint(max-width 992px){
+      display: flex;
+    }
+    @include breakpoint(max-width 600px){
+      display: none;
+    }
   }
   .social-wrapper-shop {
     display: flex;
