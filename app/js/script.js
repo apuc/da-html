@@ -1889,7 +1889,7 @@ $(document).ready(function () {
     //end фиксация левого сайдбара при скролле
 
     //owl-carousel для секции другие товары, планшет и телефон
-    if (window.innerWidth < 770) {
+    if (window.innerWidth < 992) {
         $('.shop__top-sales-elements').slick({
             dots: false,
             infinite: true,
