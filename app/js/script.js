@@ -1795,10 +1795,12 @@ $(document).ready(function () {
         }
         responseMessage(msg);
     });
+
     function responseMessage(msg) {
         $('.success-box').fadeIn(200);
         $('.success-box div.text-message').html("<span>" + msg + "</span>");
     }
+
     //end Ретинг звездочек на странице одного товара
 
     //Выбираем количество товаров
@@ -1876,7 +1878,7 @@ $(document).ready(function () {
     $(".single-shop__tabs").lightTabs();
     //end инициализация табов
 
-    //
+    //фиксация левого сайдбара при скролле
     var promotionElement = $('#store-info');
     if (promotionElement.length > 0) {
         var promotionElementPosition = promotionElement.offset().top;
@@ -1884,10 +1886,42 @@ $(document).ready(function () {
             fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
         });
     }
-    /*=================================================================
-    / страница одного товара (Магазин)
-    ==================================================================*/
+    //end фиксация левого сайдбара при скролле
 
+    //owl-carousel для секции другие товары, планшет и телефон
+    if (window.innerWidth < 770) {
+        $('.shop__top-sales-elements').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    }
+    //end owl-carousel для секции другие товары
+
+
+    /*=================================================================
+    / end  страница одного товара (Магазин)
+    ==================================================================*/
 
 
     $(document).on('click', ' #add-review-promotions', function (event) {

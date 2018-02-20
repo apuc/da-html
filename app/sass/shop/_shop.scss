@@ -58,7 +58,7 @@
         width: 200px;
       }
       @include breakpoint(max-width 600px) {
-        width: calc(50% - 41px + 7px);
+        width: calc(50% - 6px);
       }
       &:focus {
         outline: none;

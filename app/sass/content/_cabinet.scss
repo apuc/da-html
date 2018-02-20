@@ -3557,9 +3557,12 @@
     opacity: 0;
   }
   .description-action{
-    width: 70%;
+    width: 100%;
     float: right;
-    margin-top: 15px;
+    margin-top: 25px;
+  }
+  div#cke_1_contents {
+    height: 200px!important;
   }
   .input-group.file-caption-main {
     width: 70%;

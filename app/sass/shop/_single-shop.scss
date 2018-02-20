@@ -523,6 +523,11 @@
     position: relative;
     float: left;
     width: 100%;
+    .single-shop__view-title{
+      @include breakpoint(max-width 992px){
+        text-align: center;
+      }
+    }
   }
   &__view-title {
     width: 100%;
@@ -542,8 +547,9 @@
   .shop__top-sales-elements {
     margin-bottom: 20px;
     @include breakpoint(max-width 992px){
-      margin-bottom: 0;
+      padding: 0 30px;
     }
+
     &--item {
       @include breakpoint(max-width 992px) {
         display: flex;
@@ -551,6 +557,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+        margin: 0 4px;
       }
     }
     .category-price {
@@ -572,6 +579,16 @@
     .category-price__new {
       font-size: 13px;
     }
+  }
+  .slick-navigation{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   .social-wrapper-shop {
     display: flex;
