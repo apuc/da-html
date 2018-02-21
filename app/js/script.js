@@ -1948,7 +1948,10 @@ $(document).ready(function () {
     });
 
     $(".all-actions__select").click(function () {
-        $(this).toggleClass('select-init');
+        $('.all-actions__select').addClass('select-init');
+    });
+    $(".all-actions__select li").click(function () {
+        $('.all-actions__select').removeClass('select-init');
     });
 
     $('.business__company-price .heart').click(function () {
