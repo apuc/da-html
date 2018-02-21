@@ -1734,10 +1734,11 @@ $(document).ready(function () {
     / Выпадающий селект с датами, для страницы всех акций
     ==================================================================*/
     $(".all-actions__select").on("click", ".init", function () {
-        $(this).closest(".all-actions__select").children('li:not(.init)').slideDown();
+        $(this).closest(".all-actions__select").children('li:not(.init)').slideToggle();
     });
 
     var allOptions = $(".all-actions__select").children('li:not(.init)');
+
     $(".all-actions__select").on("click", "li:not(.init)", function () {
         allOptions.removeClass('selected');
         $(this).addClass('selected');
@@ -1745,8 +1746,13 @@ $(document).ready(function () {
         allOptions.slideUp();
     });
 
+    $('.all-actions__select .input-date input').bind('click',function(){return false;});
 
-    $("#submit").click(function () {
+    $(".all-actions__select").click(function () {
+        $(this).toggleClass('select-init');
+    });
+    $('.all-actions__select .input-group.date').datepicker({format: "dd.mm.yyyy"});
+    $(".action-flt-btn").click(function () {
         alert("The selected Value is " + $(".all-actions__select").find(".selected").data("value"));
     });
     /*=================================================================
@@ -1947,15 +1953,12 @@ $(document).ready(function () {
         );
     });
 
-    $(".all-actions__select").click(function () {
-        $('.all-actions__select').addClass('select-init');
-    });
-    $(".all-actions__select li").click(function () {
-        $('.all-actions__select').removeClass('select-init');
-    });
+
+
 
     $('.business__company-price .heart').click(function () {
         $(this).toggleClass('like');
         return false;
     })
 });
+
