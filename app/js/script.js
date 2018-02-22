@@ -1290,13 +1290,13 @@ if (businessElement.length > 0) {
         fixedScroll(businessElement, businessElementPosition, $('.footer'));
     });
 }
-// var businessElementS = $('#promotions-sidebar');
-// if (businessElementS.length > 0) {
-//     var businessElementPositionS = businessElementS.offset().top;
-//     $(window).scroll(function () {
-//         fixedScroll(businessElementS, businessElementPositionS, $('.footer'));
-//     });
-// }
+var businessElementS = $('#promotions-sidebar');
+if (businessElementS.length > 0) {
+    var businessElementPositionS = businessElementS.offset().top;
+    $(window).scroll(function () {
+        fixedScroll(businessElementS, businessElementPositionS, $('.footer'));
+    });
+}
 
 /*fixed div function*/
 function fixedScroll(element, elementPosition, blockElement) {//функция фиксированного блока, с селекторами элемента, его позиционирования и преграждающего блока
@@ -1896,7 +1896,7 @@ $(document).ready(function () {
 
     //owl-carousel для секции другие товары, планшет и телефон
     if (window.innerWidth < 992) {
-        $('.shop__top-sales-elements').slick({
+        $('.single-shop-carousel').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -1924,6 +1924,7 @@ $(document).ready(function () {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
+                        margin: 5
                     }
                 }
             ]

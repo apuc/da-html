@@ -441,6 +441,9 @@
       color: #000000;
       font-size: 18px;
       font-weight: 700;
+      @include breakpoint(max-width 992px){
+        margin: 20px 0;
+      }
       &:before {
         display: block;
         position: absolute;
@@ -461,6 +464,9 @@
     @include breakpoint(max-width 992px){
       width: 100%;
       flex-wrap: nowrap;
+    }
+    @include breakpoint(max-width 660px){
+      display: none;
     }
     float: right;
     &--link {
@@ -511,7 +517,7 @@
     float: left;
     width: 100%;
     @include breakpoint(max-width 660px) {
-      @include flex-direction(column);
+
     }
     &--stock-item {
       display: block;
@@ -544,7 +550,8 @@
         margin-bottom: 10px;
       }
       @include breakpoint(max-width 660px) {
-        width: 100%;
+        width: 49%;
+        height: 245px;
         margin-bottom: 10px;
       }
     }
@@ -567,6 +574,9 @@
       color: #000000;
       font-size: 20px;
       font-weight: 700;
+      @include breakpoint(max-width 992px){
+        margin: 10px 0 20px 0;
+      }
     }
     &--categories {
       display: block;
@@ -616,6 +626,69 @@
       margin-bottom: 10px;
     }
   }
+  .slick-navigation{
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .prev, .next{
+      cursor: pointer;
+    }
+    @include breakpoint(max-width 992px){
+      display: flex;
+    }
+    @include breakpoint(max-width 600px){
+      display: none;
+    }
+  }
+  .single-shop-carousel{
+    margin-bottom: 20px;
+    @include breakpoint(max-width 992px){
+      padding: 0 30px;
+    }
+    @include breakpoint(max-width 600px){
+      padding: 0;
+    }
+  }
+
+}
+.new-label{
+  width: 30px;
+  height: 30px;
+  right: 30px;
+  top: 60px;
+  background-color: #3bc593;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  color: #ffffff;
+  z-index: 500;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 29px;
+  text-transform: uppercase;
+}
+.hit-label{
+  width: 30px;
+  height: 30px;
+  right: 30px;
+  top: 60px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  color: #ffffff;
+  z-index: 500;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 29px;
+  text-transform: uppercase;
+  background-color: #fbb900;
 }
 
 //.shop__categories--list li:hover .shop__categories--sub-menu{
@@ -737,8 +810,8 @@
     right: 55px;
   }
   @include breakpoint(max-width 990px) {
-    margin-top: 1px;
-    right: 2px;
+    margin-top: 31px;
+    left: 10px;
   }
   &__new {
     display: block;
@@ -787,6 +860,9 @@
   @include breakpoint(max-width 990px) {
     width: 68px;
     margin-top: 34px;
+  }
+  @include breakpoint(max-width 660px){
+
   }
   &:hover {
     background-color: #ee2e24;
