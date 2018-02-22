@@ -458,6 +458,10 @@
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
+    @include breakpoint(max-width 992px){
+      width: 100%;
+      flex-wrap: nowrap;
+    }
     float: right;
     &--link {
       @include display-flex(flex);
@@ -469,6 +473,12 @@
       margin-left: 14px;
       margin-right: 14px;
       margin-bottom: 14px;
+      @include breakpoint(max-width 992px){
+        margin: 10px 3px 14px;
+        &:first-child{
+          margin-left: 0;
+        }
+      }
       .icon {
         width: 32px;
         height: 34px;
