@@ -1184,18 +1184,18 @@ $(document).ready(function () {
     /*close*/
 
     /*show shop toolbar menu*/
-    $(document).on('click', '#shop-toolbar-trigger', function () {
-        event.preventDefault();
-        var shopMenu = $(this).next('.shop__top-nav--navigation');
-        /*console.log( shopMenu );*/
-        if ($(this).hasClass('show-trigger')) {
-            $(this).removeClass('show-trigger');
-            shopMenu.removeClass('show-shop-menu');
-        } else {
-            $(this).addClass('show-trigger');
-            shopMenu.addClass('show-shop-menu');
-        }
-    });
+    // $(document).on('click', '#shop-toolbar-trigger', function () {
+    //     event.preventDefault();
+    //     var shopMenu = $(this).next('.shop__top-nav--navigation');
+    //     /*console.log( shopMenu );*/
+    //     if ($(this).hasClass('show-trigger')) {
+    //         $(this).removeClass('show-trigger');
+    //         shopMenu.removeClass('show-shop-menu');
+    //     } else {
+    //         $(this).addClass('show-trigger');
+    //         shopMenu.addClass('show-shop-menu');
+    //     }
+    // });
     /*close*/
 
     /*show fixed right toolbar*/

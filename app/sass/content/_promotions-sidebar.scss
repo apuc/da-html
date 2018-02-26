@@ -133,6 +133,14 @@
       }
     }
   }
+  .company-sidebar{
+    @include breakpoint(max-width 992px){
+      width: 49%;
+    }
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
+  }
 }
 .absolute{
   position: absolute!important;

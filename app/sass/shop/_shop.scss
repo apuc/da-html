@@ -11,6 +11,9 @@
     width: 100%;
     margin-top: 30px;
     margin-bottom: 22px;
+    @include breakpoint(max-width 992px) {
+      margin-bottom: 0;
+    }
   }
   &__top-form {
     position: relative;
@@ -30,7 +33,7 @@
       border: 1px solid #a2a2a2;
       background-color: #edeef0;
       @include breakpoint(max-width 1200px) {
-        width: calc(100% - 267px);
+        width: calc(100% - 238px);
       }
       @include breakpoint(max-width 600px) {
         width: calc(50% - 41px + 7px);
@@ -91,10 +94,16 @@
       width: 100%;
       margin-top: 20px;
     }
-    @include breakpoint(max-width 600px) {
+    @include breakpoint(max-width 992px){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       width: 100%;
-      margin-top: 15px;
-      margin-bottom: 15px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    @include breakpoint(max-width 660px){
+      margin-bottom: 20px;
     }
     &--navigation {
       @include display-flex(flex);
@@ -110,14 +119,30 @@
       @include breakpoint(max-width 1200px) {
         justify-content: space-around;
       }
-      @include breakpoint(max-width 600px) {
+      @include breakpoint(max-width 992px) {
         display: none;
-        opacity: 0;
-        @include transition(0.4s);
-        @include flex-direction(column);
       }
+      @include breakpoint(max-width 400px) {
+        justify-content: center;
+        flex-direction: column;
+      }
+
       li {
         float: left;
+        position: relative;
+        .basket-counter {
+          display: block;
+          position: absolute;
+          min-width: 25px;
+          height: 16px;
+          line-height: 16px;
+          text-align: center;
+          border-radius: 8px;
+          background-color: #e62e04;
+          color: #fff;
+          font-size: 12px;
+          left: 16px;
+        }
         a {
           display: block;
           position: relative;
@@ -191,10 +216,122 @@
         color: #fff;
         font-size: 12px;
         @include breakpoint(max-width 600px) {
+          margin-top: 5px;
+        }
+        @include breakpoint(max-width 400px) {
           margin-left: 100px;
           margin-top: 5px;
-
         }
+      }
+    }
+    &--navigation-m {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
+      position: relative;
+      float: left;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      display: none;
+      list-style: none;
+      @include breakpoint(max-width 992px) {
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include breakpoint(max-width 400px) {
+        justify-content: flex-end;
+      }
+      li {
+        float: left;
+        position: relative;
+        margin-left: 20px;
+        &:first-child{
+          margin-left: 25px;
+        }
+        .basket-counter {
+          display: block;
+          position: absolute;
+          min-width: 20px;
+          font-size: 11px;
+          height: 16px;
+          line-height: 16px;
+          text-align: center;
+          border-radius: 8px;
+          background-color: #e62e04;
+          color: #fff;
+          margin-top: -10px;
+          right: -4px;
+        }
+        a {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+
+          color: #444444;
+          font-size: 15px;
+          font-weight: 400;
+          &:hover {
+            color: #ee2e24;
+          }
+        }
+        .delivery:before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 25px;
+          height: 21px;
+          top: 0;
+          left: -8px;
+          background-image: url('../img/shop/icons/shop-delivery-truck-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          @include breakpoint(max-width 992px){
+            position: relative;
+          }
+        }
+        .basket:before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 19px;
+          top: 0;
+          left: -7px;
+          background-image: url('../img/shop/icons/shop-shopping-cart-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          @include breakpoint(max-width 992px){
+            position: relative;
+          }
+        }
+        .my-desires:before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 24px;
+          height: 22px;
+          top: 0;
+          left: -7px;
+          background-image: url('../img/shop/icons/shop-heart-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          @include breakpoint(max-width 992px){
+            position: relative;
+          }
+        }
+      }
+    }
+    .button-second-menu{
+      @include breakpoint(max-width 370px){
+        position: absolute;
+        z-index: 1;
+        width: auto;
       }
     }
     &--navigation.show-shop-menu {
@@ -256,11 +393,9 @@
     width: 237px;
     margin-right: 12px;
     border: 1px solid #e8e8e8;
-    @include breakpoint(max-width 660px) {
-      position: absolute;
-      top: 122px;
-      left: -250px;
-      z-index: 2;
+
+    @include breakpoint(max-width 992px) {
+      display: none;
     }
     &--title {
       background-color: #f3f3f3;
@@ -404,6 +539,9 @@
     height: 136px;
     overflow: hidden;
     background-color: #f7f9fe;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
     @include breakpoint(max-width 660px) {
       width: 100%;
       margin-top: 13px;
@@ -427,7 +565,7 @@
     position: relative;
     float: left;
     width: calc(100% - (237px + 12px));
-    @include breakpoint(max-width 660px) {
+    @include breakpoint(max-width 992px) {
       width: 100%;
     }
     &--title {
@@ -441,7 +579,7 @@
       color: #000000;
       font-size: 18px;
       font-weight: 700;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         margin: 20px 0;
       }
       &:before {
@@ -461,11 +599,13 @@
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       width: 100%;
       flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
     }
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       display: none;
     }
     float: right;
@@ -479,9 +619,9 @@
       margin-left: 14px;
       margin-right: 14px;
       margin-bottom: 14px;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         margin: 10px 3px 14px;
-        &:first-child{
+        &:first-child {
           margin-left: 0;
         }
       }
@@ -516,8 +656,11 @@
     position: relative;
     float: left;
     width: 100%;
+    @include breakpoint(max-width 992px) {
+      justify-content: flex-start;
+    }
     @include breakpoint(max-width 660px) {
-
+      justify-content: space-between;
     }
     &--stock-item {
       display: block;
@@ -528,13 +671,19 @@
       background-color: #ffffff;
       padding: 11px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 770px) {
+      @include breakpoint(max-width 992px) {
+        width: calc(100% - 370px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      @include breakpoint(max-width 660px) {
         width: 49%;
       }
       @include breakpoint(max-width 660px) {
         width: 100%;
         margin-bottom: 10px;
       }
+
     }
     &--item {
       display: block;
@@ -545,14 +694,22 @@
       background-color: #ffffff;
       padding: 11px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 770px) {
-        width: 49%;
-        margin-bottom: 10px;
+      .category-price {
+        @include breakpoint(max-width 1200px) {
+          left: 5px;
+        }
+      }
+      @include breakpoint(max-width 992px) {
+        width: 170px;
+        margin-right: 10px;
       }
       @include breakpoint(max-width 660px) {
-        width: 49%;
+        width: 47%;
+        margin: 0 5px 10px 5px;
         height: 245px;
-        margin-bottom: 10px;
+      }
+      @include breakpoint(max-width 360px) {
+        width: 100%;
       }
     }
   }
@@ -574,7 +731,7 @@
       color: #000000;
       font-size: 20px;
       font-weight: 700;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         margin: 10px 0 20px 0;
       }
     }
@@ -626,7 +783,7 @@
       margin-bottom: 10px;
     }
   }
-  .slick-navigation{
+  .slick-navigation {
     position: absolute;
     top: 65%;
     width: 100%;
@@ -635,28 +792,58 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    .prev, .next{
+    .prev, .next {
       cursor: pointer;
     }
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       display: flex;
     }
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       display: none;
     }
   }
-  .single-shop-carousel{
+  .single-shop-carousel {
     margin-bottom: 20px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       padding: 0 30px;
     }
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       padding: 0;
     }
   }
+  .category-buy {
+    display: block;
+    position: absolute;
+    width: 76px;
+    height: 24px;
+    right: 11px;
+    margin-top: 21px;
+    background-color: #ee2e24;
+    border: none;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    @include breakpoint(max-width 1200px) {
+      width: 48px;
+      font-size: 8px;
+    }
+    @include breakpoint(max-width 990px) {
+      width: 68px;
+      margin-top: 34px;
+    }
+    @include breakpoint(max-width 660px) {
 
+    }
+    &:hover {
+      background-color: #ee2e24;
+      color: #ffffff;
+    }
+  }
 }
-.new-label{
+
+.new-label {
   width: 30px;
   height: 30px;
   right: 30px;
@@ -672,8 +859,13 @@
   font-weight: 700;
   line-height: 29px;
   text-transform: uppercase;
+  @include breakpoint(max-width 360px) {
+    left: 10px;
+    top: 10px;
+  }
 }
-.hit-label{
+
+.hit-label {
   width: 30px;
   height: 30px;
   right: 30px;
@@ -689,6 +881,10 @@
   line-height: 29px;
   text-transform: uppercase;
   background-color: #fbb900;
+  @include breakpoint(max-width 360px) {
+    left: 10px;
+    top: 10px;
+  }
 }
 
 //.shop__categories--list li:hover .shop__categories--sub-menu{
@@ -839,33 +1035,3 @@
   }
 }
 
-.category-buy {
-  display: block;
-  position: absolute;
-  width: 76px;
-  height: 24px;
-  right: 11px;
-  margin-top: 21px;
-  background-color: #ee2e24;
-  border: none;
-  color: #ffffff;
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 14px;
-  text-transform: uppercase;
-  @include breakpoint(max-width 1200px) {
-    width: 48px;
-    font-size: 8px;
-  }
-  @include breakpoint(max-width 990px) {
-    width: 68px;
-    margin-top: 34px;
-  }
-  @include breakpoint(max-width 660px){
-
-  }
-  &:hover {
-    background-color: #ee2e24;
-    color: #ffffff;
-  }
-}
