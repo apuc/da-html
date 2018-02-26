@@ -28,15 +28,28 @@
     color: #000000;
     font-size: 19px;
     font-weight: 700;
-    float: left;
+   @include breakpoint(max-width 992px){
+     width: 195px;
+     float: left;
+   }
   }
   form {
     position: relative;
     width: 60%;
+    @include breakpoint(max-width 992px){
+      width: calc(100% - 195px);
+      float: left;
+      padding-bottom: 20px;
+      margin-top: 20px;
+    }
     @include breakpoint(max-width 660px) {
       width: 100%;
       padding-bottom: 50px;
     }
+    input{
+      width: 100px;
+    }
+
   }
   &__search {
     position: relative;
@@ -59,10 +72,13 @@
     width: 316px;
     border-radius: 3px;
 
-    @include breakpoint(max-width 660px) {
-      left: 0;
-      top: 35px;
-      width: 100%;
+    @include breakpoint(max-width 992px) {
+      right: 0;
+      top: -8px;
+    }
+    @include breakpoint(max-width 440px){
+      left: 0px;
+      top: 30px;
     }
     li {
       padding: 8px 15px;
@@ -129,15 +145,12 @@
   &__button-search {
     border: none;
     background: transparent;
-    margin-left: 75px;
+    margin-left: 12px;
     margin-right: 14px;
     width: 13px;
     height: 13px;
     background: url("../img/icons/search-1.png") no-repeat center center;
     background-size: contain;
-    @include breakpoint(max-width 500px) {
-      margin-left: 0;
-    }
   }
   &__content {
     width: 100%;
