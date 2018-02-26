@@ -141,10 +141,12 @@
       width: 100%;
     }
   }
+  .absolute{
+    position: absolute!important;
+    right: 10px;
+  }
+  .fixed{
+    margin-left: 900px;
+  }
 }
-.absolute{
-  position: absolute!important;
-}
-.fixed{
-  margin-left: 900px;
-}
+
