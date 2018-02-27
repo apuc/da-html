@@ -4,7 +4,7 @@
   background: #fff;
   width: 100%;
   padding: 25px 25px 30px 25px;
-  margin-bottom: 20px;
+  margin-bottom: 300px;
   &__title{
     font-size: 19px;
     font-weight: bold;
@@ -24,7 +24,7 @@
     width: 33.333%;
     padding-right: 20px;
     color: #000;
-    &:last-child{
+    &:nth-child(3n){
       padding-right: 0;
     }
     @include breakpoint(max-width 660px){
