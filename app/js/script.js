@@ -1951,6 +1951,12 @@ $(document).ready(function () {
     / end  страница одного товара (Магазин)
     ==================================================================*/
 
+    $('.broad-more').click(function () {
+        $('.broad-category-hidden', this).slideToggle(200);
+        $('.fa-angle-down', this).toggleClass('active');
+        return false
+    });
+
 
     $(document).on('click', ' #add-review-promotions', function (event) {
         event.preventDefault();
