@@ -1466,6 +1466,20 @@ window.onload = function () {
         } else {
         }
     });
+    $(document).on('click', '.mobile-menu-lvl-2 li', function () {
+        var id = $(this).attr('data-menu-id');
+        var menuLv3 = $('.mobile-menu-lvl-3[data-menu-id="' + id + '"]');
+        if ($.trim(menuLv3.html()).length) {
+            menuLv3.css({
+                display: 'flex'
+            });
+            $('.header-m-arrow').css('display', 'flex');
+            $('.mobile-menu-lvl-2').fadeOut('fast');
+            return false;
+        } else {
+        }
+    });
+
 
     $(document).on('click', '.header-m-arrow', function () {
         var menuLv2 = $('.mobile-menu-lvl-2');
@@ -1746,7 +1760,9 @@ $(document).ready(function () {
         allOptions.slideUp();
     });
 
-    $('.all-actions__select .input-date input').bind('click',function(){return false;});
+    $('.all-actions__select .input-date input').bind('click', function () {
+        return false;
+    });
 
     $(".all-actions__select").click(function () {
         $(this).toggleClass('select-init');
@@ -1953,8 +1969,6 @@ $(document).ready(function () {
             }
         );
     });
-
-
 
 
     $('.business__company-price .heart').click(function () {
