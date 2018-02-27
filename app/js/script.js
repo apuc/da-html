@@ -1479,8 +1479,6 @@ window.onload = function () {
         } else {
         }
     });
-
-
     $(document).on('click', '.header-m-arrow', function () {
         var menuLv2 = $('.mobile-menu-lvl-2');
         menuLv2.css({
