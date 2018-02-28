@@ -37,6 +37,7 @@
     &:last-child {
       margin-bottom: 0;
     }
+
     li {
       width: 100%;
       display: inline-block;
@@ -62,9 +63,16 @@
         }
       }
     }
+    .broad-more {
+      >a{
+        color: #ee2e24;
+        &:hover{
+          color: #ee2e24;
+        }
+      }
+    }
   }
   .broad-category-hidden {
-    padding-left: 15px;
     display: none;
   }
   .shop__top-sales {

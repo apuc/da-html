@@ -1450,7 +1450,7 @@ window.onload = function () {
     if (headerMenuClose !== null) {
         headerMenuClose.onclick = function () {
             secondHeaderMenu.style.display = 'none';
-            $('.header-m-arrow').hide()
+            $('.header-m-arrow').hide();
         };
     }
     $(document).on('click', '.mobile-menu-lvl-1 li', function () {

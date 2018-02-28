@@ -1,0 +1,115 @@
+.shop-cart {
+  position: relative;
+  float: left;
+  width: 100%;
+  &__top-title {
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #0c242e;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0 0 22px 0;
+    letter-spacing: 0.47px;
+    span {
+      color: #ee2e24;
+      font-size: 16px;
+      letter-spacing: 0.4px;
+    }
+  }
+  &__content {
+    position: relative;
+    width: calc(100% - 185px);
+    float: left;
+    padding: 20px;
+    background: #fff;
+  }
+  &__company {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  &__table-cart {
+    position: relative;
+    width: 100%;
+    thead {
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #edeef0;
+      tr {
+        td {
+          color: #6f6969;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+    .product-pic {
+      width: 61px;
+      height: 81px;
+      float: left;
+      margin-right: 25px;
+    }
+    .product-link {
+      width: 223px;
+      float: left;
+      height: 30px;
+      a {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+  &__company-title {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 33px 0 0;
+  }
+  &__company-btn {
+    width: 151px;
+    height: 27px;
+    line-height: 26px;
+    border-radius: 5px;
+    border: 1px solid #ff0000;
+    display: inline-block;
+    color: #ee2e24;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.1px;
+    transition: 200ms ease;
+    &:hover {
+      transition: 200ms ease;
+      color: darken(#ee2e24, 10%);
+      border-color: darken(#ee2e24, 10%);
+    }
+  }
+  &__sidebar {
+    position: relative;
+    width: 170px;
+    float: right;
+    margin-left: 15px;
+    .shop__top-sales-elements--item {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  &__sidebar-title {
+    color: #000000;
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+    text-align: center;
+  }
+  .all-actions__company {
+    width: 310px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
