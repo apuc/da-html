@@ -22,8 +22,39 @@
     position: relative;
     width: calc(100% - 185px);
     float: left;
+  }
+  &__content-wrap{
+    width: 100%;
+    position: relative;
+    float: left;
     padding: 20px;
     background: #fff;
+    margin-bottom: 10px;
+  }
+  &__content-footer{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content-footer-desc{
+    width: 516px;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.06px;
+  }
+  &__content-footer-price{
+    border-left: 2px solid #fff;
+    padding-left: 30px;
+    padding-right: 20px;
+
+    color: #000000;
+    font-size: 14px;
+    line-height: 27px;
+    font-weight: 600;
+    text-align: right;
+
   }
   &__company {
     position: relative;
@@ -36,32 +67,140 @@
     position: relative;
     width: 100%;
     thead {
-      padding-bottom: 10px;
-      margin-bottom: 30px;
       border-bottom: 1px solid #edeef0;
       tr {
         td {
           color: #6f6969;
           font-size: 12px;
+          padding-bottom: 10px;
           font-weight: 600;
+          &:first-child {
+            width: 40%;
+          }
         }
       }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid #edeef0;
+        td {
+          padding-top: 30px;
+          padding-bottom: 30px;
+          vertical-align: top;
+        }
+      }
+    }
+
+    .price-sail {
+      color: #ee2e24;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .old-price {
+      color: #000000;
+      font-size: 13px;
+      font-weight: 400;
+      text-decoration: line-through;
+    }
+    .form-btn {
+      color: #000000;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: underline;
+      width: 108px;
+      display: block;
     }
     .product-pic {
       width: 61px;
       height: 81px;
       float: left;
       margin-right: 25px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
     .product-link {
-      width: 223px;
-      float: left;
-      height: 30px;
-      a {
-        color: #000000;
-        font-size: 14px;
-        font-weight: 600;
+      color: #000000;
+      font-size: 14px;
+      line-height: 20px;
+      display: block;
+      font-weight: 600;
+    }
+    .product-more {
+      display: block;
+      color: #000000;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 20px;
+      text-decoration: underline;
+      transition: 200ms ease;
+      &:hover {
+        color: #ee2e24;
+        transition: 200ms ease;
       }
+    }
+    .product-attribute {
+      width: calc(100% - 86px);
+      float: left;
+      span {
+        display: block;
+        color: #000000;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 20px;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+  &__action {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    a {
+      color: #075882;
+      padding-left: 15px;
+      text-decoration: underline;
+    }
+  }
+  &__info-price {
+    text-align: right;
+    width: 384px;
+  }
+  &__info-price-desc {
+    color: #ee2e24;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 27px;
+    span {
+      color: #000;
+    }
+  }
+  &__info-price-btn{
+    width: 186px;
+    height: 29px;
+    text-align: center;
+    float: right;
+    display: block;
+    line-height: 28px;
+    border-radius: 5px;
+    background-color: #ee2e24;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+    transition: 200ms ease;
+    &:hover{
+      color: #fff;
+      background: darken(#ee2e24, 10%);
+      transition: 200ms ease;
     }
   }
   &__company-title {
@@ -107,9 +246,63 @@
     letter-spacing: -0.1px;
     text-align: center;
   }
+  .cost-delivery{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 27px;
+  }
+  .cost-goods{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 27px;
+  }
+  .total-cost{
+    color: #ee2e24;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .buy-btn{
+    width: 186px;
+    height: 29px;
+    border-radius: 5px;
+    background-color: #ee2e24;
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+    transition: 200ms ease;
+    display: block;
+    float: right;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    &:hover{
+      transition: 200ms ease;
+      color: #fff;
+      background: darken(#ee2e24, 10%);
+    }
+  }
+  .clean-cart-btn{
+    width: 140px;
+    height: 21px;
+    border-radius: 5px;
+    border: 1px solid #ff0000;
+    background: transparent;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 20px;
+    color: #ee2e24;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: -0.15px;
+  }
   .all-actions__company {
     width: 310px;
     margin-top: 0;
     margin-bottom: 0;
+  }
+  .numbers {
+    margin: 0 auto;
   }
 }

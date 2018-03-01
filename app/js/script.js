@@ -1184,18 +1184,7 @@ $(document).ready(function () {
     /*close*/
 
     /*show shop toolbar menu*/
-    // $(document).on('click', '#shop-toolbar-trigger', function () {
-    //     event.preventDefault();
-    //     var shopMenu = $(this).next('.shop__top-nav--navigation');
-    //     /*console.log( shopMenu );*/
-    //     if ($(this).hasClass('show-trigger')) {
-    //         $(this).removeClass('show-trigger');
-    //         shopMenu.removeClass('show-shop-menu');
-    //     } else {
-    //         $(this).addClass('show-trigger');
-    //         shopMenu.addClass('show-shop-menu');
-    //     }
-    // });
+
     /*close*/
 
     /*show fixed right toolbar*/
@@ -1824,10 +1813,10 @@ $(document).ready(function () {
     //end Ретинг звездочек на странице одного товара
 
     //Выбираем количество товаров
-    $(document).on('click', '.plus', function () {
+    $(document).on('click', '.plus', this, function () {
         event.preventDefault();
-        var count = $('.single-shop__info-content--counter').find('.number'),
-            val = parseInt($('.single-shop__info-content--counter').find('.number').val());
+        var count = $('.numbers').find('.number'),
+            val = parseInt($('.numbers').find('.number').val());
         if (val == 999) {
             return false;
         } else {
@@ -1837,9 +1826,9 @@ $(document).ready(function () {
         }
         return false;
     });
-    $(document).on('click', '.minus', function () {
+    $(document).on('click', '.minus', this, function () {
         event.preventDefault();
-        var count = $('.single-shop__info-content--counter').find('.number');
+        var count = $('.numbers').find('.number');
         var counter = parseInt(count.val()) - 1;
         counter = counter < 1 ? 1 : counter;
         count.val(counter);
@@ -1848,7 +1837,8 @@ $(document).ready(function () {
         $('.js-single-favorites').attr('data-quantity', counter);
         return false;
     });
-    // end Выбираем количество товаров
+    // end Выбираем коли
+    // чество товаров
 
     // слайдер товаров
     if ($('div').hasClass('single-shop__gallery')) {
@@ -1962,7 +1952,14 @@ $(document).ready(function () {
         return false;
     });
 
-
+    $(document).on('click', '#shop-toolbar-trigger', function () {
+      $('.broad-category__sidebar').toggleClass('active');
+        if ($(this).hasClass('show-trigger')) {
+            $(this).removeClass('show-trigger');
+        } else {
+            $(this).addClass('show-trigger');
+        }
+    });
 
     $(document).on('click', ' #add-review-promotions', function (event) {
         event.preventDefault();
