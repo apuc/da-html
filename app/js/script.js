@@ -1951,11 +1951,17 @@ $(document).ready(function () {
     / end  страница одного товара (Магазин)
     ==================================================================*/
 
-    $('.broad-more').click(function () {
-        $('.broad-category-hidden', this).slideToggle(200);
-        $('.fa-angle-down', this).toggleClass('active');
-        return false
+
+    $(document).on('click', '.broad-more', function () {
+        $('.broad-category-hidden', this).slideToggle('slow');
+        $('.slide-text', this).toggleClass('active');
+        $('.slide-text', this).text(function (i, text) {
+            return text === 'eщё' ? 'скрыть' : 'eщё';
+
+        });
+        return false;
     });
+
 
 
     $(document).on('click', ' #add-review-promotions', function (event) {
