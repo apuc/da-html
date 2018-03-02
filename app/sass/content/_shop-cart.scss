@@ -1,4 +1,4 @@
-.shop-cart {
+.shop {
   position: relative;
   float: left;
   width: 100%;
@@ -282,6 +282,15 @@
       background: darken(#ee2e24, 10%);
     }
   }
+  .delete-product{
+    position: relative;
+    top: -29px;
+    float: right;
+    width: 18px;
+    height: 20px;
+    background: url("../img/shop/icons/delete.png") no-repeat center center;
+    background-size: contain;
+  }
   .clean-cart-btn{
     width: 140px;
     height: 21px;
@@ -304,5 +313,8 @@
   }
   .numbers {
     margin: 0 auto;
+  }
+  .fixed{
+    margin-left: 980px;
   }
 }

@@ -568,7 +568,7 @@
     @include breakpoint(max-width 992px) {
       width: 100%;
     }
-    &--title {
+    &--titles {
       display: block;
       position: relative;
       float: left;
@@ -713,7 +713,163 @@
       }
     }
   }
-  &__main {
+
+  &__top-sales-home {
+    display: block;
+    position: relative;
+    float: left;
+    width: -webkit-calc(100% - 249px);
+    width: calc(100% - 249px);
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
+    &--titles {
+      display: block;
+      position: relative;
+      float: left;
+      margin-top: 31px;
+      margin-bottom: 19px;
+      padding-left: 50px;
+      @include box-sizing(border-box);
+      color: #000000;
+      font-size: 18px;
+      font-weight: 700;
+      @include breakpoint(max-width 992px) {
+        margin: 20px 0;
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 30px;
+        top: -8px;
+        left: 4px;
+        background-image: url('../img/shop/icons/package-checking-icon.png');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__top-sales-home-nav {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    @include breakpoint(max-width 660px) {
+      display: none;
+    }
+    float: right;
+    &--link {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(space-between);
+      /*flex: 1 0 0;*/
+      margin-top: 19px;
+      margin-left: 14px;
+      margin-right: 14px;
+      margin-bottom: 14px;
+      @include breakpoint(max-width 992px) {
+        margin: 10px 3px 14px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .icon {
+        width: 32px;
+        height: 34px;
+        margin-right: 17px;
+        overflow: hidden;
+        img {
+          size: 100%;
+          object-fit: contain;
+        }
+      }
+      .name {
+        width: calc(100% - (32px + 17px));
+        color: #000000;
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+    &--link:hover {
+      .name {
+        color: #ee2e24;
+      }
+    }
+  }
+  &__top-sales-home-elements {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    float: left;
+    width: 100%;
+    @include breakpoint(max-width 992px) {
+      justify-content: flex-start;
+    }
+    @include breakpoint(max-width 660px) {
+      justify-content: space-between;
+    }
+    &--stock-item {
+      display: block;
+      position: relative;
+      float: left;
+      width: 39%;
+      height: 265px;
+      background-color: #ffffff;
+      padding: 11px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 992px) {
+        width: calc(100% - 370px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      @include breakpoint(max-width 660px) {
+        width: 49%;
+      }
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+    }
+    &--item {
+      display: block;
+      position: relative;
+      float: left;
+      width: 19%;
+      height: 265px;
+      background-color: #ffffff;
+      padding: 11px;
+      margin-bottom: 10px;
+      @include box-sizing(border-box);
+      .category-price {
+        @include breakpoint(max-width 1200px) {
+          left: 5px;
+        }
+      }
+      @include breakpoint(max-width 992px) {
+        width: 170px;
+        margin-right: 10px;
+      }
+      @include breakpoint(max-width 660px) {
+        width: 47%;
+        margin: 0 5px 10px 5px;
+        height: 245px;
+      }
+      @include breakpoint(max-width 360px) {
+        width: 100%;
+      }
+    }
+  }
+   &__main {
     display: block;
     position: relative;
     float: left;
@@ -779,7 +935,7 @@
         }
       }
     }
-    .shop__top-sales-elements--item {
+    .shop__top-sales-home-elements--item {
       margin-bottom: 10px;
     }
   }

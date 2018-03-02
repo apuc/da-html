@@ -1,10 +1,12 @@
-.broad-category {
+.shop {
   position: relative;
   display: block;
   float: left;
   width: 100%;
   &__title {
     color: #ee2e24;
+    float: left;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 18px;
@@ -13,7 +15,7 @@
     text-transform: uppercase;
     letter-spacing: 0.45px;
   }
-  &__sidebar {
+  &__sidebars {
     position: relative;
     float: left;
     width: 349px;
@@ -45,7 +47,7 @@
   .shop__top-trigger{
     z-index: 9999;
   }
-  &__sidebar-title {
+  &__sidebars-title {
     color: #000;
     margin: 0;
     font-size: 14px;
@@ -108,21 +110,22 @@
       }
     }
   }
-  .broad-category-hidden {
+  .shop-hidden {
     display: none;
     margin: 0;
+    padding: 0;
   }
-  .shop__top-sales {
+  &__top-sales {
     margin-bottom: 35px;
   }
-  .shop__top-sales-nav--title {
+  &__top-sales-nav--title {
     width: 165px;
     color: #000000;
     font-size: 16px;
     font-weight: 600;
     margin: 0 50px 0 0;
   }
-  .shop__top-sales-nav {
+  &__top-sales-nav {
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -131,14 +134,14 @@
       margin: 0;
     }
   }
-  .shop__top-sales-elements--item {
+  &__top-sales-elements--item {
     width: 23%;
     margin-bottom: 2.666%;
   }
-  .shop__top-sales {
+  &__top-sales {
     width: calc(100% - 365px);
     @include breakpoint(max-width 992px) {
-      width: 100%;
+      width: 100%; 
     }
   }
   .category-price {

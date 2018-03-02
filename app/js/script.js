@@ -846,11 +846,18 @@ $(document).ready(function () {
 
     //promotion
 
-    var promotionElement = $('#promotion-sidebar');
+    var promotionElement = $('#promotion-sidebar'),
+        shopCartSidebar = $('#shop-sidebar-cart');
     if (promotionElement.length > 0) {
         var promotionElementPosition = promotionElement.offset().top;
         $(window).scroll(function () {
             fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
+        });
+    }
+    if (shopCartSidebar.length > 0) {
+        var shopCartSidebarPosition = shopCartSidebar.offset().top;
+        $(window).scroll(function () {
+            fixedScroll(shopCartSidebar, shopCartSidebarPosition, $('.footer'));
         });
     }
 
@@ -1943,7 +1950,7 @@ $(document).ready(function () {
 
 
     $(document).on('click', '.broad-more', function () {
-        $('.broad-category-hidden', this).slideToggle('slow');
+        $('.shop-hidden', this).slideToggle('slow');
         $('.slide-text', this).toggleClass('active');
         $('.slide-text', this).text(function (i, text) {
             return text === 'eщё' ? 'скрыть' : 'eщё';
