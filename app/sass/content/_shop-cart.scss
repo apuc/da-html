@@ -84,6 +84,7 @@
       tr {
         border-bottom: 1px solid #edeef0;
         td {
+          position: relative;
           padding-top: 30px;
           padding-bottom: 30px;
           vertical-align: top;
@@ -283,9 +284,9 @@
     }
   }
   .delete-product{
-    position: relative;
-    top: -29px;
-    float: right;
+    position: absolute;
+    top: 32px;
+    right: 0;
     width: 18px;
     height: 20px;
     background: url("../img/shop/icons/delete.png") no-repeat center center;
