@@ -1441,6 +1441,13 @@ window.onload = function () {
         });
     });
 
+    $(".mobile-menu-broad").click(function () {
+        $(".shop__sidebars").toggleClass('active-menu')
+    });
+    $(".mobile-menu-broad-close").click(function () {
+        $(".shop__sidebars").removeClass('active-menu')
+    });
+
     var headerMenuClose = document.querySelector('.mobile-second-menu .header-close');
     var secondHeaderMenu = document.querySelector('.mobile-second-menu');
     if (headerMenuClose !== null) {
