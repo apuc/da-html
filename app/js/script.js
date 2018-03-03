@@ -1444,6 +1444,9 @@ window.onload = function () {
     $(".mobile-menu-broad").click(function () {
         $(".shop__sidebars").toggleClass('active-menu')
     });
+    $(".my-desires").click(function () {
+        $(this).toggleClass('active')
+    });
     $(".mobile-menu-broad-close").click(function () {
         $(".shop__sidebars").removeClass('active-menu')
     });

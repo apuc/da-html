@@ -201,6 +201,11 @@
           -webkit-background-size: 100% 100%;
           background-size: 100% 100%;
         }
+        .active{
+          &:before{
+            background-image: url('../img/shop/icons/shop-heart.png');
+          }
+        }
       }
       > .basket-counter {
         display: block;
