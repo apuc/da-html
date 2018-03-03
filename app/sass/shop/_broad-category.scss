@@ -41,7 +41,7 @@
         display: block;
         position: absolute;
         right: 20px;
-        top: 20px;
+        top: 10px;
         font-size: 25px;
       }
     }
@@ -54,6 +54,9 @@
         width: 50%;
         float: left;
         margin: 25px 0;
+      }
+      @include breakpoint(max-width 400px){
+        width: 100%;
       }
     }
   }
@@ -142,7 +145,9 @@
     font-weight: 600;
     margin: 0 50px 0 0;
     @include breakpoint(max-width 750px){
-      margin-bottom: 20px;
+      margin-top: 25px;
+      width: 100%;
+      order: 5;
     }
   }
   &__top-sales-nav {
@@ -152,15 +157,24 @@
     margin-bottom: 30px;
     @include breakpoint(max-width 750px){
       flex-wrap: wrap;
+      display: flex;
+    }
+    @include breakpoint(max-width 550px){
+      justify-content: flex-start;
     }
     &--link {
       margin: 0;
+      margin-right: 10px;
+      margin-top: 10px;
     }
   }
   &__top-sales-elements--item {
     width: 23%;
     margin-bottom: 2.666%;
     @include breakpoint(max-width 600px){
+      width: 47%;
+    }
+    @include breakpoint(max-width 353px){
       width: 100%;
     }
   }
