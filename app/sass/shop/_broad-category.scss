@@ -160,6 +160,9 @@
   &__top-sales-elements--item {
     width: 23%;
     margin-bottom: 2.666%;
+    @include breakpoint(max-width 600px){
+      width: 100%;
+    }
   }
   &__top-sales {
     width: calc(100% - 365px);

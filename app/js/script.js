@@ -1447,6 +1447,10 @@ window.onload = function () {
     $(".my-desires").click(function () {
         $(this).toggleClass('active')
     });
+    $(".single-shop__desires").click(function () {
+        $(this).toggleClass('active')
+        return false
+    });
     $(".mobile-menu-broad-close").click(function () {
         $(".shop__sidebars").removeClass('active-menu')
     });

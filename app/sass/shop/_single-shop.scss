@@ -216,8 +216,14 @@
       background: url("../img/shop/icons/shop-heart-icon.png") no-repeat center center;
       background-size: contain;
     }
+
     @include breakpoint(max-width 660px){
       margin-left: 33px;
+    }
+  }
+  .active{
+    &:after{
+      background-image: url('../img/shop/icons/shop-heart.png');
     }
   }
   &__store-info {
