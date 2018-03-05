@@ -33,11 +33,13 @@
     padding: 20px;
     background: #fff;
     margin-bottom: 10px;
-    overflow-y: scroll;
+
+    overflow-y: hidden;
   }
   &__content-footer{
     width: 100%;
     position: relative;
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
   }
@@ -47,6 +49,10 @@
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.06px;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      text-align: center;
+    }
   }
   &__content-footer-price{
     border-left: 2px solid #fff;
@@ -58,6 +64,12 @@
     line-height: 27px;
     font-weight: 600;
     text-align: right;
+    @include breakpoint(max-width 660px){
+      border: none;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
 
   }
   &__company {
@@ -66,12 +78,13 @@
     align-items: center;
     width: 100%;
     margin-bottom: 35px;
+    min-width: 720px;
   }
   &__table-cart {
     position: relative;
     width: 100%;
-    overflow-y: scroll;
-    min-width: 700px;
+    overflow: scroll;
+    min-width: 720px;
     thead {
       border-bottom: 1px solid #edeef0;
       tr {
@@ -119,7 +132,6 @@
     }
     .product-pic {
       width: 61px;
-      height: 81px;
       float: left;
       margin-right: 25px;
       img {
@@ -166,6 +178,7 @@
     width: 100%;
     padding-top: 30px;
     margin-bottom: 10px;
+    min-width: 720px;
   }
   &__action {
     font-size: 13px;
@@ -252,6 +265,9 @@
       @include breakpoint(max-width 992px){
         width: 47%;
       }
+      @include breakpoint(max-width 500px){
+        width: 100%;
+      }
     }
   }
   &__sidebar-title {
@@ -296,6 +312,10 @@
     float: right;
     margin-top: 25px;
     margin-bottom: 25px;
+    @include breakpoint(max-width 660px){
+      margin: 30px auto;
+      float: none;
+    }
     &:hover{
       transition: 200ms ease;
       color: #fff;
@@ -325,6 +345,9 @@
     font-size: 11px;
     font-weight: 600;
     letter-spacing: -0.15px;
+    @include breakpoint(max-width 660px){
+      margin: 15px auto;
+    }
   }
   .all-actions__company {
     width: 310px;
