@@ -76,7 +76,7 @@
     border-bottom: 1px solid #e7e7e7;
     padding-bottom: 15px;
     margin-bottom: 15px;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
 
     }
   }
@@ -86,7 +86,7 @@
     font-weight: 700;
     width: 420px;
     margin: 0;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       margin-bottom: 10px;
     }
   }
@@ -153,7 +153,7 @@
     color: #000;
     font-size: 11px;
     font-weight: 400;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       margin-left: 42px;
     }
     &:after {
@@ -185,10 +185,10 @@
     .all-actions__company {
       width: 45%;
       margin-right: 35px;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         width: 60%;
       }
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
       &--addres {
@@ -217,12 +217,12 @@
       background-size: contain;
     }
 
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       margin-left: 33px;
     }
   }
-  .active{
-    &:after{
+  .active {
+    &:after {
       background-image: url('../img/shop/icons/shop-heart.png');
     }
   }
@@ -274,22 +274,22 @@
     padding: 25px 17px;
     margin-bottom: 10px;
     background-color: #fbfbfb;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       width: 59%;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
     }
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       width: 100%;
     }
     .all-actions__company {
       width: 100%;
       margin: 20px 0;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         width: 50%;
       }
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
     }
@@ -298,11 +298,11 @@
       width: 100%;
       margin-bottom: 20px;
       line-height: 25px;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         width: 50%;
         margin-bottom: 0;
       }
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
         margin-bottom: 20px;
       }
@@ -337,12 +337,12 @@
         border-color: lighten(#ff0000, 15%);
         color: lighten(#ee2e24, 15%);
       }
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         display: block;
         width: auto;
         margin: 0 auto;
       }
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
     }
@@ -354,11 +354,11 @@
     padding: 25px 17px;
     margin-bottom: 10px;
     background-color: #fbfbfb;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       width: 39%;
       float: right;
     }
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       width: 100%;
       padding: 18px 17px;
     }
@@ -431,7 +431,7 @@
     padding: 12px 10px;
     margin: 0;
     border-bottom: 1px solid #edeef0;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       flex-wrap: wrap;
     }
     li {
@@ -442,10 +442,10 @@
       font-size: 12px;
       font-weight: 600;
       background-color: #eeeeee;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         margin-bottom: 10px;
       }
-      @include breakpoint(max-width 373px){
+      @include breakpoint(max-width 373px) {
         width: 100%;
         margin-right: 0;
         margin-bottom: 10px;
@@ -475,7 +475,7 @@
     float: left;
     padding: 20px;
 
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       padding: 10px;
     }
     div {
@@ -494,7 +494,7 @@
     width: 100%;
     align-items: center;
     margin-bottom: 15px;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       flex-wrap: wrap;
     }
     ul {
@@ -517,7 +517,7 @@
     position: relative;
     width: 380px;
     margin-right: 25px;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
       margin-right: 0;
     }
@@ -534,7 +534,7 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 20px;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
       margin-top: 20px;
     }
@@ -543,8 +543,8 @@
     position: relative;
     float: left;
     width: 100%;
-    .single-shop__view-title{
-      @include breakpoint(max-width 992px){
+    .single-shop__view-title {
+      @include breakpoint(max-width 992px) {
         text-align: center;
       }
     }
@@ -566,14 +566,19 @@
   }
   .shop__top-sales-elements {
     margin-bottom: 20px;
-    @include breakpoint(max-width 992px){
+    justify-content: flex-start;
+    @include breakpoint(max-width 992px) {
       padding: 0 30px;
     }
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       padding: 0;
     }
 
     &--item {
+      margin-right: 22px;
+      &:nth-child(4n) {
+       margin: 0;
+      }
       @include breakpoint(max-width 992px) {
         display: flex;
         justify-content: center;
@@ -585,16 +590,16 @@
     }
     .category-price {
       right: 70px;
-      @include breakpoint(max-width 1200px){
+      @include breakpoint(max-width 1200px) {
         right: 40px;
       }
-      @include breakpoint(max-width 992px){
-           left: 11px;
-           margin-top: 105px;
-         }
+      @include breakpoint(max-width 992px) {
+        left: 11px;
+        margin-top: 105px;
+      }
     }
-    .category-buy{
-      @include breakpoint(max-width 992px){
+    .category-buy {
+      @include breakpoint(max-width 992px) {
         width: 55px;
         margin-top: 100px;
       }
@@ -603,7 +608,7 @@
       font-size: 13px;
     }
   }
-  .slick-navigation{
+  .slick-navigation {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -612,13 +617,13 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    .prev, .next{
+    .prev, .next {
       cursor: pointer;
     }
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       display: flex;
     }
-    @include breakpoint(max-width 600px){
+    @include breakpoint(max-width 600px) {
       display: none;
     }
   }
@@ -765,10 +770,10 @@
     position: relative;
     margin-left: 50px;
     padding-left: 10px;
-    @include breakpoint(max-width 490px){
+    @include breakpoint(max-width 490px) {
       display: none;
     }
-   .discount-sale {
+    .discount-sale {
       content: '-52%';
       position: absolute;
       left: -40px;
@@ -781,13 +786,15 @@
       width: 38px;
       height: 38px;
       background-color: #ee2e24;
-     transform: translateY(-50%);
+      transform: translateY(-50%);
     }
     &:hover {
       text-decoration: underline;
     }
   }
+  .shop__top-sales-elements{
 
+  }
   .button-buy {
     border-radius: 5px;
     background-color: #ee2e24;
@@ -801,10 +808,10 @@
       background-color: darken(#ee2e24, 10%);
       transition: 200ms ease;
     }
-    @include breakpoint(max-width 660px){
-      margin: 0 10px 10px 0 ;
+    @include breakpoint(max-width 660px) {
+      margin: 0 10px 10px 0;
     }
-    @include breakpoint(max-width 380px){
+    @include breakpoint(max-width 380px) {
       padding: 10px 10px;
       font-size: 12px;
     }
@@ -823,10 +830,10 @@
       background-color: darken(#6c7376, 10%);
       transition: 200ms ease;
     }
-    @include breakpoint(max-width 660px){
-      margin: 0 10px 10px 0 ;
+    @include breakpoint(max-width 660px) {
+      margin: 0 10px 10px 0;
     }
-    @include breakpoint(max-width 380px){
+    @include breakpoint(max-width 380px) {
       padding: 10px 10px;
       font-size: 12px;
     }
@@ -841,8 +848,8 @@
       display: block;
       text-decoration: none;
     }
-    @include breakpoint(max-width 660px){
-      margin: 0 10px 0 0 ;
+    @include breakpoint(max-width 660px) {
+      margin: 0 10px 0 0;
     }
   }
   .shop__top-tools {
@@ -870,7 +877,7 @@
       text-decoration: none;
       font-size: 14px;
     }
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       margin-top: 30px;
     }
   }
@@ -933,6 +940,7 @@
     }
   }
 }
+
 .numbers {
   width: 73px;
   height: 25px;
