@@ -886,7 +886,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 20px;
     a {
       color: #075882;
       font-weight: 600;
@@ -939,6 +938,10 @@
       opacity: 1;
     }
   }
+}
+.rating-xs {
+  font-size: 1em;
+  margin-right: 10px;
 }
 
 .numbers {
