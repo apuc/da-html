@@ -1855,7 +1855,7 @@ $(document).ready(function () {
     //end Ретинг звездочек на странице одного товара
 
     //Выбираем количество товаров
-    $('.plus').on('click', function () {
+    $(document).on('click', '.plus', function () {
         var count = $(this).siblings('.number'),
             val = parseInt($(this).siblings('.number').val());
         if (val == 999) {
@@ -1867,6 +1867,7 @@ $(document).ready(function () {
         }
         return false;
     });
+
     $(document).on('click', '.minus', function () {
         var count = $(this).siblings('.number');
         var counter = parseInt(count.val()) - 1;
