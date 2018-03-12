@@ -1,0 +1,168 @@
+.shop {
+  &__ordering-wrap {
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 185px);
+  }
+  &__ordering {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+  }
+  &__ordering-header {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #edeef0;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    color: #6f6969;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &__order-title {
+    color: #0c242e;
+    font-size: 19px;
+    float: left;
+    width: 100%;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.47px;
+    padding-left: 20px;
+    margin: 20px 0;
+  }
+  &__ordering-form {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 0 12px;
+    label {
+      display: block;
+      float: left;
+      width: 180px;
+      color: #000000;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 7px;
+    }
+    input {
+      display: block;
+      float: left;
+      width: 240px;
+      height: 30px;
+      border: 1px solid #b0b0b1;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+  }
+  &__guarantee {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+  }
+  &__guarantee-title {
+    position: relative;
+    color: #0c242e;
+    margin: 10px 0 35px 0;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-left: 60px;
+    letter-spacing: 0.47px;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 33px;
+      height: 35px;
+      left: 0;
+      top: -9px;
+      background: url("../img/shop/icons/warranty.png") no-repeat center center;
+      background-size: contain;
+
+    }
+  }
+  &__guarantee-desc{
+    width: 347px;
+    color: #0c242e;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.35px;
+    margin: 0 0 25px 0;
+  }
+  &__guarantee-list{
+    padding-left: 15px;
+    margin: 0;
+    li{
+      color: #0c242e;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.35px;
+    }
+  }
+  &__guarantee-btn-order{
+    width: 186px;
+    height: 29px;
+    border-radius: 5px;
+    background-color: #ee2e24;
+    margin-top: 25px;
+    line-height: 28px;
+    text-align: center;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.11px;
+    transition: 200ms ease;
+    margin-right: 10px;
+    &:hover{
+      transition: 200ms ease;
+      color: #fff;
+      background: darken(#ee2e24, 10%);
+
+    }
+  }
+  &__guarantee-btn-back{
+    width: 150px;
+    height: 29px;
+    border-radius: 5px;
+    background-color: #6c7376;
+    margin-top: 25px;
+    line-height: 28px;
+    text-align: center;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.11px;
+    transition: 200ms ease;
+    &:hover{
+      transition: 200ms ease;
+      color: #fff;
+      background: darken(#6c7376, 10%);
+
+    }
+  }
+  .disable-product {
+    width: 100%;
+    margin-bottom: 60px;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 10px);
+      left: 0;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, .7);
+    }
+
+  }
+}
