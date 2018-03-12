@@ -72,6 +72,7 @@
                     <li><a href="#"><img src="img/icons/stack-hover-icon.png" alt="">Новость</a></li>
                     <li><a href="#"><img src="img/icons/calendar-cabinet--hover-icon.png" alt="">Афиши</a></li>
                     <li><a href="#"><img src="img/icons/bar-graph-hover-icon.png" alt="">Акция</a></li>
+                    <li><a href="#"><img src="img/icons/shopping-cart-hover.png" alt="">Товары</a></li>
                     <li><a href="#"><img src="img/icons/add-icon.png" alt="">Объявления</a></li>
                 </ul>
             </div>
@@ -143,6 +144,7 @@
 
 <!-- start single-shop.html-->
 <section class="single-shop">
+
     <div class="container">
         <div class="shop__top-tools">
 
@@ -294,7 +296,7 @@
                     </div>
                     <div class="single-shop__info-item">
                         <a href="#" class="button-buy">Купить сейчас</a>
-                        <a href="#" class="button-basket">Добавить в корзину</a>
+                        <a href="#" class="button-basket" id="add-cart-btn">Добавить в корзину</a>
                         <a href="#" class="promotion-seller">
                             <span>Акция продавца</span>
                             Получить купон продавца
@@ -309,8 +311,8 @@
                         <h3 class="all-actions__company--title">Электромаркет «Вилка-Розетка»</h3>
                         <div class="all-actions__company--addres">ДНР, Донецк, ул. Университетская, 56б</div>
                     </div>
-
                     <a href="#" class="single-shop__desires">Добавить в мои желания</a>
+
                 </div>
             </div>
         </div>
@@ -605,9 +607,96 @@
             </div>
         </div>
     </div>
+
+
 </section>
+<div id="add-cart" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+       <h1 class="modalAdd-cartTitle">Товар был добавлен в корзину. <span> Товаров в Вашей корзине: <span>1</span></span></h1>
+        <a href="#" class="go-cart">Перейти к корзине</a>
+        <button class="close-cart">Вернуться на сайт</button>
+
+        <div class="shop__top-sales-elements ">
 
 
+            <a href="#" class="shop__top-sales-elements--item">
+
+                <h3 class="category-name">Смартфон</h3>
+                <p class="category-element">iPhone 6s 16Gb</p>
+
+                <div class="category-photo">
+                    <img src="img/shop/category-photo-1.png" alt="">
+                </div>
+
+                <div class="category-price">
+                    <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                    <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                </div>
+
+                <button class="category-buy">Купить</button>
+
+            </a>
+
+            <a href="#" class="shop__top-sales-elements--item">
+
+                <h3 class="category-name">Смартфон</h3>
+                <p class="category-element">iPhone 6s 16Gb</p>
+
+                <div class="category-photo">
+                    <img src="img/shop/category-photo-1.png" alt="">
+                </div>
+
+                <div class="category-price">
+                    <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                    <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                </div>
+
+                <button class="category-buy">Купить</button>
+
+            </a>
+
+            <a href="#" class="shop__top-sales-elements--item">
+
+                <h3 class="category-name">Смартфон</h3>
+                <p class="category-element">iPhone 6s 16Gb</p>
+
+                <div class="category-photo">
+                    <img src="img/shop/category-photo-1.png" alt="">
+                </div>
+
+                <div class="category-price">
+                    <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                    <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                </div>
+
+                <button class="category-buy">Купить</button>
+
+            </a>
+
+            <a href="#" class="shop__top-sales-elements--item">
+
+                <h3 class="category-name">Смартфон</h3>
+                <p class="category-element">iPhone 6s 16Gb</p>
+
+                <div class="category-photo">
+                    <img src="img/shop/category-photo-1.png" alt="">
+                </div>
+
+                <div class="category-price">
+                    <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                    <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                </div>
+
+                <button class="category-buy">Купить</button>
+
+            </a>
+
+        </div>
+    </div>
+
+</div>
 <!-- end single-shop.html-->
 
 <!-- start footer.html-->
