@@ -305,7 +305,6 @@
 }
 
 #black-overlay {
-  z-index: 4;
   position: fixed;
   background-color: #000;
   opacity: 0.8;
@@ -317,6 +316,7 @@
   left: 0;
   cursor: pointer;
   display: none;
+  z-index: 99;
 }
 
 .inputError {

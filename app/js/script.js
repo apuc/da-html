@@ -388,6 +388,8 @@ $(document).ready(function () {
             }
         );
     });
+
+
     /*send message modal validation*/
     /*var validMassage = new Validation();
      validMassage.init({
@@ -1974,6 +1976,7 @@ $(document).ready(function () {
     }
 
 
+
     //end owl-carousel для секции другие товары
 
     /*=================================================================
@@ -2021,32 +2024,26 @@ $(document).ready(function () {
         $(this).toggleClass('like');
         return false;
     })
+
+
+    $('a#add-cart-btn').click(function (event) {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-add-cart')
+                    .css('display', 'block')
+                    .animate({opacity: 1, top: '50%'}, 200);
+            });
+    });
+
+    $('#modal_close, #black-overlay').click(function () {
+        $('#modal-add-cart')
+            .animate({opacity: 0, top: '45%'}, 200,
+                function () {
+                    $(this).css('display', 'none');
+                    $('#black-overlay').fadeOut(400);
+                }
+            );
+    });
+
 });
-//
-// //modal add cart for single-shop
-//
-// // Get the modal
-// var modal = document.getElementById('add-cart');
-//
-// // Get the button that opens the modal
-// var btn = document.getElementById("add-cart-btn");
-//
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close-cart")[0];
-//
-// // When the user clicks on the button, open the modal
-// btn.onclick = function () {
-//     modal.style.display = "block";
-// }
-//
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function () {
-//     modal.style.display = "none";
-// }
-//
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function (event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
