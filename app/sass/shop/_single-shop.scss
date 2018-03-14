@@ -1037,6 +1037,10 @@
   font-weight: 700;
   margin-right: 10px;
   letter-spacing: -0.1px;
+  @include breakpoint(max-width 403px){
+    display: block;
+    margin: 10px auto;
+  }
   &:hover{
     background: darken(#ee2e24, 10%);
     transition: 200ms ease;
@@ -1059,6 +1063,10 @@
   font-weight: 700;
   letter-spacing: -0.1px;
   transition: 200ms ease;
+  @include breakpoint(max-width 403px){
+    display: block;
+    margin: 10px auto;
+  }
   &:hover{
     background: darken(#6c7376, 10%);
     transition: 200ms ease;
@@ -1075,6 +1083,9 @@
   color: #000000;
   font-size: 14px;
   font-weight: 600;
+  @include breakpoint(max-width 992px){
+    display: none;
+  }
 }
 #modal-add-cart {
   width: 780px;
@@ -1089,8 +1100,18 @@
   opacity: 0;
   z-index: 100;
   padding: 20px 40px;
+  @include breakpoint(max-width 992px){
+    width: 650px;
+    height: auto;
+  }
+  @include breakpoint(max-width 770px){
+    width: 95%;
+  }
   .shop__top-sales-elements--item{
     width: 24%;
+    @include breakpoint(max-width 992px){
+      display: none;
+    }
   }
 }
 
