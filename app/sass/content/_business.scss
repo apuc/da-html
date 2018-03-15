@@ -1163,12 +1163,12 @@
         font-size: 16px;
         font-weight: 600;
         transition: 200ms ease;
-        text-decoration: underline;
         @include breakpoint(max-width 992px) {
           display: flex;
           flex-wrap: wrap;
           align-items: center;
           font-size: 17px;
+          text-decoration: underline;
         }
         span {
           display: none;
