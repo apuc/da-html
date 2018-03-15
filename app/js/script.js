@@ -1939,41 +1939,41 @@ $(document).ready(function () {
     //end фиксация левого сайдбара при скролле
 
     //owl-carousel для секции другие товары, планшет и телефон
-    if (window.innerWidth < 992) {
-        $('.single-shop-carousel').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            prevArrow: $('.prev'),
-            nextArrow: $('.next'),
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 700,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        margin: 5
-                    }
-                }
-            ]
-        });
-    }
+    // if (window.innerWidth < 992) {
+    //     $('.single-shop-carousel').slick({
+    //         dots: false,
+    //         infinite: true,
+    //         speed: 300,
+    //         slidesToShow: 4,
+    //         slidesToScroll: 4,
+    //         prevArrow: $('.prev'),
+    //         nextArrow: $('.next'),
+    //         responsive: [
+    //             {
+    //                 breakpoint: 992,
+    //                 settings: {
+    //                     slidesToShow: 4,
+    //                     slidesToScroll: 1
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 700,
+    //                 settings: {
+    //                     slidesToShow: 3,
+    //                     slidesToScroll: 1
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 600,
+    //                 settings: {
+    //                     slidesToShow: 2,
+    //                     slidesToScroll: 1,
+    //                     margin: 5
+    //                 }
+    //             }
+    //         ]
+    //     });
+    // }
 
 
 
@@ -2045,5 +2045,21 @@ $(document).ready(function () {
                 }
             );
     });
+
+
+    $(document).on('click', '.home-content-item', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('data-id');
+        if ($(this).hasClass('visible-text-about')) {
+            $(this).parent().find($('.text-about[data-id='+ id +']')).slideUp();
+            $(this).removeClass('visible-text-about');
+        } else {
+            $('.home-content-item').removeClass('visible-text-about');
+            $(this).addClass('visible-text-about');
+            $('.text-about').slideUp();
+            $(this).parent().find($('.text-about[data-id='+ id +']')).slideDown();
+        }
+    });
+
 
 });
