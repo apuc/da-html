@@ -229,6 +229,11 @@
     background: #ee2e24;
     text-align: center;
     @include breakpoint(max-width 992px){
+      order: 1;
+      height: 100%;
+      line-height: 47px;
+    }
+    @include breakpoint(max-width 660px){
       display: none;
     }
     span {
