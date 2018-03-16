@@ -114,12 +114,8 @@
     display: inline-block;
     position: relative;
     @include breakpoint(max-width 992px) {
-      width: 20%;
       float: left;
       display: flex;
-    }
-    @include breakpoint(max-width 660px) {
-      width: 40%;
     }
     > input {
       background-color: rgba(231, 231, 231, 0.4);
@@ -231,10 +227,8 @@
     @include breakpoint(max-width 992px){
       order: 1;
       height: 100%;
-      line-height: 47px;
-    }
-    @include breakpoint(max-width 660px){
-      display: none;
+      width: 40px;
+      background-color: transparent;
     }
     span {
       color: #fff;
@@ -244,6 +238,9 @@
       text-transform: uppercase;
       text-align: center;
       display: inline-block;
+      @include breakpoint(max-width 992px){
+        display: none;
+      }
       &:before {
         content: '';
         height: 40px;
@@ -254,6 +251,9 @@
         transform: rotate(40deg);
         background: #0c242e;
       }
+    }
+    .fa-plus{
+      color: #fff;
     }
   }
   .list {

@@ -1248,6 +1248,9 @@
           background-repeat: no-repeat;
           background-size: 19px 19px;
           background-position: 0 1px;
+          @include breakpoint(max-width 992px){
+            margin-bottom: 15px;
+          }
           &:before {
             display: none;
           }
