@@ -253,7 +253,13 @@
       }
     }
     .fa-plus{
+      display: none;
       color: #fff;
+      margin-top: 15px;
+      font-size: 20px;
+      @include breakpoint(max-width 992px){
+        display: block;
+      }
     }
   }
   .list {
