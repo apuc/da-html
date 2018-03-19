@@ -11,7 +11,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 190px;
+    min-width: 190px;
+    flex-basis: 20%;
     height: 56px;
     padding: 10px;
     border: 1px solid #e8e8e8;
@@ -124,7 +125,7 @@
       width: 32.8%;
     }
   }
-  .text-title{
+  .text-title {
     color: #444444;
     font-size: 12px;
     font-weight: 400;
@@ -137,10 +138,10 @@
       transition: 200ms ease;
     }
   }
-  .text-about{
+  .text-about {
     display: none;
   }
-  .home-content, .home-content-organization{
+  .home-content, .home-content-organization {
     float: left;
     width: 100%;
     display: block;
@@ -148,7 +149,7 @@
     position: relative;
   }
 
-  .home-contents, .row{
+  .home-contents, .row {
     float: left;
     width: 100%;
     display: flex;
@@ -158,22 +159,22 @@
 
     flex-direction: row;
 
-    .row{
+    .row {
       padding-top: 35px;
       margin-left: 0;
       margin-right: 0;
-      &:first-of-type{
+      &:first-of-type {
         padding-top: 0;
       }
-      @include breakpoint(max-width 670px){
+      @include breakpoint(max-width 670px) {
         width: 50%;
         float: left;
         padding-top: 0;
       }
     }
-    .text-about{
+    .text-about {
+      background: transparent;
       display: none;
-      background-color: #f4f3f3;
       width: 100%;
       font-size: 14px;
       text-align: left;
@@ -185,29 +186,31 @@
         padding: 25px;
       }
 
-      .text-about-title{
+      .text-about-title {
         width: 100%;
-        font-size: 16px;
-        color: #006b93;
         display: inline-block;
         border-bottom: 2px dashed #d1d1d1;
         margin-bottom: 15px;
-        a{
+        font-size: 13px;
+        letter-spacing: 0.35px;
+        text-decoration: underline;
+        a {
           font-style: normal;
-          text-decoration: none;
           padding-bottom: 15px;
           box-sizing: border-box;
           display: inline-block;
-          &:hover{
-            text-decoration: underline;
+          color: #444444;
+          text-decoration: underline;
+          span {
+            text-decoration: none;
+            color: #ee2e24;
+            font-weight: 700;
           }
         }
-        b{
-          font-style: italic;
-        }
+
       }
     }
-    .text-about-links{
+    .text-about-links {
       width: 100%;
       display: inline-block;
       margin: 0 auto;
@@ -221,14 +224,14 @@
         column-count: 1;
       }
     }
-    .text-about-link{
+    .text-about-link {
       color: #006b93;
       font-size: 14px;
       text-align: left;
       text-decoration: none;
       width: 100%;
       display: inline-block;
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
       @include breakpoint(max-width 600px) {
@@ -236,25 +239,24 @@
       }
     }
   }
-  .home-contents{
+  .home-contents {
     margin: 0 auto;
     float: none;
     width: 100%;
   }
 }
 
-
 .home-contents {
   display: flex;
   flex-flow: row wrap;
 }
+
 .home-content-item {
   display: flex;
   align-items: center;
   position: relative;
   width: 20%;
   cursor: pointer;
-  margin: 20px 0;
   @include breakpoint(max-width 1200px) {
     flex-direction: column;
   }
@@ -447,6 +449,7 @@
     flex-direction: column;
   }
 }
+
 .text-about {
   display: none;
   width: 100%;
@@ -455,8 +458,8 @@
   margin: 15px 0;
   padding: 5px 50px;
   box-sizing: border-box;
-  border-radius: 20px;
-  background-color: #f4f3f3;
+  border: 1px solid #a2a2a2;
+  background: #fff;
   &:nth-of-type(3) {
     order: 2;
   }
