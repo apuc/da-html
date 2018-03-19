@@ -230,6 +230,9 @@
       width: 40px;
       background-color: transparent;
     }
+    @include breakpoint(max-width 360px){
+      display: none;
+    }
     span {
       color: #fff;
       font-size: 10px;

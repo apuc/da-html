@@ -10,7 +10,6 @@
     font-size: 22px;
     text-align: center;
     font-weight: 700;
-    line-height: 18px;
     color: #0c242e;
     letter-spacing: 0.55px;
     span{
@@ -27,6 +26,9 @@
         height: 40px;
         background: url("../img/shop/icons/empty-cart.png") no-repeat center center;
         background-size: contain;
+        @include breakpoint(max-width 992px){
+          display: none;
+        }
       }
     }
 

@@ -1440,6 +1440,7 @@ window.onload = function () {
 
     $(".button-second-menu a").click(function () {
         $(".mobile-second-menu").slideToggle("slide", function () {
+            $('.lvl-1').fadeIn();
         });
     });
 
@@ -1454,68 +1455,135 @@ window.onload = function () {
         $(".shop__sidebars").removeClass('active-menu')
     });
 
-    var headerMenuClose = document.querySelector('.mobile-second-menu .header-close');
-    var secondHeaderMenu = document.querySelector('.mobile-second-menu');
-    if (headerMenuClose !== null) {
-        headerMenuClose.onclick = function () {
-            secondHeaderMenu.style.display = 'none';
-            $('.header-m-arrow').hide();
-        };
+    var itemID,
+        activeMenuParent,
+        i = 1,
+        backBtnAttr,
+        parentMenu,
+        parentElement;
+    //переход на следующий уровень
+    function transition(thisItem) {
+        // находим айдишник пункта меню на который нам надо переключиться
+        itemID = $(thisItem).attr("data-id");
+        // находим его родителя и записываем его айдишник в атрибут кнопки
+        activeMenuParent = $(thisItem).parents(".lvl-" + i++);
+        $(".back-btn").attr("data-active", activeMenuParent.attr("data-parent-id"));
+        // показываем нужное меню и прячем текущее
+        $(itemID).fadeIn(100);
+        $(thisItem)
+            .parents(".menu")
+            .fadeOut(100);
+        // по умолчанию кнопка спрятана
+        if ($(".back-btn").attr("data-active") !== 1) {
+            $(".back-btn").fadeIn(100);
+        }
     }
-    $(document).on('click', '.mobile-menu-lvl-1 li', function () {
 
-        var id = $(this).attr('data-menu-id'),
-            menuLv2 = $('.mobile-menu-lvl-2[data-menu-id="' + id + '"]'),
-            parentClass = $(this).parent()[0].className,
-            parentId = $(this).parent().attr('data-menu-id');
-        $('.header-m-arrow').attr('data-ParentClass', parentClass);
-        $('.header-m-arrow').attr('data-ParentId', parentId);
-        console.log(parentClass);
-        if ($.trim(menuLv2.html()).length) {
-            menuLv2.css({
-                display: 'flex'
-            });
-            $('.header-m-arrow').css('display', 'flex');
-            $('.mobile-menu-lvl-1').fadeOut('fast');
-            return false;
+    function back(backBtn, maxMenuLevel) {
+        // получаем айдишник меню, которое на уровень выше
+        backBtnAttr = $(backBtn).attr("data-active");
+        // прячем все менюшки и показываем нужную
+        $(".menu").fadeOut(100);
+        $(backBtnAttr).fadeIn(100);
+        // проверка уровня меню. если уровень меню выше первого, то понижаем, если равен или на один меньше, то вычитаем 2 уровня (это для последнего уровня меню), иначе - указываем, что это первый уровень, присваиваем атрибуту кнопки 1 и прячем её
+        if (i > 1) {
+            i--;
+        } else if (i === maxMenuLevel || i === maxMenuLevel - 1) {
+            i = i - 2;
         } else {
+            i = 1;
+            $(backBtn).attr("data-active", "1");
+            $(backBtn).fadeOut(100);
         }
+        // находим кнопку с айдишником в кнопке в меню на уровень выше
+        parentMenu = $('[data-id="' + backBtnAttr + '"]');
+        // получаем меню, в которое нам нужно вернуться
+        parentElement = parentMenu.parents(".menu").attr("data-parent-id");
+        // присваиваем кнопке в атрибут айдишник кнопки
+        $(backBtn).attr("data-active", parentElement);
+    }
+
+    // навигация по менюшкам
+    $(document).on("click", ".menu-btn", function() {
+        transition($(this));
     });
-    $(document).on('click', '.mobile-menu-lvl-2 li', function () {
-        var id = $(this).attr('data-menu-id');
-        var menuLv3 = $('.mobile-menu-lvl-3[data-menu-id="' + id + '"]'),
-            parentClass = $(this).parent()[0].className,
-            parentId = $(this).parent().attr('data-menu-id');
-        $('.header-m-arrow').attr('data-ParentClass', parentClass);
-        $('.header-m-arrow').attr('data-ParentId', parentId);
-        if ($.trim(menuLv3.html()).length) {
-            menuLv3.css({
-                display: 'flex'
-            });
-            $('.header-m-arrow').css('display', 'flex');
-            $('.mobile-menu-lvl-2').fadeOut('fast');
-            return false;
-        } else {
-        }
+
+    // кнопка возврата. вторым аргументом передаём количество уровней меню. в данном случае 4
+    $(document).on("click", ".back-btn", function() {
+        back($(this), "3");
     });
-    var flag = true;
-    $(document).on('click', '.header-m-arrow', function () {
-        var _class = $(this).attr('data-ParentClass'),
-            _id = $(this).attr('data-ParentId');
-        flag = false;
 
-        var menu = $('[class = ' + '"' + _class + '"][data-menu-id=' + '"' + _id + '"]');
-        if (menu.hasClass('mobile-menu-lvl-2') && !flag) {
-            _id = 1;
-            _class = 'mobile-menu-lvl-1';
-            menu = $('[class = ' + '"' + _class + '"][data-menu-id=' + '"' + _id + '"]');
+    $(document).on('click', '.header-close', function() {
+        var backBtn = $('.back-btn');
+        i = 1;
+        $('.mobile-second-menu').fadeOut();
+        backBtn.attr('data-active', 1);
+        backBtn.hide();
+        $('[data-parent-id]').hide();
+    })
 
-
-        }
-
-
-        menu.fadeIn('fast');
-    });
+    // var headerMenuClose = document.querySelector('.mobile-second-menu .header-close');
+    // var secondHeaderMenu = document.querySelector('.mobile-second-menu');
+    // if (headerMenuClose !== null) {
+    //     headerMenuClose.onclick = function () {
+    //         secondHeaderMenu.style.display = 'none';
+    //         $('.header-m-arrow').hide();
+    //     };
+    // }
+    // $(document).on('click', '.mobile-menu-lvl-1 li', function () {
+    //
+    //     var id = $(this).attr('data-menu-id'),
+    //         menuLv2 = $('.mobile-menu-lvl-2[data-menu-id="' + id + '"]'),
+    //         parentClass = $(this).parent()[0].className,
+    //         parentId = $(this).parent().attr('data-menu-id');
+    //     $('.header-m-arrow').attr('data-ParentClass', parentClass);
+    //     $('.header-m-arrow').attr('data-ParentId', parentId);
+    //     console.log(parentClass);
+    //     if ($.trim(menuLv2.html()).length) {
+    //         menuLv2.css({
+    //             display: 'flex'
+    //         });
+    //         $('.header-m-arrow').css('display', 'flex');
+    //         $('.mobile-menu-lvl-1').fadeOut('fast');
+    //         return false;
+    //     } else {
+    //     }
+    // });
+    // $(document).on('click', '.mobile-menu-lvl-2 li', function () {
+    //     var id = $(this).attr('data-menu-id');
+    //     var menuLv3 = $('.mobile-menu-lvl-3[data-menu-id="' + id + '"]'),
+    //         parentClass = $(this).parent()[0].className,
+    //         parentId = $(this).parent().attr('data-menu-id');
+    //     $('.header-m-arrow').attr('data-ParentClass', parentClass);
+    //     $('.header-m-arrow').attr('data-ParentId', parentId);
+    //     if ($.trim(menuLv3.html()).length) {
+    //         menuLv3.css({
+    //             display: 'flex'
+    //         });
+    //         $('.header-m-arrow').css('display', 'flex');
+    //         $('.mobile-menu-lvl-2').fadeOut('fast');
+    //         return false;
+    //     } else {
+    //     }
+    // });
+    // var flag = true;
+    // $(document).on('click', '.header-m-arrow', function () {
+    //     var _class = $(this).attr('data-ParentClass'),
+    //         _id = $(this).attr('data-ParentId');
+    //     flag = false;
+    //
+    //     var menu = $('[class = ' + '"' + _class + '"][data-menu-id=' + '"' + _id + '"]');
+    //     if (menu.hasClass('mobile-menu-lvl-2') && !flag) {
+    //         _id = 1;
+    //         _class = 'mobile-menu-lvl-1';
+    //         menu = $('[class = ' + '"' + _class + '"][data-menu-id=' + '"' + _id + '"]');
+    //
+    //
+    //     }
+    //
+    //
+    //     menu.fadeIn('fast');
+    // });
 
 
     if ($('section').hasClass('header-second-menu')) {
