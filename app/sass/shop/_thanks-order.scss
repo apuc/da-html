@@ -1,0 +1,59 @@
+.shop{
+  &__thanks-order {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 45px;
+    margin: 0;
+    background: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 700;
+    color: #0c242e;
+    letter-spacing: 0.55px;
+    span{
+      position: relative;
+      display: inline-block;
+      color: #ee2e24;
+      &:before{
+        content: '';
+        position: absolute;
+        right: -50px;
+        transform: translateY(-50%);
+        top: 50%;
+        width: 36px;
+        height: 40px;
+        background: url("../img/shop/icons/ok.png") no-repeat center center;
+        background-size: contain;
+      }
+    }
+  }
+  &__number-order{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 27px;
+    margin: 15px 0;
+  }
+  &__order-price{
+    color: #ee2e24;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+  }
+  &__confirmation-letter{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .shop__top-sales-home-elements--item{
+    @include breakpoint(max-width 992px){
+      width: 31%;
+    }
+    @include breakpoint(max-width 660px){
+      width: 47%;
+    }
+  }
+}
