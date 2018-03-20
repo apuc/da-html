@@ -989,7 +989,7 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   overflow: hidden;
-  z-index: 9999;
+  z-index: 9992;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -1098,7 +1098,7 @@
   top: 50%;
   display: none;
   opacity: 0;
-  z-index: 100;
+  z-index: 9902;
   padding: 20px 40px;
   @include breakpoint(max-width 992px){
     width: 650px;

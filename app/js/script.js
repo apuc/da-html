@@ -2115,6 +2115,7 @@ $(document).ready(function () {
     });
 
 
+
     $(document).on('click', '.home-content-item', function (e) {
         e.preventDefault();
         var id = $(this).attr('data-id');
@@ -2129,5 +2130,28 @@ $(document).ready(function () {
         }
     });
 
+    // Модальное окно для обратной связи в одно компании
+
+    $('a.feedback-btn').click( function(event){
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function(){
+                $('#feedback-modal')
+                    .css('display', 'block')
+                    .animate({opacity: 1, top: '50%'}, 200);
+            });
+    });
+
+    $('#black-overlay').click( function(){
+        $('#feedback-modal')
+            .animate({opacity: 0, top: '45%'}, 200,
+                function(){
+                    $(this).css('display', 'none');
+                    $('#overlay').fadeOut(400);
+                }
+            );
+    });
+
+    // end Модальное окно для обратной связи в одно компании
 
 });

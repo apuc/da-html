@@ -181,7 +181,7 @@
       position: relative;
       padding: 25px 50px;
       box-sizing: border-box;
-      margin: 10px 0;
+      margin: 0 0 15px 0;
       @include breakpoint(max-width 992px) {
         padding: 25px;
       }
@@ -189,22 +189,23 @@
       .text-about-title {
         width: 100%;
         display: inline-block;
-        border-bottom: 2px dashed #d1d1d1;
         margin-bottom: 15px;
-        font-size: 13px;
+        font-size: 14px;
         letter-spacing: 0.35px;
         text-decoration: underline;
         a {
           font-style: normal;
-          padding-bottom: 15px;
           box-sizing: border-box;
           display: inline-block;
           color: #444444;
-          text-decoration: underline;
+          text-decoration: none;
           span {
-            text-decoration: none;
             color: #ee2e24;
             font-weight: 700;
+          }
+          b{
+            font-weight: 400;
+            text-decoration: underline;
           }
         }
 
@@ -214,7 +215,7 @@
       width: 100%;
       display: inline-block;
       margin: 0 auto;
-      column-count: 3;
+      column-count: 5;
       //column-width: 33%;
       column-gap: 10px;
       @include breakpoint(max-width 992px) {
@@ -225,14 +226,16 @@
       }
     }
     .text-about-link {
-      color: #006b93;
-      font-size: 14px;
+      font-size: 13px;
       text-align: left;
       text-decoration: none;
       width: 100%;
       display: inline-block;
+      color: #444444;
+      font-weight: 400;
+      line-height: 18px;
       &:hover {
-        text-decoration: underline;
+        color: #ee2e24;
       }
       @include breakpoint(max-width 600px) {
         text-align: center;

@@ -290,7 +290,7 @@
 }
 
 #overlay {
-  z-index: 4;
+  z-index: 9901;
   position: fixed;
   background-color: #fff;
   opacity: 0.8;
@@ -316,7 +316,7 @@
   left: 0;
   cursor: pointer;
   display: none;
-  z-index: 4;
+  z-index: 9901;
 }
 
 .inputError {
@@ -954,3 +954,4 @@ span.select2.select2-container.select2-container--krajee {
     opacity: 0;
   }
 }
+
