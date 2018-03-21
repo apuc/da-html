@@ -1,20 +1,53 @@
-.shop{
-  &__filter-bar{
+.shop {
+  &__filter-bar {
     width: 240px;
+    padding: 20px 15px;
     float: left;
     border: 1px solid #e8e8e8;
     background-color: #ffffff;
     margin-right: 10px;
   }
-  &__filter-content{
+  &__filter-content {
     width: calc(100% - 250px);
     float: right;
-    .shop__top-sales-elements--item{
+    .shop__top-sales-elements--item {
       width: 19%;
     }
   }
-
-  &__filter-search{
+  &__filter-title {
+    position: relative;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 10px;
+      height: 6px;
+      background: url("../img/shop/icons/arrow-down.png") no-repeat ;
+      background-size: contain;
+    }
+  }
+  &__filter-list{
+    list-style: none;
+    padding: 0;
+    padding-left: 15px;
+    li{
+      a{
+        color: #000000;;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 21px;
+      }
+    }
+  }
+  &__filter-search {
     position: relative;
     display: flex;
     align-items: center;
@@ -23,19 +56,19 @@
     background-color: #ffffff;
     padding: 20px 15px;
     margin-bottom: 10px;
-    &--price{
+    &--price {
       color: #6f6969;
       font-size: 12px;
       font-weight: 600;
     }
-    &--check{
+    &--check {
       label {
         color: #6f6969;
         font-size: 12px;
         font-weight: 600;
         margin: 0;
       }
-      input[type='checkbox']{
+      input[type='checkbox'] {
         border-radius: 8px 3px;
         border: 2px solid #d6d6d6;
         width: 17px;
@@ -44,14 +77,14 @@
         background: transparent;
       }
     }
-    &--select{
-      label{
+    &--select {
+      label {
         color: #6f6969;
         font-size: 12px;
         font-weight: 600;
         margin: 0;
       }
-      select{
+      select {
         border: none;
         color: #ee2e24;
         font-size: 11px;
@@ -59,10 +92,10 @@
       }
 
     }
-    .rating-stars{
+    .rating-stars {
       width: auto;
     }
-    .filter-price-min, .filter-price-max{
+    .filter-price-min, .filter-price-max {
       line-height: 19px;
       width: 47px;
       height: 22px;
@@ -76,18 +109,19 @@
       font-weight: 500;
       letter-spacing: 2.62px;
       transition: 200ms ease;
-      &:hover{
+      &:hover {
         border-color: darken(#d6d6d6, 10%);
         transition: 200ms ease;
       }
     }
   }
 }
+
 /* Customize the label (the container) */
 .sale-filter {
   display: block;
   position: relative;
-  padding-right: 35px;
+  padding-right: 27px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;

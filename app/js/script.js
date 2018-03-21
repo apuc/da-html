@@ -1461,6 +1461,7 @@ window.onload = function () {
         backBtnAttr,
         parentMenu,
         parentElement;
+
     //переход на следующий уровень
     function transition(thisItem) {
         // находим айдишник пункта меню на который нам надо переключиться
@@ -1504,16 +1505,16 @@ window.onload = function () {
     }
 
     // навигация по менюшкам
-    $(document).on("click", ".menu-btn", function() {
+    $(document).on("click", ".menu-btn", function () {
         transition($(this));
     });
 
     // кнопка возврата. вторым аргументом передаём количество уровней меню. в данном случае 4
-    $(document).on("click", ".back-btn", function() {
+    $(document).on("click", ".back-btn", function () {
         back($(this), "3");
     });
 
-    $(document).on('click', '.header-close', function() {
+    $(document).on('click', '.header-close', function () {
         var backBtn = $('.back-btn');
         i = 1;
         $('.mobile-second-menu').fadeOut();
@@ -2044,7 +2045,6 @@ $(document).ready(function () {
     // }
 
 
-
     //end owl-carousel для секции другие товары
 
     /*=================================================================
@@ -2115,37 +2115,36 @@ $(document).ready(function () {
     });
 
 
-
     $(document).on('click', '.home-content-item', function (e) {
         e.preventDefault();
         var id = $(this).attr('data-id');
         if ($(this).hasClass('visible-text-about')) {
-            $(this).parent().find($('.text-about[data-id='+ id +']')).slideUp();
+            $(this).parent().find($('.text-about[data-id=' + id + ']')).slideUp();
             $(this).removeClass('visible-text-about');
         } else {
             $('.home-content-item').removeClass('visible-text-about');
             $(this).addClass('visible-text-about');
             $('.text-about').slideUp();
-            $(this).parent().find($('.text-about[data-id='+ id +']')).slideDown();
+            $(this).parent().find($('.text-about[data-id=' + id + ']')).slideDown();
         }
     });
 
     // Модальное окно для обратной связи в одно компании
 
-    $('a.feedback-btn').click( function(event){
+    $('a.feedback-btn').click(function (event) {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
-            function(){
+            function () {
                 $('#feedback-modal')
                     .css('display', 'block')
                     .animate({opacity: 1, top: '50%'}, 200);
             });
     });
 
-    $('#black-overlay').click( function(){
+    $('#black-overlay').click(function () {
         $('#feedback-modal')
             .animate({opacity: 0, top: '45%'}, 200,
-                function(){
+                function () {
                     $(this).css('display', 'none');
                     $('#overlay').fadeOut(400);
                 }
@@ -2153,5 +2152,9 @@ $(document).ready(function () {
     });
 
     // end Модальное окно для обратной связи в одно компании
+
+//    Фильтр категорий  магазина
+
+//   end  Фильтр категорий  магазина
 
 });
