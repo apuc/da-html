@@ -881,55 +881,6 @@
       margin-top: 30px;
     }
   }
-  .rating-stars {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    a {
-      color: #075882;
-      font-weight: 600;
-      font-size: 13px;
-      display: inline-flex;
-      align-items: center;
-      margin-right: 5px;
-      &:hover {
-        text-decoration: underline;
-      }
-      span {
-        color: #ee2e24;
-        font-size: 16px;
-        margin-right: 5px;
-        font-weight: 700;
-        text-decoration: none;
-      }
-    }
-  }
-  .rating-stars ul {
-    list-style-type: none;
-    padding: 0;
-    margin-right: 12px;
-    margin-bottom: 0;
-    float: left;
-    display: block;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-  }
-  .rating-stars ul > li.star {
-    display: inline-block;
-    cursor: pointer;
-  }
-  .rating-stars ul > li.star > i.fa {
-    font-size: 1em;
-    color: #ccc;
-  }
-  .rating-stars ul > li.star.hover > i.fa {
-    color: #ffc80a;
-  }
-  .rating-stars ul > li.star.selected > i.fa {
-    color: #ffc80a;
-  }
-
   @keyframes fadeEffect {
     from {
       opacity: 0;
@@ -938,6 +889,54 @@
       opacity: 1;
     }
   }
+}
+.rating-stars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  a {
+    color: #075882;
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+    span {
+      color: #ee2e24;
+      font-size: 16px;
+      margin-right: 5px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}
+.rating-stars ul {
+  list-style-type: none;
+  padding: 0;
+  margin-right: 12px;
+  margin-bottom: 0;
+  float: left;
+  display: block;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.rating-stars ul > li.star {
+  display: inline-block;
+  cursor: pointer;
+}
+.rating-stars ul > li.star > i.fa {
+  font-size: 1em;
+  color: #ccc;
+}
+.rating-stars ul > li.star.hover > i.fa {
+  color: #ffc80a;
+}
+.rating-stars ul > li.star.selected > i.fa {
+  color: #ffc80a;
 }
 .rating-xs {
   font-size: 1em;

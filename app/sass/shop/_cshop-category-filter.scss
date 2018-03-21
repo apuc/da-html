@@ -1,0 +1,152 @@
+.shop{
+  &__filter-bar{
+    width: 240px;
+    float: left;
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    margin-right: 10px;
+  }
+  &__filter-content{
+    width: calc(100% - 250px);
+    float: right;
+    .shop__top-sales-elements--item{
+      width: 19%;
+    }
+  }
+
+  &__filter-search{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    padding: 20px 15px;
+    margin-bottom: 10px;
+    &--price{
+      color: #6f6969;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    &--check{
+      label {
+        color: #6f6969;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0;
+      }
+      input[type='checkbox']{
+        border-radius: 8px 3px;
+        border: 2px solid #d6d6d6;
+        width: 17px;
+        height: 17px;
+        margin: 0;
+        background: transparent;
+      }
+    }
+    &--select{
+      label{
+        color: #6f6969;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0;
+      }
+      select{
+        border: none;
+        color: #ee2e24;
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+    }
+    .rating-stars{
+      width: auto;
+    }
+    .filter-price-min, .filter-price-max{
+      line-height: 19px;
+      width: 47px;
+      height: 22px;
+      display: inline-block;
+      margin: 0 5px;
+      text-align: center;
+      border-radius: 11px;
+      border: 2px solid #d6d6d6;
+      color: #212121;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2.62px;
+      transition: 200ms ease;
+      &:hover{
+        border-color: darken(#d6d6d6, 10%);
+        transition: 200ms ease;
+      }
+    }
+  }
+}
+/* Customize the label (the container) */
+.sale-filter {
+  display: block;
+  position: relative;
+  padding-right: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.sale-filter input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 8px 3px;
+  border: 2px solid #d6d6d6;
+  background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.sale-filter:hover input ~ .checkmark {
+  background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.sale-filter input:checked ~ .checkmark {
+  background-color: #ee2e24;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.sale-filter input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.sale-filter .checkmark:after {
+  left: 4px;
+  top: 0;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -36,6 +36,7 @@
   text-transform: uppercase;
 }
 .feedback-btn {
+  display: none;
   position: fixed;
   left: 5px;
   bottom: 30px;
@@ -46,7 +47,6 @@
     display: block;
   }
 }
-
 .icon-puls-btn {
   position: absolute;
   width: 50px;
