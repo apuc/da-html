@@ -989,25 +989,33 @@ $(document).ready(function () {
     /*close modal delivery second step show*/
 
     /*add form fields user cabinet companys*/
-    $(document).on('click', '.cabinet__add-company-form--wrapper .cabinet__add-field', function (event) {
-        event.preventDefault();
-        var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
-            // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
-            count = wrapper.attr('data-count'),//счетчик
-            maxCount = parseInt($(this).attr('max-count'));//максимальное количество полей
-        /*console.log( maxCount );*/
-        /* console.log( addedBox );*/
-        if (count < maxCount) { //условие
-            $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1
-            $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' +
-                '<p class="cabinet__add-company-form--title"></p>' +
-                '<input class="cabinet__add-company-form--field" type="text" name="mytext[]">' +
-                '<a href="#" class="cabinet__remove-pkg"></a>' +
-                '<p class="cabinet__add-company-form--notice"></p>' +
-                '</div>');//добавляем поля
-        }
 
-    });
+
+    //закоментировал 22.03.2018
+
+    // $(document).on('click', '.cabinet__add-company-form--wrapper .cabinet__add-field', function (event) {
+    //     event.preventDefault();
+    //     var wrapper = $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
+    //         // addedBox = $(this).closest('.cabinet__add-company-form').find('.cabinet__add-company-form--wrapper').html(),//элементы, которые добавляются
+    //         count = wrapper.attr('data-count'),//счетчик
+    //         maxCount = parseInt($(this).attr('max-count'));//максимальное количество полей
+    //     /*console.log( maxCount );*/
+    //     /* console.log( addedBox );*/
+    //     if (count < maxCount) { //условие
+    //         $(this).closest('.cabinet__add-company-form--wrapper').next('.cabinet__add-company-form--hover-wrapper').attr('data-count', parseInt(count) + 1);//увеличиваем счетчик на 1
+    //         $(wrapper).append('<div class="cabinet__add-company-form--hover-elements">' +
+    //             '<p class="cabinet__add-company-form--title"></p>' +
+    //             '<input class="cabinet__add-company-form--field" type="text" name="mytext[]">' +
+    //             '<a href="#" class="cabinet__remove-pkg"></a>' +
+    //             '<p class="cabinet__add-company-form--notice"></p>' +
+    //             '</div>');//добавляем поля
+    //     }
+    //
+    // });
+
+    // end закоментировал 22.03.2018
+
+
     /*$(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
      event.preventDefault();
      var wrapper = $(this).closest('.cabinet__add-company-form--hover-wrapper'),//влок в который добовляются поля
@@ -1044,11 +1052,16 @@ $(document).ready(function () {
      }
 
      });*/
-    $(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
-        event.preventDefault();
-        removeField($(this));
-    });
+
+    //Закоментировал 22.03.2018
+
+    // $(document).on('click', '.cabinet__add-company-form--hover-wrapper .cabinet__remove-pkg', function (event) {
+    //     event.preventDefault();
+    //     removeField($(this));
+    // });
     /*close add form fields in user cabinet*/
+
+    //Закоментировал 22.03.2018
 
     /*show cabinet menu*/
     $(document).on('click', '.cabinet__wrapper > h1', function () {
