@@ -118,337 +118,134 @@
 
 <!-- end header.html-->
 
-<!-- start broad-category.html-->
-<section class="shop">
+<!-- start cabinet-order.html-->
+<section class="cabinet">
     <div class="container">
-        <div class="shop__top-tools">
+        <div class="cabinet__tollbar">
 
-            <form id="shop-search-form" class="shop__top-form">
-
-                <input class="shop__top-form--field" type="text" placeholder="Я ищу...">
-
-                <!-- <div class="shop__top-form&#45;&#45;select-wrapper">-->
-                <select class="shop__top-form--field-category">
-                    <option value="0">Все категории</option>
-                    <option value="1">Категория</option>
-                    <option value="2">Категория</option>
-                    <option value="3">Категория</option>
-                    <option value="4">Категория</option>
-                    <option value="5">Категория</option>
-                    <option value="6">Категория</option>
-                </select>
-                <!-- </div>-->
-
-                <button id="shop-search-form-submit" class="shop__top-form--submit" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-
-            </form>
-
-            <div class="shop__top-nav">
-
-
-                <ul class="shop__top-nav--navigation">
-                    <li><a href="#" class="delivery">Доставка</a></li>
-                    <li>
-                        <a href="#" class="basket">Корзина</a>
-                        <span class="basket-counter">0</span>
-                    </li>
-
-                    <li><a href="#" class="my-desires">Мои желания</a></li>
-                </ul>
-
-                <div class="button-second-menu">
-                    <a href="#" class="mobile-menu-broad">
-                        <div class="button-second-menu__hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        меню категорий
-                    </a>
-                </div>
-                <ul class="shop__top-nav--navigation-m">
-                    <li><a href="#" class="delivery"></a></li>
-                    <li>
-                        <a href="#" class="basket"></a>
-                        <span class="basket-counter">0</span>
-                    </li>
-
-                    <li><a href="#" class="my-desires"></a></li>
-                </ul>
-            </div>
-
-
-        </div>
-        <div class="breadcrumbs-wrap">
-            <ul class="breadcrumbs">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Все категории</a></li>
-                <li><a href="#">Телефоны...</a></li>
-                <li><a href="#">Женская одежда и аксессуары</a></li>
-            </ul>
-        </div>
-        <h1 class="shop__title">Женская одежда и аксессуары</h1>
-        <aside class="shop__sidebars">
-            <a href="#" class="mobile-menu-broad-close">
-                <i class="fa fa-times" aria-hidden="true"></i>
+            <a href="/personal_area/default/index" class="cabinet__avatar">
+                <img src="/media/users/1/avatar.png" alt="">        <!--<img src="" alt="">-->
             </a>
 
+            <a href="/user/settings/profile" class="cabinet__avatar--edit"></a>
 
-            <div class="shop__sidebars--wrap">
+            <div class="cabinet__info">
 
-                <h4 class="shop__sidebars-title">Техника для дома</h4>
-                <ul class="shop__nav">
-                    <li><a href="#">Стиральные машины</a></li>
-                    <li><a href="#">Пылесосы</a></li>
-                    <li><a href="#">Швейное оборудование</a></li>
-                    <li><a href="#">Утюги</a></li>
-                    <li><a href="#">Пароочистители и отпариватели</a></li>
-                    <li  class="broad-more">
-                        <ul class="shop-hidden">
-                            <li><a href="#">Холодильники, морозильники, винные шкафы</a></li>
-                            <li><a href="#">Посудомоечные машины</a></li>
-                            <li><a href="#">Плиты</a></li>
-                            <li><a href="#">Вытяжки</a></li>
-                            <li><a href="#">Подогреватели посуды</a></li>
-                        </ul>
-                        <a href="#" class="slide-text">eщё</a>
-                    </li>
-                </ul>
-            </div>
+                <!--<h3><span><img src="img/cabinet/cabinet-logo.png" alt=""></span>Компания феникс</h3>-->
 
-            <div class="shop__sidebars--wrap">
-                <h4 class="shop__sidebars-title">Крупная техника для кухни</h4>
-                <ul class="shop__nav">
-                    <li><a href="#">Холодильники, морозильники, винные шкафы</a></li>
-                    <li><a href="#">Посудомоечные машины</a></li>
-                    <li><a href="#">Плиты</a></li>
-                    <li><a href="#">Вытяжки</a></li>
-                    <li><a href="#">Подогреватели посуды</a></li>
-                    <li  class="broad-more">
-                        <ul class="shop-hidden">
-                            <li><a href="#">Холодильники, морозильники, винные шкафы</a></li>
-                            <li><a href="#">Посудомоечные машины</a></li>
-                            <li><a href="#">Плиты</a></li>
-                            <li><a href="#">Вытяжки</a></li>
-                            <li><a href="#">Подогреватели посуды</a></li>
-                        </ul>
-                        <a href="#" class="slide-text">eщё</a>
-                    </li>
-                </ul>
-            </div>
+                <!--<p class="cabinet__pkg">Пакет расширенный</p>
 
+                <p class="cabinet__pkg-time">до <span>23.05.2015 (еще 1 месяц)</span></p>
 
+                <a href="#" class="cabinet__add-pkg"></a>
 
-            <div class="shop__sidebars--wrap">
+                <a href="#" class="cabinet__froze-pkg">Заморозить абонемент</a>
 
-                <h4 class="shop__sidebars-title">Техника для дома</h4>
-                <ul class="shop__nav">
-                    <li><a href="#">Стиральные машины</a></li>
-                    <li><a href="#">Пылесосы</a></li>
-                    <li><a href="#">Швейное оборудование</a></li>
-                    <li><a href="#">Утюги</a></li>
-                    <li><a href="#">Пароочистители и отпариватели</a></li>
-                    <li  class="broad-more">
-                        <ul class="shop-hidden">
-                            <li><a href="#">Холодильники, морозильники, винные шкафы</a></li>
-                            <li><a href="#">Посудомоечные машины</a></li>
-                            <li><a href="#">Плиты</a></li>
-                            <li><a href="#">Вытяжки</a></li>
-                            <li><a href="#">Подогреватели посуды</a></li>
-                        </ul>
-                        <a href="#" class="slide-text">eщё</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="shop__sidebars--wrap">
-                <h4 class="shop__sidebars-title">Крупная техника для кухни</h4>
-                <ul class="shop__nav">
-                    <li><a href="#">Холодильники, морозильники, винные шкафы</a></li>
-                    <li><a href="#">Посудомоечные машины</a></li>
-                    <li><a href="#">Плиты</a></li>
-                    <li><a href="#">Вытяжки</a></li>
-                    <li><a href="#">Подогреватели посуды</a></li>
-                    <li  class="broad-more">
-                        <ul class="shop-hidden">
-                            <li><a href="#">Холодильники, морозильники, винные шкафы</a></li>
-                            <li><a href="#">Посудомоечные машины</a></li>
-                            <li><a href="#">Плиты</a></li>
-                            <li><a href="#">Вытяжки</a></li>
-                            <li><a href="#">Подогреватели посуды</a></li>
-                        </ul>
-                        <a href="#" class="slide-text">eщё</a>
-                    </li>
-                </ul>
-            </div>
-
-        </aside>
-        <div class="shop__top-sales broad-category">
-
-            <div class="shop__top-sales-nav">
-
-                <h3 class="shop__top-sales-nav--title">Популярные товары
-                    этой категории
-                </h3>
-
-                <a href="#" class="shop__top-sales-nav--link">
-                    <span class="icon"><img src="img/shop/icons/payment-method-icon.png" alt=""></span>
-                    <span class="name">Способы <br> оплаты</span>
-                </a>
-
-                <a href="#" class="shop__top-sales-nav--link">
-                    <span class="icon"><img src="img/shop/icons/deliver-icon.png" alt=""></span>
-                    <span class="name">Склады в <br> ДНР</span>
-                </a>
-
-                <a href="#" class="shop__top-sales-nav--link">
-                    <span class="icon"><img src="img/shop/icons/warehouse-icon.png" alt=""></span>
-                    <span class="name">Ликвидация <br> товара</span>
-                </a>
-
-                <a href="#" class="shop__top-sales-nav--link">
-                    <span class="icon"><img src="img/shop/icons/deliver-icon.png" alt=""></span>
-                    <span class="name">Круглосуточный <br> колл-центр</span>
-                </a>
+                <a href="#" class="show-more">РЕДАКТИРОВАТЬ</a>-->
 
             </div>
 
-            <div class="shop__top-sales-elements">
+            <ul class="cabinet__list">
+                <li><a href="/personal_area/user-news" class="news">НОВОСТИ <!--<span>258</span>--></a></li>
+                <li><a href="/personal_area/user-poster" class="poster">АФИШИ</a></li>
+                <li><a href="/personal_area/user-promotions" class="stock">АКЦИИ</a></li>
+                <!--<li><a href="#" class="configuration">Настройки</a></li>-->
+                <li><a href="/personal_area/user-company" class="company">ПРЕДПРИЯТИЯ <!--<span class="add"></span>--></a></li>
+                <li><a href="/personal_area/user-comments" class="comments">КОМЕНТАРИИ <!--<span class="add"></span>--></a></li>
+                <li><a href="/personal_area/user-ads" class="advert">ОБЪЯВЛЕНИЯ <!--<span class="add"></span>--></a></li>
+                <!--<li><a href="#" class="notice">Уведомления <span>89</span></a></li>-->
+            </ul>
 
-                <a href="#" class="shop__top-sales-elements--item">
-                    <h3 class="category-name">Механический мод</h3>
-                    <p class="category-element">Eleaf iStick TC</p>
-
-                    <div class="category-photo">
-                        <img src="img/broad.png" alt="">
-                    </div>
-
-                    <div class="category-price">
-                        <span class="category-price__new">3 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                    </div>
-
-                    <button class="category-buy">Купить</button>
-
+        </div>
+        <div class="cabinet__main">
+            <div class="cabinet__owner">
+                <a href="#" id="cabinet--mobile-trigger" class="cabinet__trigger">
+                    <img src="/theme/portal-donbassa/img/icons/arrow-right.png" alt="">
                 </a>
-
-                <a href="#" class="shop__top-sales-elements--item">
-                    <h3 class="category-name">Механический мод</h3>
-                    <p class="category-element">Eleaf iStick TC</p>
-
-                    <div class="category-photo">
-                        <img src="img/broad.png" alt="">
-                    </div>
-
-                    <div class="category-price">
-                        <span class="category-price__new">3 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                    </div>
-
-                    <button class="category-buy">Купить</button>
-
-                </a>
-
-                <a href="#" class="shop__top-sales-elements--item">
-                    <h3 class="category-name">Механический мод</h3>
-                    <p class="category-element">Eleaf iStick TC</p>
-
-                    <div class="category-photo">
-                        <img src="img/broad.png" alt="">
-                    </div>
-
-                    <div class="category-price">
-                        <span class="category-price__new">3 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                    </div>
-
-                    <button class="category-buy">Купить</button>
-
-                </a>
-
-                <a href="#" class="shop__top-sales-elements--item">
-                    <h3 class="category-name">Механический мод</h3>
-                    <p class="category-element">Eleaf iStick TC</p>
-
-                    <div class="category-photo">
-                        <img src="img/broad.png" alt="">
-                    </div>
-
-                    <div class="category-price">
-                        <span class="category-price__new">3 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                    </div>
-
-                    <button class="category-buy">Купить</button>
-
-                </a>
-
-                <a href="#" class="shop__top-sales-elements--item">
-                    <h3 class="category-name">Механический мод</h3>
-                    <p class="category-element">Eleaf iStick TC</p>
-
-                    <div class="category-photo">
-                        <img src="img/broad.png" alt="">
-                    </div>
-
-                    <div class="category-price">
-                        <span class="category-price__new">3 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                    </div>
-
-                    <button class="category-buy">Купить</button>
-
-                </a>
-
-                <a href="#" class="shop__top-sales-elements--item">
-                    <h3 class="category-name">Механический мод</h3>
-                    <p class="category-element">Eleaf iStick TC</p>
-
-                    <div class="category-photo">
-                        <img src="img/broad.png" alt="">
-                    </div>
-
-                    <div class="category-price">
-                        <span class="category-price__new">3 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                    </div>
-
-                    <button class="category-buy">Купить</button>
-
-                </a>
-
-                <a href="#" class="shop__top-sales-elements--item">
-                    <h3 class="category-name">Механический мод</h3>
-                    <p class="category-element">Eleaf iStick TC</p>
-
-                    <div class="category-photo">
-                        <img src="img/broad.png" alt="">
-                    </div>
-
-                    <div class="category-price">
-                        <span class="category-price__new">3 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                    </div>
-
-                    <button class="category-buy">Купить</button>
-
-                </a>
-
-                <a href="#" class="shop__top-sales-elements--item">
-                    <h3 class="category-name">Механический мод</h3>
-                    <p class="category-element">Eleaf iStick TC</p>
-
-                    <div class="category-photo">
-                        <img src="img/broad.png" alt="">
-                    </div>
-
-                    <div class="category-price">
-                        <span class="category-price__new">3 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                    </div>
-
-                    <button class="category-buy">Купить</button>
-
-                </a>
-
+                <h3>Модератор</h3>
             </div>
-
+            <div class="cabinet__owner-tools">
+                <a href="/personal_area/user-likes/index">
+                    <span>116</span>
+                    <p>лайков</p>
+                </a>
+                <a href="/personal_area/user-promotions">
+                    <span>0</span>
+                    <p>акций</p>
+                </a>
+                <a href="/personal_area/user-poster">
+                    <span>0</span>
+                    <p>Афиш</p>
+                </a>
+                <a href="/personal_area/user-company/index">
+                    <span>736</span>
+                    <p>компаний</p>
+                </a>
+                <a class="disabled" href="#">
+                    <span>0</span>
+                    <p>отзывов</p>
+                </a>
+                <a href="/personal_area/user-comments">
+                    <span>5</span>
+                    <p>коментария</p>
+                </a>
+            </div>
+            <div class="cabinet__inner-box">
+                <h3>Мои товары</h3>
+                <a href="#" class="cabinet__inner-box--add">добавить <span><img src="img/icons/add-pkg-icon.png" alt=""></span></a>
+              <div class="cabinet-order">
+                  <table class="shop__table-cart ">
+                      <thead>
+                      <tr>
+                          <td>Наименование товара и описание</td>
+                          <td class="text-center">Дата заказа</td>
+                          <td class="text-center">Количество</td>
+                          <td>Доставка и оплата</td>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>
+                              <div class="product-pic">
+                                  <img src="img/logo.png" alt="">
+                              </div>
+                              <div class="product-attribute">
+                                  <a href="#" class="product-link">
+                                      Стильный рюкзак мужской для
+                                      ноутбука 15,6" дюймов
+                                  </a>
+                                  <a href="#" class="product-more">подробное описание</a>
+                              </div>
+                          </td>
+                          <td class="text-center">
+                              19.03.2018
+                          </td>
+                          <td class="text-center">
+                              2
+                          </td>
+                          <td>
+                              <a href="#" class="form-btn">заполнить форму доставки</a>
+                              <a href="#" class="delete-product"></a>
+                          </td>
+                      </tr>
+                      </tbody>
+                  </table>
+                  <div class="shop__footer">
+                      <div class="shop__action">
+                          <a href="#">посмотреть форму доставки клиента</a>
+                      </div>
+                      <div class="shop__info-price">
+                          <p class="shop__info-price-desc">
+                              <span>Стоимость с учетом скидок 597,10 руб.</span> Общая стоимость: 597,10 руб
+                          </p>
+                      </div>
+                  </div>
+              </div>
+            </div>
         </div>
     </div>
 </section>
-<!-- end broad-category.html-->
+<!-- end cabinet-order.html-->
 
 <!-- start footer.html-->
 <footer class="footer">
