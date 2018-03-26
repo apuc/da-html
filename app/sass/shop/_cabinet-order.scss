@@ -1,5 +1,127 @@
 .cabinet-order{
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 40px;
+  .shop__table-cart tr td{
+    font-weight: 600;
+  }
  .shop__info-price{
    width: auto;
  }
+  .shop__action a{
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+.cabinet-order-title{
+  position: absolute;
+  right: 132px;
+  color: #0c242e;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.38px;
+ span{
+   color: #ee2e24;
+   font-size: 16px;
+ }
+}
+.viewed-orders{
+  position: absolute;
+  right: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+
+  b{
+    color: #ee2e24;
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration: underline;
+    margin-left: 10px;
+  }
+  span{
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      right: -4px;
+      top: 1px;
+      width: 9px;
+      height: 9px;
+      background-color: #ee2e24;
+      border-radius: 50%;
+    }
+  }
+  &:hover{
+    color: #000;
+  }
+}
+.all-viewed-orders{
+  position: absolute;
+  right: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+
+  span{
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      right: -4px;
+      top: 1px;
+      width: 9px;
+      height: 9px;
+      background-color: green;
+      border-radius: 50%;
+    }
+  }
+  &:hover{
+    color: #000;
+  }
+}
+.discount-coupon{
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.processing{
+  color: #6f6969;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.take-processing{
+  width: 186px;
+  height: 29px;
+  border-radius: 5px;
+  background-color: #429112;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  border: none;
+  letter-spacing: -0.1px;
+  margin-bottom: 10px;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    background: darken(#429112, 10%);
+  }
 }
