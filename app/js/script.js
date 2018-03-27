@@ -1998,14 +1998,6 @@ $(document).ready(function () {
     }
     // end слайдер товаров
 
-    // инициализация zoom effect при навидение на слайдер
-    if ($('div').hasClass('single-shop__slider-item')) {
-        $('.single-shop__slider-item').zoom({
-            magnify: 3
-        });
-    }
-    // end инициализация zoom effect при навидение на слайдер
-
     // инициализация табов
     $(".single-shop__tabs").lightTabs();
     //end инициализация табов
