@@ -1075,7 +1075,7 @@
       display: block;
       position: relative;
       float: left;
-      width: 254px;
+      width: 222px;
       margin-top: 55px;
       padding-left: 5%;
       @include box-sizing (border-box);
@@ -1136,7 +1136,7 @@
       display: block;
       position: relative;
       float: right;
-      width: calc(100% - (110px + 15px + 320px + 254px));
+      width: calc(100% - 654px);
       margin-top: 24px;
       margin-bottom: 10px;
       @include breakpoint(max-width 1200px) {
