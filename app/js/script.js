@@ -768,8 +768,8 @@ $(document).ready(function () {
     /*business owl.slider*/
     var businessSlider = $('.business__photos');
     businessSlider.owlCarousel({
-        loop: true,
-        nav: false,
+        loop: false,
+        nav: true,
         margin: 0,
         responsive: {
             0: {
