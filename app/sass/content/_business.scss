@@ -1248,7 +1248,7 @@
           background-repeat: no-repeat;
           background-size: 19px 19px;
           background-position: 0 1px;
-          @include breakpoint(max-width 992px){
+          @include breakpoint(max-width 992px) {
             margin-bottom: 15px;
           }
           &:before {
@@ -1376,6 +1376,18 @@
         height: 100%;
         object-fit: cover;
       }
+    }
+    .owl-next {
+      position: absolute;
+      top: 33%;
+      right: 6px;
+      font-size: 30px;
+    }
+    .owl-prev {
+      position: absolute;
+      font-size: 30px;
+      top: 33%;
+      left: 6px;
     }
   }
   &__descr {
@@ -2297,18 +2309,21 @@
       }
     }
   }
-  .absolute{
+  .absolute {
     right: 0;
   }
 }
-.like{
-  background-image: url(../img/company-shop/heart1.png)!important;
+
+.like {
+  background-image: url(../img/company-shop/heart1.png) !important;
 }
-.business__requisites--links-tel{
+
+.business__requisites--links-tel {
   display: flex;
   margin-top: 10px;
 }
-.business__requisites--links-icon{
+
+.business__requisites--links-icon {
   margin-right: 3px;
   width: 20px;
   height: 20px;

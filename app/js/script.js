@@ -771,6 +771,7 @@ $(document).ready(function () {
         loop: false,
         nav: true,
         margin: 0,
+        navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         responsive: {
             0: {
                 items: 1
