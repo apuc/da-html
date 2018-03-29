@@ -10,8 +10,28 @@
   &__filter-content {
     width: calc(100% - 250px);
     float: right;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
+    .shop__top-sales-elements{
+      justify-content: flex-start;
+    }
     .shop__top-sales-elements--item {
       width: 19%;
+      margin-right: 11px;
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+      @include breakpoint(max-width 992px){
+        width: 32%;
+        margin-bottom: 10px;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        &:nth-child(5n) {
+          margin-right: 10px;
+        }
+      }
     }
   }
   &__filter-title {
@@ -64,6 +84,10 @@
     background-color: #ffffff;
     padding: 20px 15px;
     margin-bottom: 10px;
+    @include breakpoint(max-width 992px){
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
     &--price {
       color: #6f6969;
       font-size: 12px;
