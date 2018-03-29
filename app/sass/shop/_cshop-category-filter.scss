@@ -23,28 +23,36 @@
     margin-top: 0;
     padding-left: 15px;
     margin-bottom: 15px;
-    &:after{
+    &:after {
       content: '';
       position: absolute;
       left: 0;
       top: 6px;
       width: 10px;
       height: 6px;
-      background: url("../img/shop/icons/arrow-down.png") no-repeat ;
+      background: url("../img/shop/icons/arrow-down.png") no-repeat;
       background-size: contain;
     }
   }
-  &__filter-list{
-    list-style: none;
-    padding: 0;
-    padding-left: 15px;
-    li{
-      a{
-        color: #000000;;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 21px;
+  &__filter-list {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    label {
+      color: #000000;;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 21px;
+      cursor: pointer;
+      display: block;
+      input[type='checkbox'] {
+        visibility: hidden;
+        position: absolute;
       }
+    }
+  }
+  .active {
+    &:after {
+        transform: rotate(180deg);
     }
   }
   &__filter-search {

@@ -2157,6 +2157,15 @@ $(document).ready(function () {
             );
     });
 
+    $(document).on('click', '.form-delivery-link', function () {
+        $('.form-delivery-container').slideToggle('fast');
+        return false
+    });
+
+
+  $('.shop__filter-title').click(function () {
+      $(this).toggleClass('active');
+  });
     // end Модальное окно для обратной связи в одно компании
 
 //    Фильтр категорий  магазина

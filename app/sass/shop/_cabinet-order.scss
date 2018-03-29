@@ -131,3 +131,24 @@
     background: darken(#429112, 10%);
   }
 }
+.form-delivery-container{
+  display: none;
+  color: #6f6969;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 15px;
+  margin-top: 30px;
+  div{
+    margin-bottom: 15px;
+    b{
+      color: #402727;
+
+    }
+    >a{
+      color: #6f6969!important;
+      text-decoration: none!important;
+      font-weight: 400!important;
+      padding: 0!important;
+    }
+  }
+}
