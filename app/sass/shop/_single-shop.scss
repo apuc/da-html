@@ -512,6 +512,11 @@
       &::placeholder {
         opacity: 1;
       }
+      &:focus{
+        transition: 100ms ease;
+        box-shadow: 0 0 5px lighten(#ff0000, 25%);
+        border-color: lighten(#ff0000, 25%);
+      }
     }
   }
   &__characteristics-wrap {
