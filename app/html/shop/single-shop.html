@@ -108,7 +108,7 @@
                         Склады в ДНР
                     </a>
                     <div class='rating-stars'>
-                        <ul id='stars'>
+                        <ul class='stars'>
                             <li class='star selected' title='Poor' data-value='1'>
                                 <i class='fa fa-star fa-fw'></i>
                             </li>
@@ -311,7 +311,61 @@
                     </div>
 
                     <div class="single-shop__tab-item">
-                        <h2 class="single-shop__tab-title">Отзывы товара</h2>
+
+                        <h2 class="single-shop__tab-title">Отзывы о товаре</h2>
+
+                        <form action="#" class="single-shop__short-review">
+                            <input type="text" name="short-review" placeholder="Краткий комментарий">
+                        </form>
+
+                        <div class="rating-stars rating-tabs">
+                            <ul class="stars">
+                                <li class="star selected" title="Poor" data-value="1">
+                                    <i class="fa fa-star fa-fw"></i>
+                                </li>
+                                <li class="star selected" title="Fair" data-value="2">
+                                    <i class="fa fa-star fa-fw"></i>
+                                </li>
+                                <li class="star selected" title="Good" data-value="3">
+                                    <i class="fa fa-star fa-fw"></i>
+                                </li>
+                                <li class="star selected" title="Excellent" data-value="4">
+                                    <i class="fa fa-star fa-fw"></i>
+                                </li>
+                                <li class="star" title="WOW!!!" data-value="5">
+                                    <i class="fa fa-star fa-fw"></i>
+                                </li>
+                            </ul>
+                            <span class="estimate">Оцените товар</span>
+                        </div>
+
+                        <form action="#" class="single-shop__review-product">
+
+                            <div class="single-shop__form-left">
+
+                                <label for="dignity">Достоинтсва</label>
+                                <input type="text" id="dignity">
+
+                                <label for="disadvantages">Недостатки</label>
+                                <input type="text" id="disadvantages">
+
+                                <label for="commentary-feedback">Комментарий</label>
+                                <textarea id="commentary-feedback"></textarea>
+
+                                <button class="review-product-btn">Отправить отзыв</button>
+                                <button class="review-product-cancel">Отмена</button>
+
+                            </div>
+                            <div class="single-shop__warning-right">
+                                <h3 class="warning-right-title">Важно!</h3>
+
+                                <p class="warning-right-desk">
+                                    Чтобы Ваш отзыв либо комментарий прошел модерацию и был опубликован, ознакомьтесь,
+                                    пожалуйста, <a href="#">с нашими правилами!</a>
+                                </p>
+                            </div>
+                        </form>
+
                     </div>
 
                     <div class="single-shop__tab-item">
