@@ -163,9 +163,10 @@
     position: relative;
     float: left;
     width: calc(100% - 255px);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     .single-shop__tabs{
       padding: 25px 30px;
+      margin-bottom: 0;
     }
     .single-shop__tab-links{
       border-bottom: none;
@@ -224,6 +225,18 @@
   }
   &__shop-reviews-wrap{
 
+  }
+}
+.view-more-reviews{
+  .shop__top-sales-elements{
+    justify-content: flex-start;
+  }
+  .shop__top-sales-elements--item{
+    width: 15%;
+    margin-right: 23px;
+    &:last-child{
+      margin-right: 0;
+    }
   }
 }
 .add-owl-reviews-title{

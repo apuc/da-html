@@ -864,6 +864,7 @@ $(document).ready(function () {
         });
     }
 
+
     /*single business sidebar scroll*/
     // var stockElement = $('#business-stock-sidebar');
     // if (stockElement.length > 0) {
