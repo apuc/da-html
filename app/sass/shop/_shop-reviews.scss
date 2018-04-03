@@ -1,23 +1,148 @@
-.shop{
-  &__reviews-bar-title{
+.shop {
+  &__reviews-bar-title {
     color: #000000;
     font-size: 14px;
     font-weight: 700;
     text-align: center;
     margin: 0 0 15px 0;
   }
-  &__reviews-bar-img{
+  &__reviews-title-2 {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    float: left;
+    margin: 0;
+    margin-right: 46px;
+  }
+  &__usefull-comments {
+    display: block;
+    float: left;
+    width: 100%;
+    position: relative;
+    .review-header {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    .name {
+      margin-right: 15px;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .date {
+      color: #000000;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .rating-stars {
+      width: auto;
+    }
+    .comments {
+      display: flex;
+      width: 100%;
+      max-width: 780px;
+      flex-wrap: wrap;
+      color: #000000;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+    .advantages {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .disadvantages {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .delimiter {
+      display: inline-block;
+      color: #ee2e24;
+      font-weight: 700;
+      margin: 10px 10px;
+    }
+    .reply-btn {
+      position: relative;
+      display: inline-block;
+      color: #ee2e24;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      padding-left: 20px;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 11px;
+        height: 9px;
+        background: url(../img/shop/icons/share-option.png) no-repeat center center;
+        background-size: contain;
+      }
+    }
+    .answers-btn {
+      position: relative;
+      display: inline-block;
+      color: #ee2e24;
+      font-size: 12px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      font-weight: 700;
+      line-height: 20px;
+      padding-left: 20px;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        background: url(../img/shop/icons/comments.png) no-repeat center center;
+        background-size: contain;
+      }
+    }
+    .replies {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      width: 100%;
+      padding: 20px 30px;
+      border-bottom: 1px solid #eee;
+    }
+    .replies-comment {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .read-all-btn{
+      color: #ee2e24;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 20px;
+      text-decoration: underline;
+      &:hover{
+        color: #ee2e24;
+      }
+    }
+  }
+  &__reviews-bar-img {
     position: relative;
     float: left;
     width: 100%;
     height: 191px;
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  &__reviews-bar-desk{
+  &__reviews-bar-desk {
     position: relative;
     width: 100%;
     float: left;
@@ -27,38 +152,90 @@
     text-align: center;
     margin: 10px 0 15px 0;
   }
-  &__reviews-title{
+  &__reviews-title {
     color: #000000;
     font-size: 15px;
     font-weight: 600;
     margin: 0 0 20px 0;
-}
-  &__shop-reviews{
+  }
+  &__shop-reviews {
     display: block;
     position: relative;
     float: left;
     width: calc(100% - 255px);
-    padding: 25px 20px;
-    background-color: #fbfbfb;
+    margin-bottom: 30px;
+    .single-shop__tabs{
+      padding: 25px 30px;
+    }
+    .single-shop__tab-links{
+      border-bottom: none;
+      padding: 0;
+      li{
+        padding: 0;
+        color: #000000;
+        background: transparent;
+        font-size: 13px;
+        font-weight: 700;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      .active{
+        color: #6c7376;
+        text-decoration: underline;
+      }
+    }
+    .single-shop__tab-content{
+      padding: 0;
+    }
   }
-  &__reviews-bar-wrap{
+  &__shop-reviews-wrap{
+    padding: 25px 20px;
+    margin-bottom: 15px;
+    background-color: #fbfbfb;
+    width: 100%;
+    position: relative;
+    float: left;
+
+  }
+  &__reviews-bar-wrap {
     width: 100%;
     position: relative;
     background-color: #fbfbfb;
     padding: 15px 15px 0 15px;
   }
-  &__reviews-sidebar{
+  &__reviews-sidebar {
     position: relative;
     float: right;
     width: 250px;
     margin-left: 5px;
     text-align: center;
-    .button-basket{
+    .button-basket {
       margin: 15px 20px;
     }
   }
+  &__add-coments{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 255px);
+    padding: 25px 20px;
+    margin-bottom: 15px;
+    background-color: #fbfbfb;
+  }
+  &__shop-reviews-wrap{
+
+  }
 }
-.product-desc-btn{
+.add-owl-reviews-title{
+  text-align: center;
+  opacity: 0.89;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.product-desc-btn {
   width: 141px;
   display: inline-block;
   height: 31px;
@@ -69,13 +246,36 @@
   font-size: 12px;
   font-weight: 600;
   transition: 200ms ease;
-  &:hover{
+  &:hover {
     transition: 200ms ease;
     background: darken(#eee, 10%);
     color: #000;
   }
 }
-.review-sidebar-btn{
+
+.write-reviews-btn {
+  width: 156px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #ee2e24;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
+  display: inline-block;
+  text-align: center;
+  line-height: 29px;
+  border: none;
+  margin-top: -3px;
+  transition: 200ms ease;
+  &:hover {
+    background: darken(#ee2e24, 10%);
+    transition: 200ms ease;
+    color: #fff;
+  }
+}
+
+.review-sidebar-btn {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #000000;
@@ -83,7 +283,7 @@
   font-size: 12px;
   font-weight: 600;
   text-decoration: underline;
-  &:hover{
+  &:hover {
     color: #000;
   }
 }

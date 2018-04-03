@@ -603,6 +603,7 @@
       font-weight: 300;
       line-height: 20px;
       display: block;
+      margin-bottom: 10px;
     }
     input {
       padding: 0 10px;
@@ -626,8 +627,8 @@
       padding: 10px 10px;
       display: block;
       width: 100%;
-      height: 100px;
-      min-height: 100px;
+      height: 165px;
+      min-height: 165px;
       border-radius: 5px;
       border: 1px solid #ff0000;
       resize: vertical;
@@ -645,66 +646,10 @@
     width: 50%;
     float: right;
     padding: 0 40px;
+    margin-top: 20px;
   }
-  .warning-right-desk{
-    color: #000000;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 20px;
-    margin-top: 40px;
-    a{
-      color: #075882;
-      &:hover{
-        text-decoration: underline;
-      }
-    }
-  }
-  .warning-right-title{
-    color: #ee2e24;
-    font-size: 15px;
-    font-weight: 700;
-    padding-left: 20px;
-    margin-left: 45px;
-    margin-top: 30px;
-    position: relative;
-    &:after{
-      content: '';
-      position: absolute;
-      left: -45px;
-      top: -9px;
-      width: 45px;
-      height: 41px;
-      background: url(../img/shop/icons/warning-tabs.png) no-repeat center center;
-      background-size: contain;
-    }
-  }
-  .review-product-btn{
-    width: 156px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: #ee2e24;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: -0.1px;
-    border: 0;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    transition: 200ms ease;
-    &:hover{
-      transition: 200ms ease;
-      background: darken(#ee2e24, 10%);
-    }
-  }
-  .review-product-cancel{
-    color: #0c0000;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: -0.1px;
-    background: transparent;
-    border: none;
-    margin-left: 25px;
-  }
+
+
   .estimate {
     color: #000000;
     font-size: 13px;
@@ -1070,6 +1015,64 @@
       font-weight: 700;
       text-decoration: none;
     }
+  }
+}
+.review-product-btn{
+  width: 156px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #ee2e24;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
+  border: 0;
+  margin-top: 25px;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    background: darken(#ee2e24, 10%);
+  }
+}
+.review-product-cancel{
+  color: #0c0000;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
+  background: transparent;
+  border: none;
+  margin-left: 25px;
+}
+.warning-right-desk{
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 40px;
+  a{
+    color: #075882;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.warning-right-title{
+  color: #ee2e24;
+  font-size: 15px;
+  font-weight: 700;
+  padding-left: 20px;
+  margin-left: 45px;
+  margin-top: 30px;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    left: -45px;
+    top: -9px;
+    width: 45px;
+    height: 41px;
+    background: url(../img/shop/icons/warning-tabs.png) no-repeat center center;
+    background-size: contain;
   }
 }
 
