@@ -1024,9 +1024,10 @@
   font-weight: 700;
   line-height: 29px;
   text-transform: uppercase;
-  @include breakpoint(max-width 360px) {
-    left: 10px;
-    top: 10px;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    background-color: darken(#3bc593, 10%);
   }
 }
 
@@ -1044,6 +1045,11 @@
   line-height: 29px;
   text-transform: uppercase;
   background-color: #fbb900;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    background-color: lighten(#fbb900, 10%);
+  }
 }
 .percent-label{
   width: 30px;
@@ -1056,6 +1062,12 @@
   text-transform: uppercase;
   background: #ee2e24 url("../img/shop/icons/sales.png") no-repeat center center;
   background-size: 20px 20px;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    background-color: darken(#ee2e24, 10%);
+  }
+
 }
 .percent-discount-label{
   width: 30px;
@@ -1071,6 +1083,11 @@
   line-height: 29px;
   text-transform: uppercase;
   background-color: #0f7abe;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    background-color: darken(#0f7abe, 10%);
+  }
 }
 .discount-arrow-label{
   width: 30px;
@@ -1083,6 +1100,11 @@
   text-transform: uppercase;
   background: #7000fb url("../img/shop/icons/discount-arrow.png") no-repeat center center;
   background-size: 20px 20px;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    background-color: darken(#7000fb, 10%);
+  }
 }
 //.shop__categories--list li:hover .shop__categories--sub-menu{
 //  display: flex;
