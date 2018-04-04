@@ -1003,16 +1003,21 @@
     color: #ffffff;
   }
 }
+.label-wrap{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 10px;
+  top: 60px;
+}
 .new-label {
   width: 30px;
   height: 30px;
-  right: 30px;
-  top: 60px;
   background-color: #3bc593;
   border-radius: 50%;
   text-align: center;
+  margin-bottom: 10px;
   display: inline-block;
-  position: absolute;
   color: #ffffff;
   z-index: 500;
   font-size: 8px;
@@ -1028,25 +1033,57 @@
 .hit-label {
   width: 30px;
   height: 30px;
-  right: 30px;
-  top: 60px;
+  margin-bottom: 10px;
   border-radius: 50%;
   text-align: center;
   display: inline-block;
-  position: absolute;
-  color: #ffffff;
+  color: #000;
   z-index: 500;
   font-size: 8px;
   font-weight: 700;
   line-height: 29px;
   text-transform: uppercase;
   background-color: #fbb900;
-  @include breakpoint(max-width 360px) {
-    left: 10px;
-    top: 10px;
-  }
 }
-
+.percent-label{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  z-index: 500;
+  text-transform: uppercase;
+  background: #ee2e24 url("../img/shop/icons/sales.png") no-repeat center center;
+  background-size: 20px 20px;
+}
+.percent-discount-label{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  z-index: 500;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 29px;
+  text-transform: uppercase;
+  background-color: #0f7abe;
+}
+.discount-arrow-label{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  z-index: 500;
+  text-transform: uppercase;
+  background: #7000fb url("../img/shop/icons/discount-arrow.png") no-repeat center center;
+  background-size: 20px 20px;
+}
 //.shop__categories--list li:hover .shop__categories--sub-menu{
 //  display: flex;
 //}
