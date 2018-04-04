@@ -512,7 +512,7 @@
       &::placeholder {
         opacity: 1;
       }
-      &:focus{
+      &:focus {
         transition: 100ms ease;
         box-shadow: 0 0 5px lighten(#ff0000, 25%);
         border-color: lighten(#ff0000, 25%);
@@ -617,7 +617,7 @@
       font-size: 13px;
       outline: none;
       transition: 100ms ease;
-      &:focus{
+      &:focus {
         transition: 100ms ease;
         box-shadow: 0 0 5px lighten(#ff0000, 25%);
         border-color: lighten(#ff0000, 25%);
@@ -635,7 +635,7 @@
       color: #000000;
       font-size: 13px;
       outline: none;
-      &:focus{
+      &:focus {
         transition: 100ms ease;
         box-shadow: 0 0 5px lighten(#ff0000, 25%);
         border-color: lighten(#ff0000, 25%);
@@ -649,12 +649,8 @@
     margin-top: 20px;
   }
 
-
-  .estimate {
-    color: #000000;
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 20px
+  .write-reviews-btn {
+    margin-top: 30px;
   }
   .container {
     @include breakpoint(max-width 992px) {
@@ -963,11 +959,13 @@
     }
   }
 }
+
 .price-sail {
   color: #ee2e24;
   font-size: 17px;
   font-weight: 700;
 }
+
 .button-basket {
   padding: 10px 22px;
   margin: 0 20px;
@@ -978,7 +976,7 @@
   font-size: 13px;
   font-weight: 700;
   letter-spacing: -0.1px;
-  border: none; 
+  border: none;
   display: block;
   &:hover {
     color: #fff;
@@ -993,6 +991,7 @@
     font-size: 12px;
   }
 }
+
 .rating-stars {
   width: 100%;
   display: flex;
@@ -1017,7 +1016,8 @@
     }
   }
 }
-.review-product-btn{
+
+.review-product-btn {
   width: 156px;
   height: 30px;
   border-radius: 5px;
@@ -1029,12 +1029,13 @@
   border: 0;
   margin-top: 25px;
   transition: 200ms ease;
-  &:hover{
+  &:hover {
     transition: 200ms ease;
     background: darken(#ee2e24, 10%);
   }
 }
-.review-product-cancel{
+
+.review-product-cancel {
   color: #0c0000;
   font-size: 11px;
   font-weight: 700;
@@ -1043,20 +1044,22 @@
   border: none;
   margin-left: 25px;
 }
-.warning-right-desk{
+
+.warning-right-desk {
   color: #000000;
   font-size: 13px;
   font-weight: 600;
   line-height: 20px;
   margin-top: 40px;
-  a{
+  a {
     color: #075882;
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
 }
-.warning-right-title{
+
+.warning-right-title {
   color: #ee2e24;
   font-size: 15px;
   font-weight: 700;
@@ -1064,7 +1067,7 @@
   margin-left: 45px;
   margin-top: 30px;
   position: relative;
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     left: -45px;
@@ -1205,6 +1208,16 @@
   }
 }
 
+.estimate {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px
+}
+.replies-wrap{
+  position: relative;
+  width: 100%;
+}
 .go-cart {
   text-align: center;
   width: 139px;

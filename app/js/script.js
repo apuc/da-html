@@ -771,7 +771,7 @@ $(document).ready(function () {
         loop: false,
         nav: true,
         margin: 0,
-        navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         responsive: {
             0: {
                 items: 1
@@ -850,21 +850,32 @@ $(document).ready(function () {
     //promotion
 
     var promotionElement = $('#promotion-sidebar'),
+        shopReviewsSidebar = $('#shop-reviews-sidebar'),
         shopCartSidebar = $('#shop-sidebar-cart');
+
     if (promotionElement.length > 0) {
         var promotionElementPosition = promotionElement.offset().top;
         $(window).scroll(function () {
             fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
         });
     }
+
+
+
+
+    if (shopReviewsSidebar.length > 0) {
+        var shopReviewsPosition = shopReviewsSidebar.offset().top;
+        $(window).scroll(function () {
+            fixedScrollReviews(shopReviewsSidebar, shopReviewsPosition, $('.view-more-reviews'));
+        });
+    }
+
     if (shopCartSidebar.length > 0) {
         var shopCartSidebarPosition = shopCartSidebar.offset().top;
         $(window).scroll(function () {
             fixedScroll(shopCartSidebar, shopCartSidebarPosition, $('.footer'));
         });
     }
-
-
     /*single business sidebar scroll*/
     // var stockElement = $('#business-stock-sidebar');
     // if (stockElement.length > 0) {
@@ -1325,6 +1336,22 @@ function fixedScroll(element, elementPosition, blockElement) {//функция �
         }
         else {
             element.removeClass('fixed');
+        }
+    }
+}
+function fixedScrollReviews(element, elementPosition, blockElement) {//функция фиксированного блока, с селекторами элемента, его позиционирования и преграждающего блока
+    var top = $(document).scrollTop(),
+        blockingElement = blockElement.offset().top,
+        height = element.outerHeight();//высота элемента, включающая внутренние и внешние отступы
+    if (window.innerWidth > 1200) {
+        if (top > elementPosition && top < blockingElement - height) {
+            element.addClass('fixed-reviews').removeClass('absolute-reviews');
+        }
+        else if (top > blockingElement - height) {
+            element.removeClass('fixed-reviews').addClass('absolute-reviews')/*.css({'position': 'absolute', 'bottom': '50px', 'right': '0'})*/;
+        }
+        else {
+            element.removeClass('fixed-reviews');
         }
     }
 }
@@ -2164,14 +2191,15 @@ $(document).ready(function () {
     });
 
 
-  $('.shop__filter-title').click(function () {
-      $(this).toggleClass('active');
-  });
+    $('.shop__filter-title').click(function () {
+        $(this).toggleClass('active');
+    });
     // end Модальное окно для обратной связи в одно компании
 
 //    Фильтр категорий  магазина
 
 //   end  Фильтр категорий  магазина
+
 
 
 });

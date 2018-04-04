@@ -120,16 +120,7 @@
       margin-top: 20px;
       margin-bottom: 20px;
     }
-    .read-all-btn{
-      color: #ee2e24;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 20px;
-      text-decoration: underline;
-      &:hover{
-        color: #ee2e24;
-      }
-    }
+
   }
   &__reviews-bar-img {
     position: relative;
@@ -164,14 +155,14 @@
     float: left;
     width: calc(100% - 255px);
     margin-bottom: 20px;
-    .single-shop__tabs{
+    .single-shop__tabs {
       padding: 25px 30px;
       margin-bottom: 0;
     }
-    .single-shop__tab-links{
+    .single-shop__tab-links {
       border-bottom: none;
       padding: 0;
-      li{
+      li {
         padding: 0;
         color: #000000;
         background: transparent;
@@ -180,16 +171,16 @@
         margin-right: 20px;
         margin-bottom: 20px;
       }
-      .active{
+      .active {
         color: #6c7376;
         text-decoration: underline;
       }
     }
-    .single-shop__tab-content{
+    .single-shop__tab-content {
       padding: 0;
     }
   }
-  &__shop-reviews-wrap{
+  &__shop-reviews-wrap {
     padding: 25px 20px;
     margin-bottom: 15px;
     background-color: #fbfbfb;
@@ -214,7 +205,7 @@
       margin: 15px 20px;
     }
   }
-  &__add-coments{
+  &__add-coments {
     display: block;
     position: relative;
     float: left;
@@ -223,23 +214,49 @@
     margin-bottom: 15px;
     background-color: #fbfbfb;
   }
-  &__shop-reviews-wrap{
+  &__shop-reviews-wrap {
 
   }
 }
-.view-more-reviews{
-  .shop__top-sales-elements{
+
+.fixed-reviews {
+  position: fixed;
+  top: 0;
+  margin-left: 900px;
+}
+
+.absolute-reviews {
+  position: absolute;
+  right: 10px;
+  bottom: 364px;
+}
+
+.read-all-btn {
+  color: #ee2e24;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-right: 20px;
+  text-decoration: underline;
+  &:hover {
+    color: #ee2e24;
+  }
+}
+
+.view-more-reviews {
+  .shop__top-sales-elements {
     justify-content: flex-start;
   }
-  .shop__top-sales-elements--item{
+  .shop__top-sales-elements--item {
     width: 15%;
     margin-right: 23px;
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
 }
-.add-owl-reviews-title{
+
+.add-owl-reviews-title {
   text-align: center;
   opacity: 0.89;
   color: #000000;
@@ -248,6 +265,7 @@
   margin-top: 0;
   margin-bottom: 20px;
 }
+
 .product-desc-btn {
   width: 141px;
   display: inline-block;
