@@ -1005,10 +1005,10 @@
     position: absolute;
     background: #ff4444;
     z-index: 9999;
-    width: 200px;
-    bottom: 50%;
+    width: 140px;
+    bottom: 46%;
     margin-bottom: -1em;
-    padding: 20px;
+    padding: 10px 5px;
     border-radius: 20px;
     font-size: 13px;
     text-align: center;
@@ -1022,7 +1022,7 @@
   }
 
   .tooltip-west .tooltip-content {
-    left: 5em;
+    left: 4em;
     -webkit-transform-origin: -2em 50%;
     transform-origin: -2em 50%;
     -webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,30deg);
@@ -1030,7 +1030,7 @@
   }
 
   .tooltip-east .tooltip-content {
-    right: 5em;
+    right: 4em;
     -webkit-transform-origin: calc(100% + 2em) 50%;
     transform-origin: calc(100% + 2em) 50%;
     -webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,-30deg);
@@ -1205,6 +1205,7 @@
   margin-bottom: 10px;
   border-radius: 50%;
   text-align: center;
+  line-height: 29px;
   font-weight: 700;
   display: inline-block;
   z-index: 500;
