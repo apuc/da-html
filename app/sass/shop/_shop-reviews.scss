@@ -155,9 +155,15 @@
     float: left;
     width: calc(100% - 255px);
     margin-bottom: 20px;
+    @include breakpoint(max-width 992px){
+      width: 100%;
+    }
     .single-shop__tabs {
       padding: 25px 30px;
       margin-bottom: 0;
+      @include breakpoint(max-width 992px){
+        padding: 25px 20px;
+      }
     }
     .single-shop__tab-links {
       border-bottom: none;
@@ -201,6 +207,13 @@
     width: 250px;
     margin-left: 5px;
     text-align: center;
+    @include breakpoint(max-width 992px){
+      display: none;
+    }
+    @include breakpoint(max-width 600px){
+      display: block;
+      width: 100%;
+    }
     .button-basket {
       margin: 15px 20px;
     }
@@ -213,9 +226,6 @@
     padding: 25px 20px;
     margin-bottom: 15px;
     background-color: #fbfbfb;
-  }
-  &__shop-reviews-wrap {
-
   }
 }
 
@@ -299,6 +309,9 @@
   border: none;
   margin-top: -3px;
   transition: 200ms ease;
+  @include breakpoint(max-width 450px){
+    margin-top: 20px;
+  }
   &:hover {
     background: darken(#ee2e24, 10%);
     transition: 200ms ease;

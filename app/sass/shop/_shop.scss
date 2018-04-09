@@ -1096,6 +1096,12 @@
   font-weight: 700;
   line-height: 14px;
   text-transform: uppercase;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    color: #fff;
+    background-color: darken(#ee2e24, 10%);
+  }
   @include breakpoint(max-width 1200px) {
     width: 48px;
     font-size: 8px;
@@ -1106,10 +1112,6 @@
   }
   @include breakpoint(max-width 660px) {
 
-  }
-  &:hover {
-    background-color: #ee2e24;
-    color: #ffffff;
   }
 }
 .label-wrap{
