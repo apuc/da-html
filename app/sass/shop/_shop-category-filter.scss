@@ -110,9 +110,6 @@
     display: none;
     margin-top: 15px;
     margin-bottom: 15px;
-    .active {
-      color: #ee2e24;
-    }
     label {
       color: #000000;;
       font-size: 13px;
@@ -120,11 +117,16 @@
       line-height: 21px;
       cursor: pointer;
       display: block;
-      input[type='checkbox'] {
-        visibility: hidden;
-        position: absolute;
-      }
+
     }
+    input[type='checkbox'] {
+      visibility: hidden;
+      position: absolute;
+    }
+    input[type = "checkbox"]:checked + label {
+      color: #ee2e24;
+    }
+
   }
   .active {
     .shop__filter-list {

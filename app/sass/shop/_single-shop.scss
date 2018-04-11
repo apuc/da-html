@@ -183,7 +183,6 @@
     flex-wrap: wrap;
     .all-actions__company {
       width: 45%;
-      margin-right: 35px;
       @include breakpoint(max-width 992px) {
         width: 60%;
       }
@@ -201,6 +200,7 @@
     font-size: 15px;
     font-weight: 400;
     transition: 200ms ease;
+    padding-left: 35px;
     &:hover {
       color: #ee2e24;
       transition: 200ms ease;
@@ -209,7 +209,7 @@
       content: '';
       position: absolute;
       top: 0;
-      left: -33px;
+      left: 0;
       width: 24px;
       height: 22px;
       background: url("../img/shop/icons/shop-heart-icon.png") no-repeat center center;

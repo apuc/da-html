@@ -2201,10 +2201,14 @@ $(document).ready(function () {
     $(document).on('click', '.shop__filter-title', function () {
         $(this).toggleClass('active');
     });
-    $('.shop__filter-list label').change(function() {
-        $(this).toggleClass("active");
-    });
+
+    // $('.shop__filter-list label').change(function() {
+    //     $(this).toggleClass("active");
+    // });
     //*-------------------------------------------------------------------------------------------------
     // end Сворачивание разворачивание фильтров на странице с фильтрами категорий магазин + активный чекбокс
     // ------------------------------------------------------------------------------------------------*/
+
+
+
 });
