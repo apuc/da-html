@@ -111,19 +111,18 @@
     margin-top: 15px;
     margin-bottom: 15px;
     label {
-      color: #000000;;
+      display: block;
+      cursor: pointer;
       font-size: 13px;
       font-weight: 600;
       line-height: 21px;
-      cursor: pointer;
-      display: block;
-
+      color: #000000;;
     }
     input[type='checkbox'] {
-      visibility: hidden;
       position: absolute;
+      visibility: hidden;
     }
-    input[type = "checkbox"]:checked + label {
+    .active{
       color: #ee2e24;
     }
 
