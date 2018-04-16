@@ -3,6 +3,9 @@
   float: left;
   width: 100%;
   margin-top: 40px;
+  @include breakpoint(max-width 992px){
+    overflow: scroll;
+  }
   .shop__table-cart tr td{
     font-weight: 600;
   }
@@ -14,12 +17,6 @@
     font-size: 12px;
     font-weight: 600;
     text-decoration: underline;
-  }
-  .shop__table-cart{
-    min-width: auto;
-  }
-  .shop__footer{
-    min-width: auto;
   }
 }
 .cabinet-order-title{
