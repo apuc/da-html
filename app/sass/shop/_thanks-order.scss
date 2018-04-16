@@ -55,5 +55,8 @@
     @include breakpoint(max-width 660px){
       width: 47%;
     }
+    @include breakpoint(max-width 360px){
+      width: 100%;
+    }
   }
 }

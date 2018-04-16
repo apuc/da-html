@@ -18,6 +18,9 @@
     border: 1px solid #e8e8e8;
     margin-bottom: 15px;
     background-color: #ffffff;
+    @include breakpoint(max-width 400px){
+      min-width: 50%;
+    }
     &:before {
       content: '';
       position: absolute;
