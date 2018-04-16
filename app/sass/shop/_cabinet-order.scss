@@ -1,25 +1,26 @@
-.cabinet-order{
+.cabinet-order {
   position: relative;
   float: left;
   width: 100%;
   margin-top: 40px;
-  @include breakpoint(max-width 992px){
+  @include breakpoint(max-width 992px) {
     overflow: scroll;
   }
-  .shop__table-cart tr td{
+  .shop__table-cart tr td {
     font-weight: 600;
   }
- .shop__info-price{
-   width: auto;
- }
-  .shop__action a{
+  .shop__info-price {
+    width: auto;
+  }
+  .shop__action a {
     color: #000000;
     font-size: 12px;
     font-weight: 600;
     text-decoration: underline;
   }
 }
-.cabinet-order-title{
+
+.cabinet-order-title {
   position: absolute;
   right: 132px;
   color: #0c242e;
@@ -27,12 +28,27 @@
   font-weight: 700;
   line-height: 18px;
   letter-spacing: 0.38px;
- span{
-   color: #ee2e24;
-   font-size: 16px;
- }
+  @include breakpoint(max-width 992px){
+    top: 24px;
+  }
+  @include breakpoint(max-width 740px){
+    right: 100px;
+  }
+  @include breakpoint(max-width 660px){
+    right: 115px;
+  }
+  @include breakpoint(max-width 600px){
+    left: 20px;
+    top: 50px;
+    width: 100%;
+  }
+  span {
+    color: #ee2e24;
+    font-size: 16px;
+  }
 }
-.viewed-orders{
+
+.viewed-orders {
   position: absolute;
   right: 56px;
   top: 50%;
@@ -41,19 +57,21 @@
   font-size: 12px;
   font-weight: 600;
   text-decoration: underline;
-
-  b{
+  @include breakpoint(max-width 992px) {
+    right: 20px;
+  }
+  b {
     color: #ee2e24;
     font-size: 14px;
     font-weight: 900;
     text-decoration: underline;
     margin-left: 10px;
   }
-  span{
+  span {
     display: inline-block;
     margin-right: 15px;
     position: relative;
-    &:after{
+    &:after {
       position: absolute;
       content: '';
       right: -4px;
@@ -64,11 +82,12 @@
       border-radius: 50%;
     }
   }
-  &:hover{
+  &:hover {
     color: #000;
   }
 }
-.all-viewed-orders{
+
+.all-viewed-orders {
   position: absolute;
   right: 56px;
   top: 50%;
@@ -78,11 +97,11 @@
   font-weight: 600;
   text-decoration: underline;
 
-  span{
+  span {
     display: inline-block;
     margin-right: 15px;
     position: relative;
-    &:after{
+    &:after {
       position: absolute;
       content: '';
       right: -4px;
@@ -93,11 +112,12 @@
       border-radius: 50%;
     }
   }
-  &:hover{
+  &:hover {
     color: #000;
   }
 }
-.discount-coupon{
+
+.discount-coupon {
   color: #000000;
   font-size: 12px;
   font-weight: 600;
@@ -105,13 +125,15 @@
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.processing{
+
+.processing {
   color: #6f6969;
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 10px;
 }
-.take-processing{
+
+.take-processing {
   width: 186px;
   height: 29px;
   border-radius: 5px;
@@ -123,29 +145,30 @@
   letter-spacing: -0.1px;
   margin-bottom: 10px;
   transition: 200ms ease;
-  &:hover{
+  &:hover {
     transition: 200ms ease;
     background: darken(#429112, 10%);
   }
 }
-.form-delivery-container{
+
+.form-delivery-container {
   display: none;
   color: #6f6969;
   font-size: 12px;
   font-weight: 400;
   padding-left: 15px;
   margin-top: 30px;
-  div{
+  div {
     margin-bottom: 15px;
-    b{
+    b {
       color: #402727;
 
     }
-    >a{
-      color: #6f6969!important;
-      text-decoration: none!important;
-      font-weight: 400!important;
-      padding: 0!important;
+    > a {
+      color: #6f6969 !important;
+      text-decoration: none !important;
+      font-weight: 400 !important;
+      padding: 0 !important;
     }
   }
 }
