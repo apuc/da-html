@@ -2209,6 +2209,24 @@ $(document).ready(function () {
     // end Сворачивание разворачивание фильтров на странице с фильтрами категорий магазин + активный чекбокс
     // ------------------------------------------------------------------------------------------------*/
 
+    $(window).scroll(function () {
+        var headerHeight = $('.header').innerHeight();
+        var contentHeight = $('.business__content').innerHeight();
+        var sidebarHeight = $('.promotions-sidebar').height();
+        var sidebarBottomPos = contentHeight - sidebarHeight;
+        var trigger = $(window).scrollTop() - headerHeight;
 
+        if ($(window).scrollTop() >= headerHeight) {
+            $('.promotions-sidebar').addClass('fixed');
+        } else {
+            $('.promotions-sidebar').removeClass('fixed');
+        }
+
+        if (trigger >= sidebarBottomPos) {
+            $('.promotions-sidebar').addClass('absolute');
+        } else {
+            $('.promotions-sidebar').removeClass('absolute');
+        }
+    });
 
 });
