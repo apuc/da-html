@@ -2258,19 +2258,29 @@
       justify-content: space-around;
     }
   }
+
   &__company-item {
     position: relative;
     width: 195px;
-    &:hover .business__company-img img {
-      transform: scale(1.06);
+    overflow: hidden;
+    height: 329px;
+    border: 1px solid #f3f3f3;
+    z-index: 0;
+    transition: 200ms ease;
+    &:hover{
+      height: 368px;
       transition: 200ms ease;
+      z-index: 1;
+      margin-bottom: -40px;
+      .business__company-img img {
+        transform: scale(1.06);
+        transition: 200ms ease;
+      }
     }
   }
   &__company-img {
-    border: 1px solid #f0f0f0;
-    padding: 5px;
     width: 100%;
-    height: 190px;
+    height: 195px;
     img {
       object-fit: cover;
       width: 100%;
@@ -2280,23 +2290,39 @@
   }
   &__company-desc {
     color: #060000;
-    font-size: 12px;
-    margin: 13px 5px;
+    font-size: 13px;
+    margin: 10px 10px;
     box-sizing: content-box;
     font-weight: 600;
-    height: 36px;
+    height: calc(13px * 1.4 * 3);
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  &__company-price {
+  &__company-view {
     color: #060000;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 10px 0;
-    border-top: 1px solid #e6e6e6;
+    font-size: 12px;
+    padding: 0 13px 10px 13px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .view {
+      position: relative;
+      display: inline-block;
+      padding-left: 20px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 10px;
+        left: 0;
+        top: 2px;
+        background: url("../img/icons/cabinet-eye-type2-icon.png") center center no-repeat;
+        background-size: contain;
+      }
+    }
     .heart {
       width: 17px;
       height: 15px;
@@ -2308,6 +2334,54 @@
         background-image: url(../img/company-shop/heart1.png);
       }
     }
+  }
+  &__company-price {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding: 0 5px;
+  }
+  &__company-btn {
+    width: 191px;
+    height: 39px;
+    border: none;
+    outline: none;
+    background-color: #6c7376;
+    color: #f3f3f3;
+    font-size: 12px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 200ms ease;
+    &:hover{
+      background-color: darken(#6c7376, 10%);
+      transition: 200ms ease;
+    }
+  }
+  .price-label {
+    background: #ee2e24;
+    width: 128px;
+    height: 25px;
+    color: #ffffff;
+    font-size: 12px;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    line-height: 24px;
+    &:before {
+      content: '';
+      border: 5px solid transparent;
+      border-top: 5px solid #ee2e24;
+      position: absolute;
+      bottom: -10px;
+    }
+
+  }
+  .price-date {
+    color: #060000;
+    font-size: 10px;
+    font-weight: 400;
   }
   .absolute {
     top: auto;
