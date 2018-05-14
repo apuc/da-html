@@ -233,6 +233,29 @@
       }
     }
   }
+  &__links-rules{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0 10px;
+    a{
+      color: #242424;
+      font-size: 12px;
+      display: inline-block;
+      margin-bottom: 7px;
+      transition: 200ms ease;
+      &:hover{
+        color: #ff0200;
+        transition: 200ms ease;
+      }
+    }
+  }
+  &__links-wrap{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+  }
 
   &__send-mail {
     display: block;

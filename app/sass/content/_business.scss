@@ -2251,41 +2251,66 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 25px;
+    padding: 0 50px;
     flex-wrap: wrap;
     margin-bottom: 40px;
     @include breakpoint(max-width 660px) {
       justify-content: space-around;
+      padding: 0;
     }
   }
 
   &__company-item {
     position: relative;
-    width: 195px;
+    width: 190px;
     overflow: hidden;
-    height: 329px;
+    height: 313px;
     border: 1px solid #f3f3f3;
+    margin-bottom: 6px;
     z-index: 0;
-    transition: 200ms ease;
-    &:hover{
+    @include breakpoint(max-width 1200px) {
+      margin-bottom: 15px;
+    }
+    @include breakpoint(max-width 992px) {
+      overflow: auto;
       height: 368px;
-      transition: 200ms ease;
+    }
+    @include breakpoint(max-width 660px) {
+      width: 48%;
+    }
+
+    &:hover {
+      height: 368px;
       z-index: 1;
-      margin-bottom: -40px;
-      .business__company-img img {
-        transform: scale(1.06);
-        transition: 200ms ease;
+      margin-bottom: -60px;
+      top: -10px;
+      @include breakpoint(max-width 992px){
+        margin-bottom: auto;
+        height: auto;
       }
+      .business__company-img img {
+        transition: 200ms ease;
+        transform: scale(1.05);
+        position: relative;
+      }
+      .business__company-img {
+
+        height: 205px;
+        margin-bottom: 10px;
+      }
+
     }
   }
   &__company-img {
     width: 100%;
     height: 195px;
+    overflow: hidden;
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
       transition: 200ms ease;
+
     }
   }
   &__company-desc {
@@ -2294,8 +2319,8 @@
     margin: 10px 10px;
     box-sizing: content-box;
     font-weight: 600;
-    height: calc(13px * 1.4 * 3);
-    line-height: 1.4;
+    height: calc(13px * 1.2 * 3);
+    line-height: 1.2;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -2303,7 +2328,7 @@
   }
   &__company-view {
     color: #060000;
-    font-size: 12px;
+    font-size: 10px;
     padding: 0 13px 10px 13px;
     display: flex;
     justify-content: space-between;
@@ -2354,14 +2379,17 @@
     text-transform: uppercase;
     font-weight: 600;
     transition: 200ms ease;
-    &:hover{
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
+    &:hover {
       background-color: darken(#6c7376, 10%);
       transition: 200ms ease;
     }
   }
   .price-label {
     background: #ee2e24;
-    width: 128px;
+    width: 115px;
     height: 25px;
     color: #ffffff;
     font-size: 12px;
@@ -2381,11 +2409,20 @@
   .price-date {
     color: #060000;
     font-size: 10px;
-    font-weight: 400;
+    font-weight: 500;
   }
   .absolute {
     top: auto;
     right: 0;
+  }
+  .fixed {
+    @include breakpoint(max-width 1200px) {
+      margin-left: 720px;
+    }
+    @include breakpoint(max-width 992px) {
+      position: relative!important;
+      margin-left: auto;
+    }
   }
 }
 
