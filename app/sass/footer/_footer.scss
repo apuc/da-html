@@ -275,6 +275,35 @@
       text-decoration: underline;
     }
   }
+  &__craft-link{
+    color: #242424;
+    font-size: 12px;
+    transition: 200ms ease;
+    position: relative;
+    padding-left: 25px;
+    margin-left: 5px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -2px;
+      height: 20px;
+      width: 20px;
+      background: url("../img/craft.png") no-repeat center center;
+      background-size: contain;
+      transition: 200ms ease;
+    }
+    &:hover{
+      color: #ff0200;
+      transition: 200ms ease;
+      &:before{
+        background-image:url("../img/craft-red.png");
+      }
+    }
+    &:focus{
+      color: #242424;
+    }
+  }
 }
 
 .fix-button {
