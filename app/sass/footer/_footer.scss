@@ -280,7 +280,8 @@
     justify-content: space-between;
   }
   &__craft-link{
-    color: #242424;
+
+    color: #ff0200!important;
     font-size: 12px;
     transition: 200ms ease;
     position: relative;
@@ -293,15 +294,15 @@
       top: -2px;
       height: 20px;
       width: 20px;
-      background: url("../img/craft.png") no-repeat center center;
+      background: url("../img/craft-red.png") no-repeat center center;
       background-size: contain;
       transition: 200ms ease;
     }
     &:hover{
-      color: #ff0200;
+      color: #242424!important;
       transition: 200ms ease;
       &:before{
-        background-image:url("../img/craft-red.png");
+        background-image:url("../img/craft.png");
       }
     }
     &:focus{
