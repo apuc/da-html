@@ -275,6 +275,10 @@
       text-decoration: underline;
     }
   }
+  &__wrap-link{
+    display: flex;
+    justify-content: space-between;
+  }
   &__craft-link{
     color: #242424;
     font-size: 12px;
