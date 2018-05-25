@@ -2228,5 +2228,6 @@ $(document).ready(function () {
             $('.promotions-sidebar').removeClass('absolute');
         }
     });
-
+    $( "#cabinet__add-company-form--images" ).sortable();
+    $( "#cabinet__add-company-form--images" ).disableSelection();
 });

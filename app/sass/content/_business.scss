@@ -1079,6 +1079,7 @@
       margin-top: 18px;
       @include box-sizing (border-box);
       @include breakpoint(max-width 1200px) {
+        padding-left: 23px;
       }
       @include breakpoint(max-width 770px) {
         width: 35%;

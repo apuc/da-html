@@ -560,6 +560,25 @@
       color: #040000;
       font-size: 15px;
       font-weight: 300;
+      &.unread-products {
+        float: right;
+        margin: 16px 0;
+        margin-right: 50px;
+        span {
+          background-image: none;
+          margin: 0 10px;
+          &:first-child {
+            background-color: #ee2e24;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+          }
+          &:last-child {
+            color: #ee2e24;
+            font-weight: bold;
+          }
+        }
+    }
       span {
         display: inline-block;
         position: relative;
@@ -2278,6 +2297,133 @@
     @include box-sizing(border-box);
     @include breakpoint(max-width 660px) {
       padding: 0;
+    }
+    &-product {
+      padding-left: 0;
+      padding-top: 15px;
+      @include breakpoint(max-width 660px) {
+        width: 100%
+      }
+      width: 65%;
+      h2 {
+        font-size: 19px;
+        font-weight: bold;
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 17px;
+        color: #040000;
+          span {
+            font-size: 13px;
+          }
+      }
+      .cabinet__add-company-form--title {
+        color: #919598;
+        font-weight: bold;
+        font-size: 13px;
+        width: 30%;
+      }
+      select.cabinet__add-company-form--field {
+        background-color: #fff;
+      }
+      .cabinet__add-company-form--field {
+        margin-bottom: 24px;
+      }
+      a {
+        display: block;
+        font-size: 16px;
+        position: relative;
+        float: left;
+        width: 70%;
+        height: 30px;
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include breakpoint(max-width 600px) {
+          width: 100%;
+          margin-bottom: 0;
+        }
+      }
+      .cabinet__add-company-form--count {
+        font-size: 12px;
+        color: #919598;
+        width: 100%;
+        font-weight: bold;
+        height: 20px;
+        margin-bottom: 25px;
+        text-transform: lowercase;
+        display: flex;
+        align-items: center;
+        span {
+          &:first-child {
+            color: #ee2e24;
+            font-size: 14px;
+            font-weight: normal;
+            margin-left: 20px;
+          }
+          &:last-child {
+            display: inline-block;
+            background-image: url(../img/shop/icons/red-ok.png);
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 18px;
+            margin-left: 15px;
+          }
+        }
+      }
+      .cabinet__add-company-form--drop {
+        width: 100%;
+        height: 70px;
+        background-color: #f4f4f4;
+        border: 3px dashed #cccccc;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .cabinet__add-company-form--images {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .cabinet__add-company-form--img {
+          margin: 0 10px;
+          p {
+            font-size: 10px;
+            margin: 10px 0 0;
+          }
+          .cabinet__add-company-form--img-name {
+            span {
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              border: 2px solid #000;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              float: left;
+              img {
+                width: 70%;
+                height: 70%;
+              }
+            }
+          }
+          .cabinet__add-company-form--delete {
+            width: 15px;
+            height: 15px;
+            float: right;
+            border: 2px solid #000;
+            border-radius: 50%;
+            img {
+              width: 50%;
+              height: 50%;
+            }
+          }
+        }
+      }
     }
     &--title {
       display: block;
