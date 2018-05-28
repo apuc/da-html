@@ -1138,14 +1138,14 @@
       margin-top: 18px;
       margin-bottom: 10px;
       @include breakpoint(max-width 1200px) {
-        width: 26% !important;
+        width: 32% !important;
         margin-top: 20px;
       }
       @include breakpoint(max-width 992px) {
-        width: 32% !important;
+        width: 34% !important;
       }
       @include breakpoint(max-width 770px) {
-        width: 23% !important;
+        width: 40% !important;
         margin-top: 20px;
       }
       @include breakpoint(max-width 660px) {

@@ -225,7 +225,7 @@
 
                 <h3>Добавить товар</h3>
 
-                <form action="/file-uploa" class=" cabinet__add-company-form-product cabinet__add-company-form">
+                <form action="/file-uploa" class="cabinet__add-company-form-product cabinet__add-company-form">
 
                     <h2>Общая информация</h2>
 
@@ -261,27 +261,37 @@
 
                     <div class="cabinet__add-company-form--images" id="cabinet__add-company-form--images">
                         <div class="cabinet__add-company-form--img">
-                            <img src="../img/product.jpg" alt="">
-                            <p class="cabinet__add-company-form--img-name"><span><img src="img/icons/Shape.png" alt=""></span>content.doc (126KB)</p>
-                            <progress></progress>
+                            <div class="cabinet__add-company-form--img-wrapper">
+                                <img src="../img/action1.png" alt="">
+                            </div>
+                            <p class="cabinet__add-company-form--img-name"><span class="arrow-up"><img src="img/icons/arrow-up.png" alt=""></span><span class="img-name">content.doc (126KB)</span></p>
+                            <progress value="30" max="100"></progress>
                         </div>
                         <div class="cabinet__add-company-form--img">
-                            <img src="../img/product.jpg" alt="">
-                            <p class="cabinet__add-company-form--img-name"><span><img src="img/icons/Shape.png" alt=""></span>content.doc (126KB)</p>
-                            <progress></progress>
+                            <div class="cabinet__add-company-form--img-wrapper">
+                                <img src="../img/company-sidebar.png" alt="">
+                            </div>
+                            <p class="cabinet__add-company-form--img-name"><span class="arrow-up"><img src="img/icons/arrow-up.png" alt=""></span><span class="img-name">content.doc (126KB)</span></p>
+                            <progress value="30" max="100"></progress>
                         </div>
                         <div class="cabinet__add-company-form--img">
-                            <img src="../img/product.jpg" alt="">
-                            <p class="cabinet__add-company-form--img-name"><span><img src="img/icons/Shape.png" alt=""></span>content.doc (126KB)</p>
-                            <progress></progress>
+                            <div class="cabinet__add-company-form--img-wrapper">
+                                <img src="../img/product.jpg" alt="">
+                            </div>
+                            <p class="cabinet__add-company-form--img-name"><span class="arrow-up"><img src="img/icons/arrow-up.png" alt=""></span><span class="img-name">content.doc (126KB)</span></p>
+                            <progress value="30" max="100"></progress>
                         </div>
                         <div class="cabinet__add-company-form--img">
-                            <img src="../img/product.jpg" alt="">
-                            <p class="cabinet__add-company-form--img-uploaded">fileuploaded.xls (12KB)<a class="cabinet__add-company-form--delete"><img src="img/icons/Rectangl.png" alt=""></a></p>
+                            <div class="cabinet__add-company-form--img-wrapper">
+                                <img src="../img/product.jpg" alt="">
+                            </div>
+                            <p class="cabinet__add-company-form--img-uploaded"><span class="img-name">fileuploaded.xls (12KB)</span><a class="cabinet__add-company-form--delete"><img src="img/icons/Rectangl.png" alt=""></a></p>
                         </div>
                         <div class="cabinet__add-company-form--img">
-                            <img src="../img/product.jpg" alt="">
-                            <p class="cabinet__add-company-form--img-uploaded">fileuploaded.xls (12KB)<a class="cabinet__add-company-form--delete"><img src="img/icons/Rectangl.png" alt=""></a></p>
+                            <div class="cabinet__add-company-form--img-wrapper">
+                                <img src="../img/product.jpg" alt="">
+                            </div>
+                            <p class="cabinet__add-company-form--img-uploaded"><span class="img-name">fileuploaded.xls (12KB)</span><a class="cabinet__add-company-form--delete"><img src="img/icons/Rectangl.png" alt=""></a></p>
                         </div>
                     </div>
 
@@ -291,17 +301,21 @@
 
                     <h2>Оплата и доставка этого товара</h2>
 
-                    <p>По умолчанию будут использованы условия оплаты и доставки из информации о компании</p>
+                    <p class="cabinet__add-company-form--delivety-default">По умолчанию будут использованы условия оплаты и доставки из информации о компании</p>
 
-                    <input type="checkbox" id="change">
-
-                    <label for="change">Изменить</label>
+                    <label class="cabinet__add-company-form--checkbox">
+                        <input type="checkbox" id="change">
+                        <span class="checkbox-custom"></span>
+                        <span class="label">Изменить</span>
+                    </label>
 
                     <h2>Акция с товаров</h2>
 
-                    <input type="checkbox" id="promotional">
-
-                    <label for="promotional">Акционный товар</label>
+                    <label class="cabinet__add-company-form--checkbox">
+                        <input type="checkbox" id="promotional">
+                        <span class="checkbox-custom"></span>
+                        <span class="label">Акционный товар</span>
+                    </label>
 
                     <input type="submit" class="cabinet__add-company-form--submit" value="Опубликовать">
 
@@ -1272,7 +1286,6 @@
 <script src="js/afisha-countdown.js"></script>
 <script src="js/headhesive.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/dropzone.js"></script>
 <script src="js/script.min.js"></script>
 </html>
 

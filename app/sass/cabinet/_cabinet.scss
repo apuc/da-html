@@ -2301,10 +2301,10 @@
     &-product {
       padding-left: 0;
       padding-top: 15px;
-      @include breakpoint(max-width 660px) {
+      @include breakpoint(max-width 1100px) {
         width: 100%
       }
-      width: 65%;
+      width: 70%;
       h2 {
         font-size: 19px;
         font-weight: bold;
@@ -2318,6 +2318,9 @@
           span {
             font-size: 13px;
           }
+      }
+      progress {
+        max-width: 100%;
       }
       .cabinet__add-company-form--title {
         color: #919598;
@@ -2342,6 +2345,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: #00b5f9;
+        &:hover {
+          color: #00b5f9;
+          text-decoration: underline;
+        }
         @include breakpoint(max-width 600px) {
           width: 100%;
           margin-bottom: 0;
@@ -2363,6 +2371,9 @@
             font-size: 14px;
             font-weight: normal;
             margin-left: 20px;
+            @include breakpoint(max-width 660px) {
+              margin-left: 5px;
+            }
           }
           &:last-child {
             display: inline-block;
@@ -2371,58 +2382,167 @@
             width: 18px;
             height: 18px;
             margin-left: 15px;
+            @include breakpoint(max-width 660px) {
+              margin-left: 5px;
+            }
           }
         }
       }
       .cabinet__add-company-form--drop {
         width: 100%;
-        height: 70px;
         background-color: #f4f4f4;
-        border: 3px dashed #cccccc;
+        background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #cccccc; stroke-width: 6; stroke-dasharray: 12 6'/></svg>");
         margin-bottom: 15px;
         display: flex;
-        justify-content: center;
         align-items: center;
+        padding: 20px 0;
+        img {
+          margin-left: 30px;
+        }
+        p {
+          margin: 0;
+          margin-left: 30px;
+          width: 60%;
+          font-weight: bold;
+          font-size: 13px;
+          line-height: 16px;
+        }
+
       }
       .cabinet__add-company-form--images {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         .cabinet__add-company-form--img {
-          margin: 0 10px;
+          width: 30%;
+          margin: 5px calc(10% / 6);
+
+          @include breakpoint(max-width 1100px) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+
+          @include breakpoint(max-width 800px) {
+            width: 40%;
+            margin: 5px 5%;
+          }
+
+          @include breakpoint(max-width 400px) {
+            width: 60%;
+            margin: 5px 20%;
+          }
+
+          .cabinet__add-company-form--img-wrapper {
+            height: 100px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+          }
           p {
-            font-size: 10px;
+            font-size: 9px;
             margin: 10px 0 0;
+            color: #000;
+            margin-bottom: 10px;
+          }
+          .img-name {
+            display: inline-block;
+            height: calc(9px * 1.5);
+            -webkit-line-clamp: 1; 
+            -webkit-box-orient: vertical; 
+            overflow: hidden; 
+            text-overflow: ellipsis;
+            max-width: calc(100% - 20px);
+            line-height: 15px;
           }
           .cabinet__add-company-form--img-name {
-            span {
+            width: 100%;
+            display: flex;
+            @include breakpoint(max-width 1100px) {
+              justify-content: center;
+            }
+            .arrow-up {
               display: inline-block;
               width: 15px;
               height: 15px;
-              border: 2px solid #000;
-              border-radius: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              float: left;
+              margin-right: 5px;
               img {
-                width: 70%;
-                height: 70%;
+                width: 100%;
+                height: 100%;
               }
+            }
+          }
+          .cabinet__add-company-form--img-uploaded {
+            color: #00b5f9;
+            width: 100%;
+            @include breakpoint(max-width 1100px) {
+              text-align: center;
+            }
+            @include breakpoint(max-width 800px) {
+              margin-left: 20px;
             }
           }
           .cabinet__add-company-form--delete {
             width: 15px;
             height: 15px;
             float: right;
-            border: 2px solid #000;
-            border-radius: 50%;
+            margin-right: 5px;
             img {
-              width: 50%;
-              height: 50%;
+              width: 100%;
+              height: 100%;
             }
           }
         }
+      }
+      .cabinet__add-company-form--text {
+        height: 100px;
+        margin-bottom: 0;
+      }
+      .cabinet__add-company-form--delivety-default {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+      .cabinet__add-company-form--checkbox {
+        width: 100%;
+        input {
+          display: none;
+        }
+        .checkbox-custom {
+          position: relative;
+          width: 18px;
+          height: 18px;
+          border: 2px solid #717171;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .label {
+          font-size: 16px;
+          display: inline-block;
+          vertical-align: middle;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+        input:checked + .checkbox-custom::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-image: url(../img/icons/icons8-галочка-50.png);
+          border-radius: 2px;
+          background-size: 100%;
+        }
+      }
+      .cabinet__add-company-form--submit {
+        text-align: center;
+        width: 200px;
+        height: 35px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
       }
     }
     &--title {
