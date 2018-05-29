@@ -852,7 +852,7 @@ $(document).ready(function () {
     var promotionElement = $('#promotion-sidebar'),
         shopReviewsSidebar = $('#shop-reviews-sidebar'),
         shopCartSidebar = $('#shop-sidebar-cart');
-
+        
    if ($(window).width() > 992) {
      if (promotionElement.length > 0) {
         var promotionElementPosition = promotionElement.offset().top;
@@ -1309,7 +1309,8 @@ $(document).ready(function () {
 
 //последний закомментированный скрипт
 
-var businessElement = $('#promotion-sidebar');
+if ($(window).width() > 992) {
+    var businessElement = $('#promotion-sidebar');
 if (businessElement.length > 0) {
     var businessElementPosition = businessElement.offset().top;
     $(window).scroll(function () {
@@ -1322,6 +1323,8 @@ if (businessElementS.length > 0) {
     $(window).scroll(function () {
         fixedScroll(businessElementS, businessElementPositionS, $('.footer'));
     });
+}
+
 }
 
 /*fixed div function*/
