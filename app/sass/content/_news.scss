@@ -401,14 +401,14 @@
 }
 
 .news__wrap_item-sm-hot {
-  width: 23%;
+  width: 22%;
   float: left;
   position: relative;
   height: 225px;
   @include box-sizing(border-box);
   border: 2px solid transparent;
   margin: 11px;
-  @include breakpoint(max-width 1024px) {
+  @include breakpoint(max-width 1200px) {
     width: calc(33% - (11px * 2));
     /*margin: 11px 0;*/
   }

@@ -853,12 +853,14 @@ $(document).ready(function () {
         shopReviewsSidebar = $('#shop-reviews-sidebar'),
         shopCartSidebar = $('#shop-sidebar-cart');
 
-    if (promotionElement.length > 0) {
+   if ($(window).width() > 992) {
+     if (promotionElement.length > 0) {
         var promotionElementPosition = promotionElement.offset().top;
         $(window).scroll(function () {
             fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
         });
     }
+   }
 
 
 
@@ -2228,6 +2230,8 @@ $(document).ready(function () {
             $('.promotions-sidebar').removeClass('absolute');
         }
     });
-    $( "#cabinet__add-company-form--images" ).sortable();
-    $( "#cabinet__add-company-form--images" ).disableSelection();
+    $( "#cabinet__add-company-form--images").sortable({
+        placeholder: "highlight"
+    });
+    $( "#cabinet__add-company-form--images").disableSelection();
 });

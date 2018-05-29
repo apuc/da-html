@@ -2413,6 +2413,12 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        .highlight {
+          border: 2px solid #c2e5f3;
+          width: 30%;
+          margin: 5px calc(10% / 6);
+          height: 155px;
+        }
         .cabinet__add-company-form--img {
           width: 30%;
           margin: 5px calc(10% / 6);
