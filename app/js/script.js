@@ -849,18 +849,18 @@ $(document).ready(function () {
 
     //promotion
 
-    var promotionElement = $('#promotion-sidebar'),
+    var /*promotionElement = $('#promotion-sidebar'),*/
         shopReviewsSidebar = $('#shop-reviews-sidebar'),
         shopCartSidebar = $('#shop-sidebar-cart');
         
-   if ($(window).width() > 992) {
-     if (promotionElement.length > 0) {
-        var promotionElementPosition = promotionElement.offset().top;
-        $(window).scroll(function () {
-            fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
-        });
-    }
-   }
+   // if ($(window).width() > 992) {
+   //   if (promotionElement.length > 0) {
+   //      var promotionElementPosition = promotionElement.offset().top;
+   //      $(window).scroll(function () {
+   //          fixedScroll(promotionElement, promotionElementPosition, $('.footer'));
+   //      });
+   //  }
+   // }
 
 
 
@@ -1310,34 +1310,41 @@ $(document).ready(function () {
 //последний закомментированный скрипт
 
 if ($(window).width() > 992) {
-    var businessElement = $('#promotion-sidebar');
-    if (businessElement.length > 0) {
-        var businessElementPosition = businessElement.offset().top;
-        $(window).scroll(function () {
-            fixedScroll(businessElement, businessElementPosition, $('.footer'));
-        });
-    }
+
+     $('#promotion-sidebar').stickySidebar({
+        topSpacing: 30,
+        bottomSpacing: 30
+      });
+
+//     var businessElement = $('#promotion-sidebar');
+//     if (businessElement.length > 0) {
+//         var businessElementPosition = businessElement.offset().top;
+//         $(window).scroll(function () {
+//             fixedScroll(businessElement, businessElementPosition, $('.footer'));
+//         });
+//     }
     var businessElementS = $('#promotions-sidebar');
     if (businessElementS.length > 0) {
         var businessElementPositionS = businessElementS.offset().top;
         $(window).scroll(function () {
-            fixedScroll(businessElementS, businessElementPositionS, $('.footer'));
+            fixedScroll(businesfixedScrollsElementS, businessElementPositionS, $('.footer'));
         });
     }
-
 }
 
 /*fixed div function*/
-function fixedScroll(element, elementPosition, blockElement) {//функция фиксированного блока, с селекторами элемента, его позиционирования и преграждающего блока
+function fixedScroll(element, elementPosition, blockElement) {
+    //функция фиксированного блока, с селекторами элемента, его позиционирования и преграждающего блока
     var top = $(document).scrollTop(),
-        blockingElement = blockElement.offset().top,
+        blockingElement = blockElement.offset().top - 30,
         height = element.outerHeight();//высота элемента, включающая внутренние и внешние отступы
+        console.log(blockingElement);
     if (window.innerWidth > 1200) {
         if (top > elementPosition && top < blockingElement - height) {
             element.addClass('fixed').removeClass('absolute');
         }
         else if (top > blockingElement - height) {
-            element.removeClass('fixed').addClass('absolute')/*.css({'position': 'absolute', 'bottom': '50px', 'right': '0'})*/;
+            element.addClass('absolute').removeClass('fixed')/*.css({'position': 'absolute', 'bottom': '50px', 'right': '0'})*/;
         }
         else {
             element.removeClass('fixed');
@@ -2214,27 +2221,23 @@ $(document).ready(function () {
     // end Сворачивание разворачивание фильтров на странице с фильтрами категорий магазин + активный чекбокс
     // ------------------------------------------------------------------------------------------------*/
 
-    $(window).scroll(function () {
-        var headerHeight = $('.header').innerHeight();
-        var contentHeight = $('.business__content').innerHeight();
-        var sidebarHeight = $('.promotions-sidebar').height();
-        var sidebarBottomPos = contentHeight - sidebarHeight;
-        var trigger = $(window).scrollTop() - headerHeight;
+    // $(window).scroll(function () {
+    //     var headerHeight = $('.header').innerHeight();
+    //     var contentHeight = $('.business__content').innerHeight();
+    //     var sidebarHeight = $('.promotions-sidebar').height();
+    //     var sidebarBottomPos = contentHeight - sidebarHeight;
+    //     var trigger = $(window).scrollTop() - headerHeight;
 
-        if ($(window).scrollTop() >= headerHeight) {
-            $('.promotions-sidebar').addClass('fixed');
-        } else {
-            $('.promotions-sidebar').removeClass('fixed');
-        }
+    //     if ($(window).scrollTop() >= headerHeight) {
+    //         $('.promotions-sidebar').addClass('fixed');
+    //     } else {
+    //         $('.promotions-sidebar').removeClass('fixed');
+    //     }
 
-        if (trigger >= sidebarBottomPos) {
-            $('.promotions-sidebar').addClass('absolute');
-        } else {
-            $('.promotions-sidebar').removeClass('absolute');
-        }
-    });
-    $( "#cabinet__add-company-form--images").sortable({
-        placeholder: "highlight"
-    });
-    $( "#cabinet__add-company-form--images").disableSelection();
+    //     if (trigger >= sidebarBottomPos) {
+    //         $('.promotions-sidebar').addClass('absolute');
+    //     } else {
+    //         $('.promotions-sidebar').removeClass('absolute');
+    //     }
+    // });
 });

@@ -108,7 +108,7 @@
   height: 225px;
   @include box-sizing(border-box);
   /*border: 2px solid transparent;*/
-  margin: 11px;
+  margin: 1%;
   @include breakpoint(max-width 1024px) {
     width: calc(33% - (11px * 2));
     /*margin: 11px 0;*/
