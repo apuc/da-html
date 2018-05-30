@@ -1311,19 +1311,19 @@ $(document).ready(function () {
 
 if ($(window).width() > 992) {
     var businessElement = $('#promotion-sidebar');
-if (businessElement.length > 0) {
-    var businessElementPosition = businessElement.offset().top;
-    $(window).scroll(function () {
-        fixedScroll(businessElement, businessElementPosition, $('.footer'));
-    });
-}
-var businessElementS = $('#promotions-sidebar');
-if (businessElementS.length > 0) {
-    var businessElementPositionS = businessElementS.offset().top;
-    $(window).scroll(function () {
-        fixedScroll(businessElementS, businessElementPositionS, $('.footer'));
-    });
-}
+    if (businessElement.length > 0) {
+        var businessElementPosition = businessElement.offset().top;
+        $(window).scroll(function () {
+            fixedScroll(businessElement, businessElementPosition, $('.footer'));
+        });
+    }
+    var businessElementS = $('#promotions-sidebar');
+    if (businessElementS.length > 0) {
+        var businessElementPositionS = businessElementS.offset().top;
+        $(window).scroll(function () {
+            fixedScroll(businessElementS, businessElementPositionS, $('.footer'));
+        });
+    }
 
 }
 
