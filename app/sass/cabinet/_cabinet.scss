@@ -2444,6 +2444,10 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
+            border: 1px dashed;
+            img {
+              object-fit: contain;
+            }
           }
           p {
             font-size: 9px;
