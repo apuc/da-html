@@ -110,16 +110,16 @@
   /*border: 2px solid transparent;*/
   margin: 1%;
   @include breakpoint(max-width 1024px) {
-    width: calc(33% - (11px * 2));
-    /*margin: 11px 0;*/
+    width: 31%;
+    margin: calc(7% / 6);
   }
   @include breakpoint(max-width 660px) {
-    width: calc(50% - (11px * 2));
-    /*margin: 11px 0;*/
+    width: 46%;
+    margin: 2%;
   }
   @include breakpoint(max-width 600px) {
-    width: calc(100% - (11px * 2));
-    /*margin: 11px 0;*/
+    width: 96%;
+    margin: 2%;
   }
   .thumb {
     width: 100%;
@@ -281,12 +281,10 @@
 .news__wrap_item-lg {
   width: 48%;
   @include breakpoint(max-width 1024px) {
-    width: calc(66% - (11px * 2));
-    /*margin: 11px 0;*/
+    width: calc(62% + 14% / 6);
   }
   @include breakpoint(max-width 660px) {
-    width: calc(100% - (11px * 2));
-    /*margin: 11px 0;*/
+    width: 96%;
   }
   .thumb {
     height: 225px;
@@ -409,16 +407,16 @@
   border: 2px solid transparent;
   margin: 1%;
   @include breakpoint(max-width 1024px) {
-    width: calc(33% - (11px * 2));
-    /*margin: 11px 0;*/
+    width: 31%;
+    margin: calc(7% / 6);
   }
   @include breakpoint(max-width 660px) {
-    width: calc(50% - (11px * 2));
-    /*margin: 11px 0;*/
+    width: 46%;
+    margin: 2%;
   }
   @include breakpoint(max-width 600px) {
-    width: calc(100% - (11px * 2));
-    /*margin: 11px 0;*/
+    width: 96%;
+    margin: 2%;
   }
   .thumb {
     height: 218px;
