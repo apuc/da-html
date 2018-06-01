@@ -76,6 +76,8 @@
   width: 100%;
   float: left;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   .home-content__wrap_subscribe {
     width: 48%;
     margin-top: 11px;
