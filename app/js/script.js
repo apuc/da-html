@@ -1310,11 +1310,12 @@ $(document).ready(function () {
 //последний закомментированный скрипт
 
 if ($(window).width() > 992) {
-
-     $('#promotion-sidebar').stickySidebar({
-        topSpacing: 30,
-        bottomSpacing: 30
+    if ($('#promotion-sidebar').length > 0) {
+        $('#promotion-sidebar').stickySidebar({
+            topSpacing: 30,
+            bottomSpacing: 30
       });
+    }
 
 //     var businessElement = $('#promotion-sidebar');
 //     if (businessElement.length > 0) {
