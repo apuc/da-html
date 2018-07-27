@@ -808,14 +808,17 @@
       line-height: 19px;
       z-index: 1;
       &:first-of-type {
-        right: 121px;
+        right: 92px;
         @include breakpoint(max-width 600px) {
-          right: 13px;
-          top: 22px;
+          right: -20px;
+          top: 45px;
         }
       }
       &:last-of-type {
         right: 23px;
+        @include breakpoint(max-width 600px) {
+          right: 5px;
+        }
       }
       &:hover {
         color: #ee2e24;
