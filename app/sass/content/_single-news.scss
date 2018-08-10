@@ -311,7 +311,6 @@
         line-height: 28px;
         p{
           position: relative;
-          float: left;
           width: 100%;
           margin-bottom: 20px;
           iframe{
@@ -339,9 +338,6 @@
           float: left;
           /*border-left: 5px solid #ff0200;*/
           font-style: italic;
-        }
-        ul, ol{
-          float: left;
         }
         img.align-center{
           display: block;
