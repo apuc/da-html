@@ -1678,7 +1678,7 @@
             float: left;
             line-height: 30px;
             border: 1px solid #b8b6b6;
-            margin: 12px 0;
+            margin: 16px 0;
             height: 30px;
             padding-left: 10px;
             @include breakpoint(max-width 660px) {
@@ -1711,6 +1711,7 @@
             padding: 7px 10px 7px 40px;
             -webkit-border-radius: 5px;
             border-radius: 5px;
+            font-size: 12px;
             p {
               text-align: left;
             }
@@ -1753,6 +1754,7 @@
             top: 10px;
             -webkit-border-radius: 5px;
             border-radius: 5px;
+            font-size: 12px;
             p {
               margin: 0;
             }
@@ -2367,7 +2369,7 @@
         }
       }
       .cabinet__add-company-form--count {
-        font-size: 12px;
+        font-size: 14px;
         color: #919598;
         width: 100%;
         font-weight: bold;
@@ -2379,7 +2381,7 @@
         .col {
           color: #ee2e24;
           font-size: 14px;
-          font-weight: normal;
+          font-weight: bold;
           margin-left: 20px;
           @include breakpoint(max-width 660px) {
             margin-left: 5px;
@@ -2413,7 +2415,7 @@
           margin-left: 30px;
           width: 60%;
           font-weight: bold;
-          font-size: 13px;
+          font-size: 12px;
           line-height: 16px;
         }
 
@@ -2516,7 +2518,7 @@
       }
       .cabinet__add-company-form--text {
         height: 100px;
-        margin-bottom: 0;
+        margin: 16px 0;
       }
       .cabinet__add-company-form--delivety-default {
         width: 80%;
@@ -2992,7 +2994,7 @@
       }
     }
     .field-company-address {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       @include breakpoint(max-width 660px) {
         width: 100%;
       }

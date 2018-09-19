@@ -1,7 +1,10 @@
 .journal {
   padding-bottom: 30px;
   &__item {
+    display: flex;
+    flex-direction: column;
     width: 23%;
+    min-height: 366px;
     float: left;
     position: relative;
     -webkit-box-sizing: border-box;
@@ -35,8 +38,11 @@
   }
   &__thumb {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
     border: 2px solid #fff;
+    background-color: #fff;
     &:hover {
       border: 2px solid #b2b2b2;
     }
@@ -48,6 +54,7 @@
     }
   }
   &__content {
+    margin-top: auto;
     padding: 10px 15px 20px;
     background-color: #fff;
     .views {
