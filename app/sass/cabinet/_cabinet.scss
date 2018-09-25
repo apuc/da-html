@@ -2364,6 +2364,9 @@
         width: 70% !important;
         float: right !important;
         background-color: #fbfbfb;
+        @include breakpoint(max-width 992px) {
+          width: 100%!important;
+        }
         .cabinet__add-company-form--submit {
           margin-bottom: 30px;
         }
@@ -2570,6 +2573,9 @@
       button:last-child {
         width: 70%;
         float: right;
+        @include breakpoint(max-width 992px) {
+          width: 100%!important;
+        }
       }
       input[type=checkbox] {
         width: 20px;
@@ -2580,6 +2586,9 @@
       .field-slider_checkbox {
         width: 70%!important;
         float: right!important;
+        @include breakpoint(max-width 992px) {
+          width: 100%!important;
+        }
       }
     }
     &--title {
