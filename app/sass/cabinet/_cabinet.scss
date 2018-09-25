@@ -2320,9 +2320,9 @@
         margin-top: 20px;
         margin-bottom: 17px;
         color: #040000;
-          span {
-            font-size: 13px;
-          }
+        span {
+          font-size: 13px;
+        }
       }
       progress {
         max-width: 100%;
@@ -2361,6 +2361,8 @@
         }
       }
       .cabinet__add-company-img-block {
+        width: 70% !important;
+        float: right !important;
         background-color: #fbfbfb;
         .cabinet__add-company-form--submit {
           margin-bottom: 30px;
@@ -2468,9 +2470,9 @@
           .img-name {
             display: inline-block;
             height: calc(9px * 1.5);
-            -webkit-line-clamp: 1; 
-            -webkit-box-orient: vertical; 
-            overflow: hidden; 
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
             text-overflow: ellipsis;
             max-width: calc(100% - 20px);
             line-height: 15px;
@@ -2559,11 +2561,25 @@
       .cabinet__add-company-form--submit {
         text-align: center;
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: bold;
         margin-top: 20px;
         width: unset;
         height: unset;
+      }
+      button:last-child {
+        width: 70%;
+        float: right;
+      }
+      input[type=checkbox] {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        bottom: -5px;
+      }
+      .field-slider_checkbox {
+        width: 70%!important;
+        float: right!important;
       }
     }
     &--title {
