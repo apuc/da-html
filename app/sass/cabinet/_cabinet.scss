@@ -2363,7 +2363,7 @@
       .cabinet__add-company-img-block {
         width: 70% !important;
         float: right !important;
-        background-color: #fbfbfb;
+        background-color: #e4dede;
         @include breakpoint(max-width 992px) {
           width: 100%!important;
         }
@@ -2374,7 +2374,8 @@
       .cabinet__add-company-form--count {
         font-size: 14px;
         color: #919598;
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         font-weight: bold;
         height: 20px;
         margin-bottom: 25px;
@@ -2403,7 +2404,8 @@
         }
       }
       .cabinet__add-company-form--drop {
-        width: 100%;
+        width: 90%;
+        margin: 10px auto 0;
         background-color: #f4f4f4;
         background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #cccccc; stroke-width: 6; stroke-dasharray: 12 6'/></svg>");
         margin-bottom: 15px;
