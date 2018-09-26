@@ -1,3 +1,17 @@
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include breakpoint(max-width 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include breakpoint(max-width 620px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .footer {
   display: block;
   position: relative;
@@ -16,7 +30,12 @@
     margin-bottom: 55px;
     margin-right: 26px;
     @include breakpoint(max-width 992px) {
-      margin-top: 31px;
+      margin-top: 25px;
+      margin-right: 0;
+    }
+    @include breakpoint(max-width 768px) {
+      margin-right: auto;
+      margin-left: auto;
     }
     @include breakpoint(max-width 660px) {
       margin: 20px auto;
@@ -29,15 +48,31 @@
     }
   }
   &__social {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     float: left;
     width: 230px;
     margin-left: 34px;
+    @include breakpoint(max-width 1200px) {
+      flex-direction: row;
+      width: 470px;
+    }
+    @include breakpoint(max-width 992px) {
+      margin-left: -55px;
+      flex-direction: row-reverse;
+    }
+    @include breakpoint(max-width 768px) {
+      margin-left: calc(10% - 15px);
+    }
     @include breakpoint(max-width 660px) {
-      width: 300px;
-      margin-left: calc(50% - (300px / 2));
+      flex-direction: column;
+      width: 230px;
+      margin-left: 10%;
       margin-bottom: 30px;
+    }
+    @include breakpoint(max-width 620px) {
+      margin-left: 0;
     }
   }
   &__links {
@@ -51,8 +86,11 @@
     margin-bottom: 31px;
     padding-right: 19px;
     @include border-box;
+    @include breakpoint(max-width 1200px) {
+      margin-top: 8px;
+    }
     @include breakpoint(max-width 992px) {
-      margin-top: 20px;
+      padding-right: 0;
     }
     a {
       display: block;
@@ -124,20 +162,45 @@
     font-size: 14px;
     font-weight: 600;
     transition: 300ms ease;
+    @include breakpoint(max-width 1200px) {
+      height: max-content;
+    }
+    @include breakpoint(max-width 992px) {
+      margin-right: 19px;
+    }
     &:hover {
       background: #ff0200;
       color: #fff;
       transition: 300ms ease;
     }
+
   }
   &__main {
     display: block;
     position: relative;
     float: left;
     width: calc(100% - (83px + 26px + 230px + 34px));
+    @include breakpoint(max-width 1200px) {
+      width: auto;
+    }
+    @include breakpoint(max-width 992px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 84%;
+      margin-bottom: 15px;
+      margin-left: 20px;
+    }
+    @include breakpoint(max-width 768px) {
+      margin-right: auto;
+      margin-left: auto;
+    }
     @include breakpoint(max-width 660px) {
-      width: 100%;
+      width: 80%;
       margin: 20px auto 0 auto;
+    }
+    @include breakpoint(max-width 620px) {
+      align-items: center;
     }
     p {
       display: block;
@@ -175,7 +238,7 @@
         margin-top: 21px;
       }
       @include breakpoint(max-width 660px){
-        margin: 20px auto 0 auto;
+        margin: 20px 0 0 0;
         display: block;
         float: none;
       }
@@ -196,10 +259,13 @@
     margin-top: 60px;
     padding: 0;
     list-style: none;
-    @include breakpoint(max-width 1024px) {
-      @include flex-direction(column);
+    @include breakpoint(max-width 1200px) {
+      @include flex-direction(row);
       text-align: center;
       margin-top: 20px;
+    }
+    @include breakpoint(max-width 992px) {
+      width: 90%;
     }
     @include breakpoint(max-width 770px) {
       @include flex-direction(row);
@@ -210,9 +276,13 @@
     }
     @include breakpoint(max-width 660px) {
       width: 100%;
-      @include flex-direction(column);
+      @include flex-direction(row);
+      flex-wrap: wrap;
       text-align: center;
       margin-top: 0;
+    }
+    @include breakpoint(max-width 620px) {
+      justify-content: center;
     }
     li {
       display: block;
@@ -221,8 +291,8 @@
       @include breakpoint(max-width 770px){
         margin: 0 5px;
       }
-      @include breakpoint(max-width 660px){
-        margin: inherit;
+      @include breakpoint(max-width 992px){
+        margin-right: 10px;
       }
       a {
         display: block;
@@ -261,6 +331,12 @@
     justify-content: center;
     margin-top: 40px;
     padding: 0 10px;
+    @include breakpoint(max-width 992px) {
+      padding: 0;
+    }
+    @include breakpoint(max-width 410px) {
+      text-align: center;
+    }
     a{
       color: #242424;
       font-size: 12px;
@@ -277,6 +353,11 @@
     display: flex;
     flex-direction: column;
     margin: 0 15px;
+    @include breakpoint(max-width 992px) {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 
   &__send-mail {

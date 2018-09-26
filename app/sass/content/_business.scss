@@ -2234,6 +2234,7 @@
     overflow: hidden;
     height: 313px;
     border: 1px solid #f3f3f3;
+    margin-right: 20px;
     margin-bottom: 45px;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
     z-index: 0;
@@ -2246,6 +2247,12 @@
     }
     @include breakpoint(max-width 660px) {
       width: 48%;
+    }
+    &:nth-child(n+4) {
+      margin-right: 0;
+      @include breakpoint(max-width 1200px) {
+        margin-right: 20px;
+      }
     }
 
     &:hover {

@@ -662,7 +662,7 @@
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
-    @include justify-content(space-between);
+    @include justify-content(flex-start);
     position: relative;
     float: left;
     width: 100%;
