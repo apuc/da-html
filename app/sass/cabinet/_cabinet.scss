@@ -3011,7 +3011,6 @@
       }
     }
     .field-company-address {
-      margin-bottom: 16px;
       @include breakpoint(max-width 660px) {
         width: 100%;
       }
@@ -4428,4 +4427,25 @@
   @include breakpoint(max-width 992px) {
     width: 100%!important;
   }
+}
+
+.file-hint {
+  padding-left: 10px;
+}
+
+.cabinet__add-company-form--wrapper .input-name {
+  margin: 16px 0 10px;
+}
+
+.field-news-title .input-name, .field-news-company_id .select2-container--krajee, .field-news-photo .input-group,
+.ield-poster-photo .input-group {
+  margin-bottom: 5px;
+}
+
+.field-poster-dt_event .input-group {
+  margin-bottom: 8px;
+}
+
+.field-poster-dt_event_end .poster-dt_event_end-datetime {
+  margin-top: 8px;
 }
