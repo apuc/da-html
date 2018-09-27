@@ -186,6 +186,10 @@
     @include flex-direction(column);
     position: relative;
     float: left;
+    @include breakpoint(max-width 992px){
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
   &__element{
     display: block;
@@ -205,6 +209,9 @@
     }
     @include breakpoint(max-width 1024px){
       width: calc(100% - 18px);
+    }
+    @include breakpoint(max-width 992px){
+      width: 45px;
     }
     @include breakpoint(max-width 775px){
       width: 100%;

@@ -4422,7 +4422,7 @@
   text-transform: uppercase;
 }
 
-.cabinet__add-company-form-product .cabinet__add-company-form--submit {
+.cabinet__add-company-form-product > .cabinet__add-company-form--submit {
   width: 70%;
   float: right;
   @include breakpoint(max-width 992px) {

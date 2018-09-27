@@ -24,6 +24,9 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
     @include breakpoint(max-width 770px) {
       width: 100%;
     }
@@ -99,7 +102,7 @@
       background: #ee2e24;
     }
     @include breakpoint(max-width 1024px) {
-      width: calc(50% - 16px);
+      width: calc(50% - 21px);
       margin-right: 16px;
     }
     @include breakpoint(max-width 770px) {
