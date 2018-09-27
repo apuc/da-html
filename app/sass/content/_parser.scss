@@ -211,7 +211,7 @@
       width: calc(100% - 18px);
     }
     @include breakpoint(max-width 992px){
-      width: 45px;
+      width: 45%;
     }
     @include breakpoint(max-width 775px){
       width: 100%;
