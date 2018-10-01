@@ -2567,7 +2567,7 @@
         padding: 10px 20px;
         font-size: 15px;
         font-weight: bold;
-        margin-top: 20px;
+        margin-top: 16px;
         width: unset;
         height: unset;
       }
@@ -4438,8 +4438,12 @@
 }
 
 .field-news-title .input-name, .field-news-company_id .select2-container--krajee, .field-news-photo .input-group,
-.ield-poster-photo .input-group {
+.field-poster-photo .input-group {
   margin-bottom: 5px!important;
+}
+
+.cabinet__add-company-form--wrapper .input-name {
+  margin-bottom: 10px!important;
 }
 
 .field-poster-dt_event .input-group {
