@@ -4443,13 +4443,17 @@
 }
 
 .cabinet__add-company-form--wrapper .input-name {
-  margin-bottom: 10px!important;
+  margin-bottom: 16px!important;
 }
 
 .field-poster-dt_event .input-group {
   margin-bottom: 8px!important;
 }
 
-.field-poster-dt_event_end .poster-dt_event_end-datetime {
+.field-poster-dt_event_end .input-group {
   margin-top: 8px!important;
+}
+
+.field-poster-dt_event_end .label-name {
+  top: 9px;
 }
