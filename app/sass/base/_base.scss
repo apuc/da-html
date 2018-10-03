@@ -45,6 +45,10 @@ textarea{
     }
 }
 
+label {
+    margin-bottom: 0;
+}
+
 %clearfix {
     *zoom: 1;
     &:after {
