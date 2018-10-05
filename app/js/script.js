@@ -1303,17 +1303,11 @@ $(document).ready(function () {
     // });
     /*===============end замена плейсхолдера в поиске================*/
 
-
-});
-
-
-//последний закомментированный скрипт
-
-if ($(window).width() > 992) {
+  if ($(window).width() > 992) {
     if ($('#promotion-sidebar').length > 0) {
-        $('#promotion-sidebar').stickySidebar({
-            topSpacing: 30,
-            bottomSpacing: 30
+      $('#promotion-sidebar').stickySidebar({
+        topSpacing: 30,
+        bottomSpacing: 30
       });
     }
 
@@ -1326,12 +1320,18 @@ if ($(window).width() > 992) {
 //     }
     var businessElementS = $('#promotions-sidebar');
     if (businessElementS.length > 0) {
-        var businessElementPositionS = businessElementS.offset().top;
-        $(window).scroll(function () {
-            fixedScroll(businesfixedScrollsElementS, businessElementPositionS, $('.footer'));
-        });
+      var businessElementPositionS = businessElementS.offset().top;
+      $(window).scroll(function () {
+        fixedScroll(businesfixedScrollsElementS, businessElementPositionS, $('.footer'));
+      });
     }
-}
+  }
+
+});
+
+
+//последний закомментированный скрипт
+
 
 /*fixed div function*/
 function fixedScroll(element, elementPosition, blockElement) {
