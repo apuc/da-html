@@ -1687,8 +1687,8 @@
           }
           .calc {
             color: #1a97bb;
-            float: left;
-            width: 82%;
+            float: right;
+            width: 30%;
             margin-bottom: 0;
             @include breakpoint(max-width 660px) {
               width: 100%;
@@ -1725,7 +1725,7 @@
               background-size: contain;
               position: absolute;
               left: 10px;
-              top: 10px;
+              top: 6px;
             }
             &:after {
               content: "";
@@ -4270,8 +4270,8 @@
 
 .calc {
   color: #1a97bb;
-  float: left;
-  width: 82%;
+  float: right;
+  width: 30%;
   margin-bottom: 0;
   @include breakpoint(max-width 660px) {
     width: 100%;
