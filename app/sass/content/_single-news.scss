@@ -40,7 +40,7 @@
       color: #030000;
       /*padding-left: 20px;*/
       padding-left: 0;
-      margin-bottom: 20px;
+      margin-bottom: 1px;
       @include box-sizing(border-box);
       @include breakpoint(max-width 660px){
         @include display-flex(flex);
@@ -196,7 +196,7 @@
       float: left;
       width: 100%;
       background-color: #ffffff;
-      padding: 36px 27px 60px 27px;
+      padding: 20px 20px 20px 20px;
       @include box-sizing(border-box);
       @include breakpoint(max-width 660px){
         padding: 0 10px;
@@ -317,6 +317,9 @@
             @include breakpoint(max-width 660px){
               width: 100%!important;
             }
+          }
+          &:last-child {
+            margin-bottom: 10px;
           }
           a[data-lightbox]{
             display: block;
@@ -468,7 +471,7 @@ a.load-more{
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 32px;
+  margin-top: 10px;
   font-size: 12px;
   font-weight: 700;
   background-color: #ee2e24;
@@ -681,6 +684,7 @@ a.load-more{
   position: relative;
   float: left;
   width: calc(100% - (255px + 14px));
+  margin-top: 32px;
   margin-right: 14px;
   @include breakpoint(max-width 660px){
     width: 100%;
