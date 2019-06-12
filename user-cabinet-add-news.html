@@ -11,6 +11,15 @@
     <link href="css/datepicker.min.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script>
+    <script src="https://unpkg.com/vue-select@latest"></script>
+    <script>
+        Vue.use(VeeValidate, {
+            events: 'change|blur|input',
+        });
+    </script>
 </head>
 <body>
 <!-- open .header -->
@@ -219,55 +228,149 @@
 
             </div>
 
-            <div class="cabinet__inner-box">
+            <div class="cabinet__container cabinet__container_white cabinet__inner-box">
 
-                <h3>Добавление новостей</h3>
+                <h1>Добавить чтиво</h1>
 
-                <form class="cabinet__add-company-form">
+                <div class="right">
 
-                    <div class="cabinet__add-company-form--wrapper">
+                    <form id="add-news" class="pt20 pb20">
 
-                        <p class="cabinet__add-company-form--title">Категория</p>
+                        <div class="inputs-wrap">
 
-                        <select class="cabinet__add-company-form--field" name="" id="form-select">
-                            <option value="1"></option>
-                            <option value="2"></option>
-                            <option value="3"></option>
-                            <option value="4"></option>
-                            <option value="5"></option>
-                        </select>
+                            <div class="form-group">
+                                <label for="categories">Категория:</label>
+                                <select @focus="onFocus('categories')"
+                                        @blur="onBlur('categories')"
+                                        class="form-control"
+                                        id="categories"
+                                        v-validate="'required'"
+                                        v-model="value['categories']"
+                                        name="categories"
+                                >
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
 
-                        <a href="#" class="cabinet__add-pkg"></a>
+                            <div class="alert alert-success" v-if="inputFocus.categories">
+                                Доступен одновременный выбор не более трех категорий, в которых отобразится опубликованная статья.
+                            </div>
 
-                    </div>
+                            <div class="alert alert-danger" v-else-if="errors.first('categories') !== undefined">
+                                Необходимо заполнить «Категория».
+                            </div>
 
-                    <div class="cabinet__add-company-form--hover-wrapper" data-count="1">
+                        </div>
+                        
+                        <div class="inputs-wrap">
+                            <div class="form-group">
+                                <label for="title">Заголовок:</label>
+                                <input id="title"
+                                       type="text"
+                                       class="form-control"
+                                       @focus="onFocus('title')"
+                                       @blur="onBlur('title')"
+                                       v-validate="'required'"
+                                       v-model="value['title']"
+                                       name="title"
+                                >
+                            </div>
+                            <div class="input-desc">
+                                <span>Как создать грамотный заголовок? </span>
+                                <a href="#">Читать.</a>
+                            </div>
+                            <div class="alert alert-success" v-if="inputFocus.title">
+                                Приемлемая длина заголовка – не более 70 символов. Запрещено размещать ссылки на какие-либо ресурсы (сайты, аккаунты и группы в социальных сетях).
+                            </div>
 
-                    </div>
+                            <div class="alert alert-danger" v-else-if="errors.first('title') !== undefined">
+                                Необходимо заполнить «Заголовок».
+                            </div>
+                        </div>
 
-                    <p class="cabinet__add-company-form--title">Заголовок новости</p>
+                        <div class="inputs-wrap">
+                            <div class="form-group">
+                                <label>Компания:</label>
+                                <v-select :options="['Canada', 'United States']"
+                                          @search:focus="onFocus('company')"
+                                          @search:blur="onBlur('company')"
+                                />
+                            </div>
+                            <div class="input-desc">
+                                <span>Как создать коммерческий контент?</span>
+                                <a href="#">Читать.</a>
+                            </div>
+                            <div class="alert alert-success" v-if="inputFocus.company">
+                                Предприятие, на странице которого появится опубликованная статья. Если текст имеет нейтральную тематику, тогда нужно оставить поле пустым.
+                            </div>
+                        </div>
 
-                    <input class="cabinet__add-company-form--field" type="text">
+                        <div class="inputs-wrap">
+                            <div class="input-group form-group">
+                                <div class="custom-file">
+                                    <div class="custom-file-label" for="photo">
+                                        <span class="mr-auto">{{fileName}}</span>
+                                        <div class="custom-file-delete"
+                                             v-if="fileName !== ''"
+                                             @click="deleteFile"
+                                        >
+                                            Удалить
+                                        </div>
+                                        <label class="custom-file-button">
+                                            Выбрать
+                                            <input type="file"
+                                                   class="custom-file-input"
+                                                   id="photo"
+                                                   @change="changeFile"
+                                                   v-model="value.photo"
+                                            >
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-desc">
+                                <span>Как правильно подобрать иллюстрацию?</span>
+                                <a href="#">Читать.</a>
+                            </div>
+                        </div>
 
-                    <div class="cabinet__add-company-form--block"></div>
+                    </form>
 
-                    <p class="cabinet__add-company-form--title">Обложка новости</p>
+                </div>
 
-                    <label class="cabinet__add-company-form--add-foto">
-                        <span class="button"></span>
-                        <input id="news-photo" class="input-file" type="file">
-                        <img id="blah" src="" alt="" width="160px">
-                    </label>
+                <script>
 
-                    <div class="cabinet__add-company-form--block"></div>
+                    Vue.component('v-select', VueSelect.VueSelect);
 
-                    <p class="cabinet__add-company-form--title">О компании</p>
+                    new Vue({
+                        el: '#add-news',
+                        data: {
+                            inputFocus: {},
+                            value: {},
+                            fileName: ''
+                        },
+                        methods: {
+                            onFocus(name) {
+                                this.$set(this.inputFocus, name, true);
+                            },
+                            onBlur(name) {
+                                this.inputFocus[name] = false;
+                            },
+                            changeFile(e) {
+                                this.fileName = e.target.files[0].name;
+                            },
+                            deleteFile() {
+                                this.fileName = '';
+                                this.value.photo = undefined;
+                            }
+                        }
+                    });
 
-                    <textarea class="cabinet__add-company-form--text"></textarea>
-
-                    <input type="submit" class="cabinet__add-company-form--submit" value="сохранить">
-
-                </form>
+                </script>
 
             </div>
 
