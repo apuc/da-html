@@ -298,6 +298,7 @@
                                 <v-select :options="['Canada', 'United States']"
                                           @search:focus="onFocus('company')"
                                           @search:blur="onBlur('company')"
+                                          v-model="value['company']"
                                 />
                             </div>
                             <div class="input-desc">
@@ -326,7 +327,6 @@
                                                    class="custom-file-input"
                                                    id="photo"
                                                    @change="changeFile"
-                                                   v-model="value.photo"
                                             >
                                         </label>
                                     </div>
@@ -362,6 +362,7 @@
                             },
                             changeFile(e) {
                                 this.fileName = e.target.files[0].name;
+                                this.value.photo = e.target.files[0];
                             },
                             deleteFile() {
                                 this.fileName = '';
