@@ -248,11 +248,7 @@
                                         v-model="value['categories']"
                                         name="categories"
                                 >
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
+                                    <option v-for="item in categories" :value="item.value">{{item.name}}</option>
                                 </select>
                             </div>
 
@@ -295,10 +291,12 @@
                         <div class="inputs-wrap">
                             <div class="form-group">
                                 <label>Компания:</label>
-                                <v-select :options="['Canada', 'United States']"
+                                <v-select :options="companies"
                                           @search:focus="onFocus('company')"
                                           @search:blur="onBlur('company')"
                                           v-model="value['company']"
+                                          label="name"
+                                          code="value"
                                 />
                             </div>
                             <div class="input-desc">
@@ -351,7 +349,27 @@
                         data: {
                             inputFocus: {},
                             value: {},
-                            fileName: ''
+                            fileName: '',
+                            categories: [
+                                {
+                                    name: 'Мир',
+                                    value: 1
+                                },
+                                {
+                                    name: 'Экономика',
+                                    value: 2
+                                },
+                            ],
+                            companies: [
+                                {
+                                    name: 'ООО "РОСС-ОПТ"',
+                                    value: 1
+                                },
+                                {
+                                    name: 'Торгово развлекательный центр «Донецк-Сити»',
+                                    value: 1
+                                }
+                            ]
                         },
                         methods: {
                             onFocus(name) {
