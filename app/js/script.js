@@ -2241,4 +2241,102 @@ $(document).ready(function () {
     //         $('.promotions-sidebar').removeClass('absolute');
     //     }
     // });
+
+
+    var listHTML = document.querySelector('.jsShopCategories').innerHTML;
+    var changeBtnText = document.querySelector('.jsChangeText');
+
+    document.querySelector('.jsChangeShopCategories').addEventListener('click', function(e) {
+        $.ajax({
+            url: 'https://da-info.pro/api/sima/category',
+            method: 'GET',
+            xhrFields: {
+                withCredentials: false
+            },
+            success: function(value) {
+                var obj = JSON.parse(value);
+                var objThis = '';
+                var liTemplate = '';
+                var list = document.querySelector('.jsShopCategories');
+                if (list.classList.contains('shopFlag')) {
+                    changeBtnText.innerHTML = 'Категории магазинов ДНР';
+                    list.innerHTML = "";
+                    list.innerHTML = listHTML;
+                    list.classList.remove('shopFlag');
+                } else {
+                    changeBtnText.innerHTML = 'Вернуть категории';
+                    list.innerHTML = "";
+                    for (var i = 0; i < obj.length; i++) {
+                        objThis = obj[i];
+
+                        if (objThis.subCat.length > 0) {
+                            liTemplate += '<li><a href="/shop/' + objThis.full_slug + '">' + objThis.name + '</a>' +
+                                '<div class="shop__categories--sub-menu" style="display: none; width: 250px; right: -250px; height: 100%; overflow-y: auto;"><div class="column-sub-menu" style="width: 100%;">';
+
+                            for (var j = 0; j < objThis.subCat.length; j++) {
+                                liTemplate += '<a class="column-sub-menu__title" href="/shop/' + objThis.subCat[j].full_slug + '">' + objThis.subCat[j].name + '</a>';
+                                if (objThis.subCat.length - 1 === j) liTemplate += '</div></div></li>';
+                            }
+                        } else {
+                            liTemplate += '<li><a href=""/shop/' + objThis.full_slug + '">' + objThis.name + '</a></li>';
+                        }
+                    }
+                    list.innerHTML = liTemplate;
+                    list.classList.add('shopFlag');
+                }
+                $('.shop__categories--list li ').hover(function () {
+                        clearTimeout($.data(this, 'timer'));
+                        $('.shop__categories--sub-menu', this).slideDown(0);
+                        $('.shop__categories--sub-menu', this).css({
+                            display: 'flex'
+                        })
+                    },
+                    function () {
+                        $('.shop__categories--sub-menu', this).slideUp(0);
+                        $.data(this, 'timer', setTimeout($.proxy(function () {
+                            $('.shop__categories--sub-menu', this).slideUp(0);
+                        }), 0));
+                    });
+
+                $('.shop__categories--list li').hover(function () {
+
+                    $(this).toggleClass('active-link');
+
+                });
+            }
+        });
+    });
+
+    var listHTMLmob = document.querySelector('.jsShopCategoriesMob').innerHTML;
+    var changeBtnTextMob = document.querySelector('.jsChangeTextMob');
+
+    document.querySelector('.jsChangeShopCategoriesMob').addEventListener('click', function(e) {
+
+        $.ajax({
+            url: 'https://da-info.pro/api/sima/category',
+            method: 'GET',
+            xhrFields: {
+                withCredentials: false
+            },
+            success: function(value) {
+                var obj = JSON.parse(value);
+                var liTemplateMob = '';
+                var listMob = document.querySelector('.jsShopCategoriesMob');
+                if (listMob.classList.contains('shopFlagMob')) {
+                    changeBtnTextMob.innerHTML = 'Категории магазинов ДНР';
+                    listMob.innerHTML = "";
+                    listMob.innerHTML = listHTMLmob;
+                    listMob.classList.remove('shopFlagMob');
+                } else {
+                    changeBtnTextMob.innerHTML = 'Вернуть категории';
+                    listMob.innerHTML = "";
+                    for (var i = 0; i < obj.length; i++) {
+                        liTemplateMob += '<li class="btn-lvl-1"><a href=""/shop/' + obj[i].full_slug + '"><img src="">' + obj[i].name + '</a></li>';
+                    }
+                    listMob.innerHTML = '<ul class="mobile-menu-lvl-1 lvl-1 menu">' + liTemplateMob + '</ul>';
+                    listMob.classList.add('shopFlagMob');
+                }
+            }
+        });
+    });
 });

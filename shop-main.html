@@ -128,11 +128,15 @@
 <!-- end header.html-->
 
 <section class="mobile-second-menu">
+    <button class="change-shop-categories jsChangeShopCategoriesMob">
+        <span class="jsChangeTextMob">Категории магазинов ДНР</span>
+        <img src="img/refresh.svg" alt="">
+    </button>
     <div class="mobile-second-menu__header">
         <div class="header-m-arrow back-btn" data-active="1"></div>
         <span>Каталог</span> <a href="#" class="header-close"><img src="img/second-menu/close.svg" alt=""></a>
     </div>
-    <div class="mobile-second-menu__wrap">
+    <div class="mobile-second-menu__wrap jsShopCategoriesMob">
         <ul class="mobile-menu-lvl-1 lvl-1 menu" id="lvl-100" data-parent-id="#lvl-100">
             <li class="btn-lvl-1 menu-btn" data-id="#lvl-201">
                 <a href="#">
@@ -601,12 +605,17 @@
 
         <div class="shop__categories">
 
+            <button class="change-shop-categories jsChangeShopCategories">
+                <span class="jsChangeText">Категории магазинов ДНР</span>
+                <img src="img/refresh.svg" alt="">
+            </button>
+
             <div class="shop__categories--title">
                 <span>Категории</span>
                 <a href="#">Смотреть все ></a>
             </div>
 
-            <ul class="shop__categories--list">
+            <ul class="shop__categories--list jsShopCategories">
 
                 <li>
                     <a href="#">Компьютеры и планшеты</a>

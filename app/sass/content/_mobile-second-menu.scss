@@ -36,11 +36,39 @@
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: #fff;
+  padding-left: 40px;
+  background: #f9f9f9;
   z-index: 9998;
   top: 0;
   overflow-y: scroll;
   left: 0;
+
+  & .change-shop-categories {
+    position: absolute;
+    top: 107px;
+    left: -96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 238px;
+    height: 34px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .68px;
+    background-color: #ee2e24;
+    border: none;
+    border-radius: 15px 0 0 0;
+    transform: rotate(-90deg) translateZ(0);
+    outline: none;
+
+    & img {
+      width: 12px;
+      height: auto;
+      margin-left: 8px;
+    }
+  }
+
   &__header {
     display: block;
     position: relative;
@@ -49,6 +77,7 @@
     border-bottom: 1px solid #cecece;
     padding: 12px 16px;
     text-align: center;
+    border-left: 1px solid #cecece;
     .header-m-arrow {
       position: absolute;
       height: 100%;
@@ -75,6 +104,7 @@
     width: 100%;
     float: left;
     overflow: hidden;
+    border-left: 1px solid #cecece;
     //display: flex;
   }
 

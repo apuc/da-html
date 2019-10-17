@@ -77,7 +77,7 @@ gulp.task('browser-sync', function () { // Создаем таск browser-sync
     });
 });
 
-gulp.task('compress', ['clean'], function () {// Создаем таск compress
+gulp.task('compress', function () {// Создаем таск compress
     return gulp.src('app/js/*.js')// Берем все необходимые библиотеки
         .pipe(plumber())
         .pipe(concat('script.js'))// Собираем их в кучу в новом файле script.js
@@ -92,9 +92,9 @@ gulp.task('compress', ['clean'], function () {// Создаем таск compres
 
 });
 
-gulp.task("clean", function (cb) {
-    rimraf('./js/script.min.js', cb);
-});
+// gulp.task("clean", function (cb) {
+//     rimraf('./js/script.min.js', cb);
+// });
 
 gulp.task('extend-pages', function () {
     gulp.src('./app/html/pages/*.html')
