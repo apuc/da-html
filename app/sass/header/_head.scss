@@ -4,8 +4,9 @@
   position: relative;
   background-color: #fff;
   z-index: 9000;
+  margin-bottom: 15px;
   &:after {
-    content: "";
+    content: '';
     height: 34px;
     background-color: #0c242e;
     right: 0;
@@ -91,7 +92,7 @@
     align-items: center;
   }
   &:before {
-    content: "";
+    content: '';
     -o-transform: skew(45deg);
     -ms-transform: skew(45deg);
     -moz-transform: skew(45deg);
@@ -127,7 +128,7 @@
       -webkit-transition: width 1s; /* Safari */
       transition: width 1s;
       box-sizing: border-box;
-      background-image: url("../img/header/search-icon.svg");
+      background-image: url('../img/header/search-icon.svg');
       background-repeat: no-repeat;
       background-size: 11px;
       background-position-x: 20px;
@@ -168,7 +169,6 @@
         line-height: 12px;
         text-transform: uppercase;
       }
-
     }
     .search_input_acive {
       width: 330px;
@@ -204,7 +204,7 @@
         background-size: contain;
         margin-right: 5px;
         size: 14px;
-        background-image: url("../img/header/autoriz-icon.svg");
+        background-image: url('../img/header/autoriz-icon.svg');
         background-repeat: no-repeat;
         @include breakpoint(max-width 992px) {
           top: 4px;
@@ -224,13 +224,13 @@
     margin-right: 10px;
     background: #ee2e24;
     text-align: center;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       order: 1;
       height: 100%;
       width: 40px;
       background-color: transparent;
     }
-    @include breakpoint(max-width 360px){
+    @include breakpoint(max-width 360px) {
       display: none;
     }
     span {
@@ -241,7 +241,7 @@
       text-transform: uppercase;
       text-align: center;
       display: inline-block;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         display: none;
       }
       &:before {
@@ -255,12 +255,12 @@
         background: #0c242e;
       }
     }
-    .fa-plus{
+    .fa-plus {
       display: none;
       color: #fff;
       margin-top: 15px;
       font-size: 20px;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         display: block;
       }
     }
@@ -349,7 +349,7 @@
       &:after {
         display: block;
         position: absolute;
-        content: "";
+        content: '';
         bottom: -1px;
         left: 0;
         width: 0;
@@ -365,7 +365,6 @@
         width: 100%;
       }
     }
-
   }
 }
 
@@ -377,7 +376,7 @@
   padding-left: 10px;
   box-sizing: border-box;
   &:after {
-    content: "▼";
+    content: '▼';
     padding: 0 8px;
     font-size: 12px;
     position: absolute;
@@ -430,8 +429,6 @@
       font-size: 12px;
     }
   }
-
-
 }
 
 .weather {
