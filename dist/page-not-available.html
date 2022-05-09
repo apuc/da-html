@@ -1,0 +1,1287 @@
+<!-- start html_open.html-->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>title</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="css/libs.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.min.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue-select@latest/dist/vue-select.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script>
+    <script src="https://unpkg.com/vue-select@latest"></script>
+    <script>
+      Vue.use(VeeValidate, {
+        events: 'change|blur|input'
+      })
+    </script>
+  </head>
+  <body>
+    <!-- open .header -->
+  </body>
+</html>
+
+<!-- end html_open.html-->
+
+<!-- start header.html-->
+<!-- open .header-->
+<header class="header">
+
+    <div class="container">
+
+        <h1 class="header-logo">
+            <img src="img/logo.png" alt="">
+        </h1>
+
+        <div class="header-ipanel">
+
+            <div class="select">
+                <select>
+                    <option value="">Донецк</option>
+                    <option value="" selected>Макеевка</option>
+                </select>
+            </div>
+
+            <div class="fix-button-head" id="fix-button-head">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <span> Добавить на сайт</span>
+                <ul class="list">
+                    <li><a href="#"> <img src="img/icons/tag-hover-icon.png" alt="">Предприятие</a></li>
+                    <li><a href="#"><img src="img/icons/stack-hover-icon.png" alt="">Новость</a></li>
+                    <li><a href="#"><img src="img/icons/calendar-cabinet--hover-icon.png" alt="">Афиши</a></li>
+                    <li><a href="#"><img src="img/icons/bar-graph-hover-icon.png" alt="">Акция</a></li>
+                    <li><a href="#"><img src="img/icons/shopping-cart-hover.png" alt="">Товары</a></li>
+                    <li><a href="#"><img src="img/icons/add-icon.png" alt="">Объявления</a></li>
+                </ul>
+            </div>
+
+            <form action="">
+                <input class="search-input" type="text" placeholder="Поиск">
+                <a id="authorized-user-profile" href="#">
+                    <span class="autoriz-icon"></span>
+                    авторизация
+                </a>
+
+                <div class="currency-panel__submenu">
+
+                    <a href="#">НОВОСТИ</a>
+                    <a href="#">АФИШИ</a>
+                    <a href="#">АКЦИИ</a>
+                    <a href="#">ПРЕДПРИЯТИЯ</a>
+                    <a href="#">КОМЕНТАРИИ</a>
+                    <a href="#">Настройки</a>
+                    <a href="#">выход</a>
+
+                </div>
+
+            </form>
+
+
+
+        </div>
+
+        <nav class="header__navigation">
+
+            <button class="toggle_mnu">
+
+              <span class="sandwich">
+                <span class="sw-topper"></span>
+                <span class="sw-bottom"></span>
+                <span class="sw-footer"></span>
+              </span>
+
+            </button>
+
+            <ul class="header-menu">
+                <li><a href="">Info Pro</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Афиша</a></li>
+                <li><a href="">Предприятия</a></li>
+                <li><a href="">Консультации</a></li>
+                <li><a href="">Объявления</a></li>
+            </ul>
+
+            <!--<div class="header-menu__sub">-->
+
+            <!--<button class="header-menu__sub_button">-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--</button>-->
+
+            <!--<ul class="header-menu__sub_list">-->
+            <!--<li><a href="">Пункт1</a></li>-->
+            <!--<li><a href="">Пункт2</a></li>-->
+            <!--<li><a href="">Пункт3</a></li>-->
+            <!--<li><a href="">Пункт4</a></li>-->
+            <!--<li><a href="">Пункт5</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+        </nav>
+    </div>
+</header>
+<!-- close .header -->
+
+<!-- end header.html-->
+
+<!-- start not-available.html-->
+<section class="dev">
+
+    <div class="container">
+
+        <h1 class="dev__mistake">Ошибка</h1>
+
+        <div class="dev__wrapper">
+
+            <span class="dev__banner">404</span>
+
+            <p class="dev__notice">Такой страницы не существует,
+                но вы можете вернуься на <a href="#">главную</a>
+                или оставьте заявку ─ мы перезвоним Вам
+                и ответим на все вопросы</p>
+
+            <a href="#" class="show-more">сообщить о битой ссылке</a>
+
+        </div>
+
+        <div class="dev__elements">
+
+            <div class="dev__photo">
+                <img src="img/content/404-banner.png" alt="">
+            </div>
+
+            <h3 class="main-title">Рекомендуем почитать</h3>
+
+            <div class="dev__elements--news">
+
+                <a href="#" class="news__wrap_item-sm-hot">
+                    <!-- thumb -->
+                    <div class="thumb">
+
+                        <img src="img/home-content/photo-img-1.png" alt="">
+
+                    </div>
+                    <!-- thumb -->
+                    <div class="hover-wrap">
+                        <span class="category"><span class="category-star"></span>ГОРЯЧЕЕ</span>
+                        <h2><!--<a href="">-->Прокомментировали информацию о планах Трампа снять санкции с России
+                            <!--</a>--></h2>
+                    </div>
+
+                </a>
+
+                <a href="#" class="news__wrap_item-sm-hot">
+                    <!-- thumb -->
+                    <div class="thumb">
+
+                        <img src="img/home-content/photo-img-1.png" alt="">
+
+                    </div>
+                    <!-- thumb -->
+                    <div class="hover-wrap">
+                        <span class="category"><span class="category-star"></span>ГОРЯЧЕЕ</span>
+                        <h2><!--<a href="">-->Прокомментировали информацию о планах Трампа снять санкции с России
+                            <!--</a>--></h2>
+                    </div>
+                </a>
+
+                <a href="#" class="news__wrap_item-sm-hot">
+                    <!-- thumb -->
+                    <div class="thumb">
+
+                        <img src="img/home-content/photo-img-1.png" alt="">
+
+                    </div>
+                    <!-- thumb -->
+                    <div class="hover-wrap">
+                        <span class="category"><span class="category-star"></span>ГОРЯЧЕЕ</span>
+                        <h2><!--<a href="">-->Прокомментировали информацию о планах Трампа снять санкции с России
+                            <!--</a>--></h2>
+                    </div>
+                </a>
+
+                <a href="#" class="news__wrap_item-sm-hot">
+                    <!-- thumb -->
+                    <div class="thumb">
+
+                        <img src="img/home-content/photo-img-1.png" alt="">
+
+                    </div>
+                    <!-- thumb -->
+                    <div class="hover-wrap">
+                        <span class="category"><span class="category-star"></span>ГОРЯЧЕЕ</span>
+                        <h2><!--<a href="">-->Прокомментировали информацию о планах Трампа снять санкции с России
+                            <!--</a>--></h2>
+                    </div>
+                </a>
+
+            </div>
+
+            <h3 class="main-title">следите за акциями</h3>
+
+            <div class="dev__elements--news">
+
+                <a href="#" class="stock__item">
+                    <div class="stock__item_visible">
+                        <div class="thumb">
+                            <img src="img/home-content/stock-pic-1.png" alt="">
+                            <span class="time-icon"></span>
+                        </div>
+                        <div class="stock__item_label">
+                            <p>Грандиозное снижение цен на шкафы - 20%</p>
+                        </div>
+                        <div class="content">
+                            <p> Акция проходит <small>с 01.01.2017</small> </p>
+                            <!-- <a href="">подробнее</a>-->
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="#" class="stock__item">
+                    <div class="stock__item_visible">
+                        <div class="thumb">
+                            <img src="img/home-content/stock-pic-1.png" alt="">
+                            <span class="time-icon"></span>
+                        </div>
+                        <div class="stock__item_label">
+                            <p>Грандиозное снижение цен на шкафы - 20%</p>
+                        </div>
+                        <div class="content">
+                            <p> Акция проходит <small>с 01.01.2017</small> </p>
+                            <!-- <a href="">подробнее</a>-->
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="#" class="stock__item">
+                    <div class="stock__item_visible">
+                        <div class="thumb">
+                            <img src="img/home-content/stock-pic-1.png" alt="">
+                            <span class="time-icon"></span>
+                        </div>
+                        <div class="stock__item_label">
+                            <p>Грандиозное снижение цен на шкафы - 20%</p>
+                        </div>
+                        <div class="content">
+                            <p> Акция проходит <small>с 01.01.2017</small> </p>
+                            <!-- <a href="">подробнее</a>-->
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="#" class="stock__item">
+                    <div class="stock__item_visible">
+                        <div class="thumb">
+                            <img src="img/home-content/stock-pic-1.png" alt="">
+                            <span class="time-icon"></span>
+                        </div>
+                        <div class="stock__item_label">
+                            <p>Грандиозное снижение цен на шкафы - 20%</p>
+                        </div>
+                        <div class="content">
+                            <p> Акция проходит <small>с 01.01.2017</small> </p>
+                            <!-- <a href="">подробнее</a>-->
+                        </div>
+
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+       <!-- <p class="dev__subtitle"><a href="#">оставьте заявку</a>, чтобы <a href="#">первым узнать</a> о всех
+            нововведениях портала</p>
+
+        <form class="dev__form" action="">
+            <input type="text" placeholder="Выслать на email">
+            <button>подписаться</button>
+        </form>
+-->
+    </div>
+
+</section>
+<!-- end not-available.html-->
+
+<!-- start footer.html-->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer__logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+
+        <div class="footer__main">
+
+            <ul class="footer__nav">
+                <li><a href="#">НОВОСТИ</a></li>
+                <li><a href="#">АФИША</a></li>
+                <li><a href="#">ДОСУГ</a></li>
+                <li><a href="#">ПРЕДПРИЯТИЯ</a></li>
+                <li><a href="#">КОНСУЛЬТАЦИИ</a></li>
+                <li><a href="#">ОБЪЯВЛЕНИЯ</a></li>
+            </ul>
+
+            <a href="#" class="footer-error-button" id="send-error-message">
+                сообщить об ошибке
+            </a>
+
+            <div class="footer__links-rules">
+                <div class="footer__links-wrap">
+                    <a href="http://da-info.pro/page/politika-konfidencialnosti">Политика конфиденциальности</a>
+                    <a href="http://da-info.pro/page/pravila-polzovania-sajtom-da-infopro">Правила пользования
+                        сайтом</a>
+                </div>
+                <div class="footer__links-wrap">
+                    <a href="http://da-info.pro/page/soglasie-na-obrabotku-personalnyh-dannyh">Согласие на обработку
+                        персональных данных</a>
+                    <div class="footer__wrap-link">
+                        <a href="http://da-info.pro/page/kontakty">Контакты</a>
+                        <a class="footer__craft-link" href="https://web-artcraft.com" target="_blank">Разработано CraftGroup</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer__social">
+
+            <div class="footer__links">
+                <a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="#"><span class="lj"></span></a>
+                <a href="#"><span class="yadzen"></span></a>
+            </div>
+
+            <a href="#" class="footer__send">написать нам</a>
+
+        </div>
+
+    </div>
+    <!--<div class="fix-button">-->
+
+    <!--<span class="fix-button__trigger">-->
+    <!--<img src="img/home-content/fix-button.png" alt="">-->
+    <!--</span>-->
+
+    <!--<ul class="fix-button__list">-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;company">Предприятие</a></li>-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;news">Новость</a></li>-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;poster">Афиша</a></li>-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;stock">Акция</a></li>-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;adds">Объявления</a></li>-->
+    <!--</ul>-->
+
+
+    <!--</div>-->
+
+    <!--<div id="send-error-message" class="fix-button-msg-error">-->
+    <!--<div class="fix-button__notice">-->
+    <!--<img src="img/home-content/mistake-bg.png" alt="">-->
+    <!--</div>-->
+    <!--</div>-->
+
+</footer>
+
+
+<div class="modal-send">
+
+    <span class="modal-send__close">X</span>
+
+    <form action="" class="modal-send__form">
+
+        <input id="send-message-name" class="modal-send__field valid" type="name" placeholder="Имя" required>
+
+        <input id="send-message-email" class="modal-send__field valid" type="email" placeholder="Электронная почта"
+               required>
+
+        <textarea name="" id="send-message-text" class="modal-send__textarea valid" placeholder="Ваше сообщение"
+                  required></textarea>
+
+        <input id="send-message-submit" class="modal-send__submit" type="submit" value="Отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="modal-callback">
+
+    <h3 class="modal-callback__title">заказать звонок</h3>
+
+    <p class="modal-callback__subtitle">Оставьте свой контактный номер телефона - мы обязательно
+        перезвоним в удобное для Вас время!</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
+
+        <p>Введите ваши данные</p>
+
+        <input class="modal-callback__field" type="text" placeholder="Имя">
+
+        <input class="modal-callback__field" type="text" placeholder="Телефон">
+
+        <input class="modal-callback__field" type="text" placeholder="Удобное время для звонка">
+
+        <input class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="modal-send-message">
+
+    <h3 class="modal-callback__title">Написать нам</h3>
+
+    <p class="modal-callback__subtitle">Напишите нам подробно описав свою ситуацию.
+        Мы обязательно свяжемся с Вами!</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
+
+        <p>Введите ваши данные</p>
+
+        <input class="modal-callback__field" type="text" placeholder="Имя">
+
+        <input class="modal-callback__field" type="text" placeholder="Телефон">
+
+        <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="error-message">
+
+    <h3 class="modal-callback__title">Написать нам</h3>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
+
+        <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="modal-order-delivery">
+
+    <h3 class="modal-callback__title">ЗАКАЗАТЬ ДОСТАВКУ</h3>
+
+    <p class="modal-callback__subtitle">Определите ваше местонахождение, чтобы проверить возможность доставки</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
+
+        <div class="modal-callback__first-step">
+
+            <p>Введите ваш адрес</p>
+
+            <input class="modal-callback__field" type="text" placeholder="Город">
+
+            <input class="modal-callback__field" type="text" placeholder="Улица">
+
+            <div class="modal-callback__fields">
+
+                <input class="modal-callback__sm-field" type="text" placeholder="Дом">
+
+                <input class="modal-callback__sm-field" type="text" placeholder="Кв.">
+
+            </div>
+
+            <a href="#" class="show-more">продолжить</a>
+
+        </div>
+
+        <div class="modal-callback__second-step">
+
+            <p>Введите ваши данные</p>
+
+            <input class="modal-callback__field" type="text" placeholder="Город">
+
+            <input class="modal-callback__field" type="text" placeholder="Улица">
+
+            <a href="#" class="modal-callback__trigger">Уточнить время и дату доставки</a>
+
+            <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+            <a href="#" class="modal-callback__trigger">Добавить комментарий к заказу</a>
+
+            <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+            <input class="show-more" type="submit" value="отправить">
+
+        </div>
+
+
+    </form>
+
+</div>
+
+<div class="modal-review" id="modal-review">
+
+    <h3 class="modal-review__title">Добавить отзыв</h3>
+
+    <p class="modal-review__subtitle">Будьте правдивы. Пишите и хорошее, и плохое, но ничего не выдумывайте.</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-review__form">
+
+        <p>Ваш отзыв</p>
+
+        <textarea class="modal-review__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input id="modal-review-submit" class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-review-success" id="modal-review-success">
+
+    <div class="modal-review-success__img">
+        <img src="img/icons/confirm-icon.png" alt="">
+    </div>
+
+    <p class="modal-review-success__title">Ваш отзыв будет опубликован после прохождения модерации</p>
+
+    <p class="modal-review-success__notice">Пишите только сами!</p>
+
+    <p class="modal-review-success__moder">Автоматическая проверка находит любые копии и рерайты,
+        автор блокируется навсегда.</p>
+
+</div>
+
+<div class="modal-review" id="modal-add-comment">
+
+    <h3 class="modal-review__title">Добавить комментарий</h3>
+
+    <p class="modal-review__subtitle">Пишите и хорошее, и плохое.</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-review__form">
+
+        <p>Ваш комментарий</p>
+
+        <textarea class="modal-review__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input id="modal-add-comment-submit" class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-review" id="modal-faq">
+
+    <h3 class="modal-review__title">Добавить комментарий</h3>
+
+    <p class="modal-review__subtitle">Пишите и хорошее, и плохое.</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-review__form">
+
+        <p>Ваш комментарий</p>
+
+        <textarea class="modal-review__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input id="modal-add-comment-submit" class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div id="modal-company-rew" class="modal-company">
+
+    <div class="thumb">
+        <span>A</span>
+        <!--<img src="img/home-content/what-say-1.png" alt="">-->
+    </div>
+
+    <div class="rew-wrap">
+        <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+        <span class="name">Кирилл Кириленко</span>
+        <p class="rew-descr">Салат делали около 30 минут и принесли с муравьем.
+            Освежающий чай ,напомнил нам чай в школьных столовых ,
+            а распробовав мы поняли ,что даже там он был вкуснее..
+            Салат делали около 30 минут и принесли с муравьем.
+            Освежающий чай ,напомнил нам чай в школьных столовых ,
+            а распробовав мы поняли ,что даже там он был вкуснее..</p>
+        <span class="date">7 месяцев назад</span>
+
+        <div class="social-wrap">
+
+            <a href="#" target="_blank" class="social-wrap__item vk">
+                <img src="img/soc/vk.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item fb">
+                <img src="img/soc/fb.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item ok">
+                <img src="img/soc/ok-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item insta">
+                <img src="img/soc/insta-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item twitter">
+                <img src="img/soc/twi-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item google">
+                <img src="img/soc/google-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item pinterest">
+                <img src="img/soc/pinter-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item telegram">
+                <img src="img/soc/telegram-f.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item live-journal">
+                <img src="img/soc/livejournal-f.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item in">
+                <img src="img/soc/in-f.png" alt="">
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="modal-advertisement-categories" class="modal-categories">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h2>Выберите категорию</h2>
+            <span class="krest close"> ×</span>
+        </div>
+        <div class="modal-body modal-flex">
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="1">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/avto_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Транспорт</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="31">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/furniture_cay-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Дом и сад</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="71">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/house_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Недвижимость</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="121">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/diamond_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Мода и стиль</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="149">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/comp_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Электроника</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="233">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/xobbi_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Хобби, отдых и спорт</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="274">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/target_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Бизнес и услуги</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="311">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/animal_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Животные</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="323">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons//work_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Работа</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="344">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/children_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Детский мир</span>
+            </div>
+
+            <div class="column column-change column-modal header-rubric" data-parent="0">
+                <h3 class="top-title">Рубрики</h3>
+                <div class="obvertka obvertka-first style-scroll">
+			<span class="heading heading-change active" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                </div>
+
+            </div>
+            <div class="column column-change column-modal" data-parent="1">
+                <h3 class="title title-change header-rubric">Детский мир</h3>
+
+                <div class="obvertka style-scroll">
+			<span class="heading heading-change" data-category="<?= $item->id?>">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change active" data-category="<?= $item->id?>">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                </div>
+            </div>
+            <div class="column title-change column-modal" data-parent="2">
+                <h3 class="title title-change header-rubric">Детская одежда</h3>
+                <div class="obvertka obvertka-last style-scroll">
+			<span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div id="modal-add-cart">
+
+    <h1 class="modalAdd-cartTitle">Товар был добавлен в корзину. <span> Товаров в Вашей корзине: <span>1</span></span>
+    </h1>
+
+    <a href="#" class="go-cart">Перейти к корзине</a>
+
+    <button class="close-cart" id="modal_close">Вернуться на сайт</button>
+
+    <h2 class="cart-carousel-title">Вместе с этим часто покупают:</h2>
+
+    <div class="shop__top-sales-elements ">
+
+        <a href="#" class="shop__top-sales-elements--item">
+
+            <h3 class="category-name">Смартфон</h3>
+            <p class="category-element">iPhone 6s 16Gb</p>
+
+            <div class="category-photo">
+                <img src="img/shop/category-photo-1.png" alt="">
+            </div>
+
+            <div class="category-price">
+                <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+            </div>
+
+            <button class="category-buy">Купить</button>
+
+        </a>
+
+        <a href="#" class="shop__top-sales-elements--item">
+
+            <h3 class="category-name">Смартфон</h3>
+            <p class="category-element">iPhone 6s 16Gb</p>
+
+            <div class="category-photo">
+                <img src="img/shop/category-photo-1.png" alt="">
+            </div>
+
+            <div class="category-price">
+                <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+            </div>
+
+            <button class="category-buy">Купить</button>
+
+        </a>
+
+        <a href="#" class="shop__top-sales-elements--item">
+
+            <h3 class="category-name">Смартфон</h3>
+            <p class="category-element">iPhone 6s 16Gb</p>
+
+            <div class="category-photo">
+                <img src="img/shop/category-photo-1.png" alt="">
+            </div>
+
+            <div class="category-price">
+                <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+            </div>
+
+            <button class="category-buy">Купить</button>
+
+        </a>
+
+        <a href="#" class="shop__top-sales-elements--item">
+
+            <h3 class="category-name">Смартфон</h3>
+            <p class="category-element">iPhone 6s 16Gb</p>
+
+            <div class="category-photo">
+                <img src="img/shop/category-photo-1.png" alt="">
+            </div>
+
+            <div class="category-price">
+                <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+            </div>
+
+            <button class="category-buy">Купить</button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<div id="feedback-modal">
+
+    <h2 class="feedback-modal-title">наши контакты</h2>
+
+    <p class="feedback-modal-desk"><b>нажмите на номер</b> чтобы связаться <br> прямо сейчас!</p>
+
+    <a class="feedback-modal-phone" href="tel:380991795838">+38(099)179-58-38</a>
+
+    <a class="feedback-modal-phone" href="tel:380991795838">+38(099)179-58-38</a>
+
+</div>
+
+
+<a href="#" id="Go_Top"><img src="img/icons/button_up.svg" alt=""></a>
+
+<div id="overlay"></div>
+<div id="black-overlay"></div>
+
+<!-- end footer.html-->
+
+<!-- start html_close.html-->
+</body>
+<script src='js/jquery-2.1.3.min.js'></script>
+<script src='js/jquery-ui.min.js'></script>
+<script src='js/jquery-dr-ui.min.js'></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src='js/libs.min.js'></script>
+<script src='js/owl.carousel.min.js'></script>
+<script src='js/slick.min.js'></script>
+<script src='js/datepicker.min.js'></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/map.js"></script>
+<script src='js/jquery.hc-sticky.min.js'></script>
+<script src='js/countdown.js'></script>
+<script src="js/companys-filter.js"></script>
+<script src="js/afisha-countdown.js"></script>
+<script src="js/headhesive.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/sticky-sidebar.js"></script>
+<script src="js/script.min.js"></script>
+</html>
+
+<!-- end html_close.html-->

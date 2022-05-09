@@ -1,0 +1,2421 @@
+<!-- start html_open.html-->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>title</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="css/libs.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.min.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue-select@latest/dist/vue-select.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script>
+    <script src="https://unpkg.com/vue-select@latest"></script>
+    <script>
+      Vue.use(VeeValidate, {
+        events: 'change|blur|input'
+      })
+    </script>
+  </head>
+  <body>
+    <!-- open .header -->
+  </body>
+</html>
+
+<!-- end html_open.html-->
+
+<!-- start header.html-->
+<!-- open .header-->
+<header class="header">
+
+    <div class="container">
+
+        <h1 class="header-logo">
+            <img src="img/logo.png" alt="">
+        </h1>
+
+        <div class="header-ipanel">
+
+            <div class="select">
+                <select>
+                    <option value="">Донецк</option>
+                    <option value="" selected>Макеевка</option>
+                </select>
+            </div>
+
+            <div class="fix-button-head" id="fix-button-head">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <span> Добавить на сайт</span>
+                <ul class="list">
+                    <li><a href="#"> <img src="img/icons/tag-hover-icon.png" alt="">Предприятие</a></li>
+                    <li><a href="#"><img src="img/icons/stack-hover-icon.png" alt="">Новость</a></li>
+                    <li><a href="#"><img src="img/icons/calendar-cabinet--hover-icon.png" alt="">Афиши</a></li>
+                    <li><a href="#"><img src="img/icons/bar-graph-hover-icon.png" alt="">Акция</a></li>
+                    <li><a href="#"><img src="img/icons/shopping-cart-hover.png" alt="">Товары</a></li>
+                    <li><a href="#"><img src="img/icons/add-icon.png" alt="">Объявления</a></li>
+                </ul>
+            </div>
+
+            <form action="">
+                <input class="search-input" type="text" placeholder="Поиск">
+                <a id="authorized-user-profile" href="#">
+                    <span class="autoriz-icon"></span>
+                    авторизация
+                </a>
+
+                <div class="currency-panel__submenu">
+
+                    <a href="#">НОВОСТИ</a>
+                    <a href="#">АФИШИ</a>
+                    <a href="#">АКЦИИ</a>
+                    <a href="#">ПРЕДПРИЯТИЯ</a>
+                    <a href="#">КОМЕНТАРИИ</a>
+                    <a href="#">Настройки</a>
+                    <a href="#">выход</a>
+
+                </div>
+
+            </form>
+
+
+
+        </div>
+
+        <nav class="header__navigation">
+
+            <button class="toggle_mnu">
+
+              <span class="sandwich">
+                <span class="sw-topper"></span>
+                <span class="sw-bottom"></span>
+                <span class="sw-footer"></span>
+              </span>
+
+            </button>
+
+            <ul class="header-menu">
+                <li><a href="">Info Pro</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Афиша</a></li>
+                <li><a href="">Предприятия</a></li>
+                <li><a href="">Консультации</a></li>
+                <li><a href="">Объявления</a></li>
+            </ul>
+
+            <!--<div class="header-menu__sub">-->
+
+            <!--<button class="header-menu__sub_button">-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--</button>-->
+
+            <!--<ul class="header-menu__sub_list">-->
+            <!--<li><a href="">Пункт1</a></li>-->
+            <!--<li><a href="">Пункт2</a></li>-->
+            <!--<li><a href="">Пункт3</a></li>-->
+            <!--<li><a href="">Пункт4</a></li>-->
+            <!--<li><a href="">Пункт5</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+        </nav>
+    </div>
+</header>
+<!-- close .header -->
+
+<!-- end header.html-->
+
+<!-- start home-content-russian.html-->
+<section class="home-content">
+
+    <div class="container">
+        <!-- open home-content__wrap -->
+        <div class="home-content__wrap">
+
+            <div class="home-content__wrap_slider">
+                <a href="#" class="item">
+                    <img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content">
+                        <div class="content-row">
+                            <span>Сегодня 7:00</span>
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+
+                            <div class="hide-social">
+                                <span href="#" class="vk-soc">
+                                    <i class="fa fa-vk fa-lg"></i>
+                                </span>
+                                <span href="#" class="twi-soc">
+                                    <i class="fa fa-twitter fa-lg"></i>
+                                </span>
+                                <span href="#" class="fb-soc">
+                                    <i class="fa fa-facebook fa-lg"></i>
+                                </span>
+                                <span href="#" class="ok-soc">
+                                    <i class="fa fa-odnoklassniki fa-lg"></i>
+                                </span>
+                                <!-- <div class="more-soc">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                </div> -->
+                            </div>
+                            <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        </div>
+                        <h3>"Месть Украины за Донбасс будет безжалостной", -</h3>
+                        <p>российский телеведущий Невзоров рассказал о страшных последствиях жестокого наказания для
+                            России</p>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content">
+                        <div class="content-row">
+                            <span>Сегодня 7:00</span>
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+
+                            <div class="hide-social">
+                                <span href="#" class="vk-soc">
+                                    <i class="fa fa-vk fa-lg"></i>
+                                </span>
+                                <span href="#" class="twi-soc">
+                                    <i class="fa fa-twitter fa-lg"></i>
+                                </span>
+                                <span href="#" class="fb-soc">
+                                    <i class="fa fa-facebook fa-lg"></i>
+                                </span>
+                                <span href="#" class="ok-soc">
+                                    <i class="fa fa-odnoklassniki fa-lg"></i>
+                                </span>
+                                <!-- <div class="more-soc">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                </div> -->
+                            </div>
+                            <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        </div>
+                        <h3>"Месть Украины за Донбасс будет безжалостной", -</h3>
+                        <p>российский телеведущий Невзоров рассказал о страшных последствиях жестокого наказания для
+                            России</p>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content">
+                        <div class="content-row">
+                            <span>Сегодня 7:00</span>
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+
+                            <div class="hide-social">
+                                <span href="#" class="vk-soc">
+                                    <i class="fa fa-vk fa-lg"></i>
+                                </span>
+                                <span href="#" class="twi-soc">
+                                    <i class="fa fa-twitter fa-lg"></i>
+                                </span>
+                                <span href="#" class="fb-soc">
+                                    <i class="fa fa-facebook fa-lg"></i>
+                                </span>
+                                <span href="#" class="ok-soc">
+                                    <i class="fa fa-odnoklassniki fa-lg"></i>
+                                </span>
+                                <!-- <div class="more-soc">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                </div> -->
+                            </div>
+                            <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        </div>
+                        <h3>"Месть Украины за Донбасс будет безжалостной", -</h3>
+                        <p>
+                            российский телеведущий Невзоров рассказал о страшных последствиях жестокого наказания для
+                            России
+                        </p>
+
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="home-content__hot-topics-russ">
+                <div class="left-column">
+                    <div class="title">
+                        <span>Горячие темы</span>
+                    </div>
+                    <a href="#">
+                        <div class="left-column__content">
+                            <h2>
+                                Игорь Плотницкий прилетел в
+                                Москву, - Захар Прилепин
+                            </h2>
+                            <p>
+                                Российский писатель Захар Прилепин, активный сторонник Республик на Донбассе, вчера
+                                вечером опубликовал на своей странице ВКонтакте пост о прилете Игоря Плотницкого в
+                                Москву.
+                            </p>
+                            <section class="hashtag">
+                                <div class="hashtag__wrapper">
+                                    <a href="#">
+                                        <div class="hashtag__wrapper--item">Россия</div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="hashtag__wrapper--item">Новости</div>
+                                    </a>
+                                    <a href="#" class="comments">0</a>
+                                    <p class="business__sm-item--views">57</p>
+                                    <a href="#" class="home-like">
+                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                        <span class="like-counter">0</span>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="item">
+                            <img src="img/russ-home/3.jpg" alt="">
+                            <div class="item__wrapper">
+                                <p>
+                                    Певица правозащитница Екатерина Гордон решила баллотироваться в президенты России
+                                </p>
+                                <div class="hashtag-wrap">
+                                    <a href="#" class="hashteg-mini">
+                                        россия
+                                    </a>
+                                    <a href="#" class="hashteg-mini">
+                                        Новости
+                                    </a>
+                                    <a href="#" class="comments">0</a>
+                                    <p class="business__sm-item--views">57</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="item">
+                            <img src="img/russ-home/3.jpg" alt="">
+                            <div class="item__wrapper">
+                                <p>
+                                    Певица правозащитница Екатерина Гордон решила баллотироваться в президенты России
+                                </p>
+                                <div class="hashtag-wrap">
+                                    <a href="#" class="hashteg-mini">
+                                        россия
+                                    </a>
+                                    <a href="#" class="hashteg-mini">
+                                        Новости
+                                    </a>
+                                    <a href="#" class="comments">0</a>
+                                    <p class="business__sm-item--views">57</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="item">
+                            <img src="img/russ-home/3.jpg" alt="">
+                            <div class="item__wrapper">
+                                <p>
+                                    Певица правозащитница Екатерина Гордон решила баллотироваться в президенты России
+                                </p>
+                                <div class="hashtag-wrap">
+                                    <a href="#" class="hashteg-mini">
+                                        россия
+                                    </a>
+                                    <a href="#" class="hashteg-mini">
+                                        Новости
+                                    </a>
+                                    <a href="#" class="comments">0</a>
+                                    <p class="business__sm-item--views">57</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="item">
+                            <img src="img/russ-home/3.jpg" alt="">
+                            <div class="item__wrapper">
+                                <p>
+                                    Певица правозащитница Екатерина Гордон решила баллотироваться в президенты России
+                                </p>
+                                <div class="hashtag-wrap">
+                                    <a href="#" class="hashteg-mini">
+                                        россия
+                                    </a>
+                                    <a href="#" class="hashteg-mini">
+                                        Новости
+                                    </a>
+                                    <a href="#" class="comments">0</a>
+                                    <p class="business__sm-item--views">57</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="right-column">
+                    <div class="right-column__content">
+                        <a href="#">
+                          <div class="right-column__content__text-wrap">
+                              <p>Принципы йоги в бизнесе</p>
+                              <div class="wrap-icon">
+                                  <p class="business__sm-item--views">57</p>
+                                  <a href="#" class="home-like">
+                                      <i class="fa fa-heart" aria-hidden="true"></i>
+                                      <span class="like-counter">0</span>
+                                  </a>
+                              </div>
+                          </div>
+                        </a>
+                        <a href="#">
+                            <div class="right-column__content__text-wrap">
+                                <p>Саудовские принцы передадут в казну более 100 миллиардов долларов в обмен на свободу</p>
+                                <div class="wrap-icon">
+                                    <p class="business__sm-item--views">57</p>
+                                    <a href="#" class="home-like">
+                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                        <span class="like-counter">0</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+
+                            <div class="right-column__content__text-wrap">
+                                <p>Саудовские принцы передадут в казну более 100 миллиардов долларов в
+                                    обмен на свободу</p>
+                                <div class="wrap-icon">
+                                    <p class="business__sm-item--views">57</p>
+                                    <a href="#" class="home-like">
+                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                        <span class="like-counter">0</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="right-column__content">
+                        <a href="#" class="news__wrap_item-lg">
+                            <div class="thumb">
+                                <img src="img/russ-home/5.jpg" alt="">
+                                <div class="content-row">
+                                    <span>20.09.2017</span> <br>
+                                    <span>Новости</span>
+                                    <span><small class="view-icon"></small> 2589</span>
+                                    <span><small class="comments-icon"></small>0</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="news__wrap_item-lg">
+                            <div class="thumb">
+                                <img src="img/russ-home/5.jpg" alt="">
+                                <div class="content-row">
+                                    <span>20.09.2017</span> <br>
+                                    <span>Новости</span>
+                                    <span><small class="view-icon"></small> 2589</span>
+                                    <span><small class="comments-icon"></small>0</span>
+                                    <h2>Сколько дней ДНР будет отдыхать на новогодние праздники?</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="home-content__wrap_subscribe" id="subscribe">
+
+                <div class="subscribe__wrap">
+                    <h3>ПОДПИСАТЬСЯ НА НОВОСТИ</h3>
+                    <form action="">
+                        <input type="text" placeholder="Выслать на email">
+                        <button>подписаться</button>
+                    </form>
+                    <div class="social-wrap">
+                        <h4>мы в социальных сетях</h4>
+                        <a href="#" target="_blank" class="social-wrap__item vk">
+                            <img src="img/soc/vk.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item fb">
+                            <img src="img/soc/fb.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item ok">
+                            <img src="img/soc/ok-icon.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item insta">
+                            <img src="img/soc/insta-icon.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item twitter">
+                            <img src="img/soc/twi-icon.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item google">
+                            <img src="img/soc/google-icon.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item pinterest">
+                            <img src="img/soc/pinter-icon.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item telegram">
+                            <img src="img/soc/telegram-f.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item live-journal">
+                            <img src="img/soc/livejournal-f.png" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-wrap__item in">
+                            <img src="img/soc/in-f.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- close home-content__wrap -->
+
+        <!-- home-content__tape -->
+        <div class="home-content__tape">
+
+            <h2>ЛЕНТА ДНЯ</h2>
+
+            <div class="home-content__tape_wrap">
+
+                <a href="" class="tape__item_pic">
+                    <img src="img/home-content/pic.png" alt="">
+                    <div class="tape__item_pic--content">
+                        <span class="time">11:46</span>
+                        <div class="hide-social">
+                            <span href="#">
+                                <i class="fa fa-vk"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-odnoklassniki"></i>
+                            </span>
+
+                        </div>
+                        <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        <p>Донбас - 2017 названы три сценариявозможного будущего </p>
+                    </div>
+                </a>
+
+                <div class="tape__item">
+                    <span class="time">вчера <span>14:00</span></span>
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <div class="tape__item">
+                    <span class="time">11:46</span>
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <div class="tape__item">
+                    <span class="time">11/05/2017</span>
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <a href="" class="tape__item_pic">
+                    <img src="img/home-content/pic.png" alt="">
+                    <div class="tape__item_pic--content">
+                        <span class="time">11:46</span>
+                        <div class="hide-social">
+                            <span href="#">
+                                <i class="fa fa-vk"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-odnoklassniki"></i>
+                            </span>
+
+                        </div>
+                        <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        <p>Донбас - 2017 названы три сценариявозможного будущего </p>
+                    </div>
+                </a>
+
+                <div class="tape__item">
+                    <span class="time">11:46</span>
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <div class="tape__item">
+                    <span class="time">11:46</span>
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <div class="tape__item">
+                    <span class="time">11:46</span>
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <a href="" class="tape__item_pic">
+                    <img src="img/home-content/pic.png" alt="">
+                    <div class="tape__item_pic--content">
+                        <span class="time">11:46</span>
+                        <div class="hide-social">
+                            <span href="#">
+                                <i class="fa fa-vk"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                            <span href="#">
+                                <i class="fa fa-odnoklassniki"></i>
+                            </span>
+
+                        </div>
+                        <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        <p>Донбас - 2017 названы три сценариявозможного будущего </p>
+                    </div>
+                </a>
+
+                <div class="tape__item">
+
+                    <span class="time">11:46</span>
+
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <div class="tape__item">
+
+                    <span class="time">11:46</span>
+
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <div class="tape__item">
+
+                    <span class="time">11:46</span>
+
+                    <div class="hide-social">
+                        <a href="#">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-odnoklassniki"></i>
+                        </a>
+
+                    </div>
+                    <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                    <h4><a href="">Протесты в Польше</a></h4>
+
+                    <!-- <p>Донбас - 2017 названы три сценариявозможного будущего оккупированных территорий</p> -->
+                </div>
+
+                <a href="" class="more_type">смотреть все новости</a>
+
+            </div>
+
+        </div>
+        <!-- home-content__tape -->
+
+        <!-- home-content__sidebar -->
+        <div class="home-content__sidebar">
+
+<!-- start sidebar-discussed-russ.html-->
+<div class="editors-choice">
+    <h2>выбор редакции</h2>
+    <a href="#" class="news__wrap_item-lg">
+        <div class="thumb">
+            <img src="img/russ-home/5.jpg" alt="">
+            <div class="content-row">
+                <span>20.09.2017</span> <br>
+                <span>Новости</span>
+                <span><small class="view-icon"></small> 2589</span>
+                <span><small class="comments-icon"></small>0</span>
+                <h2>Сколько дней ДНР будет отдыхать на новогодние праздники?</h2>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="news__wrap_item-lg">
+        <div class="thumb">
+            <img src="img/russ-home/5.jpg" alt="">
+            <div class="content-row">
+                <span>20.09.2017</span> <br>
+                <span>Новости</span>
+                <span><small class="view-icon"></small> 2589</span>
+                <span><small class="comments-icon"></small>0</span>
+                <h2>Сколько дней ДНР будет отдыхать на новогодние праздники?</h2>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="guests-city">
+    <h2>ГОСТЯМ ГОРОДА</h2>
+    <div class="guests-city__links">
+        <a href="#">Гостиницы /</a>
+        <a href="#">Мотели /</a>
+        <a href="#">Хостелы</a>
+    </div>
+    <div class="guests-city__learn-more">
+        <div class="guests-city__learn-more--price">
+            <span>от 999 руб./сутки</span>
+            <span> до 2599 руб./сутки</span>
+        </div>
+        <a href="#" class="guests-city__learn-more--button">подробнее</a>
+    </div>
+</div>
+<div class="sidebar-discussed">
+    <div class="sidebar-discussed__big-item">
+
+        <a href="#">
+            <h2>САМОЕ ОБСУЖДАЕМОЕ</h2>
+            <div class="sidebar-discussed__big-item__img">
+                <img src="img/russ-home/1.jpg" alt="">
+            </div>
+            <div class="sidebar-discussed__big-item__text">
+                <p>
+                    Сидите ровно: Луганск захватили вооруженные люди в масках. Глава ЛНР продолжает конфликтовать с МВД
+                    Сидите ровно: Луганск захватили вооруженные люди в масках. Глава ЛНР продолжает конфликтовать с МВД
+                </p>
+            </div>
+            <div class="sidebar-discussed__big-item__comments">
+
+                <div class="tag">
+                    <a href="#" class="hashteg-mini">
+                        Новости
+                    </a>
+                    <a href="#" class="hashteg-mini">
+                        россия
+                    </a>
+                </div>
+                <div class="sidebar-discussed__small-item__text__comments">
+                    <a href="#">
+                        <img src="img/icons/new-chat-icon.png" alt=""> <span>320</span>
+                    </a>
+                    <p class="business__sm-item--views">57</p>
+                    <a href="#" class="home-like">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <span class="like-counter">0</span>
+                    </a>
+                </div>
+            </div>
+
+        </a>
+
+    </div>
+    <div class="sidebar-discussed__small-item">
+        <a href="#">
+            <div class="sidebar-discussed__small-item__img">
+                <img src="img/russ-home/2.jpg" alt="">
+            </div>
+            <div class="sidebar-discussed__small-item__text">
+                <p>
+                    iPhone X проигрывает OnePlus 5T в скорости запуска приложений
+                </p>
+                <div class="sidebar-discussed__small-item__text__comments">
+                    <a href="#">
+                        <img src="img/icons/new-chat-icon.png" alt=""> <span>320</span>
+                    </a>
+                    <p class="business__sm-item--views">57</p>
+                    <a href="#" class="home-like">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <span class="like-counter">0</span>
+                    </a>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="sidebar-discussed__small-item">
+        <a href="#">
+            <div class="sidebar-discussed__small-item__img">
+                <img src="img/russ-home/2.jpg" alt="">
+            </div>
+            <div class="sidebar-discussed__small-item__text">
+                <p>
+                    iPhone X проигрывает OnePlus 5T в скорости запуска приложений
+                </p>
+                <div class="sidebar-discussed__small-item__text__comments">
+                    <a href="#">
+                        <img src="img/icons/new-chat-icon.png" alt=""> <span>320</span>
+                    </a>
+                    <p class="business__sm-item--views">57</p>
+                    <a href="#" class="home-like">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <span class="like-counter">0</span>
+                    </a>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="sidebar-discussed__small-item">
+        <a href="#">
+            <div class="sidebar-discussed__small-item__img">
+                <img src="img/russ-home/2.jpg" alt="">
+            </div>
+            <div class="sidebar-discussed__small-item__text">
+                <p>
+                    iPhone X проигрывает OnePlus 5T в скорости запуска приложений
+                </p>
+                <div class="sidebar-discussed__small-item__text__comments">
+                    <a href="#">
+                        <img src="img/icons/new-chat-icon.png" alt=""> <span>320</span>
+                    </a>
+                    <p class="business__sm-item--views">57</p>
+                    <a href="#" class="home-like">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <span class="like-counter">0</span>
+                    </a>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="sidebar-discussed__small-item">
+        <a href="#">
+            <div class="sidebar-discussed__small-item__img">
+                <img src="img/russ-home/2.jpg" alt="">
+            </div>
+            <div class="sidebar-discussed__small-item__text">
+                <p>
+                    iPhone X проигрывает OnePlus 5T в скорости запуска приложений
+                </p>
+                <div class="sidebar-discussed__small-item__text__comments">
+                    <a href="#">
+                        <img src="img/icons/new-chat-icon.png" alt=""> <span>320</span>
+                    </a>
+                    <p class="business__sm-item--views">57</p>
+                    <a href="#" class="home-like">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <span class="like-counter">0</span>
+                    </a>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<!--<div class="social-news-rus">-->
+<!--<h2>социальные новости</h2>-->
+<!--<div class="social-news-rus__public">-->
+<!--<a href="#">-->
+<!--<div class="social-news-rus__public__avatar">-->
+<!--<div class="img">-->
+<!--<img src="img/russ-home/icon2.png" alt="">-->
+<!--</div>-->
+<!--<div>-->
+<!--<h3>Типичный Ростов-на-Дону</h3>-->
+<!--<span>100 000 подписчиков</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</a>-->
+<!--<a href="#">-->
+<!--<div class="social-news-rus__public__text">-->
+<!--<p>-->
+<!--Знаете ли вы, чтo в Батайске находится дocтaтoчнo любoпытнaя кoллeкция aвтoмoбилeй?-->
+<!--</p>-->
+<!--</div>-->
+<!--<div class="social-news-rus__public__img">-->
+<!--<img src="img/russ-home/3.png" alt="">-->
+<!--</div>-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+<!-- end sidebar-discussed-russ.html-->
+
+        </div>
+
+
+        <!-- home-content__sidebar -->
+    </div>
+
+</section>
+
+<!-- end home-content-russian.html-->
+
+<!-- start index-slider.html-->
+<section class="news-slider-index">
+
+    <div class="container">
+
+        <h3 class="main-title">популярные новости</h3>
+
+        <span class="separator"></span>
+
+        <div class="news-slider-wrap">
+
+            <div class=" js-carousel-1 owl-carousel" id="sync1">
+
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+
+                    <div class="content-item">
+
+                        <div class="content-row">
+
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+                      <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="js-carousel-2 owl-carousel" id="sync2">
+
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+                            <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+                            <span class="open-soc"><i class="fa fa-random fa-lg"></i></span>
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                        </div>
+
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                        </div>
+                        <div class="item__info">
+                            <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                            <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                ничего не угрожает</p>
+                        </div>
+
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="js-carousel-3 owl-carousel">
+
+                <a href="" class="item"><img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                            <div class="item__info">
+                                <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                                <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                    райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                    ничего не угрожает</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                            <div class="item__info">
+                                <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                                <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                    райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                    ничего не угрожает</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                            <div class="item__info">
+                                <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                                <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                    райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                    ничего не угрожает</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                            <div class="item__info">
+                                <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                                <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                    райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                    ничего не угрожает</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="item"><img src="img/home-content/slide-pic.png" alt="">
+                    <div class="content-item">
+                        <div class="content-row">
+                            <span>Новости</span>
+                            <span><small class="view-icon"></small> 2589</span>
+                            <span><small class="comments-icon"></small> 2589</span>
+                            <div class="hide-social">
+                                <span><i class="fa fa-vk  fa-lg"></i></span>
+                                <span><i class="fa fa-twitter fa-lg"></i></span>
+                                <span><i class="fa fa-facebook fa-lg"></i></span>
+                                <span><i class="fa fa-odnoklassniki  fa-lg"></i></span>
+
+                            </div>
+              <span class="open-soc"><i class="fa fa-random fa-lg"></i>
+
+              </span>
+                            <div class="item__info">
+                                <h4>Месть Украины за Донбасс будет безжалостной</h4>
+                                <p>По меньшей мере, один человек получил серьёзные травмы при обстреле ВСУ петровского
+                                    райтна города Донецка. Пострадавшему своевременно оказана медицинская помощь, жизни
+                                    ничего не угрожает</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="js-carousel-4 owl-carousel">
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                </a>
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                </a>
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                </a>
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                </a>
+                <a href="" class="item"><img src="img/home-content/dog.png" alt="">
+                </a>
+            </div>
+            <div class="slider-nav">
+                <a href="#" class="customPrevBtn"></a>
+                <a href="#" class="customNextBtn"></a>
+            </div>
+        </div>
+        <div class="news-slider-index-panel">
+            <h3>Важные новости дня</h3>
+            <div class="buttons-wrap">
+                <a href="">подписаться</a>
+                <a href="">посмотреть больше</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end index-slider.html-->
+
+<!-- start footer.html-->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer__logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+
+        <div class="footer__main">
+
+            <ul class="footer__nav">
+                <li><a href="#">НОВОСТИ</a></li>
+                <li><a href="#">АФИША</a></li>
+                <li><a href="#">ДОСУГ</a></li>
+                <li><a href="#">ПРЕДПРИЯТИЯ</a></li>
+                <li><a href="#">КОНСУЛЬТАЦИИ</a></li>
+                <li><a href="#">ОБЪЯВЛЕНИЯ</a></li>
+            </ul>
+
+            <a href="#" class="footer-error-button" id="send-error-message">
+                сообщить об ошибке
+            </a>
+
+            <div class="footer__links-rules">
+                <div class="footer__links-wrap">
+                    <a href="http://da-info.pro/page/politika-konfidencialnosti">Политика конфиденциальности</a>
+                    <a href="http://da-info.pro/page/pravila-polzovania-sajtom-da-infopro">Правила пользования
+                        сайтом</a>
+                </div>
+                <div class="footer__links-wrap">
+                    <a href="http://da-info.pro/page/soglasie-na-obrabotku-personalnyh-dannyh">Согласие на обработку
+                        персональных данных</a>
+                    <div class="footer__wrap-link">
+                        <a href="http://da-info.pro/page/kontakty">Контакты</a>
+                        <a class="footer__craft-link" href="https://web-artcraft.com" target="_blank">Разработано CraftGroup</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer__social">
+
+            <div class="footer__links">
+                <a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="#"><span class="lj"></span></a>
+                <a href="#"><span class="yadzen"></span></a>
+            </div>
+
+            <a href="#" class="footer__send">написать нам</a>
+
+        </div>
+
+    </div>
+    <!--<div class="fix-button">-->
+
+    <!--<span class="fix-button__trigger">-->
+    <!--<img src="img/home-content/fix-button.png" alt="">-->
+    <!--</span>-->
+
+    <!--<ul class="fix-button__list">-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;company">Предприятие</a></li>-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;news">Новость</a></li>-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;poster">Афиша</a></li>-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;stock">Акция</a></li>-->
+    <!--<li><a href="#" class="fix-button__list&#45;&#45;adds">Объявления</a></li>-->
+    <!--</ul>-->
+
+
+    <!--</div>-->
+
+    <!--<div id="send-error-message" class="fix-button-msg-error">-->
+    <!--<div class="fix-button__notice">-->
+    <!--<img src="img/home-content/mistake-bg.png" alt="">-->
+    <!--</div>-->
+    <!--</div>-->
+
+</footer>
+
+
+<div class="modal-send">
+
+    <span class="modal-send__close">X</span>
+
+    <form action="" class="modal-send__form">
+
+        <input id="send-message-name" class="modal-send__field valid" type="name" placeholder="Имя" required>
+
+        <input id="send-message-email" class="modal-send__field valid" type="email" placeholder="Электронная почта"
+               required>
+
+        <textarea name="" id="send-message-text" class="modal-send__textarea valid" placeholder="Ваше сообщение"
+                  required></textarea>
+
+        <input id="send-message-submit" class="modal-send__submit" type="submit" value="Отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="modal-callback">
+
+    <h3 class="modal-callback__title">заказать звонок</h3>
+
+    <p class="modal-callback__subtitle">Оставьте свой контактный номер телефона - мы обязательно
+        перезвоним в удобное для Вас время!</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
+
+        <p>Введите ваши данные</p>
+
+        <input class="modal-callback__field" type="text" placeholder="Имя">
+
+        <input class="modal-callback__field" type="text" placeholder="Телефон">
+
+        <input class="modal-callback__field" type="text" placeholder="Удобное время для звонка">
+
+        <input class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="modal-send-message">
+
+    <h3 class="modal-callback__title">Написать нам</h3>
+
+    <p class="modal-callback__subtitle">Напишите нам подробно описав свою ситуацию.
+        Мы обязательно свяжемся с Вами!</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
+
+        <p>Введите ваши данные</p>
+
+        <input class="modal-callback__field" type="text" placeholder="Имя">
+
+        <input class="modal-callback__field" type="text" placeholder="Телефон">
+
+        <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="error-message">
+
+    <h3 class="modal-callback__title">Написать нам</h3>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
+
+        <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-callback" id="modal-order-delivery">
+
+    <h3 class="modal-callback__title">ЗАКАЗАТЬ ДОСТАВКУ</h3>
+
+    <p class="modal-callback__subtitle">Определите ваше местонахождение, чтобы проверить возможность доставки</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-callback__form">
+
+        <div class="modal-callback__first-step">
+
+            <p>Введите ваш адрес</p>
+
+            <input class="modal-callback__field" type="text" placeholder="Город">
+
+            <input class="modal-callback__field" type="text" placeholder="Улица">
+
+            <div class="modal-callback__fields">
+
+                <input class="modal-callback__sm-field" type="text" placeholder="Дом">
+
+                <input class="modal-callback__sm-field" type="text" placeholder="Кв.">
+
+            </div>
+
+            <a href="#" class="show-more">продолжить</a>
+
+        </div>
+
+        <div class="modal-callback__second-step">
+
+            <p>Введите ваши данные</p>
+
+            <input class="modal-callback__field" type="text" placeholder="Город">
+
+            <input class="modal-callback__field" type="text" placeholder="Улица">
+
+            <a href="#" class="modal-callback__trigger">Уточнить время и дату доставки</a>
+
+            <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+            <a href="#" class="modal-callback__trigger">Добавить комментарий к заказу</a>
+
+            <textarea class="modal-callback__textarea" placeholder="Текст сообщения"></textarea>
+
+            <input class="show-more" type="submit" value="отправить">
+
+        </div>
+
+
+    </form>
+
+</div>
+
+<div class="modal-review" id="modal-review">
+
+    <h3 class="modal-review__title">Добавить отзыв</h3>
+
+    <p class="modal-review__subtitle">Будьте правдивы. Пишите и хорошее, и плохое, но ничего не выдумывайте.</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-review__form">
+
+        <p>Ваш отзыв</p>
+
+        <textarea class="modal-review__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input id="modal-review-submit" class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-review-success" id="modal-review-success">
+
+    <div class="modal-review-success__img">
+        <img src="img/icons/confirm-icon.png" alt="">
+    </div>
+
+    <p class="modal-review-success__title">Ваш отзыв будет опубликован после прохождения модерации</p>
+
+    <p class="modal-review-success__notice">Пишите только сами!</p>
+
+    <p class="modal-review-success__moder">Автоматическая проверка находит любые копии и рерайты,
+        автор блокируется навсегда.</p>
+
+</div>
+
+<div class="modal-review" id="modal-add-comment">
+
+    <h3 class="modal-review__title">Добавить комментарий</h3>
+
+    <p class="modal-review__subtitle">Пишите и хорошее, и плохое.</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-review__form">
+
+        <p>Ваш комментарий</p>
+
+        <textarea class="modal-review__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input id="modal-add-comment-submit" class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div class="modal-review" id="modal-faq">
+
+    <h3 class="modal-review__title">Добавить комментарий</h3>
+
+    <p class="modal-review__subtitle">Пишите и хорошее, и плохое.</p>
+
+    <div class="separator"></div>
+
+    <form action="" class="modal-review__form">
+
+        <p>Ваш комментарий</p>
+
+        <textarea class="modal-review__textarea" placeholder="Текст сообщения"></textarea>
+
+        <input id="modal-add-comment-submit" class="show-more" type="submit" value="отправить">
+
+    </form>
+
+</div>
+
+<div id="modal-company-rew" class="modal-company">
+
+    <div class="thumb">
+        <span>A</span>
+        <!--<img src="img/home-content/what-say-1.png" alt="">-->
+    </div>
+
+    <div class="rew-wrap">
+        <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+        <span class="name">Кирилл Кириленко</span>
+        <p class="rew-descr">Салат делали около 30 минут и принесли с муравьем.
+            Освежающий чай ,напомнил нам чай в школьных столовых ,
+            а распробовав мы поняли ,что даже там он был вкуснее..
+            Салат делали около 30 минут и принесли с муравьем.
+            Освежающий чай ,напомнил нам чай в школьных столовых ,
+            а распробовав мы поняли ,что даже там он был вкуснее..</p>
+        <span class="date">7 месяцев назад</span>
+
+        <div class="social-wrap">
+
+            <a href="#" target="_blank" class="social-wrap__item vk">
+                <img src="img/soc/vk.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item fb">
+                <img src="img/soc/fb.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item ok">
+                <img src="img/soc/ok-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item insta">
+                <img src="img/soc/insta-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item twitter">
+                <img src="img/soc/twi-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item google">
+                <img src="img/soc/google-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item pinterest">
+                <img src="img/soc/pinter-icon.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item telegram">
+                <img src="img/soc/telegram-f.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item live-journal">
+                <img src="img/soc/livejournal-f.png" alt="">
+            </a>
+            <a href="#" target="_blank" class="social-wrap__item in">
+                <img src="img/soc/in-f.png" alt="">
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="modal-advertisement-categories" class="modal-categories">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h2>Выберите категорию</h2>
+            <span class="krest close"> ×</span>
+        </div>
+        <div class="modal-body modal-flex">
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="1">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/avto_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Транспорт</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="31">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/furniture_cay-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Дом и сад</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="71">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/house_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Недвижимость</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="121">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/diamond_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Мода и стиль</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="149">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/comp_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Электроника</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="233">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/xobbi_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Хобби, отдых и спорт</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="274">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/target_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Бизнес и услуги</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="311">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/animal_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Животные</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="323">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons//work_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Работа</span>
+            </div>
+            <!-- <div class="modal-body__container" data-category="" >
+                 <div class="modal-body__container__img">
+                     <img src="" alt="">
+                 </div>
+
+                 <span class="modal-body__container__subtitle"></span>
+             </div>-->
+
+
+            <div class="modal-body__container modal-item" data-category="344">
+                <div class="modal-body__container__img thumb">
+                    <img src="img/icons/children_cat-icon.png" alt="">
+                </div>
+                <span class="modal-body__container__subtitle">Детский мир</span>
+            </div>
+
+            <div class="column column-change column-modal header-rubric" data-parent="0">
+                <h3 class="top-title">Рубрики</h3>
+                <div class="obvertka obvertka-first style-scroll">
+			<span class="heading heading-change active" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                </div>
+
+            </div>
+            <div class="column column-change column-modal" data-parent="1">
+                <h3 class="title title-change header-rubric">Детский мир</h3>
+
+                <div class="obvertka style-scroll">
+			<span class="heading heading-change" data-category="<?= $item->id?>">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change active" data-category="<?= $item->id?>">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+				Детский мир
+				<span class="caret"></span>
+			</span>
+                </div>
+            </div>
+            <div class="column title-change column-modal" data-parent="2">
+                <h3 class="title title-change header-rubric">Детская одежда</h3>
+                <div class="obvertka obvertka-last style-scroll">
+			<span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                    <span class="heading heading-change" data-category="<?= $item->id?>">
+					Мир детей
+						<span class="caret"></span>
+			</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div id="modal-add-cart">
+
+    <h1 class="modalAdd-cartTitle">Товар был добавлен в корзину. <span> Товаров в Вашей корзине: <span>1</span></span>
+    </h1>
+
+    <a href="#" class="go-cart">Перейти к корзине</a>
+
+    <button class="close-cart" id="modal_close">Вернуться на сайт</button>
+
+    <h2 class="cart-carousel-title">Вместе с этим часто покупают:</h2>
+
+    <div class="shop__top-sales-elements ">
+
+        <a href="#" class="shop__top-sales-elements--item">
+
+            <h3 class="category-name">Смартфон</h3>
+            <p class="category-element">iPhone 6s 16Gb</p>
+
+            <div class="category-photo">
+                <img src="img/shop/category-photo-1.png" alt="">
+            </div>
+
+            <div class="category-price">
+                <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+            </div>
+
+            <button class="category-buy">Купить</button>
+
+        </a>
+
+        <a href="#" class="shop__top-sales-elements--item">
+
+            <h3 class="category-name">Смартфон</h3>
+            <p class="category-element">iPhone 6s 16Gb</p>
+
+            <div class="category-photo">
+                <img src="img/shop/category-photo-1.png" alt="">
+            </div>
+
+            <div class="category-price">
+                <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+            </div>
+
+            <button class="category-buy">Купить</button>
+
+        </a>
+
+        <a href="#" class="shop__top-sales-elements--item">
+
+            <h3 class="category-name">Смартфон</h3>
+            <p class="category-element">iPhone 6s 16Gb</p>
+
+            <div class="category-photo">
+                <img src="img/shop/category-photo-1.png" alt="">
+            </div>
+
+            <div class="category-price">
+                <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+            </div>
+
+            <button class="category-buy">Купить</button>
+
+        </a>
+
+        <a href="#" class="shop__top-sales-elements--item">
+
+            <h3 class="category-name">Смартфон</h3>
+            <p class="category-element">iPhone 6s 16Gb</p>
+
+            <div class="category-photo">
+                <img src="img/shop/category-photo-1.png" alt="">
+            </div>
+
+            <div class="category-price">
+                <span class="category-price__old">19 990 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                <span class="category-price__new">15 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+            </div>
+
+            <button class="category-buy">Купить</button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<div id="feedback-modal">
+
+    <h2 class="feedback-modal-title">наши контакты</h2>
+
+    <p class="feedback-modal-desk"><b>нажмите на номер</b> чтобы связаться <br> прямо сейчас!</p>
+
+    <a class="feedback-modal-phone" href="tel:380991795838">+38(099)179-58-38</a>
+
+    <a class="feedback-modal-phone" href="tel:380991795838">+38(099)179-58-38</a>
+
+</div>
+
+
+<a href="#" id="Go_Top"><img src="img/icons/button_up.svg" alt=""></a>
+
+<div id="overlay"></div>
+<div id="black-overlay"></div>
+
+<!-- end footer.html-->
+
+<!-- start html_close.html-->
+</body>
+<script src='js/jquery-2.1.3.min.js'></script>
+<script src='js/jquery-ui.min.js'></script>
+<script src='js/jquery-dr-ui.min.js'></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src='js/libs.min.js'></script>
+<script src='js/owl.carousel.min.js'></script>
+<script src='js/slick.min.js'></script>
+<script src='js/datepicker.min.js'></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/map.js"></script>
+<script src='js/jquery.hc-sticky.min.js'></script>
+<script src='js/countdown.js'></script>
+<script src="js/companys-filter.js"></script>
+<script src="js/afisha-countdown.js"></script>
+<script src="js/headhesive.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/sticky-sidebar.js"></script>
+<script src="js/script.min.js"></script>
+</html>
+
+<!-- end html_close.html-->
